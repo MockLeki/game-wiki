@@ -1,0 +1,260 @@
+[
+  {
+    "id": 3000,
+    "name": "黑蜘蛛",
+    "quality": "common",
+    "qualityName": "普通",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 10,
+    "weight": 15,
+    "location": "国王森林",
+    "image": "/images/weapons/3000.png",
+    "skills": [
+      { "name": "毒素伤害I", "description": "毒素伤害+10%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3001,
+    "name": "毒液蜘蛛",
+    "quality": "common",
+    "qualityName": "普通",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 10,
+    "weight": 16,
+    "location": "国王森林南部",
+    "image": "/images/weapons/3001.png",
+    "skills": [
+      { "name": "法力I", "description": "法力+20", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3002,
+    "name": "哥布林战士",
+    "quality": "common",
+    "qualityName": "普通",
+    "type": "humanoid",
+    "typeName": "人形",
+    "level": 10,
+    "weight": 25,
+    "location": "北山地穴",
+    "image": "/images/weapons/3002.png",
+    "skills": [
+      { "name": "金币获取I", "description": "从敌人处获得的金币+10%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3003,
+    "name": "棕马",
+    "quality": "common",
+    "qualityName": "普通",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 10,
+    "weight": 20,
+    "location": "北山地穴",
+    "image": "/images/weapons/3003.png",
+    "skills": [
+      { "name": "疾行I", "description": "移动速度+5%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3004,
+    "name": "变异之狼",
+    "quality": "uncommon",
+    "qualityName": "优秀",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 15,
+    "weight": 20,
+    "location": "国王森林南部",
+    "image": "/images/weapons/3004.png",
+    "skills": [
+      { "name": "击中回复生命I", "description": "击中回复生命+10", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3005,
+    "name": "灰森林狼",
+    "quality": "uncommon",
+    "qualityName": "优秀",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 15,
+    "weight": 15,
+    "location": "国王森林",
+    "image": "/images/weapons/3005.png",
+    "skills": [
+      { "name": "攻击速度I", "description": "攻击速度+3%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3006,
+    "name": "树桩怪",
+    "quality": "uncommon",
+    "qualityName": "优秀",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 15,
+    "weight": 16,
+    "location": "国王森林南部",
+    "image": "/images/weapons/3006.png",
+    "skills": [
+      { "name": "棘刺I", "description": "棘刺+10%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3007,
+    "name": "骷髅弓箭手",
+    "quality": "uncommon",
+    "qualityName": "优秀",
+    "type": "undead",
+    "typeName": "不死族",
+    "level": 15,
+    "weight": 25,
+    "location": "北山地穴",
+    "image": "/images/weapons/3007.png",
+    "skills": [
+      { "name": "暴击几率I", "description": "暴击几率+3%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3008,
+    "name": "兽人斗士",
+    "quality": "uncommon",
+    "qualityName": "优秀",
+    "type": "humanoid",
+    "typeName": "人形",
+    "level": 15,
+    "weight": 30,
+    "location": "北山地穴下层",
+    "image": "/images/weapons/3008.png",
+    "skills": [
+      { "name": "力量I", "description": "力量+5%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3009,
+    "name": "栗色小马",
+    "quality": "uncommon",
+    "qualityName": "优秀",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 15,
+    "weight": 20,
+    "location": "商人",
+    "image": "/images/weapons/3009.png",
+    "skills": [
+      { "name": "疾行II", "description": "移动速度+10%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3010,
+    "name": "野猪",
+    "quality": "uncommon",
+    "qualityName": "优秀",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 15,
+    "weight": 25,
+    "location": "国王森破",
+    "image": "/images/weapons/3010.png",
+    "skills": [
+      { "name": "活力I", "description": "最大生命值+150", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3011,
+    "name": "血月狼人",
+    "quality": "rare",
+    "qualityName": "稀有",
+    "type": "demon",
+    "typeName": "恶魔",
+    "level": 25,
+    "weight": 25,
+    "location": "国王森林",
+    "image": "/images/weapons/3011.png",
+    "skills": [
+      { "name": "血月嚎叫", "description": "+30%攻击速度，持续5秒", "type": "skill" },
+      { "name": "嗜血I", "description": "击中回复生命+10%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3012,
+    "name": "黑暗精灵法师",
+    "quality": "rare",
+    "qualityName": "稀有",
+    "type": "humanoid",
+    "typeName": "人形",
+    "level": 35,
+    "weight": 20,
+    "location": "北山地穴",
+    "image": "/images/weapons/3012.png",
+    "skills": [
+      { "name": "法力提升", "description": "法力值+30%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3013,
+    "name": "黑马",
+    "quality": "rare",
+    "qualityName": "稀有",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 8,
+    "weight": 22,
+    "location": "商人",
+    "image": "/images/weapons/3013.png",
+    "skills": [
+      { "name": "疾行III", "description": "移动速度+15%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3014,
+    "name": "食人魔",
+    "quality": "legendary",
+    "qualityName": "传说",
+    "type": "humanoid",
+    "typeName": "人形",
+    "level": 30,
+    "weight": 30,
+    "location": "北山地穴下层",
+    "image": "/images/weapons/3014.png",
+    "skills": [
+      { "name": "对眩晕伤害III", "description": "对眩晕敌人造成的伤害+30%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3015,
+    "name": "远古橡树树人",
+    "quality": "legendary",
+    "qualityName": "传说",
+    "type": "humanoid",
+    "typeName": "人形",
+    "level": 40,
+    "weight": 30,
+    "location": "国王森林南部",
+    "image": "/images/weapons/3015.png",
+    "skills": [
+      { "name": "治愈之灵", "description": "为玩家恢复相当于20%最大生命值的生命", "type": "skill" },
+      { "name": "生命提升", "description": "最大生命值+10%", "type": "passive" }
+    ]
+  },
+  {
+    "id": 3016,
+    "name": "蓝色猛犸象",
+    "quality": "legendary",
+    "qualityName": "传说",
+    "type": "beast",
+    "typeName": "野兽",
+    "level": 50,
+    "weight": 35,
+    "location": "商人",
+    "image": "/images/weapons/3016.png",
+    "skills": [
+      { "name": "厚皮III", "description": "护甲+15%", "type": "passive" },
+      { "name": "疾行I", "description": "移动速度+5%", "type": "passive" }
+    ]
+  }
+]
