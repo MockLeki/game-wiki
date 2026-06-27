@@ -8,6 +8,10 @@ export default defineConfig({
   lang: 'zh-CN',
 
   themeConfig: {
+
+    // 默认暗黑模式
+    appearance: 'dark',
+
     // 网站左上角的logo文字
     siteTitle: '桌面破坏神-QQ官方群1048729821 玩家交流群1048729821',
 
