@@ -69,36 +69,11 @@ const typeName = (type) => {
 <div class="tip-box">
   <strong>提示</strong>
   <p>数据来源于 <code>public/data/items.json</code>，可直接编辑该文件更新装备数据。
-  这里装备主要词条有这些
-  以下仅展示装备图和特殊词条属性</p>
+  以下展示装备词条对照表，以及装备图和特殊词条属性。</p>
 </div>
 
-<div class="tip-box">
-  <strong>主要词条展示</strong>
-  <p>武器：2</p>
-  <p>头盔：3</p>
-  <p>护肩：4</p>
-  <p>胸甲：5</p>
-  <p>手套：5</p>
-  <p>腰带：3</p>
-  <p>护腿：43</p>
-  <p>靴子：32</p>
-  <p>项链：34</p>
-  <p>戒指：1</p>
-</div>
-
-<div class="tip-box">
-  <strong>次要词条展示</strong>
-  <p>武器：命中回血 击杀回血 击杀回法</p>
-  <p>头盔：生命恢复 金币发现 魔法发现 药水发现 经验值</p>
-  <p>护肩：生命恢复 移动速度</p>
-  <p>胸甲：生命恢复 命中回血 金币发现 魔法发现 经验值</p>
-  <p>手套：击杀回法 金币发现 魔法发现 药水发现 经验值</p>
-  <p>腰带：生命恢复 击杀回法 药水发现 经验值</p>
-  <p>护腿：生命恢复 命中回血 金币发现 魔法发现 经验值</p>
-  <p>靴子：命中回血 金币发现 魔法发现 药水发现 经验值</p>
-  <p>项链：命中回血 魔法发现 移动速度 经验值</p>
-  <p>戒指：命中回血 击杀回血 击杀回法 金币发现 魔法发现 经验值</p>
+<div class="affix-table-wrap">
+  <img src="/images/affixes-table.png" alt="装备主要词条与次要词条对照表" class="affix-table-img" />
 </div>
 
 <div class="filters">
@@ -187,6 +162,22 @@ const typeName = (type) => {
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
   color: #9c27b0;
+}
+
+.affix-table-wrap {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1a1a2e;
+  padding: 0.5rem;
+}
+
+.affix-table-img {
+  display: block;
+  width: 100%;
+  min-height: 320px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .filters {
