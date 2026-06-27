@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "name": "阿尔萨斯",
+    "quality": "legendary",
+    "qualityName": "传说",
+    "job": "圣骑士",
+    "level": 60,
+    "hp": 4500,
+    "attack": 320,
+    "defense": 280,
+    "skills": [
+      { "name": "圣光审判", "description": "对敌人造成圣光伤害", "cooldown": 5 },
+      { "name": "神圣护盾", "description": "吸收一定伤害", "cooldown": 15 },
+      { "name": "天堂之拳", "description": "大范围圣光攻击", "cooldown": 30 }
+    ],
+    "description": "圣殿骑士团团长，光明神的忠实信徒"
+  },
+  {
+    "id": 2,
+    "name": "艾琳娜",
+    "quality": "epic",
+    "qualityName": "史诗",
+    "job": "法师",
+    "level": 55,
+    "hp": 2800,
+    "attack": 420,
+    "defense": 120,
+    "skills": [
+      { "name": "火球术", "description": "发射火球攻击", "cooldown": 3 },
+      { "name": "冰霜新星", "description": "冻结周围敌人", "cooldown": 10 },
+      { "name": "流星火雨", "description": "大范围火焰伤害", "cooldown": 25 }
+    ],
+    "description": "魔法学院最年轻的魔导师"
+  },
+  {
+    "id": 3,
+    "name": "雷恩",
+    "quality": "epic",
+    "qualityName": "史诗",
+    "job": "刺客",
+    "level": 52,
+    "hp": 3200,
+    "attack": 380,
+    "defense": 150,
+    "skills": [
+      { "name": "暗影打击", "description": "瞬间移动到敌人背后", "cooldown": 4 },
+      { "name": "毒刃", "description": "攻击附带毒素伤害", "cooldown": 8 },
+      { "name": "致命连击", "description": "造成大量伤害", "cooldown": 20 }
+    ],
+    "description": "暗影协会的顶级杀手"
+  },
+  {
+    "id": 4,
+    "name": "米娅",
+    "quality": "rare",
+    "qualityName": "稀有",
+    "job": "弓手",
+    "level": 45,
+    "hp": 3000,
+    "attack": 350,
+    "defense": 180,
+    "skills": [
+      { "name": "多重箭", "description": "一次射出多支箭", "cooldown": 6 },
+      { "name": "陷阱", "description": "布置陷阱控制敌人", "cooldown": 12 },
+      { "name": "穿甲射击", "description": "无视部分防御", "cooldown": 18 }
+    ],
+    "description": "精灵族的神射手"
+  },
+  {
+    "id": 5,
+    "name": "戈隆",
+    "quality": "rare",
+    "qualityName": "稀有",
+    "job": "战士",
+    "level": 48,
+    "hp": 5000,
+    "attack": 290,
+    "defense": 250,
+    "skills": [
+      { "name": "顺劈斩", "description": "攻击前方所有敌人", "cooldown": 5 },
+      { "name": "盾墙", "description": "大幅提升防御", "cooldown": 20 },
+      { "name": "战争怒吼", "description": "提升队友攻击力", "cooldown": 25 }
+    ],
+    "description": "部族战士，力量惊人"
+  },
+  {
+    "id": 6,
+    "name": "小狐",
+    "quality": "common",
+    "qualityName": "普通",
+    "job": "法师",
+    "level": 30,
+    "hp": 2200,
+    "attack": 280,
+    "defense": 100,
+    "skills": [
+      { "name": "治愈术", "description": "恢复队友生命", "cooldown": 8 },
+      { "name": "能量弹", "description": "基础魔法攻击", "cooldown": 3 }
+    ],
+    "description": "新手推荐治疗职业"
+  }
+]
