@@ -3,7 +3,7 @@ layout: home
 hero:
   name: "桌面破坏神"
   text: "游戏百科全书"
-  tagline: "噜总本人的游戏攻略与全图鉴预览 更新日期6.24"
+  tagline: "噜总本人的游戏攻略与全图鉴预览 更新日期6.27"
   image:
     src: /66666.jpg
     alt: 桌面破坏神
