@@ -37,8 +37,9 @@ const qualityName = (q) => {
 }
 
 const speciesIcon = (s) => {
-  const icons = { beast: '🐺', demon: '👹', dragon: '🐉', humanoid: '🧙', undead: '💀' }
-  return icons[s] || '❓'
+  if (!minionData.value) return '❓'
+  const sp = minionData.value.species.find(x => x.key === s)
+  return sp ? sp.icon : '❓'
 }
 
 const getCompanionsBySpecies = (speciesKey) => {
@@ -96,7 +97,8 @@ const getCompanionsBySpecies = (speciesKey) => {
 <div v-for="comp in filteredCompanions" :key="comp.id" class="companion-card" :style="{ borderColor: qualityColor(comp.quality) }">
 <div class="comp-header" :style="{ backgroundColor: qualityColor(comp.quality) }">
 <div class="comp-title">
-<span class="species-icon">{{ speciesIcon(comp.species) }}</span>
+<img v-if="comp.image" :src="comp.image" class="comp-img" alt="">
+<span v-else class="species-icon">{{ speciesIcon(comp.species) }}</span>
 <div>
 <span class="comp-name">{{ comp.name }}</span>
 <span class="comp-name-en">{{ comp.nameEn }}</span>
@@ -244,6 +246,15 @@ const getCompanionsBySpecies = (speciesKey) => {
   align-items: flex-start;
 }
 .comp-title { display: flex; align-items: center; gap: 0.5rem; }
+.comp-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #2d2d44;
+  border: 2px solid rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
 .species-icon { font-size: 1.5rem; }
 .comp-name { font-weight: bold; font-size: 1.05rem; display: block; }
 .comp-name-en { font-size: 0.75rem; color: rgba(255,255,255,0.6); display: block; }

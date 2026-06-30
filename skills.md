@@ -115,6 +115,26 @@ const categoryColor = (cat) => {
   }
   return colors[cat] || '#666'
 }
+
+const abilityIcon = (ability) => {
+  const icons = {
+    '英勇打击': '⚔️', '横扫打击': '🌀', '烈焰打击': '🔥', '怒气护盾': '🛡️', '战吼': '📣', '范围易伤': '💥',
+    '火球术': '🔥', '烈焰洪流': '🔥', '冰锥术': '❄️', '冰霜陨石': '☄️'
+  }
+  return icons[ability.name] || '✨'
+}
+
+const talentIcon = (talent) => {
+  const icons = {
+    '力量': '💪', '活力': '❤️', '护甲': '🛡️', '攻击速度': '⚡', '暴击几率': '🎯', '暴击伤害': '💥',
+    '荆棘': '🌵', '生命回复': '💚', '残暴': '⚔️', '凶猛': '🐅', '劈裂之怒': '😤', '战斗鼓舞': '🎺',
+    '重击': '👊', '荆棘强化': '🌵', '强化强力攻击：法力': '⚡', '怒气灌注': '🔥', '强化战吼：冷却': '📣',
+    '怒气引导': '🔋', '[野兽]仆从强化': '🐺', '[人形]仆从强化': '🧑', '防御姿态': '🛡️', '击杀回蓝': '💧',
+    '第二阵风': '🌪️', '专注': '👁️', '猛攻': '⚔️', '强化烈焰打击：伤害': '🔥', '强化英勇打击：法力获取': '⚡',
+    '[亡灵]仆从强化': '💀', '恶性荆棘': '🌵'
+  }
+  return icons[talent.name] || '⭐'
+}
 </script>
 
 # 技能大全
@@ -142,6 +162,7 @@ const categoryColor = (cat) => {
 <div class="abilities-grid">
 <div v-for="ability in currentClass.abilities" :key="ability.id" class="ability-card">
 <div class="ability-header">
+<span class="ability-icon">{{ abilityIcon(ability) }}</span>
 <span class="ability-name">{{ ability.name }}</span>
 <span class="ability-tag" :style="{ backgroundColor: tagColor(ability.tag) }">{{ tagName(ability.tag) }}</span>
 </div>
@@ -169,7 +190,7 @@ const categoryColor = (cat) => {
 <div class="talent-nodes">
 <div v-for="talent in talents" :key="talent.id" :class="['talent-node', { 'maxed': getTalentRank(talent.id) >= talent.maxRank, 'allocated': getTalentRank(talent.id) > 0, 'available': canAllocate(talent) }]" @click="allocatePoint(talent)" @contextmenu.prevent="refundPoint(talent)" @mouseenter="selectedTalent = talent" @mouseleave="selectedTalent = null">
 <div class="talent-icon" :style="{ borderColor: categoryColor(cat) }">
-<span class="talent-id">#{{ talent.id }}</span>
+<span class="talent-emoji">{{ talentIcon(talent) }}</span>
 </div>
 <div class="talent-info">
 <span class="talent-name">{{ talent.name }}</span>
@@ -287,12 +308,14 @@ const categoryColor = (cat) => {
 .ability-card { background: #1a1a2e; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
 .ability-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0.8rem 1rem;
   background: #2d2d44;
+  gap: 0.5rem;
 }
-.ability-name { font-weight: bold; color: #fff; font-size: 1.05rem; }
+.ability-icon { font-size: 1.5rem; }
+.ability-name { color: #fff; font-size: 1.05rem; font-weight: bold; flex: 1; }
 .ability-tag {
   font-size: 0.75rem;
   padding: 0.15rem 0.5rem;
@@ -351,6 +374,7 @@ const categoryColor = (cat) => {
   background: #1a1a2e;
   flex-shrink: 0;
 }
+.talent-emoji { font-size: 1.5rem; }
 .talent-id { color: #888; font-size: 0.75rem; font-weight: bold; }
 .talent-node.allocated .talent-id { color: #ff9800; }
 .talent-info { display: flex; flex-direction: column; gap: 0.15rem; }

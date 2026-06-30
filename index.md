@@ -3,7 +3,7 @@ layout: home
 hero:
   name: "桌面破坏神"
   text: "游戏百科全书"
-  tagline: "噜总本人的游戏攻略与全图鉴预览 更新日期6.27"
+  tagline: "噜总本人的游戏攻略与全图鉴预览 更新日期7.1 | QQ玩家交流群: 737018935"
   image:
     src: /66666.jpg
     alt: 桌面破坏神
@@ -12,26 +12,22 @@ hero:
       text: 开始探索
       link: /items
     - theme: alt
-      text: 查看角色
-      link: /heroes
+      text: 查看技能
+      link: /skills
 
 features:
-  - title: 物品数据库
-    details: 包含所有装备、道具的大概数据，支持多维度筛选
+  - title: 装备图鉴
+    details: 传说武器、传说防具、消耗品、材料、随从缰绳完整数据
     link: /items
     linkText: 进入数据库
   - title: 仆从大全
-    details: 所有仆从的详细数据，包括属性、技能、等级要求等
+    details: 所有仆从的详细数据，包括等级、负重、被动加成、主动技能等
     link: /minions
     linkText: 查看仆从
   - title: 关卡大全
     details: 全关卡攻略、BOSS打法、掉落物品一览
     link: /levels
     linkText: 查看关卡
-  - title: 角色图鉴
-    details: 角色技能、天赋、加点推荐
-    link: /heroes
-    linkText: 查看英雄
   - title: 技能大全
     details: 战士/法师主动技能、天赋模拟器、属性系统参考
     link: /skills

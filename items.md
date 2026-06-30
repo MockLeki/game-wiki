@@ -22,6 +22,12 @@ const slotNames = {
   boots: '靴子', ring: '戒指'
 }
 
+const slotIcons = {
+  weapon: '⚔️', helm: '🪖', chest: '👕', shoulder: '🛡️',
+  necklace: '📿', gloves: '🧤', belt: '⛓️', legs: '👖',
+  boots: '👢', ring: '💍'
+}
+
 const qualityColors = {
   legendary: '#ff9800',
   divine: '#e91e63'
@@ -76,7 +82,10 @@ const buffPotions = computed(() => {
 <div class="equipment-grid">
 <div v-for="item in itemData.legendary_weapons" :key="item.id" class="equipment-card" style="border-color: #ff9800">
 <div class="eq-header" style="background: #ff9800">
+<div class="eq-title">
+<span class="eq-icon">{{ slotIcons[item.slot] }}</span>
 <span class="eq-name">{{ item.name }}</span>
+</div>
 <span class="eq-slot">{{ slotNames[item.slot] }}</span>
 </div>
 <div class="eq-body">
@@ -99,7 +108,10 @@ const buffPotions = computed(() => {
 <div class="equipment-grid">
 <div v-for="item in items" :key="item.id" class="equipment-card" style="border-color: #ff9800">
 <div class="eq-header" style="background: #ff9800">
+<div class="eq-title">
+<span class="eq-icon">{{ slotIcons[item.slot] }}</span>
 <span class="eq-name">{{ item.name }}</span>
+</div>
 <span class="eq-slot">{{ slotNames[item.slot] }}</span>
 </div>
 <div class="eq-body">
@@ -238,6 +250,8 @@ const buffPotions = computed(() => {
   align-items: center;
 }
 .eq-name { font-weight: bold; font-size: 1rem; }
+.eq-icon { font-size: 1.5rem; margin-right: 0.5rem; }
+.eq-title { display: flex; align-items: center; }
 .eq-slot { font-size: 0.8rem; background: rgba(0,0,0,0.2); padding: 0.15rem 0.5rem; border-radius: 4px; }
 .eq-body { padding: 0.8rem 1rem; }
 .eq-name-en { color: #666; font-size: 0.85rem; margin: 0 0 0.8rem 0; font-style: italic; }
