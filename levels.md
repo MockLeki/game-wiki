@@ -48,24 +48,24 @@ const difficultyColor = (difficulty) => {
     </div>
     
     <div class="level-body">
-      <div class="level-info">
-        <p><strong>所在区域:</strong> {{ level.area }}</p>
-        <p><strong>推荐等级:</strong> {{ level.level }}</p>
-        <p><strong>Boss:</strong> {{ level.boss }}</p>
-      </div>
-      
-      <div class="level-desc">
-        <p>{{ level.description }}</p>
-      </div>
-      
-      <div class="drops-section">
-        <p><strong>主要掉落:</strong></p>
-        <div class="drops">
-          <span v-for="drop in level.drops" :key="drop" class="drop-tag">
-            {{ drop }}
-          </span>
-        </div>
-      </div>
+    <div class="level-info">
+    <p><strong>所在区域:</strong> {{ level.area }}</p>
+    <p><strong>推荐等级:</strong> {{ level.level }}</p>
+    <p><strong>Boss:</strong> {{ level.boss }}</p>
+    </div>
+    
+    <div class="level-desc">
+    <p>{{ level.description }}</p>
+    </div>
+    
+    <div class="drops-section">
+    <p><strong>主要掉落:</strong></p>
+    <div class="drops">
+    <span v-for="drop in level.drops" :key="drop" class="drop-tag">
+    {{ drop }}
+    </span>
+    </div>
+    </div>
     </div>
   </div>
 </div>
@@ -78,11 +78,11 @@ const difficultyColor = (difficulty) => {
 }
 
 .level-card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #333;
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #1a1a2e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .level-header {
