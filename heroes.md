@@ -60,41 +60,41 @@ const qualityName = (quality) => {
     </div>
     
     <div class="hero-body">
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-label">等级</span>
-          <span class="stat-value">{{ hero.level }}</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">生命</span>
-          <span class="stat-value">{{ hero.hp }}</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">攻击</span>
-          <span class="stat-value">{{ hero.attack }}</span>
-        </div>
-        <div class="stat">
-          <span class="stat-label">防御</span>
-          <span class="stat-value">{{ hero.defense }}</span>
-        </div>
-      </div>
-      
-      <div class="hero-desc">
-        <p>{{ hero.description }}</p>
-      </div>
-      
-      <div class="hero-skills">
-        <p><strong>技能:</strong></p>
-        <div class="skills">
-          <div v-for="skill in hero.skills" :key="skill.name" class="skill-item">
-            <div class="skill-header">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-cd">CD: {{ skill.cooldown }}秒</span>
-            </div>
-            <p class="skill-desc">{{ skill.description }}</p>
-          </div>
-        </div>
-      </div>
+    <div class="hero-stats">
+    <div class="stat">
+    <span class="stat-label">等级</span>
+    <span class="stat-value">{{ hero.level }}</span>
+    </div>
+    <div class="stat">
+    <span class="stat-label">生命</span>
+    <span class="stat-value">{{ hero.hp }}</span>
+    </div>
+    <div class="stat">
+    <span class="stat-label">攻击</span>
+    <span class="stat-value">{{ hero.attack }}</span>
+    </div>
+    <div class="stat">
+    <span class="stat-label">防御</span>
+    <span class="stat-value">{{ hero.defense }}</span>
+    </div>
+    </div>
+    
+    <div class="hero-desc">
+    <p>{{ hero.description }}</p>
+    </div>
+    
+    <div class="hero-skills">
+    <p><strong>技能:</strong></p>
+    <div class="skills">
+    <div v-for="skill in hero.skills" :key="skill.name" class="skill-item">
+    <div class="skill-header">
+    <span class="skill-name">{{ skill.name }}</span>
+    <span class="skill-cd">CD: {{ skill.cooldown }}秒</span>
+    </div>
+    <p class="skill-desc">{{ skill.description }}</p>
+    </div>
+    </div>
+    </div>
     </div>
   </div>
 </div>
@@ -110,8 +110,8 @@ const qualityName = (quality) => {
   border: 3px solid;
   border-radius: 10px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  background: #1a1a2e;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.3);
 }
 
 .hero-header {
@@ -151,7 +151,7 @@ const qualityName = (quality) => {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
-  background: #f5f5f5;
+  background: #2d2d44;
   padding: 0.8rem;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -164,18 +164,18 @@ const qualityName = (quality) => {
 .stat-label {
   display: block;
   font-size: 0.75rem;
-  color: #777;
+  color: #888;
 }
 
 .stat-value {
   display: block;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #333;
+  color: #fff;
 }
 
 .hero-desc {
-  background: #fff8e1;
+  background: #2d2d44;
   padding: 0.7rem;
   border-radius: 6px;
   margin-bottom: 1rem;
@@ -184,7 +184,7 @@ const qualityName = (quality) => {
 .hero-desc p {
   margin: 0;
   font-size: 0.9rem;
-  color: #555;
+  color: #ccc;
 }
 
 .hero-skills > p {
@@ -198,7 +198,7 @@ const qualityName = (quality) => {
 }
 
 .skill-item {
-  background: #f0f4f8;
+  background: #2d2d44;
   padding: 0.7rem;
   border-radius: 6px;
   border-left: 3px solid #1976d2;
@@ -213,7 +213,7 @@ const qualityName = (quality) => {
 
 .skill-name {
   font-weight: bold;
-  color: #1565c0;
+  color: #64b5f6;
 }
 
 .skill-cd {
@@ -224,6 +224,6 @@ const qualityName = (quality) => {
 .skill-desc {
   margin: 0;
   font-size: 0.85rem;
-  color: #555;
+  color: #aaa;
 }
 </style>
