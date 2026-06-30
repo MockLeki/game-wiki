@@ -5,9 +5,8 @@ const skillData = ref(null)
 const loading = ref(true)
 const activeClass = ref('warrior')
 const talentRanks = reactive({})
-const totalPoints = ref(30)
-const selectedTalent = ref(null)
 const hoveredTalent = ref(null)
+const activeTalentTab = ref('combat')
 
 onMounted(async () => {
   try {
@@ -23,6 +22,10 @@ onMounted(async () => {
 const currentClass = computed(() => {
   if (!skillData.value) return null
   return skillData.value.classes[activeClass.value]
+})
+
+const totalPoints = computed(() => {
+  return currentClass.value ? (currentClass.value.totalPoints || 24) : 24
 })
 
 const spentPoints = computed(() => {
@@ -43,10 +46,12 @@ const getTalentRank = (talentId) => {
 }
 
 const canAllocate = (talent) => {
+  if (talent.milestone) return false
   return remainingPoints.value > 0 && getTalentRank(talent.id) < talent.maxRank
 }
 
 const canRefund = (talent) => {
+  if (talent.milestone) return false
   return getTalentRank(talent.id) > 0
 }
 
@@ -83,72 +88,73 @@ const tagName = (tag) => {
   return t ? t.name : tag
 }
 
-const talentsByCategory = computed(() => {
-  if (!currentClass.value || !currentClass.value.talents) return {}
-  const cats = {}
-  currentClass.value.talents.forEach(t => {
-    if (!cats[t.category]) cats[t.category] = []
-    cats[t.category].push(t)
-  })
-  return cats
-})
-
 const allocatedTalents = computed(() => {
   if (!currentClass.value || !currentClass.value.talents) return []
-  return currentClass.value.talents.filter(t => getTalentRank(t.id) > 0)
+  return currentClass.value.talents.filter(t => getTalentRank(t.id) > 0 && !t.milestone)
 })
 
 const switchClass = (cls) => {
   activeClass.value = cls
-  selectedTalent.value = null
   hoveredTalent.value = null
 }
 
-const categoryColor = (cat) => {
-  const colors = {
-    '属性': '#4caf50',
-    '暴击': '#ff9800',
-    '防御': '#2196f3',
-    '增伤': '#f44336',
-    '强化': '#9c27b0',
-    '法力': '#00bcd4',
-    '控制': '#e91e63',
-    '仆从': '#795548'
-  }
-  return colors[cat] || '#666'
-}
-
-const categoryIcon = (cat) => {
-  const icons = {
-    '属性': '💪', '暴击': '💥', '防御': '🛡️', '增伤': '⚔️',
-    '强化': '🔥', '法力': '💧', '控制': '👁️', '仆从': '🐺'
-  }
-  return icons[cat] || '⭐'
-}
-
-const branchColumns = computed(() => {
+const talentGrid = computed(() => {
   if (!currentClass.value || !currentClass.value.talents) return []
-  const cats = talentsByCategory.value
-  return [
-    { name: '属性', talents: cats['属性'] || [] },
-    { name: '暴击', talents: cats['暴击'] || [] },
-    { name: '防御', talents: cats['防御'] || [] },
-    { name: '增伤', talents: cats['增伤'] || [] },
-    { name: '强化', talents: cats['强化'] || [] },
-    { name: '法力', talents: cats['法力'] || [] },
-    { name: '控制', talents: cats['控制'] || [] },
-    { name: '仆从', talents: cats['仆从'] || [] }
-  ].filter(c => c.talents.length > 0)
+  const grid = []
+  for (let r = 1; r <= 5; r++) {
+    const row = currentClass.value.talents.filter(t => t.row === r).sort((a, b) => a.col - b.col)
+    grid.push(row)
+  }
+  return grid
+})
+
+const rowLevels = computed(() => {
+  return currentClass.value ? (currentClass.value.rowLevels || [1, 5, 5, 5, 6]) : [1, 5, 5, 5, 6]
 })
 
 const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 100)
+
+const formatTalentDesc = (talent, rank = 0) => {
+  if (!talent) return ''
+  let text = talent.desc || ''
+  if (rank <= 0) return text
+  const values = talent.values || {}
+  const currentRank = Math.min(rank, talent.maxRank)
+  for (const key in values) {
+    const arr = values[key]
+    if (Array.isArray(arr) && arr.length >= currentRank) {
+      const val = arr[currentRank - 1]
+      text = text.replace(new RegExp(`\\{${key}\\}`, 'g'), val)
+    }
+  }
+  return text
+}
+
+const nextRankValue = (talent, key) => {
+  if (!talent || !talent.values) return null
+  const rank = getTalentRank(talent.id)
+  const nextRank = Math.min(rank + 1, talent.maxRank)
+  const arr = talent.values[key]
+  if (Array.isArray(arr) && arr.length >= nextRank) {
+    return arr[nextRank - 1]
+  }
+  return null
+}
+
+const nodeStatus = (talent) => {
+  const rank = getTalentRank(talent.id)
+  if (rank >= talent.maxRank) return 'maxed'
+  if (rank > 0) return 'allocated'
+  if (canAllocate(talent)) return 'available'
+  return 'locked'
+}
 </script>
 
 # 技能大全
 
 <div class="tip-box">
   <strong>数据来源</strong>
-  <p>技能数据从游戏本体 Deskrawl Demo 的 Unity 资源中提取，包含战士与法师的主动技能、天赋树及属性系统。图标与背景均来自游戏内实际资源。左键点击天赋节点分配点数，右键点击退回点数。</p>
+  <p>技能数据从游戏本体 Deskrawl Demo 的 Unity 资源中提取，天赋树布局与“战斗天赋”页签参考游戏内截图重构。点击天赋节点可分配/退回点数，底部实时显示当前加点效果。</p>
 </div>
 
 <p v-if="loading">加载中...</p>
@@ -157,7 +163,6 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 <div class="class-tabs">
 <button v-for="(cls, key) in skillData.classes" :key="key" :class="['class-tab', { active: activeClass === key }]" @click="switchClass(key)">
 <img v-if="cls.icon && cls.icon.startsWith('/')" :src="cls.icon" class="class-icon-img" alt="">
-<span v-else class="class-icon">{{ cls.icon }}</span>
 <span class="class-name">{{ cls.name }}</span>
 <span class="class-name-en">{{ cls.nameEn }}</span>
 </button>
@@ -185,7 +190,12 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 </div>
 </div>
 </div>
-<div v-if="currentClass && currentClass.talents && currentClass.talents.length > 0" class="section">
+<div v-if="currentClass" class="section">
+<div class="talent-tabs">
+<button :class="['talent-tab', { active: activeTalentTab === 'combat' }]" @click="activeTalentTab = 'combat'">战斗天赋</button>
+<button :class="['talent-tab', { active: activeTalentTab === 'life' }]" @click="activeTalentTab = 'life'">生活技能</button>
+</div>
+<div v-if="activeTalentTab === 'combat'">
 <div class="talent-header">
 <h3 class="section-title">🌟 天赋模拟器</h3>
 <div class="point-tracker">
@@ -194,29 +204,31 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 <span class="point-text">已分配 {{ spentPoints }} / {{ totalPoints }}</span>
 </div>
 <span class="points-remaining" :class="{ 'no-points': remainingPoints === 0 }">剩余: <strong>{{ remainingPoints }}</strong></span>
-<button class="reset-btn" @click="refundAll">重置天赋</button>
+<button class="reset-btn" @click="refundAll">重置</button>
 </div>
 </div>
-<p class="talent-hint">💡 左键点击分配天赋点，右键点击退回天赋点</p>
-<div class="talent-tree-wrap">
+<p class="talent-hint" :class="{ 'no-points-hint': remainingPoints === 0 }">
+<span v-if="remainingPoints > 0">💡 左键点击分配天赋点，右键点击退回天赋点</span>
+<span v-else>⚠️ 天赋点已全部分配（共 {{ totalPoints }} 点），右键节点可退回重加</span>
+</p>
+<div class="talent-tree-panel">
 <div class="talent-tree-bg"></div>
-<div class="talent-tree">
-<div v-for="branch in branchColumns" :key="branch.name" class="talent-branch" :style="{ borderColor: categoryColor(branch.name) }">
-<div class="branch-header" :style="{ backgroundColor: categoryColor(branch.name) }">
-<span class="branch-icon">{{ categoryIcon(branch.name) }}</span>
-<span class="branch-name">{{ branch.name }}</span>
+<div class="talent-tree-frame">
+<div class="row-levels">
+<div v-for="(lvl, idx) in rowLevels" :key="idx" class="row-level">
+<div class="level-ring">{{ lvl }}</div>
 </div>
-<div class="branch-nodes">
-<div v-for="(talent, idx) in branch.talents" :key="talent.id" class="node-connector" :class="{ 'last': idx === branch.talents.length - 1 }">
-<div class="connector-line" v-if="idx > 0"></div>
-<div :class="['talent-node', { 'maxed': getTalentRank(talent.id) >= talent.maxRank, 'allocated': getTalentRank(talent.id) > 0, 'available': canAllocate(talent) }]" @click="allocatePoint(talent)" @contextmenu.prevent="refundPoint(talent)" @mouseenter="hoveredTalent = talent" @mouseleave="hoveredTalent = null">
-<div class="talent-icon-ring" :style="{ borderColor: categoryColor(branch.name) }">
+</div>
+<div class="talent-grid">
+<div v-for="(row, rIdx) in talentGrid" :key="rIdx" class="talent-row">
+<div v-for="talent in row" :key="talent.id" class="talent-cell" :class="{ 'milestone': talent.milestone }">
+<div class="vertical-line" v-if="rIdx > 0 && !talent.milestone"></div>
+<div :class="['talent-node', nodeStatus(talent)]" @click="allocatePoint(talent)" @contextmenu.prevent="refundPoint(talent)" @mouseenter="hoveredTalent = talent" @mouseleave="hoveredTalent = null">
+<div class="talent-icon-ring">
 <img v-if="talent.icon" :src="talent.icon" class="talent-icon-img" alt="">
 </div>
-<div class="talent-info">
-<span class="talent-name">{{ talent.name }}</span>
-<span class="talent-rank">{{ getTalentRank(talent.id) }} / {{ talent.maxRank }}</span>
-</div>
+<div class="talent-rank">{{ getTalentRank(talent.id) }} / {{ talent.maxRank }}</div>
+<div class="talent-name">{{ talent.name }}</div>
 </div>
 </div>
 </div>
@@ -224,7 +236,7 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 </div>
 </div>
 <div v-if="hoveredTalent" class="talent-detail">
-<div class="detail-header" :style="{ backgroundColor: categoryColor(hoveredTalent.category) }">
+<div class="detail-header" :style="{ backgroundColor: nodeStatus(hoveredTalent) === 'maxed' ? '#ff9800' : (nodeStatus(hoveredTalent) === 'allocated' ? '#ff9800' : '#4a4a6a') }">
 <img v-if="hoveredTalent.icon" :src="hoveredTalent.icon" class="detail-icon" alt="">
 <div class="detail-title">
 <strong>{{ hoveredTalent.name }}</strong>
@@ -232,9 +244,18 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 </div>
 </div>
 <div class="detail-body">
-<p class="detail-desc">{{ hoveredTalent.desc }}</p>
+<p class="detail-desc">{{ formatTalentDesc(hoveredTalent, getTalentRank(hoveredTalent.id)) }}</p>
 <p class="detail-desc-en">{{ hoveredTalent.descEn }}</p>
 <p class="detail-rank">当前等级: {{ getTalentRank(hoveredTalent.id) }} / {{ hoveredTalent.maxRank }}</p>
+<p class="detail-next" v-if="!hoveredTalent.milestone && getTalentRank(hoveredTalent.id) < hoveredTalent.maxRank && remainingPoints > 0">下一级: {{ formatTalentDesc(hoveredTalent, getTalentRank(hoveredTalent.id) + 1) }}</p>
+<p class="detail-warning" v-if="!hoveredTalent.milestone && remainingPoints === 0 && getTalentRank(hoveredTalent.id) < hoveredTalent.maxRank">天赋点已用完，右键其他节点退回点数</p>
+</div>
+</div>
+</div>
+<div v-if="activeTalentTab === 'life'" class="life-skills-section">
+<div class="no-data-box">
+<p>🌱 生活技能数据尚未在 Demo 版本中提取到。</p>
+<p>游戏内“生活技能”页签显示为占位或将在后续版本开放。</p>
 </div>
 </div>
 </div>
@@ -256,7 +277,7 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 <div class="summary-content">
 <span class="summary-name">{{ talent.name }}</span>
 <span class="summary-rank">Lv.{{ getTalentRank(talent.id) }}</span>
-<span class="summary-desc">{{ talent.desc }}</span>
+<span class="summary-desc">{{ formatTalentDesc(talent, getTalentRank(talent.id)) }}</span>
 </div>
 </div>
 </div>
@@ -370,6 +391,19 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 }
 .ability-name-en { color: #666; font-size: 0.85rem; margin: 0 0 0.5rem 0; font-style: italic; }
 .ability-desc { color: #ccc; font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.talent-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.talent-tab {
+  background: #1a1a2e;
+  color: #888;
+  border: 1px solid #333;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.talent-tab:hover { border-color: #555; color: #ccc; }
+.talent-tab.active { background: rgba(156, 39, 176, 0.15); border-color: #9c27b0; color: #fff; }
 .talent-header {
   display: flex;
   justify-content: space-between;
@@ -408,92 +442,137 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 .reset-btn { background: #4a4a6a; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
 .reset-btn:hover { background: #5a5a8a; }
 .talent-hint { color: #666; font-size: 0.85rem; margin: 0.5rem 0 1rem 0; }
-.talent-tree-wrap {
+.talent-hint.no-points-hint { color: #f44336; font-weight: bold; }
+.talent-tree-panel {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   border: 2px solid #333;
   padding: 1rem;
-  min-height: 500px;
+  min-height: 600px;
 }
 .talent-tree-bg {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('/images/icons/ui/warrior_talent_bg.png') center center / cover no-repeat;
-  opacity: 0.35;
+  background: url('/images/icons/ui/warrior_talent_bg.png') center center / contain no-repeat;
+  opacity: 0.3;
   z-index: 0;
 }
-.talent-tree {
+.talent-tree-frame {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  display: flex;
+  gap: 0.5rem;
 }
-.talent-branch {
-  background: rgba(26, 26, 46, 0.85);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 2px solid;
-  backdrop-filter: blur(4px);
+.row-levels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  width: 40px;
+  flex-shrink: 0;
 }
-.branch-header {
-  padding: 0.5rem 0.8rem;
-  color: #fff;
-  font-weight: bold;
+.row-level {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.95rem;
+  justify-content: center;
 }
-.branch-icon { font-size: 1.1rem; }
-.branch-nodes { padding: 0.6rem; }
-.node-connector { position: relative; padding-bottom: 0.6rem; }
-.node-connector.last { padding-bottom: 0; }
-.connector-line {
+.level-ring {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9800, #f44336);
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.4);
+}
+.talent-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.8rem;
+}
+.talent-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+.talent-cell {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 90px;
+}
+.talent-cell.milestone { opacity: 0.8; }
+.vertical-line {
   position: absolute;
-  left: 24px;
-  top: 48px;
+  top: -1rem;
+  left: 50%;
   width: 3px;
-  height: calc(100% - 32px);
-  background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  height: 1rem;
+  background: linear-gradient(180deg, rgba(255,152,0,0.5), rgba(255,255,255,0.2));
+  transform: translateX(-50%);
   z-index: 0;
 }
 .talent-node {
   position: relative;
   z-index: 1;
-  background: #2d2d44;
-  border: 2px solid #444;
-  border-radius: 8px;
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
   cursor: pointer;
   transition: all 0.15s;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
   user-select: none;
+  padding: 0.3rem;
+  border-radius: 8px;
 }
-.talent-node:hover { border-color: #666; background: #353548; transform: translateY(-2px); }
-.talent-node.available { border-color: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); }
-.talent-node.allocated { border-color: #ff9800; background: rgba(255, 152, 0, 0.12); }
-.talent-node.maxed { border-color: #ff9800; background: rgba(255, 152, 0, 0.2); box-shadow: 0 0 12px rgba(255, 152, 0, 0.5); }
+.talent-node:hover { transform: translateY(-2px); }
+.talent-node:hover .talent-icon-ring { border-color: #ff9800; }
 .talent-icon-ring {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  border: 2px solid;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: rgba(26, 26, 46, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1a1a2e;
-  flex-shrink: 0;
   overflow: hidden;
+  transition: all 0.15s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
-.talent-icon-img { width: 34px; height: 34px; object-fit: contain; }
-.talent-info { display: flex; flex-direction: column; gap: 0.1rem; }
-.talent-name { color: #fff; font-size: 0.85rem; font-weight: bold; }
-.talent-rank { color: #888; font-size: 0.75rem; }
+.talent-icon-img { width: 40px; height: 40px; object-fit: contain; }
+.talent-rank {
+  font-size: 0.75rem;
+  color: #888;
+  background: rgba(0,0,0,0.6);
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.talent-name {
+  font-size: 0.75rem;
+  color: #ccc;
+  text-align: center;
+  max-width: 80px;
+  line-height: 1.2;
+}
+.talent-node.allocated .talent-icon-ring { border-color: #ff9800; box-shadow: 0 0 10px rgba(255, 152, 0, 0.5); }
 .talent-node.allocated .talent-rank { color: #ff9800; }
+.talent-node.maxed .talent-icon-ring { border-color: #ff9800; background: rgba(255, 152, 0, 0.2); box-shadow: 0 0 15px rgba(255, 152, 0, 0.7); }
+.talent-node.maxed .talent-rank { color: #ff9800; }
+.talent-node.available .talent-icon-ring { border-color: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.4); }
+.talent-node.locked { opacity: 0.7; }
+.talent-node.milestone .talent-icon-ring { border-color: #9c27b0; }
 .talent-detail {
   margin-top: 1rem;
   background: rgba(26, 26, 46, 0.95);
@@ -516,8 +595,11 @@ const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 1
 .detail-desc { color: #ccc; font-size: 0.95rem; margin: 0 0 0.5rem 0; }
 .detail-desc-en { color: #666; font-size: 0.85rem; font-style: italic; margin: 0 0 0.5rem 0; }
 .detail-rank { color: #ff9800; font-size: 0.85rem; margin: 0; }
+.detail-next { color: #4caf50; font-size: 0.85rem; margin: 0.3rem 0 0 0; }
+.detail-warning { color: #f44336; font-size: 0.85rem; margin: 0.3rem 0 0 0; font-weight: bold; }
 .no-data-box { background: #1a1a2e; border-radius: 8px; padding: 1.5rem; text-align: center; color: #888; }
 .no-data-box p { margin: 0.5rem 0; }
+.life-skills-section { background: rgba(26, 26, 46, 0.5); border-radius: 8px; padding: 1rem; }
 .summary-section { background: rgba(156, 39, 176, 0.05); border-radius: 8px; padding: 1rem; }
 .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.8rem; }
 .summary-item {

@@ -70,8 +70,20 @@
           "desc": "+{value} 力量",
           "descEn": "+{value} Strength",
           "category": "属性",
-          "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_1.png"
+          "maxRank": 6,
+          "icon": "/images/icons/skills/skill_generic_1.png",
+          "values": {
+            "value": [
+              2,
+              4,
+              6,
+              8,
+              10,
+              12
+            ]
+          },
+          "row": 1,
+          "col": 1
         },
         {
           "id": 1,
@@ -81,7 +93,18 @@
           "descEn": "+{value} Max HP",
           "category": "属性",
           "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_2.png"
+          "icon": "/images/icons/skills/skill_generic_2.png",
+          "values": {
+            "value": [
+              50,
+              100,
+              150,
+              200,
+              250
+            ]
+          },
+          "row": 1,
+          "col": 2
         },
         {
           "id": 2,
@@ -91,7 +114,25 @@
           "descEn": "+{value1} Armor and +{value2} Magic Resist",
           "category": "属性",
           "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_3.png"
+          "icon": "/images/icons/skills/skill_generic_3.png",
+          "values": {
+            "value1": [
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "value2": [
+              5,
+              10,
+              15,
+              20,
+              25
+            ]
+          },
+          "row": 1,
+          "col": 3
         },
         {
           "id": 3,
@@ -101,7 +142,18 @@
           "descEn": "+{value} Attack Speed",
           "category": "属性",
           "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_4.png"
+          "icon": "/images/icons/skills/skill_generic_4.png",
+          "values": {
+            "value": [
+              2,
+              4,
+              6,
+              8,
+              10
+            ]
+          },
+          "row": 1,
+          "col": 4
         },
         {
           "id": 4,
@@ -110,8 +162,20 @@
           "desc": "+{value} 暴击几率",
           "descEn": "+{value} Critical Hit Chance",
           "category": "暴击",
-          "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_5.png"
+          "maxRank": 6,
+          "icon": "/images/icons/skills/skill_generic_5.png",
+          "values": {
+            "value": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "row": 1,
+          "col": 5
         },
         {
           "id": 5,
@@ -121,7 +185,18 @@
           "descEn": "+{value} Critical Hit Damage",
           "category": "暴击",
           "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_6.png"
+          "icon": "/images/icons/skills/skill_generic_6.png",
+          "values": {
+            "value": [
+              10,
+              20,
+              30,
+              40,
+              50
+            ]
+          },
+          "row": 1,
+          "col": 6
         },
         {
           "id": 6,
@@ -131,7 +206,18 @@
           "descEn": "+{value} Thorn",
           "category": "防御",
           "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_7.png"
+          "icon": "/images/icons/skills/skill_generic_7.png",
+          "values": {
+            "value": [
+              5,
+              10,
+              15,
+              20,
+              25
+            ]
+          },
+          "row": 2,
+          "col": 1
         },
         {
           "id": 7,
@@ -141,7 +227,103 @@
           "descEn": "+{value} Life Regen",
           "category": "防御",
           "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_8.png"
+          "icon": "/images/icons/skills/skill_generic_8.png",
+          "values": {
+            "value": [
+              2,
+              4,
+              6,
+              8,
+              10
+            ]
+          },
+          "row": 2,
+          "col": 2
+        },
+        {
+          "id": 20,
+          "name": "防御姿态",
+          "nameEn": "Defensive Stance",
+          "desc": "+{value} 护甲",
+          "descEn": "+{value} Armor",
+          "category": "防御",
+          "maxRank": 6,
+          "icon": "/images/icons/skills/skill_generic_6.png",
+          "values": {
+            "value": [
+              15,
+              30,
+              45,
+              60,
+              75,
+              90
+            ]
+          },
+          "row": 2,
+          "col": 3
+        },
+        {
+          "id": 13,
+          "name": "荆棘强化",
+          "nameEn": "Thorn Boost",
+          "desc": "+{value} 荆棘",
+          "descEn": "+{value} Thorn",
+          "category": "防御",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_14.png",
+          "values": {
+            "value": [
+              10,
+              20,
+              30,
+              40,
+              50
+            ]
+          },
+          "row": 2,
+          "col": 4
+        },
+        {
+          "id": 22,
+          "name": "第二阵风",
+          "nameEn": "Second Wind",
+          "desc": "生命值降至50%以下时治疗 {value}（6秒冷却）",
+          "descEn": "Heal {value} when HP drop below 50% Max HP. (6 seconds cooldown)",
+          "category": "防御",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_8.png",
+          "values": {
+            "value": [
+              100,
+              200,
+              300,
+              400,
+              500
+            ]
+          },
+          "row": 2,
+          "col": 5
+        },
+        {
+          "id": 28,
+          "name": "恶性荆棘",
+          "nameEn": "Vicious Thorns",
+          "desc": "荆棘可以触发暴击",
+          "descEn": "Thorn can trigger Critical Hit.",
+          "category": "防御",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_14.png",
+          "values": {
+            "value": [
+              100,
+              200,
+              300,
+              400,
+              500
+            ]
+          },
+          "row": 2,
+          "col": 6
         },
         {
           "id": 8,
@@ -150,8 +332,19 @@
           "desc": "+{value} 对受伤目标伤害",
           "descEn": "+{value} Damage to Injured targets",
           "category": "增伤",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_9.png"
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_9.png",
+          "values": {
+            "value": [
+              5,
+              10,
+              15,
+              20,
+              25
+            ]
+          },
+          "row": 3,
+          "col": 1
         },
         {
           "id": 9,
@@ -160,8 +353,58 @@
           "desc": "+{value} 对易伤目标伤害",
           "descEn": "+{value} Damage to Vulnerable targets",
           "category": "增伤",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_10.png"
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_10.png",
+          "values": {
+            "value": [
+              5
+            ]
+          },
+          "row": 3,
+          "col": 2
+        },
+        {
+          "id": 24,
+          "name": "猛攻",
+          "nameEn": "Onslaught",
+          "desc": "+{value} 对眩晕目标伤害",
+          "descEn": "+{value} Damage on Stunned targets.",
+          "category": "增伤",
+          "maxRank": 6,
+          "icon": "/images/icons/skills/skill_generic_10.png",
+          "values": {
+            "value": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60
+            ]
+          },
+          "row": 3,
+          "col": 3
+        },
+        {
+          "id": 12,
+          "name": "重击",
+          "nameEn": "Heavy Blow",
+          "desc": "暴击伤害有 {value} 几率对目标施加[易伤]",
+          "descEn": "Critical Hit Damage will have {value} to inflict [Vulnerable] to the victim.",
+          "category": "暴击",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_13.png",
+          "values": {
+            "value": [
+              15,
+              30,
+              45,
+              60,
+              75
+            ]
+          },
+          "row": 3,
+          "col": 4
         },
         {
           "id": 10,
@@ -170,8 +413,19 @@
           "desc": "施放[基础攻击]技能后获得攻击速度加成，最多叠加5层",
           "descEn": "+{value} Attack Speed up to 5 stacks after casting a [Basic Attack] Ability",
           "category": "强化",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_11.png"
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_11.png",
+          "values": {
+            "value": [
+              3,
+              6,
+              9,
+              12,
+              15
+            ]
+          },
+          "row": 3,
+          "col": 5
         },
         {
           "id": 11,
@@ -181,27 +435,21 @@
           "descEn": "Sweep Strike have a {chance} chance to reduce [Warcry] Abilities cooldown by {value} second.",
           "category": "强化",
           "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_12.png"
-        },
-        {
-          "id": 12,
-          "name": "重击",
-          "nameEn": "Heavy Blow",
-          "desc": "暴击伤害有 {value} 几率对目标施加[易伤]",
-          "descEn": "Critical Hit Damage will have {value} to inflict [Vulnerable] to the victim.",
-          "category": "暴击",
-          "maxRank": 1,
-          "icon": "/images/icons/skills/skill_generic_13.png"
-        },
-        {
-          "id": 13,
-          "name": "荆棘强化",
-          "nameEn": "Thorn Boost",
-          "desc": "+{value} 荆棘",
-          "descEn": "+{value} Thorn",
-          "category": "防御",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_14.png"
+          "icon": "/images/icons/skills/skill_generic_12.png",
+          "values": {
+            "chance": [
+              10,
+              20,
+              30
+            ],
+            "value": [
+              1,
+              2,
+              3
+            ]
+          },
+          "row": 3,
+          "col": 6
         },
         {
           "id": 14,
@@ -210,8 +458,15 @@
           "desc": "+{value} [强力攻击]法力消耗降低",
           "descEn": "+{value} [Strong Attack] Mana Cost reduction.",
           "category": "强化",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_15.png"
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_15.png",
+          "values": {
+            "value": [
+              5
+            ]
+          },
+          "row": 4,
+          "col": 1
         },
         {
           "id": 15,
@@ -220,8 +475,28 @@
           "desc": "+{strongAttackDamage} [强力攻击]伤害，但 +{strongAttackManaCost} 法力消耗",
           "descEn": "+{strongAttackDamage} [Strong Attack] Damage, but also +{strongAttackManaCost} Mana Cost.",
           "category": "强化",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_1.png"
+          "maxRank": 6,
+          "icon": "/images/icons/skills/skill_generic_1.png",
+          "values": {
+            "strongAttackDamage": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60
+            ],
+            "strongAttackManaCost": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "row": 4,
+          "col": 2
         },
         {
           "id": 16,
@@ -230,8 +505,15 @@
           "desc": "+{value} [战吼]技能冷却降低",
           "descEn": "+{value} [Warcry] Abilities Cooldown reduction.",
           "category": "强化",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_2.png"
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_2.png",
+          "values": {
+            "value": [
+              5
+            ]
+          },
+          "row": 4,
+          "col": 3
         },
         {
           "id": 17,
@@ -240,38 +522,54 @@
           "desc": "激活怒气护盾时生成 {value} 法力",
           "descEn": "Generate {value} Mana upon activating Rage Shield",
           "category": "强化",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_3.png"
+          "maxRank": 6,
+          "icon": "/images/icons/skills/skill_generic_3.png",
+          "values": {
+            "value": [
+              10,
+              20,
+              30,
+              40,
+              50,
+              60
+            ]
+          },
+          "row": 4,
+          "col": 4
         },
         {
-          "id": 18,
-          "name": "[野兽]仆从强化",
-          "nameEn": "[Beast] Slave Boost",
-          "desc": "激活的[野兽]提供 {value} 力量加成",
-          "descEn": "Active [Beast] provides {value} Strength increase.",
-          "category": "仆从",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_4.png"
+          "id": 25,
+          "name": "强化烈焰打击：伤害",
+          "nameEn": "Enhance Flame Strike: Damage",
+          "desc": "烈焰打击额外造成 {value} 伤害",
+          "descEn": "Flame Strike deals additional {value} Damage.",
+          "category": "强化",
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_11.png",
+          "values": {
+            "value": [
+              15
+            ]
+          },
+          "row": 4,
+          "col": 5
         },
         {
-          "id": 19,
-          "name": "[人形]仆从强化",
-          "nameEn": "[Humanoid] Slave Boost",
-          "desc": "激活的[人形]提供 {value} 经验加成",
-          "descEn": "Active [Humanoid] provides {value} EXP increase.",
-          "category": "仆从",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_5.png"
-        },
-        {
-          "id": 20,
-          "name": "防御姿态",
-          "nameEn": "Defensive Stance",
-          "desc": "+{value} 护甲",
-          "descEn": "+{value} Armor",
-          "category": "防御",
-          "maxRank": 5,
-          "icon": "/images/icons/skills/skill_generic_6.png"
+          "id": 26,
+          "name": "强化英勇打击：法力获取",
+          "nameEn": "Enhance Valiant Strike: Mana Gain",
+          "desc": "+{value} 英勇打击法力获取",
+          "descEn": "+{value} Mana Gain from Valiant Strike.",
+          "category": "法力",
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_12.png",
+          "values": {
+            "value": [
+              3
+            ]
+          },
+          "row": 4,
+          "col": 6
         },
         {
           "id": 21,
@@ -281,17 +579,16 @@
           "descEn": "Restore {value} Mana on each kill.",
           "category": "法力",
           "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_7.png"
-        },
-        {
-          "id": 22,
-          "name": "第二阵风",
-          "nameEn": "Second Wind",
-          "desc": "生命值降至50%以下时治疗 {value}（6秒冷却）",
-          "descEn": "Heal {value} when HP drop below 50% Max HP. (6 seconds cooldown)",
-          "category": "防御",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_8.png"
+          "icon": "/images/icons/skills/skill_generic_7.png",
+          "values": {
+            "value": [
+              5,
+              10,
+              15
+            ]
+          },
+          "row": 5,
+          "col": 1
         },
         {
           "id": 23,
@@ -300,38 +597,73 @@
           "desc": "[基础攻击]有 {stunChance} 几率眩晕敌人",
           "descEn": "[Basic Attack] have {stunChance} to stun the enemy.",
           "category": "控制",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_9.png"
+          "maxRank": 6,
+          "icon": "/images/icons/skills/skill_generic_9.png",
+          "values": {
+            "stunChance": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "row": 5,
+          "col": 2
         },
         {
-          "id": 24,
-          "name": "猛攻",
-          "nameEn": "Onslaught",
-          "desc": "+{value} 对眩晕目标伤害",
-          "descEn": "+{value} Damage on Stunned targets.",
-          "category": "增伤",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_10.png"
+          "id": 99,
+          "name": "天赋吸收",
+          "nameEn": "Talent Absorb",
+          "desc": "已吸收全部 XP，获得额外天赋点",
+          "descEn": "Absorbed all XP to gain additional talent points.",
+          "category": "特殊",
+          "maxRank": 2,
+          "row": 5,
+          "col": 3,
+          "icon": "/images/icons/skills/skill_icon_02.png",
+          "milestone": true,
+          "values": {
+            "value": [
+              100,
+              100
+            ]
+          }
         },
         {
-          "id": 25,
-          "name": "强化烈焰打击：伤害",
-          "nameEn": "Enhance Flame Strike: Damage",
-          "desc": "烈焰打击额外造成 {value} 伤害",
-          "descEn": "Flame Strike deals additional {value} Damage.",
-          "category": "强化",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_11.png"
+          "id": 18,
+          "name": "[野兽]仆从强化",
+          "nameEn": "[Beast] Slave Boost",
+          "desc": "激活的[野兽]提供 {value} 力量加成",
+          "descEn": "Active [Beast] provides {value} Strength increase.",
+          "category": "仆从",
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_4.png",
+          "values": {
+            "value": [
+              5
+            ]
+          },
+          "row": 5,
+          "col": 4
         },
         {
-          "id": 26,
-          "name": "强化英勇打击：法力获取",
-          "nameEn": "Enhance Valiant Strike: Mana Gain",
-          "desc": "+{value} 英勇打击法力获取",
-          "descEn": "+{value} Mana Gain from Valiant Strike.",
-          "category": "法力",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_12.png"
+          "id": 19,
+          "name": "[人形]仆从强化",
+          "nameEn": "[Humanoid] Slave Boost",
+          "desc": "激活的[人形]提供 {value} 经验加成",
+          "descEn": "Active [Humanoid] provides {value} EXP increase.",
+          "category": "仆从",
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_5.png",
+          "values": {
+            "value": [
+              3
+            ]
+          },
+          "row": 5,
+          "col": 5
         },
         {
           "id": 27,
@@ -340,19 +672,24 @@
           "desc": "激活的[亡灵]提供 {value} 暴击伤害",
           "descEn": "Active [Undead] provides {value} Critical Hit Damage.",
           "category": "仆从",
-          "maxRank": 3,
-          "icon": "/images/icons/skills/skill_generic_13.png"
-        },
-        {
-          "id": 28,
-          "name": "恶性荆棘",
-          "nameEn": "Vicious Thorns",
-          "desc": "荆棘可以触发暴击",
-          "descEn": "Thorn can trigger Critical Hit.",
-          "category": "防御",
           "maxRank": 1,
-          "icon": "/images/icons/skills/skill_generic_14.png"
+          "icon": "/images/icons/skills/skill_generic_13.png",
+          "values": {
+            "value": [
+              10
+            ]
+          },
+          "row": 5,
+          "col": 6
         }
+      ],
+      "totalPoints": 24,
+      "rowLevels": [
+        1,
+        5,
+        5,
+        5,
+        6
       ]
     },
     "sorcerer": {
