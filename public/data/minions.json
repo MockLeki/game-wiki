@@ -13,8 +13,15 @@
       "location": "国王森林",
       "image": "/images/weapons/3000.png",
       "passives": [
-        { "name": "毒素伤害I", "nameEn": "Poison Damage I", "desc": "毒素伤害 +10%", "descEn": "+10% Poison Damage.", "value": "10%" }
-      ]
+        {
+          "name": "毒素伤害I",
+          "nameEn": "Poison Damage I",
+          "desc": "毒素伤害 +10%",
+          "descEn": "+10% Poison Damage.",
+          "value": "10%"
+        }
+      ],
+      "icon": "/images/icons/minions/spider.png"
     },
     {
       "id": 3001,
@@ -29,8 +36,15 @@
       "location": "国王森林南部",
       "image": "/images/weapons/3001.png",
       "passives": [
-        { "name": "法力I", "nameEn": "Mana I", "desc": "法力 +20", "descEn": "+20 Mana.", "value": "20" }
-      ]
+        {
+          "name": "法力I",
+          "nameEn": "Mana I",
+          "desc": "法力 +20",
+          "descEn": "+20 Mana.",
+          "value": "20"
+        }
+      ],
+      "icon": "/images/icons/minions/poison_spider.png"
     },
     {
       "id": 3002,
@@ -45,8 +59,15 @@
       "location": "北山地穴",
       "image": "/images/weapons/3002.png",
       "passives": [
-        { "name": "金币获取I", "nameEn": "Gold Increase I", "desc": "从敌人处获得的金币 +10%", "descEn": "+10% Gold gained from enemies.", "value": "10%" }
-      ]
+        {
+          "name": "金币获取I",
+          "nameEn": "Gold Increase I",
+          "desc": "从敌人处获得的金币 +10%",
+          "descEn": "+10% Gold gained from enemies.",
+          "value": "10%"
+        }
+      ],
+      "icon": "/images/icons/minions/goblin_warrior.png"
     },
     {
       "id": 3003,
@@ -61,7 +82,13 @@
       "location": "北山地穴",
       "image": "/images/weapons/3003.png",
       "passives": [
-        { "name": "疾行I", "nameEn": "Fast Travel I", "desc": "移动速度 +5%", "descEn": "+5% Move Speed.", "value": "5%" }
+        {
+          "name": "疾行I",
+          "nameEn": "Fast Travel I",
+          "desc": "移动速度 +5%",
+          "descEn": "+5% Move Speed.",
+          "value": "5%"
+        }
       ]
     },
     {
@@ -77,8 +104,15 @@
       "location": "国王森林南部",
       "image": "/images/weapons/3004.png",
       "passives": [
-        { "name": "嗜血I", "nameEn": "Bloodthirst I", "desc": "命中回复生命 +10", "descEn": "+10 Life On Hit.", "value": "10" }
-      ]
+        {
+          "name": "嗜血I",
+          "nameEn": "Bloodthirst I",
+          "desc": "命中回复生命 +10",
+          "descEn": "+10 Life On Hit.",
+          "value": "10"
+        }
+      ],
+      "icon": "/images/icons/minions/zombie_wolf.png"
     },
     {
       "id": 3005,
@@ -93,7 +127,13 @@
       "location": "国王森林",
       "image": "/images/weapons/3005.png",
       "passives": [
-        { "name": "攻击速度I", "nameEn": "Attack Speed I", "desc": "攻击速度 +3%", "descEn": "+3% Attack Speed.", "value": "3%" }
+        {
+          "name": "攻击速度I",
+          "nameEn": "Attack Speed I",
+          "desc": "攻击速度 +3%",
+          "descEn": "+3% Attack Speed.",
+          "value": "3%"
+        }
       ]
     },
     {
@@ -109,8 +149,15 @@
       "location": "国王森林南部",
       "image": "/images/weapons/3006.png",
       "passives": [
-        { "name": "棘刺I", "nameEn": "Thorn I", "desc": "荆棘 +10", "descEn": "+10 Thorn.", "value": "10" }
-      ]
+        {
+          "name": "棘刺I",
+          "nameEn": "Thorn I",
+          "desc": "荆棘 +10",
+          "descEn": "+10 Thorn.",
+          "value": "10"
+        }
+      ],
+      "icon": "/images/icons/minions/stumplin.png"
     },
     {
       "id": 3007,
@@ -125,8 +172,15 @@
       "location": "北山地穴",
       "image": "/images/weapons/3007.png",
       "passives": [
-        { "name": "暴击几率I", "nameEn": "Critical Hit Chance I", "desc": "暴击几率 +3%", "descEn": "+3% Critical Hit Chance.", "value": "3%" }
-      ]
+        {
+          "name": "暴击几率I",
+          "nameEn": "Critical Hit Chance I",
+          "desc": "暴击几率 +3%",
+          "descEn": "+3% Critical Hit Chance.",
+          "value": "3%"
+        }
+      ],
+      "icon": "/images/icons/minions/skeleton_archer.png"
     },
     {
       "id": 3008,
@@ -141,8 +195,15 @@
       "location": "北山地穴下层",
       "image": "/images/weapons/3008.png",
       "passives": [
-        { "name": "力量I", "nameEn": "Strength I", "desc": "力量 +5", "descEn": "+5 Strength.", "value": "5" }
-      ]
+        {
+          "name": "力量I",
+          "nameEn": "Strength I",
+          "desc": "力量 +5",
+          "descEn": "+5 Strength.",
+          "value": "5"
+        }
+      ],
+      "icon": "/images/icons/minions/orc_warrior.png"
     },
     {
       "id": 3009,
@@ -157,8 +218,15 @@
       "location": "商人",
       "image": "/images/weapons/3009.png",
       "passives": [
-        { "name": "疾行II", "nameEn": "Fast Travel II", "desc": "移动速度 +10%", "descEn": "+10% Move Speed.", "value": "10%" }
-      ]
+        {
+          "name": "疾行II",
+          "nameEn": "Fast Travel II",
+          "desc": "移动速度 +10%",
+          "descEn": "+10% Move Speed.",
+          "value": "10%"
+        }
+      ],
+      "icon": "/images/icons/minions/brown_pony.png"
     },
     {
       "id": 3010,
@@ -173,8 +241,15 @@
       "location": "国王森林",
       "image": "/images/weapons/3010.png",
       "passives": [
-        { "name": "活力I", "nameEn": "Vitality I", "desc": "最大生命值 +150", "descEn": "+150 Max HP.", "value": "150" }
-      ]
+        {
+          "name": "活力I",
+          "nameEn": "Vitality I",
+          "desc": "最大生命值 +150",
+          "descEn": "+150 Max HP.",
+          "value": "150"
+        }
+      ],
+      "icon": "/images/icons/minions/boar.png"
     },
     {
       "id": 3011,
@@ -196,8 +271,15 @@
         "value": "30%"
       },
       "passives": [
-        { "name": "命中回复生命I", "nameEn": "Life On Hit I", "desc": "命中回复生命 +10", "descEn": "+10 Life On Hit.", "value": "10" }
-      ]
+        {
+          "name": "命中回复生命I",
+          "nameEn": "Life On Hit I",
+          "desc": "命中回复生命 +10",
+          "descEn": "+10 Life On Hit.",
+          "value": "10"
+        }
+      ],
+      "icon": "/images/icons/minions/werewolf.png"
     },
     {
       "id": 3012,
@@ -212,8 +294,15 @@
       "location": "北山地穴",
       "image": "/images/weapons/3012.png",
       "passives": [
-        { "name": "法力提升", "nameEn": "Mana Increase", "desc": "法力 +30", "descEn": "+30 Mana.", "value": "30" }
-      ]
+        {
+          "name": "法力提升",
+          "nameEn": "Mana Increase",
+          "desc": "法力 +30",
+          "descEn": "+30 Mana.",
+          "value": "30"
+        }
+      ],
+      "icon": "/images/icons/minions/dark_elf_mage.png"
     },
     {
       "id": 3013,
@@ -228,8 +317,15 @@
       "location": "商人",
       "image": "/images/weapons/3013.png",
       "passives": [
-        { "name": "疾行III", "nameEn": "Fast Travel III", "desc": "移动速度 +15%", "descEn": "+15% Move Speed.", "value": "15%" }
-      ]
+        {
+          "name": "疾行III",
+          "nameEn": "Fast Travel III",
+          "desc": "移动速度 +15%",
+          "descEn": "+15% Move Speed.",
+          "value": "15%"
+        }
+      ],
+      "icon": "/images/icons/minions/black_horse.png"
     },
     {
       "id": 3014,
@@ -244,8 +340,15 @@
       "location": "北山地穴下层",
       "image": "/images/weapons/3014.png",
       "passives": [
-        { "name": "对眩晕伤害III", "nameEn": "Damage to Stunned III", "desc": "对眩晕敌人伤害 +30%", "descEn": "+30% Damage to Stunned enemies.", "value": "30%" }
-      ]
+        {
+          "name": "对眩晕伤害III",
+          "nameEn": "Damage to Stunned III",
+          "desc": "对眩晕敌人伤害 +30%",
+          "descEn": "+30% Damage to Stunned enemies.",
+          "value": "30%"
+        }
+      ],
+      "icon": "/images/icons/minions/ogre.png"
     },
     {
       "id": 3015,
@@ -267,8 +370,15 @@
         "value": "20%"
       },
       "passives": [
-        { "name": "生命提升", "nameEn": "Health Increase", "desc": "最大生命值 +10%", "descEn": "+10% Max Health.", "value": "10%" }
-      ]
+        {
+          "name": "生命提升",
+          "nameEn": "Health Increase",
+          "desc": "最大生命值 +10%",
+          "descEn": "+10% Max Health.",
+          "value": "10%"
+        }
+      ],
+      "icon": "/images/icons/minions/treant.png"
     },
     {
       "id": 3016,
@@ -283,41 +393,170 @@
       "location": "商人",
       "image": "/images/weapons/3016.png",
       "passives": [
-        { "name": "厚皮III", "nameEn": "Thick Skin III", "desc": "护甲 +15%", "descEn": "+15% Armor.", "value": "15%" },
-        { "name": "疾行I", "nameEn": "Fast Travel I", "desc": "移动速度 +5%", "descEn": "+5% Move Speed.", "value": "5%" }
-      ]
+        {
+          "name": "厚皮III",
+          "nameEn": "Thick Skin III",
+          "desc": "护甲 +15%",
+          "descEn": "+15% Armor.",
+          "value": "15%"
+        },
+        {
+          "name": "疾行I",
+          "nameEn": "Fast Travel I",
+          "desc": "移动速度 +5%",
+          "descEn": "+5% Move Speed.",
+          "value": "5%"
+        }
+      ],
+      "icon": "/images/icons/minions/blue_mammoth.png"
     }
   ],
   "species": [
-    { "key": "beast", "name": "野兽", "nameEn": "Beast", "icon": "🐺" },
-    { "key": "demon", "name": "恶魔", "nameEn": "Demon", "icon": "👹" },
-    { "key": "dragon", "name": "龙", "nameEn": "Dragon", "icon": "🐉" },
-    { "key": "humanoid", "name": "人形", "nameEn": "Humanoid", "icon": "🧙" },
-    { "key": "undead", "name": "亡灵", "nameEn": "Undead", "icon": "💀" }
+    {
+      "key": "beast",
+      "name": "野兽",
+      "nameEn": "Beast",
+      "icon": "🐺"
+    },
+    {
+      "key": "demon",
+      "name": "恶魔",
+      "nameEn": "Demon",
+      "icon": "👹"
+    },
+    {
+      "key": "dragon",
+      "name": "龙",
+      "nameEn": "Dragon",
+      "icon": "🐉"
+    },
+    {
+      "key": "humanoid",
+      "name": "人形",
+      "nameEn": "Humanoid",
+      "icon": "🧙"
+    },
+    {
+      "key": "undead",
+      "name": "亡灵",
+      "nameEn": "Undead",
+      "icon": "💀"
+    }
   ],
   "npcs": [
-    { "id": "MainTown", "name": "主城·艾瑟隆", "nameEn": "Kingdom of Atheron", "desc": "被城堡守护的有墙市场小镇，艾瑟隆王国最后的避难所。英雄在这里休息、交易和补给，然后向地狱之王的黑暗进军。" },
-    { "id": "RepairNPC", "name": "铁匠", "nameEn": "Blacksmith", "desc": "修理和升级装备" },
-    { "id": "MerchantNPC", "name": "商人", "nameEn": "Merchant", "desc": "普通商品商人" },
-    { "id": "MysteryNPC", "name": "神秘商人", "nameEn": "Mystery Vendor", "desc": "神秘物品商人" },
-    { "id": "HealNPC", "name": "治疗师", "nameEn": "Healer", "desc": "提供治疗服务" },
-    { "id": "AlchemistNPC", "name": "炼金师", "nameEn": "Alchemist", "desc": "制作药水" },
-    { "id": "CombatPortal", "name": "战斗传送门", "nameEn": "Combat Portal", "desc": "快速进入战斗" }
+    {
+      "id": "MainTown",
+      "name": "主城·艾瑟隆",
+      "nameEn": "Kingdom of Atheron",
+      "desc": "被城堡守护的有墙市场小镇，艾瑟隆王国最后的避难所。英雄在这里休息、交易和补给，然后向地狱之王的黑暗进军。"
+    },
+    {
+      "id": "RepairNPC",
+      "name": "铁匠",
+      "nameEn": "Blacksmith",
+      "desc": "修理和升级装备"
+    },
+    {
+      "id": "MerchantNPC",
+      "name": "商人",
+      "nameEn": "Merchant",
+      "desc": "普通商品商人"
+    },
+    {
+      "id": "MysteryNPC",
+      "name": "神秘商人",
+      "nameEn": "Mystery Vendor",
+      "desc": "神秘物品商人"
+    },
+    {
+      "id": "HealNPC",
+      "name": "治疗师",
+      "nameEn": "Healer",
+      "desc": "提供治疗服务"
+    },
+    {
+      "id": "AlchemistNPC",
+      "name": "炼金师",
+      "nameEn": "Alchemist",
+      "desc": "制作药水"
+    },
+    {
+      "id": "CombatPortal",
+      "name": "战斗传送门",
+      "nameEn": "Combat Portal",
+      "desc": "快速进入战斗"
+    }
   ],
   "enemies": [
-    { "name": "毒液蜘蛛", "nameEn": "Venomous Spider" },
-    { "name": "黑蜘蛛", "nameEn": "Black Spider" },
-    { "name": "树桩怪", "nameEn": "Stumplin" },
-    { "name": "变异之狼", "nameEn": "Mutating Wolf" },
-    { "name": "哥布林战士", "nameEn": "Goblin Warrior" },
-    { "name": "兽人战士", "nameEn": "Orc Warrior" },
-    { "name": "骷髅战士", "nameEn": "Skeleton Warrior" },
-    { "name": "骷髅弓箭手", "nameEn": "Skeleton Archer" },
-    { "name": "黑暗精灵法师", "nameEn": "Dark Elf Mage" },
-    { "name": "野猪", "nameEn": "Boar" },
-    { "name": "食人魔", "nameEn": "Ogre" },
-    { "name": "血月狼人", "nameEn": "Bloodmoon Werewolf" },
-    { "name": "远古橡树树人", "nameEn": "Ancient Oak Treant" },
-    { "name": "幼年黑龙", "nameEn": "Young Black Dragon" }
+    {
+      "name": "毒液蜘蛛",
+      "nameEn": "Venomous Spider",
+      "icon": "/images/icons/minions/poison_spider.png"
+    },
+    {
+      "name": "黑蜘蛛",
+      "nameEn": "Black Spider",
+      "icon": "/images/icons/minions/spider.png"
+    },
+    {
+      "name": "树桩怪",
+      "nameEn": "Stumplin",
+      "icon": "/images/icons/minions/stumplin.png"
+    },
+    {
+      "name": "变异之狼",
+      "nameEn": "Mutating Wolf",
+      "icon": "/images/icons/minions/zombie_wolf.png"
+    },
+    {
+      "name": "哥布林战士",
+      "nameEn": "Goblin Warrior",
+      "icon": "/images/icons/minions/goblin_warrior.png"
+    },
+    {
+      "name": "兽人战士",
+      "nameEn": "Orc Warrior",
+      "icon": "/images/icons/minions/orc_warrior.png"
+    },
+    {
+      "name": "骷髅战士",
+      "nameEn": "Skeleton Warrior",
+      "icon": "/images/icons/minions/skeleton_warrior.png"
+    },
+    {
+      "name": "骷髅弓箭手",
+      "nameEn": "Skeleton Archer",
+      "icon": "/images/icons/minions/skeleton_archer.png"
+    },
+    {
+      "name": "黑暗精灵法师",
+      "nameEn": "Dark Elf Mage",
+      "icon": "/images/icons/minions/dark_elf_mage.png"
+    },
+    {
+      "name": "野猪",
+      "nameEn": "Boar",
+      "icon": "/images/icons/minions/boar.png"
+    },
+    {
+      "name": "食人魔",
+      "nameEn": "Ogre",
+      "icon": "/images/icons/minions/ogre.png"
+    },
+    {
+      "name": "血月狼人",
+      "nameEn": "Bloodmoon Werewolf",
+      "icon": "/images/icons/minions/werewolf.png"
+    },
+    {
+      "name": "远古橡树树人",
+      "nameEn": "Ancient Oak Treant",
+      "icon": "/images/icons/minions/treant.png"
+    },
+    {
+      "name": "幼年黑龙",
+      "nameEn": "Young Black Dragon",
+      "icon": "/images/icons/minions/dragon.png"
+    }
   ]
 }

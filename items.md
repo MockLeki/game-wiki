@@ -2,13 +2,18 @@
 import { ref, computed, onMounted } from 'vue'
 
 const itemData = ref(null)
+const iconMap = ref({})
 const loading = ref(true)
 const activeTab = ref('weapons')
 
 onMounted(async () => {
   try {
-    const response = await fetch('/data/items.json')
-    itemData.value = await response.json()
+    const [itemsRes, iconRes] = await Promise.all([
+      fetch('/data/items.json'),
+      fetch('/data/icon_map.json')
+    ])
+    itemData.value = await itemsRes.json()
+    iconMap.value = await iconRes.json()
   } catch (e) {
     console.error('加载失败:', e)
   } finally {
@@ -23,9 +28,16 @@ const slotNames = {
 }
 
 const slotIcons = {
-  weapon: '⚔️', helm: '🪖', chest: '👕', shoulder: '🛡️',
-  necklace: '📿', gloves: '🧤', belt: '⛓️', legs: '👖',
-  boots: '👢', ring: '💍'
+  weapon: '/images/icons/ui/icon_bg_weapon.png',
+  helm: '/images/icons/ui/icon_bg_helm.png',
+  chest: '/images/icons/ui/icon_bg_chest.png',
+  shoulder: '/images/icons/ui/icon_bg_shoulder.png',
+  necklace: '/images/icons/ui/icon_bg_neck.png',
+  gloves: '/images/icons/ui/icon_bg_gloves.png',
+  belt: '/images/icons/ui/icon_bg_belt.png',
+  legs: '/images/icons/ui/icon_bg_pants.png',
+  boots: '/images/icons/ui/icon_bg_boots.png',
+  ring: '/images/icons/ui/icon_bg_ring.png'
 }
 
 const qualityColors = {
@@ -59,14 +71,12 @@ const buffPotions = computed(() => {
 
 <div class="tip-box">
   <strong>数据来源</strong>
-  <p>装备数据从游戏本体 Deskrawl Demo 的 Unity 资源中提取，包含传说装备、消耗品、材料、随从缰绳等完整数据。</p>
+  <p>装备数据从游戏本体 Deskrawl Demo 的 Unity 资源中提取，图标来自游戏内实际资源。包含传说装备、消耗品、材料、随从缰绳等完整数据。</p>
 </div>
 
 <p v-if="loading">加载中...</p>
 
 <div v-if="!loading && itemData" class="equipment-container">
-
-<!-- Tab 切换 -->
 <div class="tabs">
 <button v-for="tab in ['weapons','armor','consumables','materials','reins']" :key="tab" :class="['tab', { active: activeTab === tab }]" @click="activeTab = tab">
 <span v-if="tab==='weapons'">⚔️ 传说武器</span>
@@ -76,14 +86,15 @@ const buffPotions = computed(() => {
 <span v-else>🐴 随从缰绳</span>
 </button>
 </div>
-
-<!-- 传说武器 -->
 <div v-if="activeTab==='weapons'" class="tab-content">
 <div class="equipment-grid">
 <div v-for="item in itemData.legendary_weapons" :key="item.id" class="equipment-card" style="border-color: #ff9800">
 <div class="eq-header" style="background: #ff9800">
 <div class="eq-title">
-<span class="eq-icon">{{ slotIcons[item.slot] }}</span>
+<div class="eq-icon-wrap">
+<img :src="slotIcons[item.slot]" class="slot-bg" alt="">
+<img v-if="item.icon" :src="item.icon" class="eq-icon-img" alt="">
+</div>
 <span class="eq-name">{{ item.name }}</span>
 </div>
 <span class="eq-slot">{{ slotNames[item.slot] }}</span>
@@ -99,8 +110,6 @@ const buffPotions = computed(() => {
 </div>
 </div>
 </div>
-
-<!-- 传说防具 -->
 <div v-if="activeTab==='armor'" class="tab-content">
 <div class="armor-sections">
 <div v-for="(items, slot) in groupedArmor" :key="slot" class="armor-slot-group">
@@ -109,7 +118,10 @@ const buffPotions = computed(() => {
 <div v-for="item in items" :key="item.id" class="equipment-card" style="border-color: #ff9800">
 <div class="eq-header" style="background: #ff9800">
 <div class="eq-title">
-<span class="eq-icon">{{ slotIcons[item.slot] }}</span>
+<div class="eq-icon-wrap">
+<img :src="slotIcons[item.slot]" class="slot-bg" alt="">
+<img v-if="item.icon" :src="item.icon" class="eq-icon-img" alt="">
+</div>
 <span class="eq-name">{{ item.name }}</span>
 </div>
 <span class="eq-slot">{{ slotNames[item.slot] }}</span>
@@ -127,13 +139,14 @@ const buffPotions = computed(() => {
 </div>
 </div>
 </div>
-
-<!-- 消耗品 -->
 <div v-if="activeTab==='consumables'" class="tab-content">
-<h3>💊 生命药水</h3>
+<h3>生命药水</h3>
 <div class="equipment-grid consumables-grid">
 <div v-for="p in hpPotions" :key="p.id" class="consumable-card">
 <div class="con-header">
+<div class="con-icon-wrap">
+<img v-if="p.icon" :src="p.icon" class="con-icon-img" alt="">
+</div>
 <span class="con-name">{{ p.name }}</span>
 </div>
 <div class="con-body">
@@ -141,10 +154,13 @@ const buffPotions = computed(() => {
 </div>
 </div>
 </div>
-<h3>🧪 增益药水 (持续1小时)</h3>
+<h3>增益药水 (持续1小时)</h3>
 <div class="equipment-grid consumables-grid">
 <div v-for="p in buffPotions" :key="p.id" class="consumable-card">
 <div class="con-header" style="background: #2196f3">
+<div class="con-icon-wrap">
+<img v-if="p.icon" :src="p.icon" class="con-icon-img" alt="">
+</div>
 <span class="con-name">{{ p.name }}</span>
 </div>
 <div class="con-body">
@@ -152,7 +168,7 @@ const buffPotions = computed(() => {
 </div>
 </div>
 </div>
-<h3>📚 经验之书</h3>
+<h3>经验之书</h3>
 <div class="exp-books">
 <div v-for="book in itemData.exp_books" :key="book.id" class="exp-book">
 <span class="book-tier">Lv.{{ book.tier }}</span>
@@ -161,13 +177,14 @@ const buffPotions = computed(() => {
 </div>
 </div>
 </div>
-
-<!-- 材料&宝箱 -->
 <div v-if="activeTab==='materials'" class="tab-content">
-<h3>🔮 材料</h3>
+<h3>材料</h3>
 <div class="equipment-grid consumables-grid">
 <div v-for="m in itemData.materials" :key="m.id" class="consumable-card">
 <div class="con-header" style="background: #9c27b0">
+<div class="con-icon-wrap">
+<img v-if="m.icon" :src="m.icon" class="con-icon-img" alt="">
+</div>
 <span class="con-name">{{ m.name }}</span>
 </div>
 <div class="con-body">
@@ -175,10 +192,13 @@ const buffPotions = computed(() => {
 </div>
 </div>
 </div>
-<h3>🎁 宝箱</h3>
+<h3>宝箱</h3>
 <div class="equipment-grid consumables-grid">
 <div v-for="c in itemData.chests" :key="c.id" class="consumable-card">
 <div class="con-header" style="background: #ff9800">
+<div class="con-icon-wrap">
+<img v-if="c.icon" :src="c.icon" class="con-icon-img" alt="">
+</div>
 <span class="con-name">{{ c.name }}</span>
 </div>
 <div class="con-body">
@@ -186,27 +206,29 @@ const buffPotions = computed(() => {
 </div>
 </div>
 </div>
-<h3>🎲 随机装备盒</h3>
+<h3>随机装备盒</h3>
 <div class="random-boxes">
 <div v-for="box in itemData.random_boxes" :key="box.slot" class="random-box">
+<div class="box-icon-wrap">
+<img :src="slotIcons[box.slot]" class="box-slot-bg" alt="">
+</div>
 <span>{{ box.name }}</span>
 </div>
 </div>
 </div>
-
-<!-- 随从缰绳 -->
 <div v-if="activeTab==='reins'" class="tab-content">
 <p class="section-desc">击败对应怪物或完成特定条件后获得，使用缰绳可永久解锁该随从。</p>
 <div class="reins-grid">
 <div v-for="rein in itemData.companion_reins" :key="rein.id" class="rein-card">
-<div class="rein-icon">🐴</div>
+<div class="rein-icon-wrap">
+<img v-if="iconMap.minion_map && iconMap.minion_map[rein.companion]" :src="iconMap.minion_map[rein.companion]" class="rein-icon-img" alt="">
+</div>
 <div class="rein-name">{{ rein.name }}</div>
 <div class="rein-companion">解锁：{{ rein.companion }}</div>
 <div class="rein-companion-en">{{ rein.companionEn }}</div>
 </div>
 </div>
 </div>
-
 </div>
 
 <style scoped>
@@ -219,7 +241,6 @@ const buffPotions = computed(() => {
   border-left: 4px solid #9c27b0;
 }
 .tip-box strong { color: #9c27b0; display: block; margin-bottom: 0.3rem; }
-.tip-box code { background: rgba(156, 39, 176, 0.2); padding: 0.1rem 0.4rem; border-radius: 4px; color: #9c27b0; }
 .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
 .tab {
   background: #1a1a2e;
@@ -249,9 +270,29 @@ const buffPotions = computed(() => {
   justify-content: space-between;
   align-items: center;
 }
+.eq-title { display: flex; align-items: center; gap: 0.6rem; }
+.eq-icon-wrap {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  flex-shrink: 0;
+}
+.slot-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0; left: 0;
+}
+.eq-icon-img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  position: absolute;
+  top: 15%; left: 15%;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
 .eq-name { font-weight: bold; font-size: 1rem; }
-.eq-icon { font-size: 1.5rem; margin-right: 0.5rem; }
-.eq-title { display: flex; align-items: center; }
 .eq-slot { font-size: 0.8rem; background: rgba(0,0,0,0.2); padding: 0.15rem 0.5rem; border-radius: 4px; }
 .eq-body { padding: 0.8rem 1rem; }
 .eq-name-en { color: #666; font-size: 0.85rem; margin: 0 0 0.8rem 0; font-style: italic; }
@@ -292,7 +333,21 @@ const buffPotions = computed(() => {
   background: #4caf50;
   padding: 0.6rem 1rem;
   color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
+.con-icon-wrap {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+.con-icon-img { width: 24px; height: 24px; object-fit: contain; }
 .con-name { font-weight: bold; font-size: 0.95rem; }
 .con-body { padding: 0.7rem 1rem; }
 .con-body p { color: #aaa; font-size: 0.9rem; margin: 0; line-height: 1.4; }
@@ -326,7 +381,13 @@ const buffPotions = computed(() => {
   text-align: center;
   color: #aaa;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
 }
+.box-icon-wrap { width: 40px; height: 40px; position: relative; }
+.box-slot-bg { width: 100%; height: 100%; object-fit: contain; }
 .reins-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -341,7 +402,18 @@ const buffPotions = computed(() => {
   transition: border-color 0.2s;
 }
 .rein-card:hover { border-color: #9c27b0; }
-.rein-icon { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.rein-icon-wrap {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 0.3rem;
+  background: #2d2d44;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.rein-icon-img { width: 48px; height: 48px; object-fit: contain; }
 .rein-name { color: #ff9800; font-weight: bold; font-size: 0.9rem; }
 .rein-companion { color: #aaa; font-size: 0.85rem; margin-top: 0.2rem; }
 .rein-companion-en { color: #555; font-size: 0.75rem; }

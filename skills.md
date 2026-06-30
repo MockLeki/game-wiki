@@ -7,6 +7,7 @@ const activeClass = ref('warrior')
 const talentRanks = reactive({})
 const totalPoints = ref(30)
 const selectedTalent = ref(null)
+const hoveredTalent = ref(null)
 
 onMounted(async () => {
   try {
@@ -100,6 +101,7 @@ const allocatedTalents = computed(() => {
 const switchClass = (cls) => {
   activeClass.value = cls
   selectedTalent.value = null
+  hoveredTalent.value = null
 }
 
 const categoryColor = (cat) => {
@@ -116,44 +118,52 @@ const categoryColor = (cat) => {
   return colors[cat] || '#666'
 }
 
-const abilityIcon = (ability) => {
+const categoryIcon = (cat) => {
   const icons = {
-    '英勇打击': '⚔️', '横扫打击': '🌀', '烈焰打击': '🔥', '怒气护盾': '🛡️', '战吼': '📣', '范围易伤': '💥',
-    '火球术': '🔥', '烈焰洪流': '🔥', '冰锥术': '❄️', '冰霜陨石': '☄️'
+    '属性': '💪', '暴击': '💥', '防御': '🛡️', '增伤': '⚔️',
+    '强化': '🔥', '法力': '💧', '控制': '👁️', '仆从': '🐺'
   }
-  return icons[ability.name] || '✨'
+  return icons[cat] || '⭐'
 }
 
-const talentIcon = (talent) => {
-  const icons = {
-    '力量': '💪', '活力': '❤️', '护甲': '🛡️', '攻击速度': '⚡', '暴击几率': '🎯', '暴击伤害': '💥',
-    '荆棘': '🌵', '生命回复': '💚', '残暴': '⚔️', '凶猛': '🐅', '劈裂之怒': '😤', '战斗鼓舞': '🎺',
-    '重击': '👊', '荆棘强化': '🌵', '强化强力攻击：法力': '⚡', '怒气灌注': '🔥', '强化战吼：冷却': '📣',
-    '怒气引导': '🔋', '[野兽]仆从强化': '🐺', '[人形]仆从强化': '🧑', '防御姿态': '🛡️', '击杀回蓝': '💧',
-    '第二阵风': '🌪️', '专注': '👁️', '猛攻': '⚔️', '强化烈焰打击：伤害': '🔥', '强化英勇打击：法力获取': '⚡',
-    '[亡灵]仆从强化': '💀', '恶性荆棘': '🌵'
-  }
-  return icons[talent.name] || '⭐'
-}
+const branchColumns = computed(() => {
+  if (!currentClass.value || !currentClass.value.talents) return []
+  const cats = talentsByCategory.value
+  return [
+    { name: '属性', talents: cats['属性'] || [] },
+    { name: '暴击', talents: cats['暴击'] || [] },
+    { name: '防御', talents: cats['防御'] || [] },
+    { name: '增伤', talents: cats['增伤'] || [] },
+    { name: '强化', talents: cats['强化'] || [] },
+    { name: '法力', talents: cats['法力'] || [] },
+    { name: '控制', talents: cats['控制'] || [] },
+    { name: '仆从', talents: cats['仆从'] || [] }
+  ].filter(c => c.talents.length > 0)
+})
+
+const pointProgress = computed(() => (spentPoints.value / totalPoints.value) * 100)
 </script>
 
 # 技能大全
 
 <div class="tip-box">
   <strong>数据来源</strong>
-  <p>技能数据从游戏本体文件（Deskrawl Demo）的 Unity 资源中提取，包含战士和法师两大职业的主动技能、天赋树及属性系统。点击天赋节点可分配/退回天赋点，底部实时显示当前加点效果总结。</p>
+  <p>技能数据从游戏本体 Deskrawl Demo 的 Unity 资源中提取，包含战士与法师的主动技能、天赋树及属性系统。图标与背景均来自游戏内实际资源。左键点击天赋节点分配点数，右键点击退回点数。</p>
 </div>
+
 <p v-if="loading">加载中...</p>
+
 <div v-if="!loading && skillData" class="skill-container">
 <div class="class-tabs">
 <button v-for="(cls, key) in skillData.classes" :key="key" :class="['class-tab', { active: activeClass === key }]" @click="switchClass(key)">
-<span class="class-icon">{{ cls.icon }}</span>
+<img v-if="cls.icon && cls.icon.startsWith('/')" :src="cls.icon" class="class-icon-img" alt="">
+<span v-else class="class-icon">{{ cls.icon }}</span>
 <span class="class-name">{{ cls.name }}</span>
 <span class="class-name-en">{{ cls.nameEn }}</span>
 </button>
 </div>
 <div v-if="currentClass" class="class-info">
-<h2>{{ currentClass.icon }} {{ currentClass.name }} ({{ currentClass.nameEn }})</h2>
+<h2>{{ currentClass.name }} ({{ currentClass.nameEn }})</h2>
 <p class="class-desc">{{ currentClass.description }}</p>
 <p class="class-stat"><strong>主属性:</strong> {{ currentClass.primaryStat }}</p>
 </div>
@@ -161,12 +171,14 @@ const talentIcon = (talent) => {
 <h3 class="section-title">⚡ 主动技能</h3>
 <div class="abilities-grid">
 <div v-for="ability in currentClass.abilities" :key="ability.id" class="ability-card">
+<div class="ability-icon-wrap">
+<img v-if="ability.icon" :src="ability.icon" class="ability-icon-img" alt="">
+</div>
+<div class="ability-body">
 <div class="ability-header">
-<span class="ability-icon">{{ abilityIcon(ability) }}</span>
 <span class="ability-name">{{ ability.name }}</span>
 <span class="ability-tag" :style="{ backgroundColor: tagColor(ability.tag) }">{{ tagName(ability.tag) }}</span>
 </div>
-<div class="ability-body">
 <p class="ability-name-en">{{ ability.nameEn }}</p>
 <p class="ability-desc">{{ ability.description }}</p>
 </div>
@@ -177,20 +189,29 @@ const talentIcon = (talent) => {
 <div class="talent-header">
 <h3 class="section-title">🌟 天赋模拟器</h3>
 <div class="point-tracker">
-<span class="points-spent">已分配: <strong>{{ spentPoints }}</strong></span>
-<span class="points-remaining">剩余: <strong :class="{ 'no-points': remainingPoints === 0 }">{{ remainingPoints }}</strong></span>
-<span class="points-total">/ {{ totalPoints }}</span>
+<div class="point-bar-wrap">
+<div class="point-bar" :style="{ width: pointProgress + '%' }"></div>
+<span class="point-text">已分配 {{ spentPoints }} / {{ totalPoints }}</span>
+</div>
+<span class="points-remaining" :class="{ 'no-points': remainingPoints === 0 }">剩余: <strong>{{ remainingPoints }}</strong></span>
 <button class="reset-btn" @click="refundAll">重置天赋</button>
 </div>
 </div>
 <p class="talent-hint">💡 左键点击分配天赋点，右键点击退回天赋点</p>
-<div class="talent-categories">
-<div v-for="(talents, cat) in talentsByCategory" :key="cat" class="talent-category">
-<h4 class="category-title"><span class="category-dot" :style="{ backgroundColor: categoryColor(cat) }"></span>{{ cat }}</h4>
-<div class="talent-nodes">
-<div v-for="talent in talents" :key="talent.id" :class="['talent-node', { 'maxed': getTalentRank(talent.id) >= talent.maxRank, 'allocated': getTalentRank(talent.id) > 0, 'available': canAllocate(talent) }]" @click="allocatePoint(talent)" @contextmenu.prevent="refundPoint(talent)" @mouseenter="selectedTalent = talent" @mouseleave="selectedTalent = null">
-<div class="talent-icon" :style="{ borderColor: categoryColor(cat) }">
-<span class="talent-emoji">{{ talentIcon(talent) }}</span>
+<div class="talent-tree-wrap">
+<div class="talent-tree-bg"></div>
+<div class="talent-tree">
+<div v-for="branch in branchColumns" :key="branch.name" class="talent-branch" :style="{ borderColor: categoryColor(branch.name) }">
+<div class="branch-header" :style="{ backgroundColor: categoryColor(branch.name) }">
+<span class="branch-icon">{{ categoryIcon(branch.name) }}</span>
+<span class="branch-name">{{ branch.name }}</span>
+</div>
+<div class="branch-nodes">
+<div v-for="(talent, idx) in branch.talents" :key="talent.id" class="node-connector" :class="{ 'last': idx === branch.talents.length - 1 }">
+<div class="connector-line" v-if="idx > 0"></div>
+<div :class="['talent-node', { 'maxed': getTalentRank(talent.id) >= talent.maxRank, 'allocated': getTalentRank(talent.id) > 0, 'available': canAllocate(talent) }]" @click="allocatePoint(talent)" @contextmenu.prevent="refundPoint(talent)" @mouseenter="hoveredTalent = talent" @mouseleave="hoveredTalent = null">
+<div class="talent-icon-ring" :style="{ borderColor: categoryColor(branch.name) }">
+<img v-if="talent.icon" :src="talent.icon" class="talent-icon-img" alt="">
 </div>
 <div class="talent-info">
 <span class="talent-name">{{ talent.name }}</span>
@@ -200,10 +221,21 @@ const talentIcon = (talent) => {
 </div>
 </div>
 </div>
-<div v-if="selectedTalent" class="talent-tooltip">
-<strong>{{ selectedTalent.name }} ({{ selectedTalent.nameEn }})</strong>
-<p>{{ selectedTalent.desc }}</p>
-<p class="talent-en">{{ selectedTalent.descEn }}</p>
+</div>
+</div>
+<div v-if="hoveredTalent" class="talent-detail">
+<div class="detail-header" :style="{ backgroundColor: categoryColor(hoveredTalent.category) }">
+<img v-if="hoveredTalent.icon" :src="hoveredTalent.icon" class="detail-icon" alt="">
+<div class="detail-title">
+<strong>{{ hoveredTalent.name }}</strong>
+<span class="detail-name-en">{{ hoveredTalent.nameEn }} ({{ hoveredTalent.category }})</span>
+</div>
+</div>
+<div class="detail-body">
+<p class="detail-desc">{{ hoveredTalent.desc }}</p>
+<p class="detail-desc-en">{{ hoveredTalent.descEn }}</p>
+<p class="detail-rank">当前等级: {{ getTalentRank(hoveredTalent.id) }} / {{ hoveredTalent.maxRank }}</p>
+</div>
 </div>
 </div>
 <div v-if="currentClass && (!currentClass.talents || currentClass.talents.length === 0)" class="section">
@@ -218,9 +250,14 @@ const talentIcon = (talent) => {
 <h3 class="section-title">📋 当前加点效果总结</h3>
 <div class="summary-grid">
 <div v-for="talent in allocatedTalents" :key="talent.id" class="summary-item">
+<div class="summary-icon-wrap">
+<img v-if="talent.icon" :src="talent.icon" class="summary-icon-img" alt="">
+</div>
+<div class="summary-content">
 <span class="summary-name">{{ talent.name }}</span>
 <span class="summary-rank">Lv.{{ getTalentRank(talent.id) }}</span>
 <span class="summary-desc">{{ talent.desc }}</span>
+</div>
 </div>
 </div>
 </div>
@@ -263,11 +300,7 @@ const talentIcon = (talent) => {
   color: #ccc;
   border-left: 4px solid #9c27b0;
 }
-.tip-box strong {
-  color: #9c27b0;
-  display: block;
-  margin-bottom: 0.3rem;
-}
+.tip-box strong { color: #9c27b0; display: block; margin-bottom: 0.3rem; }
 .section { margin-bottom: 2rem; }
 .section-title {
   color: #fff;
@@ -292,6 +325,7 @@ const talentIcon = (talent) => {
 .class-tab:hover { border-color: #555; background: #2d2d44; }
 .class-tab.active { border-color: #9c27b0; background: rgba(156, 39, 176, 0.15); }
 .class-icon { font-size: 2rem; }
+.class-icon-img { width: 48px; height: 48px; object-fit: contain; }
 .class-name { font-size: 1.2rem; font-weight: bold; color: #fff; }
 .class-name-en { font-size: 0.85rem; color: #888; }
 .class-info {
@@ -304,18 +338,29 @@ const talentIcon = (talent) => {
 .class-info h2 { margin: 0 0 0.5rem 0; color: #fff; }
 .class-desc { color: #aaa; margin: 0.3rem 0; }
 .class-stat { color: #ff9800; margin: 0.3rem 0; font-size: 0.9rem; }
-.abilities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
-.ability-card { background: #1a1a2e; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
-.ability-header {
+.abilities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+.ability-card {
+  background: #1a1a2e;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.8rem 1rem;
-  background: #2d2d44;
-  gap: 0.5rem;
+  align-items: stretch;
 }
-.ability-icon { font-size: 1.5rem; }
-.ability-name { color: #fff; font-size: 1.05rem; font-weight: bold; flex: 1; }
+.ability-icon-wrap {
+  width: 80px;
+  min-height: 100%;
+  background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-right: 1px solid #333;
+}
+.ability-icon-img { width: 56px; height: 56px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.ability-body { padding: 0.8rem 1rem; flex: 1; }
+.ability-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+.ability-name { color: #fff; font-size: 1.05rem; font-weight: bold; }
 .ability-tag {
   font-size: 0.75rem;
   padding: 0.15rem 0.5rem;
@@ -323,7 +368,6 @@ const talentIcon = (talent) => {
   color: #fff;
   font-weight: bold;
 }
-.ability-body { padding: 0.8rem 1rem; }
 .ability-name-en { color: #666; font-size: 0.85rem; margin: 0 0 0.5rem 0; font-style: italic; }
 .ability-desc { color: #ccc; font-size: 0.9rem; line-height: 1.5; margin: 0; }
 .talent-header {
@@ -335,23 +379,93 @@ const talentIcon = (talent) => {
 }
 .talent-header .section-title { margin-bottom: 0; border: none; }
 .point-tracker { display: flex; align-items: center; gap: 0.8rem; background: #1a1a2e; padding: 0.5rem 1rem; border-radius: 8px; }
-.points-spent { color: #4caf50; }
-.points-remaining { color: #ff9800; }
-.points-remaining .no-points { color: #f44336; }
-.points-total { color: #666; }
+.point-bar-wrap {
+  width: 160px;
+  height: 22px;
+  background: #333;
+  border-radius: 11px;
+  position: relative;
+  overflow: hidden;
+}
+.point-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #ff9800);
+  border-radius: 11px;
+  transition: width 0.2s;
+}
+.point-text {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 22px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+.points-remaining { color: #ff9800; font-size: 0.9rem; }
+.points-remaining.no-points { color: #f44336; }
 .reset-btn { background: #4a4a6a; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
 .reset-btn:hover { background: #5a5a8a; }
 .talent-hint { color: #666; font-size: 0.85rem; margin: 0.5rem 0 1rem 0; }
-.talent-categories { display: flex; flex-direction: column; gap: 1.5rem; }
-.talent-category { background: #1a1a2e; border-radius: 8px; padding: 1rem; }
-.category-title { color: #fff; font-size: 1rem; margin: 0 0 0.8rem 0; display: flex; align-items: center; gap: 0.5rem; }
-.category-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-.talent-nodes { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.8rem; }
+.talent-tree-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #333;
+  padding: 1rem;
+  min-height: 500px;
+}
+.talent-tree-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/images/icons/ui/warrior_talent_bg.png') center center / cover no-repeat;
+  opacity: 0.35;
+  z-index: 0;
+}
+.talent-tree {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.talent-branch {
+  background: rgba(26, 26, 46, 0.85);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid;
+  backdrop-filter: blur(4px);
+}
+.branch-header {
+  padding: 0.5rem 0.8rem;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+.branch-icon { font-size: 1.1rem; }
+.branch-nodes { padding: 0.6rem; }
+.node-connector { position: relative; padding-bottom: 0.6rem; }
+.node-connector.last { padding-bottom: 0; }
+.connector-line {
+  position: absolute;
+  left: 24px;
+  top: 48px;
+  width: 3px;
+  height: calc(100% - 32px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  z-index: 0;
+}
 .talent-node {
+  position: relative;
+  z-index: 1;
   background: #2d2d44;
   border: 2px solid #444;
   border-radius: 8px;
-  padding: 0.6rem;
+  padding: 0.5rem;
   cursor: pointer;
   transition: all 0.15s;
   display: flex;
@@ -359,43 +473,49 @@ const talentIcon = (talent) => {
   gap: 0.6rem;
   user-select: none;
 }
-.talent-node:hover { border-color: #666; background: #353548; }
-.talent-node.available { border-color: #4caf50; box-shadow: 0 0 6px rgba(76, 175, 80, 0.3); }
-.talent-node.allocated { border-color: #ff9800; background: rgba(255, 152, 0, 0.08); }
-.talent-node.maxed { border-color: #ff9800; background: rgba(255, 152, 0, 0.15); box-shadow: 0 0 10px rgba(255, 152, 0, 0.4); }
-.talent-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
+.talent-node:hover { border-color: #666; background: #353548; transform: translateY(-2px); }
+.talent-node.available { border-color: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); }
+.talent-node.allocated { border-color: #ff9800; background: rgba(255, 152, 0, 0.12); }
+.talent-node.maxed { border-color: #ff9800; background: rgba(255, 152, 0, 0.2); box-shadow: 0 0 12px rgba(255, 152, 0, 0.5); }
+.talent-icon-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #1a1a2e;
   flex-shrink: 0;
+  overflow: hidden;
 }
-.talent-emoji { font-size: 1.5rem; }
-.talent-id { color: #888; font-size: 0.75rem; font-weight: bold; }
-.talent-node.allocated .talent-id { color: #ff9800; }
-.talent-info { display: flex; flex-direction: column; gap: 0.15rem; }
-.talent-name { color: #fff; font-size: 0.9rem; font-weight: bold; }
-.talent-rank { color: #888; font-size: 0.8rem; }
+.talent-icon-img { width: 34px; height: 34px; object-fit: contain; }
+.talent-info { display: flex; flex-direction: column; gap: 0.1rem; }
+.talent-name { color: #fff; font-size: 0.85rem; font-weight: bold; }
+.talent-rank { color: #888; font-size: 0.75rem; }
 .talent-node.allocated .talent-rank { color: #ff9800; }
-.talent-tooltip {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  max-width: 350px;
-  background: #1a1a2e;
-  border: 1px solid #9c27b0;
-  border-radius: 8px;
-  padding: 1rem;
-  z-index: 100;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+.talent-detail {
+  margin-top: 1rem;
+  background: rgba(26, 26, 46, 0.95);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #333;
 }
-.talent-tooltip strong { color: #9c27b0; display: block; margin-bottom: 0.3rem; }
-.talent-tooltip p { color: #ccc; font-size: 0.9rem; margin: 0.2rem 0; }
-.talent-tooltip .talent-en { color: #666; font-style: italic; font-size: 0.8rem; }
+.detail-header {
+  padding: 0.8rem 1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.detail-icon { width: 40px; height: 40px; object-fit: contain; }
+.detail-title { display: flex; flex-direction: column; }
+.detail-title strong { font-size: 1.05rem; }
+.detail-name-en { font-size: 0.8rem; opacity: 0.8; }
+.detail-body { padding: 1rem; }
+.detail-desc { color: #ccc; font-size: 0.95rem; margin: 0 0 0.5rem 0; }
+.detail-desc-en { color: #666; font-size: 0.85rem; font-style: italic; margin: 0 0 0.5rem 0; }
+.detail-rank { color: #ff9800; font-size: 0.85rem; margin: 0; }
 .no-data-box { background: #1a1a2e; border-radius: 8px; padding: 1.5rem; text-align: center; color: #888; }
 .no-data-box p { margin: 0.5rem 0; }
 .summary-section { background: rgba(156, 39, 176, 0.05); border-radius: 8px; padding: 1rem; }
@@ -406,9 +526,22 @@ const talentIcon = (talent) => {
   padding: 0.6rem 0.8rem;
   border-left: 3px solid #ff9800;
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  align-items: center;
+  gap: 0.6rem;
 }
+.summary-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2d2d44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.summary-icon-img { width: 28px; height: 28px; object-fit: contain; }
+.summary-content { display: flex; flex-direction: column; gap: 0.15rem; flex: 1; }
 .summary-name { color: #ff9800; font-weight: bold; font-size: 0.9rem; }
 .summary-rank { color: #4caf50; font-size: 0.8rem; }
 .summary-desc { color: #aaa; font-size: 0.85rem; }

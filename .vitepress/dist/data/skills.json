@@ -3,7 +3,7 @@
     "warrior": {
       "name": "战士",
       "nameEn": "Warrior",
-      "icon": "⚔️",
+      "icon": "/images/icons/skills/warrior_class.png",
       "primaryStat": "力量 (Strength)",
       "description": "以力量为核心的近战职业，擅长使用怒气护盾和战吼增强战斗能力",
       "abilities": [
@@ -13,7 +13,8 @@
           "nameEn": "Valiant Strike",
           "tag": "BasicAttack",
           "description": "对单个敌人进行快速近战攻击。造成 {weaponDamage} 武器伤害，有 {chance} 几率对目标施加[易伤]效果。",
-          "descEn": "A swift melee strike on a single enemy. Deals {weaponDamage} weapon damage with {chance} chance inflict [Vulnerable] to the target."
+          "descEn": "A swift melee strike on a single enemy. Deals {weaponDamage} weapon damage with {chance} chance inflict [Vulnerable] to the target.",
+          "icon": "/images/icons/skills/warrior_basic.png"
         },
         {
           "id": "SweepStrike",
@@ -21,7 +22,8 @@
           "nameEn": "Sweep Strike",
           "tag": "StrongAttack",
           "description": "横扫前方敌人造成范围伤害。可通过天赋减少[战吼]技能冷却时间。",
-          "descEn": "Sweep attack that hits multiple enemies. Can reduce [Warcry] ability cooldowns via talents."
+          "descEn": "Sweep attack that hits multiple enemies. Can reduce [Warcry] ability cooldowns via talents.",
+          "icon": "/images/icons/skills/warrior_sweep.png"
         },
         {
           "id": "FlameStrike",
@@ -29,7 +31,8 @@
           "nameEn": "Flame Strike",
           "tag": "Special",
           "description": "释放火焰对敌人造成伤害。通过天赋可增加额外伤害，并有30%几率不消耗法力。",
-          "descEn": "Deals fire damage to enemies. Can be enhanced via talents for additional damage and 30% chance to cost no mana."
+          "descEn": "Deals fire damage to enemies. Can be enhanced via talents for additional damage and 30% chance to cost no mana.",
+          "icon": "/images/icons/skills/warrior_flame.png"
         },
         {
           "id": "WarriorRageShield",
@@ -37,7 +40,8 @@
           "nameEn": "Rage Shield",
           "tag": "Special",
           "description": "用怒气屏障环绕自身，吸收最高 {shield} 最大生命值的伤害，持续 {duration}。护盾到期未破时，对周围敌人造成相当于最大生命值100%的物理伤害。",
-          "descEn": "Surround yourself with a barrier of rage that absorbs up to {shield} of your Max HP in damage, lasting {duration}. If not broken before expiration, deals 100% of Max Health as Physical Damage to surrounding enemies."
+          "descEn": "Surround yourself with a barrier of rage that absorbs up to {shield} of your Max HP in damage, lasting {duration}. If not broken before expiration, deals 100% of Max Health as Physical Damage to surrounding enemies.",
+          "icon": "/images/icons/skills/warrior_shield.png"
         },
         {
           "id": "WarriorRageShout",
@@ -45,7 +49,8 @@
           "nameEn": "Rage Shout / Warcry",
           "tag": "Warcry",
           "description": "提升 {attackSpeed} 攻击速度，持续4秒。",
-          "descEn": "Increase {attackSpeed} attack speed for 4 seconds."
+          "descEn": "Increase {attackSpeed} attack speed for 4 seconds.",
+          "icon": "/images/icons/skills/warrior_shout.png"
         },
         {
           "id": "WarriorAoeVulnerable",
@@ -53,45 +58,307 @@
           "nameEn": "AOE Vulnerable",
           "tag": "AOE",
           "description": "对范围内敌人施加易伤效果。",
-          "descEn": "Apply vulnerable to enemies in an area."
+          "descEn": "Apply vulnerable to enemies in an area.",
+          "icon": "/images/icons/skills/warrior_aoe.png"
         }
       ],
       "talents": [
-        { "id": 0, "name": "力量", "nameEn": "Strength", "desc": "+{value} 力量", "descEn": "+{value} Strength", "category": "属性", "maxRank": 5 },
-        { "id": 1, "name": "活力", "nameEn": "Vitality", "desc": "+{value} 最大生命值", "descEn": "+{value} Max HP", "category": "属性", "maxRank": 5 },
-        { "id": 2, "name": "护甲", "nameEn": "Armor", "desc": "+{value1} 护甲和 +{value2} 魔法抗性", "descEn": "+{value1} Armor and +{value2} Magic Resist", "category": "属性", "maxRank": 5 },
-        { "id": 3, "name": "攻击速度", "nameEn": "Attack Speed", "desc": "+{value} 攻击速度", "descEn": "+{value} Attack Speed", "category": "属性", "maxRank": 5 },
-        { "id": 4, "name": "暴击几率", "nameEn": "Critical Hit Chance", "desc": "+{value} 暴击几率", "descEn": "+{value} Critical Hit Chance", "category": "暴击", "maxRank": 5 },
-        { "id": 5, "name": "暴击伤害", "nameEn": "Critical Hit Damage", "desc": "+{value} 暴击伤害", "descEn": "+{value} Critical Hit Damage", "category": "暴击", "maxRank": 5 },
-        { "id": 6, "name": "荆棘", "nameEn": "Thorn", "desc": "+{value} 荆棘", "descEn": "+{value} Thorn", "category": "防御", "maxRank": 5 },
-        { "id": 7, "name": "生命回复", "nameEn": "Life Regeneration", "desc": "+{value} 生命回复", "descEn": "+{value} Life Regen", "category": "防御", "maxRank": 5 },
-        { "id": 8, "name": "残暴", "nameEn": "Brutality", "desc": "+{value} 对受伤目标伤害", "descEn": "+{value} Damage to Injured targets", "category": "增伤", "maxRank": 3 },
-        { "id": 9, "name": "凶猛", "nameEn": "Ferocity", "desc": "+{value} 对易伤目标伤害", "descEn": "+{value} Damage to Vulnerable targets", "category": "增伤", "maxRank": 3 },
-        { "id": 10, "name": "劈裂之怒", "nameEn": "Cleaving Rage", "desc": "施放[基础攻击]技能后获得攻击速度加成，最多叠加5层", "descEn": "+{value} Attack Speed up to 5 stacks after casting a [Basic Attack] Ability", "category": "强化", "maxRank": 3 },
-        { "id": 11, "name": "战斗鼓舞", "nameEn": "Battle Inspiration", "desc": "横扫打击有 {chance} 几率减少[战吼]技能冷却 {value} 秒", "descEn": "Sweep Strike have a {chance} chance to reduce [Warcry] Abilities cooldown by {value} second.", "category": "强化", "maxRank": 3 },
-        { "id": 12, "name": "重击", "nameEn": "Heavy Blow", "desc": "暴击伤害有 {value} 几率对目标施加[易伤]", "descEn": "Critical Hit Damage will have {value} to inflict [Vulnerable] to the victim.", "category": "暴击", "maxRank": 1 },
-        { "id": 13, "name": "荆棘强化", "nameEn": "Thorn Boost", "desc": "+{value} 荆棘", "descEn": "+{value} Thorn", "category": "防御", "maxRank": 3 },
-        { "id": 14, "name": "强化强力攻击：法力", "nameEn": "Enhance Strong Attack: Mana", "desc": "+{value} [强力攻击]法力消耗降低", "descEn": "+{value} [Strong Attack] Mana Cost reduction.", "category": "强化", "maxRank": 3 },
-        { "id": 15, "name": "怒气灌注", "nameEn": "Rage Infusion", "desc": "+{strongAttackDamage} [强力攻击]伤害，但 +{strongAttackManaCost} 法力消耗", "descEn": "+{strongAttackDamage} [Strong Attack] Damage, but also +{strongAttackManaCost} Mana Cost.", "category": "强化", "maxRank": 3 },
-        { "id": 16, "name": "强化战吼：冷却", "nameEn": "Enhance Warcry: Cooldown", "desc": "+{value} [战吼]技能冷却降低", "descEn": "+{value} [Warcry] Abilities Cooldown reduction.", "category": "强化", "maxRank": 3 },
-        { "id": 17, "name": "怒气引导", "nameEn": "Rage Channeling", "desc": "激活怒气护盾时生成 {value} 法力", "descEn": "Generate {value} Mana upon activating Rage Shield", "category": "强化", "maxRank": 3 },
-        { "id": 18, "name": "[野兽]仆从强化", "nameEn": "[Beast] Slave Boost", "desc": "激活的[野兽]提供 {value} 力量加成", "descEn": "Active [Beast] provides {value} Strength increase.", "category": "仆从", "maxRank": 3 },
-        { "id": 19, "name": "[人形]仆从强化", "nameEn": "[Humanoid] Slave Boost", "desc": "激活的[人形]提供 {value} 经验加成", "descEn": "Active [Humanoid] provides {value} EXP increase.", "category": "仆从", "maxRank": 3 },
-        { "id": 20, "name": "防御姿态", "nameEn": "Defensive Stance", "desc": "+{value} 护甲", "descEn": "+{value} Armor", "category": "防御", "maxRank": 5 },
-        { "id": 21, "name": "击杀回蓝", "nameEn": "Mana Restore On Kill", "desc": "每次击杀恢复 {value} 法力", "descEn": "Restore {value} Mana on each kill.", "category": "法力", "maxRank": 3 },
-        { "id": 22, "name": "第二阵风", "nameEn": "Second Wind", "desc": "生命值降至50%以下时治疗 {value}（6秒冷却）", "descEn": "Heal {value} when HP drop below 50% Max HP. (6 seconds cooldown)", "category": "防御", "maxRank": 3 },
-        { "id": 23, "name": "专注", "nameEn": "Focus", "desc": "[基础攻击]有 {stunChance} 几率眩晕敌人", "descEn": "[Basic Attack] have {stunChance} to stun the enemy.", "category": "控制", "maxRank": 3 },
-        { "id": 24, "name": "猛攻", "nameEn": "Onslaught", "desc": "+{value} 对眩晕目标伤害", "descEn": "+{value} Damage on Stunned targets.", "category": "增伤", "maxRank": 3 },
-        { "id": 25, "name": "强化烈焰打击：伤害", "nameEn": "Enhance Flame Strike: Damage", "desc": "烈焰打击额外造成 {value} 伤害", "descEn": "Flame Strike deals additional {value} Damage.", "category": "强化", "maxRank": 3 },
-        { "id": 26, "name": "强化英勇打击：法力获取", "nameEn": "Enhance Valiant Strike: Mana Gain", "desc": "+{value} 英勇打击法力获取", "descEn": "+{value} Mana Gain from Valiant Strike.", "category": "法力", "maxRank": 3 },
-        { "id": 27, "name": "[亡灵]仆从强化", "nameEn": "[Undead] Slave Boost", "desc": "激活的[亡灵]提供 {value} 暴击伤害", "descEn": "Active [Undead] provides {value} Critical Hit Damage.", "category": "仆从", "maxRank": 3 },
-        { "id": 28, "name": "恶性荆棘", "nameEn": "Vicious Thorns", "desc": "荆棘可以触发暴击", "descEn": "Thorn can trigger Critical Hit.", "category": "防御", "maxRank": 1 }
+        {
+          "id": 0,
+          "name": "力量",
+          "nameEn": "Strength",
+          "desc": "+{value} 力量",
+          "descEn": "+{value} Strength",
+          "category": "属性",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_1.png"
+        },
+        {
+          "id": 1,
+          "name": "活力",
+          "nameEn": "Vitality",
+          "desc": "+{value} 最大生命值",
+          "descEn": "+{value} Max HP",
+          "category": "属性",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_2.png"
+        },
+        {
+          "id": 2,
+          "name": "护甲",
+          "nameEn": "Armor",
+          "desc": "+{value1} 护甲和 +{value2} 魔法抗性",
+          "descEn": "+{value1} Armor and +{value2} Magic Resist",
+          "category": "属性",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_3.png"
+        },
+        {
+          "id": 3,
+          "name": "攻击速度",
+          "nameEn": "Attack Speed",
+          "desc": "+{value} 攻击速度",
+          "descEn": "+{value} Attack Speed",
+          "category": "属性",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_4.png"
+        },
+        {
+          "id": 4,
+          "name": "暴击几率",
+          "nameEn": "Critical Hit Chance",
+          "desc": "+{value} 暴击几率",
+          "descEn": "+{value} Critical Hit Chance",
+          "category": "暴击",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_5.png"
+        },
+        {
+          "id": 5,
+          "name": "暴击伤害",
+          "nameEn": "Critical Hit Damage",
+          "desc": "+{value} 暴击伤害",
+          "descEn": "+{value} Critical Hit Damage",
+          "category": "暴击",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_6.png"
+        },
+        {
+          "id": 6,
+          "name": "荆棘",
+          "nameEn": "Thorn",
+          "desc": "+{value} 荆棘",
+          "descEn": "+{value} Thorn",
+          "category": "防御",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_7.png"
+        },
+        {
+          "id": 7,
+          "name": "生命回复",
+          "nameEn": "Life Regeneration",
+          "desc": "+{value} 生命回复",
+          "descEn": "+{value} Life Regen",
+          "category": "防御",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_8.png"
+        },
+        {
+          "id": 8,
+          "name": "残暴",
+          "nameEn": "Brutality",
+          "desc": "+{value} 对受伤目标伤害",
+          "descEn": "+{value} Damage to Injured targets",
+          "category": "增伤",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_9.png"
+        },
+        {
+          "id": 9,
+          "name": "凶猛",
+          "nameEn": "Ferocity",
+          "desc": "+{value} 对易伤目标伤害",
+          "descEn": "+{value} Damage to Vulnerable targets",
+          "category": "增伤",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_10.png"
+        },
+        {
+          "id": 10,
+          "name": "劈裂之怒",
+          "nameEn": "Cleaving Rage",
+          "desc": "施放[基础攻击]技能后获得攻击速度加成，最多叠加5层",
+          "descEn": "+{value} Attack Speed up to 5 stacks after casting a [Basic Attack] Ability",
+          "category": "强化",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_11.png"
+        },
+        {
+          "id": 11,
+          "name": "战斗鼓舞",
+          "nameEn": "Battle Inspiration",
+          "desc": "横扫打击有 {chance} 几率减少[战吼]技能冷却 {value} 秒",
+          "descEn": "Sweep Strike have a {chance} chance to reduce [Warcry] Abilities cooldown by {value} second.",
+          "category": "强化",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_12.png"
+        },
+        {
+          "id": 12,
+          "name": "重击",
+          "nameEn": "Heavy Blow",
+          "desc": "暴击伤害有 {value} 几率对目标施加[易伤]",
+          "descEn": "Critical Hit Damage will have {value} to inflict [Vulnerable] to the victim.",
+          "category": "暴击",
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_13.png"
+        },
+        {
+          "id": 13,
+          "name": "荆棘强化",
+          "nameEn": "Thorn Boost",
+          "desc": "+{value} 荆棘",
+          "descEn": "+{value} Thorn",
+          "category": "防御",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_14.png"
+        },
+        {
+          "id": 14,
+          "name": "强化强力攻击：法力",
+          "nameEn": "Enhance Strong Attack: Mana",
+          "desc": "+{value} [强力攻击]法力消耗降低",
+          "descEn": "+{value} [Strong Attack] Mana Cost reduction.",
+          "category": "强化",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_15.png"
+        },
+        {
+          "id": 15,
+          "name": "怒气灌注",
+          "nameEn": "Rage Infusion",
+          "desc": "+{strongAttackDamage} [强力攻击]伤害，但 +{strongAttackManaCost} 法力消耗",
+          "descEn": "+{strongAttackDamage} [Strong Attack] Damage, but also +{strongAttackManaCost} Mana Cost.",
+          "category": "强化",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_1.png"
+        },
+        {
+          "id": 16,
+          "name": "强化战吼：冷却",
+          "nameEn": "Enhance Warcry: Cooldown",
+          "desc": "+{value} [战吼]技能冷却降低",
+          "descEn": "+{value} [Warcry] Abilities Cooldown reduction.",
+          "category": "强化",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_2.png"
+        },
+        {
+          "id": 17,
+          "name": "怒气引导",
+          "nameEn": "Rage Channeling",
+          "desc": "激活怒气护盾时生成 {value} 法力",
+          "descEn": "Generate {value} Mana upon activating Rage Shield",
+          "category": "强化",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_3.png"
+        },
+        {
+          "id": 18,
+          "name": "[野兽]仆从强化",
+          "nameEn": "[Beast] Slave Boost",
+          "desc": "激活的[野兽]提供 {value} 力量加成",
+          "descEn": "Active [Beast] provides {value} Strength increase.",
+          "category": "仆从",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_4.png"
+        },
+        {
+          "id": 19,
+          "name": "[人形]仆从强化",
+          "nameEn": "[Humanoid] Slave Boost",
+          "desc": "激活的[人形]提供 {value} 经验加成",
+          "descEn": "Active [Humanoid] provides {value} EXP increase.",
+          "category": "仆从",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_5.png"
+        },
+        {
+          "id": 20,
+          "name": "防御姿态",
+          "nameEn": "Defensive Stance",
+          "desc": "+{value} 护甲",
+          "descEn": "+{value} Armor",
+          "category": "防御",
+          "maxRank": 5,
+          "icon": "/images/icons/skills/skill_generic_6.png"
+        },
+        {
+          "id": 21,
+          "name": "击杀回蓝",
+          "nameEn": "Mana Restore On Kill",
+          "desc": "每次击杀恢复 {value} 法力",
+          "descEn": "Restore {value} Mana on each kill.",
+          "category": "法力",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_7.png"
+        },
+        {
+          "id": 22,
+          "name": "第二阵风",
+          "nameEn": "Second Wind",
+          "desc": "生命值降至50%以下时治疗 {value}（6秒冷却）",
+          "descEn": "Heal {value} when HP drop below 50% Max HP. (6 seconds cooldown)",
+          "category": "防御",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_8.png"
+        },
+        {
+          "id": 23,
+          "name": "专注",
+          "nameEn": "Focus",
+          "desc": "[基础攻击]有 {stunChance} 几率眩晕敌人",
+          "descEn": "[Basic Attack] have {stunChance} to stun the enemy.",
+          "category": "控制",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_9.png"
+        },
+        {
+          "id": 24,
+          "name": "猛攻",
+          "nameEn": "Onslaught",
+          "desc": "+{value} 对眩晕目标伤害",
+          "descEn": "+{value} Damage on Stunned targets.",
+          "category": "增伤",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_10.png"
+        },
+        {
+          "id": 25,
+          "name": "强化烈焰打击：伤害",
+          "nameEn": "Enhance Flame Strike: Damage",
+          "desc": "烈焰打击额外造成 {value} 伤害",
+          "descEn": "Flame Strike deals additional {value} Damage.",
+          "category": "强化",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_11.png"
+        },
+        {
+          "id": 26,
+          "name": "强化英勇打击：法力获取",
+          "nameEn": "Enhance Valiant Strike: Mana Gain",
+          "desc": "+{value} 英勇打击法力获取",
+          "descEn": "+{value} Mana Gain from Valiant Strike.",
+          "category": "法力",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_12.png"
+        },
+        {
+          "id": 27,
+          "name": "[亡灵]仆从强化",
+          "nameEn": "[Undead] Slave Boost",
+          "desc": "激活的[亡灵]提供 {value} 暴击伤害",
+          "descEn": "Active [Undead] provides {value} Critical Hit Damage.",
+          "category": "仆从",
+          "maxRank": 3,
+          "icon": "/images/icons/skills/skill_generic_13.png"
+        },
+        {
+          "id": 28,
+          "name": "恶性荆棘",
+          "nameEn": "Vicious Thorns",
+          "desc": "荆棘可以触发暴击",
+          "descEn": "Thorn can trigger Critical Hit.",
+          "category": "防御",
+          "maxRank": 1,
+          "icon": "/images/icons/skills/skill_generic_14.png"
+        }
       ]
     },
     "sorcerer": {
       "name": "法师",
       "nameEn": "Sorcerer",
-      "icon": "🔮",
+      "icon": "/images/icons/skills/sorcerer_class.png",
       "primaryStat": "智力 (Intelligence)",
       "description": "以智力为核心的远程法术职业，擅长火焰和冰霜魔法",
       "abilities": [
@@ -101,7 +368,8 @@
           "nameEn": "Fire Ball",
           "tag": "BasicAttack",
           "description": "召唤一个追踪火球，命中后爆炸，对小范围内的所有敌人造成80%武器伤害。",
-          "descEn": "Conjure a homing fireball that explodes on impact, dealing 80% weapon damage to all enemies in a small area."
+          "descEn": "Conjure a homing fireball that explodes on impact, dealing 80% weapon damage to all enemies in a small area.",
+          "icon": "/images/icons/skills/mage_fireball.png"
         },
         {
           "id": "SorcererFireFlame",
@@ -109,7 +377,8 @@
           "nameEn": "Fire Flame",
           "tag": "StrongAttack",
           "description": "释放锥形烈焰，吞噬前方所有敌人，造成250%武器伤害。",
-          "descEn": "Unleash a cone of roaring flame that engulfs every enemy in front, dealing 250% weapon damage."
+          "descEn": "Unleash a cone of roaring flame that engulfs every enemy in front, dealing 250% weapon damage.",
+          "icon": "/images/icons/skills/mage_fireflame.png"
         },
         {
           "id": "SorcererIceShards",
@@ -117,7 +386,8 @@
           "nameEn": "Ice Shards",
           "tag": "Special",
           "description": "发射三枚冰锥呈扇形散开，每枚造成120%武器伤害并减速目标。",
-          "descEn": "Launch three icy shards in a spread, each dealing 120% weapon damage and chilling its target."
+          "descEn": "Launch three icy shards in a spread, each dealing 120% weapon damage and chilling its target.",
+          "icon": "/images/icons/skills/mage_iceshards.png"
         },
         {
           "id": "SorcererIceMeteor",
@@ -125,67 +395,264 @@
           "nameEn": "Ice Meteor",
           "tag": "AOE",
           "description": "召唤一颗冰冻陨石，留下持续5秒的冰寒领域，每秒造成50%武器伤害并减速领域内的敌人。",
-          "descEn": "Call down a frozen meteor that leaves a chilling field for 5 seconds, dealing 50% weapon damage per tick and slowing enemies caught inside."
+          "descEn": "Call down a frozen meteor that leaves a chilling field for 5 seconds, dealing 50% weapon damage per tick and slowing enemies caught inside.",
+          "icon": "/images/icons/skills/mage_icemeteor.png"
         }
       ],
       "talents": []
     }
   },
   "abilityTags": {
-    "BasicAttack": { "name": "基础攻击", "nameEn": "Basic Attack", "color": "#4caf50" },
-    "StrongAttack": { "name": "强力攻击", "nameEn": "Strong Attack", "color": "#ff9800" },
-    "Special": { "name": "特殊", "nameEn": "Special", "color": "#9c27b0" },
-    "AOE": { "name": "范围", "nameEn": "AOE", "color": "#f44336" },
-    "Warcry": { "name": "战吼", "nameEn": "Warcry", "color": "#e91e63" },
-    "Blood": { "name": "鲜血", "nameEn": "Blood", "color": "#b71c1c" },
-    "Enchanted": { "name": "附魔", "nameEn": "Enchanted", "color": "#2196f3" },
-    "Physical": { "name": "物理", "nameEn": "Physical", "color": "#795548" }
+    "BasicAttack": {
+      "name": "基础攻击",
+      "nameEn": "Basic Attack",
+      "color": "#4caf50"
+    },
+    "StrongAttack": {
+      "name": "强力攻击",
+      "nameEn": "Strong Attack",
+      "color": "#ff9800"
+    },
+    "Special": {
+      "name": "特殊",
+      "nameEn": "Special",
+      "color": "#9c27b0"
+    },
+    "AOE": {
+      "name": "范围",
+      "nameEn": "AOE",
+      "color": "#f44336"
+    },
+    "Warcry": {
+      "name": "战吼",
+      "nameEn": "Warcry",
+      "color": "#e91e63"
+    },
+    "Blood": {
+      "name": "鲜血",
+      "nameEn": "Blood",
+      "color": "#b71c1c"
+    },
+    "Enchanted": {
+      "name": "附魔",
+      "nameEn": "Enchanted",
+      "color": "#2196f3"
+    },
+    "Physical": {
+      "name": "物理",
+      "nameEn": "Physical",
+      "color": "#795548"
+    }
   },
   "stats": [
-    { "key": "Strength", "name": "力量", "desc": "增加力量型职业的伤害，当前提供 {0}% 伤害加成。同时提供 {1} 护甲。" },
-    { "key": "Dexterity", "name": "敏捷", "desc": "增加敏捷型职业的伤害，当前提供 {0}% 伤害加成。同时提供 {1}% 闪避几率。" },
-    { "key": "Intelligence", "name": "智力", "desc": "增加智力型职业的伤害，当前提供 {0}% 伤害加成。同时提供 {1} 魔法抗性。" },
-    { "key": "MaxHealth", "name": "最大生命值", "desc": "死亡前的总生命值。" },
-    { "key": "MaxMana", "name": "最大法力值", "desc": "技能可用的法力池总量。" },
-    { "key": "Damage", "name": "伤害", "desc": "加到武器基础伤害上的固定加成。" },
-    { "key": "CritChance", "name": "暴击几率", "desc": "攻击触发暴击的几率。" },
-    { "key": "CritDamage", "name": "暴击伤害", "desc": "暴击时的额外伤害倍率。" },
-    { "key": "AttackSpeed", "name": "攻击速度", "desc": "最终每秒攻击次数。" },
-    { "key": "Armor", "name": "护甲", "desc": "减少物理伤害。当前对同等级敌人减免 {0}%。" },
-    { "key": "MagicResist", "name": "魔法抗性", "desc": "减少魔法伤害。当前对同等级敌人减免 {0}%。" },
-    { "key": "Dodge", "name": "闪避", "desc": "完全躲避直接攻击的几率。不适用于持续伤害。" },
-    { "key": "LifeRegen", "name": "生命回复", "desc": "每秒恢复的生命值。" },
-    { "key": "LifeOnHit", "name": "命中回血", "desc": "每次命中敌人时恢复的生命值。" },
-    { "key": "LifeOnKill", "name": "击杀回血", "desc": "每次击杀敌人时恢复的生命值。" },
-    { "key": "ManaOnKill", "name": "击杀回蓝", "desc": "每次击杀敌人时恢复的法力值。" },
-    { "key": "CooldownReduction", "name": "冷却缩减", "desc": "减少技能冷却时间。" },
-    { "key": "ManaCostReduction", "name": "法力消耗降低", "desc": "减少技能的法力消耗。" },
-    { "key": "Thorns", "name": "荆棘", "desc": "将固定物理伤害反弹给攻击者。" },
-    { "key": "MoveSpeed", "name": "移动速度", "desc": "在世界中移动的速度。" },
-    { "key": "GoldFind", "name": "寻金", "desc": "敌人掉落的额外金币。" },
-    { "key": "MagicFind", "name": "寻魔", "desc": "提升敌人掉落物品的稀有度。" },
-    { "key": "XPGain", "name": "经验加成", "desc": "增加获得的经验值。" },
-    { "key": "DamagePhysical", "name": "物理伤害", "desc": "增加你造成的所有物理伤害。" },
-    { "key": "DamageFire", "name": "火焰伤害", "desc": "增加你造成的所有火焰伤害。" },
-    { "key": "DamageCold", "name": "冰霜伤害", "desc": "增加你造成的所有冰霜伤害。" },
-    { "key": "DamageLightning", "name": "闪电伤害", "desc": "增加你造成的所有闪电伤害。" },
-    { "key": "DamagePoison", "name": "毒素伤害", "desc": "增加你造成的所有毒素伤害。" },
-    { "key": "DamageArcane", "name": "奥术伤害", "desc": "增加你造成的所有奥术伤害。" },
-    { "key": "BasicAttackDamage", "name": "基础攻击伤害", "desc": "增加基础攻击造成的伤害。" },
-    { "key": "StrongAttackDamage", "name": "强力攻击伤害", "desc": "增加强力攻击造成的伤害。" }
+    {
+      "key": "Strength",
+      "name": "力量",
+      "desc": "增加力量型职业的伤害，当前提供 {0}% 伤害加成。同时提供 {1} 护甲。"
+    },
+    {
+      "key": "Dexterity",
+      "name": "敏捷",
+      "desc": "增加敏捷型职业的伤害，当前提供 {0}% 伤害加成。同时提供 {1}% 闪避几率。"
+    },
+    {
+      "key": "Intelligence",
+      "name": "智力",
+      "desc": "增加智力型职业的伤害，当前提供 {0}% 伤害加成。同时提供 {1} 魔法抗性。"
+    },
+    {
+      "key": "MaxHealth",
+      "name": "最大生命值",
+      "desc": "死亡前的总生命值。"
+    },
+    {
+      "key": "MaxMana",
+      "name": "最大法力值",
+      "desc": "技能可用的法力池总量。"
+    },
+    {
+      "key": "Damage",
+      "name": "伤害",
+      "desc": "加到武器基础伤害上的固定加成。"
+    },
+    {
+      "key": "CritChance",
+      "name": "暴击几率",
+      "desc": "攻击触发暴击的几率。"
+    },
+    {
+      "key": "CritDamage",
+      "name": "暴击伤害",
+      "desc": "暴击时的额外伤害倍率。"
+    },
+    {
+      "key": "AttackSpeed",
+      "name": "攻击速度",
+      "desc": "最终每秒攻击次数。"
+    },
+    {
+      "key": "Armor",
+      "name": "护甲",
+      "desc": "减少物理伤害。当前对同等级敌人减免 {0}%。"
+    },
+    {
+      "key": "MagicResist",
+      "name": "魔法抗性",
+      "desc": "减少魔法伤害。当前对同等级敌人减免 {0}%。"
+    },
+    {
+      "key": "Dodge",
+      "name": "闪避",
+      "desc": "完全躲避直接攻击的几率。不适用于持续伤害。"
+    },
+    {
+      "key": "LifeRegen",
+      "name": "生命回复",
+      "desc": "每秒恢复的生命值。"
+    },
+    {
+      "key": "LifeOnHit",
+      "name": "命中回血",
+      "desc": "每次命中敌人时恢复的生命值。"
+    },
+    {
+      "key": "LifeOnKill",
+      "name": "击杀回血",
+      "desc": "每次击杀敌人时恢复的生命值。"
+    },
+    {
+      "key": "ManaOnKill",
+      "name": "击杀回蓝",
+      "desc": "每次击杀敌人时恢复的法力值。"
+    },
+    {
+      "key": "CooldownReduction",
+      "name": "冷却缩减",
+      "desc": "减少技能冷却时间。"
+    },
+    {
+      "key": "ManaCostReduction",
+      "name": "法力消耗降低",
+      "desc": "减少技能的法力消耗。"
+    },
+    {
+      "key": "Thorns",
+      "name": "荆棘",
+      "desc": "将固定物理伤害反弹给攻击者。"
+    },
+    {
+      "key": "MoveSpeed",
+      "name": "移动速度",
+      "desc": "在世界中移动的速度。"
+    },
+    {
+      "key": "GoldFind",
+      "name": "寻金",
+      "desc": "敌人掉落的额外金币。"
+    },
+    {
+      "key": "MagicFind",
+      "name": "寻魔",
+      "desc": "提升敌人掉落物品的稀有度。"
+    },
+    {
+      "key": "XPGain",
+      "name": "经验加成",
+      "desc": "增加获得的经验值。"
+    },
+    {
+      "key": "DamagePhysical",
+      "name": "物理伤害",
+      "desc": "增加你造成的所有物理伤害。"
+    },
+    {
+      "key": "DamageFire",
+      "name": "火焰伤害",
+      "desc": "增加你造成的所有火焰伤害。"
+    },
+    {
+      "key": "DamageCold",
+      "name": "冰霜伤害",
+      "desc": "增加你造成的所有冰霜伤害。"
+    },
+    {
+      "key": "DamageLightning",
+      "name": "闪电伤害",
+      "desc": "增加你造成的所有闪电伤害。"
+    },
+    {
+      "key": "DamagePoison",
+      "name": "毒素伤害",
+      "desc": "增加你造成的所有毒素伤害。"
+    },
+    {
+      "key": "DamageArcane",
+      "name": "奥术伤害",
+      "desc": "增加你造成的所有奥术伤害。"
+    },
+    {
+      "key": "BasicAttackDamage",
+      "name": "基础攻击伤害",
+      "desc": "增加基础攻击造成的伤害。"
+    },
+    {
+      "key": "StrongAttackDamage",
+      "name": "强力攻击伤害",
+      "desc": "增加强力攻击造成的伤害。"
+    }
   ],
   "species": [
-    { "key": "Beast", "name": "野兽", "nameEn": "Beast" },
-    { "key": "Demon", "name": "恶魔", "nameEn": "Demon" },
-    { "key": "Dragon", "name": "龙", "nameEn": "Dragon" },
-    { "key": "Humanoid", "name": "人形", "nameEn": "Humanoid" },
-    { "key": "Undead", "name": "亡灵", "nameEn": "Undead" }
+    {
+      "key": "Beast",
+      "name": "野兽",
+      "nameEn": "Beast"
+    },
+    {
+      "key": "Demon",
+      "name": "恶魔",
+      "nameEn": "Demon"
+    },
+    {
+      "key": "Dragon",
+      "name": "龙",
+      "nameEn": "Dragon"
+    },
+    {
+      "key": "Humanoid",
+      "name": "人形",
+      "nameEn": "Humanoid"
+    },
+    {
+      "key": "Undead",
+      "name": "亡灵",
+      "nameEn": "Undead"
+    }
   ],
   "rarities": [
-    { "key": "Common", "name": "普通", "color": "#9e9e9e" },
-    { "key": "Uncommon", "name": "非凡", "color": "#4caf50" },
-    { "key": "Rare", "name": "稀有", "color": "#2196f3" },
-    { "key": "Legendary", "name": "传说", "color": "#ff9800" },
-    { "key": "Divine", "name": "神圣", "color": "#e91e63" }
+    {
+      "key": "Common",
+      "name": "普通",
+      "color": "#9e9e9e"
+    },
+    {
+      "key": "Uncommon",
+      "name": "非凡",
+      "color": "#4caf50"
+    },
+    {
+      "key": "Rare",
+      "name": "稀有",
+      "color": "#2196f3"
+    },
+    {
+      "key": "Legendary",
+      "name": "传说",
+      "color": "#ff9800"
+    },
+    {
+      "key": "Divine",
+      "name": "神圣",
+      "color": "#e91e63"
+    }
   ]
 }

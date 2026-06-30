@@ -7,7 +7,8 @@
       "slot": "weapon",
       "quality": "legendary",
       "desc": "每次[基础攻击]额外造成50%武器伤害的冰冷伤害，命中时有3%几率冻结目标。",
-      "descEn": "Each [Basic Attack] also deals 50% of Weapon Damage as Cold Damage, with a 3% chance to Freeze the target on hit."
+      "descEn": "Each [Basic Attack] also deals 50% of Weapon Damage as Cold Damage, with a 3% chance to Freeze the target on hit.",
+      "icon": "/images/icons/items/axe_northern.png"
     },
     {
       "id": "LegendaryMace1",
@@ -16,7 +17,8 @@
       "slot": "weapon",
       "quality": "legendary",
       "desc": "每使用10次[普攻]技能，召唤一道闪电打击随机敌人，造成相当于1000%武器伤害的闪电伤害。",
-      "descEn": "Every 10 [Basic Attack] Abilities used, summons a Lightning Strike that deals 1000% Weapon Damage as Lightning Damage to a random enemy."
+      "descEn": "Every 10 [Basic Attack] Abilities used, summons a Lightning Strike that deals 1000% Weapon Damage as Lightning Damage to a random enemy.",
+      "icon": "/images/icons/items/mace_hellstorm.png"
     },
     {
       "id": "LegendarySword1",
@@ -25,7 +27,8 @@
       "slot": "weapon",
       "quality": "legendary",
       "desc": "对易伤目标额外增加30%暴击率。",
-      "descEn": "Additional 30% Critical Chance against Vulnerable targets."
+      "descEn": "Additional 30% Critical Chance against Vulnerable targets.",
+      "icon": "/images/icons/items/sword_serrated.png"
     }
   ],
   "legendary_armor": [
@@ -36,7 +39,8 @@
       "slot": "chest",
       "quality": "legendary",
       "desc": "如果怒气护盾在到期前未被击破，到期时对周围敌人造成相当于你最大生命值100%的物理伤害。",
-      "descEn": "If Rage Shield is not broken before expiration, deal 100% of your Max Health as Physical Damage to surrounding enemies upon expiration."
+      "descEn": "If Rage Shield is not broken before expiration, deal 100% of your Max Health as Physical Damage to surrounding enemies upon expiration.",
+      "icon": "/images/icons/items/chest_rage.png"
     },
     {
       "id": "LegendaryChestArmor2",
@@ -45,7 +49,8 @@
       "slot": "chest",
       "quality": "legendary",
       "desc": "获得500%荆棘，但失去20%最大生命值。",
-      "descEn": "Gain 500% Thorn, but lose 20% Max Health."
+      "descEn": "Gain 500% Thorn, but lose 20% Max Health.",
+      "icon": "/images/icons/items/chest_thorn.png"
     },
     {
       "id": "LegendaryHelm1",
@@ -54,7 +59,8 @@
       "slot": "helm",
       "quality": "legendary",
       "desc": "击杀后+30%攻击速度，持续3秒。",
-      "descEn": "+30% Attack Speed for 3 seconds after a kill."
+      "descEn": "+30% Attack Speed for 3 seconds after a kill.",
+      "icon": "/images/icons/items/helm_crown.png"
     },
     {
       "id": "LegendaryNeck1",
@@ -63,7 +69,8 @@
       "slot": "necklace",
       "quality": "legendary",
       "desc": "每消耗100点法力，+20%暴击率，持续4秒。",
-      "descEn": "Every 100 Mana spent, +20% Critical Hit Chance for 4 seconds."
+      "descEn": "Every 100 Mana spent, +20% Critical Hit Chance for 4 seconds.",
+      "icon": "/images/icons/items/neck_thought.png"
     },
     {
       "id": "LegendaryGloves1",
@@ -72,7 +79,8 @@
       "slot": "gloves",
       "quality": "legendary",
       "desc": "烈焰打击有30%几率不消耗法力。",
-      "descEn": "Flame Strike has a 30% chance to cost no Mana."
+      "descEn": "Flame Strike has a 30% chance to cost no Mana.",
+      "icon": "/images/icons/items/gloves_fury.png"
     },
     {
       "id": "LegendaryGloves2",
@@ -81,7 +89,8 @@
       "slot": "gloves",
       "quality": "legendary",
       "desc": "每次技能命中获得1%护甲，持续5秒。（最多叠加100层）",
-      "descEn": "Each Ability hit grants 1% Armor for 5 seconds. (Max 100 stacks)"
+      "descEn": "Each Ability hit grants 1% Armor for 5 seconds. (Max 100 stacks)",
+      "icon": "/images/icons/items/gloves_unstoppable.png"
     },
     {
       "id": "LegendaryBelt1",
@@ -90,7 +99,8 @@
       "slot": "belt",
       "quality": "legendary",
       "desc": "药水充能次数+4。",
-      "descEn": "Increase Potion Charges by 4."
+      "descEn": "Increase Potion Charges by 4.",
+      "icon": "/images/icons/items/belt_potion.png"
     },
     {
       "id": "LegendaryPants1",
@@ -99,7 +109,8 @@
       "slot": "legs",
       "quality": "legendary",
       "desc": "[附魔]技能暴击伤害+150%。",
-      "descEn": "+150% Critical Hit Damage from [Enchanted] Abilities."
+      "descEn": "+150% Critical Hit Damage from [Enchanted] Abilities.",
+      "icon": "/images/icons/items/pants_thunder.png"
     },
     {
       "id": "LegendaryPants2",
@@ -108,7 +119,8 @@
       "slot": "legs",
       "quality": "legendary",
       "desc": "使用生命药水后获得30%伤害减免，持续5秒。",
-      "descEn": "Gain 30% Damage Reduction for 5 seconds after consuming Health Potion."
+      "descEn": "Gain 30% Damage Reduction for 5 seconds after consuming Health Potion.",
+      "icon": "/images/icons/items/pants_resilient.png"
     },
     {
       "id": "LegendaryBoots1",
@@ -117,7 +129,8 @@
       "slot": "boots",
       "quality": "legendary",
       "desc": "击杀后+50%移动速度，持续4秒。",
-      "descEn": "+50% Movement Speed for 4 seconds after a kill."
+      "descEn": "+50% Movement Speed for 4 seconds after a kill.",
+      "icon": "/images/icons/items/boots_wind.png"
     },
     {
       "id": "LegendaryShoulder1",
@@ -126,7 +139,8 @@
       "slot": "shoulder",
       "quality": "legendary",
       "desc": "你10%的护甲也贡献给荆棘。",
-      "descEn": "10% of your Armor also contributes to Thorns."
+      "descEn": "10% of your Armor also contributes to Thorns.",
+      "icon": "/images/icons/items/shoulder_shell.png"
     },
     {
       "id": "LegendaryShoulder2",
@@ -135,7 +149,8 @@
       "slot": "shoulder",
       "quality": "legendary",
       "desc": "使用[附魔]技能后，获得+50%火焰和闪电伤害，持续6秒。",
-      "descEn": "After using an [Enchanted] Ability, gain +50% Fire and Lightning Damage for 6 seconds."
+      "descEn": "After using an [Enchanted] Ability, gain +50% Fire and Lightning Damage for 6 seconds.",
+      "icon": "/images/icons/items/shoulder_elemental.png"
     },
     {
       "id": "LegendaryRing1",
@@ -144,7 +159,8 @@
       "slot": "ring",
       "quality": "legendary",
       "desc": "半月斩将额外投掷两道月牙刃。",
-      "descEn": "Half Moon Strike will hurl two additional crescent blades."
+      "descEn": "Half Moon Strike will hurl two additional crescent blades.",
+      "icon": "/images/icons/items/ring_dragonsfang.png"
     },
     {
       "id": "LegendaryRing2",
@@ -153,70 +169,328 @@
       "slot": "ring",
       "quality": "legendary",
       "desc": "站立不动时，每秒获得+10%基础攻击伤害，最多叠加20层。",
-      "descEn": "While standing still, gain +10% Basic Attack Damage every second, stacking up to 20 times."
+      "descEn": "While standing still, gain +10% Basic Attack Damage every second, stacking up to 20 times.",
+      "icon": "/images/icons/items/ring_revelation.png"
     }
   ],
   "consumables": [
-    { "id": "HpPotion1", "name": "初级生命药水", "nameEn": "Minor Health Potion", "type": "potion", "desc": "立即恢复25点生命，随后3秒内恢复30%最大生命值。" },
-    { "id": "HpPotion2", "name": "中级生命药水", "nameEn": "Greater Health Potion", "type": "potion", "desc": "立即恢复50点生命，随后3秒内恢复30%最大生命值。" },
-    { "id": "HpPotion3", "name": "高级生命药水", "nameEn": "Superior Health Potion", "type": "potion", "desc": "立即恢复100点生命，随后3秒内恢复35%最大生命值。" },
-    { "id": "HpPotion4", "name": "超级生命药水", "nameEn": "Supreme Health Potion", "type": "potion", "desc": "立即恢复300点生命，随后3秒内恢复35%最大生命值。" },
-    { "id": "MovementPotion1", "name": "迅捷药水", "nameEn": "Swiftness Potion", "type": "potion", "desc": "移动速度+15%，持续1小时。" },
-    { "id": "ExpPotion1", "name": "智慧药水", "nameEn": "Wisdom Potion", "type": "potion", "desc": "获得经验+10%，持续1小时。" },
-    { "id": "GoldPotion1", "name": "幸运药水", "nameEn": "Fortune Potion", "type": "potion", "desc": "获得金币+10%，持续1小时。" },
-    { "id": "CritPotion1", "name": "精准药水", "nameEn": "Precision Potion", "type": "potion", "desc": "暴击率+5%，持续1小时。" },
-    { "id": "DodgePotion1", "name": "闪避药水", "nameEn": "Evasion Potion", "type": "potion", "desc": "闪避几率+5%，持续1小时。" }
+    {
+      "id": "HpPotion1",
+      "name": "初级生命药水",
+      "nameEn": "Minor Health Potion",
+      "type": "potion",
+      "desc": "立即恢复25点生命，随后3秒内恢复30%最大生命值。",
+      "icon": "/images/icons/items/potion_red_1.png"
+    },
+    {
+      "id": "HpPotion2",
+      "name": "中级生命药水",
+      "nameEn": "Greater Health Potion",
+      "type": "potion",
+      "desc": "立即恢复50点生命，随后3秒内恢复30%最大生命值。",
+      "icon": "/images/icons/items/potion_red_2.png"
+    },
+    {
+      "id": "HpPotion3",
+      "name": "高级生命药水",
+      "nameEn": "Superior Health Potion",
+      "type": "potion",
+      "desc": "立即恢复100点生命，随后3秒内恢复35%最大生命值。",
+      "icon": "/images/icons/items/potion_red_3.png"
+    },
+    {
+      "id": "HpPotion4",
+      "name": "超级生命药水",
+      "nameEn": "Supreme Health Potion",
+      "type": "potion",
+      "desc": "立即恢复300点生命，随后3秒内恢复35%最大生命值。",
+      "icon": "/images/icons/items/potion_red_4.png"
+    },
+    {
+      "id": "MovementPotion1",
+      "name": "迅捷药水",
+      "nameEn": "Swiftness Potion",
+      "type": "potion",
+      "desc": "移动速度+15%，持续1小时。",
+      "icon": "/images/icons/items/potion_yellow.png"
+    },
+    {
+      "id": "ExpPotion1",
+      "name": "智慧药水",
+      "nameEn": "Wisdom Potion",
+      "type": "potion",
+      "desc": "获得经验+10%，持续1小时。",
+      "icon": "/images/icons/items/potion_blue.png"
+    },
+    {
+      "id": "GoldPotion1",
+      "name": "幸运药水",
+      "nameEn": "Fortune Potion",
+      "type": "potion",
+      "desc": "获得金币+10%，持续1小时。",
+      "icon": "/images/icons/items/potion_orange.png"
+    },
+    {
+      "id": "CritPotion1",
+      "name": "精准药水",
+      "nameEn": "Precision Potion",
+      "type": "potion",
+      "desc": "暴击率+5%，持续1小时。",
+      "icon": "/images/icons/items/potion_pink_1.png"
+    },
+    {
+      "id": "DodgePotion1",
+      "name": "闪避药水",
+      "nameEn": "Evasion Potion",
+      "type": "potion",
+      "desc": "闪避几率+5%，持续1小时。",
+      "icon": "/images/icons/items/potion_green.png"
+    }
   ],
   "exp_books": [
-    { "id": "ExpBook1", "name": "知识之书 I", "tier": 1, "desc": "微量经验值" },
-    { "id": "ExpBook2", "name": "知识之书 II", "tier": 2, "desc": "少量经验值" },
-    { "id": "ExpBook3", "name": "知识之书 III", "tier": 3, "desc": "中量经验值" },
-    { "id": "ExpBook4", "name": "知识之书 IV", "tier": 4, "desc": "可观经验值" },
-    { "id": "ExpBook5", "name": "知识之书 V", "tier": 5, "desc": "大量经验值" },
-    { "id": "ExpBook6", "name": "知识之书 VI", "tier": 6, "desc": "海量经验值" },
-    { "id": "ExpBook7", "name": "知识之书 VII", "tier": 7, "desc": "巨量经验值" },
-    { "id": "ExpBook8", "name": "知识之书 VIII", "tier": 8, "desc": "极大量经验值" },
-    { "id": "ExpBook9", "name": "知识之书 IX", "tier": 9, "desc": "庞大经验值" },
-    { "id": "ExpBook10", "name": "知识之书 X", "tier": 10, "desc": "天文数字经验值" }
+    {
+      "id": "ExpBook1",
+      "name": "知识之书 I",
+      "tier": 1,
+      "desc": "微量经验值"
+    },
+    {
+      "id": "ExpBook2",
+      "name": "知识之书 II",
+      "tier": 2,
+      "desc": "少量经验值"
+    },
+    {
+      "id": "ExpBook3",
+      "name": "知识之书 III",
+      "tier": 3,
+      "desc": "中量经验值"
+    },
+    {
+      "id": "ExpBook4",
+      "name": "知识之书 IV",
+      "tier": 4,
+      "desc": "可观经验值"
+    },
+    {
+      "id": "ExpBook5",
+      "name": "知识之书 V",
+      "tier": 5,
+      "desc": "大量经验值"
+    },
+    {
+      "id": "ExpBook6",
+      "name": "知识之书 VI",
+      "tier": 6,
+      "desc": "海量经验值"
+    },
+    {
+      "id": "ExpBook7",
+      "name": "知识之书 VII",
+      "tier": 7,
+      "desc": "巨量经验值"
+    },
+    {
+      "id": "ExpBook8",
+      "name": "知识之书 VIII",
+      "tier": 8,
+      "desc": "极大量经验值"
+    },
+    {
+      "id": "ExpBook9",
+      "name": "知识之书 IX",
+      "tier": 9,
+      "desc": "庞大经验值"
+    },
+    {
+      "id": "ExpBook10",
+      "name": "知识之书 X",
+      "tier": 10,
+      "desc": "天文数字经验值"
+    }
   ],
   "chests": [
-    { "id": "TreasureChest1", "name": "镀金宝箱", "nameEn": "Gilded Chest", "desc": "开启后获得若干物品，有几率获得传说品质装备。" },
-    { "id": "TreasureChest2", "name": "璀璨镀金宝箱", "nameEn": "Splendid Gilded Chest", "desc": "开启后获得大量物品，有几率获得传说或神圣品质装备。" }
+    {
+      "id": "TreasureChest1",
+      "name": "镀金宝箱",
+      "nameEn": "Gilded Chest",
+      "desc": "开启后获得若干物品，有几率获得传说品质装备。",
+      "icon": "/images/icons/items/chest_gilded.png"
+    },
+    {
+      "id": "TreasureChest2",
+      "name": "璀璨镀金宝箱",
+      "nameEn": "Splendid Gilded Chest",
+      "desc": "开启后获得大量物品，有几率获得传说或神圣品质装备。",
+      "icon": "/images/icons/items/chest_splendid.png"
+    }
   ],
   "materials": [
-    { "id": "Material1", "name": "诅咒精华碎片", "nameEn": "Cursed Essence Fragment", "desc": "从黑暗生物身上采集的诅咒精华碎片，用于装备强化。" },
-    { "id": "Skull", "name": "骷髅钥匙", "nameEn": "Skull Key", "desc": "进入Boss关卡的必需材料。" }
+    {
+      "id": "Material1",
+      "name": "诅咒精华碎片",
+      "nameEn": "Cursed Essence Fragment",
+      "desc": "从黑暗生物身上采集的诅咒精华碎片，用于装备强化。",
+      "icon": "/images/icons/items/material_cursed.png"
+    },
+    {
+      "id": "Skull",
+      "name": "骷髅钥匙",
+      "nameEn": "Skull Key",
+      "desc": "进入Boss关卡的必需材料。",
+      "icon": "/images/icons/items/material_skull.png"
+    }
   ],
   "random_boxes": [
-    { "slot": "weapon", "name": "随机武器盒" },
-    { "slot": "helm", "name": "随机头盔盒" },
-    { "slot": "chest", "name": "随机护甲盒" },
-    { "slot": "shoulder", "name": "随机护肩盒" },
-    { "slot": "necklace", "name": "随机项链盒" },
-    { "slot": "gloves", "name": "随机手套盒" },
-    { "slot": "belt", "name": "随���腰带盒" },
-    { "slot": "legs", "name": "随机护腿盒" },
-    { "slot": "boots", "name": "随机靴子盒" },
-    { "slot": "ring", "name": "随机戒指盒" }
+    {
+      "slot": "weapon",
+      "name": "随机武器盒"
+    },
+    {
+      "slot": "helm",
+      "name": "随机头盔盒"
+    },
+    {
+      "slot": "chest",
+      "name": "随机护甲盒"
+    },
+    {
+      "slot": "shoulder",
+      "name": "随机护肩盒"
+    },
+    {
+      "slot": "necklace",
+      "name": "随机项链盒"
+    },
+    {
+      "slot": "gloves",
+      "name": "随机手套盒"
+    },
+    {
+      "slot": "belt",
+      "name": "随���腰带盒"
+    },
+    {
+      "slot": "legs",
+      "name": "随机护腿盒"
+    },
+    {
+      "slot": "boots",
+      "name": "随机靴子盒"
+    },
+    {
+      "slot": "ring",
+      "name": "随机戒指盒"
+    }
   ],
   "companion_reins": [
-    { "id": "Rein_wolf", "name": "狼之缰绳", "companion": "狼", "companionEn": "Wolf" },
-    { "id": "Rein_Werewolf", "name": "狼人缰绳", "companion": "血月狼人", "companionEn": "Bloodmoon Werewolf" },
-    { "id": "Rein_ZombieWolf", "name": "变异之狼缰绳", "companion": "变异之狼", "companionEn": "Mutating Wolf" },
-    { "id": "Rein_BlackHorse", "name": "黑马缰绳", "companion": "黑马", "companionEn": "Dark Horse" },
-    { "id": "Rein_BrownPony", "name": "栗色小马缰绳", "companion": "栗色小马", "companionEn": "Chestnut Pony" },
-    { "id": "Rein_BlueMammoth", "name": "蓝色猛犸缰绳", "companion": "蓝色猛犸象", "companionEn": "Blue Mammoth" },
-    { "id": "Rein_Boar", "name": "野猪缰绳", "companion": "野猪", "companionEn": "Boar" },
-    { "id": "Rein_Spider", "name": "黑蜘蛛缰绳", "companion": "黑蜘蛛", "companionEn": "Black Spider" },
-    { "id": "Rein_PoisonSpider", "name": "毒液蜘蛛缰绳", "companion": "毒液蜘蛛", "companionEn": "Venomous Spider" },
-    { "id": "Rein_BigTreant", "name": "远古树人缰绳", "companion": "远古橡树树人", "companionEn": "Ancient Oak Treant" },
-    { "id": "Rein_Stumplin", "name": "树桩怪缰绳", "companion": "树桩怪", "companionEn": "Stumplin" },
-    { "id": "Rein_Ogre", "name": "食人魔缰绳", "companion": "食人魔", "companionEn": "Ogre" },
-    { "id": "Rein_GoblinWarrior", "name": "哥布林战士缰绳", "companion": "哥布林战士", "companionEn": "Goblin Warrior" },
-    { "id": "Rein_OrcWarrior", "name": "兽人战士缰绳", "companion": "兽人战士", "companionEn": "Orc Warrior" },
-    { "id": "Rein_SkeletonArcher", "name": "骷髅弓箭手缰绳", "companion": "骷髅弓箭手", "companionEn": "Skeleton Archer" },
-    { "id": "Rein_SkeletonWarrior", "name": "骷髅战士缰绳", "companion": "骷髅战士", "companionEn": "Skeleton Warrior" },
-    { "id": "Rein_DarkElfMage", "name": "黑暗精灵法师缰绳", "companion": "黑暗精灵法师", "companionEn": "Dark Elf Mage" },
-    { "id": "Rein_Dragon", "name": "龙之缰绳", "companion": "幼年黑龙", "companionEn": "Young Black Dragon" }
+    {
+      "id": "Rein_wolf",
+      "name": "狼之缰绳",
+      "companion": "狼",
+      "companionEn": "Wolf"
+    },
+    {
+      "id": "Rein_Werewolf",
+      "name": "狼人缰绳",
+      "companion": "血月狼人",
+      "companionEn": "Bloodmoon Werewolf"
+    },
+    {
+      "id": "Rein_ZombieWolf",
+      "name": "变异之狼缰绳",
+      "companion": "变异之狼",
+      "companionEn": "Mutating Wolf"
+    },
+    {
+      "id": "Rein_BlackHorse",
+      "name": "黑马缰绳",
+      "companion": "黑马",
+      "companionEn": "Dark Horse"
+    },
+    {
+      "id": "Rein_BrownPony",
+      "name": "栗色小马缰绳",
+      "companion": "栗色小马",
+      "companionEn": "Chestnut Pony"
+    },
+    {
+      "id": "Rein_BlueMammoth",
+      "name": "蓝色猛犸缰绳",
+      "companion": "蓝色猛犸象",
+      "companionEn": "Blue Mammoth"
+    },
+    {
+      "id": "Rein_Boar",
+      "name": "野猪缰绳",
+      "companion": "野猪",
+      "companionEn": "Boar"
+    },
+    {
+      "id": "Rein_Spider",
+      "name": "黑蜘蛛缰绳",
+      "companion": "黑蜘蛛",
+      "companionEn": "Black Spider"
+    },
+    {
+      "id": "Rein_PoisonSpider",
+      "name": "毒液蜘蛛缰绳",
+      "companion": "毒液蜘蛛",
+      "companionEn": "Venomous Spider"
+    },
+    {
+      "id": "Rein_BigTreant",
+      "name": "远古树人缰绳",
+      "companion": "远古橡树树人",
+      "companionEn": "Ancient Oak Treant"
+    },
+    {
+      "id": "Rein_Stumplin",
+      "name": "树桩怪缰绳",
+      "companion": "树桩怪",
+      "companionEn": "Stumplin"
+    },
+    {
+      "id": "Rein_Ogre",
+      "name": "食人魔缰绳",
+      "companion": "食人魔",
+      "companionEn": "Ogre"
+    },
+    {
+      "id": "Rein_GoblinWarrior",
+      "name": "哥布林战士缰绳",
+      "companion": "哥布林战士",
+      "companionEn": "Goblin Warrior"
+    },
+    {
+      "id": "Rein_OrcWarrior",
+      "name": "兽人战士缰绳",
+      "companion": "兽人战士",
+      "companionEn": "Orc Warrior"
+    },
+    {
+      "id": "Rein_SkeletonArcher",
+      "name": "骷髅弓箭手缰绳",
+      "companion": "骷髅弓箭手",
+      "companionEn": "Skeleton Archer"
+    },
+    {
+      "id": "Rein_SkeletonWarrior",
+      "name": "骷髅战士缰绳",
+      "companion": "骷髅战士",
+      "companionEn": "Skeleton Warrior"
+    },
+    {
+      "id": "Rein_DarkElfMage",
+      "name": "黑暗精灵法师缰绳",
+      "companion": "黑暗精灵法师",
+      "companionEn": "Dark Elf Mage"
+    },
+    {
+      "id": "Rein_Dragon",
+      "name": "龙之缰绳",
+      "companion": "幼年黑龙",
+      "companionEn": "Young Black Dragon"
+    }
   ]
 }

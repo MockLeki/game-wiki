@@ -58,16 +58,12 @@ const getCompanionsBySpecies = (speciesKey) => {
 <p v-if="loading">加载中...</p>
 
 <div v-if="!loading && minionData" class="minion-container">
-
-<!-- Tab -->
 <div class="tabs">
 <button :class="['tab', { active: activeTab==='companions' }]" @click="activeTab='companions'">🐾 可捕获仆从</button>
 <button :class="['tab', { active: activeTab==='npcs' }]" @click="activeTab='npcs'">🏛️ 城镇NPC</button>
 <button :class="['tab', { active: activeTab==='enemies' }]" @click="activeTab='enemies'">👹 怪物图鉴</button>
 <button :class="['tab', { active: activeTab==='species' }]" @click="activeTab='species'">🔬 物种百科</button>
 </div>
-
-<!-- 仆从列表 -->
 <div v-if="activeTab==='companions'" class="tab-content">
 <div class="filters">
 <div class="filter-group">
@@ -89,16 +85,16 @@ const getCompanionsBySpecies = (speciesKey) => {
 </div>
 <button class="reset-btn" @click="speciesFilter=''; qualityFilter=''">重置</button>
 </div>
-
 <p v-if="filteredCompanions.length === 0" class="no-data">没有找到匹配的仆从</p>
 <p v-else class="result-count">共找到 <strong>{{ filteredCompanions.length }}</strong> 个仆从</p>
-
 <div class="companions-grid">
 <div v-for="comp in filteredCompanions" :key="comp.id" class="companion-card" :style="{ borderColor: qualityColor(comp.quality) }">
 <div class="comp-header" :style="{ backgroundColor: qualityColor(comp.quality) }">
 <div class="comp-title">
-<img v-if="comp.image" :src="comp.image" class="comp-img" alt="">
+<div class="comp-icon-wrap">
+<img v-if="comp.icon" :src="comp.icon" class="comp-icon-img" alt="">
 <span v-else class="species-icon">{{ speciesIcon(comp.species) }}</span>
+</div>
 <div>
 <span class="comp-name">{{ comp.name }}</span>
 <span class="comp-name-en">{{ comp.nameEn }}</span>
@@ -131,14 +127,17 @@ const getCompanionsBySpecies = (speciesKey) => {
 </div>
 </div>
 </div>
-
-<!-- NPC -->
 <div v-if="activeTab==='npcs'" class="tab-content">
 <div class="npc-grid">
 <div v-for="npc in minionData.npcs" :key="npc.id" class="npc-card">
 <div class="npc-header">
+<div class="npc-icon-wrap">
+<img v-if="npc.icon" :src="npc.icon" class="npc-icon-img" alt="">
+</div>
+<div>
 <span class="npc-name">{{ npc.name }}</span>
 <span class="npc-name-en">{{ npc.nameEn }}</span>
+</div>
 </div>
 <div class="npc-body">
 <p>{{ npc.desc }}</p>
@@ -146,22 +145,21 @@ const getCompanionsBySpecies = (speciesKey) => {
 </div>
 </div>
 </div>
-
-<!-- 怪物图鉴 -->
 <div v-if="activeTab==='enemies'" class="tab-content">
 <div class="enemy-grid">
 <div v-for="enemy in minionData.enemies" :key="enemy.name" class="enemy-item">
+<div class="enemy-icon-wrap">
+<img v-if="enemy.icon" :src="enemy.icon" class="enemy-icon-img" alt="">
+</div>
 <span class="enemy-name">{{ enemy.name }}</span>
 <span class="enemy-name-en">{{ enemy.nameEn }}</span>
 </div>
 </div>
 </div>
-
-<!-- 物种百科 -->
 <div v-if="activeTab==='species'" class="tab-content">
 <div class="species-grid">
 <div v-for="sp in minionData.species" :key="sp.key" class="species-card">
-<div class="species-icon-large">{{ speciesIcon(sp.key) }}</div>
+<div class="species-icon-large">{{ sp.icon }}</div>
 <div class="species-name">{{ sp.name }}</div>
 <div class="species-name-en">{{ sp.nameEn }}</div>
 <div class="species-companions">
@@ -246,15 +244,19 @@ const getCompanionsBySpecies = (speciesKey) => {
   align-items: flex-start;
 }
 .comp-title { display: flex; align-items: center; gap: 0.5rem; }
-.comp-img {
+.comp-icon-wrap {
   width: 48px;
   height: 48px;
-  object-fit: contain;
   border-radius: 50%;
   background: #2d2d44;
   border: 2px solid rgba(255,255,255,0.3);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+.comp-icon-img { width: 44px; height: 44px; object-fit: contain; }
 .species-icon { font-size: 1.5rem; }
 .comp-name { font-weight: bold; font-size: 1.05rem; display: block; }
 .comp-name-en { font-size: 0.75rem; color: rgba(255,255,255,0.6); display: block; }
@@ -317,19 +319,50 @@ const getCompanionsBySpecies = (speciesKey) => {
 .npc-header {
   background: #2d2d44;
   padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
-.npc-name { color: #fff; font-weight: bold; font-size: 0.95rem; }
+.npc-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.npc-icon-img { width: 36px; height: 36px; object-fit: contain; }
+.npc-name { color: #fff; font-weight: bold; font-size: 0.95rem; display: block; }
 .npc-name-en { color: #666; font-size: 0.8rem; display: block; }
 .npc-body { padding: 0.7rem 1rem; }
 .npc-body p { color: #aaa; font-size: 0.9rem; line-height: 1.5; margin: 0; }
-.enemy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
+.enemy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.8rem; }
 .enemy-item {
   background: #1a1a2e;
   border: 1px solid #333;
-  border-radius: 6px;
-  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  padding: 0.8rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
 }
+.enemy-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #2d2d44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+.enemy-icon-img { width: 56px; height: 56px; object-fit: contain; }
 .enemy-name { color: #fff; font-size: 0.9rem; display: block; }
 .enemy-name-en { color: #666; font-size: 0.75rem; }
 .species-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
