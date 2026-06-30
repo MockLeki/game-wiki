@@ -22,6 +22,7 @@ export default defineConfig({
       { text: '仆从大全', link: '/minions' },
       { text: '关卡大全', link: '/levels' },
       { text: '角色介绍', link: '/heroes/' },
+      { text: '技能大全', link: '/skills' },
       { text: '伤害计算器', link: '/damage-calculator' },
       { text: '常见问题', link: '/faq' }
     ],

@@ -32,6 +32,10 @@ features:
     details: 角色技能、天赋、加点推荐
     link: /heroes
     linkText: 查看英雄
+  - title: 技能大全
+    details: 战士/法师主动技能、天赋模拟器、属性系统参考
+    link: /skills
+    linkText: 查看技能
   - title: 伤害计算器
     details: 伤害计算器
     link: /damage-calculator
