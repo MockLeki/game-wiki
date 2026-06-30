@@ -1,19 +1,14 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 
-const items = ref([])
+const itemData = ref(null)
 const loading = ref(true)
-
-const qualityFilter = ref('')
-const typeFilter = ref('')
-const minLevel = ref(0)
-const maxLevel = ref(100)
-const searchQuery = ref('')
+const activeTab = ref('weapons')
 
 onMounted(async () => {
   try {
     const response = await fetch('/data/items.json')
-    items.value = await response.json()
+    itemData.value = await response.json()
   } catch (e) {
     console.error('加载失败:', e)
   } finally {
@@ -21,125 +16,185 @@ onMounted(async () => {
   }
 })
 
-const filteredItems = computed(() => {
-  return items.value.filter(item => {
-    const matchQuality = !qualityFilter.value || item.quality === qualityFilter.value
-    const matchType = !typeFilter.value || item.type === typeFilter.value
-    const matchLevel = item.level >= minLevel.value && item.level <= maxLevel.value
-    const matchSearch = !searchQuery.value || item.name.toLowerCase().includes(searchQuery.value.toLowerCase())
-    return matchQuality && matchType && matchLevel && matchSearch
+const slotNames = {
+  weapon: '武器', helm: '头盔', chest: '护甲', shoulder: '护肩',
+  necklace: '项链', gloves: '手套', belt: '腰带', legs: '护腿',
+  boots: '靴子', ring: '戒指'
+}
+
+const qualityColors = {
+  legendary: '#ff9800',
+  divine: '#e91e63'
+}
+
+const groupedArmor = computed(() => {
+  if (!itemData.value) return {}
+  const groups = {}
+  itemData.value.legendary_armor.forEach(item => {
+    const s = slotNames[item.slot] || item.slot
+    if (!groups[s]) groups[s] = []
+    groups[s].push(item)
   })
+  return groups
 })
 
-const resetFilters = () => {
-  qualityFilter.value = ''
-  typeFilter.value = ''
-  minLevel.value = 0
-  maxLevel.value = 100
-  searchQuery.value = ''
-}
+const hpPotions = computed(() => {
+  if (!itemData.value) return []
+  return itemData.value.consumables.filter(c => c.id.startsWith('Hp'))
+})
 
-const qualityColor = (quality) => {
-  const colors = {
-    common: '#9e9e9e',
-    rare: '#2196f3',
-    epic: '#9c27b0',
-    legendary: '#ff9800'
-  }
-  return colors[quality] || '#9e9e9e'
-}
-
-const qualityName = (quality) => {
-  const names = { common: '普通', rare: '稀有', epic: '史诗', legendary: '传说' }
-  return names[quality] || quality
-}
-
-const typeName = (type) => {
-  const names = {
-    weapon: '武器', armor: '护甲', helmet: '头盔',
-    shoulder: '护肩', necklace: '项链', gloves: '手套',
-    belt: '腰带', legs: '护腿', boots: '靴子', ring: '戒指'
-  }
-  return names[type] || type
-}
+const buffPotions = computed(() => {
+  if (!itemData.value) return []
+  return itemData.value.consumables.filter(c => !c.id.startsWith('Hp'))
+})
 </script>
 
-# 物品数据库
+# 装备数据库
 
 <div class="tip-box">
-  <strong>提示</strong>
-  <p>数据来源于 <code>public/data/items.json</code>，可直接编辑该文件更新装备数据。
-  以下展示装备词条对照表，以及装备图和特殊词条属性。</p>
+  <strong>数据来源</strong>
+  <p>装备数据从游戏本体 Deskrawl Demo 的 Unity 资源中提取，包含传说装备、消耗品、材料、随从缰绳等完整数据。</p>
 </div>
-
-<div class="affix-table-wrap">
-  <img src="/images/affixes-table.png" alt="装备主要词条与次要词条对照表" class="affix-table-img" />
-</div>
-
-<div class="filters">
-  <div class="filter-group">
-    <label>搜索:</label>
-    <input type="text" v-model="searchQuery" placeholder="输入装备名称..." class="search-input">
-  </div>
-  <div class="filter-group">
-    <label>品级:</label>
-    <select v-model="qualityFilter">
-      <option value="">全部</option>
-      <option value="common">普通</option>
-      <option value="rare">稀有</option>
-      <option value="epic">史诗</option>
-      <option value="legendary">传说</option>
-    </select>
-  </div>
-  <div class="filter-group">
-    <label>类型:</label>
-    <select v-model="typeFilter">
-      <option value="">全部</option>
-      <option value="weapon">武器</option>
-      <option value="helmet">头盔</option>
-      <option value="shoulder">护肩</option>
-      <option value="necklace">项链</option>
-      <option value="armor">护甲</option>
-      <option value="gloves">手套</option>
-      <option value="belt">腰带</option>
-      <option value="legs">护腿</option>
-      <option value="boots">靴子</option>
-      <option value="ring">戒指</option>
-    </select>
-  </div>
-  <button class="reset-btn" @click="resetFilters">重置</button>
-</div>
-
-## 查询结果
 
 <p v-if="loading">加载中...</p>
-<p v-else-if="filteredItems.length === 0">没有找到物品</p>
-<p v-else>共找到 <strong>{{ filteredItems.length }}</strong> 件物品</p>
 
-<div v-if="!loading" class="items-grid">
-  <div 
-    v-for="item in filteredItems" 
-    :key="item.id" 
-    class="item-card"
-    :style="{ borderColor: qualityColor(item.quality) }"
-  >
-    <div v-if="item.image" class="item-image">
-      <img :src="item.image" />
-    </div>
-    <div class="item-header" :style="{ backgroundColor: qualityColor(item.quality) }">
-      <span class="item-name">{{ item.name }}</span>
-      <span class="item-quality">{{ qualityName(item.quality) }}</span>
-    </div>
-    <div class="item-body">
-      <div class="item-info">
-        <p><strong>类型:</strong> {{ typeName(item.type) }}</p>
-        <p><strong>等级:</strong> {{ item.level }}</p>
-        <p><strong>攻击:</strong> {{ item.attack || 0 }}</p>
-        <p><strong>防御:</strong> {{ item.defense || 0 }}</p>
-      </div>
-      <p class="item-desc">{{ item.description || item.effect }}</p>
-    </div>
-  </div>
+<div v-if="!loading && itemData" class="equipment-container">
+
+<!-- Tab 切换 -->
+<div class="tabs">
+<button v-for="tab in ['weapons','armor','consumables','materials','reins']" :key="tab" :class="['tab', { active: activeTab === tab }]" @click="activeTab = tab">
+<span v-if="tab==='weapons'">⚔️ 传说武器</span>
+<span v-else-if="tab==='armor'">🛡️ 传说防具</span>
+<span v-else-if="tab==='consumables'">🧪 消耗品</span>
+<span v-else-if="tab==='materials'">📦 材料&宝箱</span>
+<span v-else>🐴 随从缰绳</span>
+</button>
+</div>
+
+<!-- 传说武器 -->
+<div v-if="activeTab==='weapons'" class="tab-content">
+<div class="equipment-grid">
+<div v-for="item in itemData.legendary_weapons" :key="item.id" class="equipment-card" style="border-color: #ff9800">
+<div class="eq-header" style="background: #ff9800">
+<span class="eq-name">{{ item.name }}</span>
+<span class="eq-slot">{{ slotNames[item.slot] }}</span>
+</div>
+<div class="eq-body">
+<p class="eq-name-en">{{ item.nameEn }}</p>
+<div class="eq-effect">
+<span class="effect-label">传说特效</span>
+<p>{{ item.desc }}</p>
+</div>
+<p class="eq-desc-en">{{ item.descEn }}</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 传说防具 -->
+<div v-if="activeTab==='armor'" class="tab-content">
+<div class="armor-sections">
+<div v-for="(items, slot) in groupedArmor" :key="slot" class="armor-slot-group">
+<h3 class="slot-title">{{ slot }}</h3>
+<div class="equipment-grid">
+<div v-for="item in items" :key="item.id" class="equipment-card" style="border-color: #ff9800">
+<div class="eq-header" style="background: #ff9800">
+<span class="eq-name">{{ item.name }}</span>
+<span class="eq-slot">{{ slotNames[item.slot] }}</span>
+</div>
+<div class="eq-body">
+<p class="eq-name-en">{{ item.nameEn }}</p>
+<div class="eq-effect">
+<span class="effect-label">传说特效</span>
+<p>{{ item.desc }}</p>
+</div>
+<p class="eq-desc-en">{{ item.descEn }}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 消耗品 -->
+<div v-if="activeTab==='consumables'" class="tab-content">
+<h3>💊 生命药水</h3>
+<div class="equipment-grid consumables-grid">
+<div v-for="p in hpPotions" :key="p.id" class="consumable-card">
+<div class="con-header">
+<span class="con-name">{{ p.name }}</span>
+</div>
+<div class="con-body">
+<p>{{ p.desc }}</p>
+</div>
+</div>
+</div>
+<h3>🧪 增益药水 (持续1小时)</h3>
+<div class="equipment-grid consumables-grid">
+<div v-for="p in buffPotions" :key="p.id" class="consumable-card">
+<div class="con-header" style="background: #2196f3">
+<span class="con-name">{{ p.name }}</span>
+</div>
+<div class="con-body">
+<p>{{ p.desc }}</p>
+</div>
+</div>
+</div>
+<h3>📚 经验之书</h3>
+<div class="exp-books">
+<div v-for="book in itemData.exp_books" :key="book.id" class="exp-book">
+<span class="book-tier">Lv.{{ book.tier }}</span>
+<span class="book-name">{{ book.name }}</span>
+<span class="book-desc">{{ book.desc }}</span>
+</div>
+</div>
+</div>
+
+<!-- 材料&宝箱 -->
+<div v-if="activeTab==='materials'" class="tab-content">
+<h3>🔮 材料</h3>
+<div class="equipment-grid consumables-grid">
+<div v-for="m in itemData.materials" :key="m.id" class="consumable-card">
+<div class="con-header" style="background: #9c27b0">
+<span class="con-name">{{ m.name }}</span>
+</div>
+<div class="con-body">
+<p>{{ m.desc }}</p>
+</div>
+</div>
+</div>
+<h3>🎁 宝箱</h3>
+<div class="equipment-grid consumables-grid">
+<div v-for="c in itemData.chests" :key="c.id" class="consumable-card">
+<div class="con-header" style="background: #ff9800">
+<span class="con-name">{{ c.name }}</span>
+</div>
+<div class="con-body">
+<p>{{ c.desc }}</p>
+</div>
+</div>
+</div>
+<h3>🎲 随机装备盒</h3>
+<div class="random-boxes">
+<div v-for="box in itemData.random_boxes" :key="box.slot" class="random-box">
+<span>{{ box.name }}</span>
+</div>
+</div>
+</div>
+
+<!-- 随从缰绳 -->
+<div v-if="activeTab==='reins'" class="tab-content">
+<p class="section-desc">击败对应怪物或完成特定条件后获得，使用缰绳可永久解锁该随从。</p>
+<div class="reins-grid">
+<div v-for="rein in itemData.companion_reins" :key="rein.id" class="rein-card">
+<div class="rein-icon">🐴</div>
+<div class="rein-name">{{ rein.name }}</div>
+<div class="rein-companion">解锁：{{ rein.companion }}</div>
+<div class="rein-companion-en">{{ rein.companionEn }}</div>
+</div>
+</div>
+</div>
+
 </div>
 
 <style scoped>
@@ -149,167 +204,133 @@ const typeName = (type) => {
   padding: 1rem;
   margin-bottom: 1.5rem;
   color: #ccc;
+  border-left: 4px solid #9c27b0;
 }
-
-.tip-box strong {
-  color: #9c27b0;
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.tip-box code {
-  background: rgba(156, 39, 176, 0.2);
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-  color: #9c27b0;
-}
-
-.affix-table-wrap {
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  overflow: hidden;
+.tip-box strong { color: #9c27b0; display: block; margin-bottom: 0.3rem; }
+.tip-box code { background: rgba(156, 39, 176, 0.2); padding: 0.1rem 0.4rem; border-radius: 4px; color: #9c27b0; }
+.tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.tab {
   background: #1a1a2e;
-  padding: 0.5rem;
-}
-
-.affix-table-img {
-  display: block;
-  width: 100%;
-  min-height: 320px;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-.filters {
-  background: #1a1a2e;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.filter-group {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.filter-group label {
-  color: #ccc;
-  font-weight: bold;
-}
-
-.search-input {
-  background: #2d2d44;
-  color: white;
-  border: 1px solid #444;
-  border-radius: 4px;
-  padding: 0.4rem 0.6rem;
-  width: 200px;
-  outline: none;
-}
-
-.search-input:focus {
-  border-color: #9c27b0;
-}
-
-.search-input::placeholder {
-  color: #666;
-}
-
-.filter-group select {
-  background: #2d2d44;
-  color: white;
-  border: 1px solid #444;
-  border-radius: 4px;
-  padding: 0.4rem 0.6rem;
-}
-
-.reset-btn {
-  background: #4a4a6a;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  color: #888;
+  border: 1px solid #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
 }
-
-.reset-btn:hover {
-  background: #5a5a8a;
-}
-
-.items-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.item-card {
-  border: 3px solid;
+.tab:hover { border-color: #555; color: #ccc; }
+.tab.active { background: rgba(156, 39, 176, 0.15); border-color: #9c27b0; color: #fff; }
+.tab-content { animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.equipment-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.equipment-card {
+  background: #1a1a2e;
+  border: 2px solid;
   border-radius: 8px;
   overflow: hidden;
-  background: #1a1a2e;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
-
-.item-image {
-  display: flex;
-  justify-content: center;
-  padding: 0.5rem;
-  background: #2d2d44;
-}
-
-.item-image img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-}
-
-.item-header {
-  padding: 0.8rem;
-  color: white;
+.eq-header {
+  padding: 0.7rem 1rem;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.item-name {
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.item-quality {
-  font-size: 0.85rem;
-  background: rgba(0,0,0,0.2);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-}
-
-.item-body {
-  padding: 0.8rem;
-  color: #ccc;
-}
-
-.item-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.3rem;
+.eq-name { font-weight: bold; font-size: 1rem; }
+.eq-slot { font-size: 0.8rem; background: rgba(0,0,0,0.2); padding: 0.15rem 0.5rem; border-radius: 4px; }
+.eq-body { padding: 0.8rem 1rem; }
+.eq-name-en { color: #666; font-size: 0.85rem; margin: 0 0 0.8rem 0; font-style: italic; }
+.eq-effect {
+  background: rgba(255, 152, 0, 0.08);
+  border-left: 3px solid #ff9800;
+  padding: 0.7rem;
+  border-radius: 0 6px 6px 0;
   margin-bottom: 0.8rem;
 }
-
-.item-info p {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
+.effect-label {
+  font-size: 0.75rem;
+  background: #ff9800;
+  color: #000;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  display: inline-block;
 }
-
-.item-desc {
-  font-size: 0.9rem;
+.eq-effect p { color: #ccc; font-size: 0.9rem; line-height: 1.5; margin: 0.5rem 0 0 0; }
+.eq-desc-en { color: #555; font-size: 0.8rem; font-style: italic; margin: 0; }
+.armor-slot-group { margin-bottom: 1.5rem; }
+.slot-title {
   color: #ff9800;
-  border-top: 1px solid #333;
-  padding-top: 0.8rem;
-  margin: 0;
+  font-size: 1rem;
+  margin: 0 0 0.8rem 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #333;
 }
+.consumable-card {
+  background: #1a1a2e;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+.con-header {
+  background: #4caf50;
+  padding: 0.6rem 1rem;
+  color: #fff;
+}
+.con-name { font-weight: bold; font-size: 0.95rem; }
+.con-body { padding: 0.7rem 1rem; }
+.con-body p { color: #aaa; font-size: 0.9rem; margin: 0; line-height: 1.4; }
+.exp-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+}
+.exp-book {
+  background: #1a1a2e;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-left: 3px solid #00bcd4;
+}
+.book-tier { color: #00bcd4; font-weight: bold; font-size: 0.85rem; min-width: 40px; }
+.book-name { color: #fff; font-size: 0.9rem; flex: 1; }
+.book-desc { color: #666; font-size: 0.8rem; }
+.random-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+}
+.random-box {
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.reins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+.rein-card {
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.rein-card:hover { border-color: #9c27b0; }
+.rein-icon { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.rein-name { color: #ff9800; font-weight: bold; font-size: 0.9rem; }
+.rein-companion { color: #aaa; font-size: 0.85rem; margin-top: 0.2rem; }
+.rein-companion-en { color: #555; font-size: 0.75rem; }
+.section-desc { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
+h3 { color: #fff; margin: 1.5rem 0 0.8rem 0; font-size: 1.1rem; }
 </style>

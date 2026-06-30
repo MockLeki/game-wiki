@@ -1,260 +1,304 @@
-[
-  {
-    "id": 3000,
-    "name": "黑蜘蛛",
-    "quality": "common",
-    "qualityName": "普通",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 10,
-    "weight": 15,
-    "location": "国王森林",
-    "image": "/images/weapons/3000.png",
-    "skills": [
-      { "name": "毒素伤害I", "description": "毒素伤害+10%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3001,
-    "name": "毒液蜘蛛",
-    "quality": "common",
-    "qualityName": "普通",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 10,
-    "weight": 16,
-    "location": "国王森林南部",
-    "image": "/images/weapons/3001.png",
-    "skills": [
-      { "name": "法力I", "description": "法力+20", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3002,
-    "name": "哥布林战士",
-    "quality": "common",
-    "qualityName": "普通",
-    "type": "humanoid",
-    "typeName": "人形",
-    "level": 10,
-    "weight": 25,
-    "location": "北山地穴",
-    "image": "/images/weapons/3002.png",
-    "skills": [
-      { "name": "金币获取I", "description": "从敌人处获得的金币+10%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3003,
-    "name": "棕马",
-    "quality": "common",
-    "qualityName": "普通",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 10,
-    "weight": 20,
-    "location": "北山地穴",
-    "image": "/images/weapons/3003.png",
-    "skills": [
-      { "name": "疾行I", "description": "移动速度+5%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3004,
-    "name": "变异之狼",
-    "quality": "uncommon",
-    "qualityName": "优秀",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 15,
-    "weight": 20,
-    "location": "国王森林南部",
-    "image": "/images/weapons/3004.png",
-    "skills": [
-      { "name": "击中回复生命I", "description": "击中回复生命+10", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3005,
-    "name": "灰森林狼",
-    "quality": "uncommon",
-    "qualityName": "优秀",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 15,
-    "weight": 15,
-    "location": "国王森林",
-    "image": "/images/weapons/3005.png",
-    "skills": [
-      { "name": "攻击速度I", "description": "攻击速度+3%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3006,
-    "name": "树桩怪",
-    "quality": "uncommon",
-    "qualityName": "优秀",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 15,
-    "weight": 16,
-    "location": "国王森林南部",
-    "image": "/images/weapons/3006.png",
-    "skills": [
-      { "name": "棘刺I", "description": "棘刺+10%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3007,
-    "name": "骷髅弓箭手",
-    "quality": "uncommon",
-    "qualityName": "优秀",
-    "type": "undead",
-    "typeName": "不死族",
-    "level": 15,
-    "weight": 25,
-    "location": "北山地穴",
-    "image": "/images/weapons/3007.png",
-    "skills": [
-      { "name": "暴击几率I", "description": "暴击几率+3%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3008,
-    "name": "兽人斗士",
-    "quality": "uncommon",
-    "qualityName": "优秀",
-    "type": "humanoid",
-    "typeName": "人形",
-    "level": 15,
-    "weight": 30,
-    "location": "北山地穴下层",
-    "image": "/images/weapons/3008.png",
-    "skills": [
-      { "name": "力量I", "description": "力量+5%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3009,
-    "name": "栗色小马",
-    "quality": "uncommon",
-    "qualityName": "优秀",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 15,
-    "weight": 20,
-    "location": "商人",
-    "image": "/images/weapons/3009.png",
-    "skills": [
-      { "name": "疾行II", "description": "移动速度+10%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3010,
-    "name": "野猪",
-    "quality": "uncommon",
-    "qualityName": "优秀",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 15,
-    "weight": 25,
-    "location": "国王森破",
-    "image": "/images/weapons/3010.png",
-    "skills": [
-      { "name": "活力I", "description": "最大生命值+150", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3011,
-    "name": "血月狼人",
-    "quality": "rare",
-    "qualityName": "稀有",
-    "type": "demon",
-    "typeName": "恶魔",
-    "level": 25,
-    "weight": 25,
-    "location": "国王森林",
-    "image": "/images/weapons/3011.png",
-    "skills": [
-      { "name": "血月嚎叫", "description": "+30%攻击速度，持续5秒", "type": "skill" },
-      { "name": "嗜血I", "description": "击中回复生命+10%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3012,
-    "name": "黑暗精灵法师",
-    "quality": "rare",
-    "qualityName": "稀有",
-    "type": "humanoid",
-    "typeName": "人形",
-    "level": 35,
-    "weight": 20,
-    "location": "北山地穴",
-    "image": "/images/weapons/3012.png",
-    "skills": [
-      { "name": "法力提升", "description": "法力值+30%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3013,
-    "name": "黑马",
-    "quality": "rare",
-    "qualityName": "稀有",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 8,
-    "weight": 22,
-    "location": "商人",
-    "image": "/images/weapons/3013.png",
-    "skills": [
-      { "name": "疾行III", "description": "移动速度+15%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3014,
-    "name": "食人魔",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "humanoid",
-    "typeName": "人形",
-    "level": 30,
-    "weight": 30,
-    "location": "北山地穴下层",
-    "image": "/images/weapons/3014.png",
-    "skills": [
-      { "name": "对眩晕伤害III", "description": "对眩晕敌人造成的伤害+30%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3015,
-    "name": "远古橡树树人",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "humanoid",
-    "typeName": "人形",
-    "level": 40,
-    "weight": 30,
-    "location": "国王森林南部",
-    "image": "/images/weapons/3015.png",
-    "skills": [
-      { "name": "治愈之灵", "description": "为玩家恢复相当于20%最大生命值的生命", "type": "skill" },
-      { "name": "生命提升", "description": "最大生命值+10%", "type": "passive" }
-    ]
-  },
-  {
-    "id": 3016,
-    "name": "蓝色猛犸象",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "beast",
-    "typeName": "野兽",
-    "level": 50,
-    "weight": 35,
-    "location": "商人",
-    "image": "/images/weapons/3016.png",
-    "skills": [
-      { "name": "厚皮III", "description": "护甲+15%", "type": "passive" },
-      { "name": "疾行I", "description": "移动速度+5%", "type": "passive" }
-    ]
-  }
-]
+{
+  "companions": [
+    {
+      "id": 3000,
+      "name": "黑蜘蛛",
+      "nameEn": "Black Spider",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "common",
+      "qualityName": "普通",
+      "level": 10,
+      "weight": 15,
+      "location": "国王森林",
+      "passives": [
+        { "name": "毒素伤害I", "nameEn": "Poison Damage I", "desc": "+{value} 毒素伤害", "descEn": "+{value} Poison Damage." }
+      ]
+    },
+    {
+      "id": 3001,
+      "name": "毒液蜘蛛",
+      "nameEn": "Venomous Spider",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "common",
+      "qualityName": "普通",
+      "level": 10,
+      "weight": 16,
+      "location": "国王森林南部",
+      "passives": [
+        { "name": "法力I", "nameEn": "Mana I", "desc": "+{value} 法力", "descEn": "+{value} Mana." }
+      ]
+    },
+    {
+      "id": 3002,
+      "name": "哥布林战士",
+      "nameEn": "Goblin Warrior",
+      "species": "humanoid",
+      "speciesName": "人形",
+      "quality": "common",
+      "qualityName": "普通",
+      "level": 10,
+      "weight": 25,
+      "location": "北山地穴",
+      "passives": [
+        { "name": "金币获取I", "nameEn": "Gold Increase I", "desc": "从敌人处获得的金币 +{value}", "descEn": "+{value} Gold gained from enemies." }
+      ]
+    },
+    {
+      "id": 3003,
+      "name": "棕马",
+      "nameEn": "Brown Pony",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "common",
+      "qualityName": "普通",
+      "level": 10,
+      "weight": 20,
+      "location": "北山地穴",
+      "passives": [
+        { "name": "疾行I", "nameEn": "Fast Travel I", "desc": "移动速度 +{value}", "descEn": "+{value} Move Speed." }
+      ]
+    },
+    {
+      "id": 3004,
+      "name": "变异之狼",
+      "nameEn": "Mutating Wolf",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "level": 15,
+      "weight": 20,
+      "location": "国王森林南部",
+      "passives": [
+        { "name": "嗜血I", "nameEn": "Bloodthirst I", "desc": "命中回复生命 +{value}", "descEn": "+{value} Life On Hit" }
+      ]
+    },
+    {
+      "id": 3005,
+      "name": "灰森林狼",
+      "nameEn": "Grey Forest Wolf",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "level": 15,
+      "weight": 15,
+      "location": "国王森林",
+      "passives": [
+        { "name": "攻击速度I", "nameEn": "Attack Speed I", "desc": "攻击速度 +{value}", "descEn": "+{value} Attack Speed" }
+      ]
+    },
+    {
+      "id": 3006,
+      "name": "树桩怪",
+      "nameEn": "Stumplin",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "level": 15,
+      "weight": 16,
+      "location": "国王森林南部",
+      "passives": [
+        { "name": "棘刺I", "nameEn": "Thorn I", "desc": "荆棘 +{value}", "descEn": "+{value} Thorn." }
+      ]
+    },
+    {
+      "id": 3007,
+      "name": "骷髅弓箭手",
+      "nameEn": "Skeleton Archer",
+      "species": "undead",
+      "speciesName": "亡灵",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "level": 15,
+      "weight": 25,
+      "location": "北山地穴",
+      "passives": [
+        { "name": "暴击几率I", "nameEn": "Critical Hit Chance I", "desc": "暴击几率 +{value}", "descEn": "+{value} Critical Hit Chance" }
+      ]
+    },
+    {
+      "id": 3008,
+      "name": "兽人战士",
+      "nameEn": "Orc Warrior",
+      "species": "humanoid",
+      "speciesName": "人形",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "level": 15,
+      "weight": 30,
+      "location": "北山地穴下层",
+      "passives": [
+        { "name": "力量I", "nameEn": "Strength I", "desc": "力量 +{value}", "descEn": "+{value} Strength." }
+      ]
+    },
+    {
+      "id": 3009,
+      "name": "栗色小马",
+      "nameEn": "Chestnut Pony",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "level": 15,
+      "weight": 20,
+      "location": "商人",
+      "passives": [
+        { "name": "疾行II", "nameEn": "Fast Travel II", "desc": "移动速度 +{value}", "descEn": "+{value} Move Speed." }
+      ]
+    },
+    {
+      "id": 3010,
+      "name": "野猪",
+      "nameEn": "Boar",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "level": 15,
+      "weight": 25,
+      "location": "国王森林",
+      "passives": [
+        { "name": "活力I", "nameEn": "Vitality I", "desc": "最大生命值 +{value}", "descEn": "Increase {value} Max HP." }
+      ]
+    },
+    {
+      "id": 3011,
+      "name": "血月狼人",
+      "nameEn": "Bloodmoon Werewolf",
+      "species": "demon",
+      "speciesName": "恶魔",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "level": 25,
+      "weight": 25,
+      "location": "国王森林",
+      "activeSkill": {
+        "name": "血月嚎叫",
+        "nameEn": "Werewolf Howl",
+        "desc": "+{value} 攻击速度，持续5秒",
+        "descEn": "+{value} Attack Speed, lasting 5 seconds."
+      },
+      "passives": [
+        { "name": "命中回复生命I", "nameEn": "Life On Hit I", "desc": "命中回复生命 +{value}", "descEn": "+{value} Life On Hit." }
+      ]
+    },
+    {
+      "id": 3012,
+      "name": "黑暗精灵法师",
+      "nameEn": "Dark Elf Mage",
+      "species": "humanoid",
+      "speciesName": "人形",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "level": 35,
+      "weight": 20,
+      "location": "北山地穴",
+      "passives": [
+        { "name": "法力提升", "nameEn": "Mana Increase", "desc": "法力值 +{value}", "descEn": "+{value} Mana." }
+      ]
+    },
+    {
+      "id": 3013,
+      "name": "黑马",
+      "nameEn": "Dark Horse",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "level": 8,
+      "weight": 22,
+      "location": "商人",
+      "passives": [
+        { "name": "疾行III", "nameEn": "Fast Travel III", "desc": "移动速度 +{value}", "descEn": "+{value} Move Speed." }
+      ]
+    },
+    {
+      "id": 3014,
+      "name": "食人魔",
+      "nameEn": "Ogre",
+      "species": "humanoid",
+      "speciesName": "人形",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "level": 30,
+      "weight": 30,
+      "location": "北山地穴下层",
+      "passives": [
+        { "name": "对眩晕伤害III", "nameEn": "Damage to Stunned III", "desc": "对眩晕敌人伤害 +{value}", "descEn": "+{value} Damage to Stunned enemies." }
+      ]
+    },
+    {
+      "id": 3015,
+      "name": "远古橡树树人",
+      "nameEn": "Ancient Oak Treant",
+      "species": "humanoid",
+      "speciesName": "人形",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "level": 40,
+      "weight": 30,
+      "location": "国王森林南部",
+      "activeSkill": {
+        "name": "治愈之灵",
+        "nameEn": "Big Treant Heal",
+        "desc": "为玩家恢复相当于 {value} 最大生命值的生命",
+        "descEn": "Heal player {value} Max Health."
+      },
+      "passives": [
+        { "name": "生命提升", "nameEn": "Health Increase", "desc": "最大生命值 +{value}", "descEn": "+{value} Max Health" }
+      ]
+    },
+    {
+      "id": 3016,
+      "name": "蓝色猛犸象",
+      "nameEn": "Blue Mammoth",
+      "species": "beast",
+      "speciesName": "野兽",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "level": 50,
+      "weight": 35,
+      "location": "商人",
+      "passives": [
+        { "name": "厚皮III", "nameEn": "Thick Skin III", "desc": "护甲 +{value}", "descEn": "+{value} Armor." },
+        { "name": "疾行I", "nameEn": "Fast Travel I", "desc": "移动速度 +{value}", "descEn": "+{value} Move Speed." }
+      ]
+    }
+  ],
+  "species": [
+    { "key": "beast", "name": "野兽", "nameEn": "Beast" },
+    { "key": "demon", "name": "恶魔", "nameEn": "Demon" },
+    { "key": "dragon", "name": "龙", "nameEn": "Dragon" },
+    { "key": "humanoid", "name": "人形", "nameEn": "Humanoid" },
+    { "key": "undead", "name": "亡灵", "nameEn": "Undead" }
+  ],
+  "npcs": [
+    { "id": "MainTown", "name": "主城·艾瑟隆", "nameEn": "Kingdom of Atheron", "desc": "被城堡守护的有墙市场小镇，艾瑟隆王国最后的避难所。英雄在这里休息、交易和补给，然后向地狱之王的黑暗进军。" },
+    { "id": "RepairNPC", "name": "铁匠", "nameEn": "Blacksmith", "desc": "修理和升级装备" },
+    { "id": "MerchantNPC", "name": "商人", "nameEn": "Merchant", "desc": "普通商品商人" },
+    { "id": "MysteryNPC", "name": "神秘商人", "nameEn": "Mystery Vendor", "desc": "神秘物品商人" },
+    { "id": "HealNPC", "name": "治疗师", "nameEn": "Healer", "desc": "提供治疗服务" },
+    { "id": "AlchemistNPC", "name": "炼金师", "nameEn": "Alchemist", "desc": "制作药水" },
+    { "id": "CombatPortal", "name": "战斗传送门", "nameEn": "Combat Portal", "desc": "快速进入战斗" }
+  ],
+  "enemies": [
+    { "name": "毒液蜘蛛", "nameEn": "Venomous Spider" },
+    { "name": "黑蜘蛛", "nameEn": "Black Spider" },
+    { "name": "树桩怪", "nameEn": "Stumplin" },
+    { "name": "变异之狼", "nameEn": "Mutating Wolf" },
+    { "name": "哥布林战士", "nameEn": "Goblin Warrior" },
+    { "name": "兽人战士", "nameEn": "Orc Warrior" },
+    { "name": "骷髅战士", "nameEn": "Skeleton Warrior" },
+    { "name": "骷髅弓箭手", "nameEn": "Skeleton Archer" },
+    { "name": "黑暗精灵法师", "nameEn": "Dark Elf Mage" },
+    { "name": "野猪", "nameEn": "Boar" },
+    { "name": "食人魔", "nameEn": "Ogre" },
+    { "name": "血月狼人", "nameEn": "Bloodmoon Werewolf" },
+    { "name": "远古橡树树人", "nameEn": "Ancient Oak Treant" },
+    { "name": "幼年黑龙", "nameEn": "Young Black Dragon" }
+  ]
+}

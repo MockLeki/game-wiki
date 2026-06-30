@@ -1,286 +1,222 @@
-[
-  {
-    "id": 2000,
-    "name": "地狱风暴之锤",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "weapon",
-    "typeName": "武器",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "每使用10次[普通攻击]技能，召唤一道闪电打击随机敌人，造成相当于1000%武器伤害的闪电伤害。",
-    "image": "/images/weapons/2000.png"
-  },
-  {
-    "id": 2001,
-    "name": "北境巨人战斧",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "weapon",
-    "typeName": "武器",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "每次[基础攻击]额外造成50%武器伤害的冰冷伤害，命中时有3%几率冻结目标。",
-    "image": "/images/weapons/2001.png"
-  },
-  {
-    "id": 2002,
-    "name": "痛苦锯齿巨剑",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "weapon",
-    "typeName": "武器",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "对易伤目标额外增加30%暴击率。",
-    "image": "/images/weapons/2002.png"
-  },
-  {
-    "id": 2003,
-    "name": "龙血牙印戒",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "ring",
-    "typeName": "戒指",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "半月斩将额外投掷两道月牙刃。",
-    "image": "/images/weapons/2003.png"
-  },
-  {
-    "id": 2004,
-    "name": "启示之戒",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "ring",
-    "typeName": "戒指",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "站立不动时，每秒获得+10%基础攻击伤害，最多叠加20层。",
-    "image": "/images/weapons/2004.png" 
-  },
-  {
-    "id": 2005,
-    "name": "怒意壁垒",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "armor",
-    "typeName": "护甲",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "如果怒气护盾在到期前未被击破，到期时对周围敌人造成相当于你最大生命值100%的物理伤害。",
-    "image": "/images/weapons/2005.png" 
-  },
-  {
-    "id": 2006,
-    "name": "荆棘之心胸甲",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "armor",
-    "typeName": "护甲",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "获得500%荆棘，但失去20%最大生命值。",
-    "image": "/images/weapons/2006.png"
-  },
-  {
-    "id": 2007,
-    "name": "陨落之王冠冕",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "helmet",
-    "typeName": "头盔",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "击杀后+30%攻击速度，持续3秒。",
-    "image": "/images/weapons/2007.png"
-  },
-  {
-    "id": 2008,
-    "name": "涌动思绪吊坠",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "necklace",
-    "typeName": "项链",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "每消耗100点法力，+20%暴击率，持续4秒。",
-    "image": "/images/weapons/2008.png"
-  },
-  {
-    "id": 2009,
-    "name": "铁头盔",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "helmet",
-    "typeName": "头盔",
-    "level": 15,
-    "attack": 0,
-    "defense": 45,
-    "description": "基础的防御装备",
-    "image": "/images/weapons/2009.png"
-  },
-  {
-    "id": 2010,
-    "name": "疾风之靴",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "boots",
-    "typeName": "靴子",
-    "level": 48,
-    "attack": 30,
-    "defense": 95,
-    "description": "穿上后移动速度大幅提升",
-    "image": "/images/weapons/2010.png"
-  },
-  {
-    "id": 2011,
-    "name": "诅咒项链",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "necklace",
-    "typeName": "项链",
-    "level": 70,
-    "attack": 150,
-    "defense": 50,
-    "description": "黑暗魔法铸造，攻击附带诅咒效果",
-    "image": "/images/weapons/2011.png"
-  },
-  {
-    "id": 2012,
-    "name": "贝壳尖刺肩铠",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "shoulder",
-    "typeName": "护肩",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "你10%的护甲也贡献给荆棘。",
-    "image": "/images/weapons/2012.png"
-  },
-  {
-    "id": 2013,
-    "name": "元素爆裂肩铠",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "shoulder",
-    "typeName": "护肩",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "使用[附魔]技能后，获得+50%火焰和闪电伤害，持续6秒。",
-    "image": "/images/weapons/2013.png"
-  },
-  {
-    "id": 2014,
-    "name": "钢铁护肩",
-    "quality": "rare",
-    "qualityName": "稀有",
-    "type": "shoulder",
-    "typeName": "护肩",
-    "level": 30,
-    "attack": 15,
-    "defense": 85,
-    "description": "坚固的钢铁护具",
-    "image": "/images/weapons/2014.png"
-  },
-  {
-    "name": "无底药水腰带",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "belt",
-    "typeName": "腰带",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "药水充能次数+4。",
-    "image": "/images/weapons/2015.png"
-  },
-  {
-    "id": 2016,
-    "name": "生命腰带",
-    "quality": "epic",
-    "qualityName": "史诗",
-    "type": "belt",
-    "typeName": "腰带",
-    "level": 40,
-    "attack": 30,
-    "defense": 75,
-    "description": "增加生命恢复速度",
-    "image": "/images/weapons/2016.png"
-  },
-  {
-    "id": 2017,
-    "name": "皮革腰带",
-    "quality": "common",
-    "qualityName": "普通",
-    "type": "belt",
-    "typeName": "腰带",
-    "level": 10,
-    "attack": 5,
-    "defense": 20,
-    "description": "简单的皮革腰带",
-    "image": "/images/weapons/2017.png"
-  },
-  {
-    "id": 2018,
-    "name": "怒火护手",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "gloves",
-    "typeName": "手套",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "烈焰打击有50%几率在每次使用后重置冷却时间。",
-    "image": "/images/weapons/2018.png"
-  },
-  {
-    "id": 2019,
-    "name": "无阻护手",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "gloves",
-    "typeName": "手套",
-    "level": 0,
-    "attack": 0,
-    "defense": 0,
-    "description": "每次技能命中获得1%护甲，持续5秒。（最多叠加100层）",
-    "image": "/images/weapons/2019.png"
-  },
-  {
-    "id": 2020,
-    "name": "新手手套",
-    "quality": "common",
-    "qualityName": "普通",
-    "type": "gloves",
-    "typeName": "手套",
-    "level": 5,
-    "attack": 8,
-    "defense": 12,
-    "description": "新手的入门手套",
-    "image": "/images/weapons/2020.png"
-  },
-  {
-    "id": 2021,
-    "name": "雷霆护腿",
-    "quality": "legendary",
-    "qualityName": "传说",
-    "type": "legs",
-    "typeName": "护腿",
-    "level": 60,
-    "attack": 70,
-    "defense": 150,
-    "description": "蕴含雷霆之力，移动时留下闪电轨迹，对路径上的敌人造成伤害"
-  }
-]
+{
+  "legendary_weapons": [
+    {
+      "id": "LegendaryAxe1",
+      "name": "北境巨人战斧",
+      "nameEn": "Northern Giant Battleaxe",
+      "slot": "weapon",
+      "quality": "legendary",
+      "desc": "每次[基础攻击]额外造成50%武器伤害的冰冷伤害，命中时有3%几率冻结目标。",
+      "descEn": "Each [Basic Attack] also deals 50% of Weapon Damage as Cold Damage, with a 3% chance to Freeze the target on hit."
+    },
+    {
+      "id": "LegendaryMace1",
+      "name": "地狱风暴之锤",
+      "nameEn": "Hellstorm Hammer",
+      "slot": "weapon",
+      "quality": "legendary",
+      "desc": "每使用10次[普攻]技能，召唤一道闪电打击随机敌人，造成相当于1000%武器伤害的闪电伤害。",
+      "descEn": "Every 10 [Basic Attack] Abilities used, summons a Lightning Strike that deals 1000% Weapon Damage as Lightning Damage to a random enemy."
+    },
+    {
+      "id": "LegendarySword1",
+      "name": "痛苦锯齿巨剑",
+      "nameEn": "Serrated Greatsword of Anguish",
+      "slot": "weapon",
+      "quality": "legendary",
+      "desc": "对易伤目标额外增加30%暴击率。",
+      "descEn": "Additional 30% Critical Chance against Vulnerable targets."
+    }
+  ],
+  "legendary_armor": [
+    {
+      "id": "LegendaryChestArmor1",
+      "name": "怒意壁垒",
+      "nameEn": "Bulwark of Rage",
+      "slot": "chest",
+      "quality": "legendary",
+      "desc": "如果怒气护盾在到期前未被击破，到期时对周围敌人造成相当于你最大生命值100%的物理伤害。",
+      "descEn": "If Rage Shield is not broken before expiration, deal 100% of your Max Health as Physical Damage to surrounding enemies upon expiration."
+    },
+    {
+      "id": "LegendaryChestArmor2",
+      "name": "荆棘之心胸甲",
+      "nameEn": "Thornheart Chestplate",
+      "slot": "chest",
+      "quality": "legendary",
+      "desc": "获得500%荆棘，但失去20%最大生命值。",
+      "descEn": "Gain 500% Thorn, but lose 20% Max Health."
+    },
+    {
+      "id": "LegendaryHelm1",
+      "name": "陨落之王冠冕",
+      "nameEn": "Crown of the Fallen King",
+      "slot": "helm",
+      "quality": "legendary",
+      "desc": "击杀后+30%攻击速度，持续3秒。",
+      "descEn": "+30% Attack Speed for 3 seconds after a kill."
+    },
+    {
+      "id": "LegendaryNeck1",
+      "name": "涌动思绪吊坠",
+      "nameEn": "Surge of Thought Pendant",
+      "slot": "necklace",
+      "quality": "legendary",
+      "desc": "每消耗100点法力，+20%暴击率，持续4秒。",
+      "descEn": "Every 100 Mana spent, +20% Critical Hit Chance for 4 seconds."
+    },
+    {
+      "id": "LegendaryGloves1",
+      "name": "怒火护手",
+      "nameEn": "Gauntlets of Fury",
+      "slot": "gloves",
+      "quality": "legendary",
+      "desc": "烈焰打击有30%几率不消耗法力。",
+      "descEn": "Flame Strike has a 30% chance to cost no Mana."
+    },
+    {
+      "id": "LegendaryGloves2",
+      "name": "无阻护手",
+      "nameEn": "Unstoppable Gauntlets",
+      "slot": "gloves",
+      "quality": "legendary",
+      "desc": "每次技能命中获得1%护甲，持续5秒。（最多叠加100层）",
+      "descEn": "Each Ability hit grants 1% Armor for 5 seconds. (Max 100 stacks)"
+    },
+    {
+      "id": "LegendaryBelt1",
+      "name": "无底药水腰带",
+      "nameEn": "Bottomless Potion Belt",
+      "slot": "belt",
+      "quality": "legendary",
+      "desc": "药水充能次数+4。",
+      "descEn": "Increase Potion Charges by 4."
+    },
+    {
+      "id": "LegendaryPants1",
+      "name": "雷霆护腿",
+      "nameEn": "Thunderstrike Leggings",
+      "slot": "legs",
+      "quality": "legendary",
+      "desc": "[附魔]技能暴击伤害+150%。",
+      "descEn": "+150% Critical Hit Damage from [Enchanted] Abilities."
+    },
+    {
+      "id": "LegendaryPants2",
+      "name": "坚毅护腿",
+      "nameEn": "Resilient Leggings",
+      "slot": "legs",
+      "quality": "legendary",
+      "desc": "使用生命药水后获得30%伤害减免，持续5秒。",
+      "descEn": "Gain 30% Damage Reduction for 5 seconds after consuming Health Potion."
+    },
+    {
+      "id": "LegendaryBoots1",
+      "name": "疾风之靴",
+      "nameEn": "Windstride Boots",
+      "slot": "boots",
+      "quality": "legendary",
+      "desc": "击杀后+50%移动速度，持续4秒。",
+      "descEn": "+50% Movement Speed for 4 seconds after a kill."
+    },
+    {
+      "id": "LegendaryShoulder1",
+      "name": "贝壳尖刺肩铠",
+      "nameEn": "Shellspike Pauldrons",
+      "slot": "shoulder",
+      "quality": "legendary",
+      "desc": "你10%的护甲也贡献给荆棘。",
+      "descEn": "10% of your Armor also contributes to Thorns."
+    },
+    {
+      "id": "LegendaryShoulder2",
+      "name": "元素爆裂肩铠",
+      "nameEn": "Elemental Burst Pauldrons",
+      "slot": "shoulder",
+      "quality": "legendary",
+      "desc": "使用[附魔]技能后，获得+50%火焰和闪电伤害，持续6秒。",
+      "descEn": "After using an [Enchanted] Ability, gain +50% Fire and Lightning Damage for 6 seconds."
+    },
+    {
+      "id": "LegendaryRing1",
+      "name": "龙血牙印戒",
+      "nameEn": "Dragonfang Signet Ring",
+      "slot": "ring",
+      "quality": "legendary",
+      "desc": "半月斩将额外投掷两道月牙刃。",
+      "descEn": "Half Moon Strike will hurl two additional crescent blades."
+    },
+    {
+      "id": "LegendaryRing2",
+      "name": "启示之戒",
+      "nameEn": "Ring of Revelation",
+      "slot": "ring",
+      "quality": "legendary",
+      "desc": "站立不动时，每秒获得+10%基础攻击伤害，最多叠加20层。",
+      "descEn": "While standing still, gain +10% Basic Attack Damage every second, stacking up to 20 times."
+    }
+  ],
+  "consumables": [
+    { "id": "HpPotion1", "name": "初级生命药水", "nameEn": "Minor Health Potion", "type": "potion", "desc": "立即恢复25点生命，随后3秒内恢复30%最大生命值。" },
+    { "id": "HpPotion2", "name": "中级生命药水", "nameEn": "Greater Health Potion", "type": "potion", "desc": "立即恢复50点生命，随后3秒内恢复30%最大生命值。" },
+    { "id": "HpPotion3", "name": "高级生命药水", "nameEn": "Superior Health Potion", "type": "potion", "desc": "立即恢复100点生命，随后3秒内恢复35%最大生命值。" },
+    { "id": "HpPotion4", "name": "超级生命药水", "nameEn": "Supreme Health Potion", "type": "potion", "desc": "立即恢复300点生命，随后3秒内恢复35%最大生命值。" },
+    { "id": "MovementPotion1", "name": "迅捷药水", "nameEn": "Swiftness Potion", "type": "potion", "desc": "移动速度+15%，持续1小时。" },
+    { "id": "ExpPotion1", "name": "智慧药水", "nameEn": "Wisdom Potion", "type": "potion", "desc": "获得经验+10%，持续1小时。" },
+    { "id": "GoldPotion1", "name": "幸运药水", "nameEn": "Fortune Potion", "type": "potion", "desc": "获得金币+10%，持续1小时。" },
+    { "id": "CritPotion1", "name": "精准药水", "nameEn": "Precision Potion", "type": "potion", "desc": "暴击率+5%，持续1小时。" },
+    { "id": "DodgePotion1", "name": "闪避药水", "nameEn": "Evasion Potion", "type": "potion", "desc": "闪避几率+5%，持续1小时。" }
+  ],
+  "exp_books": [
+    { "id": "ExpBook1", "name": "知识之书 I", "tier": 1, "desc": "微量经验值" },
+    { "id": "ExpBook2", "name": "知识之书 II", "tier": 2, "desc": "少量经验值" },
+    { "id": "ExpBook3", "name": "知识之书 III", "tier": 3, "desc": "中量经验值" },
+    { "id": "ExpBook4", "name": "知识之书 IV", "tier": 4, "desc": "可观经验值" },
+    { "id": "ExpBook5", "name": "知识之书 V", "tier": 5, "desc": "大量经验值" },
+    { "id": "ExpBook6", "name": "知识之书 VI", "tier": 6, "desc": "海量经验值" },
+    { "id": "ExpBook7", "name": "知识之书 VII", "tier": 7, "desc": "巨量经验值" },
+    { "id": "ExpBook8", "name": "知识之书 VIII", "tier": 8, "desc": "极大量经验值" },
+    { "id": "ExpBook9", "name": "知识之书 IX", "tier": 9, "desc": "庞大经验值" },
+    { "id": "ExpBook10", "name": "知识之书 X", "tier": 10, "desc": "天文数字经验值" }
+  ],
+  "chests": [
+    { "id": "TreasureChest1", "name": "镀金宝箱", "nameEn": "Gilded Chest", "desc": "开启后获得若干物品，有几率获得传说品质装备。" },
+    { "id": "TreasureChest2", "name": "璀璨镀金宝箱", "nameEn": "Splendid Gilded Chest", "desc": "开启后获得大量物品，有几率获得传说或神圣品质装备。" }
+  ],
+  "materials": [
+    { "id": "Material1", "name": "诅咒精华碎片", "nameEn": "Cursed Essence Fragment", "desc": "从黑暗生物身上采集的诅咒精华碎片，用于装备强化。" },
+    { "id": "Skull", "name": "骷髅钥匙", "nameEn": "Skull Key", "desc": "进入Boss关卡的必需材料。" }
+  ],
+  "random_boxes": [
+    { "slot": "weapon", "name": "随机武器盒" },
+    { "slot": "helm", "name": "随机头盔盒" },
+    { "slot": "chest", "name": "随机护甲盒" },
+    { "slot": "shoulder", "name": "随机护肩盒" },
+    { "slot": "necklace", "name": "随机项链盒" },
+    { "slot": "gloves", "name": "随机手套盒" },
+    { "slot": "belt", "name": "随���腰带盒" },
+    { "slot": "legs", "name": "随机护腿盒" },
+    { "slot": "boots", "name": "随机靴子盒" },
+    { "slot": "ring", "name": "随机戒指盒" }
+  ],
+  "companion_reins": [
+    { "id": "Rein_wolf", "name": "狼之缰绳", "companion": "狼", "companionEn": "Wolf" },
+    { "id": "Rein_Werewolf", "name": "狼人缰绳", "companion": "血月狼人", "companionEn": "Bloodmoon Werewolf" },
+    { "id": "Rein_ZombieWolf", "name": "变异之狼缰绳", "companion": "变异之狼", "companionEn": "Mutating Wolf" },
+    { "id": "Rein_BlackHorse", "name": "黑马缰绳", "companion": "黑马", "companionEn": "Dark Horse" },
+    { "id": "Rein_BrownPony", "name": "栗色小马缰绳", "companion": "栗色小马", "companionEn": "Chestnut Pony" },
+    { "id": "Rein_BlueMammoth", "name": "蓝色猛犸缰绳", "companion": "蓝色猛犸象", "companionEn": "Blue Mammoth" },
+    { "id": "Rein_Boar", "name": "野猪缰绳", "companion": "野猪", "companionEn": "Boar" },
+    { "id": "Rein_Spider", "name": "黑蜘蛛缰绳", "companion": "黑蜘蛛", "companionEn": "Black Spider" },
+    { "id": "Rein_PoisonSpider", "name": "毒液蜘蛛缰绳", "companion": "毒液蜘蛛", "companionEn": "Venomous Spider" },
+    { "id": "Rein_BigTreant", "name": "远古树人缰绳", "companion": "远古橡树树人", "companionEn": "Ancient Oak Treant" },
+    { "id": "Rein_Stumplin", "name": "树桩怪缰绳", "companion": "树桩怪", "companionEn": "Stumplin" },
+    { "id": "Rein_Ogre", "name": "食人魔缰绳", "companion": "食人魔", "companionEn": "Ogre" },
+    { "id": "Rein_GoblinWarrior", "name": "哥布林战士缰绳", "companion": "哥布林战士", "companionEn": "Goblin Warrior" },
+    { "id": "Rein_OrcWarrior", "name": "兽人战士缰绳", "companion": "兽人战士", "companionEn": "Orc Warrior" },
+    { "id": "Rein_SkeletonArcher", "name": "骷髅弓箭手缰绳", "companion": "骷髅弓箭手", "companionEn": "Skeleton Archer" },
+    { "id": "Rein_SkeletonWarrior", "name": "骷髅战士缰绳", "companion": "骷髅战士", "companionEn": "Skeleton Warrior" },
+    { "id": "Rein_DarkElfMage", "name": "黑暗精灵法师缰绳", "companion": "黑暗精灵法师", "companionEn": "Dark Elf Mage" },
+    { "id": "Rein_Dragon", "name": "龙之缰绳", "companion": "幼年黑龙", "companionEn": "Young Black Dragon" }
+  ]
+}

@@ -1,4 +1,4 @@
-import{_ as d,o,c as l,j as n,a as p,F as q,B as _,n as f,t as r,e as m,p as v}from"./chunks/framework.BuIsu9Ay.js";const w={class:"faq-list"},k=["onClick"],h={class:"faq-icon"},g={key:0,class:"faq-answer"},C=JSON.parse('{"title":"常见问题 FAQ","description":"","frontmatter":{},"headers":[],"relativePath":"faq.md","filePath":"faq.md"}'),B={name:"faq.md"},F=Object.assign(B,{setup(b){const s=v(null),c=[{question:"如何获得传说品质的装备？",answer:`传说装备主要通过以下途径获得：
+import{_ as d,o,c as l,j as n,a as p,F as q,B as _,n as f,t as r,e as m,p as v}from"./chunks/framework.DKMlhBXO.js";const w={class:"faq-list"},k=["onClick"],h={class:"faq-icon"},g={key:0,class:"faq-answer"},C=JSON.parse('{"title":"常见问题 FAQ","description":"","frontmatter":{},"headers":[],"relativePath":"faq.md","filePath":"faq.md"}'),B={name:"faq.md"},F=Object.assign(B,{setup(b){const s=v(null),c=[{question:"如何获得传说品质的装备？",answer:`传说装备主要通过以下途径获得：
 1. 击杀地狱难度副本的Boss
 2. 参与限时活动
 3. 使用传说碎片在铁匠铺合成
