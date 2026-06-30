@@ -5,69 +5,226 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>伤害计算器</title>
   <style>
+    * { box-sizing: border-box; }
     body { margin: 0; padding: 1rem; background: #0d0d14; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #ccc; }
-    .calculator-wrapper { max-width: 1000px; margin: 0 auto; }
-    .tip-box { background: #1a1a2e; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; }
-    .tip-box strong { color: #ff9800; display: block; margin-bottom: 0.5rem; }
-    .calculator-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .input-section, .result-section { background: #1a1a2e; border-radius: 8px; padding: 1.5rem; }
-    h2 { color: #fff; margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem; }
-    .input-group { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
-    .input-group label { width: 160px; color: #ccc; font-weight: bold; }
-    .input-group input { background: #2d2d44; color: white; border: 1px solid #444; border-radius: 4px; padding: 0.5rem; width: 120px; text-align: right; }
+    .calculator-wrapper { max-width: 1100px; margin: 0 auto; }
+    .tip-box { background: #1a1a2e; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.6; }
+    .tip-box strong { color: #ff9800; display: block; margin-bottom: 0.4rem; }
+    .tip-box code { background: rgba(156,39,176,0.2); color: #ce93d8; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.85rem; }
+
+    .tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .tab-btn { background: #1a1a2e; color: #aaa; border: 1px solid #333; border-radius: 6px; padding: 0.5rem 1rem; cursor: pointer; font-size: 0.9rem; }
+    .tab-btn.active { background: #9c27b0; color: #fff; border-color: #9c27b0; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .calculator-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .input-section, .result-section { background: #1a1a2e; border-radius: 8px; padding: 1.25rem; }
+    h2 { color: #fff; margin: 0 0 1rem; font-size: 1.1rem; }
+    h3 { color: #9c27b0; margin: 1rem 0 0.6rem; font-size: 0.95rem; }
+    h3:first-child { margin-top: 0; }
+
+    .input-group { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem; }
+    .input-group label { flex: 1; color: #bbb; font-size: 0.88rem; }
+    .input-group input, .input-group select {
+      background: #2d2d44; color: white; border: 1px solid #444; border-radius: 4px;
+      padding: 0.4rem 0.5rem; width: 110px; text-align: right; font-size: 0.88rem;
+    }
     .input-group input:focus { border-color: #9c27b0; outline: none; }
-    .input-group .unit { color: #888; width: 50px; }
-    .reset-btn { background: #4a4a6a; color: white; border: none; padding: 0.5rem 1.5rem; border-radius: 4px; cursor: pointer; margin-top: 0.5rem; }
+    .input-group .unit { color: #666; width: 36px; font-size: 0.82rem; flex-shrink: 0; }
+
+    .reset-btn { background: #4a4a6a; color: white; border: none; padding: 0.45rem 1.2rem; border-radius: 4px; cursor: pointer; margin-top: 0.5rem; font-size: 0.88rem; }
     .reset-btn:hover { background: #5a5a8a; }
-    .result-card { background: #12121f; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
-    .result-item { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px solid #333; }
+
+    .result-card { background: #12121f; border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 1rem; }
+    .result-item { display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 0; border-bottom: 1px solid #2a2a3a; }
     .result-item:last-child { border-bottom: none; }
-    .result-item.highlight { background: rgba(255, 152, 0, 0.1); margin: 0 -1rem; padding: 0.8rem 1rem; border-radius: 4px; border-bottom: none; }
-    .result-label { color: #888; font-size: 0.9rem; }
-    .result-value { font-size: 1.2rem; font-weight: bold; color: #ccc; }
-    .result-value.dps { color: #ff9800; font-size: 1.5rem; }
-    .formula-box { background: #12121f; border-radius: 8px; padding: 1rem; }
-    .formula-box h3 { color: #9c27b0; margin-top: 0; font-size: 1rem; margin-bottom: 0.8rem; }
-    .formula-steps p { color: #888; font-size: 0.85rem; margin: 0.3rem 0; }
-    .formula-steps .final { color: #ff9800; margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed #333; }
-    @media (max-width: 768px) { .calculator-layout { grid-template-columns: 1fr; } .input-group label { width: 120px; } }
+    .result-item.highlight { background: rgba(255,152,0,0.08); margin: 0 -1rem; padding: 0.65rem 1rem; border-radius: 4px; border-bottom: none; }
+    .result-label { color: #888; font-size: 0.85rem; }
+    .result-value { font-size: 1.05rem; font-weight: bold; color: #ccc; }
+    .result-value.primary { color: #ff9800; font-size: 1.35rem; }
+
+    .formula-box { background: #12121f; border-radius: 8px; padding: 0.9rem 1rem; }
+    .formula-box h3 { color: #9c27b0; margin: 0 0 0.6rem; font-size: 0.95rem; }
+    .formula-steps p { color: #888; font-size: 0.82rem; margin: 0.25rem 0; line-height: 1.5; }
+    .formula-steps .final { color: #ff9800; margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px dashed #333; }
+
+    .divider { border: none; border-top: 1px solid #2a2a3a; margin: 0.8rem 0; }
+
+    @media (max-width: 768px) {
+      .calculator-layout { grid-template-columns: 1fr; }
+      .input-group label { font-size: 0.82rem; }
+    }
   </style>
 </head>
 <body>
   <div class="calculator-wrapper">
     <div class="tip-box">
-      <strong>公式说明</strong>
-      <p>攻击强度 = (武器DPS + 固定伤害) ÷ 攻速 × (1 + 力量%) × (1 + 物理伤害%) × (1 + 普通攻击伤害%)</p>
+      <strong>公式来源（Deskrawl Demo 游戏代码提取）</strong>
+      <p>属性通用框架：<code>最终值 = (基础 + 固定加成) × (1 + 百分比加成) × 百分比乘算</code></p>
+      <p>普攻伤害、攻击速度、暴击、技能伤害、护甲/魔抗减免均按此框架计算，下方各标签页对应不同场景。</p>
     </div>
-    
-    <div class="calculator-layout">
-      <div class="input-section">
-        <h2>输入数值</h2>
-        <div class="input-group"><label>武器 DPS</label><input type="number" id="weaponDps" value="100" min="0" step="1" oninput="calculate()"><span class="unit">伤害/秒</span></div>
-        <div class="input-group"><label>攻击速度</label><input type="number" id="attackSpeed" value="1.0" min="0.1" step="0.01" oninput="calculate()"><span class="unit">次/秒</span></div>
-        <div class="input-group"><label>固定伤害</label><input type="number" id="fixedDamage" value="0" min="0" step="1" oninput="calculate()"><span class="unit">点</span></div>
-        <div class="input-group"><label>力量百分比</label><input type="number" id="strengthPercent" value="0" min="0" step="1" oninput="calculate()"><span class="unit">%</span></div>
-        <div class="input-group"><label>物理伤害百分比</label><input type="number" id="physicalPercent" value="0" min="0" step="1" oninput="calculate()"><span class="unit">%</span></div>
-        <div class="input-group"><label>普通攻击伤害百分比</label><input type="number" id="normalAttackPercent" value="0" min="0" step="1" oninput="calculate()"><span class="unit">%</span></div>
-        <button class="reset-btn" onclick="resetAll()">重置</button>
-      </div>
-      
-      <div class="result-section">
-        <h2>计算结果</h2>
-        <div class="result-card">
-          <div class="result-item"><span class="result-label">每次攻击伤害</span><span class="result-value" id="damagePerHit">100.00</span></div>
-          <div class="result-item"><span class="result-label">攻击速度</span><span class="result-value" id="displaySpeed">1.00 次/秒</span></div>
-          <div class="result-item highlight"><span class="result-label">每秒伤害 (DPS)</span><span class="result-value dps" id="dps">100.00</span></div>
-          <div class="result-item"><span class="result-label">攻击强度</span><span class="result-value" id="attackPower">100.00</span></div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="attack">普攻伤害</button>
+      <button class="tab-btn" data-tab="skill">技能伤害</button>
+      <button class="tab-btn" data-tab="defense">防御减免</button>
+      <button class="tab-btn" data-tab="toughness">坚韧估算</button>
+    </div>
+
+    <!-- ===== 普攻伤害 ===== -->
+    <div class="tab-panel active" id="panel-attack">
+      <div class="calculator-layout">
+        <div class="input-section">
+          <h2>固定伤害（Flat 层）</h2>
+          <div class="input-group"><label>武器伤害</label><input type="number" id="weaponDamage" value="100" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>伤害（固定加成）</label><input type="number" id="flatDamage" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>基础攻击伤害</label><input type="number" id="baseAttackDamage" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>重击伤害</label><input type="number" id="heavyDamage" value="0" min="0" step="1"><span class="unit">点</span></div>
+
+          <hr class="divider">
+          <h3>主属性伤害加成</h3>
+          <div class="input-group">
+            <label>主属性</label>
+            <select id="primaryStat">
+              <option value="strength">力量</option>
+              <option value="agility">敏捷</option>
+              <option value="intelligence">智力</option>
+            </select>
+            <span class="unit"></span>
+          </div>
+          <div class="input-group"><label>属性点数</label><input type="number" id="statPoints" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>每点伤害%</label><input type="number" id="statPerPoint" value="0" min="0" step="0.1"><span class="unit">%</span></div>
+
+          <hr class="divider">
+          <h3>百分比加成（PercentAdd 层）</h3>
+          <div class="input-group"><label>装备/天赋等百分比</label><input type="number" id="percentAdd" value="0" min="-100" step="1"><span class="unit">%</span></div>
+
+          <hr class="divider">
+          <h3>百分比乘算（PercentMult 层）</h3>
+          <div class="input-group"><label>乘算倍率</label><input type="number" id="percentMult" value="1" min="0" step="0.01"><span class="unit">倍</span></div>
+
+          <hr class="divider">
+          <h3>攻击速度</h3>
+          <div class="input-group"><label>武器基础攻速</label><input type="number" id="baseAttackSpeed" value="1.0" min="0.01" step="0.01"><span class="unit">次/秒</span></div>
+          <div class="input-group"><label>攻速加成</label><input type="number" id="attackSpeedBonus" value="0" min="-99" step="1"><span class="unit">%</span></div>
+
+          <hr class="divider">
+          <h3>暴击</h3>
+          <div class="input-group"><label>暴击率</label><input type="number" id="critChance" value="0" min="0" max="100" step="0.1"><span class="unit">%</span></div>
+          <div class="input-group"><label>暴击伤害</label><input type="number" id="critDamage" value="150" min="100" step="1"><span class="unit">%</span></div>
+
+          <button class="reset-btn" onclick="resetAttack()">重置</button>
         </div>
-        <div class="formula-box">
-          <h3>计算过程</h3>
-          <div class="formula-steps" id="formulaSteps">
-            <p>基础伤害 = (100 + 0) ÷ 1.0 = 100.00</p>
-            <p>力量加成 = 1 + 0% = 1.00</p>
-            <p>物理加成 = 1 + 0% = 1.00</p>
-            <p>普攻加成 = 1 + 0% = 1.00</p>
-            <p class="final">最终伤害 = 100.00 × 1.00 × 1.00 × 1.00 = <strong>100.00</strong></p>
+
+        <div class="result-section">
+          <h2>计算结果</h2>
+          <div class="result-card" id="attackResults"></div>
+          <div class="formula-box">
+            <h3>计算过程</h3>
+            <div class="formula-steps" id="attackSteps"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 技能伤害 ===== -->
+    <div class="tab-panel" id="panel-skill">
+      <div class="calculator-layout">
+        <div class="input-section">
+          <h2>技能参数</h2>
+          <div class="input-group"><label>技能基础伤害</label><input type="number" id="skillBaseDamage" value="50" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>攻击力倍率</label><input type="number" id="skillAtkScale" value="1.0" min="0" step="0.01"><span class="unit">倍</span></div>
+          <div class="input-group"><label>施放者攻击力</label><input type="number" id="skillAttackPower" value="100" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>技能等级</label><input type="number" id="skillLevel" value="1" min="1" step="1"><span class="unit">级</span></div>
+          <div class="input-group"><label>每级基础增量</label><input type="number" id="skillPerLevel" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>每级倍率增量</label><input type="number" id="scalePerLevel" value="0" min="0" step="0.01"><span class="unit">倍</span></div>
+
+          <hr class="divider">
+          <h3>持续伤害（DOT）</h3>
+          <div class="input-group"><label>基础每跳伤害</label><input type="number" id="dotBase" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>有效伤害比例</label><input type="number" id="dotScale" value="0" min="0" step="0.01"><span class="unit">倍</span></div>
+
+          <hr class="divider">
+          <h3>属性缩放伤害（随机）</h3>
+          <div class="input-group"><label>属性值</label><input type="number" id="statValue" value="100" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>最低倍率（10=1000%）</label><input type="number" id="statScaleMin" value="10" min="0" step="0.1"><span class="unit"></span></div>
+          <div class="input-group"><label>最高倍率（12=1200%）</label><input type="number" id="statScaleMax" value="12" min="0" step="0.1"><span class="unit"></span></div>
+
+          <button class="reset-btn" onclick="resetSkill()">重置</button>
+          <button class="reset-btn" onclick="importAttackPower()" style="margin-left:0.5rem">导入普攻攻击力</button>
+        </div>
+
+        <div class="result-section">
+          <h2>计算结果</h2>
+          <div class="result-card" id="skillResults"></div>
+          <div class="formula-box">
+            <h3>计算过程</h3>
+            <div class="formula-steps" id="skillSteps"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 防御减免 ===== -->
+    <div class="tab-panel" id="panel-defense">
+      <div class="calculator-layout">
+        <div class="input-section">
+          <h2>护甲（物理减免）</h2>
+          <div class="input-group"><label>基础护甲</label><input type="number" id="baseArmor" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>固定护甲加成</label><input type="number" id="flatArmor" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>力量点数</label><input type="number" id="armorStr" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>每点力量护甲</label><input type="number" id="armorPerStr" value="0" min="0" step="0.1"><span class="unit">点</span></div>
+          <div class="input-group"><label>护甲百分比</label><input type="number" id="armorPercent" value="0" min="-99" step="1"><span class="unit">%</span></div>
+          <div class="input-group"><label>护甲乘算倍率</label><input type="number" id="armorMult" value="1" min="0" step="0.01"><span class="unit">倍</span></div>
+
+          <hr class="divider">
+          <h2>魔抗（魔法减免）</h2>
+          <div class="input-group"><label>基础魔抗</label><input type="number" id="baseMR" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>固定魔抗加成</label><input type="number" id="flatMR" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>智力点数</label><input type="number" id="mrInt" value="0" min="0" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>每点智力魔抗</label><input type="number" id="mrPerInt" value="0" min="0" step="0.1"><span class="unit">点</span></div>
+          <div class="input-group"><label>魔抗百分比</label><input type="number" id="mrPercent" value="0" min="-99" step="1"><span class="unit">%</span></div>
+          <div class="input-group"><label>魔抗乘算倍率</label><input type="number" id="mrMult" value="1" min="0" step="0.01"><span class="unit">倍</span></div>
+
+          <hr class="divider">
+          <h2>敌人 & 伤害</h2>
+          <div class="input-group"><label>敌人等级</label><input type="number" id="enemyLevel" value="1" min="1" step="1"><span class="unit">级</span></div>
+          <div class="input-group"><label>减免常数 K</label><input type="number" id="mitigK" value="100" min="1" step="1"><span class="unit"></span></div>
+          <div class="input-group"><label>受到原始伤害</label><input type="number" id="incomingDamage" value="1000" min="0" step="1"><span class="unit">点</span></div>
+
+          <button class="reset-btn" onclick="resetDefense()">重置</button>
+        </div>
+
+        <div class="result-section">
+          <h2>计算结果</h2>
+          <div class="result-card" id="defenseResults"></div>
+          <div class="formula-box">
+            <h3>计算过程</h3>
+            <div class="formula-steps" id="defenseSteps"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 坚韧估算 ===== -->
+    <div class="tab-panel" id="panel-toughness">
+      <div class="calculator-layout">
+        <div class="input-section">
+          <h2>生存能力</h2>
+          <div class="input-group"><label>最大生命值</label><input type="number" id="maxHP" value="1000" min="1" step="1"><span class="unit">点</span></div>
+          <div class="input-group"><label>生命百分比加成</label><input type="number" id="hpPercent" value="0" min="-99" step="1"><span class="unit">%</span></div>
+          <div class="input-group"><label>闪避率</label><input type="number" id="dodgeRate" value="0" min="0" max="99" step="0.1"><span class="unit">%</span></div>
+          <p style="color:#666;font-size:0.82rem;margin:0.5rem 0 0">护甲/魔抗减免请在「防御减免」标签填写，会自动引用。</p>
+          <button class="reset-btn" onclick="resetToughness()">重置</button>
+        </div>
+
+        <div class="result-section">
+          <h2>计算结果</h2>
+          <div class="result-card" id="toughnessResults"></div>
+          <div class="formula-box">
+            <h3>计算过程</h3>
+            <div class="formula-steps" id="toughnessSteps"></div>
           </div>
         </div>
       </div>
@@ -75,39 +232,264 @@
   </div>
 
   <script>
-    function calculate() {
-      const weaponDps = parseFloat(document.getElementById('weaponDps').value) || 0
-      const attackSpeed = parseFloat(document.getElementById('attackSpeed').value) || 0
-      const fixedDamage = parseFloat(document.getElementById('fixedDamage').value) || 0
-      const strengthPercent = parseFloat(document.getElementById('strengthPercent').value) || 0
-      const physicalPercent = parseFloat(document.getElementById('physicalPercent').value) || 0
-      const normalAttackPercent = parseFloat(document.getElementById('normalAttackPercent').value) || 0
-      
-      const base = (weaponDps + fixedDamage) / attackSpeed
-      const strengthMultiplier = 1 + (strengthPercent / 100)
-      const physicalMultiplier = 1 + (physicalPercent / 100)
-      const normalAttackMultiplier = 1 + (normalAttackPercent / 100)
-      
-      const attackPower = (base * strengthMultiplier * physicalMultiplier * normalAttackMultiplier).toFixed(2)
-      const dps = (attackPower * attackSpeed).toFixed(2)
-      
-      document.getElementById('damagePerHit').textContent = attackPower
-      document.getElementById('displaySpeed').textContent = attackSpeed.toFixed(2) + ' 次/秒'
-      document.getElementById('dps').textContent = dps
-      document.getElementById('attackPower').textContent = attackPower
-      
-      document.getElementById('formulaSteps').innerHTML = '<p>基础伤害 = (' + weaponDps + ' + ' + fixedDamage + ') ÷ ' + attackSpeed.toFixed(2) + ' = ' + base.toFixed(2) + '</p><p>力量加成 = 1 + ' + strengthPercent + '% = ' + strengthMultiplier.toFixed(2) + '</p><p>物理加成 = 1 + ' + physicalPercent + '% = ' + physicalMultiplier.toFixed(2) + '</p><p>普攻加成 = 1 + ' + normalAttackPercent + '% = ' + normalAttackMultiplier.toFixed(2) + '</p><p class="final">最终伤害 = ' + base.toFixed(2) + ' × ' + strengthMultiplier.toFixed(2) + ' × ' + physicalMultiplier.toFixed(2) + ' × ' + normalAttackMultiplier.toFixed(2) + ' = <strong>' + attackPower + '</strong></p>'
+    // ---- 工具函数 ----
+    function val(id) { return parseFloat(document.getElementById(id).value) || 0; }
+    function fmt(n, d = 2) { return Number(n).toFixed(d); }
+    function pct(n) { return (n * 100).toFixed(1) + '%'; }
+
+    function calcStat(base, flat, percentAdd, mult) {
+      return (base + flat) * (1 + percentAdd / 100) * mult;
     }
 
-    function resetAll() {
-      document.getElementById('weaponDps').value = 100
-      document.getElementById('attackSpeed').value = 1.0
-      document.getElementById('fixedDamage').value = 0
-      document.getElementById('strengthPercent').value = 0
-      document.getElementById('physicalPercent').value = 0
-      document.getElementById('normalAttackPercent').value = 0
-      calculate()
+    function calcMitigation(stat, enemyLevel, K) {
+      if (stat <= 0) return 0;
+      return stat / (stat + K * enemyLevel);
     }
+
+    // ---- Tab 切换 ----
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+        calculateAll();
+      });
+    });
+
+    // ---- 普攻伤害 ----
+    let lastAttackPower = 100;
+
+    function calcAttack() {
+      const weapon = val('weaponDamage');
+      const flat = val('flatDamage');
+      const baseAtk = val('baseAttackDamage');
+      const heavy = val('heavyDamage');
+      const statPts = val('statPoints');
+      const statPerPt = val('statPerPoint');
+      const statBonus = statPts * statPerPt;
+      const equipPct = val('percentAdd');
+      const totalPct = statBonus + equipPct;
+      const mult = val('percentMult') || 1;
+
+      const flatTotal = weapon + flat + baseAtk + heavy;
+      const damagePerHit = flatTotal * (1 + totalPct / 100) * mult;
+      lastAttackPower = damagePerHit;
+
+      const baseSpeed = val('baseAttackSpeed') || 1;
+      const speedBonus = val('attackSpeedBonus');
+      const finalSpeed = baseSpeed * (1 + speedBonus / 100);
+      const dps = damagePerHit * finalSpeed;
+
+      const critRate = Math.min(val('critChance'), 100) / 100;
+      const critDmg = val('critDamage') / 100;
+      const avgDamage = damagePerHit * (1 - critRate) + damagePerHit * critDmg * critRate;
+      const avgDps = avgDamage * finalSpeed;
+
+      const statName = { strength: '力量', agility: '敏捷', intelligence: '智力' }[document.getElementById('primaryStat').value];
+
+      document.getElementById('attackResults').innerHTML = `
+        <div class="result-item"><span class="result-label">固定伤害合计</span><span class="result-value">${fmt(flatTotal)}</span></div>
+        <div class="result-item"><span class="result-label">每次攻击伤害</span><span class="result-value">${fmt(damagePerHit)}</span></div>
+        <div class="result-item"><span class="result-label">最终攻击速度</span><span class="result-value">${fmt(finalSpeed)} 次/秒</span></div>
+        <div class="result-item highlight"><span class="result-label">每秒伤害 (DPS)</span><span class="result-value primary">${fmt(dps)}</span></div>
+        <div class="result-item"><span class="result-label">期望伤害（含暴击）</span><span class="result-value">${fmt(avgDamage)}</span></div>
+        <div class="result-item highlight"><span class="result-label">期望 DPS（含暴击）</span><span class="result-value primary">${fmt(avgDps)}</span></div>
+      `;
+
+      document.getElementById('attackSteps').innerHTML = `
+        <p>① 固定层 = 武器(${weapon}) + 伤害(${flat}) + 基础攻击(${baseAtk}) + 重击(${heavy}) = <strong>${fmt(flatTotal)}</strong></p>
+        <p>② ${statName}加成 = ${statPts} × ${statPerPt}% = ${fmt(statBonus, 1)}%</p>
+        <p>③ 百分比合计 = ${fmt(statBonus, 1)}% + ${equipPct}% = ${fmt(totalPct, 1)}%</p>
+        <p>④ 每次伤害 = ${fmt(flatTotal)} × (1 + ${fmt(totalPct, 1)}%) × ${mult} = <strong>${fmt(damagePerHit)}</strong></p>
+        <p>⑤ 攻速 = ${baseSpeed} × (1 + ${speedBonus}%) = ${fmt(finalSpeed)} 次/秒</p>
+        <p>⑥ DPS = ${fmt(damagePerHit)} × ${fmt(finalSpeed)} = <strong>${fmt(dps)}</strong></p>
+        <p>⑦ 期望伤害 = ${fmt(damagePerHit)} × [(1-${fmt(critRate*100,1)}%) + ${fmt(critRate*100,1)}%×${fmt(critDmg*100,0)}%] = <strong>${fmt(avgDamage)}</strong></p>
+        <p class="final">期望 DPS = <strong>${fmt(avgDps)}</strong></p>
+      `;
+    }
+
+    // ---- 技能伤害 ----
+    function calcSkill() {
+      const level = Math.max(1, val('skillLevel'));
+      const baseDmg = val('skillBaseDamage') + val('skillPerLevel') * (level - 1);
+      const atkScale = val('skillAtkScale') + val('scalePerLevel') * (level - 1);
+      const atkPower = val('skillAttackPower');
+      const skillDmg = baseDmg + atkScale * atkPower;
+
+      const dotBase = val('dotBase');
+      const dotScale = val('dotScale');
+      const dotPerTick = dotBase + dotScale * atkPower;
+
+      const statVal = val('statValue');
+      const scaleMin = val('statScaleMin');
+      const scaleMax = val('statScaleMax');
+      const statDmgMin = statVal * scaleMin;
+      const statDmgMax = statVal * scaleMax;
+      const statDmgAvg = (statDmgMin + statDmgMax) / 2;
+
+      document.getElementById('skillResults').innerHTML = `
+        <div class="result-item highlight"><span class="result-label">技能伤害 (${level}级)</span><span class="result-value primary">${fmt(skillDmg)}</span></div>
+        <div class="result-item"><span class="result-label">解析基础伤害</span><span class="result-value">${fmt(baseDmg)}</span></div>
+        <div class="result-item"><span class="result-label">解析攻击力倍率</span><span class="result-value">${fmt(atkScale)} 倍</span></div>
+        <div class="result-item"><span class="result-label">DOT 每跳伤害</span><span class="result-value">${fmt(dotPerTick)}</span></div>
+        <div class="result-item"><span class="result-label">属性缩放（最低~最高）</span><span class="result-value">${fmt(statDmgMin)} ~ ${fmt(statDmgMax)}</span></div>
+        <div class="result-item"><span class="result-label">属性缩放（期望）</span><span class="result-value">${fmt(statDmgAvg)}</span></div>
+      `;
+
+      document.getElementById('skillSteps').innerHTML = `
+        <p>LeveledFloat：解析值 = 基础 + 每级增量 × (${level} - 1)</p>
+        <p>① 解析基础 = ${val('skillBaseDamage')} + ${val('skillPerLevel')} × ${level - 1} = <strong>${fmt(baseDmg)}</strong></p>
+        <p>② 解析倍率 = ${val('skillAtkScale')} + ${val('scalePerLevel')} × ${level - 1} = <strong>${fmt(atkScale)}</strong></p>
+        <p>③ 技能伤害 = ${fmt(baseDmg)} + ${fmt(atkScale)} × ${atkPower} = <strong>${fmt(skillDmg)}</strong></p>
+        <p>④ DOT每跳 = ${dotBase} + ${dotScale} × ${atkPower} = <strong>${fmt(dotPerTick)}</strong></p>
+        <p class="final">属性缩放 = 属性(${statVal}) × [${fmt(scaleMin,1)}~${fmt(scaleMax,1)}]倍 = <strong>${fmt(statDmgMin)} ~ ${fmt(statDmgMax)}</strong>（期望 ${fmt(statDmgAvg)}）</p>
+      `;
+    }
+
+    function importAttackPower() {
+      document.getElementById('skillAttackPower').value = fmt(lastAttackPower, 0);
+      calcSkill();
+    }
+
+    // ---- 防御减免 ----
+    function calcDefense() {
+      const baseArmor = val('baseArmor');
+      const flatArmor = val('flatArmor') + val('armorStr') * val('armorPerStr');
+      const armorPct = val('armorPercent');
+      const armorMult = val('armorMult') || 1;
+      const finalArmor = calcStat(baseArmor, flatArmor, armorPct, armorMult);
+
+      const baseMR = val('baseMR');
+      const flatMR = val('flatMR') + val('mrInt') * val('mrPerInt');
+      const mrPct = val('mrPercent');
+      const mrMult = val('mrMult') || 1;
+      const finalMR = calcStat(baseMR, flatMR, mrPct, mrMult);
+
+      const enemyLv = Math.max(1, val('enemyLevel'));
+      const K = Math.max(1, val('mitigK'));
+      const incoming = val('incomingDamage');
+
+      const physReduc = calcMitigation(finalArmor, enemyLv, K);
+      const magicReduc = calcMitigation(finalMR, enemyLv, K);
+      const physTaken = incoming * (1 - physReduc);
+      const magicTaken = incoming * (1 - magicReduc);
+
+      // 存给坚韧页
+      window._physReduc = physReduc;
+      window._magicReduc = magicReduc;
+
+      document.getElementById('defenseResults').innerHTML = `
+        <div class="result-item"><span class="result-label">最终护甲</span><span class="result-value">${fmt(finalArmor, 0)}</span></div>
+        <div class="result-item highlight"><span class="result-label">物理伤害减免</span><span class="result-value primary">${pct(physReduc)}</span></div>
+        <div class="result-item"><span class="result-label">物理伤害后 (${incoming}点)</span><span class="result-value">${fmt(physTaken)}</span></div>
+        <div class="result-item"><span class="result-label">最终魔抗</span><span class="result-value">${fmt(finalMR, 0)}</span></div>
+        <div class="result-item highlight"><span class="result-label">魔法伤害减免</span><span class="result-value primary">${pct(magicReduc)}</span></div>
+        <div class="result-item"><span class="result-label">魔法伤害后 (${incoming}点)</span><span class="result-value">${fmt(magicTaken)}</span></div>
+      `;
+
+      document.getElementById('defenseSteps').innerHTML = `
+        <p>护甲 = (${baseArmor} + ${fmt(flatArmor, 0)}) × (1 + ${armorPct}%) × ${armorMult} = <strong>${fmt(finalArmor, 0)}</strong></p>
+        <p>魔抗 = (${baseMR} + ${fmt(flatMR, 0)}) × (1 + ${mrPct}%) × ${mrMult} = <strong>${fmt(finalMR, 0)}</strong></p>
+        <p>减免% = 属性 / (属性 + K × 敌人等级)，K=${K}，敌人${enemyLv}级</p>
+        <p>物理减免 = ${fmt(finalArmor, 0)} / (${fmt(finalArmor, 0)} + ${K}×${enemyLv}) = <strong>${pct(physReduc)}</strong></p>
+        <p>魔法减免 = ${fmt(finalMR, 0)} / (${fmt(finalMR, 0)} + ${K}×${enemyLv}) = <strong>${pct(magicReduc)}</strong></p>
+        <p class="final">物理承伤 = ${incoming} × (1 - ${pct(physReduc)}) = <strong>${fmt(physTaken)}</strong></p>
+      `;
+    }
+
+    // ---- 坚韧估算 ----
+    function calcToughness() {
+      const baseHP = val('maxHP');
+      const hpPct = val('hpPercent');
+      const finalHP = baseHP * (1 + hpPct / 100);
+
+      const physReduc = window._physReduc || 0;
+      const magicReduc = window._magicReduc || 0;
+      const dodge = Math.min(val('dodgeRate'), 99) / 100;
+      const physFactor = physReduc >= 1 ? Infinity : 1 / (1 - physReduc);
+      const magicFactor = magicReduc >= 1 ? Infinity : 1 / (1 - magicReduc);
+      const dodgeFactor = dodge >= 1 ? Infinity : 1 / (1 - dodge);
+
+      const physEHP = finalHP * physFactor;
+      const magicEHP = finalHP * magicFactor;
+      const toughnessEstimate = finalHP * physFactor * magicFactor * dodgeFactor;
+
+      document.getElementById('toughnessResults').innerHTML = `
+        <div class="result-item"><span class="result-label">最终最大生命</span><span class="result-value">${fmt(finalHP, 0)}</span></div>
+        <div class="result-item"><span class="result-label">物理有效生命 (EHP)</span><span class="result-value">${fmt(physEHP, 0)}</span></div>
+        <div class="result-item"><span class="result-label">魔法有效生命 (EHP)</span><span class="result-value">${fmt(magicEHP, 0)}</span></div>
+        <div class="result-item highlight"><span class="result-label">综合坚韧（估算）</span><span class="result-value primary">${isFinite(toughnessEstimate) ? fmt(toughnessEstimate, 0) : '∞'}</span></div>
+        <div class="result-item"><span class="result-label">说明</span><span class="result-value" style="font-size:0.82rem;color:#888">可承受原始伤害估算</span></div>
+      `;
+
+      document.getElementById('toughnessSteps').innerHTML = `
+        <p>最终生命 = ${baseHP} × (1 + ${hpPct}%) = <strong>${fmt(finalHP, 0)}</strong></p>
+        <p>物理 EHP = ${fmt(finalHP, 0)} / (1 - ${pct(physReduc)}) = <strong>${fmt(physEHP, 0)}</strong></p>
+        <p>魔法 EHP = ${fmt(finalHP, 0)} / (1 - ${pct(magicReduc)}) = <strong>${fmt(magicEHP, 0)}</strong></p>
+        <p>闪避因子 = 1 / (1 - ${fmt(dodge*100,1)}%) = ${fmt(dodgeFactor, 2)}</p>
+        <p class="final">坚韧 ≈ 生命 × 物理EHP倍率 × 魔法EHP倍率 × 闪避因子 = <strong>${fmt(toughnessEstimate, 0)}</strong></p>
+        <p style="color:#666;margin-top:0.5rem">※ 护甲/魔抗减免数据来自「防御减免」标签，请先填写后切换至此页。</p>
+      `;
+    }
+
+    // ---- 重置 ----
+    function resetAttack() {
+      ['weaponDamage','flatDamage','baseAttackDamage','heavyDamage','statPoints','statPerPoint','percentAdd'].forEach(id => document.getElementById(id).value = id === 'weaponDamage' ? 100 : 0);
+      document.getElementById('percentMult').value = 1;
+      document.getElementById('baseAttackSpeed').value = 1.0;
+      document.getElementById('attackSpeedBonus').value = 0;
+      document.getElementById('critChance').value = 0;
+      document.getElementById('critDamage').value = 150;
+      document.getElementById('primaryStat').value = 'strength';
+      calculateAll();
+    }
+
+    function resetSkill() {
+      document.getElementById('skillBaseDamage').value = 50;
+      document.getElementById('skillAtkScale').value = 1.0;
+      document.getElementById('skillAttackPower').value = 100;
+      document.getElementById('skillLevel').value = 1;
+      document.getElementById('skillPerLevel').value = 0;
+      document.getElementById('scalePerLevel').value = 0;
+      document.getElementById('dotBase').value = 0;
+      document.getElementById('dotScale').value = 0;
+      document.getElementById('statValue').value = 100;
+      document.getElementById('statScaleMin').value = 10;
+      document.getElementById('statScaleMax').value = 12;
+      calculateAll();
+    }
+
+    function resetDefense() {
+      ['baseArmor','flatArmor','armorStr','armorPerStr','armorPercent','baseMR','flatMR','mrInt','mrPerInt','mrPercent','incomingDamage'].forEach(id => document.getElementById(id).value = id === 'incomingDamage' ? 1000 : 0);
+      document.getElementById('armorMult').value = 1;
+      document.getElementById('mrMult').value = 1;
+      document.getElementById('enemyLevel').value = 1;
+      document.getElementById('mitigK').value = 100;
+      calculateAll();
+    }
+
+    function resetToughness() {
+      document.getElementById('maxHP').value = 1000;
+      document.getElementById('hpPercent').value = 0;
+      document.getElementById('dodgeRate').value = 0;
+      calculateAll();
+    }
+
+    function calculateAll() {
+      calcAttack();
+      calcSkill();
+      calcDefense();
+      calcToughness();
+    }
+
+    // 绑定所有 input 事件
+    document.querySelectorAll('input, select').forEach(el => {
+      el.addEventListener('input', calculateAll);
+      el.addEventListener('change', calculateAll);
+    });
+
+    calculateAll();
   </script>
 </body>
 </html>

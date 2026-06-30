@@ -1,1 +1,0 @@
-import{_ as a,o as i,c as n,a2 as e}from"./chunks/framework.DYjiofUG.js";const c=JSON.parse('{"title":"幻境传说 游戏维基","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),l={name:"README.md"};function t(h,s,p,o,r,d){return i(),n("div",null,[...s[0]||(s[0]=[e("",52)])])}const g=a(l,[["render",t]]);export{c as __pageData,g as default};
