@@ -46,18 +46,15 @@ const difficultyColor = (difficulty) => {
         {{ level.difficulty }}
       </span>
     </div>
-    
     <div class="level-body">
     <div class="level-info">
     <p><strong>所在区域:</strong> {{ level.area }}</p>
     <p><strong>推荐等级:</strong> {{ level.level }}</p>
     <p><strong>Boss:</strong> {{ level.boss }}</p>
     </div>
-    
     <div class="level-desc">
     <p>{{ level.description }}</p>
     </div>
-    
     <div class="drops-section">
     <p><strong>主要掉落:</strong></p>
     <div class="drops">

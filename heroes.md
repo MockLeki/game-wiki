@@ -45,57 +45,54 @@ const qualityName = (quality) => {
 <p v-if="loading">加载中...</p>
 
 <div v-if="!loading" class="heroes-grid">
-  <div 
-    v-for="hero in heroes" 
-    :key="hero.id" 
+  <div
+    v-for="hero in heroes"
+    :key="hero.id"
     class="hero-card"
     :style="{ borderColor: qualityColor(hero.quality) }"
   >
-    <div class="hero-header" :style="{ backgroundColor: qualityColor(hero.quality) }">
-      <div class="hero-title">
-        <h3>{{ hero.name }}</h3>
-        <span class="hero-quality">{{ qualityName(hero.quality) }}</span>
-      </div>
-      <div class="hero-job">{{ hero.job }}</div>
-    </div>
-    
-    <div class="hero-body">
-    <div class="hero-stats">
-    <div class="stat">
-    <span class="stat-label">等级</span>
-    <span class="stat-value">{{ hero.level }}</span>
-    </div>
-    <div class="stat">
-    <span class="stat-label">生命</span>
-    <span class="stat-value">{{ hero.hp }}</span>
-    </div>
-    <div class="stat">
-    <span class="stat-label">攻击</span>
-    <span class="stat-value">{{ hero.attack }}</span>
-    </div>
-    <div class="stat">
-    <span class="stat-label">防御</span>
-    <span class="stat-value">{{ hero.defense }}</span>
-    </div>
-    </div>
-    
-    <div class="hero-desc">
-    <p>{{ hero.description }}</p>
-    </div>
-    
-    <div class="hero-skills">
-    <p><strong>技能:</strong></p>
-    <div class="skills">
-    <div v-for="skill in hero.skills" :key="skill.name" class="skill-item">
-    <div class="skill-header">
-    <span class="skill-name">{{ skill.name }}</span>
-    <span class="skill-cd">CD: {{ skill.cooldown }}秒</span>
-    </div>
-    <p class="skill-desc">{{ skill.description }}</p>
-    </div>
-    </div>
-    </div>
-    </div>
+  <div class="hero-header" :style="{ backgroundColor: qualityColor(hero.quality) }">
+  <div class="hero-title">
+  <h3>{{ hero.name }}</h3>
+  <span class="hero-quality">{{ qualityName(hero.quality) }}</span>
+  </div>
+  <div class="hero-job">{{ hero.job }}</div>
+  </div>
+  <div class="hero-body">
+  <div class="hero-stats">
+  <div class="stat">
+  <span class="stat-label">等级</span>
+  <span class="stat-value">{{ hero.level }}</span>
+  </div>
+  <div class="stat">
+  <span class="stat-label">生命</span>
+  <span class="stat-value">{{ hero.hp }}</span>
+  </div>
+  <div class="stat">
+  <span class="stat-label">攻击</span>
+  <span class="stat-value">{{ hero.attack }}</span>
+  </div>
+  <div class="stat">
+  <span class="stat-label">防御</span>
+  <span class="stat-value">{{ hero.defense }}</span>
+  </div>
+  </div>
+  <div class="hero-desc">
+  <p>{{ hero.description }}</p>
+  </div>
+  <div class="hero-skills">
+  <p><strong>技能:</strong></p>
+  <div class="skills">
+  <div v-for="skill in hero.skills" :key="skill.name" class="skill-item">
+  <div class="skill-header">
+  <span class="skill-name">{{ skill.name }}</span>
+  <span class="skill-cd">CD: {{ skill.cooldown }}秒</span>
+  </div>
+  <p class="skill-desc">{{ skill.description }}</p>
+  </div>
+  </div>
+  </div>
+  </div>
   </div>
 </div>
 
