@@ -2,8 +2,8 @@
   "legendary_weapons": [
     {
       "id": "LegendaryAxe1",
-      "name": "北境巨人战斧",
-      "nameEn": "Northern Giant Battleaxe",
+      "name": "北方巨人巨斧",
+      "nameEn": "Northern Giant's Great Axe",
       "slot": "weapon",
       "quality": "legendary",
       "desc": "每次[基础攻击]额外造成50%武器伤害的冰冷伤害，命中时有3%几率冻结目标。",
@@ -13,7 +13,7 @@
     {
       "id": "LegendaryMace1",
       "name": "地狱风暴之锤",
-      "nameEn": "Hellstorm Hammer",
+      "nameEn": "Hellstorm Mace",
       "slot": "weapon",
       "quality": "legendary",
       "desc": "每使用10次[普攻]技能，召唤一道闪电打击随机敌人，造成相当于1000%武器伤害的闪电伤害。",
@@ -22,8 +22,8 @@
     },
     {
       "id": "LegendarySword1",
-      "name": "痛苦锯齿巨剑",
-      "nameEn": "Serrated Greatsword of Anguish",
+      "name": "苦痛锯齿巨剑",
+      "nameEn": "Serrated Greatsword of Agony",
       "slot": "weapon",
       "quality": "legendary",
       "desc": "对易伤目标额外增加30%暴击率。",
@@ -34,8 +34,8 @@
   "legendary_armor": [
     {
       "id": "LegendaryChestArmor1",
-      "name": "怒意壁垒",
-      "nameEn": "Bulwark of Rage",
+      "name": "暴怒壁垒",
+      "nameEn": "Bulwark of Wrath",
       "slot": "chest",
       "quality": "legendary",
       "desc": "如果怒气护盾在到期前未被击破，到期时对周围敌人造成相当于你最大生命值100%的物理伤害。",
@@ -44,8 +44,8 @@
     },
     {
       "id": "LegendaryChestArmor2",
-      "name": "荆棘之心胸甲",
-      "nameEn": "Thornheart Chestplate",
+      "name": "荆棘之心护胸甲",
+      "nameEn": "Thornheart Cuirass",
       "slot": "chest",
       "quality": "legendary",
       "desc": "获得500%荆棘，但失去20%最大生命值。",
@@ -54,7 +54,7 @@
     },
     {
       "id": "LegendaryHelm1",
-      "name": "陨落之王冠冕",
+      "name": "堕落王冠",
       "nameEn": "Crown of the Fallen King",
       "slot": "helm",
       "quality": "legendary",
@@ -64,8 +64,8 @@
     },
     {
       "id": "LegendaryNeck1",
-      "name": "涌动思绪吊坠",
-      "nameEn": "Surge of Thought Pendant",
+      "name": "涌动心智吊坠",
+      "nameEn": "Pendant of the Surging Mind",
       "slot": "necklace",
       "quality": "legendary",
       "desc": "每消耗100点法力，+20%暴击率，持续4秒。",
@@ -75,7 +75,7 @@
     {
       "id": "LegendaryGloves1",
       "name": "怒火护手",
-      "nameEn": "Gauntlets of Fury",
+      "nameEn": "Ragefire Gauntlets",
       "slot": "gloves",
       "quality": "legendary",
       "desc": "烈焰打击有30%几率不消耗法力。",
@@ -84,7 +84,7 @@
     },
     {
       "id": "LegendaryGloves2",
-      "name": "无阻护手",
+      "name": "势不可挡护手",
       "nameEn": "Unstoppable Gauntlets",
       "slot": "gloves",
       "quality": "legendary",
@@ -94,7 +94,7 @@
     },
     {
       "id": "LegendaryBelt1",
-      "name": "无底药水腰带",
+      "name": "无底药带",
       "nameEn": "Bottomless Potion Belt",
       "slot": "belt",
       "quality": "legendary",
@@ -104,8 +104,8 @@
     },
     {
       "id": "LegendaryPants1",
-      "name": "雷霆护腿",
-      "nameEn": "Thunderstrike Leggings",
+      "name": "奥术之刃护胫",
+      "nameEn": "Greaves of the Arcane Edge",
       "slot": "legs",
       "quality": "legendary",
       "desc": "[附魔]技能暴击伤害+150%。",
@@ -114,8 +114,8 @@
     },
     {
       "id": "LegendaryPants2",
-      "name": "坚毅护腿",
-      "nameEn": "Resilient Leggings",
+      "name": "坚毅药剂护胫",
+      "nameEn": "Greaves of the Stalwart Tonic",
       "slot": "legs",
       "quality": "legendary",
       "desc": "使用生命药水后获得30%伤害减免，持续5秒。",
@@ -124,8 +124,8 @@
     },
     {
       "id": "LegendaryBoots1",
-      "name": "疾风之靴",
-      "nameEn": "Windstride Boots",
+      "name": "唤风者之靴",
+      "nameEn": "Boots of the Windcaller",
       "slot": "boots",
       "quality": "legendary",
       "desc": "击杀后+50%移动速度，持续4秒。",
@@ -134,8 +134,8 @@
     },
     {
       "id": "LegendaryShoulder1",
-      "name": "贝壳尖刺肩铠",
-      "nameEn": "Shellspike Pauldrons",
+      "name": "甲壳尖刺护肩",
+      "nameEn": "Shell Spike Pauldron",
       "slot": "shoulder",
       "quality": "legendary",
       "desc": "你10%的护甲也贡献给荆棘。",
@@ -144,8 +144,8 @@
     },
     {
       "id": "LegendaryShoulder2",
-      "name": "元素爆裂肩铠",
-      "nameEn": "Elemental Burst Pauldrons",
+      "name": "元素爆发护肩",
+      "nameEn": "Elemental Burst Pauldron",
       "slot": "shoulder",
       "quality": "legendary",
       "desc": "使用[附魔]技能后，获得+50%火焰和闪电伤害，持续6秒。",
@@ -154,8 +154,8 @@
     },
     {
       "id": "LegendaryRing1",
-      "name": "龙血牙印戒",
-      "nameEn": "Dragonfang Signet Ring",
+      "name": "巨龙血牙印戒",
+      "nameEn": "Bloodfang Signet of the Wyrm",
       "slot": "ring",
       "quality": "legendary",
       "desc": "半月斩将额外投掷两道月牙刃。",
@@ -164,7 +164,7 @@
     },
     {
       "id": "LegendaryRing2",
-      "name": "启示之戒",
+      "name": "展露之戒",
       "nameEn": "Ring of Revelation",
       "slot": "ring",
       "quality": "legendary",
