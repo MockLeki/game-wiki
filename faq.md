@@ -74,47 +74,54 @@ const toggleFAQ = (index) => {
 }
 
 .faq-item {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #3d332b;
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
+  background: #181513;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .faq-item.open {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-color: #c9a55b;
+  box-shadow: 0 0 12px rgba(201, 165, 91, 0.15);
 }
 
 .faq-question {
-  background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
-  color: white;
+  background: linear-gradient(135deg, #2e1a0e 0%, #1a1210 100%);
+  color: #efe6d8;
+  border-left: 3px solid #c9a55b;
   padding: 1rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   user-select: none;
+  font-weight: 500;
 }
 
 .faq-question:hover {
-  background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+  background: linear-gradient(135deg, #3d2518 0%, #241a14 100%);
+  border-left-color: #d8b978;
 }
 
 .faq-icon {
   font-size: 1.5rem;
   font-weight: bold;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.2);
+  background: rgba(201, 165, 91, 0.15);
+  color: #c9a55b;
   border-radius: 50%;
+  font-size: 1rem;
 }
 
 .faq-answer {
   padding: 1rem;
-  background: #f9f9f9;
-  border-top: 1px solid #e0e0e0;
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #3d332b;
 }
 
 .faq-answer pre {
@@ -123,6 +130,7 @@ const toggleFAQ = (index) => {
   font-family: inherit;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #333;
+  color: #c7b8a3;
+  background: transparent;
 }
 </style>

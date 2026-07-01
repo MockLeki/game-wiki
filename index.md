@@ -36,6 +36,10 @@ features:
     details: 伤害计算器
     link: /damage-calculator
     linkText: 查看计算器
+  - title: 词条计算器
+    details: 装备词缀组合模拟，自由预览整体属性
+    link: /affixes
+    linkText: 模拟词条
   - title: 常见问题
     details: 新手常见问题解答
     link: /faq

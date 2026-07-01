@@ -174,31 +174,31 @@ const getCompanionsBySpecies = (speciesKey) => {
 
 <style scoped>
 .tip-box {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  color: #ccc;
-  border-left: 4px solid #9c27b0;
+  color: #c7b8a3;
+  border-left: 4px solid #c9a55b;
 }
-.tip-box strong { color: #9c27b0; display: block; margin-bottom: 0.3rem; }
+.tip-box strong { color: #c9a55b; display: block; margin-bottom: 0.3rem; }
 .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
 .tab {
-  background: #1a1a2e;
-  color: #888;
-  border: 1px solid #333;
+  background: #181513;
+  color: #8f7f6e;
+  border: 1px solid #3d332b;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.95rem;
   transition: all 0.2s;
 }
-.tab:hover { border-color: #555; color: #ccc; }
-.tab.active { background: rgba(156, 39, 176, 0.15); border-color: #9c27b0; color: #fff; }
+.tab:hover { border-color: #6b5d50; color: #c7b8a3; }
+.tab.active { background: rgba(201, 165, 91, 0.15); border-color: #c9a55b; color: #efe6d8; }
 .tab-content { animation: fadeIn 0.3s; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .filters {
-  background: #1a1a2e;
+  background: #181513;
   padding: 0.8rem 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -208,10 +208,10 @@ const getCompanionsBySpecies = (speciesKey) => {
   flex-wrap: wrap;
 }
 .filter-group { display: flex; align-items: center; gap: 0.5rem; }
-.filter-group label { color: #888; font-size: 0.9rem; }
+.filter-group label { color: #8f7f6e; font-size: 0.9rem; }
 .filter-group select {
-  background: #2d2d44;
-  color: #fff;
+  background: #2d2723;
+  color: #efe6d8;
   border: 1px solid #444;
   border-radius: 4px;
   padding: 0.4rem 0.6rem;
@@ -226,19 +226,19 @@ const getCompanionsBySpecies = (speciesKey) => {
   font-size: 0.85rem;
 }
 .reset-btn:hover { background: #5a5a8a; }
-.no-data { color: #666; text-align: center; padding: 2rem; }
-.result-count { color: #888; font-size: 0.9rem; margin-bottom: 0.5rem; }
-.result-count strong { color: #9c27b0; }
+.no-data { color: #8f7f6e; text-align: center; padding: 2rem; }
+.result-count { color: #8f7f6e; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.result-count strong { color: #c9a55b; }
 .companions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; }
 .companion-card {
-  background: #1a1a2e;
+  background: #181513;
   border: 2px solid;
   border-radius: 10px;
   overflow: hidden;
 }
 .comp-header {
   padding: 0.7rem 1rem;
-  color: #fff;
+  color: #efe6d8;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -248,7 +248,7 @@ const getCompanionsBySpecies = (speciesKey) => {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #2d2d44;
+  background: #2d2723;
   border: 2px solid rgba(255,255,255,0.3);
   flex-shrink: 0;
   display: flex;
@@ -265,7 +265,7 @@ const getCompanionsBySpecies = (speciesKey) => {
   font-size: 0.7rem;
   padding: 0.1rem 0.4rem;
   border-radius: 3px;
-  color: #fff;
+  color: #efe6d8;
 }
 .species-badge {
   font-size: 0.7rem;
@@ -280,13 +280,13 @@ const getCompanionsBySpecies = (speciesKey) => {
   grid-template-columns: 1fr 1fr;
   gap: 0.4rem;
   padding: 0.6rem;
-  background: #2d2d44;
+  background: #2d2723;
   border-radius: 6px;
   margin-bottom: 0.8rem;
 }
 .info-row { display: flex; justify-content: space-between; font-size: 0.85rem; }
-.info-label { color: #888; }
-.info-value { color: #fff; }
+.info-label { color: #8f7f6e; }
+.info-value { color: #efe6d8; }
 .comp-active-skill {
   background: rgba(255, 152, 0, 0.08);
   border-left: 3px solid #ff9800;
@@ -295,29 +295,29 @@ const getCompanionsBySpecies = (speciesKey) => {
   margin-bottom: 0.6rem;
 }
 .skill-label { font-size: 0.75rem; color: #ff9800; font-weight: bold; margin-bottom: 0.2rem; }
-.skill-name { color: #fff; font-size: 0.9rem; font-weight: bold; }
-.skill-name-en { color: #666; font-size: 0.8rem; }
-.skill-desc { color: #aaa; font-size: 0.85rem; margin: 0.3rem 0 0 0; }
+.skill-name { color: #efe6d8; font-size: 0.9rem; font-weight: bold; }
+.skill-name-en { color: #8f7f6e; font-size: 0.8rem; }
+.skill-desc { color: #c7b8a3; font-size: 0.85rem; margin: 0.3rem 0 0 0; }
 .comp-passives { margin-top: 0.3rem; }
 .passive-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem 0;
-  border-bottom: 1px solid #2d2d44;
+  border-bottom: 1px solid #2d2723;
 }
 .passive-item:last-child { border-bottom: none; }
 .passive-name { color: #4caf50; font-size: 0.85rem; font-weight: bold; }
-.passive-desc { color: #aaa; font-size: 0.8rem; }
+.passive-desc { color: #c7b8a3; font-size: 0.8rem; }
 .npc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.8rem; }
 .npc-card {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #333;
+  border: 1px solid #3d332b;
 }
 .npc-header {
-  background: #2d2d44;
+  background: #2d2723;
   padding: 0.6rem 1rem;
   display: flex;
   align-items: center;
@@ -327,7 +327,7 @@ const getCompanionsBySpecies = (speciesKey) => {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #1a1a2e;
+  background: #181513;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,14 +335,14 @@ const getCompanionsBySpecies = (speciesKey) => {
   flex-shrink: 0;
 }
 .npc-icon-img { width: 36px; height: 36px; object-fit: contain; }
-.npc-name { color: #fff; font-weight: bold; font-size: 0.95rem; display: block; }
-.npc-name-en { color: #666; font-size: 0.8rem; display: block; }
+.npc-name { color: #efe6d8; font-weight: bold; font-size: 0.95rem; display: block; }
+.npc-name-en { color: #8f7f6e; font-size: 0.8rem; display: block; }
 .npc-body { padding: 0.7rem 1rem; }
-.npc-body p { color: #aaa; font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.npc-body p { color: #c7b8a3; font-size: 0.9rem; line-height: 1.5; margin: 0; }
 .enemy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.8rem; }
 .enemy-item {
-  background: #1a1a2e;
-  border: 1px solid #333;
+  background: #181513;
+  border: 1px solid #3d332b;
   border-radius: 8px;
   padding: 0.8rem;
   text-align: center;
@@ -355,7 +355,7 @@ const getCompanionsBySpecies = (speciesKey) => {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #2d2d44;
+  background: #2d2723;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,25 +363,25 @@ const getCompanionsBySpecies = (speciesKey) => {
   margin-bottom: 0.3rem;
 }
 .enemy-icon-img { width: 56px; height: 56px; object-fit: contain; }
-.enemy-name { color: #fff; font-size: 0.9rem; display: block; }
-.enemy-name-en { color: #666; font-size: 0.75rem; }
+.enemy-name { color: #efe6d8; font-size: 0.9rem; display: block; }
+.enemy-name-en { color: #8f7f6e; font-size: 0.75rem; }
 .species-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
 .species-card {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
-  border: 1px solid #333;
+  border: 1px solid #3d332b;
 }
 .species-icon-large { font-size: 2.5rem; margin-bottom: 0.5rem; }
-.species-name { color: #fff; font-weight: bold; font-size: 1.1rem; }
-.species-name-en { color: #666; font-size: 0.85rem; margin-bottom: 0.8rem; }
+.species-name { color: #efe6d8; font-weight: bold; font-size: 1.1rem; }
+.species-name-en { color: #8f7f6e; font-size: 0.85rem; margin-bottom: 0.8rem; }
 .species-companions { display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: center; }
 .species-comp-tag {
   font-size: 0.75rem;
   padding: 0.15rem 0.4rem;
   border: 1px solid;
   border-radius: 4px;
-  color: #aaa;
+  color: #c7b8a3;
 }
 </style>

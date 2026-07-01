@@ -77,9 +77,9 @@ const refundAll = () => {
 }
 
 const tagColor = (tag) => {
-  if (!skillData.value) return '#666'
+  if (!skillData.value) return '#8f7f6e'
   const t = skillData.value.abilityTags[tag]
-  return t ? t.color : '#666'
+  return t ? t.color : '#8f7f6e'
 }
 
 const tagName = (tag) => {
@@ -314,26 +314,26 @@ const nodeStatus = (talent) => {
 
 <style scoped>
 .tip-box {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  color: #ccc;
-  border-left: 4px solid #9c27b0;
+  color: #c7b8a3;
+  border-left: 4px solid #c9a55b;
 }
-.tip-box strong { color: #9c27b0; display: block; margin-bottom: 0.3rem; }
+.tip-box strong { color: #c9a55b; display: block; margin-bottom: 0.3rem; }
 .section { margin-bottom: 2rem; }
 .section-title {
-  color: #fff;
-  border-bottom: 2px solid #333;
+  color: #efe6d8;
+  border-bottom: 2px solid #3d332b;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
 .class-tabs { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
 .class-tab {
   flex: 1;
-  background: #1a1a2e;
-  border: 2px solid #333;
+  background: #181513;
+  border: 2px solid #3d332b;
   border-radius: 8px;
   padding: 1rem;
   cursor: pointer;
@@ -343,67 +343,67 @@ const nodeStatus = (talent) => {
   align-items: center;
   gap: 0.3rem;
 }
-.class-tab:hover { border-color: #555; background: #2d2d44; }
-.class-tab.active { border-color: #9c27b0; background: rgba(156, 39, 176, 0.15); }
+.class-tab:hover { border-color: #6b5d50; background: #2d2723; }
+.class-tab.active { border-color: #c9a55b; background: rgba(201, 165, 91, 0.15); }
 .class-icon { font-size: 2rem; }
 .class-icon-img { width: 48px; height: 48px; object-fit: contain; }
-.class-name { font-size: 1.2rem; font-weight: bold; color: #fff; }
-.class-name-en { font-size: 0.85rem; color: #888; }
+.class-name { font-size: 1.2rem; font-weight: bold; color: #efe6d8; }
+.class-name-en { font-size: 0.85rem; color: #8f7f6e; }
 .class-info {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 8px;
   padding: 1rem 1.5rem;
   margin-bottom: 2rem;
-  border-left: 4px solid #9c27b0;
+  border-left: 4px solid #c9a55b;
 }
-.class-info h2 { margin: 0 0 0.5rem 0; color: #fff; }
-.class-desc { color: #aaa; margin: 0.3rem 0; }
+.class-info h2 { margin: 0 0 0.5rem 0; color: #efe6d8; }
+.class-desc { color: #c7b8a3; margin: 0.3rem 0; }
 .class-stat { color: #ff9800; margin: 0.3rem 0; font-size: 0.9rem; }
 .abilities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
 .ability-card {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #333;
+  border: 1px solid #3d332b;
   display: flex;
   align-items: stretch;
 }
 .ability-icon-wrap {
   width: 80px;
   min-height: 100%;
-  background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
+  background: linear-gradient(135deg, #2d2723 0%, #181513 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border-right: 1px solid #333;
+  border-right: 1px solid #3d332b;
 }
 .ability-icon-img { width: 56px; height: 56px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
 .ability-body { padding: 0.8rem 1rem; flex: 1; }
 .ability-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
-.ability-name { color: #fff; font-size: 1.05rem; font-weight: bold; }
+.ability-name { color: #efe6d8; font-size: 1.05rem; font-weight: bold; }
 .ability-tag {
   font-size: 0.75rem;
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
-  color: #fff;
+  color: #efe6d8;
   font-weight: bold;
 }
-.ability-name-en { color: #666; font-size: 0.85rem; margin: 0 0 0.5rem 0; font-style: italic; }
-.ability-desc { color: #ccc; font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.ability-name-en { color: #8f7f6e; font-size: 0.85rem; margin: 0 0 0.5rem 0; font-style: italic; }
+.ability-desc { color: #c7b8a3; font-size: 0.9rem; line-height: 1.5; margin: 0; }
 .talent-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
 .talent-tab {
-  background: #1a1a2e;
-  color: #888;
-  border: 1px solid #333;
+  background: #181513;
+  color: #8f7f6e;
+  border: 1px solid #3d332b;
   padding: 0.5rem 1.2rem;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.95rem;
   transition: all 0.2s;
 }
-.talent-tab:hover { border-color: #555; color: #ccc; }
-.talent-tab.active { background: rgba(156, 39, 176, 0.15); border-color: #9c27b0; color: #fff; }
+.talent-tab:hover { border-color: #6b5d50; color: #c7b8a3; }
+.talent-tab.active { background: rgba(201, 165, 91, 0.15); border-color: #c9a55b; color: #efe6d8; }
 .talent-header {
   display: flex;
   justify-content: space-between;
@@ -412,11 +412,11 @@ const nodeStatus = (talent) => {
   gap: 0.5rem;
 }
 .talent-header .section-title { margin-bottom: 0; border: none; }
-.point-tracker { display: flex; align-items: center; gap: 0.8rem; background: #1a1a2e; padding: 0.5rem 1rem; border-radius: 8px; }
+.point-tracker { display: flex; align-items: center; gap: 0.8rem; background: #181513; padding: 0.5rem 1rem; border-radius: 8px; }
 .point-bar-wrap {
   width: 160px;
   height: 22px;
-  background: #333;
+  background: #3d332b;
   border-radius: 11px;
   position: relative;
   overflow: hidden;
@@ -431,7 +431,7 @@ const nodeStatus = (talent) => {
   position: absolute;
   top: 0; left: 0; right: 0;
   text-align: center;
-  color: #fff;
+  color: #efe6d8;
   font-size: 0.75rem;
   line-height: 22px;
   font-weight: bold;
@@ -441,13 +441,13 @@ const nodeStatus = (talent) => {
 .points-remaining.no-points { color: #f44336; }
 .reset-btn { background: #4a4a6a; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
 .reset-btn:hover { background: #5a5a8a; }
-.talent-hint { color: #666; font-size: 0.85rem; margin: 0.5rem 0 1rem 0; }
+.talent-hint { color: #8f7f6e; font-size: 0.85rem; margin: 0.5rem 0 1rem 0; }
 .talent-hint.no-points-hint { color: #f44336; font-weight: bold; }
 .talent-tree-panel {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  border: 2px solid #333;
+  border: 2px solid #3d332b;
   padding: 1rem;
   min-height: 600px;
 }
@@ -482,7 +482,7 @@ const nodeStatus = (talent) => {
   height: 32px;
   border-radius: 50%;
   background: linear-gradient(135deg, #ff9800, #f44336);
-  color: #fff;
+  color: #efe6d8;
   font-weight: bold;
   font-size: 0.85rem;
   display: flex;
@@ -542,7 +542,7 @@ const nodeStatus = (talent) => {
   height: 52px;
   border-radius: 50%;
   border: 2px solid rgba(255,255,255,0.3);
-  background: rgba(26, 26, 46, 0.9);
+  background: rgba(28, 24, 21, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -553,7 +553,7 @@ const nodeStatus = (talent) => {
 .talent-icon-img { width: 40px; height: 40px; object-fit: contain; }
 .talent-rank {
   font-size: 0.75rem;
-  color: #888;
+  color: #8f7f6e;
   background: rgba(0,0,0,0.6);
   padding: 0.1rem 0.4rem;
   border-radius: 10px;
@@ -561,7 +561,7 @@ const nodeStatus = (talent) => {
 }
 .talent-name {
   font-size: 0.75rem;
-  color: #ccc;
+  color: #c7b8a3;
   text-align: center;
   max-width: 80px;
   line-height: 1.2;
@@ -572,17 +572,17 @@ const nodeStatus = (talent) => {
 .talent-node.maxed .talent-rank { color: #ff9800; }
 .talent-node.available .talent-icon-ring { border-color: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.4); }
 .talent-node.locked { opacity: 0.7; }
-.talent-node.milestone .talent-icon-ring { border-color: #9c27b0; }
+.talent-node.milestone .talent-icon-ring { border-color: #c9a55b; }
 .talent-detail {
   margin-top: 1rem;
-  background: rgba(26, 26, 46, 0.95);
+  background: rgba(28, 24, 21, 0.95);
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #333;
+  border: 1px solid #3d332b;
 }
 .detail-header {
   padding: 0.8rem 1rem;
-  color: #fff;
+  color: #efe6d8;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -592,18 +592,18 @@ const nodeStatus = (talent) => {
 .detail-title strong { font-size: 1.05rem; }
 .detail-name-en { font-size: 0.8rem; opacity: 0.8; }
 .detail-body { padding: 1rem; }
-.detail-desc { color: #ccc; font-size: 0.95rem; margin: 0 0 0.5rem 0; }
-.detail-desc-en { color: #666; font-size: 0.85rem; font-style: italic; margin: 0 0 0.5rem 0; }
+.detail-desc { color: #c7b8a3; font-size: 0.95rem; margin: 0 0 0.5rem 0; }
+.detail-desc-en { color: #8f7f6e; font-size: 0.85rem; font-style: italic; margin: 0 0 0.5rem 0; }
 .detail-rank { color: #ff9800; font-size: 0.85rem; margin: 0; }
 .detail-next { color: #4caf50; font-size: 0.85rem; margin: 0.3rem 0 0 0; }
 .detail-warning { color: #f44336; font-size: 0.85rem; margin: 0.3rem 0 0 0; font-weight: bold; }
-.no-data-box { background: #1a1a2e; border-radius: 8px; padding: 1.5rem; text-align: center; color: #888; }
+.no-data-box { background: #181513; border-radius: 8px; padding: 1.5rem; text-align: center; color: #8f7f6e; }
 .no-data-box p { margin: 0.5rem 0; }
-.life-skills-section { background: rgba(26, 26, 46, 0.5); border-radius: 8px; padding: 1rem; }
+.life-skills-section { background: rgba(28, 24, 21, 0.5); border-radius: 8px; padding: 1rem; }
 .summary-section { background: rgba(156, 39, 176, 0.05); border-radius: 8px; padding: 1rem; }
 .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.8rem; }
 .summary-item {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 6px;
   padding: 0.6rem 0.8rem;
   border-left: 3px solid #ff9800;
@@ -615,7 +615,7 @@ const nodeStatus = (talent) => {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #2d2d44;
+  background: #2d2723;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -626,15 +626,15 @@ const nodeStatus = (talent) => {
 .summary-content { display: flex; flex-direction: column; gap: 0.15rem; flex: 1; }
 .summary-name { color: #ff9800; font-weight: bold; font-size: 0.9rem; }
 .summary-rank { color: #4caf50; font-size: 0.8rem; }
-.summary-desc { color: #aaa; font-size: 0.85rem; }
+.summary-desc { color: #c7b8a3; font-size: 0.85rem; }
 .stats-table-wrap { overflow-x: auto; }
-.stats-table { width: 100%; border-collapse: collapse; background: #1a1a2e; border-radius: 8px; overflow: hidden; }
-.stats-table th { background: #2d2d44; color: #9c27b0; padding: 0.6rem 1rem; text-align: left; font-weight: bold; }
-.stats-table td { padding: 0.5rem 1rem; border-top: 1px solid #2d2d44; }
+.stats-table { width: 100%; border-collapse: collapse; background: #181513; border-radius: 8px; overflow: hidden; }
+.stats-table th { background: #2d2723; color: #c9a55b; padding: 0.6rem 1rem; text-align: left; font-weight: bold; }
+.stats-table td { padding: 0.5rem 1rem; border-top: 1px solid #2d2723; }
 .stat-name { color: #ff9800; font-weight: bold; white-space: nowrap; width: 120px; }
-.stat-desc { color: #aaa; font-size: 0.9rem; }
+.stat-desc { color: #c7b8a3; font-size: 0.9rem; }
 .species-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.species-tag { background: #1a1a2e; padding: 0.4rem 0.8rem; border-radius: 6px; color: #aaa; font-size: 0.9rem; border: 1px solid #333; }
+.species-tag { background: #181513; padding: 0.4rem 0.8rem; border-radius: 6px; color: #c7b8a3; font-size: 0.9rem; border: 1px solid #3d332b; }
 .rarity-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.rarity-tag { padding: 0.4rem 1rem; border-radius: 6px; border: 2px solid; font-weight: bold; font-size: 0.9rem; background: #1a1a2e; }
+.rarity-tag { padding: 0.4rem 1rem; border-radius: 6px; border: 2px solid; font-weight: bold; font-size: 0.9rem; background: #181513; }
 </style>

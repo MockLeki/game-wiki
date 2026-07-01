@@ -27,7 +27,7 @@ const difficultyColor = (difficulty) => {
     '普通': '#2196f3',
     '困难': '#ff9800',
     '噩梦': '#f44336',
-    '地狱': '#9c27b0',
+    '地狱': '#c9a55b',
     '未知': '#9e9e9e'
   }
   return colors[difficulty] || '#9e9e9e'
@@ -117,24 +117,24 @@ const dropIcon = (drop) => {
 
 <style scoped>
 .tip-box {
-  background: #1a1a2e;
+  background: #181513;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  color: #ccc;
-  border-left: 4px solid #9c27b0;
+  color: #c7b8a3;
+  border-left: 4px solid #c9a55b;
 }
-.tip-box strong { color: #9c27b0; display: block; margin-bottom: 0.3rem; }
+.tip-box strong { color: #c9a55b; display: block; margin-bottom: 0.3rem; }
 .levels-list { display: flex; flex-direction: column; gap: 1.2rem; }
 .level-card {
-  border: 1px solid #333;
+  border: 1px solid #3d332b;
   border-radius: 8px;
   overflow: hidden;
-  background: #1a1a2e;
+  background: #181513;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 .level-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5c3a1e 0%, #2a1d14 100%);
   color: white;
   padding: 1rem;
   display: flex;
@@ -163,33 +163,33 @@ const dropIcon = (drop) => {
   margin-bottom: 1rem;
 }
 .info-item {
-  background: #2d2d44;
+  background: #2d2723;
   padding: 0.6rem 0.8rem;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-.info-label { color: #888; font-size: 0.8rem; }
-.info-value { color: #fff; font-size: 0.95rem; font-weight: bold; }
+.info-label { color: #8f7f6e; font-size: 0.8rem; }
+.info-value { color: #efe6d8; font-size: 0.95rem; font-weight: bold; }
 .level-desc {
-  background: #2d2d44;
+  background: #2d2723;
   padding: 0.8rem;
   border-radius: 6px;
   margin-bottom: 1rem;
 }
-.level-desc p { margin: 0; color: #ccc; line-height: 1.5; }
+.level-desc p { margin: 0; color: #c7b8a3; line-height: 1.5; }
 .enemies-section,
 .drops-section { margin-bottom: 0.8rem; }
 .enemies-section p,
-.drops-section p { margin: 0.5rem 0; color: #fff; font-weight: bold; }
+.drops-section p { margin: 0.5rem 0; color: #efe6d8; font-weight: bold; }
 .enemies-list,
 .drops { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .enemy-tag,
 .drop-tag {
-  background: #2d2d44;
+  background: #2d2723;
   border: 1px solid #444;
-  color: #ccc;
+  color: #c7b8a3;
   padding: 0.3rem 0.7rem;
   border-radius: 15px;
   font-size: 0.85rem;
@@ -198,5 +198,5 @@ const dropIcon = (drop) => {
   gap: 0.4rem;
 }
 .enemy-icon,
-.drop-icon { width: 20px; height: 20px; object-fit: contain; border-radius: 50%; background: #1a1a2e; }
+.drop-icon { width: 20px; height: 20px; object-fit: contain; border-radius: 50%; background: #181513; }
 </style>

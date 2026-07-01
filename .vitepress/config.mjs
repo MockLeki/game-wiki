@@ -23,6 +23,7 @@ export default defineConfig({
       { text: '关卡大全', link: '/levels' },
       { text: '技能大全', link: '/skills' },
       { text: '伤害计算器', link: '/damage-calculator' },
+      { text: '词条计算器', link: '/affixes' },
       { text: '常见问题', link: '/faq' }
     ],
 
