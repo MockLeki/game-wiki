@@ -13,7 +13,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '数据库', link: '/database' },
-      { text: '玩家社区', link: '/community' }
+      { text: '玩家社区', link: 'https://deskrawl.freeflarum.com' }
     ],
 
     sidebar: [
@@ -33,7 +33,7 @@ export default defineConfig({
         text: '📋 其他',
         items: [
           { text: '常见问题', link: '/faq' },
-          { text: '玩家社区', link: '/community' },
+          { text: '玩家社区', link: 'https://deskrawl.freeflarum.com' },
         ]
       }
     ],
