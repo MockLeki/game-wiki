@@ -66,40 +66,40 @@
       "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "HpPotionFind", "XPGain"]
     },
     "helm": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "ArmorPercent", "MagicResist", "Dodge", "CooldownReduction"],
-      "suffix": ["LifeRegen", "GoldFind", "MagicFind", "HpPotionFind", "XPGain", "MoveSpeed"]
+      "prefix": ["Strength", "Dexterity", "Intelligence", "MaxHealth", "MaxHealthPercent", "ArmorPercent", "MagicResist", "Dodge", "CooldownReduction", "Thorns"],
+      "suffix": ["LifeRegen", "LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain", "MoveSpeed", "PotionCharges"]
     },
     "shoulder": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "Thorns", "ArmorPercent", "Dodge", "CooldownReduction"],
-      "suffix": ["LifeRegen", "MoveSpeed", "LifeOnHit", "GoldFind", "MagicFind", "XPGain"]
+      "prefix": ["Strength", "Dexterity", "Intelligence", "MaxHealth", "MaxHealthPercent", "Thorns", "ArmorPercent", "Dodge", "CooldownReduction"],
+      "suffix": ["LifeRegen", "MoveSpeed", "LifeOnHit", "GoldFind", "MagicFind", "XPGain", "ManaCostReduction"]
     },
     "chest": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "Damage", "AttackSpeed", "CritChance", "CritDamage", "Thorns"],
-      "suffix": ["LifeRegen", "LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain"]
+      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "Damage", "AttackSpeed", "CritChance", "CritDamage", "Thorns", "MagicResist", "Dodge", "CooldownReduction"],
+      "suffix": ["LifeRegen", "LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain", "PotionCharges", "ExtraPotion"]
     },
     "gloves": {
-      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "MagicResist", "ManaCostReduction", "CooldownReduction"],
+      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "MagicResist", "ManaCostReduction", "CooldownReduction", "Dodge", "MaxMana"],
       "suffix": ["LifeOnHit", "ManaOnKill", "GoldFind", "MagicFind", "HpPotionFind", "XPGain"]
     },
     "belt": {
       "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "Thorns", "MagicResist", "ManaCostReduction", "Dodge", "CooldownReduction", "PotionCharges"],
-      "suffix": ["LifeRegen", "LifeOnKill", "LifeOnHit", "GoldFind", "MagicFind", "XPGain"]
+      "suffix": ["LifeRegen", "LifeOnKill", "LifeOnHit", "GoldFind", "MagicFind", "XPGain", "ExtraPotion"]
     },
     "legs": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "ArmorPercent", "Thorns", "MagicResist", "Dodge"],
-      "suffix": ["LifeRegen", "LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain"]
+      "prefix": ["Strength", "Dexterity", "Intelligence", "MaxHealth", "MaxHealthPercent", "ArmorPercent", "Thorns", "MagicResist", "Dodge"],
+      "suffix": ["LifeRegen", "LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain", "MoveSpeed"]
     },
     "boots": {
-      "prefix": ["Strength", "MaxHealth", "MaxMana", "Dodge", "CooldownReduction", "ManaCostReduction"],
+      "prefix": ["Strength", "MaxHealth", "MaxMana", "Dodge", "CooldownReduction", "ManaCostReduction", "MoveSpeed", "MagicResist"],
       "suffix": ["LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain", "MoveSpeed"]
     },
     "necklace": {
-      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "DamagePhysical", "DamageFire", "DamageCold", "DamageLightning", "DamagePoison", "DamageArcane", "DamageVsHealthy", "VulnerableDamage", "BasicAttackDamage", "StrongAttackDamage", "MagicResist"],
-      "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "MagicFind", "MoveSpeed", "XPGain"]
+      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "DamagePhysical", "DamageFire", "DamageCold", "DamageLightning", "DamagePoison", "DamageArcane", "DamageVsHealthy", "VulnerableDamage", "BasicAttackDamage", "StrongAttackDamage", "MagicResist", "MaxMana"],
+      "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "MagicFind", "MoveSpeed", "XPGain", "Dodge", "CooldownReduction"]
     },
     "ring": {
-      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "DamagePhysical", "DamageFire", "DamageCold", "DamageLightning", "DamagePoison", "DamageArcane", "DamageVsHealthy", "VulnerableDamage", "BasicAttackDamage", "StrongAttackDamage", "MagicResist", "MaxMana"],
-      "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "GoldFind", "MagicFind", "XPGain"]
+      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "DamagePhysical", "DamageFire", "DamageCold", "DamageLightning", "DamagePoison", "DamageArcane", "DamageVsHealthy", "VulnerableDamage", "BasicAttackDamage", "StrongAttackDamage", "MagicResist", "MaxMana", "MaxHealth"],
+      "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "GoldFind", "MagicFind", "XPGain", "Dodge", "CooldownReduction", "PotionCharges", "LifeRegen", "Thorns"]
     }
   }
 }

@@ -13,7 +13,7 @@ hero:
       link: /database
     - theme: alt
       text: 玩家社区
-      link: https://bbs.deskrawl.top
+      link: https://deskrawl.freeflarum.com
 
 features:
   - icon: ⚔️
