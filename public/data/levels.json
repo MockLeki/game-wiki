@@ -8,86 +8,239 @@
     "level": "不限",
     "difficulty": "安全",
     "boss": "无",
-    "drops": ["生命药水", "法力药水", "随机装备盒", "随从缰绳"],
+    "drops": [
+      "药水",
+      "装备",
+      "随从缰绳"
+    ],
     "description": "一座由小城堡守护的带城墙集市城镇，也是阿瑟隆王国最后的安全避风港。英雄们在此休整、交易、补给，然后出征对抗地狱之主的黑暗。",
     "enemies": []
   },
   {
     "id": 2,
-    "name": "国王森林",
-    "nameEn": "Kings Woods",
-    "key": "Forest",
+    "name": "阿瑟隆王国",
+    "nameEn": "Kingdom of Atheron",
+    "key": "World1",
     "area": "阿瑟隆王国",
-    "level": "1-15级",
+    "level": "Lv.1+",
     "difficulty": "简单",
-    "boss": "森林巨魔",
-    "drops": ["生命药水", "狼之缰绳", "野猪缰绳", "黑蜘蛛缰绳"],
-    "description": "冒险者离开主城后到达的第一片森林。黑蜘蛛、毒液蜘蛛与树桩怪在这里出没，是新手练级和获取早期野兽随从的主要区域。",
-    "enemies": ["黑蜘蛛", "毒液蜘蛛", "树桩怪", "灰森林狼", "野猪"]
+    "boss": "哥布林督军",
+    "drops": [
+      "金币",
+      "经验",
+      "普通装备"
+    ],
+    "description": "阿瑟隆王国的广袤大地，分布着低等级的野兽和人形怪物，是新手冒险者的第一站。",
+    "enemies": [
+      "兽人斗士",
+      "哥布林战士",
+      "黑蜘蛛",
+      "灰森林狼"
+    ]
   },
   {
     "id": 3,
-    "name": "北山地穴",
-    "nameEn": "Northhill Crypt",
-    "key": "Dungeon",
-    "area": "阿瑟隆王国",
-    "level": "15-30级",
-    "difficulty": "普通",
-    "boss": "骷髅队长",
-    "drops": ["哥布林战士缰绳", "骷髅弓箭手缰绳", "骷髅战士缰绳", "铁剑"],
-    "description": "位于艾尔文平原下方的古老墓穴。哥布林战士、骷髅弓箭手与骷髅战士盘踞于此，是中期装备与随从材料的重要来源。",
-    "enemies": ["哥布林战士", "骷髅弓箭手", "骷髅战士"]
+    "name": "维尔达克之城",
+    "nameEn": "City of Veldak",
+    "key": "ColdTown",
+    "area": "维尔达克",
+    "level": "不限",
+    "difficulty": "安全",
+    "boss": "无",
+    "drops": [
+      "药水",
+      "北山地穴钥匙"
+    ],
+    "description": "北方冰雪之城，英雄们可以从这里进入北山地穴副本。",
+    "enemies": []
   },
   {
     "id": 4,
-    "name": "北山地穴下层",
-    "nameEn": "Northhill Crypt Lower",
-    "key": "DungeonL",
-    "area": "阿瑟隆王国",
-    "level": "25-40级",
-    "difficulty": "困难",
-    "boss": "兽人酋长",
-    "drops": ["兽人战士缰绳", "食人魔缰绳", "诅咒精华碎片", "骷髅钥匙"],
-    "description": "北山地穴的更深层，这里盘踞着兽人战士、食人魔与黑暗精灵法师。击败守关Boss可获得进入更高级区域的钥匙材料。",
-    "enemies": ["兽人战士", "食人魔", "黑暗精灵法师"]
+    "name": "国王森林",
+    "nameEn": "Kings Woods",
+    "key": "Forest",
+    "area": "国王森林",
+    "level": "Lv.5+",
+    "difficulty": "普通",
+    "boss": "剧毒女王",
+    "drops": [
+      "蓝色猛犸象缰绳",
+      "知识之书",
+      "金币袋",
+      "绿色装备"
+    ],
+    "description": "一片茂密的古老森林，居住着各种野兽和蜘蛛类怪物。森林深处栖息着剧毒女王，传说她的毒液能腐蚀一切。",
+    "enemies": [
+      "灰森林狼",
+      "黑蜘蛛",
+      "毒液蜘蛛",
+      "变异之狼",
+      "野猪",
+      "远古橡树树人",
+      "树桩怪"
+    ]
   },
   {
     "id": 5,
-    "name": "国王森林南部",
-    "nameEn": "Kings Woods South",
+    "name": "腐败森林",
+    "nameEn": "Corrupt Forest",
     "key": "CorruptForest",
-    "area": "阿瑟隆王国",
-    "level": "35-50级",
+    "area": "国王森林",
+    "level": "Lv.10+",
     "difficulty": "困难",
-    "boss": "远古橡树树人",
-    "drops": ["树桩怪缰绳", "远古橡树树人缰绳", "血月狼人缰绳", "传说防具"],
-    "description": "被腐化侵蚀的国王森林南部，树桩怪、血月狼人与远古橡树树人在这里游荡。高稀有度自然随从与传说装备的主要产出地。",
-    "enemies": ["树桩怪", "血月狼人", "远古橡树树人"]
+    "boss": "血月狼人",
+    "drops": [
+      "血月狼人缰绳",
+      "诅咒精华碎片",
+      "紫色装备"
+    ],
+    "description": "国王森林深处被黑暗力量腐蚀的阴暗区域，居住着被诅咒的不死生物和变异狼群。",
+    "enemies": [
+      "变异之狼",
+      "骷髅弓箭手",
+      "骷髅战士",
+      "血月狼人"
+    ]
   },
   {
     "id": 6,
-    "name": "神话裂隙",
-    "nameEn": "Mythic Rift",
-    "key": "MythicDungeon",
-    "area": "阿瑟隆王国",
-    "level": "50+级",
-    "difficulty": "噩梦",
-    "boss": "幼年黑龙",
-    "drops": ["龙之缰绳", "传说武器", "神圣装备"],
-    "description": "勇者的终极试炼之地。裂隙深处潜藏着幼年黑龙等神话级敌人，是获取最顶级装备与稀有随从缰绳的必经之路。",
-    "enemies": ["幼年黑龙"]
+    "name": "北山地穴",
+    "nameEn": "Northhill Crypt",
+    "key": "Dungeon",
+    "area": "北山地穴",
+    "level": "Lv.15+",
+    "difficulty": "困难",
+    "boss": "食人魔",
+    "drops": [
+      "食人魔之牙",
+      "经验之书 II",
+      "蓝色装备"
+    ],
+    "description": "维尔达克城北的古老地下墓穴，被亡灵和不死生物占据。深入探索可以找到稀有的亡灵材料。",
+    "enemies": [
+      "骷髅弓箭手",
+      "骷髅战士",
+      "食人魔"
+    ]
   },
   {
     "id": 7,
-    "name": "封锁区域",
+    "name": "北山地穴·下层",
+    "nameEn": "Northhill Crypt Lower",
+    "key": "DungeonL",
+    "area": "北山地穴",
+    "level": "Lv.20+",
+    "difficulty": "极难",
+    "boss": "远古橡树树人",
+    "drops": [
+      "黑色装备",
+      "技能书",
+      "传奇碎片"
+    ],
+    "description": "北山地穴的最深层，充斥着大量不死生物和远古生物。只有最强的英雄才能在此生存。",
+    "enemies": [
+      "远古橡树树人",
+      "骷髅战士",
+      "食人魔",
+      "变异之狼"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "塔赞之城",
+    "nameEn": "City of Tazan",
+    "key": "DesertTown",
+    "area": "塔赞",
+    "level": "不限",
+    "difficulty": "安全",
+    "boss": "无",
+    "drops": [
+      "沙地药水",
+      "沙漠装备"
+    ],
+    "description": "沙漠中的贸易城市，英雄们在此补充物资后可以前往塔赞荒漠探险。",
+    "enemies": []
+  },
+  {
+    "id": 9,
+    "name": "塔赞荒漠",
+    "nameEn": "Tazan Wastes",
+    "key": "Desert",
+    "area": "塔赞荒漠",
+    "level": "Lv.25+",
+    "difficulty": "困难",
+    "boss": "沙暴鹰身女妖女王",
+    "drops": [
+      "沙丘之鹰缰绳",
+      "沙漠黄蜂毒针",
+      "金色装备"
+    ],
+    "description": "塔赞城外广袤的沙漠地带，黄沙漫天，沙暴频繁。沙暴鹰身女妖女王盘踞于风暴之眼，统领着沙漠中的怪物。",
+    "enemies": [
+      "沙丘之鹰",
+      "沙漠黄蜂",
+      "沙漠狗头人盗贼",
+      "沙漠狗头人战士",
+      "沙暴鹰身女妖女王"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "红色沙漠",
+    "nameEn": "Red Desert",
+    "key": "RedDesert",
+    "area": "贫瘠之地",
+    "level": "Lv.30+",
+    "difficulty": "极难",
+    "boss": "吞噬者瑟帕玛特",
+    "drops": [
+      "幼年黑龙缰绳",
+      "红岩精华",
+      "紫色装备"
+    ],
+    "description": "由焦土和岩浆构成的荒凉之地，居住着各种恶魔和远古生物。吞噬者瑟帕玛特是这里最强大的存在，连岩石都能被它吞噬。",
+    "enemies": [
+      "荒原鳄鱼",
+      "焦土小恶魔",
+      "荒原萨特",
+      "红岩魔像",
+      "红岩领主",
+      "吞噬者瑟帕玛特",
+      "恐怖沙漠蝎狮"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "神话裂隙",
+    "nameEn": "Mythic Rift",
+    "key": "MythicDungeon",
+    "area": "神话裂隙",
+    "level": "Lv.40+",
+    "difficulty": "地狱",
+    "boss": "幼年黑龙",
+    "drops": [
+      "幼年黑龙缰绳",
+      "神话碎片",
+      "传说装备"
+    ],
+    "description": "通往神话世界的裂隙，居住着远古巨龙。幼年黑龙在此守卫着通往更深层神话领域的入口。",
+    "enemies": [
+      "幼年黑龙",
+      "黑暗精灵法师",
+      "血月狼人"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "未解锁区域",
     "nameEn": "Locked Area",
     "key": "LockedMap",
-    "area": "阿瑟隆王国",
-    "level": "??",
-    "difficulty": "未知",
-    "boss": "未知",
-    "drops": ["???"],
-    "description": "当前尚未开放的区域，等待后续版本解锁。",
+    "area": "未知",
+    "level": "???",
+    "difficulty": "???",
+    "boss": "???",
+    "drops": [],
+    "description": "尚未解锁的神秘区域，英雄需要达到特定条件才能进入。",
     "enemies": []
   }
 ]

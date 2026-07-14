@@ -77,10 +77,11 @@ const { frontmatter } = useData()
 <div class="db-card-count">7 个关卡</div>
 </a>
 
-<a href="/damage-calculator" class="db-card">
-<div class="db-card-icon">🔢</div>
-<div class="db-card-title">伤害计算器</div>
-<div class="db-card-desc">技能伤害、DPS 计算、属性加成模拟</div>
+<a href="/build" class="db-card">
+<div class="db-card-icon">⚔️</div>
+<div class="db-card-title">构筑模拟器</div>
+<div class="db-card-desc">装备/词条/技能自由组合，实时预览综合属性</div>
+<div class="db-card-count">112 件装备 × 25 词条 × 90 技能</div>
 </a>
 
 <a href="/faq" class="db-card">

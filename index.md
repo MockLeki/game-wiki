@@ -11,8 +11,8 @@ hero:
     - theme: brand
       text: 进入数据库
       link: /database
-    - theme: alt
-      text: 玩家社区
+    - theme: brand
+      text: 👥 玩家社区
       link: https://deskrawl.freeflarum.com
 
 features:
@@ -41,3 +41,39 @@ features:
     details: 新手入门、游戏技巧、疑难解答
     link: /faq
 ---
+
+<div class="steam-bar">
+  <div class="steam-bar-inner">
+    <div class="steam-stat-live">
+      <span class="steam-dot"></span>
+      <span class="steam-label">Steam 在线玩家</span>
+      <strong id="steam-count">-</strong>
+    </div>
+    <div class="steam-stat-live">
+      <span>⭐</span>
+      <span class="steam-label">好评</span>
+      <strong id="steam-review">-</strong>
+    </div>
+    <div class="steam-stat-live">
+      <span>💰</span>
+      <span class="steam-label">价格</span>
+      <strong id="steam-price">-</strong>
+    </div>
+  </div>
+</div>
+
+<style>
+.steam-bar {
+  max-width: 600px; margin: 0 auto 2rem; padding: 0 1rem;
+}
+.steam-bar-inner {
+  display: flex; justify-content: center; gap: 2rem;
+  background: rgba(201,165,91,0.06); border: 1px solid rgba(201,165,91,0.15);
+  border-radius: 12px; padding: 0.8rem 1.5rem;
+}
+.steam-stat-live { display: flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; color: #c7b8a3; }
+.steam-dot { width: 8px; height: 8px; border-radius: 50%; background: #4caf50; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.steam-label { margin-right: 0.2rem; }
+.steam-stat-live strong { color: #c9a55b; }
+</style>

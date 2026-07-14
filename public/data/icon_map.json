@@ -29,7 +29,12 @@
     "TreasureChest1": "/images/icons/items/chest_gilded.png",
     "TreasureChest2": "/images/icons/items/chest_splendid.png",
     "Material1": "/images/icons/items/material_cursed.png",
-    "Skull": "/images/icons/items/material_skull.png"
+    "Skull": "/images/icons/items/material_skull.png",
+    "LegendaryChestArmor3": "/images/icons/items/legendarychestarmor3.png",
+    "LegendaryHelm2": "/images/icons/items/legendaryhelm2.png",
+    "LegendaryNeck2": "/images/icons/items/legendaryneck2.png",
+    "LegendaryNeck3": "/images/icons/items/legendaryneck3.png",
+    "LegendaryStaff1": "/images/icons/items/legendarystaff1.png"
   },
   "ui_map": {
     "slot_bg_common": "/images/icons/ui/slot_bg_common.png",

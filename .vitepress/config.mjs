@@ -6,6 +6,10 @@ export default defineConfig({
   description: "最全的游戏资料站",
   lang: 'zh-CN',
 
+  head: [
+    ['script', { src: '/steam-widget.js', defer: '' }]
+  ],
+
   themeConfig: {
     appearance: 'dark',
     siteTitle: '桌面破坏神 - QQ官方群1048729821 玩家交流群737018935',
@@ -26,7 +30,7 @@ export default defineConfig({
           { text: '技能大全', link: '/skills' },
           { text: '仆从大全', link: '/minions' },
           { text: '关卡大全', link: '/levels' },
-          { text: '伤害计算器', link: '/damage-calculator' },
+          { text: '构筑模拟器', link: '/build' },
         ]
       },
       {

@@ -26,6 +26,21 @@ const filteredCompanions = computed(() => {
   return list
 })
 
+const groupedCompanions = computed(() => {
+  const list = filteredCompanions.value
+  const groups = []
+  let currentQuality = null
+  const qualityNames = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说', divine: '神圣' }
+  for (const c of list) {
+    if (c.quality !== currentQuality) {
+      currentQuality = c.quality
+      groups.push({ type: 'header', quality: c.quality, label: qualityNames[c.quality] || c.quality, count: list.filter(x => x.quality === c.quality).length })
+    }
+    groups.push({ type: 'item', data: c })
+  }
+  return groups
+})
+
 const qualityColor = (q) => {
   const colors = { common: '#9e9e9e', uncommon: '#4caf50', rare: '#2196f3', legendary: '#ff9800' }
   return colors[q] || '#9e9e9e'
@@ -61,8 +76,6 @@ const getCompanionsBySpecies = (speciesKey) => {
 <div class="tabs">
 <button :class="['tab', { active: activeTab==='companions' }]" @click="activeTab='companions'">🐾 可捕获仆从</button>
 <button :class="['tab', { active: activeTab==='npcs' }]" @click="activeTab='npcs'">🏛️ 城镇NPC</button>
-<button :class="['tab', { active: activeTab==='enemies' }]" @click="activeTab='enemies'">👹 怪物图鉴</button>
-<button :class="['tab', { active: activeTab==='species' }]" @click="activeTab='species'">🔬 物种百科</button>
 </div>
 <div v-if="activeTab==='companions'" class="tab-content">
 <div class="filters">
@@ -88,43 +101,49 @@ const getCompanionsBySpecies = (speciesKey) => {
 <p v-if="filteredCompanions.length === 0" class="no-data">没有找到匹配的仆从</p>
 <p v-else class="result-count">共找到 <strong>{{ filteredCompanions.length }}</strong> 个仆从</p>
 <div class="companions-grid">
-<div v-for="comp in filteredCompanions" :key="comp.id" class="companion-card" :style="{ borderColor: qualityColor(comp.quality) }">
-<div class="comp-header" :style="{ backgroundColor: qualityColor(comp.quality) }">
+<template v-for="entry in groupedCompanions" :key="entry.type === 'header' ? 'h-' + entry.quality : entry.data.id">
+<div v-if="entry.type === 'header'" class="quality-section-header" :style="{ backgroundColor: qualityColor(entry.quality), borderColor: qualityColor(entry.quality) }">
+<span class="quality-section-title">{{ entry.label }}品质</span>
+<span class="quality-section-count">{{ entry.count }} 个仆从</span>
+</div>
+<div v-else class="companion-card" :style="{ borderColor: qualityColor(entry.data.quality) }">
+<div class="comp-header" :style="{ backgroundColor: qualityColor(entry.data.quality) }">
 <div class="comp-title">
 <div class="comp-icon-wrap">
-<img v-if="comp.icon" :src="comp.icon" class="comp-icon-img" alt="">
-<span v-else class="species-icon">{{ speciesIcon(comp.species) }}</span>
+<img v-if="entry.data.icon" :src="entry.data.icon" class="comp-icon-img" alt="">
+<span v-else class="species-icon">{{ speciesIcon(entry.data.species) }}</span>
 </div>
 <div>
-<span class="comp-name">{{ comp.name }}</span>
-<span class="comp-name-en">{{ comp.nameEn }}</span>
+<span class="comp-name">{{ entry.data.name }}</span>
+<span class="comp-name-en">{{ entry.data.nameEn }}</span>
 </div>
 </div>
 <div class="comp-badges">
-<span class="quality-badge" :style="{ backgroundColor: qualityColor(comp.quality) }">{{ qualityName(comp.quality) }}</span>
-<span class="species-badge">{{ comp.speciesName }}</span>
+<span class="quality-badge" :style="{ backgroundColor: qualityColor(entry.data.quality) }">{{ qualityName(entry.data.quality) }}</span>
+<span class="species-badge">{{ entry.data.speciesName }}</span>
 </div>
 </div>
 <div class="comp-body">
 <div class="comp-info">
-<div class="info-row"><span class="info-label">等级要求</span><span class="info-value">Lv.{{ comp.level }}</span></div>
-<div class="info-row"><span class="info-label">负重</span><span class="info-value">{{ comp.weight }}</span></div>
-<div class="info-row"><span class="info-label">出没地点</span><span class="info-value">{{ comp.location }}</span></div>
+<div class="info-row"><span class="info-label">等级要求</span><span class="info-value">Lv.{{ entry.data.level }}</span></div>
+<div class="info-row"><span class="info-label">负重</span><span class="info-value">{{ entry.data.weight }}</span></div>
+<div class="info-row"><span class="info-label">出没地点</span><span class="info-value">{{ entry.data.location }}</span></div>
 </div>
-<div v-if="comp.activeSkill" class="comp-active-skill">
+<div v-if="entry.data.activeSkill" class="comp-active-skill">
 <div class="skill-label">⚡ 主动技能</div>
-<div class="skill-name">{{ comp.activeSkill.name }} <span class="skill-name-en">({{ comp.activeSkill.nameEn }})</span></div>
-<p class="skill-desc">{{ comp.activeSkill.desc }}</p>
+<div class="skill-name">{{ entry.data.activeSkill.name }} <span class="skill-name-en">({{ entry.data.activeSkill.nameEn }})</span></div>
+<p class="skill-desc">{{ entry.data.activeSkill.desc }}</p>
 </div>
 <div class="comp-passives">
 <div class="skill-label">📋 被动加成</div>
-<div v-for="p in comp.passives" :key="p.name" class="passive-item">
+<div v-for="p in entry.data.passives" :key="p.name" class="passive-item">
 <span class="passive-name">{{ p.name }}</span>
 <span class="passive-desc">{{ p.desc }}</span>
 </div>
 </div>
 </div>
 </div>
+</template>
 </div>
 </div>
 <div v-if="activeTab==='npcs'" class="tab-content">
@@ -141,31 +160,6 @@ const getCompanionsBySpecies = (speciesKey) => {
 </div>
 <div class="npc-body">
 <p>{{ npc.desc }}</p>
-</div>
-</div>
-</div>
-</div>
-<div v-if="activeTab==='enemies'" class="tab-content">
-<div class="enemy-grid">
-<div v-for="enemy in minionData.enemies" :key="enemy.name" class="enemy-item">
-<div class="enemy-icon-wrap">
-<img v-if="enemy.icon" :src="enemy.icon" class="enemy-icon-img" alt="">
-</div>
-<span class="enemy-name">{{ enemy.name }}</span>
-<span class="enemy-name-en">{{ enemy.nameEn }}</span>
-</div>
-</div>
-</div>
-<div v-if="activeTab==='species'" class="tab-content">
-<div class="species-grid">
-<div v-for="sp in minionData.species" :key="sp.key" class="species-card">
-<div class="species-icon-large">{{ sp.icon }}</div>
-<div class="species-name">{{ sp.name }}</div>
-<div class="species-name-en">{{ sp.nameEn }}</div>
-<div class="species-companions">
-<span v-for="comp in getCompanionsBySpecies(sp.key)" :key="comp.id" class="species-comp-tag" :style="{ borderColor: qualityColor(comp.quality) }">
-{{ comp.name }}
-</span>
 </div>
 </div>
 </div>
@@ -309,6 +303,19 @@ const getCompanionsBySpecies = (speciesKey) => {
 .passive-item:last-child { border-bottom: none; }
 .passive-name { color: #4caf50; font-size: 0.85rem; font-weight: bold; }
 .passive-desc { color: #c7b8a3; font-size: 0.8rem; }
+.quality-section-header {
+  grid-column: 1 / -1;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 2px solid;
+  margin: 1rem 0 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quality-section-header:first-of-type { margin-top: 0; }
+.quality-section-title { color: #efe6d8; font-weight: bold; font-size: 1rem; }
+.quality-section-count { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
 .npc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.8rem; }
 .npc-card {
   background: #181513;

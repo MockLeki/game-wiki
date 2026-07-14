@@ -67,19 +67,14 @@ const buffPotions = computed(() => {
   return itemData.value.consumables.filter(c => !c.id.startsWith('Hp'))
 })
 
-const currentTree = computed(() => {
-  if (!equipTree.value) return null
-  return equipTree.value.tree[treeSlot.value]
-})
-
 const treeTiers = computed(() => {
-  if (!currentTree.value) return []
+  if (!equipTree.value) return []
   return [
     { key: 'common', name: '普通' },
     { key: 'uncommon', name: '非凡' },
     { key: 'rare', name: '稀有' },
     { key: 'legendary', name: '传说' }
-  ].map(t => ({ ...t, items: currentTree.value[t.key] || [] }))
+  ].map(t => ({ ...t, items: equipTree.value.tree?.[t.key]?.[treeSlot.value] || [] }))
 })
 
 const legendaryById = computed(() => {
@@ -114,7 +109,6 @@ const getMinionIcon = (name) => {
 <button :class="['tab', { active: activeTab === 'armor' }]" @click="activeTab = 'armor'">🛡️ 传说防具</button>
 <button :class="['tab', { active: activeTab === 'consumables' }]" @click="activeTab = 'consumables'">🧪 消耗品</button>
 <button :class="['tab', { active: activeTab === 'materials' }]" @click="activeTab = 'materials'">📦 材料</button>
-<button :class="['tab', { active: activeTab === 'reins' }]" @click="activeTab = 'reins'">🐴 随从</button>
 </div>
 
 <!-- 装备树 Tab -->
