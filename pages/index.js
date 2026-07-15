@@ -16,6 +16,10 @@ export default function Home() {
     <Layout>
       <div className="page-wrap">
         <div className="hero-card">
+          <div className="corner-deco tl"></div>
+          <div className="corner-deco tr"></div>
+          <div className="corner-deco bl"></div>
+          <div className="corner-deco br"></div>
           <h1 className="hero-title">桌面破坏神 · Wiki</h1>
           <p className="hero-subtitle">
             浏览桌面破坏神·挂机ARPG的装备、材料、关卡宝箱、掉落表、仆从、词条和刷取数据，
