@@ -3,20 +3,14 @@ import Link from 'next/link'
 
 export default function Home() {
   const stats = [
-    { icon: '⚔️', name: '装备', num: 112 },
-    { icon: '🐺', name: '仆从', num: 36 },
-    { icon: '🗺️', name: '关卡', num: 12 },
-    { icon: '🎯', name: '技能', num: 90 },
-    { icon: '✨', name: '词条', num: 41 },
-    { icon: '💎', name: '材料', num: 12 },
-    { icon: '🔥', name: '被动', num: 32 },
-    { icon: '📜', name: '新闻', num: 5 },
-  ]
-  const sections = [
-    { icon: '⚔️', name: '装备图鉴', num: 112, desc: '4 品质 × 10 部位', link: '/gear' },
-    { icon: '🔮', name: '技能大全', num: 90, desc: '战士/法师技能', link: '/skills' },
-    { icon: '✨', name: '词条计算器', num: 41, desc: '实时属性汇总', link: '/affixes' },
-    { icon: '🐺', name: '仆从大全', num: 36, desc: '品质/物种/捕获', link: '/minions' },
+    { icon: '⚔️', name: '装备', num: 112, link: '/gear' },
+    { icon: '🐺', name: '仆从', num: 36, link: '/minions' },
+    { icon: '🗺️', name: '关卡', num: 12, link: '/world' },
+    { icon: '🎯', name: '技能', num: 90, link: '/skills' },
+    { icon: '✨', name: '词条', num: 41, link: '/affixes' },
+    { icon: '💎', name: '材料', num: 12, link: '/gear' },
+    { icon: '🔥', name: '被动', num: 32, link: '/skills' },
+    { icon: '📜', name: '新闻', num: 5, link: '/faq' },
   ]
   return (
     <Layout>
@@ -32,29 +26,6 @@ export default function Home() {
           </div>
           <div className="hero-stats-grid">
             {stats.map(s => (
-              <div className="hero-stat" key={s.name}>
-                <div className="hero-stat-icon">{s.icon}</div>
-                <div className="hero-stat-text">
-                  <div className="hero-stat-name">{s.name}</div>
-                  <div className="hero-stat-num">{s.num}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="steam-bar">
-          <div className="steam-stat-live"><span className="steam-dot"></span><span>在线</span><strong id="steam-count">-</strong></div>
-          <div className="steam-stat-live"><span>⭐</span><span>好评</span><strong id="steam-review">-</strong></div>
-          <div className="steam-stat-live"><span>💰</span><span>价格</span><strong id="steam-price">-</strong></div>
-        </div>
-
-        <div className="hero-card" style={{padding: '2rem'}}>
-          <h2 style={{color: 'var(--gold-light)', fontSize: '1.5rem', marginBottom: '1.5rem', textAlign: 'center', textShadow: '0 0 12px rgba(201,165,91,0.4)'}}>
-            数据库入口
-          </h2>
-          <div className="hero-stats-grid">
-            {sections.map(s => (
               <Link href={s.link} key={s.name} className="hero-stat" style={{textDecoration:'none'}}>
                 <div className="hero-stat-icon">{s.icon}</div>
                 <div className="hero-stat-text">
@@ -65,6 +36,30 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <div className="steam-bar">
+          <div className="steam-stat-live"><span className="steam-dot"></span><span>在线</span><strong id="steam-count">-</strong></div>
+          <div className="steam-stat-live"><span>⭐</span><span>好评</span><strong id="steam-review">-</strong></div>
+          <div className="steam-stat-live"><span>💰</span><span>价格</span><strong id="steam-price">-</strong></div>
+        </div>
+
+        {/* 玩家社区论坛 - 突出按钮 */}
+        <a
+          href="https://deskrawl.freeflarum.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="forum-cta"
+        >
+          <div className="forum-cta-bg" />
+          <div className="forum-cta-content">
+            <div className="forum-cta-icon">💬</div>
+            <div className="forum-cta-text">
+              <div className="forum-cta-title">玩家社区论坛</div>
+              <div className="forum-cta-subtitle">讨论攻略 · 交换情报 · 寻找队友</div>
+            </div>
+            <div className="forum-cta-arrow">→</div>
+          </div>
+        </a>
       </div>
     </Layout>
   )
