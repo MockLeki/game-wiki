@@ -12,6 +12,23 @@ const QUALITIES = [
   { key: 'legendary', name: '传说', class: 'chip-legendary' },
 ]
 const Q_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }
+const SPECIES_ICON = {
+  兽类: '/images/minions/wolf_icon.png',
+  人类: '/images/minions/werewolf_icon.png',
+  精灵: '/images/minions/dragon_firebreath.png',
+  死灵: '/images/minions/zombie_wolf.png',
+  龙类: '/images/minions/gray_63_dragon.png',
+  自然: '/images/minions/forest_spider_king_icon.png',
+  元素: '/images/minions/gray_63_dragon.png',
+}
+function getMinionIcon(m) {
+  if (m.name?.includes('黑龙') || m.name?.includes('Dragon')) return '/images/minions/gray_63_dragon.png'
+  if (m.name?.includes('狼人') || m.name?.includes('Werewolf')) return '/images/minions/werewolf_icon.png'
+  if (m.name?.includes('蜘蛛') || m.name?.includes('Spider')) return '/images/minions/spider_icon.png'
+  if (m.name?.includes('狼') || m.name?.includes('Wolf')) return '/images/minions/wolf_icon.png'
+  return SPECIES_ICON[m.speciesName] || '/images/minions/wolf_icon.png'
+}
+
 const SPECIES = { 兽类: '🐺', 人类: '👹', 精灵: '🧝', 死灵: '💀', 龙类: '🐉', 自然: '⛰️', 元素: '✨' }
 
 export default function MinionsPage() {
@@ -97,7 +114,9 @@ export default function MinionsPage() {
               <div key={m.id} className={`item-card q-${m.quality}`}>
                 <span className={`quality-badge q-${m.quality}`}>{Q_NAMES[m.quality]}</span>
                 <div className="item-header">
-                  <div className="item-icon">{SPECIES[m.speciesName] || '🐺'}</div>
+                  <div className="item-icon">
+                    <img src={getMinionIcon(m)} alt="" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+                  </div>
                   <div style={{flex: 1}}>
                     <div className="item-name">{m.name}</div>
                     <div className="item-meta">{m.speciesName} · {m.quality === 'legendary' ? '传说' : m.quality === 'rare' ? '稀有' : m.quality === 'uncommon' ? '非凡' : '普通'}</div>

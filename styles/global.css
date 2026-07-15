@@ -335,3 +335,211 @@ a:hover { color: var(--gold-light); }
   .hero-stats-grid { grid-template-columns: 1fr; }
   .items-grid { grid-template-columns: 1fr; }
 }
+
+/* === World Map Interactive (SVG-based) === */
+.world-map-container {
+  margin: 1.5rem 0;
+  background: var(--bg-card);
+  border: 2px solid var(--border-gold);
+  border-radius: 4px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(201, 48, 48, 0.15);
+}
+.world-map-title {
+  background: linear-gradient(180deg, var(--red) 0%, var(--red-deep) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-gold);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 2;
+}
+.world-map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  cursor: crosshair;
+  overflow: hidden;
+}
+.world-map-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  filter: brightness(0.95) contrast(1.05);
+}
+.world-map-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(139,111,62,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 30%, rgba(76,175,80,0.3) 0%, transparent 40%),
+    radial-gradient(ellipse at 75% 70%, rgba(217,122,37,0.3) 0%, transparent 40%),
+    radial-gradient(ellipse at 20% 70%, rgba(70,130,180,0.2) 0%, transparent 40%),
+    linear-gradient(135deg, #1a2a1f 0%, #0a1a2a 30%, #2a1f0a 60%, #0a1a1f 100%);
+}
+.world-map-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(120,80,40,0.5) 0%, transparent 8%),
+    radial-gradient(circle at 22% 35%, rgba(120,80,40,0.4) 0%, transparent 6%),
+    radial-gradient(circle at 60% 35%, rgba(76,175,80,0.5) 0%, transparent 15%),
+    radial-gradient(circle at 70% 30%, rgba(76,175,80,0.4) 0%, transparent 12%),
+    radial-gradient(circle at 45% 45%, rgba(76,175,80,0.3) 0%, transparent 10%),
+    radial-gradient(circle at 75% 65%, rgba(217,122,37,0.4) 0%, transparent 12%),
+    radial-gradient(circle at 85% 60%, rgba(217,122,37,0.5) 0%, transparent 10%),
+    radial-gradient(circle at 30% 75%, rgba(70,130,180,0.3) 0%, transparent 8%);
+  pointer-events: none;
+}
+.world-map-terrain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 3;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+  transition: transform 0.2s;
+}
+.map-pin:hover { transform: translate(-50%, -50%) scale(1.15); z-index: 4; }
+.map-pin.selected { transform: translate(-50%, -50%) scale(1.3); z-index: 5; }
+.map-pin .pin-icon {
+  width: 36px; height: 36px;
+  background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, transparent 70%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  color: var(--pin-color, var(--gold));
+  text-shadow: 0 0 8px var(--pin-color, var(--gold));
+}
+.map-pin .pin-label {
+  font-size: 0.7rem;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  border: 1px solid var(--pin-color, var(--gold));
+  font-weight: 500;
+  text-shadow: 0 0 4px var(--pin-color, var(--gold));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.map-pin:hover .pin-label,
+.map-pin.selected .pin-label { opacity: 1; }
+.map-pin-capital .pin-icon { color: #4caf50; }
+.map-pin-dungeon .pin-icon { color: #ff9800; }
+.map-pin-forest .pin-icon { color: #66bb6a; }
+.map-pin-desert .pin-icon { color: #d97a25; }
+.map-pin-mythic .pin-icon { color: #9c27b0; }
+.map-pin-locked .pin-icon { color: #757575; }
+.map-detail-card {
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-darker) 100%);
+  border: 1px solid var(--border-bright);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  position: relative;
+  box-shadow: 0 0 12px rgba(201, 165, 91, 0.2);
+}
+.map-detail-close {
+  position: absolute; top: 8px; right: 8px;
+  width: 28px; height: 28px;
+  background: var(--red);
+  color: #fff; border: 1px solid var(--border-bright);
+  border-radius: 4px; cursor: pointer; font-size: 1rem;
+}
+.map-detail-close:hover { background: var(--red-glow); }
+.map-detail-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.map-detail-btn {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(180deg, var(--red) 0%, var(--red-deep) 100%);
+  color: #fff; border: 1px solid var(--border-gold);
+  border-radius: 3px; text-decoration: none; font-size: 0.9rem;
+}
+.map-detail-btn:hover { background: linear-gradient(180deg, var(--red-glow) 0%, var(--red) 100%); }
+
+/* === World Map Grid (3-col) === */
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.world-card {
+  background: linear-gradient(180deg, var(--bg-card) 0%, #150a06 100%);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid var(--border-gold);
+  position: relative;
+  transition: all 0.2s;
+}
+.world-card:hover {
+  border-color: var(--border-bright);
+  background: linear-gradient(180deg, #2a1e15 0%, #1a0e08 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 48, 48, 0.2);
+}
+.world-card-header {
+  display: flex; align-items: center; gap: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+.world-card-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--red-deep) 0%, var(--red) 50%, var(--orange) 100%);
+  border: 1px solid var(--border-bright);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(201, 48, 48, 0.3);
+}
+.world-card-titles { flex: 1; }
+.world-card-cn {
+  font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 600;
+  color: var(--gold-light); margin-bottom: 0.1rem;
+  text-shadow: 0 0 4px rgba(201, 165, 91, 0.2);
+}
+.world-card-en {
+  color: var(--muted); font-size: 0.78rem; font-style: italic;
+}
+.world-card-meta {
+  padding: 0.4rem 0; margin-bottom: 0.4rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.world-difficulty { font-weight: 600; }
+.world-card-section {
+  font-size: 0.8rem; line-height: 1.6; margin: 0.15rem 0;
+  color: var(--text);
+}
+.world-section-label { color: var(--muted); margin-right: 0.3rem; }
+.world-section-value { color: var(--text-bright); }
+
+@media (max-width: 900px) {
+  .world-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .world-grid { grid-template-columns: 1fr; }
+}

@@ -5,7 +5,10 @@ import itemsData from '../public/data/items.json'
 export async function getStaticProps() { return { props: {} } }
 
 const SLOTS = { weapon: '武器', helm: '头盔', chest: '胸甲', shoulder: '护肩', necklace: '项链', gloves: '手套', belt: '腰带', legs: '护腿', boots: '靴子', ring: '戒指' }
-const SLOT_ICONS = { weapon: '⚔️', helm: '⛑️', chest: '🛡️', shoulder: '🦾', necklace: '📿', gloves: '🧤', belt: '🪢', legs: '👖', boots: '🥾', ring: '💍' }
+// 使用每件装备的专属图标（来自 items.json 的 icon 字段）
+function getIcon(item) {
+  return item.icon || '/images/items/ring.png'
+}
 const QUALITIES = [
   { key: 'all', name: '全部', class: 'chip-common' },
   { key: 'common', name: '普通', class: 'chip-common' },
@@ -126,7 +129,9 @@ export default function GearPage() {
                 <div key={item.id} className="item-card">
                   <span className={`quality-badge q-${item.quality}`}>{Q_BADGE_NAMES[item.quality]}</span>
                   <div className="item-header">
-                    <div className="item-icon">{SLOT_ICONS[item.slot] || '⚔️'}</div>
+                    <div className="item-icon">
+                      <img src={getIcon(item)} alt="" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+                    </div>
                     <div style={{flex: 1}}>
                       <div className="item-name">{item.name}</div>
                       <div className="item-meta">等级 1 · {SLOTS[item.slot]} · {item.quality === 'weapon' ? '武器' : '防具'}</div>
