@@ -8,9 +8,11 @@ backend:
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
+publish_mode: editorial_workflow
+
 collections:
   - name: "pages"
-    label: "Wiki 页面"
+    label: "📄 Wiki 页面"
     folder: ""
     create: true
     extension: md
@@ -18,50 +20,41 @@ collections:
       - { label: "页面标题", name: "title", widget: "string" }
       - { label: "正文", name: "body", widget: "markdown" }
 
-  - name: "data"
-    label: "游戏数据 (JSON)"
+  - name: "game_data"
+    label: "🎮 游戏数据 (JSON)"
     files:
-      - label: "装备图鉴"
+      - label: "装备数据库"
         name: "items"
         file: "public/data/items.json"
         fields:
           - { label: "装备数据", name: "body", widget: "code", default_language: "json" }
+
+      - label: "天赋数据库"
+        name: "talents"
+        file: "public/data/talents.json"
+        fields:
+          - { label: "天赋数据 (战士/法师)", name: "body", widget: "code", default_language: "json" }
+
+      - label: "技能数据库"
+        name: "skills"
+        file: "public/data/skills.json"
+        fields:
+          - { label: "技能数据", name: "body", widget: "code", default_language: "json" }
+
+      - label: "世界地图数据"
+        name: "world"
+        file: "public/data/levels.json"
+        fields:
+          - { label: "关卡数据", name: "body", widget: "code", default_language: "json" }
+
+      - label: "仆从数据库"
+        name: "minions"
+        file: "public/data/minions.json"
+        fields:
+          - { label: "仆从数据", name: "body", widget: "code", default_language: "json" }
 
       - label: "词条数据"
         name: "affixes"
         file: "public/data/affixes.json"
         fields:
           - { label: "词条数据", name: "body", widget: "code", default_language: "json" }
-
-      - label: "仆从大全"
-        name: "minions"
-        file: "public/data/minions.json"
-        fields:
-          - { label: "仆从数据", name: "body", widget: "code", default_language: "json" }
-
-      - label: "技能大全"
-        name: "skills"
-        file: "public/data/skills.json"
-        fields:
-          - { label: "技能数据", name: "body", widget: "code", default_language: "json" }
-
-      - label: "关卡大全"
-        name: "levels"
-        file: "public/data/levels.json"
-        fields:
-          - { label: "关卡数据", name: "body", widget: "code", default_language: "json" }
-
-  - name: "builds"
-    label: "玩家构筑"
-    folder: "community-builds"
-    create: true
-    extension: json
-    fields:
-      - { label: "构筑名称", name: "title", widget: "string" }
-      - { label: "作者", name: "author", widget: "string" }
-      - { label: "构筑数据", name: "body", widget: "code", default_language: "json" }
-
-publish_mode: editorial_workflow
-site_url: https://deskrawl.top
-display_url: https://deskrawl.top
-logo_url: /logo.png
