@@ -25,6 +25,10 @@ export default function Home() {
             浏览桌面破坏神·挂机ARPG的装备、材料、关卡宝箱、掉落表、仆从、词条和刷取数据，
             整合成玩家随时可用的 Wiki。
           </p>
+          <div className="site-disclaimer">
+            本网站由噜总制作，无官方认证。如果觉得画风/风格做得不好，请您另寻其他网站。
+            如果害怕信息泄露，右上角 Steam 可不进行登录。感谢配合！
+          </div>
           <div className="hero-divider">
             <span className="hero-divider-icon">⚔</span>
           </div>
