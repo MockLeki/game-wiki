@@ -98,6 +98,43 @@ a:hover { color: var(--gold-light); }
 .nav-right a { color: var(--text); font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: 4px; }
 .nav-right a:hover { color: var(--gold-light); background: rgba(201, 165, 91, 0.1); }
 
+/* Steam 登录按钮 */
+.steam-login-btn {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.35rem 0.8rem;
+  background: linear-gradient(180deg, rgba(184, 28, 28, 0.3) 0%, rgba(184, 28, 28, 0.1) 100%);
+  border: 1px solid var(--red);
+  color: var(--red-glow); font-size: 0.8rem; border-radius: 3px;
+  text-decoration: none; transition: all 0.2s;
+  font-weight: 500;
+}
+.steam-login-btn:hover {
+  background: linear-gradient(180deg, rgba(184, 28, 28, 0.6) 0%, rgba(184, 28, 28, 0.3) 100%);
+  border-color: var(--red-glow); color: #fff;
+  box-shadow: 0 0 10px rgba(184, 28, 28, 0.4);
+}
+.steam-login-user {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  background: rgba(201, 165, 91, 0.08);
+}
+.steam-avatar {
+  width: 28px; height: 28px; border-radius: 2px;
+  border: 1px solid var(--border-gold);
+}
+.steam-name {
+  color: var(--gold-light); font-size: 0.8rem;
+  font-weight: 600; max-width: 120px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.steam-logout {
+  color: var(--muted); font-size: 0.9rem; text-decoration: none;
+  padding: 0 0.2rem;
+}
+.steam-logout:hover { color: var(--red-glow); }
+
 /* === Container === */
 .page-wrap { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; position: relative; z-index: 1; }
 
@@ -355,6 +392,8 @@ a:hover { color: var(--gold-light); }
 .chip-common.active { background: var(--l-common); color: #000; }
 .chip-uncommon.active { background: var(--l-uncommon); }
 .chip-rare.active { background: var(--l-rare); }
+.chip-excellent { color: #b81c1c; border-color: #b81c1c; }
+.chip-excellent.active { background: var(--l-divine); color: #fff; }
 .chip-legendary.active { background: var(--l-legendary); }
 .chip:hover:not(.active) { border-color: var(--border-bright); color: var(--gold-light); }
 
