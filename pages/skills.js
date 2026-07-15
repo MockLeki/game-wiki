@@ -1,187 +1,336 @@
 import Layout from '../components/Layout'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import talents from '../public/data/talents.json'
 
-export async function getStaticProps() {
-  return { props: {} }
+export async function getStaticProps() { return { props: {} } }
+
+// 天赋树布局：5列 × 7层
+// 每列是一条独立路径，列内有依赖关系
+const TREE_LAYOUT = {
+  Warrior: [
+    // 第0层 (顶部)
+    { col: 0, tier: 0, talentIdx: 0, maxPoints: 3 }, // 力量
+    { col: 1, tier: 0, talentIdx: 1, maxPoints: 5 }, // 活力
+    { col: 2, tier: 0, talentIdx: 3, maxPoints: 5 }, // 攻击速度
+    { col: 3, tier: 0, talentIdx: 2, maxPoints: 3 }, // 护甲
+    { col: 4, tier: 0, talentIdx: 7, maxPoints: 5 }, // 生命恢复
+    // 第1层
+    { col: 0, tier: 1, talentIdx: 4, maxPoints: 3 }, // 暴击几率
+    { col: 1, tier: 1, talentIdx: 5, maxPoints: 3 }, // 暴击伤害
+    { col: 2, tier: 1, talentIdx: 6, maxPoints: 3 }, // 荆棘
+    { col: 3, tier: 1, talentIdx: 20, maxPoints: 3 }, // 防御姿态
+    { col: 4, tier: 1, talentIdx: 21, maxPoints: 1 }, // 击杀回蓝
+    // 第2层
+    { col: 0, tier: 2, talentIdx: 8, maxPoints: 5 }, // 残暴
+    { col: 1, tier: 2, talentIdx: 9, maxPoints: 5 }, // 凶猛
+    { col: 2, tier: 2, talentIdx: 13, maxPoints: 5 }, // 荆棘强化
+    { col: 3, tier: 2, talentIdx: 24, maxPoints: 5 }, // 猛攻
+    { col: 4, tier: 2, talentIdx: 22, maxPoints: 1 }, // 重整旗鼓
+    // 第3层
+    { col: 0, tier: 3, talentIdx: 12, maxPoints: 5 }, // 重击
+    { col: 1, tier: 3, talentIdx: 11, maxPoints: 1 }, // 战斗激励
+    { col: 2, tier: 3, talentIdx: 17, maxPoints: 1 }, // 怒火导引
+    { col: 3, tier: 3, talentIdx: 18, maxPoints: 1 }, // [野兽] 强化
+    { col: 4, tier: 3, talentIdx: 19, maxPoints: 1 }, // [人形] 强化
+    // 第4层
+    { col: 0, tier: 4, talentIdx: 10, maxPoints: 3 }, // 劈砍狂怒
+    { col: 1, tier: 4, talentIdx: 14, maxPoints: 5 }, // 强化强力攻击
+    { col: 2, tier: 4, talentIdx: 15, maxPoints: 3 }, // 怒火注入
+    { col: 3, tier: 4, talentIdx: 28, maxPoints: 1 }, // 强化烈焰打击
+    { col: 4, tier: 4, talentIdx: 23, maxPoints: 3 }, // 专注
+    // 第5层
+    { col: 0, tier: 5, talentIdx: 16, maxPoints: 1 }, // 强化战吼
+    { col: 1, tier: 5, talentIdx: 25, maxPoints: 1 }, // 强化英勇打击
+    { col: 2, tier: 5, talentIdx: 26, maxPoints: 1 }, // [不死族] 强化
+    { col: 3, tier: 5, talentIdx: 29, maxPoints: 1 }, // 溢血
+    { col: 4, tier: 5, talentIdx: 27, maxPoints: 1 }, // 凶狠荆棘
+    // 第6层 (底部锁定)
+    { col: 0, tier: 6, talentIdx: -1, maxPoints: 1, locked: true },
+    { col: 1, tier: 6, talentIdx: -1, maxPoints: 1, locked: true },
+    { col: 2, tier: 6, talentIdx: -1, maxPoints: 1, locked: true },
+    { col: 3, tier: 6, talentIdx: -1, maxPoints: 1, locked: true },
+    { col: 4, tier: 6, talentIdx: -1, maxPoints: 1, locked: true },
+  ],
+  Sorcerer: [
+    { col: 0, tier: 0, talentIdx: 0, maxPoints: 3 },
+    { col: 1, tier: 0, talentIdx: 1, maxPoints: 5 },
+    { col: 2, tier: 0, talentIdx: 2, maxPoints: 5 },
+    { col: 3, tier: 0, talentIdx: 3, maxPoints: 3 },
+    { col: 4, tier: 0, talentIdx: 4, maxPoints: 5 },
+    { col: 0, tier: 1, talentIdx: 5, maxPoints: 3 },
+    { col: 1, tier: 1, talentIdx: 6, maxPoints: 3 },
+    { col: 2, tier: 1, talentIdx: 7, maxPoints: 3 },
+    { col: 3, tier: 1, talentIdx: 8, maxPoints: 3 },
+    { col: 4, tier: 1, talentIdx: 9, maxPoints: 1 },
+    { col: 0, tier: 2, talentIdx: 10, maxPoints: 5 },
+    { col: 1, tier: 2, talentIdx: 11, maxPoints: 5 },
+    { col: 2, tier: 2, talentIdx: 12, maxPoints: 5 },
+    { col: 3, tier: 2, talentIdx: 13, maxPoints: 5 },
+    { col: 4, tier: 2, talentIdx: 14, maxPoints: 1 },
+    { col: 0, tier: 3, talentIdx: 15, maxPoints: 5 },
+    { col: 1, tier: 3, talentIdx: 16, maxPoints: 1 },
+    { col: 2, tier: 3, talentIdx: 17, maxPoints: 1 },
+    { col: 3, tier: 3, talentIdx: 18, maxPoints: 1 },
+    { col: 4, tier: 3, talentIdx: 19, maxPoints: 1 },
+    { col: 0, tier: 4, talentIdx: 20, maxPoints: 3 },
+    { col: 1, tier: 4, talentIdx: 21, maxPoints: 5 },
+    { col: 2, tier: 4, talentIdx: 22, maxPoints: 3 },
+    { col: 3, tier: 4, talentIdx: 23, maxPoints: 3 },
+    { col: 4, tier: 4, talentIdx: 24, maxPoints: 3 },
+    { col: 0, tier: 5, talentIdx: 25, maxPoints: 1 },
+    { col: 1, tier: 5, talentIdx: 26, maxPoints: 1 },
+    { col: 2, tier: 5, talentIdx: 27, maxPoints: 1 },
+    { col: 3, tier: 5, talentIdx: 28, maxPoints: 1 },
+  ],
 }
 
-function getClassIcon(cls) {
-  const icons = { Warrior: '⚔️', Sorcerer: '🔮', Ranger: '🏹', Paladin: '🛡️', Monk: '👊', Assassin: '🗡️', Shaman: '⚡', Necromancer: '💀', Bard: '🎵', Warden: '🪓', Druid: '🌿', Priest: '✨' }
-  return icons[cls] || '⚔️'
-}
+const TOTAL_POINTS = 32
+const CLASS_NAMES = { Warrior: '战士', Sorcerer: '法师' }
+const CLASS_ICONS = { Warrior: '⚔️', Sorcerer: '🔮' }
 
-// 每个天赋的等级上限 — 按游戏内实际数据
-function getMaxLevel(cls, idx) {
-  if (idx < 8) return 3  // 基础天赋 0-7: 最多3级
-  if (idx < 16) return 5 // 进阶天赋 8-15: 最多5级
-  if (idx < 24) return 5 // 高级天赋 16-23: 最多5级
-  return 3 // 传奇天赋 24+: 最多3级
-}
-
-function getRarityLabel(cls, idx) {
-  if (idx < 8) return '基础'
-  if (idx < 16) return '进阶'
-  if (idx < 24) return '高级'
-  return '传奇'
-}
-
-// 模拟每级数值（待游戏截图替换）—— 先设为占位，等用户提供截屏
-function getTalentValue(talent, level) {
-  // 暂时使用 {value} 占位——等用户截图填具体数字
-  return talent.value || '{value}'
+// 解析天赋描述为加成类型
+function parseBonus(talent) {
+  if (!talent || !talent.desc) return { stat: null, perPoint: 0 }
+  const desc = talent.desc
+  let stat = '综合'
+  if (desc.includes('Strength')) stat = '力量'
+  else if (desc.includes('Max HP')) stat = '最大生命值'
+  else if (desc.includes('Armor') && desc.includes('Magic Resist')) stat = '护甲+魔抗'
+  else if (desc.includes('Attack Speed')) stat = '攻击速度'
+  else if (desc.includes('Critical Hit Chance')) stat = '暴击几率'
+  else if (desc.includes('Critical Hit Damage')) stat = '暴击伤害'
+  else if (desc.includes('Thorn') && !desc.includes('Boost')) stat = '荆棘'
+  else if (desc.includes('Life Regen')) stat = '生命恢复'
+  else if (desc.includes('Injured')) stat = '对受伤目标'
+  else if (desc.includes('Vulnerable')) stat = '对易伤目标'
+  else if (desc.includes('Mana') && desc.includes('Cost')) stat = '法力消耗'
+  return { stat, perPoint: 0 }  // 数值待游戏内截图
 }
 
 export default function SkillsPage() {
   const classes = Object.entries(talents.classes).map(([key, list]) => ({
-    key,
-    name: talents.names[key] || key,
-    icon: getClassIcon(key),
-    talents: list.filter(t => t && t.name).map((t, idx) => ({
-      ...t,
-      value: '{value}',
-      maxLevel: getMaxLevel(key, idx),
-      rarity: getRarityLabel(key, idx)
-    }))
+    key, name: CLASS_NAMES[key] || key, icon: CLASS_ICONS[key] || '⚔️',
+    talents: list.filter(t => t && t.name)
   }))
 
-  // 每个职业独立的点数状态
-  const [points, setPoints] = useState({})
-  const [allocated, setAllocated] = useState({})
-  const [selectedTal, setSelectedTal] = useState(null)
+  const [activeClass, setActiveClass] = useState('Warrior')
+  const [alloc, setAlloc] = useState({})  // {Warrior: {talentIdx: points}}
+  const [activeTab, setActiveTab] = useState('battle')  // battle / life
 
-  const getPts = (cls) => points[cls] || 0
-  const setPts = (cls, v) => setPoints(prev => ({ ...prev, [cls]: v }))
+  // 初始化每个职业点数
+  useEffect(() => {
+    const init = {}
+    classes.forEach(c => { init[c.key] = 0 })
+    setAlloc(prev => Object.keys(prev).length ? prev : init)
+  }, [])
 
-  const getAlloc = (cls, idx) => (allocated[cls] || {})[idx] || 0
-  const setAlloc = (cls, idx, v) => {
-    setAllocated(prev => ({ ...prev, [cls]: { ...(prev[cls] || {}), [idx]: v } }))
+  const getAlloc = (cls, idx) => (alloc[cls] || {})[idx] || 0
+
+  const setAllocFor = (cls, idx, val) => {
+    setAlloc(prev => ({ ...prev, [cls]: { ...(prev[cls] || {}), [idx]: val } }))
   }
 
-  const handleAllocate = (cls, idx, maxLevel) => {
-    const cur = getAlloc(cls, idx)
-    const pt = getPts(cls)
-    if (cur >= maxLevel) {
-      setAlloc(cls, idx, 0)
-      setPts(cls, pt + cur)
-    } else if (pt > 0) {
-      setAlloc(cls, idx, cur + 1)
-      setPts(cls, pt - 1)
+  const totalAlloc = classes.reduce((s, c) => s + c.talents.reduce((ss, _, i) => ss + getAlloc(c.key, i), 0), 0)
+  const totalPoints = (TOTAL_POINTS - totalAlloc) // 剩余点数
+
+  const handleNodeClick = (cls, talentIdx, maxPoints) => {
+    const cur = getAlloc(cls, talentIdx)
+    if (cur >= maxPoints) {
+      // 撤点
+      setAllocFor(cls, talentIdx, 0)
+    } else if (totalPoints > 0) {
+      // 加点
+      setAllocFor(cls, talentIdx, cur + 1)
     }
   }
 
   const resetClass = (cls) => {
-    setAlloc(cls, null, null)
-    setPts(cls, 59) // 初始点数
+    const reset = { ...alloc }
+    reset[cls] = {}
+    setAlloc(reset)
   }
 
-  // 初始化点数
-  const initPts = (cls) => {
-    if (points[cls] === undefined) {
-      setPts(cls, 59)
+  const currentClass = classes.find(c => c.key === activeClass)
+  const layout = TREE_LAYOUT[activeClass] || []
+  const currentTalents = currentClass?.talents || []
+
+  // 按 tier 分组
+  const byTier = {}
+  layout.forEach(node => {
+    if (!byTier[node.tier]) byTier[node.tier] = []
+    byTier[node.tier].push(node)
+  })
+
+  // 计算每列的连接线（连线）
+  const getColumnConnections = (col) => {
+    const colNodes = layout.filter(n => n.col === col && n.talentIdx >= 0).sort((a, b) => a.tier - b.tier)
+    const lines = []
+    for (let i = 0; i < colNodes.length - 1; i++) {
+      const upper = colNodes[i], lower = colNodes[i + 1]
+      const upperFull = getAlloc(activeClass, upper.talentIdx) >= upper.maxPoints
+      lines.push({ from: upper, to: lower, active: upperFull })
     }
+    return lines
+  }
+
+  // 计算总加成 (按 stat 分组)
+  const bonusSummary = {}
+  if (currentClass) {
+    layout.forEach(node => {
+      if (node.talentIdx < 0 || node.locked) return
+      const cur = getAlloc(activeClass, node.talentIdx)
+      if (cur === 0) return
+      const t = currentTalents[node.talentIdx]
+      if (!t) return
+      const { stat } = parseBonus(t)
+      if (!bonusSummary[stat]) bonusSummary[stat] = { points: 0, talents: [] }
+      bonusSummary[stat].points += cur
+      bonusSummary[stat].talents.push({ name: t.name, value: cur, max: node.maxPoints })
+    })
   }
 
   return (
-    <Layout title="技能大全 - 桌面破坏神">
+    <Layout title="天赋树 - 桌面破坏神">
       <div className="page-wrap">
-        <div className="hero-card" style={{padding: '1.5rem'}}>
-          <h1 className="hero-title" style={{fontSize: '2.2rem', textAlign: 'left'}}>技能大全</h1>
-          <p className="hero-subtitle" style={{textAlign: 'left', margin: 0}}>
-            {classes.length} 个职业 · {classes.reduce((s, c) => s + c.talents.length, 0)} 项天赋 · 交互式加点模拟
-          </p>
+        <div className="hero-card" style={{padding: '1rem 1.5rem'}}>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem'}}>
+            <h1 className="hero-title" style={{fontSize: '1.8rem', textAlign: 'left', margin: 0}}>
+              天赋树模拟器
+            </h1>
+            {/* 职业切换 */}
+            <div style={{display: 'flex', gap: '0.4rem'}}>
+              {classes.map(c => (
+                <button
+                  key={c.key}
+                  onClick={() => setActiveClass(c.key)}
+                  className={`talent-reset-btn ${activeClass === c.key ? 'talent-class-active' : ''}`}
+                >
+                  {c.icon} {c.name}
+                </button>
+              ))}
+            </div>
+            {/* 点数 */}
+            <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+              <div style={{fontSize: '0.85rem', color: 'var(--muted)'}}>已分配 / 剩余</div>
+              <div style={{
+                fontSize: '1.2rem', fontFamily: 'Cinzel, serif',
+                color: totalPoints > 0 ? 'var(--gold-light)' : 'var(--red-glow)',
+                fontWeight: 'bold', textShadow: '0 0 6px rgba(201,165,91,0.4)'
+              }}>
+                {totalAlloc} / {TOTAL_POINTS}
+              </div>
+              <button className="talent-reset-btn" onClick={() => resetClass(activeClass)}>重置</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="page-wrap" style={{maxWidth: 1400}}>
-        {classes.map((cls, ci) => {
-          initPts(cls.key)
-          const pt = getPts(cls.key)
-          const used = cls.talents.reduce((s, _, i) => s + getAlloc(cls.key, i), 0)
+        {/* Tab 切换 */}
+        <div style={{display: 'flex', gap: '0', marginBottom: '0.5rem', borderBottom: '2px solid var(--border-gold)'}}>
+          <button
+            onClick={() => setActiveTab('battle')}
+            className={`talent-tab ${activeTab === 'battle' ? 'active' : ''}`}
+          >⚔️ 战斗天赋</button>
+          <button
+            onClick={() => setActiveTab('life')}
+            className={`talent-tab ${activeTab === 'life' ? 'active' : ''}`}
+          >🌿 生活技能</button>
+        </div>
 
-          // 按稀有度分组（基础/进阶/高级/传奇）
-          const tiers = ['基础', '进阶', '高级', '传奇']
-          const grouped = {}
-          tiers.forEach(t => { grouped[t] = [] })
-          cls.talents.forEach((t, idx) => {
-            grouped[t.rarity].push({ ...t, idx })
-          })
-
-          return (
-            <div key={cls.key} className="class-section" style={{marginBottom: '2.5rem'}}>
-              {/* 职业标题 + 点数条 */}
-              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', paddingBottom: '0.6rem', borderBottom: '2px solid var(--border-gold)', flexWrap: 'wrap', gap: '0.5rem'}}>
-                <div style={{display: 'flex', alignItems: 'center', gap: '0.8rem'}}>
-                  <span style={{fontSize: '1.8rem', filter: 'drop-shadow(0 0 6px var(--red-glow))'}}>{cls.icon}</span>
-                  <h2 style={{color: 'var(--gold-light)', fontSize: '1.6rem', textShadow: '0 0 8px rgba(201,165,91,0.3)'}}>{cls.name}</h2>
-                  <span style={{color: 'var(--muted)', fontSize: '0.85rem'}}>天梯 ({cls.talents.length})</span>
-                </div>
-                <div style={{display: 'flex', alignItems: 'center', gap: '0.6rem'}}>
-                  <div style={{fontSize: '0.9rem', color: 'var(--gold-light)', fontFamily: 'Cinzel, serif'}}>
-                    技能点 <span style={{fontWeight:'bold', fontSize:'1.2rem', color: pt > 0 ? 'var(--gold-light)' : 'var(--red-glow)'}}>{pt}</span>
-                    / <span style={{color:'var(--muted)'}}>{59}</span>
-                  </div>
-                  <button className="talent-reset-btn" onClick={() => resetClass(cls.key)}>重置</button>
-                </div>
-              </div>
-
-              {/* 4 列分层网格 */}
-              {tiers.map(tier => (
-                grouped[tier].length > 0 && (
-                  <div key={tier} style={{marginBottom: '1.2rem'}}>
-                    <h3 style={{
-                      color: 'var(--gold-light)', fontSize: '1rem', marginBottom: '0.5rem',
-                      fontFamily: 'Cinzel, serif', textTransform: 'uppercase',
-                      borderLeft: `3px solid ${
-                        tier === '基础' ? '#b0b0b0' :
-                        tier === '进阶' ? '#4caf50' :
-                        tier === '高级' ? '#2196f3' : '#c9a55b'
-                      }`, paddingLeft: '0.6rem'
-                    }}>{tier} 天赋</h3>
-                    <div className="talent-grid">
-                      {grouped[tier].map(t => {
-                        const cur = getAlloc(cls.key, t.idx)
-                        const max = t.maxLevel
-                        const isFull = cur >= max
-                        return (
-                          <div
-                            key={t.idx}
-                            className={`talent-node ${cur > 0 ? 'talent-active' : ''} ${isFull ? 'talent-full' : ''}`}
-                            style={{ '--rarity-color':
-                              tier === '基础' ? '#b0b0b0' :
-                              tier === '进阶' ? '#4caf50' :
-                              tier === '高级' ? '#2196f3' : '#c9a55b'
-                            }}
-                            onClick={() => handleAllocate(cls.key, t.idx, max)}
-                          >
-                            {cur > 0 && (
-                              <span className="talent-level-badge" style={{background: `var(--rarity-color)`}}>
-                                {cur}/{max}
-                              </span>
-                            )}
-                            <div className="talent-icon">
-                              {cls.icon}
-                            </div>
-                            <div className="talent-name-cn">{t.name}</div>
-                            <div className="talent-name-en">{t.nameEn}</div>
-                            {cur > 0 ? (
-                              <div className="talent-value">+{getTalentValue(t, cur)}</div>
-                            ) : (
-                              <div className="talent-value-placeholder">点击加点</div>
-                            )}
-                            <div className="talent-desc" style={{marginTop: 'auto', paddingTop: '0.3rem'}}>
-                              {t.desc ? t.desc.replace(/\{[a-zA-Z]+\}/g, '___') : ''}
-                            </div>
-                          </div>
-                        )
-                      })}
-                    </div>
-                  </div>
+        <div className="talent-tree-container">
+          {/* 主天赋网格 + 连接线 SVG */}
+          <div className="talent-tree">
+            {/* SVG 连线层 */}
+            <svg className="talent-connector" viewBox="0 0 500 600" preserveAspectRatio="none">
+              {layout.map(node => {
+                if (node.talentIdx < 0) return null
+                const colNodes = layout.filter(n => n.col === node.col && n.talentIdx >= 0)
+                const idx = colNodes.findIndex(n => n.tier === node.tier)
+                if (idx < 0 || idx >= colNodes.length - 1) return null
+                const next = colNodes[idx + 1]
+                const fromX = (node.col + 0.5) / 5 * 100
+                const toX = (next.col + 0.5) / 5 * 100
+                const fromY = (node.tier + 0.5) / 7 * 100
+                const toY = (next.tier + 0.5) / 7 * 100
+                const active = getAlloc(activeClass, node.talentIdx) >= node.maxPoints
+                return (
+                  <line
+                    key={`l-${node.col}-${node.tier}`}
+                    x1={`${fromX}%`} y1={`${fromY}%`}
+                    x2={`${toX}%`} y2={`${toY}%`}
+                    stroke={active ? '#c9a55b' : 'rgba(201, 165, 91, 0.25)'}
+                    strokeWidth={active ? '3' : '2'}
+                  />
                 )
-              ))}
+              })}
+            </svg>
+
+            {/* 节点网格 */}
+            {layout.map(node => {
+              const isLocked = node.locked
+              const talent = node.talentIdx >= 0 ? currentTalents[node.talentIdx] : null
+              const cur = talent ? getAlloc(activeClass, node.talentIdx) : 0
+              const isMax = cur >= node.maxPoints
+              return (
+                <div
+                  key={`n-${node.col}-${node.tier}`}
+                  className={`talent-node-tree ${isLocked ? 'is-locked' : ''} ${cur > 0 ? 'is-active' : ''} ${isMax ? 'is-full' : ''}`}
+                  style={{
+                    gridColumn: node.col + 1,
+                    gridRow: node.tier + 1
+                  }}
+                  onClick={() => !isLocked && talent && handleNodeClick(activeClass, node.talentIdx, node.maxPoints)}
+                  title={talent ? `${talent.name} (${talent.nameEn})` : '未解锁'}
+                >
+                  {isLocked ? (
+                    <div className="talent-locked">🔒</div>
+                  ) : (
+                    <>
+                      <div className="talent-icon-frame">
+                        <img src={`/images/icons/skills/Skill_${String(node.talentIdx + 1).padStart(3, '0')}.png`}
+                             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = currentClass?.icon }}
+                             alt="" />
+                      </div>
+                      <div className="talent-counter">
+                        {cur}/{node.maxPoints}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+
+          {/* 右侧总加成面板 */}
+          <div className="talent-summary-panel">
+            <div className="summary-title">📊 总天赋加成</div>
+            <div className="summary-class">{currentClass?.icon} {currentClass?.name}</div>
+            <div className="summary-points">
+              <span style={{color: 'var(--gold-light)'}}>{totalAlloc}</span>
+              <span style={{color: 'var(--muted)'}}> / {TOTAL_POINTS}</span>
             </div>
-          )
-        })}
+            <div className="summary-list">
+              {Object.keys(bonusSummary).length === 0 ? (
+                <div style={{color: 'var(--muted)', textAlign: 'center', padding: '1.5rem 0', fontSize: '0.85rem'}}>
+                  点击节点分配点数
+                </div>
+              ) : (
+                Object.entries(bonusSummary).map(([stat, info]) => (
+                  <div key={stat} className="summary-row">
+                    <span className="summary-stat">{stat}</span>
+                    <span className="summary-value">+{info.points} 点</span>
+                  </div>
+                ))
+              )}
+            </div>
+            <div className="summary-divider"></div>
+            <div style={{fontSize: '0.75rem', color: 'var(--muted)', textAlign: 'center'}}>
+              总分配 <span style={{color: 'var(--gold-light)'}}>{totalAlloc}</span> 点 ·
+              剩余 <span style={{color: totalPoints > 0 ? 'var(--gold-light)' : 'var(--red-glow)'}}>{totalPoints}</span> 点
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   )

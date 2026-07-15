@@ -421,6 +421,154 @@ a:hover { color: var(--gold-light); }
   .talent-grid { grid-template-columns: 1fr; }
 }
 
+/* === Talent Tree Container (Diablo-style) === */
+.talent-tree-container {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1rem;
+  background: linear-gradient(180deg, #1a0e08 0%, #0a0604 100%);
+  border: 2px solid var(--border-gold);
+  border-radius: 4px;
+  padding: 1rem;
+  position: relative;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+}
+.talent-tab {
+  background: none; border: none; padding: 0.5rem 1.2rem;
+  color: var(--muted); font-family: 'Cinzel', serif; font-size: 0.95rem;
+  cursor: pointer; border-radius: 4px 4px 0 0;
+  transition: all 0.2s;
+}
+.talent-tab.active {
+  background: linear-gradient(180deg, rgba(201, 165, 91, 0.15) 0%, transparent 100%);
+  color: var(--gold-light);
+  border-bottom: 2px solid var(--border-bright);
+}
+.talent-class-active { background: var(--gold) !important; color: #1a0e08 !important; }
+.talent-tree {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  aspect-ratio: 5/7;
+  gap: 0.5rem;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(201, 165, 91, 0.05) 0%, transparent 70%),
+    #0a0604;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.talent-connector {
+  position: absolute; inset: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  pointer-events: none;
+  z-index: 1;
+}
+.talent-node-tree {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 2;
+  cursor: pointer;
+  user-select: none;
+}
+.talent-icon-frame {
+  width: 100%; aspect-ratio: 1;
+  max-width: 70px; max-height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1a0e08 0%, #0a0604 100%);
+  border: 2px solid #6b4f25;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  transition: all 0.2s;
+  filter: grayscale(0.8) brightness(0.7);
+  position: relative;
+}
+.talent-icon-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.talent-node-tree:hover .talent-icon-frame {
+  border-color: var(--border-bright);
+  filter: grayscale(0.3) brightness(0.9);
+  transform: scale(1.05);
+}
+.talent-node-tree.is-active .talent-icon-frame {
+  border-color: var(--red);
+  border-width: 3px;
+  filter: grayscale(0) brightness(1.1);
+  box-shadow: 0 0 12px rgba(201, 48, 48, 0.6);
+}
+.talent-node-tree.is-full .talent-icon-frame {
+  border-color: var(--gold-bright, #f0d78c);
+  box-shadow: 0 0 16px rgba(201, 165, 91, 0.7);
+}
+.talent-counter {
+  position: absolute; bottom: -2px;
+  background: var(--red);
+  color: #fff; font-size: 0.7rem; font-weight: bold;
+  padding: 0.1rem 0.4rem; border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  border: 1px solid var(--border-bright);
+  box-shadow: 0 0 6px rgba(201, 48, 48, 0.5);
+}
+.talent-node-tree.is-locked {
+  cursor: not-allowed; opacity: 0.4;
+}
+.talent-locked {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: #0a0604;
+  border: 2px solid #3d2818;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  filter: grayscale(1) brightness(0.5);
+}
+
+/* 右侧加成面板 */
+.talent-summary-panel {
+  background: linear-gradient(180deg, var(--bg-card) 0%, #150a06 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  padding: 1rem;
+  height: fit-content;
+  position: sticky; top: 60px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.summary-title {
+  font-family: 'Cinzel', serif; font-size: 1.1rem;
+  color: var(--gold-light); text-align: center; margin-bottom: 0.3rem;
+  text-shadow: 0 0 6px rgba(201, 165, 91, 0.3);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+.summary-class {
+  text-align: center; font-size: 0.9rem; color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.summary-points {
+  text-align: center; font-family: 'Cinzel', serif;
+  font-size: 1.3rem; margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+}
+.summary-list {
+  margin-bottom: 0.8rem;
+}
+.summary-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.3rem 0; font-size: 0.85rem;
+  border-bottom: 1px dashed var(--border);
+}
+.summary-row:last-child { border-bottom: none; }
+.summary-stat { color: var(--text); }
+.summary-value { color: var(--red-glow); font-weight: 600; }
+.summary-divider { border-top: 1px solid var(--border); margin: 0.5rem 0; }
+@media (max-width: 900px) {
+  .talent-tree-container { grid-template-columns: 1fr; }
+  .talent-tree { aspect-ratio: 5/8; }
+}
+
 /* === World Map Interactive (SVG-based) === */
 .world-map-container {
   margin: 1.5rem 0;
