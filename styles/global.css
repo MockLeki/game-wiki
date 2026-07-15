@@ -336,6 +336,81 @@ a:hover { color: var(--gold-light); }
   .items-grid { grid-template-columns: 1fr; }
 }
 
+/* === Talent Tree Grid (4-col) === */
+.talent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+.talent-card {
+  background: linear-gradient(180deg, var(--bg-card) 0%, #150a06 100%);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.7rem 0.8rem;
+  position: relative;
+  transition: all 0.2s;
+  display: flex; flex-direction: column;
+}
+.talent-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%;
+  background: var(--border);
+}
+.talent-card.talent-common::before { background: #b0b0b0; }
+.talent-card.talent-uncommon::before { background: #4caf50; }
+.talent-card.talent-rare::before { background: #2196f3; }
+.talent-card.talent-legendary::before {
+  background: #c9a55b;
+  box-shadow: 0 0 8px #c9a55b;
+}
+.talent-card:hover {
+  border-color: var(--border-bright);
+  background: linear-gradient(180deg, #2a1e15 0%, #1a0e08 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(201, 165, 91, 0.15);
+}
+.talent-rarity {
+  display: inline-block;
+  font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 2px;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-bottom: 0.3rem;
+}
+.talent-rarity-common { color: #b0b0b0; border: 1px solid #b0b0b0; }
+.talent-rarity-uncommon { color: #4caf50; border: 1px solid #4caf50; }
+.talent-rarity-rare { color: #2196f3; border: 1px solid #2196f3; }
+.talent-rarity-legendary {
+  color: #c9a55b; border: 1px solid #c9a55b;
+  text-shadow: 0 0 4px rgba(201, 165, 91, 0.5);
+}
+.talent-name-cn {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem; font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 0.1rem;
+}
+.talent-name-en {
+  color: var(--muted); font-size: 0.7rem; font-style: italic;
+  margin-bottom: 0.4rem;
+}
+.talent-value {
+  color: var(--red-glow);
+  font-size: 0.85rem; font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 4px rgba(255, 80, 64, 0.3);
+}
+.talent-desc {
+  color: var(--text);
+  font-size: 0.78rem; line-height: 1.4;
+  margin-top: auto;
+  padding-top: 0.3rem;
+}
+@media (max-width: 900px) {
+  .talent-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .talent-grid { grid-template-columns: 1fr; }
+}
+
 /* === World Map Interactive (SVG-based) === */
 .world-map-container {
   margin: 1.5rem 0;

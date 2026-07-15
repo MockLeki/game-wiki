@@ -1,0 +1,307 @@
+{
+  "classes": {
+    "Warrior": [
+      {
+        "name": "力量",
+        "nameEn": "Strength",
+        "desc": "+{value} 力量"
+      },
+      {
+        "name": "活力",
+        "nameEn": "Vitality",
+        "desc": "+{value} 最大生命值"
+      },
+      {
+        "name": "护甲",
+        "nameEn": "Armor",
+        "desc": "+{value1} 護甲，+{value2} 魔法抗性"
+      },
+      {
+        "name": "攻击速度",
+        "nameEn": "Attack Speed",
+        "desc": "+{value} 攻擊速度"
+      },
+      {
+        "name": "暴击几率",
+        "nameEn": "Critical Hit Chance",
+        "desc": "+{value} 暴擊機率"
+      },
+      {
+        "name": "暴击伤害",
+        "nameEn": "Critical Hit Damage",
+        "desc": "+{value} 暴擊傷害"
+      },
+      {
+        "name": "荆棘",
+        "nameEn": "Thorn",
+        "desc": "+{value} 荊棘"
+      },
+      {
+        "name": "生命恢复",
+        "nameEn": "Life Regeneration",
+        "desc": "+{value} 生命恢復"
+      },
+      {
+        "name": "残暴",
+        "nameEn": "Brutality",
+        "desc": "+{value} 對受傷目標的傷害"
+      },
+      {
+        "name": "凶猛",
+        "nameEn": "Ferocity",
+        "desc": "+{value} 對易傷目標的傷害"
+      },
+      {
+        "name": "劈砍狂怒",
+        "nameEn": "Cleaving Rage",
+        "desc": "釋放 [普通攻擊] 技能後 +{value} 攻擊速度，最多疊加5層"
+      },
+      {
+        "name": "战斗激励",
+        "nameEn": "Battle Inspiration",
+        "desc": "橫掃打擊有 {chance} 機率使 [戰吼] 技能冷卻減少 {value} 秒。"
+      },
+      {
+        "name": "重击",
+        "nameEn": "Heavy Blow",
+        "desc": "暴擊有 {value} 機率使受害者陷入 [易傷]。"
+      },
+      {
+        "name": "荆棘强化",
+        "nameEn": "Thorn Boost",
+        "desc": "+{value} 荊棘"
+      },
+      {
+        "name": "强化强力攻击：法力",
+        "nameEn": "Enhance Strong Attack: Mana",
+        "desc": "+{value} [強力攻擊] 法力消耗減少。"
+      },
+      {
+        "name": "怒火注入",
+        "nameEn": "Rage Infusion",
+        "desc": "+{strongAttackDamage} [強力攻擊] 傷害，但也 +{strongAttackManaCost} 法力消耗。"
+      },
+      {
+        "name": "强化战吼：冷却",
+        "nameEn": "Enhance Warcry: Cooldown",
+        "desc": "+{value} [戰吼] 技能冷卻縮減。"
+      },
+      {
+        "name": "怒火导引",
+        "nameEn": "Rage Channeling",
+        "desc": "啟動狂怒護盾時生成 {value} 法力"
+      },
+      {
+        "name": "[野兽] 奴隶强化",
+        "nameEn": "[Beast] Slave Boost",
+        "desc": "出戰的 [野獸] 提供 {value} 力量提升。"
+      },
+      {
+        "name": "[人形] 奴隶强化",
+        "nameEn": "[Humanoid] Slave Boost",
+        "desc": "出戰的 [人形] 提供 {value} 對精英敵人的傷害。"
+      },
+      {
+        "name": "防御姿态",
+        "nameEn": "Defensive Stance",
+        "desc": "+{value} 護甲"
+      },
+      {
+        "name": "击杀回复法力",
+        "nameEn": "Mana Restore On Kill",
+        "desc": "每次擊殺回復 {value} 法力。"
+      },
+      {
+        "name": "重整旗鼓",
+        "nameEn": "Second Wind",
+        "desc": "當生命值低於最大生命值的50%時回復 {value}。（冷卻6秒）"
+      },
+      {
+        "name": "专注",
+        "nameEn": "Focus",
+        "desc": "[普通攻擊] 有 {stunChance} 機率暈眩敵人。"
+      },
+      {
+        "name": "猛攻",
+        "nameEn": "Onslaught",
+        "desc": "+{value} 對暈眩目標的傷害"
+      },
+      {
+        "name": "强化烈焰打击：伤害",
+        "nameEn": "Enhance Flame Strike: Damage",
+        "desc": "烈焰打擊額外造成 {value} 傷害。"
+      },
+      {
+        "name": "强化英勇打击：法力获取",
+        "nameEn": "Enhance Valiant Strike: Mana Gain",
+        "desc": "英勇打擊 +{value} 法力獲取。"
+      },
+      {
+        "name": "[不死族] 奴隶强化",
+        "nameEn": "[Undead] Slave Boost",
+        "desc": "出戰的 [不死族] 提供 {value} 暴擊傷害。"
+      },
+      {
+        "name": "凶狠荆棘",
+        "nameEn": "Vicious Thorns",
+        "desc": "荊棘可以觸發暴擊。"
+      },
+      {
+        "name": "溢血",
+        "nameEn": "Hemorrhage",
+        "desc": "+{value} 對流血目標的傷害"
+      }
+    ],
+    "Sorcerer": [
+      {
+        "name": "奥术洞察",
+        "nameEn": "Arcane Insight",
+        "desc": "+{value} 智力"
+      },
+      {
+        "name": "法力涌流",
+        "nameEn": "Mana Flow",
+        "desc": "+{value} 最大法力值"
+      },
+      {
+        "name": "冰霜护甲",
+        "nameEn": "Frost Armor",
+        "desc": "+{value} 護甲"
+      },
+      {
+        "name": "奥术延伸",
+        "nameEn": "Arcane Reach",
+        "desc": "+{value} [普通攻擊] 射程。"
+      },
+      {
+        "name": "灼热之刃",
+        "nameEn": "Searing Edge",
+        "desc": "+{value} [普通攻擊] 暴擊機率。"
+      },
+      {
+        "name": "点燃",
+        "nameEn": "Ignite",
+        "desc": "暴擊有 {value} 機率使受害者陷入 [灼燒]。"
+      },
+      {
+        "name": "冰寒惩戒",
+        "nameEn": "Cold Retribution",
+        "desc": "獲得 {armor} 護甲加成。近戰攻擊者有 {value} 機率陷入 [冰寒]，持續 {duration}。"
+      },
+      {
+        "name": "碎冰",
+        "nameEn": "Shattering Ice",
+        "desc": "對 [冰凍] 敵人 +{value} 暴擊機率。"
+      },
+      {
+        "name": "焚烧",
+        "nameEn": "Immolation",
+        "desc": "火球有 {chance} 機率使目標陷入 [灼燒]。"
+      },
+      {
+        "name": "寒霜精通",
+        "nameEn": "Frost Mastery",
+        "desc": "+{value} 冰霜傷害"
+      },
+      {
+        "name": "燎原之火",
+        "nameEn": "Conflagration",
+        "desc": "+{value} 對灼燒目標的傷害"
+      },
+      {
+        "name": "法力恢复",
+        "nameEn": "Mana Regeneration",
+        "desc": "+{value} 法力恢復"
+      },
+      {
+        "name": "速冻",
+        "nameEn": "Flash Freeze",
+        "desc": "使敵人陷入 [冰寒] 時有 {value} 機率同時施加 [冰凍]。"
+      },
+      {
+        "name": "[野兽] 奴隶强化",
+        "nameEn": "[Beast] Slave Boost",
+        "desc": "出戰的 [野獸] 提供 {value} 生命藥水發現。"
+      },
+      {
+        "name": "[恶魔] 奴隶强化",
+        "nameEn": "[Demon] Slave Boost",
+        "desc": "出戰的 [惡魔] 提供 {value} 智力。"
+      },
+      {
+        "name": "爆燃",
+        "nameEn": "Combustion",
+        "desc": "火球擊殺敵人時，有 {chance} 機率引發烈焰爆炸，對附近敵人造成 {damage} 武器傷害。"
+      },
+      {
+        "name": "严寒",
+        "nameEn": "Deep Chill",
+        "desc": "你的 [冰寒] 強度提升 {potency}，減速更強且持續更久。"
+      },
+      {
+        "name": "雷霆震慑",
+        "nameEn": "Thunderstruck",
+        "desc": "閃電風暴擊中的敵人有 {stunChance} 機率陷入 [短暫暈眩]，持續 {duration}。"
+      },
+      {
+        "name": "冲击掌",
+        "nameEn": "Force Palm",
+        "desc": "[普通攻擊] 將敵人擊退 {value}。"
+      },
+      {
+        "name": "电能护盾",
+        "nameEn": "Electrical Shield",
+        "desc": "+{armor} 護甲。近戰攻擊者有 {chance} 機率使你獲得 {mana} 法力。"
+      },
+      {
+        "name": "风暴处决者",
+        "nameEn": "Storm Executioner",
+        "desc": "+{lightning} 閃電傷害。+{elite} 對精英敵人的傷害。"
+      },
+      {
+        "name": "烈焰守护",
+        "nameEn": "Flame Ward",
+        "desc": "+{fire} 火焰傷害。+{magicResist} 魔法抗性。"
+      },
+      {
+        "name": "强化冰碎片：伤害",
+        "nameEn": "Enhance Ice Shards: Damage",
+        "desc": "+{value} [冰碎片] 傷害。"
+      },
+      {
+        "name": "强化电击：法力获取",
+        "nameEn": "Enhance Electrocute: Mana Gain",
+        "desc": "[電擊] +{value} 法力獲取。"
+      },
+      {
+        "name": "强化冰陨石：法力消耗",
+        "nameEn": "Enhance Ice Meteor: Mana Cost",
+        "desc": "+{value} [冰隕石] 法力消耗減少。"
+      },
+      {
+        "name": "强化烈焰：暴击伤害",
+        "nameEn": "Enhance Fire Flame: Crit Damage",
+        "desc": "+{value} [烈焰] 暴擊傷害。"
+      },
+      {
+        "name": "风暴导体",
+        "nameEn": "Storm Conduit",
+        "desc": "[電擊] 有 {chance} 機率同時施放 [閃電風暴]。"
+      },
+      {
+        "name": "静电充能",
+        "nameEn": "Static Charge",
+        "desc": "閃電技能擊中敵人時有 {stunChance} 機率施加 [靜電]。"
+      },
+      {
+        "name": "寒霜迅捷",
+        "nameEn": "Frost Alacrity",
+        "desc": "冰霜技能的冷卻時間減少 {value}。"
+      }
+    ]
+  },
+  "names": {
+    "Warrior": "战士",
+    "Sorcerer": "法师"
+  }
+}
