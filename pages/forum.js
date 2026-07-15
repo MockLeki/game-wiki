@@ -14,6 +14,40 @@ function timeAgo(ts) {
   return new Date(ts).toLocaleDateString('zh-CN')
 }
 
+// 渲染帖子内容（支持 markdown 图片 + 换行）
+function renderContent(text) {
+  if (!text) return null
+  // 把 ![alt](url) 转成 img
+  const parts = []
+  const regex = /!\[([^\]]*)\]\((data:image\/[^)]+)\)/g
+  let lastIdx = 0
+  let m
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > lastIdx) {
+      const textPart = text.slice(lastIdx, m.index)
+      parts.push({ type: 'text', value: textPart })
+    }
+    parts.push({ type: 'img', alt: m[1], src: m[2] })
+    lastIdx = regex.lastIndex
+  }
+  if (lastIdx < text.length) {
+    parts.push({ type: 'text', value: text.slice(lastIdx) })
+  }
+  return parts
+}
+
+// 上传图片 → base64 → markdown img
+async function uploadImage(file) {
+  if (!file.type.startsWith('image/')) throw new Error('只支持图片')
+  if (file.size > 3 * 1024 * 1024) throw new Error('图片太大 (限 3MB)')
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(`![${file.name}](${reader.result})`)
+    reader.onerror = reject
+    reader.readAsDataURL(file)
+  })
+}
+
 export default function Forum() {
   const [user, setUser] = useState(null)
   const [threads, setThreads] = useState([])
@@ -127,11 +161,21 @@ export default function Forum() {
               className="forum-input"
             />
             <textarea
-              placeholder="内容（支持换行）..." value={newContent}
+              placeholder="内容（支持换行 + 图片）..." value={newContent}
               onChange={e => setNewContent(e.target.value)}
               className="forum-textarea" rows={6}
             />
-            <div style={{display: 'flex', gap: '0.5rem', marginTop: '0.5rem'}}>
+            <div style={{display: 'flex', gap: '0.5rem', marginTop: '0.5rem', alignItems: 'center'}}>
+              <label className="forum-upload-btn" style={{cursor: 'pointer'}}>
+                📷 上传图片
+                <input type="file" accept="image/*" multiple style={{display:'none'}}
+                  onChange={async (e) => {
+                    for (const f of e.target.files) {
+                      try { const md = await uploadImage(f); setNewContent(c => c + '\n' + md) }
+                      catch (err) { setError(err.message) }
+                    }
+                  }} />
+              </label>
               <button onClick={createThread} className="talent-reset-btn" style={{background: 'rgba(184, 28, 28, 0.3)', borderColor: 'var(--red)'}}>发布</button>
               <button onClick={() => { setShowNew(false); setError('') }} className="talent-reset-btn">取消</button>
             </div>
@@ -172,7 +216,15 @@ export default function Forum() {
                     <span className="forum-post-author">{p.authorName}{i === 0 && <span style={{color: 'var(--gold-light)', fontSize: '0.7rem', marginLeft: '0.3rem'}}>楼主</span>}</span>
                     <span className="forum-post-time">{timeAgo(p.createdAt)}</span>
                   </div>
-                  <div className="forum-post-content">{p.content}</div>
+                  <div className="forum-post-content">
+                    {(renderContent(p.content) || []).map((part, j) =>
+                      part.type === 'img' ? (
+                        <img key={j} src={part.src} alt={part.alt} className="forum-post-image" />
+                      ) : (
+                        <span key={j} style={{whiteSpace: 'pre-wrap'}}>{part.value}</span>
+                      )
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -180,11 +232,23 @@ export default function Forum() {
               <div className="forum-form" style={{marginTop: '1rem'}}>
                 <h4 style={{color: 'var(--gold-light)', marginBottom: '0.5rem'}}>发表回复</h4>
                 <textarea
-                  placeholder="回复内容..." value={reply}
+                  placeholder="回复内容（支持换行 + 图片）..." value={reply}
                   onChange={e => setReply(e.target.value)}
                   className="forum-textarea" rows={3}
                 />
-                <button onClick={sendReply} className="talent-reset-btn" style={{background: 'rgba(184, 28, 28, 0.3)', borderColor: 'var(--red)', marginTop: '0.5rem'}}>回复</button>
+                <div style={{display: 'flex', gap: '0.5rem', marginTop: '0.5rem'}}>
+                  <label className="forum-upload-btn" style={{cursor: 'pointer'}}>
+                    📷 上传图片
+                    <input type="file" accept="image/*" multiple style={{display:'none'}}
+                      onChange={async (e) => {
+                        for (const f of e.target.files) {
+                          try { const md = await uploadImage(f); setReply(r => r + '\n' + md) }
+                          catch (err) { setError(err.message) }
+                        }
+                      }} />
+                  </label>
+                  <button onClick={sendReply} className="talent-reset-btn" style={{background: 'rgba(184, 28, 28, 0.3)', borderColor: 'var(--red)'}}>回复</button>
+                </div>
               </div>
             ) : (
               <div style={{textAlign: 'center', padding: '1.5rem', color: 'var(--muted)', border: '1px dashed var(--border)', borderRadius: 4, marginTop: '1rem'}}>
