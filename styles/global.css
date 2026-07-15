@@ -372,6 +372,24 @@ a:hover { color: var(--gold-light); }
   max-width: 800px; margin: 0 auto 1.5rem; line-height: 1.8;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
+.site-disclaimer {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-gold);
+  border-radius: 0;
+  padding: 0.8rem 1.2rem;
+  margin: 0 auto 1.5rem;
+  max-width: 800px;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  text-align: left;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.site-disclaimer::before {
+  content: '⚠️ ';
+  margin-right: 0.2rem;
+}
 .hero-divider {
   display: flex; align-items: center; gap: 1rem; margin: 1rem auto 1.5rem;
   max-width: 600px;
