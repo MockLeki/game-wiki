@@ -11,6 +11,7 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
     { path: '/minions', label: '仆从' },
     { path: '/levels', label: '关卡' },
     { path: '/affixes', label: '词条' },
+    { path: '/leaderboard', label: '排行榜' },
     { path: '/build', label: '构筑' },
   ]
   return (
@@ -34,7 +35,6 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
           ))}
         </div>
         <div className="nav-right">
-          <span className="version-badge">游戏 v1.00.17</span>
           <Link href="/faq" style={{fontSize:'0.85rem',color:'var(--text)'}}>常见问题</Link>
           <a href="https://deskrawl.freeflarum.com" target="_blank" rel="noopener" style={{fontSize:'0.85rem'}}>论坛</a>
         </div>
