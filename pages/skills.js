@@ -115,7 +115,7 @@ export default function SkillsPage() {
 
   const [activeClass, setActiveClass] = useState('Warrior')
   const [alloc, setAlloc] = useState({})  // {Warrior: {talentIdx: points}}
-  const [activeTab, setActiveTab] = useState('battle')  // battle / life
+  const [hoveredTalent, setHoveredTalent] = useState(null)  // 悬停天赋弹窗
 
   // 初始化每个职业点数
   useEffect(() => {
@@ -228,14 +228,7 @@ export default function SkillsPage() {
       <div className="page-wrap" style={{maxWidth: 1400}}>
         {/* Tab 切换 */}
         <div style={{display: 'flex', gap: '0', marginBottom: '0.5rem', borderBottom: '2px solid var(--border-gold)'}}>
-          <button
-            onClick={() => setActiveTab('battle')}
-            className={`talent-tab ${activeTab === 'battle' ? 'active' : ''}`}
-          >⚔️ 战斗天赋</button>
-          <button
-            onClick={() => setActiveTab('life')}
-            className={`talent-tab ${activeTab === 'life' ? 'active' : ''}`}
-          >🌿 生活技能</button>
+          <button className="talent-tab active">⚔️ 战斗天赋</button>
         </div>
 
         <div className="talent-tree-container">
@@ -281,15 +274,16 @@ export default function SkillsPage() {
                     gridRow: node.tier + 1
                   }}
                   onClick={() => !isLocked && talent && handleNodeClick(activeClass, node.talentIdx, node.maxPoints)}
-                  title={talent ? `${talent.name} (${talent.nameEn})` : '未解锁'}
+                  onMouseEnter={() => !isLocked && talent && setHoveredTalent({ ...talent, idx: node.talentIdx, col: node.col, tier: node.tier, cur, max: node.maxPoints })}
+                  onMouseLeave={() => setHoveredTalent(null)}
                 >
                   {isLocked ? (
                     <div className="talent-locked">🔒</div>
                   ) : (
                     <>
                       <div className="talent-icon-frame">
-                        <img src={`/images/icons/skills/Skill_${String(node.talentIdx + 1).padStart(3, '0')}.png`}
-                             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = currentClass?.icon }}
+                        <img src={`/images/icons/passives/Skill_${String(node.talentIdx + 1).padStart(3, '0')}.png`}
+                             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = `<span style="font-size:1.4rem">${currentClass?.icon}</span>` }}
                              alt="" />
                       </div>
                       <div className="talent-counter">
@@ -300,6 +294,26 @@ export default function SkillsPage() {
                 </div>
               )
             })}
+
+            {/* 悬停弹窗（游戏内同款） */}
+            {hoveredTalent && (
+              <div className="talent-tooltip"
+                style={{
+                  left: `${(hoveredTalent.col + 0.5) / 5 * 100}%`,
+                  top: `${(hoveredTalent.tier + 0.5) / 7 * 100}%`,
+                }}
+                onMouseEnter={() => setHoveredTalent(hoveredTalent)}
+                onMouseLeave={() => setHoveredTalent(null)}
+              >
+                <div className="tooltip-header">
+                  <img src={`/images/icons/passives/Skill_${String(hoveredTalent.idx + 1).padStart(3, '0')}.png`}
+                       onError={(e) => { e.target.style.display='none' }} alt="" className="tooltip-icon" />
+                  <div className="tooltip-name">{hoveredTalent.name}</div>
+                </div>
+                <div className="tooltip-value">+{hoveredTalent.cur} 力量</div>
+                <div className="tooltip-level">等级 {hoveredTalent.cur}/{hoveredTalent.max}</div>
+              </div>
+            )}
           </div>
 
           {/* 右侧总加成面板 */}
