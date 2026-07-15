@@ -9,9 +9,10 @@ const QUALITIES = [
   { key: 'common', name: '普通', class: 'chip-common' },
   { key: 'uncommon', name: '非凡', class: 'chip-uncommon' },
   { key: 'rare', name: '稀有', class: 'chip-rare' },
+  { key: 'excellent', name: '优秀', class: 'chip-excellent' },
   { key: 'legendary', name: '传说', class: 'chip-legendary' },
 ]
-const Q_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }
+const Q_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', excellent: '优秀', legendary: '传说' }
 const SPECIES_ICON = {
   兽类: '/images/minions/wolf_icon.png',
   人类: '/images/minions/werewolf_icon.png',
@@ -119,13 +120,24 @@ export default function MinionsPage() {
                   </div>
                   <div style={{flex: 1}}>
                     <div className="item-name">{m.name}</div>
-                    <div className="item-meta">{m.speciesName} · {m.quality === 'legendary' ? '传说' : m.quality === 'rare' ? '稀有' : m.quality === 'uncommon' ? '非凡' : '普通'}</div>
+                    <div className="item-meta">{m.speciesName} · {Q_NAMES[m.quality]}</div>
                     {m.location && <div className="item-stat gold">📍 {m.location}</div>}
                   </div>
                 </div>
-                {m.passives?.length > 0 && m.passives.slice(0, 1).map((p, i) => (
-                  <div key={i} className="item-effect">📋 {p.name}: {p.desc?.slice(0, 50)}...</div>
-                ))}
+                {/* 召唤量 / 捕获量 */}
+                {(m.summonAmount || m.captureAmount) && (
+                  <div style={{display:'flex', gap:'0.5rem', fontSize:'0.75rem', color:'var(--muted)', marginBottom:'0.3rem'}}>
+                    {m.summonAmount && <span style={{color:'var(--gold-light)'}}>召唤量: +{m.summonAmount}</span>}
+                    {m.captureAmount && <span style={{color:'var(--gold-light)'}}>捕获量: +{m.captureAmount}</span>}
+                  </div>
+                )}
+                {/* 被动技能 (来自游戏截图数据) */}
+                {m.passive?.name && (
+                  <div className="item-effect" style={{borderTop:'1px solid var(--border)', paddingTop:'0.4rem', marginTop:'0.2rem'}}>
+                    <div style={{color:'var(--red-glow)', fontSize:'0.8rem', fontWeight:600}}>📋 {m.passive.name}</div>
+                    <div style={{color:'var(--text)', fontSize:'0.78rem', marginTop:'0.15rem'}}>{m.passive.value}</div>
+                  </div>
+                )}
                 <div className="item-id">
                   <span>#{String(m.id || '').slice(-6) || '000000'}</span>
                   <span className="item-action">查看捕获 ▼</span>
