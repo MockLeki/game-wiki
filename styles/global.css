@@ -90,6 +90,79 @@ a:hover { color: var(--gold-light); }
 /* === Container === */
 .page-wrap { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; position: relative; z-index: 1; }
 
+/* === Forum CTA (社区论坛) === */
+.forum-cta {
+  position: relative;
+  display: flex;
+  margin-top: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #2a0e0e 0%, #1a0a0a 50%, #0a0a1a 100%);
+  border: 2px solid var(--border-bright);
+  border-radius: 8px;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(201, 48, 48, 0.3), inset 0 0 20px rgba(0,0,0,0.4);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.forum-cta:hover {
+  border-color: #f0d78c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(201, 48, 48, 0.5), inset 0 0 30px rgba(0,0,0,0.4);
+}
+.forum-cta-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 10% 50%, rgba(201, 48, 48, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 90% 50%, rgba(217, 122, 37, 0.3) 0%, transparent 40%),
+    linear-gradient(90deg, transparent 0%, rgba(201, 165, 91, 0.1) 50%, transparent 100%);
+  pointer-events: none;
+}
+.forum-cta-content {
+  position: relative;
+  display: flex; align-items: center; gap: 1.5rem;
+  z-index: 1;
+}
+.forum-cta-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 12px rgba(201, 48, 48, 0.6));
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 12px rgba(201, 48, 48, 0.6)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 20px rgba(232, 80, 80, 0.9)); }
+}
+.forum-cta-text { flex: 1; }
+.forum-cta-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--gold-light);
+  text-shadow: 0 0 12px rgba(201, 165, 91, 0.5), 0 2px 4px rgba(0,0,0,0.6);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+}
+.forum-cta-subtitle {
+  color: var(--text);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+.forum-cta-arrow {
+  font-size: 2.5rem;
+  color: var(--red-glow);
+  text-shadow: 0 0 12px rgba(201, 48, 48, 0.8);
+  transition: all 0.3s;
+  font-family: 'Cinzel', serif;
+}
+.forum-cta:hover .forum-cta-arrow {
+  transform: translateX(8px);
+  color: #f0d78c;
+}
+@media (max-width: 600px) {
+  .forum-cta-content { flex-direction: column; text-align: center; gap: 0.5rem; }
+  .forum-cta-title { font-size: 1.3rem; }
+  .forum-cta-arrow { display: none; }
+}
+
 /* === Hero (Diablo Style) === */
 .hero-card {
   background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-card-2) 100%);
