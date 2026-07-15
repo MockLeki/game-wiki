@@ -1,7 +1,18 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
+  const router = useRouter()
+  const isActive = (path) => router.pathname === path ? 'active' : ''
+  const navItems = [
+    { path: '/gear', label: '装备' },
+    { path: '/skills', label: '技能' },
+    { path: '/minions', label: '仆从' },
+    { path: '/levels', label: '关卡' },
+    { path: '/affixes', label: '词条' },
+    { path: '/build', label: '构筑' },
+  ]
   return (
     <>
       <Head>
@@ -9,20 +20,23 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
         <meta name="description" content="桌面破坏神 Deskrawl 最全游戏资料站" />
         <link rel="icon" href="/logo.png" />
         <script src="/steam-widget.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </Head>
       <nav className="topnav">
-        <Link href="/" className="logo">⚔️ 桌面破坏神 Wiki</Link>
+        <Link href="/" className="logo">
+          <span className="logo-icon">⚔</span>
+          桌面破坏神 Wiki
+        </Link>
         <div className="nav-links">
-          <Link href="/gear">装备图鉴</Link>
-          <Link href="/skills">技能大全</Link>
-          <Link href="/affixes">词条计算器</Link>
-          <Link href="/minions">仆从大全</Link>
-          <Link href="/levels">关卡大全</Link>
-          <Link href="/build">构筑模拟器</Link>
-          <Link href="/faq">常见问题</Link>
+          {navItems.map(n => (
+            <Link key={n.path} href={n.path} className={isActive(n.path)}>{n.label}</Link>
+          ))}
         </div>
         <div className="nav-right">
-          <a href="https://deskrawl.freeflarum.com" target="_blank" rel="noopener">💬 论坛</a>
+          <span className="version-badge">游戏 v1.00.17</span>
+          <Link href="/faq" style={{fontSize:'0.85rem',color:'var(--text)'}}>常见问题</Link>
+          <a href="https://deskrawl.freeflarum.com" target="_blank" rel="noopener" style={{fontSize:'0.85rem'}}>论坛</a>
         </div>
       </nav>
       <main>{children}</main>
