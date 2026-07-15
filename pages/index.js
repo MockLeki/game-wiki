@@ -48,10 +48,8 @@ export default function Home() {
         </div>
 
         {/* 玩家社区论坛 - 突出按钮 */}
-        <a
-          href="https://deskrawl.freeflarum.com"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/forum"
           className="forum-cta"
         >
           <div className="forum-cta-bg" />
@@ -63,7 +61,7 @@ export default function Home() {
             </div>
             <div className="forum-cta-arrow">→</div>
           </div>
-        </a>
+        </Link>
       </div>
     </Layout>
   )
