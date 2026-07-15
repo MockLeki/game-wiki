@@ -336,74 +336,84 @@ a:hover { color: var(--gold-light); }
   .items-grid { grid-template-columns: 1fr; }
 }
 
-/* === Talent Tree Grid (4-col) === */
+/* === Talent Tree Grid (4-col interactive) === */
 .talent-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.7rem;
 }
-.talent-card {
+.talent-node {
   background: linear-gradient(180deg, var(--bg-card) 0%, #150a06 100%);
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 0.7rem 0.8rem;
+  padding: 0.6rem 0.7rem;
   position: relative;
-  transition: all 0.2s;
+  cursor: pointer;
+  transition: all 0.15s;
   display: flex; flex-direction: column;
+  user-select: none;
 }
-.talent-card::before {
+.talent-node::before {
   content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%;
-  background: var(--border);
+  background: var(--rarity-color, var(--border));
+  transition: all 0.15s;
 }
-.talent-card.talent-common::before { background: #b0b0b0; }
-.talent-card.talent-uncommon::before { background: #4caf50; }
-.talent-card.talent-rare::before { background: #2196f3; }
-.talent-card.talent-legendary::before {
-  background: #c9a55b;
-  box-shadow: 0 0 8px #c9a55b;
-}
-.talent-card:hover {
+.talent-node:hover {
   border-color: var(--border-bright);
   background: linear-gradient(180deg, #2a1e15 0%, #1a0e08 100%);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(201, 165, 91, 0.15);
+  box-shadow: 0 4px 12px rgba(201, 165, 91, 0.12);
 }
-.talent-rarity {
-  display: inline-block;
+.talent-node.talent-active { border-color: var(--rarity-color, var(--border-bright)); }
+.talent-node.talent-active::before {
+  box-shadow: 0 0 8px var(--rarity-color, var(--border));
+}
+.talent-node.talent-full {
+  border-color: var(--border-bright);
+  background: linear-gradient(180deg, rgba(201, 165, 91, 0.1) 0%, var(--bg-card) 100%);
+}
+.talent-node.talent-full::before {
+  background: #c9a55b;
+  box-shadow: 0 0 12px rgba(201, 165, 91, 0.5);
+}
+.talent-level-badge {
+  position: absolute; top: 6px; right: 6px;
   font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 2px;
-  font-weight: 600;
-  align-self: flex-start;
-  margin-bottom: 0.3rem;
+  font-weight: 700; color: #1a0e08;
 }
-.talent-rarity-common { color: #b0b0b0; border: 1px solid #b0b0b0; }
-.talent-rarity-uncommon { color: #4caf50; border: 1px solid #4caf50; }
-.talent-rarity-rare { color: #2196f3; border: 1px solid #2196f3; }
-.talent-rarity-legendary {
-  color: #c9a55b; border: 1px solid #c9a55b;
-  text-shadow: 0 0 4px rgba(201, 165, 91, 0.5);
+.talent-icon {
+  font-size: 1.6rem; margin-bottom: 0.3rem;
+  filter: grayscale(0.8); transition: filter 0.15s;
 }
+.talent-node.talent-active .talent-icon { filter: grayscale(0); }
+.talent-node.talent-full .talent-icon { filter: drop-shadow(0 0 5px rgba(201, 165, 91, 0.5)); }
 .talent-name-cn {
-  font-family: 'Cinzel', serif;
-  font-size: 1rem; font-weight: 600;
-  color: var(--gold-light);
-  margin-bottom: 0.1rem;
+  font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--gold-light); margin-bottom: 0.1rem;
 }
 .talent-name-en {
-  color: var(--muted); font-size: 0.7rem; font-style: italic;
-  margin-bottom: 0.4rem;
+  color: var(--muted); font-size: 0.68rem; font-style: italic; margin-bottom: 0.3rem;
 }
 .talent-value {
-  color: var(--red-glow);
-  font-size: 0.85rem; font-weight: 600;
-  margin-bottom: 0.3rem;
-  text-shadow: 0 0 4px rgba(255, 80, 64, 0.3);
+  color: var(--red-glow); font-size: 0.85rem; font-weight: 600;
+  text-shadow: 0 0 4px rgba(255,80,64,0.3); margin-bottom: 0.2rem;
+}
+.talent-value-placeholder {
+  color: var(--muted); font-size: 0.75rem; font-style: italic;
+  margin-bottom: 0.2rem; opacity: 0.6;
 }
 .talent-desc {
-  color: var(--text);
-  font-size: 0.78rem; line-height: 1.4;
-  margin-top: auto;
-  padding-top: 0.3rem;
+  color: var(--text); font-size: 0.73rem; line-height: 1.4;
+  opacity: 0.7; margin-top: auto;
 }
+.talent-node.talent-active .talent-desc { opacity: 1; }
+.talent-reset-btn {
+  padding: 0.35rem 0.8rem; font-size: 0.8rem;
+  background: rgba(201,48,48,0.2); border: 1px solid var(--red);
+  color: var(--red-glow); border-radius: 3px; cursor: pointer;
+  font-family: 'Cinzel', serif; transition: all 0.2s;
+}
+.talent-reset-btn:hover { background: var(--red); color: #fff; }
 @media (max-width: 900px) {
   .talent-grid { grid-template-columns: repeat(2, 1fr); }
 }
