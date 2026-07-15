@@ -1,6 +1,37 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+
+function SteamLogin() {
+  const [user, setUser] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch('https://deskrawl.top/api/auth/status', { credentials: 'include' })
+      .then(r => r.json())
+      .then(d => { if (d.loggedIn) setUser(d); setLoading(false) })
+      .catch(() => setLoading(false))
+  }, [])
+
+  if (loading) return null
+
+  if (user) {
+    return (
+      <div className="steam-login-user">
+        <img src={user.avatar} alt="" className="steam-avatar" />
+        <span className="steam-name">{user.name}</span>
+        <a href="/api/auth/steam" className="steam-logout" title="切换账号">↻</a>
+      </div>
+    )
+  }
+
+  return (
+    <a href="https://deskrawl.top/api/auth/steam" className="steam-login-btn">
+      🎮 Steam 登录
+    </a>
+  )
+}
 
 export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
   const router = useRouter()
@@ -34,6 +65,7 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
           ))}
         </div>
         <div className="nav-right">
+          <SteamLogin />
           <Link href="/faq" style={{fontSize:'0.85rem',color:'var(--text)'}}>常见问题</Link>
           <a href="https://deskrawl.freeflarum.com" target="_blank" rel="noopener" style={{fontSize:'0.85rem'}}>论坛</a>
         </div>
