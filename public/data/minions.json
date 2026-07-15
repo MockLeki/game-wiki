@@ -156,12 +156,12 @@
       "name": "兽人斗士",
       "nameEn": "Orc Fighter",
       "species": "humanoid",
-      "speciesName": "人形",
-      "quality": "uncommon",
+      "speciesName": "人类",
+      "quality": "excellent",
       "qualityName": "非凡",
       "level": 20,
       "weight": 15,
-      "location": "阿瑟隆王国 / 北山地穴",
+      "location": "北山地穴下层",
       "image": "/images/weapons/3010.png",
       "passives": [
         {
@@ -173,7 +173,12 @@
       ],
       "icon": "/images/icons/minions/orcwarrior.png",
       "desc": "",
-      "descEn": ""
+      "descEn": "",
+      "passive": {
+        "name": "力量 I",
+        "value": "力量 +5%"
+      },
+      "captureAmount": 20
     },
     {
       "id": 3014,
@@ -206,12 +211,12 @@
       "name": "树桩怪",
       "nameEn": "Stumplin",
       "species": "elemental",
-      "speciesName": "元素",
-      "quality": "uncommon",
+      "speciesName": "自然",
+      "quality": "excellent",
       "qualityName": "非凡",
       "level": 20,
       "weight": 15,
-      "location": "国王森林 / 红色沙漠",
+      "location": "国王森林南部",
       "image": "/images/weapons/3016.png",
       "passives": [
         {
@@ -229,7 +234,12 @@
       ],
       "icon": "/images/icons/minions/stumplin.png",
       "desc": "",
-      "descEn": ""
+      "descEn": "",
+      "passive": {
+        "name": "荆棘 I",
+        "value": "荆棘 +10%"
+      },
+      "summonAmount": 16
     },
     {
       "id": 3015,
@@ -299,12 +309,12 @@
       "name": "沙漠狗头人战士",
       "nameEn": "Sand Kobold Warrior",
       "species": "humanoid",
-      "speciesName": "人形",
-      "quality": "uncommon",
+      "speciesName": "人类",
+      "quality": "excellent",
       "qualityName": "非凡",
       "level": 20,
       "weight": 15,
-      "location": "阿瑟隆王国 / 北山地穴",
+      "location": "塔赞荒漠",
       "image": "/images/weapons/3022.png",
       "passives": [
         {
@@ -322,7 +332,12 @@
       ],
       "icon": "/images/icons/minions/desertkoboldwarrior.png",
       "desc": "",
-      "descEn": ""
+      "descEn": "",
+      "passive": {
+        "name": "坚定 II",
+        "value": "护甲 +10%"
+      },
+      "captureAmount": 25
     },
     {
       "id": 3021,
@@ -330,12 +345,12 @@
       "name": "沙漠狗头人盗贼",
       "nameEn": "Sand Kobold Thief",
       "species": "humanoid",
-      "speciesName": "人形",
-      "quality": "uncommon",
+      "speciesName": "人类",
+      "quality": "excellent",
       "qualityName": "非凡",
       "level": 20,
       "weight": 15,
-      "location": "阿瑟隆王国 / 北山地穴",
+      "location": "塔赞荒漠",
       "image": "/images/weapons/3021.png",
       "passives": [
         {
@@ -353,7 +368,12 @@
       ],
       "icon": "/images/icons/minions/desertkoboldthief.png",
       "desc": "",
-      "descEn": ""
+      "descEn": "",
+      "passive": {
+        "name": "对流血敌人造成伤害 II",
+        "value": "对流血敌人造成的伤害 +20%"
+      },
+      "captureAmount": 20
     },
     {
       "id": 3020,
@@ -418,11 +438,11 @@
       "nameEn": "Skeleton Archer",
       "species": "undead",
       "speciesName": "不死族",
-      "quality": "uncommon",
+      "quality": "excellent",
       "qualityName": "非凡",
       "level": 20,
       "weight": 15,
-      "location": "腐败森林 / 北山地穴",
+      "location": "北山地穴",
       "image": "/images/weapons/3007.png",
       "passives": [
         {
@@ -440,7 +460,12 @@
       ],
       "icon": "/images/icons/minions/skeletonarcher.png",
       "desc": "",
-      "descEn": ""
+      "descEn": "",
+      "passive": {
+        "name": "暴击几率 I",
+        "value": "暴击几率 +5%"
+      },
+      "captureAmount": 25
     },
     {
       "id": 3009,
@@ -515,7 +540,7 @@
       "qualityName": "稀有",
       "level": 35,
       "weight": 15,
-      "location": "国王森林 / 塔赞荒漠",
+      "location": "国王森林南部",
       "image": "/images/weapons/3031.png",
       "passives": [
         {
@@ -533,7 +558,12 @@
       ],
       "icon": "/images/icons/minions/forestspiderking.png",
       "desc": "",
-      "descEn": ""
+      "descEn": "",
+      "passive": {
+        "name": "毒素护卫 II",
+        "value": "减少受到的毒素伤害 25%"
+      },
+      "captureAmount": 25
     },
     {
       "id": 3024,
@@ -789,12 +819,12 @@
       "name": "黑暗精灵法师",
       "nameEn": "Dark Elf Mage",
       "species": "humanoid",
-      "speciesName": "人形",
+      "speciesName": "人类",
       "quality": "rare",
       "qualityName": "稀有",
       "level": 35,
       "weight": 15,
-      "location": "阿瑟隆王国 / 北山地穴",
+      "location": "北山地穴",
       "image": "/images/weapons/3003.png",
       "passives": [
         {
@@ -812,7 +842,12 @@
       ],
       "icon": "/images/icons/minions/darkelfmage.png",
       "desc": "",
-      "descEn": ""
+      "descEn": "",
+      "passive": {
+        "name": "法力提升 II",
+        "value": "法力 +30%"
+      },
+      "summonAmount": 20
     },
     {
       "id": 3029,
@@ -999,7 +1034,8 @@
       "name": "元素",
       "nameEn": "Elemental",
       "icon": "⛰️"
-    }
+    },
+    "excellent"
   ],
   "npcs": [
     {
