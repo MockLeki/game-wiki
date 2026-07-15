@@ -282,8 +282,8 @@ export default function SkillsPage() {
                   ) : (
                     <>
                       <div className="talent-icon-frame">
-                        <img src={`/images/icons/passives/Skill_${String(node.talentIdx + 1).padStart(3, '0')}.png`}
-                             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = `<span style="font-size:1.4rem">${currentClass?.icon}</span>` }}
+                        <img src={`/images/icons/Warriorskill_${String(Math.min(node.talentIdx + 1, 37)).padStart(2, '0')}.png`}
+                             onError={(e) => { e.target.style.display='none'; e.target.parentElement.innerHTML=`<span style="font-size:1.4rem;filter:grayscale(0)">${currentClass?.icon}</span>` }}
                              alt="" />
                       </div>
                       <div className="talent-counter">
