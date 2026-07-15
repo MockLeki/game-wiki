@@ -16,9 +16,6 @@ const QUALITIES = [
 const Q_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }
 const Q_BADGE_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }
 
-// 模拟品质数值（实际游戏没有 - 这里给传说装备 ATK 显示）
-const QUALITY_ATK = { common: '+3', uncommon: '+5', rare: '+8', legendary: '+15' }
-
 export default function GearPage() {
   const [search, setSearch] = useState('')
   const [quality, setQuality] = useState('all')
@@ -125,7 +122,6 @@ export default function GearPage() {
           <div className="items-grid">
             {filtered.map(item => {
               const isJewelry = item.slot === 'necklace' || item.slot === 'ring'
-              const atk = isJewelry ? '+' + (item.quality === 'legendary' ? 8 : 3) : QUALITY_ATK[item.quality]
               return (
                 <div key={item.id} className="item-card">
                   <span className={`quality-badge q-${item.quality}`}>{Q_BADGE_NAMES[item.quality]}</span>
@@ -134,8 +130,6 @@ export default function GearPage() {
                     <div style={{flex: 1}}>
                       <div className="item-name">{item.name}</div>
                       <div className="item-meta">等级 1 · {SLOTS[item.slot]} · {item.quality === 'weapon' ? '武器' : '防具'}</div>
-                      {!isJewelry && <div className="item-stat">攻击伤害 <span className="highlight">{atk}</span></div>}
-                      {isJewelry && <div className="item-stat">特殊效果 <span className="highlight">+{item.quality === 'legendary' ? 5 : 2}%</span></div>}
                     </div>
                   </div>
                   {item.desc && <div className="item-effect">✨ {item.desc}</div>}

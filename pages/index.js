@@ -51,7 +51,7 @@ export default function Home() {
 
         <div className="hero-card" style={{padding: '2rem'}}>
           <h2 style={{color: 'var(--gold-light)', fontSize: '1.5rem', marginBottom: '1.5rem', textAlign: 'center', textShadow: '0 0 12px rgba(201,165,91,0.4)'}}>
-            塔斯克巴 · 英雄数据库
+            数据库入口
           </h2>
           <div className="hero-stats-grid">
             {sections.map(s => (
