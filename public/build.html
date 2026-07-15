@@ -7,7 +7,9 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: #1a1614; color: #efe6d8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 1rem; }
-h1 { color: #c9a55b; margin-bottom: 0.5rem; }
+h1 { color: #c9a55b; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 1rem; }
+.back-btn { font-size: 0.85rem; padding: 0.3rem 0.8rem; background: rgba(201,165,91,0.15); color: #c9a55b; text-decoration: none; border-radius: 6px; border: 1px solid rgba(201,165,91,0.3); margin-left: auto; }
+.back-btn:hover { background: rgba(201,165,91,0.25); color: #efe6d8; }
 h2 { color: #c9a55b; font-size: 1.1rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid #3d332b; }
 .tip-box { background: #181513; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; color: #c7b8a3; border-left: 4px solid #c9a55b; }
 .tip-box strong { color: #c9a55b; }
@@ -20,8 +22,12 @@ h2 { color: #c9a55b; font-size: 1.1rem; margin-bottom: 0.8rem; padding-bottom: 0
 .action-btn:hover { background: #3d332b; }
 .grid { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 1rem; }
 .section { background: #181513; border-radius: 8px; padding: 1rem; min-height: 600px; }
-.equip-slot { display: flex; align-items: center; gap: 0.8rem; background: #2d2723; padding: 0.5rem; border: 2px solid #3d332b; border-radius: 6px; margin-bottom: 0.5rem; cursor: pointer; }
-.equip-slot.has-item { border-color: #c9a55b; }
+.equip-slot { display: flex; align-items: center; gap: 0.8rem; background: #2d2723; padding: 0.6rem; border: 2px solid #c9a55b; border-radius: 6px; margin-bottom: 0.5rem; cursor: pointer; min-height: 50px; }
+.equip-slot:hover { background: #3d332b; border-color: #efe6d8; }
+.equip-slot.has-item { border-color: #c9a55b; background: #3d332b; }
+.equip-slot .slot-icon { font-size: 1.5rem; flex-shrink: 0; }
+.equip-slot .slot-label { font-size: 0.8rem; color: #c9a55b; display: block; margin-bottom: 0.2rem; }
+.equip-slot .slot-empty { color: #6b5d50; font-size: 0.85rem; font-style: italic; }
 .slot-icon { width: 40px; height: 40px; background: #1a1614; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
 .slot-label { font-size: 0.75rem; color: #8f7f6e; display: block; }
 .item-name { font-weight: bold; font-size: 0.9rem; }
@@ -85,7 +91,7 @@ h2 { color: #c9a55b; font-size: 1.1rem; margin-bottom: 0.8rem; padding-bottom: 0
 </head>
 <body>
 
-<h1>⚔️ BD 构筑模拟器</h1>
+<h1>⚔️ BD 构筑模拟器 <a href="/" class="back-btn">← 返回 Wiki</a></h1>
 <div class="tip-box">
 <strong>基于游戏真实数据</strong>
 <p>本模拟器所有数据来自《桌面破坏神 Demo》游戏本体的 TextAsset 与已确认的截图中提取的数值。装备、词条、技能均与游戏内 1:1 对应。</p>
@@ -138,7 +144,7 @@ h2 { color: #c9a55b; font-size: 1.1rem; margin-bottom: 0.8rem; padding-bottom: 0
 </div>
 
 
-<div class="steam-box" id="steam-box">
+<div class="steam-box" id="steam-box" style="display:none">
   <div class="steam-title">📊 Steam 数据</div>
   <div class="steam-stats">
     <div class="steam-stat">🎮 当前玩家: <span id="steam-players">-</span></div>
@@ -197,22 +203,8 @@ function init() {
   renderSelectedList();
 }
 
-function loadData() {
-  try {
-    const [a, e, b] = await Promise.all([
-      fetch('/data/affixes.json'),
-      fetch('/data/equipment_tree.json'),
-      fetch('/data/build_data.json')
-    ]);
-    DATA.affixes = (await a.json()).affixes || {};
-    DATA.slotAffixes = (await a.json()).slotAffixes || {};
-    DATA.equipment = (await e.json()).tree || {};
-    DATA.skills = (await b.json()).skills || [];
-    init();
-  } catch (e) {
-    console.error('数据加载失败:', e);
-  }
-}
+// 数据已内联（不再用 fetch），旧 loadData 残留函数已删除
+
 
 function setClass(c) {
   activeClass = c;
@@ -237,9 +229,9 @@ function renderEquipmentList() {
     const qClass = item ? 'item-quality-' + item.quality : '';
     return `<div class="equip-slot ${item ? 'has-item' : ''}" onclick="openModal('${slot}')">
 <div class="slot-icon">${SLOT_ICONS[slot]}</div>
-<div>
+<div style="flex:1">
 <span class="slot-label">${SLOT_NAMES[slot]}</span>
-<span class="${qClass}">${item ? item.name : '未装备 - 点击选择'}</span>
+<span class="${qClass}" style="font-size:0.9rem;display:block">${item ? item.name : '<span class="slot-empty">点击选择装备...</span>'}</span>
 </div>
 </div>`;
   }).join('');
@@ -577,9 +569,6 @@ loadSteamData();
 
 // Steam box styles
 // (added inline for simplicity)
-const steamStyle = document.createElement('style');
-steamStyle.textContent = ;
-document.head.appendChild(steamStyle);
 
 </script>
 </body>

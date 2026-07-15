@@ -30,7 +30,7 @@ export default defineConfig({
           { text: '技能大全', link: '/skills' },
           { text: '仆从大全', link: '/minions' },
           { text: '关卡大全', link: '/levels' },
-          { text: '构筑模拟器', link: '/build' },
+          { text: '构筑模拟器', link: '/build.html' },
         ]
       },
       {

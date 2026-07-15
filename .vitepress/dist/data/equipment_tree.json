@@ -15,8 +15,7 @@
     "common": 0,
     "uncommon": 1,
     "rare": 2,
-    "legendary": 3,
-    "divine": 4
+    "legendary": 3
   },
   "tree": {
     "common": {
@@ -27,6 +26,7 @@
           "nameEn": "Worn Iron-Buckle Belt",
           "slot": "belt",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonbelt1.png"
@@ -37,6 +37,7 @@
           "nameEn": "Frayed Leather Strap",
           "slot": "belt",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonbelt2.png"
@@ -47,6 +48,7 @@
           "nameEn": "Simple Leather Belt",
           "slot": "belt",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonbelt3.png"
@@ -59,6 +61,7 @@
           "nameEn": "Worn Travel Boots",
           "slot": "boots",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonboots1.png"
@@ -69,6 +72,7 @@
           "nameEn": "Peasant's Footwraps",
           "slot": "boots",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonboots2.png"
@@ -79,6 +83,7 @@
           "nameEn": "Hide Riding Boots",
           "slot": "boots",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonboots3.png"
@@ -91,6 +96,7 @@
           "nameEn": "Peasant's Tunic",
           "slot": "chest",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonchestarmor1.png"
@@ -101,6 +107,7 @@
           "nameEn": "Tattered Hooded Jerkin",
           "slot": "chest",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonchestarmor2.png"
@@ -111,6 +118,7 @@
           "nameEn": "Padded Gambeson",
           "slot": "chest",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonchestarmor3.png"
@@ -123,6 +131,7 @@
           "nameEn": "Wanderer's Brimmed Hat",
           "slot": "helm",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonhelm1.png"
@@ -133,6 +142,7 @@
           "nameEn": "Worn Leather Hood",
           "slot": "helm",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonhelm2.png"
@@ -143,6 +153,7 @@
           "nameEn": "Padded Leather Coif",
           "slot": "helm",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonhelm3.png"
@@ -155,6 +166,7 @@
           "nameEn": "Onyx Teardrop Pendant",
           "slot": "necklace",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonneck1.png"
@@ -165,6 +177,7 @@
           "nameEn": "Iron Link Necklace",
           "slot": "necklace",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonneck2.png"
@@ -175,41 +188,10 @@
           "nameEn": "Simple Silver Pendant",
           "slot": "necklace",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonneck3.png"
-        }
-      ],
-      "legs": [
-        {
-          "id": "CommonPant1",
-          "name": "亚麻马裤",
-          "nameEn": "Linen Breeches",
-          "slot": "legs",
-          "quality": "common",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/commonpant1.png"
-        },
-        {
-          "id": "CommonPant2",
-          "name": "补丁长裤",
-          "nameEn": "Patched Trousers",
-          "slot": "legs",
-          "quality": "common",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/commonpant2.png"
-        },
-        {
-          "id": "CommonPant3",
-          "name": "黑色布裤",
-          "nameEn": "Black Cloth Pants",
-          "slot": "legs",
-          "quality": "common",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/commonpant3.png"
         }
       ],
       "ring": [
@@ -219,6 +201,7 @@
           "nameEn": "Plain Iron Band",
           "slot": "ring",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonring1.png"
@@ -229,6 +212,7 @@
           "nameEn": "Copper Band",
           "slot": "ring",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonring2.png"
@@ -239,6 +223,7 @@
           "nameEn": "Hammered Silver Ring",
           "slot": "ring",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonring3.png"
@@ -251,6 +236,7 @@
           "nameEn": "Leather Spaulder",
           "slot": "shoulder",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonshoulder1.png"
@@ -261,6 +247,7 @@
           "nameEn": "Worn Pauldron",
           "slot": "shoulder",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonshoulder2.png"
@@ -271,6 +258,7 @@
           "nameEn": "Padded Shoulderguard",
           "slot": "shoulder",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonshoulder3.png"
@@ -283,19 +271,10 @@
           "nameEn": "Woodsman's Hatchet",
           "slot": "weapon",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonaxe1.png"
-        },
-        {
-          "id": "UnCommonAxe1",
-          "name": "风化战斧",
-          "nameEn": "Weathered Battleaxe",
-          "slot": "weapon",
-          "quality": "common",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/uncommonaxe1.png"
         },
         {
           "id": "CommonMace1",
@@ -303,6 +282,7 @@
           "nameEn": "Iron Spiked Mace",
           "slot": "weapon",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonmace1.png"
@@ -313,6 +293,7 @@
           "nameEn": "Iron Arming Sword",
           "slot": "weapon",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonsword1.png"
@@ -323,6 +304,7 @@
           "nameEn": "Hooked Bronze Staff",
           "slot": "weapon",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commonstaff1.png"
@@ -335,6 +317,7 @@
           "nameEn": "Worn Leather Gloves",
           "slot": "gloves",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commongloves1.png"
@@ -345,6 +328,7 @@
           "nameEn": "Studded Hide Gloves",
           "slot": "gloves",
           "quality": "common",
+          "qualityName": "普通",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/commongloves2.png"
@@ -359,6 +343,7 @@
           "nameEn": "Sturdy Buckled Belt",
           "slot": "belt",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonbelt1.png"
@@ -369,6 +354,7 @@
           "nameEn": "Ringclasp Belt",
           "slot": "belt",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonbelt2.png"
@@ -379,6 +365,7 @@
           "nameEn": "Wayfarer's Wrap Belt",
           "slot": "belt",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonbelt3.png"
@@ -391,6 +378,7 @@
           "nameEn": "Thornstep Boots",
           "slot": "boots",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonboots1.png"
@@ -401,6 +389,7 @@
           "nameEn": "Fur-Lined Trekkers",
           "slot": "boots",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonboots2.png"
@@ -411,6 +400,7 @@
           "nameEn": "Wanderer's Boots",
           "slot": "boots",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonboots3.png"
@@ -423,6 +413,7 @@
           "nameEn": "Riveted Mail Vest",
           "slot": "chest",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonchestarmor1.png"
@@ -433,6 +424,7 @@
           "nameEn": "Verdant Hooded Garb",
           "slot": "chest",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonchestarmor2.png"
@@ -443,6 +435,7 @@
           "nameEn": "Bluewatch Gambeson",
           "slot": "chest",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonchestarmor3.png"
@@ -455,6 +448,7 @@
           "nameEn": "Iron Nasal Helm",
           "slot": "helm",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonhelm1.png"
@@ -465,6 +459,7 @@
           "nameEn": "Steel Kettle Helm",
           "slot": "helm",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonhelm2.png"
@@ -475,6 +470,7 @@
           "nameEn": "Guardsman's Helm",
           "slot": "helm",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonhelm3.png"
@@ -487,6 +483,7 @@
           "nameEn": "Ruby Drop Pendant",
           "slot": "necklace",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonneck1.png"
@@ -497,6 +494,7 @@
           "nameEn": "Prism Quartet Amulet",
           "slot": "necklace",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonneck2.png"
@@ -507,41 +505,10 @@
           "nameEn": "Obsidian Leaf Pendant",
           "slot": "necklace",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonneck3.png"
-        }
-      ],
-      "legs": [
-        {
-          "id": "UncommonPant1",
-          "name": "加固兽皮护腿",
-          "nameEn": "Reinforced Hide Leggings",
-          "slot": "legs",
-          "quality": "uncommon",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/uncommonpant1.png"
-        },
-        {
-          "id": "UncommonPant2",
-          "name": "荆棘护卫护腿",
-          "nameEn": "Thornguard Leggings",
-          "slot": "legs",
-          "quality": "uncommon",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/uncommonpant2.png"
-        },
-        {
-          "id": "UncommonPant3",
-          "name": "林者马裤",
-          "nameEn": "Forester's Breeches",
-          "slot": "legs",
-          "quality": "uncommon",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/uncommonpant3.png"
         }
       ],
       "ring": [
@@ -551,6 +518,7 @@
           "nameEn": "Drakespine Ring",
           "slot": "ring",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonring1.png"
@@ -561,6 +529,7 @@
           "nameEn": "Garnet Band",
           "slot": "ring",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonring2.png"
@@ -571,6 +540,7 @@
           "nameEn": "Spiked Iron Ring",
           "slot": "ring",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonring3.png"
@@ -583,6 +553,7 @@
           "nameEn": "Layered Iron Pauldron",
           "slot": "shoulder",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonshoulder1.png"
@@ -593,6 +564,7 @@
           "nameEn": "Iron Shoulderplate",
           "slot": "shoulder",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonshoulder2.png"
@@ -603,6 +575,7 @@
           "nameEn": "Riveted Steel Spaulder",
           "slot": "shoulder",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonshoulder3.png"
@@ -615,6 +588,7 @@
           "nameEn": "Forged Warhammer",
           "slot": "weapon",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonmace1.png"
@@ -625,6 +599,7 @@
           "nameEn": "Serpent's Tongue Blade",
           "slot": "weapon",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonsword1.png"
@@ -635,6 +610,7 @@
           "nameEn": "Rubycrown Scepter",
           "slot": "weapon",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommonstaff1.png"
@@ -647,6 +623,7 @@
           "nameEn": "Steel Plated Gauntlets",
           "slot": "gloves",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommongloves1.png"
@@ -657,6 +634,7 @@
           "nameEn": "Verdant Leather Gloves",
           "slot": "gloves",
           "quality": "uncommon",
+          "qualityName": "非凡",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/uncommongloves2.png"
@@ -671,6 +649,7 @@
           "nameEn": "Verdant Talon Girdle",
           "slot": "belt",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarebelt1.png"
@@ -681,6 +660,7 @@
           "nameEn": "Sunstone Sash",
           "slot": "belt",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarebelt2.png"
@@ -691,6 +671,7 @@
           "nameEn": "Amethyst Shadow Sash",
           "slot": "belt",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarebelt3.png"
@@ -703,6 +684,7 @@
           "nameEn": "Ironclad Warboots",
           "slot": "boots",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareboots1.png"
@@ -713,6 +695,7 @@
           "nameEn": "Sapphire Arcane Boots",
           "slot": "boots",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareboots2.png"
@@ -723,6 +706,7 @@
           "nameEn": "Ruby-Gilded Boots",
           "slot": "boots",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareboots3.png"
@@ -735,6 +719,7 @@
           "nameEn": "Goldstud Brigandine",
           "slot": "chest",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarechestarmor1.png"
@@ -745,6 +730,7 @@
           "nameEn": "Sigilguard Cuirass",
           "slot": "chest",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarechestarmor2.png"
@@ -755,6 +741,7 @@
           "nameEn": "Argent Knight's Plate",
           "slot": "chest",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarechestarmor3.png"
@@ -767,6 +754,7 @@
           "nameEn": "Crusader's Great Helm",
           "slot": "helm",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarehelm1.png"
@@ -777,6 +765,7 @@
           "nameEn": "Sunforged Warhelm",
           "slot": "helm",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarehelm2.png"
@@ -787,6 +776,7 @@
           "nameEn": "Doomhorn Helm",
           "slot": "helm",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarehelm3.png"
@@ -799,6 +789,7 @@
           "nameEn": "Amethyst Gold Amulet",
           "slot": "necklace",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareneck1.png"
@@ -809,6 +800,7 @@
           "nameEn": "Turquoise Eye Amulet",
           "slot": "necklace",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareneck2.png"
@@ -819,41 +811,10 @@
           "nameEn": "Sapphire Shard Amulet",
           "slot": "necklace",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareneck3.png"
-        }
-      ],
-      "legs": [
-        {
-          "id": "RarePant1",
-          "name": "青钢护腿",
-          "nameEn": "Tealsteel Legguards",
-          "slot": "legs",
-          "quality": "rare",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/rarepant1.png"
-        },
-        {
-          "id": "RarePant2",
-          "name": "岩浆裂纹长裤",
-          "nameEn": "Magmacrack Trousers",
-          "slot": "legs",
-          "quality": "rare",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/rarepant2.png"
-        },
-        {
-          "id": "RarePant3",
-          "name": "镀金丝绸护腿",
-          "nameEn": "Gilded Silk Leggings",
-          "slot": "legs",
-          "quality": "rare",
-          "desc": "",
-          "descEn": "",
-          "icon": "/images/icons/items/rarepant3.png"
         }
       ],
       "ring": [
@@ -863,6 +824,7 @@
           "nameEn": "Sunstone Signet",
           "slot": "ring",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarering1.png"
@@ -873,6 +835,7 @@
           "nameEn": "Coven Talon Ring",
           "slot": "ring",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarering2.png"
@@ -883,6 +846,7 @@
           "nameEn": "Emberflame Band",
           "slot": "ring",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarering3.png"
@@ -895,6 +859,7 @@
           "nameEn": "Crimsonguard Pauldron",
           "slot": "shoulder",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareshoulder1.png"
@@ -905,6 +870,7 @@
           "nameEn": "Deathskull Pauldron",
           "slot": "shoulder",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareshoulder2.png"
@@ -915,6 +881,7 @@
           "nameEn": "Sunspike Pauldron",
           "slot": "shoulder",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareshoulder3.png"
@@ -927,6 +894,7 @@
           "nameEn": "Gilded Ripper Axe",
           "slot": "weapon",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rareaxe1.png"
@@ -937,6 +905,7 @@
           "nameEn": "Sunburst Scepter Mace",
           "slot": "weapon",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/raremace1.png"
@@ -947,6 +916,7 @@
           "nameEn": "Golden Falchion",
           "slot": "weapon",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/raresword1.png"
@@ -957,6 +927,7 @@
           "nameEn": "Lunar Crescent Staff",
           "slot": "weapon",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/rarestaff1.png"
@@ -969,6 +940,7 @@
           "nameEn": "Deathskull Gauntlets",
           "slot": "gloves",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/raregloves1.png"
@@ -979,6 +951,7 @@
           "nameEn": "Crimson Claw Gauntlets",
           "slot": "gloves",
           "quality": "rare",
+          "qualityName": "稀有",
           "desc": "",
           "descEn": "",
           "icon": "/images/icons/items/raregloves2.png"
@@ -993,6 +966,7 @@
           "nameEn": "Bottomless Potion Belt",
           "slot": "belt",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "药水使用次数+4。",
           "descEn": "Increase Potion Charges by 4.",
           "icon": "/images/icons/items/legendarybelt1.png"
@@ -1005,6 +979,7 @@
           "nameEn": "Boots of the Windcaller",
           "slot": "boots",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "击杀后4秒内移动速度+50%。",
           "descEn": "+50% Movement Speed for 4 seconds after a kill.",
           "icon": "/images/icons/items/legendaryboots1.png"
@@ -1017,6 +992,7 @@
           "nameEn": "Bulwark of Wrath",
           "slot": "chest",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "若怒气护盾在结束前未被打破，结束时对周围敌人造成相当于你最大生命值100%的物理伤害。",
           "descEn": "If Rage Shield is not broken before expiration, deal 100% of your Max Health as Physical Damage to surrounding enemies upon expiration.",
           "icon": "/images/icons/items/legendarychestarmor1.png"
@@ -1027,6 +1003,7 @@
           "nameEn": "Thornheart Cuirass",
           "slot": "chest",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "荆棘造成的伤害提高500%，但失去20%最大生命值。",
           "descEn": "Damage dealt by Thorns is increased by 500%, but you lose 20% Max Health.",
           "icon": "/images/icons/items/legendarychestarmor2.png"
@@ -1037,6 +1014,7 @@
           "nameEn": "Runeward Vestment",
           "slot": "chest",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "受到敌人暴击时，获得基于你最大生命值的精神护盾。（冷却8秒）",
           "descEn": "When struck by an enemy critical hit, gain a Spirit Shield based on your Max Health. (8s cooldown)",
           "icon": "/images/icons/items/legendarychestarmor3.png"
@@ -1049,6 +1027,7 @@
           "nameEn": "Crown of the Fallen King",
           "slot": "helm",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "击杀后3秒内攻击速度+30%。",
           "descEn": "+30% Attack Speed for 3 seconds after a kill.",
           "icon": "/images/icons/items/legendaryhelm1.png"
@@ -1059,6 +1038,7 @@
           "nameEn": "Kabuto of the Crimson Tempest",
           "slot": "helm",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "旋风斩每次命中有几率施加[流血]。",
           "descEn": "Whirlwind has a chance to inflict [Bleeding] on each hit.",
           "icon": "/images/icons/items/legendaryhelm2.png"
@@ -1071,6 +1051,7 @@
           "nameEn": "Pendant of the Surging Mind",
           "slot": "necklace",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "每消耗100点法力，4秒内暴击几率+20%。",
           "descEn": "Every 100 Mana spent, +20% Critical Hit Chance for 4 seconds.",
           "icon": "/images/icons/items/legendaryneck1.png"
@@ -1081,6 +1062,7 @@
           "nameEn": "Bellow of the Open Wound",
           "slot": "necklace",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "怒吼将立即引爆周围敌人身上残余的[流血]伤害。",
           "descEn": "Rage Shout will trigger remaining [Bleeding] damage on surrounding enemies instantly.",
           "icon": "/images/icons/items/legendaryneck2.png"
@@ -1091,6 +1073,7 @@
           "nameEn": "Fire Lord's Necklace",
           "slot": "necklace",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "火元素将额外召唤一个火元素。",
           "descEn": "Fire Elemental will summon one additional Fire Elemental.",
           "icon": "/images/icons/items/legendaryneck3.png"
@@ -1103,6 +1086,7 @@
           "nameEn": "Greaves of the Arcane Edge",
           "slot": "legs",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "[附魔]技能的暴击伤害+150%。",
           "descEn": "+150% Critical Hit Damage from [Enchanted] Abilities.",
           "icon": "/images/icons/items/legendarypants1.png"
@@ -1113,6 +1097,7 @@
           "nameEn": "Greaves of the Stalwart Tonic",
           "slot": "legs",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "饮用生命药水后，5秒内获得30%伤害减免。",
           "descEn": "Gain 30% Damage Reduction for 5 seconds after consuming Health Potion.",
           "icon": "/images/icons/items/legendarypants2.png"
@@ -1125,6 +1110,7 @@
           "nameEn": "Bloodfang Signet of the Wyrm",
           "slot": "ring",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "半月打击将额外掷出两道月牙刃。",
           "descEn": "Half Moon Strike will hurl two additional crescent blades.",
           "icon": "/images/icons/items/legendaryring1.png"
@@ -1135,6 +1121,7 @@
           "nameEn": "Ring of Revelation",
           "slot": "ring",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "静止不动时，每秒获得+10%普通攻击伤害，最多叠加20层。",
           "descEn": "While standing still, gain +10% Basic Attack Damage every second, stacking up to 20 times.",
           "icon": "/images/icons/items/legendaryring2.png"
@@ -1147,6 +1134,7 @@
           "nameEn": "Shell Spike Pauldron",
           "slot": "shoulder",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "护甲的10%也会计入荆棘。",
           "descEn": "10% of your Armor also contributes to Thorns.",
           "icon": "/images/icons/items/legendaryshoulder1.png"
@@ -1157,6 +1145,7 @@
           "nameEn": "Elemental Burst Pauldron",
           "slot": "shoulder",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "使用[强力攻击]技能后，6秒内火焰伤害和闪电伤害+50%。",
           "descEn": "After using a [Strong Attack] Ability, gain +50% Fire and Lightning Damage for 6 seconds.",
           "icon": "/images/icons/items/legendaryshoulder2.png"
@@ -1169,6 +1158,7 @@
           "nameEn": "Northern Giant's Great Axe",
           "slot": "weapon",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "每次[普通攻击]还会额外造成相当于50%武器伤害的冰霜伤害，并有3%几率冻结目标。",
           "descEn": "Each [Basic Attack] also deals 50% of Weapon Damage as Cold Damage, with a 3% chance to Freeze the target on hit.",
           "icon": "/images/icons/items/legendaryaxe1.png"
@@ -1179,6 +1169,7 @@
           "nameEn": "Hellstorm Mace",
           "slot": "weapon",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "每使用10次 [普通攻击] 技能，召唤一道闪电打击随机敌人，造成相当于1000%武器伤害的闪电伤害。",
           "descEn": "Every 10 [Basic Attack] Abilities used, summons a Lightning Strike that deals 1000% Weapon Damage as Lightning Damage to a random enemy.",
           "icon": "/images/icons/items/legendarymace1.png"
@@ -1189,6 +1180,7 @@
           "nameEn": "Serrated Greatsword of Agony",
           "slot": "weapon",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "对易伤目标额外获得30%暴击几率。",
           "descEn": "Additional 30% Critical Chance against Vulnerable targets.",
           "icon": "/images/icons/items/legendarysword1.png"
@@ -1199,6 +1191,7 @@
           "nameEn": "Staff of the Frostwyrm",
           "slot": "weapon",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "冰碎片命中后弹射至1个额外敌人。",
           "descEn": "Ice Shards deflect to 1 additional enemy on hit.",
           "icon": "/images/icons/items/legendarystaff1.png"
@@ -1211,6 +1204,7 @@
           "nameEn": "Ragefire Gauntlets",
           "slot": "gloves",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "烈焰打击有30%几率不消耗法力。",
           "descEn": "Flame Strike has a 30% chance to cost no Mana.",
           "icon": "/images/icons/items/legendarygloves1.png"
@@ -1221,6 +1215,7 @@
           "nameEn": "Unstoppable Gauntlets",
           "slot": "gloves",
           "quality": "legendary",
+          "qualityName": "传说",
           "desc": "技能每次命中获得1%护甲，持续5秒。（最多叠加100层）",
           "descEn": "Each Ability hit grants 1% Armor for 5 seconds. (Max 100 stacks)",
           "icon": "/images/icons/items/legendarygloves2.png"

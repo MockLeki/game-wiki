@@ -1,23 +1,16 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import levelsData from './public/data/levels.json'
+import minionsData from './public/data/minions.json'
 
-const levels = ref([])
-const minions = ref({ enemies: [] })
-const loading = ref(true)
+// 同步加载数据，避免 onMounted + fetch 卡死
+const levels = ref(levelsData || [])
+const minions = ref(minionsData || { enemies: [] })
+const loading = ref(false)
 
-onMounted(async () => {
-  try {
-    const [levelsRes, minionsRes] = await Promise.all([
-      fetch('/data/levels.json'),
-      fetch('/data/minions.json')
-    ])
-    levels.value = await levelsRes.json()
-    minions.value = await minionsRes.json()
-  } catch (e) {
-    console.error('加载关卡数据失败:', e)
-  } finally {
-    loading.value = false
-  }
+// onMounted 仅做监控，不再用 fetch（已同步加载）
+onMounted(() => {
+  console.log('关卡数据已加载:', levels.value.length, '条')
 })
 
 const difficultyColor = (difficulty) => {
@@ -34,6 +27,7 @@ const difficultyColor = (difficulty) => {
 }
 
 const enemyIcon = (name) => {
+  if (!minions.value || !minions.value.enemies) return null
   const enemy = minions.value.enemies.find(e => e.name === name)
   return enemy ? enemy.icon : null
 }

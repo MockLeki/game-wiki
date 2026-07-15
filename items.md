@@ -49,11 +49,16 @@ const qualityColors = { common: '#9e9e9e', uncommon: '#4caf50', rare: '#2196f3',
 const groupedArmor = computed(() => {
   if (!itemData.value) return {}
   const groups = {}
+  // 防具（不含首饰）
   itemData.value.legendary_armor.forEach(item => {
     const s = slotNames[item.slot] || item.slot
     if (!groups[s]) groups[s] = []
     groups[s].push(item)
   })
+  // 首饰：项链 + 戒指
+  if (itemData.value.legendary_jewelry && itemData.value.legendary_jewelry.length > 0) {
+    groups['首饰'] = itemData.value.legendary_jewelry
+  }
   return groups
 })
 
@@ -80,7 +85,7 @@ const treeTiers = computed(() => {
 const legendaryById = computed(() => {
   if (!itemData.value) return {}
   const map = {}
-  ;[...itemData.value.legendary_weapons, ...itemData.value.legendary_armor].forEach(item => {
+  ;[...itemData.value.legendary_weapons, ...itemData.value.legendary_armor, ...(itemData.value.legendary_jewelry || [])].forEach(item => {
     map[item.id] = item
   })
   return map

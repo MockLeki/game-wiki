@@ -77,7 +77,7 @@ const { frontmatter } = useData()
 <div class="db-card-count">7 个关卡</div>
 </a>
 
-<a href="/build" class="db-card">
+<a href="/build.html" class="db-card">
 <div class="db-card-icon">⚔️</div>
 <div class="db-card-title">构筑模拟器</div>
 <div class="db-card-desc">装备/词条/技能自由组合，实时预览综合属性</div>
