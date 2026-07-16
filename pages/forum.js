@@ -213,7 +213,10 @@ export default function Forum() {
               {(active.posts || []).map((p, i) => (
                 <div key={i} className={`forum-post ${i === 0 ? 'is-op' : ''}`}>
                   <div className="forum-post-header">
-                    <span className="forum-post-author">{p.authorName}{i === 0 && <span style={{color: 'var(--gold-light)', fontSize: '0.7rem', marginLeft: '0.3rem'}}>楼主</span>}</span>
+                    <div style={{display:'flex', alignItems:'center', gap:'0.6rem'}}>
+                      {p.authorAvatar && <img src={p.authorAvatar} className="forum-avatar" alt="" />}
+                      <span className="forum-post-author">{p.authorName}{i === 0 && <span style={{color: 'var(--gold-light)', fontSize: '0.7rem', marginLeft: '0.3rem'}}>楼主</span>}</span>
+                    </div>
                     <span className="forum-post-time">{timeAgo(p.createdAt)}</span>
                   </div>
                   <div className="forum-post-content">
