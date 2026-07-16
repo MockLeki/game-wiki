@@ -65,27 +65,7 @@ function SteamLogin() {
           </div>
           <a href="/api/auth/steam" className="steam-logout" title="切换 Steam 账号" onClick={e => e.stopPropagation()}>🔄</a>
           {isAdmin && (
-            <span className="admin-gear" title="管理员数据编辑" onClick={e => { e.stopPropagation()
-              const files = ['items.json', 'talents.json', 'minions.json', 'levels.json', 'affixes.json', 'skills.json']
-              const choice = prompt('选择要编辑的文件:\n' + files.map((f, i) => `${i+1}. ${f}`).join('\n') + '\n\n输入 1-6:')
-              if (choice) {
-                const idx = parseInt(choice) - 1
-                if (idx >= 0 && idx < files.length) {
-                  setEditFile(files[idx])
-                  fetch(`https://deskrawl.top/api/data/${files[idx]}`)
-                    .then(r => r.text())
-                    .then(t => { setEditContent(t); setShowEditor(true) })
-                    .catch(() => {
-                      // 回退从 GitHub 加载
-                      fetch(`https://raw.githubusercontent.com/MockLeki/game-wiki/main/public/data/${files[idx]}`)
-                        .then(r => r.text())
-                        .then(t => { setEditContent(t); setShowEditor(true) })
-                        .catch(() => { setEditContent('{}'); setShowEditor(true) })
-                    })
-                  setEditMsg('')
-                }
-              }
-            }}>⚙️</span>
+            <a href="/admin/items" className="admin-gear" title="管理后台" onClick={e => e.stopPropagation()}>⚙️</a>
           )}
         </div>
         {showCard && user.steamId && (
@@ -98,7 +78,10 @@ function SteamLogin() {
           <>
             <div className="admin-overlay" onClick={() => setShowEditor(false)} />
             <div className="admin-editor">
-              <h3 style={{color: '#c9a96a', marginBottom: '0.6rem'}}>编辑数据: {editFile}</h3>
+              <h3 style={{color: '#c9a96a', marginBottom: '0.3rem'}}>编辑数据: {editFile}</h3>
+              <div style={{color: '#706858', fontSize: '0.8rem', marginBottom: '0.6rem'}}>
+                直接修改 JSON，Ctrl+S 保存。错误格式会提示。
+              </div>
               <textarea value={editContent} onChange={e => setEditContent(e.target.value)}
                 style={{width:'100%', height:'60vh', background:'#0a0806', color:'#c0b8a8',
                   border:'1px solid #6b5230', padding:'0.8rem', fontSize:'0.85rem',
