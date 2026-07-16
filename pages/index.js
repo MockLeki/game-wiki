@@ -8,9 +8,7 @@ export default function Home() {
     { icon: '🗺️', name: '关卡', num: 12, link: '/world' },
     { icon: '🎯', name: '技能', num: 90, link: '/skills' },
     { icon: '✨', name: '词条', num: 41, link: '/affixes' },
-    { icon: '💎', name: '材料', num: 12, link: '/gear' },
-    { icon: '🔥', name: '被动', num: 32, link: '/skills' },
-    { icon: '📜', name: '新闻', num: 5, link: '/faq' },
+    { icon: '📜', name: '构筑', num: 0, link: '/build' },
   ]
   return (
     <Layout>
