@@ -121,8 +121,7 @@ body::after {
 .c11 { top:-5%; right:55%; color:#00d9ff; box-shadow:0 0 24px 8px #00d9ff,-60px 0 35px -3px #00d9ff,-180px 0 70px -8px rgba(0,217,255,0.5); animation:comet-cross 6.8s linear 2.3s infinite; }
 .c12 { top:-5%; right:70%; color:#ff6ec7; box-shadow:0 0 24px 8px #ff6ec7,-60px 0 35px -3px #ff6ec7,-180px 0 70px -8px rgba(255,110,199,0.5); animation:comet-cross 5.2s linear 3s infinite; }
 
-}
-
+h1, h2, h3, h4 {
 h1, h2, h3, h4 { font-family: 'Orbitron', 'Inter', sans-serif; letter-spacing: 0.06em; }
 a { color: var(--cyan); text-decoration: none; transition: all 0.2s; }
 a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(0, 217, 255, 0.6); }
