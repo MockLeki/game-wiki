@@ -184,9 +184,10 @@ export default function SkillsPage() {
       const t = currentTalents[node.talentIdx]
       if (!t) return
       const { stat } = parseBonus(t)
+      const perPoint = t.perPoint || 1
       if (!bonusSummary[stat]) bonusSummary[stat] = { points: 0, talents: [] }
-      bonusSummary[stat].points += cur
-      bonusSummary[stat].talents.push({ name: t.name, value: cur, max: node.maxPoints })
+      bonusSummary[stat].points += cur * perPoint
+      bonusSummary[stat].talents.push({ name: t.name, value: cur, max: node.maxPoints, perPoint, unit: t.unit || '' })
     })
   }
 
@@ -316,9 +317,15 @@ export default function SkillsPage() {
             })}
 
             {/* 鼠标跟随 tooltip */}
-            {hoveredTalent && (
+            {hoveredTalent && (() => {
+              const liveCur = getAlloc(activeClass, hoveredTalent.idx)
+              const pp = hoveredTalent.perPoint || 1
+              const unit = hoveredTalent.unit || ''
+              const liveDesc = (hoveredTalent.desc || '').replace(/\{value\}/g, liveCur * pp).replace(/\{value1\}/g, liveCur * pp).replace(/\{value2\}/g, liveCur * pp)
+              return (
               <div className="talent-tooltip-follow"
                 style={{ left: mousePos.x + 16, top: mousePos.y - 10 }}
+                key={`tt-${hoveredTalent.idx}-${liveCur}`}
               >
                 <div className="tt-follow-header">
                   <img src={`/images/icons/passives/Skill_${String(hoveredTalent.idx + 1).padStart(3, '0')}.png`}
@@ -328,15 +335,16 @@ export default function SkillsPage() {
                     <div className="tt-follow-tag">{currentClass?.icon} {currentClass?.name} · 等级 {hoveredTalent.tier + 1}</div>
                   </div>
                 </div>
-                <div className="tt-follow-desc">{hoveredTalent.desc || '点击分配点数提升效果'}</div>
+                <div className="tt-follow-desc">{liveDesc || '点击分配点数提升效果'}</div>
                 <div className="tt-follow-stats">
-                  <div className="tt-stat-row"><span className="tt-stat-label">当前</span><span className="tt-stat-val">+{hoveredTalent.cur * (hoveredTalent.perPoint || 1)}{hoveredTalent.unit || ''}</span></div>
-                  <div className="tt-stat-row"><span className="tt-stat-label">最大</span><span className="tt-stat-val">+{hoveredTalent.max * (hoveredTalent.perPoint || 1)}{hoveredTalent.unit || ''}</span></div>
-                  <div className="tt-stat-row"><span className="tt-stat-label">剩余</span><span className="tt-stat-val">{(hoveredTalent.max - hoveredTalent.cur) * (hoveredTalent.perPoint || 1)}{hoveredTalent.unit || ''}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">当前</span><span className="tt-stat-val">+{liveCur * pp}{unit}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">最大</span><span className="tt-stat-val">+{hoveredTalent.max * pp}{unit}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">剩余</span><span className="tt-stat-val">{(hoveredTalent.max - liveCur) * pp}{unit}</span></div>
                 </div>
                 <div className="tt-follow-hint">⚡ 点击节点分配/取消点数</div>
               </div>
-            )}
+              )
+            })()}
           </div>
 
           {/* 右侧总加成面板 */}
@@ -353,12 +361,15 @@ export default function SkillsPage() {
                   点击节点分配点数
                 </div>
               ) : (
-                Object.entries(bonusSummary).map(([stat, info]) => (
-                  <div key={stat} className="summary-row">
-                    <span className="summary-stat">{stat}</span>
-                    <span className="summary-value">+{info.points} 点</span>
-                  </div>
-                ))
+                Object.entries(bonusSummary).map(([stat, info]) => {
+                  const unit = info.talents[0]?.unit || ''
+                  return (
+                    <div key={stat} className="summary-row">
+                      <span className="summary-stat">{stat}</span>
+                      <span className="summary-value">+{info.points}{unit}</span>
+                    </div>
+                  )
+                })
               )}
             </div>
             <div className="summary-divider"></div>
