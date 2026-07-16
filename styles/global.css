@@ -574,7 +574,7 @@ input:focus, textarea:focus, select:focus {
 /* === 技能树 === */
 .talent-reset-btn { padding: 0.4rem 0.9rem; background: rgba(0, 217, 255, 0.1); border: 1px solid var(--border-cyan); color: var(--cyan-light); cursor: pointer; font-size: 0.85rem; font-family: Orbitron, sans-serif; }
 .talent-reset-btn:hover { background: rgba(0, 217, 255, 0.25); border-color: var(--cyan-light); box-shadow: 0 0 6px rgba(0, 217, 255, 0.3); }
-.talent-icon-frame { width: 60px; height: 60px; background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(255, 0, 255, 0.1) 100%); border: 1px solid var(--border-cyan); display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 0 8px rgba(0, 217, 255, 0.2); } overflow: hidden; flex-shrink: 0; }
+.talent-icon-frame { width: 60px; height: 60px; background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(255, 0, 255, 0.1) 100%); border: 1px solid var(--border-cyan); display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 0 8px rgba(0, 217, 255, 0.2); overflow: hidden; flex-shrink: 0; }
 .talent-icon-frame img { width: 100%; height: 100%; object-fit: cover; }
 .talent-icon-frame > span { font-size: 1.4rem; }
 
