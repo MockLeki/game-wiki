@@ -38,9 +38,25 @@
         "unit": "点"
       },
       {
+        "name": "生命恢复",
+        "nameEn": "Life Regeneration",
+        "desc": "+{value} 生命恢复/秒（每级+4）",
+        "perPoint": 4,
+        "unit": "HP/秒"
+      },
+      {
+        "name": "凶猛",
+        "nameEn": "Ferocity",
+        "desc": "+{value}% 对易伤目标的伤害（每级+5%）",
+        "perPoint": 5,
+        "unit": "%"
+      },
+      {
         "name": "攻击速度",
         "nameEn": "Attack Speed",
-        "desc": "+{value}% 攻击速度（待补充数值）"
+        "desc": "+{value}% 攻击速度（每级+2%）",
+        "perPoint": 2,
+        "unit": "%"
       },
       {
         "name": "暴击伤害",
@@ -50,9 +66,15 @@
         "unit": "%"
       },
       {
-        "name": "生命恢复",
-        "nameEn": "Life Regeneration",
-        "desc": "+{value} 生命恢復"
+        "name": "战斗激励",
+        "nameEn": "Battle Inspiration",
+        "desc": "横扫打击有 {value}% 几率使 [战吼] 技能冷却减少 {value2} 秒",
+        "perPoint": 10,
+        "unit": "%",
+        "perPoint2": 1,
+        "unit2": "秒",
+        "maxPoints": 3,
+        "perPoint2Text": "冷却 -"
       },
       {
         "name": "残暴",
@@ -60,19 +82,9 @@
         "desc": "+{value} 對受傷目標的傷害"
       },
       {
-        "name": "凶猛",
-        "nameEn": "Ferocity",
-        "desc": "+{value} 對易傷目標的傷害"
-      },
-      {
         "name": "劈砍狂怒",
         "nameEn": "Cleaving Rage",
         "desc": "釋放 [普通攻擊] 技能後 +{value} 攻擊速度，最多疊加5層"
-      },
-      {
-        "name": "战斗激励",
-        "nameEn": "Battle Inspiration",
-        "desc": "橫掃打擊有 {chance} 機率使 [戰吼] 技能冷卻減少 {value} 秒。"
       },
       {
         "name": "重击",
