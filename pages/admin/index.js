@@ -10,7 +10,9 @@ export default function AdminIndex() {
     fetch('https://deskrawl.top/api/admin/check', { credentials: 'include' })
       .then(r => r.json()).then(d => setIsAdmin(d.admin))
     fetch('https://deskrawl.top/api/data/sys:maintenance_mode', { credentials: 'include' })
-      .then(r => r.text()).then(t => setMode(t.includes('on') ? 'on' : 'off'))
+      .then(r => r.ok ? r.text() : 'off')
+      .then(t => setMode(t.replace(/"/g, '').trim() === 'on' ? 'on' : 'off'))
+      .catch(() => setMode('off'))
   }, [])
 
   const toggle = async () => {
