@@ -116,6 +116,7 @@ export default function SkillsPage() {
   const [activeClass, setActiveClass] = useState('Warrior')
   const [alloc, setAlloc] = useState({})  // {Warrior: {talentIdx: points}}
   const [hoveredTalent, setHoveredTalent] = useState(null)  // 悬停天赋弹窗
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
   // 初始化每个职业点数
   useEffect(() => {
@@ -292,7 +293,8 @@ export default function SkillsPage() {
                     gridRow: node.tier + 1
                   }}
                   onClick={() => !isLocked && talent && handleNodeClick(activeClass, node.talentIdx, node.maxPoints)}
-                  onMouseEnter={() => !isLocked && talent && setHoveredTalent({ ...talent, idx: node.talentIdx, col: node.col, tier: node.tier, cur, max: node.maxPoints })}
+                  onMouseEnter={(e) => { if (!isLocked && talent) { setMousePos({ x: e.clientX, y: e.clientY }); setHoveredTalent({ ...talent, idx: node.talentIdx, col: node.col, tier: node.tier, cur, max: node.maxPoints, desc: talent.desc || '点击分配点数提升效果' }) } }}
+                  onMouseMove={(e) => setMousePos({ x: e.clientX, y: e.clientY })}
                   onMouseLeave={() => setHoveredTalent(null)}
                 >
                   {isLocked ? (
@@ -313,23 +315,26 @@ export default function SkillsPage() {
               )
             })}
 
-            {/* 悬停弹窗（游戏内同款） */}
+            {/* 鼠标跟随 tooltip */}
             {hoveredTalent && (
-              <div className="talent-tooltip"
-                style={{
-                  left: `${(hoveredTalent.col + 0.5) / 5 * 100}%`,
-                  top: `${(hoveredTalent.tier + 0.5) / 7 * 100}%`,
-                }}
-                onMouseEnter={() => setHoveredTalent(hoveredTalent)}
-                onMouseLeave={() => setHoveredTalent(null)}
+              <div className="talent-tooltip-follow"
+                style={{ left: mousePos.x + 16, top: mousePos.y - 10 }}
               >
-                <div className="tooltip-header">
+                <div className="tt-follow-header">
                   <img src={`/images/icons/passives/Skill_${String(hoveredTalent.idx + 1).padStart(3, '0')}.png`}
-                       onError={(e) => { e.target.style.display='none' }} alt="" className="tooltip-icon" />
-                  <div className="tooltip-name">{hoveredTalent.name}</div>
+                       onError={(e) => { e.target.style.display='none' }} alt="" className="tt-follow-icon" />
+                  <div>
+                    <div className="tt-follow-name">{hoveredTalent.name}</div>
+                    <div className="tt-follow-tag">{currentClass?.icon} {currentClass?.name} · 等级 {hoveredTalent.tier + 1}</div>
+                  </div>
                 </div>
-                <div className="tooltip-value">+{hoveredTalent.cur} 力量</div>
-                <div className="tooltip-level">等级 {hoveredTalent.cur}/{hoveredTalent.max}</div>
+                <div className="tt-follow-desc">{hoveredTalent.desc || '点击分配点数提升效果'}</div>
+                <div className="tt-follow-stats">
+                  <div className="tt-stat-row"><span className="tt-stat-label">当前</span><span className="tt-stat-val">+{hoveredTalent.cur}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">最大</span><span className="tt-stat-val">+{hoveredTalent.max}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">剩余</span><span className="tt-stat-val">{hoveredTalent.max - hoveredTalent.cur}</span></div>
+                </div>
+                <div className="tt-follow-hint">⚡ 点击节点分配/取消点数</div>
               </div>
             )}
           </div>
