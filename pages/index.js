@@ -49,9 +49,11 @@ export default function Home() {
           <div className="steam-stat-live"><span>💰</span><span>价格</span><strong id="steam-price">-</strong></div>
         </div>
 
-        {/* 玩家社区论坛 - 突出按钮 */}
-        <Link
-          href="/forum"
+        {/* 玩家社区论坛 - 跳转到 freeflarum */}
+        <a
+          href="https://deskrawl.freeflarum.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="forum-cta"
         >
           <div className="forum-cta-bg" />
@@ -61,9 +63,9 @@ export default function Home() {
               <div className="forum-cta-title">玩家社区论坛</div>
               <div className="forum-cta-subtitle">讨论攻略 · 交换情报 · 寻找队友</div>
             </div>
-            <div className="forum-cta-arrow">→</div>
+            <div className="forum-cta-arrow">↗</div>
           </div>
-        </Link>
+        </a>
       </div>
     </Layout>
   )
