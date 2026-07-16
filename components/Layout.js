@@ -160,12 +160,13 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
           <a href="https://deskrawl.freeflarum.com" target="_blank" rel="noopener" style={{fontSize:'0.85rem'}}>论坛</a>
         </div>
       </nav>
-      <div className="cosmic-comet c1" /><div className="cosmic-comet c2" />
-      <div className="cosmic-comet c3" /><div className="cosmic-comet c4" />
-      <div className="cosmic-comet c5" /><div className="cosmic-comet c6" />
-      <div className="cosmic-comet c7" /><div className="cosmic-comet c8" />
-      <div className="cosmic-comet c9" /><div className="cosmic-comet c10" />
-      <div className="cosmic-comet c11" /><div className="cosmic-comet c12" />
+      <div className="cosmic-comet t1" /><div className="cosmic-comet t2" />
+      <div className="cosmic-comet t3" /><div className="cosmic-comet t4" />
+      <div className="cosmic-comet t5" /><div className="cosmic-comet t6" />
+      <div className="cosmic-comet t7" />
+      <div className="cosmic-comet l1" /><div className="cosmic-comet l2" />
+      <div className="cosmic-comet l3" /><div className="cosmic-comet l4" />
+      <div className="cosmic-comet l5" />
       <main>{children}</main>
       <footer className="footer">
         <p>噜总制作 · QQ:1224325275 · 非官方 Wiki</p>
