@@ -133,6 +133,21 @@ a:hover { color: var(--gold-light); }
   margin-left: 0.2rem; transition: color 0.2s;
 }
 .steam-login-user:hover .steam-dropdown-arrow { color: var(--gold-light); }
+.admin-gear {
+  color: var(--muted); font-size: 1.1rem; cursor: pointer;
+  padding: 0 0.4rem; transition: color 0.2s;
+}
+.admin-gear:hover { color: var(--gold-light); }
+.admin-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 300;
+}
+.admin-editor {
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: #12100e; border: 1px solid var(--border-gold);
+  z-index: 301; padding: 1.2rem; width: 90%; max-width: 900px;
+  max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.8);
+}
 .steam-popup-card {
   position: absolute; top: 100%; right: 0;
   margin-top: 0.5rem; z-index: 200;
