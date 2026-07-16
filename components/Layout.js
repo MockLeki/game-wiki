@@ -65,7 +65,7 @@ function SteamLogin() {
           </div>
           <a href="/api/auth/steam" className="steam-logout" title="切换 Steam 账号" onClick={e => e.stopPropagation()}>🔄</a>
           {isAdmin && (
-            <a href="/admin/items" className="admin-gear" title="管理后台" onClick={e => e.stopPropagation()}>⚙️</a>
+            <a href="/admin/" className="admin-gear" title="管理后台" onClick={e => e.stopPropagation()}>⚙️</a>
           )}
         </div>
         {showCard && user.steamId && (
