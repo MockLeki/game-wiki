@@ -86,11 +86,10 @@ body::after {
 .cosmic-comet::after {
   content: '';
   position: absolute;
-  top: 50%; left: 12px;
+  top: 50%; right: 12px;
   width: 600px; height: 3px;
   background: linear-gradient(90deg,
-    transparent 0%,
-    #ff00ff 5%, #ff6ec7 15%, #b94aff 25%, #00d9ff 40%, #7fffe0 55%, #ffd700 70%, #ff6ec7 85%, transparent 100%);
+    transparent 0%, #ff6ec7 8%, #ffd700 18%, #7fffe0 28%, #00d9ff 40%, #b94aff 55%, #ff6ec7 75%, #ff00ff 92%, transparent 100%);
   transform: translateY(-50%);
   filter: blur(1px);
   box-shadow: 0 0 8px rgba(0, 217, 255, 0.6);
