@@ -42,8 +42,16 @@ export default function AdminEdit({ file }) {
     fetch('https://deskrawl.top/api/admin/check', { credentials: 'include' })
       .then(r => r.json())
       .then(d => { if (d.admin) setIsAdmin(true); else setMsg('❌ 你不是管理员') })
+    // 先试 KV，没数据回退 GitHub
     fetch(`https://deskrawl.top/api/data/${file}.json`)
-      .then(r => r.ok ? r.text() : '{}')
+      .then(r => r.ok ? r.text() : '')
+      .then(t => {
+        if (!t) {
+          return fetch(`https://raw.githubusercontent.com/MockLeki/game-wiki/main/public/data/${file}.json`)
+            .then(r => r.text())
+        }
+        return t
+      })
       .then(t => {
         try {
           const obj = JSON.parse(t)
@@ -113,8 +121,8 @@ export default function AdminEdit({ file }) {
             >
               ↩ 撤销
             </button>
-            <a href="/" className="admin-btn-back">← 返回 Wiki</a>
-            <a href="/admin/" className="admin-btn-switch">切换文件</a>
+            <Link href="/" className="admin-btn-back">← 返回 Wiki</Link>
+            <Link href="/admin/" className="admin-btn-switch">切换文件</Link>
           </div>
         </div>
 
