@@ -24,22 +24,10 @@
         "unit": "点"
       },
       {
-        "name": "攻击速度",
-        "nameEn": "Attack Speed",
-        "desc": "+{value}% 攻击速度（待补充数值）"
-      },
-      {
         "name": "暴击几率",
         "nameEn": "Critical Hit Chance",
         "desc": "+{value}% 暴击几率（每级+2%）",
         "perPoint": 2,
-        "unit": "%"
-      },
-      {
-        "name": "暴击伤害",
-        "nameEn": "Critical Hit Damage",
-        "desc": "+{value}% 暴击伤害（每级+3%）",
-        "perPoint": 3,
         "unit": "%"
       },
       {
@@ -48,6 +36,18 @@
         "desc": "+{value} 荆棘（每级+3）",
         "perPoint": 3,
         "unit": "点"
+      },
+      {
+        "name": "攻击速度",
+        "nameEn": "Attack Speed",
+        "desc": "+{value}% 攻击速度（待补充数值）"
+      },
+      {
+        "name": "暴击伤害",
+        "nameEn": "Critical Hit Damage",
+        "desc": "+{value}% 暴击伤害（每级+3%）",
+        "perPoint": 3,
+        "unit": "%"
       },
       {
         "name": "生命恢复",
