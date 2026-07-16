@@ -232,6 +232,24 @@ export default function SkillsPage() {
         </div>
 
         <div className="talent-tree-container">
+          {/* 左侧等级条 */}
+          <div className="talent-level-rail">
+            <div className="level-rail-marker"><span>1</span></div>
+            <div className="level-rail-section"></div>
+            <div className="level-rail-marker"><span>5</span></div>
+            <div className="level-rail-section"></div>
+            <div className="level-rail-marker"><span>10</span></div>
+            <div className="level-rail-section"></div>
+            <div className="level-rail-marker"><span>15</span></div>
+            <div className="level-rail-section"></div>
+            <div className="level-rail-marker"><span>20</span></div>
+            <div className="level-rail-section"></div>
+            <div className="level-rail-marker"><span>25</span></div>
+            <div className="level-rail-section"></div>
+            <div className="level-rail-marker"><span>30</span></div>
+            <div className="level-rail-section"></div>
+            <div className="level-rail-marker"><span>40</span></div>
+          </div>
           {/* 主天赋网格 + 连接线 SVG */}
           <div className="talent-tree">
             {/* SVG 连线层 */}

@@ -515,17 +515,34 @@ input:focus, textarea:focus, select:focus {
   border: 1px solid var(--border-cyan);
   padding: 1rem;
   min-height: 500px;
+  display: grid;
+  grid-template-columns: 50px 1fr 240px;
+  grid-template-areas: 'rail tree summary';
+  gap: 1rem;
+  align-items: stretch;
 }
+.talent-level-rail { display: flex; flex-direction: column; padding: 0.4rem 0; grid-area: rail; }
+.talent-tree { grid-area: tree; }
+.talent-summary-panel { grid-area: summary; }
+.level-rail-marker { display: flex; align-items: center; justify-content: center; height: 36px; color: var(--cyan-light); font-family: Orbitron, sans-serif; font-weight: 700; font-size: 0.95rem; text-shadow: 0 0 4px var(--cyan); }
+.level-rail-section { flex: 1; border-left: 2px solid var(--border-cyan); margin: 0 auto; min-height: 60px; position: relative; }
+.level-rail-section::before { content: ''; position: absolute; bottom: 0; left: -3px; width: 6px; height: 6px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 6px var(--cyan); }
 .talent-tree {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 0.6rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 0.5rem;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
   min-height: 500px;
+  padding-left: 20px;
+  background-image:
+    linear-gradient(to bottom, transparent calc(14.28% - 1px), rgba(0, 217, 255, 0.4) 14.28%, transparent calc(14.28% + 1px)),
+    linear-gradient(to bottom, transparent calc(28.57% - 1px), rgba(0, 217, 255, 0.4) 28.57%, transparent calc(28.57% + 1px)),
+    linear-gradient(to bottom, transparent calc(42.85% - 1px), rgba(0, 217, 255, 0.4) 42.85%, transparent calc(42.85% + 1px)),
+    linear-gradient(to bottom, transparent calc(57.14% - 1px), rgba(0, 217, 255, 0.4) 57.14%, transparent calc(57.14% + 1px)),
+    linear-gradient(to bottom, transparent calc(71.42% - 1px), rgba(0, 217, 255, 0.4) 71.42%, transparent calc(71.42% + 1px)),
+    linear-gradient(to bottom, transparent calc(85.71% - 1px), rgba(0, 217, 255, 0.4) 85.71%, transparent calc(85.71% + 1px));
 }
 .talent-connector {
   position: absolute; top: 0; left: 0;
