@@ -73,54 +73,52 @@ body::after {
   100% { opacity: 0.4; }
 }
 
-/* === 彗星（从上方和左侧起始，炫彩拖尾坠落）=== */
+/* === 彗星（自然坠落 - 尾巴在身后）=== */
 .cosmic-comet {
   position: fixed;
-  width: 7px; height: 7px;
+  width: 8px; height: 8px;
   background: white;
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
   opacity: 0;
+  box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.9), 0 0 24px 8px currentColor, 0 0 40px 12px currentColor;
 }
-.cosmic-comet::after {
+/* 尾巴在彗星左上方（身后的方向）*/
+.cosmic-comet::before {
   content: '';
   position: absolute;
-  top: 50%; right: 12px;
-  width: 600px; height: 3px;
-  background: linear-gradient(90deg,
-    transparent 0%, #ff6ec7 8%, #ffd700 18%, #7fffe0 28%, #00d9ff 40%, #b94aff 55%, #ff6ec7 75%, #ff00ff 92%, transparent 100%);
-  transform: translateY(-50%);
-  filter: blur(1px);
-  box-shadow: 0 0 8px rgba(0, 217, 255, 0.6);
-  opacity: 0.85;
+  bottom: 100%; right: 100%;
+  width: 400px; height: 3px;
+  background: linear-gradient(90deg, transparent 0%, currentColor 40%, currentColor 100%);
+  transform-origin: 100% 100%;
+  transform: rotate(-25deg);
+  margin-bottom: 0; margin-right: 0;
+  filter: blur(0.5px);
+  box-shadow: 0 0 6px currentColor, 0 0 12px currentColor;
+  opacity: 0.8;
 }
-.cosmic-comet { box-shadow: 0 0 18px 6px #00d9ff, 0 0 30px 8px rgba(0, 217, 255, 0.4); }
 
 @keyframes comet-fall {
-  0%   { transform: translate(0, 0) rotate(20deg); opacity: 0; }
+  0%   { transform: translate(0, 0); opacity: 0; }
   3%   { opacity: 1; }
-  95%  { opacity: 1; }
-  100% { transform: translate(80vw, 100vh) rotate(20deg); opacity: 0; }
+  97%  { opacity: 1; }
+  100% { transform: translate(110vw, 110vh); opacity: 0; }
 }
 
-/* 从顶部起始 */
-.t1 { top:-5%; left:5%;  color:#ff6ec7; box-shadow:0 0 18px 6px #ff6ec7, 0 0 30px 8px rgba(255,110,199,0.4); animation:comet-fall 4s linear 0s infinite; }
-.t2 { top:-5%; left:18%; color:#00d9ff; box-shadow:0 0 18px 6px #00d9ff, 0 0 30px 8px rgba(0,217,255,0.4); animation:comet-fall 5s linear 0.5s infinite; }
-.t3 { top:-5%; left:32%; color:#7fffe0; box-shadow:0 0 18px 6px #7fffe0, 0 0 30px 8px rgba(127,255,224,0.4); animation:comet-fall 4.5s linear 1s infinite; }
-.t4 { top:-5%; left:46%; color:#b94aff; box-shadow:0 0 18px 6px #b94aff, 0 0 30px 8px rgba(185,74,255,0.4); animation:comet-fall 5.5s linear 1.5s infinite; }
-.t5 { top:-5%; left:60%; color:#ffd700; box-shadow:0 0 18px 6px #ffd700, 0 0 30px 8px rgba(255,215,0,0.4); animation:comet-fall 4.2s linear 2s infinite; }
-.t6 { top:-5%; left:74%; color:#ff00ff; box-shadow:0 0 18px 6px #ff00ff, 0 0 30px 8px rgba(255,0,255,0.4); animation:comet-fall 5.2s linear 2.5s infinite; }
-.t7 { top:-5%; left:88%; color:#00d9ff; box-shadow:0 0 18px 6px #00d9ff, 0 0 30px 8px rgba(0,217,255,0.4); animation:comet-fall 4.8s linear 3s infinite; }
+.t1 { top:-3%; left:5%;  color:#ff6ec7; animation:comet-fall 4s linear 0s infinite; }
+.t2 { top:-3%; left:20%; color:#00d9ff; animation:comet-fall 5s linear 0.4s infinite; }
+.t3 { top:-3%; left:35%; color:#7fffe0; animation:comet-fall 4.5s linear 0.8s infinite; }
+.t4 { top:-3%; left:50%; color:#b94aff; animation:comet-fall 5.5s linear 1.2s infinite; }
+.t5 { top:-3%; left:65%; color:#ffd700; animation:comet-fall 4.2s linear 1.6s infinite; }
+.t6 { top:-3%; left:80%; color:#ff00ff; animation:comet-fall 5.2s linear 2s infinite; }
+.t7 { top:-3%; left:92%; color:#00d9ff; animation:comet-fall 4.8s linear 2.4s infinite; }
 
-/* 从左侧起始 */
-.l1 { top:5%;  left:-5%; color:#b94aff; box-shadow:0 0 18px 6px #b94aff, 0 0 30px 8px rgba(185,74,255,0.4); animation:comet-fall 5.5s linear 0.3s infinite; }
-.l2 { top:25%; left:-5%; color:#7fffe0; box-shadow:0 0 18px 6px #7fffe0, 0 0 30px 8px rgba(127,255,224,0.4); animation:comet-fall 4.5s linear 1.2s infinite; }
-.l3 { top:45%; left:-5%; color:#ffd700; box-shadow:0 0 18px 6px #ffd700, 0 0 30px 8px rgba(255,215,0,0.4); animation:comet-fall 5s linear 2s infinite; }
-.l4 { top:65%; left:-5%; color:#ff6ec7; box-shadow:0 0 18px 6px #ff6ec7, 0 0 30px 8px rgba(255,110,199,0.4); animation:comet-fall 4.3s linear 2.7s infinite; }
-.l5 { top:85%; left:-5%; color:#00d9ff; box-shadow:0 0 18px 6px #00d9ff, 0 0 30px 8px rgba(0,217,255,0.4); animation:comet-fall 5.7s linear 3.5s infinite; }
-
-
+.l1 { top:8%;  left:-3%; color:#b94aff; animation:comet-fall 5.5s linear 0.2s infinite; }
+.l2 { top:25%; left:-3%; color:#7fffe0; animation:comet-fall 4.5s linear 1s infinite; }
+.l3 { top:45%; left:-3%; color:#ffd700; animation:comet-fall 5s linear 1.7s infinite; }
+.l4 { top:62%; left:-3%; color:#ff6ec7; animation:comet-fall 4.3s linear 2.3s infinite; }
+.l5 { top:80%; left:-3%; color:#00d9ff; animation:comet-fall 5.7s linear 3s infinite; }
 h1, h2, h3, h4 { font-family: 'Orbitron', 'Inter', sans-serif; letter-spacing: 0.06em; }
 a { color: var(--cyan); text-decoration: none; transition: all 0.2s; }
 a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(0, 217, 255, 0.6); }
