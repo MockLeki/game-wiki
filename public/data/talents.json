@@ -4,37 +4,50 @@
       {
         "name": "力量",
         "nameEn": "Strength",
-        "desc": "+{value} 力量"
+        "desc": "+{value} 力量（每级+5）",
+        "perPoint": 5,
+        "unit": "点"
       },
       {
         "name": "活力",
         "nameEn": "Vitality",
-        "desc": "+{value} 最大生命值"
+        "desc": "+{value} 最大生命值（每级+50）",
+        "perPoint": 50,
+        "unit": "点"
       },
       {
         "name": "护甲",
         "nameEn": "Armor",
-        "desc": "+{value1} 護甲，+{value2} 魔法抗性"
+        "desc": "+{value1} 护甲，+{value2} 魔法抗性（每级各+25）",
+        "perPoint": 25,
+        "perPoint2": 25,
+        "unit": "点"
       },
       {
         "name": "攻击速度",
         "nameEn": "Attack Speed",
-        "desc": "+{value} 攻擊速度"
+        "desc": "+{value}% 攻击速度（待补充数值）"
       },
       {
         "name": "暴击几率",
         "nameEn": "Critical Hit Chance",
-        "desc": "+{value} 暴擊機率"
+        "desc": "+{value}% 暴击几率（每级+2%）",
+        "perPoint": 2,
+        "unit": "%"
       },
       {
         "name": "暴击伤害",
         "nameEn": "Critical Hit Damage",
-        "desc": "+{value} 暴擊傷害"
+        "desc": "+{value}% 暴击伤害（每级+3%）",
+        "perPoint": 3,
+        "unit": "%"
       },
       {
         "name": "荆棘",
         "nameEn": "Thorn",
-        "desc": "+{value} 荊棘"
+        "desc": "+{value} 荆棘（每级+3）",
+        "perPoint": 3,
+        "unit": "点"
       },
       {
         "name": "生命恢复",

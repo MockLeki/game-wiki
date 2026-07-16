@@ -330,9 +330,9 @@ export default function SkillsPage() {
                 </div>
                 <div className="tt-follow-desc">{hoveredTalent.desc || '点击分配点数提升效果'}</div>
                 <div className="tt-follow-stats">
-                  <div className="tt-stat-row"><span className="tt-stat-label">当前</span><span className="tt-stat-val">+{hoveredTalent.cur}</span></div>
-                  <div className="tt-stat-row"><span className="tt-stat-label">最大</span><span className="tt-stat-val">+{hoveredTalent.max}</span></div>
-                  <div className="tt-stat-row"><span className="tt-stat-label">剩余</span><span className="tt-stat-val">{hoveredTalent.max - hoveredTalent.cur}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">当前</span><span className="tt-stat-val">+{hoveredTalent.cur * (hoveredTalent.perPoint || 1)}{hoveredTalent.unit || ''}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">最大</span><span className="tt-stat-val">+{hoveredTalent.max * (hoveredTalent.perPoint || 1)}{hoveredTalent.unit || ''}</span></div>
+                  <div className="tt-stat-row"><span className="tt-stat-label">剩余</span><span className="tt-stat-val">{(hoveredTalent.max - hoveredTalent.cur) * (hoveredTalent.perPoint || 1)}{hoveredTalent.unit || ''}</span></div>
                 </div>
                 <div className="tt-follow-hint">⚡ 点击节点分配/取消点数</div>
               </div>
