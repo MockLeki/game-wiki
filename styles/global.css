@@ -121,8 +121,30 @@ a:hover { color: var(--gold-light); }
 }
 .steam-name {
   color: var(--gold-light); font-size: 0.8rem;
-  font-weight: 600; max-width: 120px;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-weight: 600; display: block;
+}
+.steam-playtime {
+  color: var(--muted); font-size: 0.7rem;
+  display: block;
+}
+.steam-card-wrapper { position: relative; }
+.steam-dropdown-arrow {
+  color: var(--muted); font-size: 0.7rem;
+  margin-left: 0.2rem; transition: color 0.2s;
+}
+.steam-login-user:hover .steam-dropdown-arrow { color: var(--gold-light); }
+.steam-popup-card {
+  position: absolute; top: 100%; right: 0;
+  margin-top: 0.5rem; z-index: 200;
+  background: #171410;
+  border: 1px solid var(--border-gold);
+  border-radius: 2px;
+  padding: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  min-width: 220px;
+}
+.steam-popup-card steam-user {
+  display: block;
 }
 .steam-logout {
   color: var(--muted); font-size: 0.9rem; text-decoration: none;
@@ -242,6 +264,10 @@ a:hover { color: var(--gold-light); }
   border-bottom: 1px dashed var(--border);
 }
 .forum-post-author { color: var(--gold-light); font-weight: 600; font-size: 0.9rem; }
+.forum-avatar {
+  width: 32px; height: 32px; border-radius: 2px;
+  border: 1px solid var(--border-gold);
+}
 .forum-post-time { color: var(--muted); font-size: 0.78rem; }
 .forum-post-content {
   color: var(--text-bright); line-height: 1.7;
