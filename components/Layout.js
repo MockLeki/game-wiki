@@ -164,6 +164,12 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
       <div className="cosmic-comet c2" />
       <div className="cosmic-comet c3" />
       <div className="cosmic-comet c4" />
+      <div className="cosmic-comet c5" />
+      <div className="cosmic-comet c6" />
+      <div className="cosmic-comet c7" />
+      <div className="cosmic-comet c8" />
+      <div className="cosmic-comet c9" />
+      <div className="cosmic-comet c10" />
       <main>{children}</main>
       <footer className="footer">
         <p>噜总制作 · QQ:1224325275 · 非官方 Wiki</p>
