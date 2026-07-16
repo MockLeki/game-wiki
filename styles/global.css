@@ -473,6 +473,104 @@ input:focus, textarea:focus, select:focus {
 .chip-excellent.active { background: var(--l-divine); color: #fff; }
 .chip-legendary.active { background: var(--l-legendary); }
 
+
+/* === Twocol Layout (侧边栏 + 内容) === */
+.twocol { display: grid; grid-template-columns: 280px 1fr; gap: 1rem; }
+@media (max-width: 768px) { .twocol { grid-template-columns: 1fr; } }
+.sidebar {
+  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  border: 1px solid var(--border-cyan);
+  padding: 1rem;
+  height: fit-content;
+}
+.sidebar-header {
+  font-family: Orbitron, sans-serif; font-size: 1.1rem; font-weight: 700;
+  color: var(--cyan-light); margin-bottom: 0.8rem;
+  padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-cyan);
+  text-shadow: 0 0 4px var(--cyan);
+}
+.sidebar-section { margin-bottom: 0.8rem; }
+.sidebar-section h3 { color: var(--cyan); font-size: 0.85rem; margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+.search-box input { width: 100%; }
+.chip-group { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.chip-group .chip { margin-right: 0; }
+
+/* === Talent Tree === */
+.talent-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.talent-tab {
+  padding: 0.5rem 1.2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-cyan);
+  color: var(--cyan-light);
+  cursor: pointer; font-size: 0.9rem;
+  font-family: Orbitron, sans-serif;
+}
+.talent-tab.active, .talent-class-active {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.3) 0%, rgba(255, 0, 255, 0.15) 100%);
+  border-color: var(--cyan-light);
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+}
+.talent-tree-container {
+  background: rgba(15, 20, 50, 0.5);
+  border: 1px solid var(--border-cyan);
+  padding: 1rem;
+  min-height: 500px;
+}
+.talent-tree {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.talent-connector {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.talent-node-tree {
+  position: relative; z-index: 1;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(15, 20, 50, 0.5) 100%);
+  border: 1px solid var(--border-cyan);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  text-align: center; padding: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 90px;
+}
+.talent-node-tree:hover { border-color: var(--cyan-light); box-shadow: 0 0 8px rgba(0, 217, 255, 0.3); }
+.talent-node-tree.is-active {
+  border-color: var(--cyan);
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2) 0%, rgba(255, 0, 255, 0.1) 100%);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.4);
+}
+.talent-node-tree.is-full { background: linear-gradient(135deg, rgba(0, 217, 255, 0.3) 0%, rgba(255, 215, 0, 0.15) 100%); }
+.talent-node-tree.is-locked { opacity: 0.4; cursor: not-allowed; }
+.talent-locked { font-size: 1.5rem; }
+.talent-counter {
+  position: absolute; top: 4px; right: 4px;
+  background: var(--cyan); color: #000;
+  font-size: 0.7rem; padding: 0.1rem 0.4rem;
+  font-weight: 700;
+}
+.talent-name { color: var(--text-bright); font-size: 0.78rem; font-weight: 500; line-height: 1.2; }
+.talent-max { color: var(--cyan); font-size: 0.7rem; opacity: 0.7; }
+
+.summary-box {
+  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  border: 1px solid var(--border-cyan);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.summary-box h3 { color: var(--cyan-light); margin-bottom: 0.6rem; }
+.summary-item { display: flex; justify-content: space-between; padding: 0.3rem 0; border-bottom: 1px dashed var(--border); }
+.summary-item:last-child { border-bottom: none; }
+
 /* === 技能树 === */
 .talent-reset-btn { padding: 0.4rem 0.9rem; background: rgba(0, 217, 255, 0.1); border: 1px solid var(--border-cyan); color: var(--cyan-light); cursor: pointer; font-size: 0.85rem; font-family: Orbitron, sans-serif; }
 .talent-reset-btn:hover { background: rgba(0, 217, 255, 0.25); border-color: var(--cyan-light); box-shadow: 0 0 6px rgba(0, 217, 255, 0.3); }
