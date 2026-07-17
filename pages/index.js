@@ -67,10 +67,7 @@ export default function Home() {
                 · 讨论攻略 · 交流构筑 · 找队友
               </div>
             </div>
-            <div className="forum-cta-arrow" style={{
-              fontFamily:'monospace', fontSize:'1.05rem', letterSpacing:'0.1em',
-              color:'#c9a96a', textShadow:'0 0 6px rgba(201,165,91,0.6)'
-            }}>737018935</div>
+            <div className="forum-cta-arrow">↗</div>
           </div>
         </a>
 

@@ -125,10 +125,9 @@ export default function LeaderboardPanel({ compact = false }) {
                   </div>
                 )}
               </div>
-              {/* 4 卡片 */}
-              <div style={{display:'grid',gridTemplateColumns:'repeat(4, 1fr)',gap:'0.8rem'}}>
+              {/* 3 卡片 */}
+              <div style={{display:'grid',gridTemplateColumns:'repeat(3, 1fr)',gap:'0.8rem'}}>
                 <StatCard label="Demo 当前在线" value={data.players || 0} unit="人" />
-                <StatCard label="全球累计时长" value={data.totalPlaytime || 0} unit="小时" />
                 <StatCard
                   label="完成至少 1 成就"
                   value={data.achievements?.length ? Math.round(data.achievements[0]?.percent || 0) : 0}
@@ -181,7 +180,6 @@ export default function LeaderboardPanel({ compact = false }) {
           <div className="panel-title">🌍 全球热度</div>
           <div style={{display:'grid',gridTemplateColumns:'repeat(2, 1fr)',gap:'1rem',padding:'1rem'}}>
             <StatCard label="Demo 当前在线" value={data?.players || 0} unit="人" />
-            <StatCard label="全球累计时长" value={data?.totalPlaytime || 0} unit="小时" />
             <StatCard
               label="完成至少 1 成就"
               value={data?.achievements?.length ? Math.round(data.achievements[0]?.percent || 0) : 0}
