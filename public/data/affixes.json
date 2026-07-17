@@ -12,94 +12,811 @@
     "ring": "戒指"
   },
   "qualities": {
-    "common": { "name": "普通", "maxAffixes": 1, "color": "#9e9e9e" },
-    "uncommon": { "name": "非凡", "maxAffixes": 3, "color": "#4caf50" },
-    "rare": { "name": "稀有", "maxAffixes": 5, "color": "#2196f3" },
-    "legendary": { "name": "传说", "maxAffixes": 6, "color": "#ff9800" }
+    "common": {
+      "name": "普通",
+      "maxAffixes": 1,
+      "color": "#9e9e9e"
+    },
+    "uncommon": {
+      "name": "非凡",
+      "maxAffixes": 3,
+      "color": "#4caf50"
+    },
+    "rare": {
+      "name": "稀有",
+      "maxAffixes": 5,
+      "color": "#2196f3"
+    },
+    "legendary": {
+      "name": "传说",
+      "maxAffixes": 6,
+      "color": "#ff9800"
+    }
   },
   "affixes": {
-    "Strength": { "id": "Strength", "name": "力量", "type": "flat", "unit": "", "min": 5, "max": 50, "step": 1, "desc": "+{value} 力量" },
-    "Dexterity": { "id": "Dexterity", "name": "敏捷", "type": "flat", "unit": "", "min": 5, "max": 50, "step": 1, "desc": "+{value} 敏捷" },
-    "Intelligence": { "id": "Intelligence", "name": "智力", "type": "flat", "unit": "", "min": 5, "max": 50, "step": 1, "desc": "+{value} 智力" },
-    "Damage": { "id": "Damage", "name": "伤害", "type": "flat", "unit": "", "min": 3, "max": 25, "step": 1, "desc": "+{value} 伤害" },
-    "AttackSpeed": { "id": "AttackSpeed", "name": "攻击速度加成", "type": "percent", "unit": "%", "min": 3, "max": 20, "step": 1, "desc": "+{value}% 攻击速度" },
-    "CritChance": { "id": "CritChance", "name": "暴击几率", "type": "percent", "unit": "%", "min": 2, "max": 12, "step": 1, "desc": "+{value}% 暴击几率" },
-    "CritDamage": { "id": "CritDamage", "name": "暴击伤害", "type": "percent", "unit": "%", "min": 5, "max": 30, "step": 1, "desc": "+{value}% 暴击伤害" },
-    "MaxHealth": { "id": "MaxHealth", "name": "最大生命值", "type": "flat", "unit": "", "min": 50, "max": 350, "step": 10, "desc": "+{value} 最大生命值" },
-    "MaxHealthPercent": { "id": "MaxHealthPercent", "name": "生命值加成", "type": "percent", "unit": "%", "min": 3, "max": 15, "step": 1, "desc": "+{value}% 生命值" },
-    "Armor": { "id": "Armor", "name": "护甲", "type": "flat", "unit": "", "min": 20, "max": 150, "step": 5, "desc": "+{value} 护甲" },
-    "ArmorPercent": { "id": "ArmorPercent", "name": "护甲加成", "type": "percent", "unit": "%", "min": 5, "max": 20, "step": 1, "desc": "+{value}% 护甲" },
-    "MagicResist": { "id": "MagicResist", "name": "魔法抗性", "type": "percent", "unit": "%", "min": 5, "max": 20, "step": 1, "desc": "+{value}% 魔法抗性" },
-    "Dodge": { "id": "Dodge", "name": "闪避几率", "type": "percent", "unit": "%", "min": 2, "max": 10, "step": 1, "desc": "+{value}% 闪避几率" },
-    "CooldownReduction": { "id": "CooldownReduction", "name": "冷却缩减", "type": "percent", "unit": "%", "min": 3, "max": 12, "step": 1, "desc": "+{value}% 冷却缩减" },
-    "MaxMana": { "id": "MaxMana", "name": "最大法力值", "type": "flat", "unit": "", "min": 25, "max": 200, "step": 5, "desc": "+{value} 最大法力值" },
-    "Thorns": { "id": "Thorns", "name": "荆棘", "type": "percent", "unit": "%", "min": 40, "max": 250, "step": 10, "desc": "+{value}% 荆棘伤害" },
-    "ManaCostReduction": { "id": "ManaCostReduction", "name": "法力消耗减少", "type": "percent", "unit": "%", "min": 3, "max": 12, "step": 1, "desc": "+{value}% 法力消耗降低" },
-    "PotionCharges": { "id": "PotionCharges", "name": "额外药水充能", "type": "flat", "unit": "", "min": 1, "max": 4, "step": 1, "desc": "+{value} 药水携带上限" },
-    "LifeRegen": { "id": "LifeRegen", "name": "生命恢复", "type": "flat", "unit": "/秒", "min": 3, "max": 20, "step": 1, "desc": "+{value} 每秒生命恢复" },
-    "MoveSpeed": { "id": "MoveSpeed", "name": "移动速度", "type": "percent", "unit": "%", "min": 5, "max": 18, "step": 1, "desc": "+{value}% 移动速度" },
-    "LifeOnHit": { "id": "LifeOnHit", "name": "命中恢复生命", "type": "flat", "unit": "", "min": 3, "max": 20, "step": 1, "desc": "+{value} 命中恢复生命" },
-    "LifeOnKill": { "id": "LifeOnKill", "name": "击杀恢复生命", "type": "flat", "unit": "", "min": 10, "max": 60, "step": 5, "desc": "+{value} 击杀恢复生命" },
-    "ManaOnKill": { "id": "ManaOnKill", "name": "击杀恢复法力", "type": "flat", "unit": "", "min": 5, "max": 30, "step": 1, "desc": "+{value} 击杀恢复法力" },
-    "GoldFind": { "id": "GoldFind", "name": "金币发现", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 金币获取" },
-    "MagicFind": { "id": "MagicFind", "name": "魔法发现", "type": "percent", "unit": "%", "min": 5, "max": 20, "step": 1, "desc": "+{value}% 魔法物品获取" },
-    "HpPotionFind": { "id": "HpPotionFind", "name": "生命药水发现", "type": "percent", "unit": "%", "min": 5, "max": 20, "step": 1, "desc": "+{value}% 药水掉落几率" },
-    "XPGain": { "id": "XPGain", "name": "经验值", "type": "percent", "unit": "%", "min": 3, "max": 18, "step": 1, "desc": "+{value}% 经验获取" },
-    "DamagePhysical": { "id": "DamagePhysical", "name": "物理伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 物理伤害" },
-    "DamageFire": { "id": "DamageFire", "name": "火焰伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 火焰伤害" },
-    "DamageCold": { "id": "DamageCold", "name": "冰霜伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 冰霜伤害" },
-    "DamageLightning": { "id": "DamageLightning", "name": "闪电伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 闪电伤害" },
-    "DamagePoison": { "id": "DamagePoison", "name": "毒素伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 毒素伤害" },
-    "DamageArcane": { "id": "DamageArcane", "name": "奥术伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 奥术伤害" },
-    "DamageVsHealthy": { "id": "DamageVsHealthy", "name": "满血敌人伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 对满血敌人伤害" },
-    "DamageVsInjured": { "id": "DamageVsInjured", "name": "受伤敌人伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 对受伤敌人伤害" },
-    "DamageVsSlowed": { "id": "DamageVsSlowed", "name": "减速敌人伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 对减速敌人伤害" },
-    "DamageVsStunned": { "id": "DamageVsStunned", "name": "眩晕敌人伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 对眩晕敌人伤害" },
-    "DamageVsElite": { "id": "DamageVsElite", "name": "精英敌人伤害", "type": "percent", "unit": "%", "min": 5, "max": 20, "step": 1, "desc": "+{value}% 对精英/Boss伤害" },
-    "VulnerableDamage": { "id": "VulnerableDamage", "name": "易伤伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 易伤额外伤害" },
-    "BasicAttackDamage": { "id": "BasicAttackDamage", "name": "普通攻击伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 普通攻击伤害" },
-    "StrongAttackDamage": { "id": "StrongAttackDamage", "name": "强力攻击伤害", "type": "percent", "unit": "%", "min": 5, "max": 25, "step": 1, "desc": "+{value}% 强力技能伤害" }
+    "Strength": {
+      "id": "Strength",
+      "name": "力量",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} 力量"
+    },
+    "Dexterity": {
+      "id": "Dexterity",
+      "name": "敏捷",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} 敏捷"
+    },
+    "Intelligence": {
+      "id": "Intelligence",
+      "name": "智力",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} 智力"
+    },
+    "Damage": {
+      "id": "Damage",
+      "name": "伤害",
+      "type": "flat",
+      "unit": "",
+      "min": 3,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value} 伤害"
+    },
+    "AttackSpeed": {
+      "id": "AttackSpeed",
+      "name": "攻击速度加成",
+      "type": "percent",
+      "unit": "%",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value}% 攻击速度"
+    },
+    "CritChance": {
+      "id": "CritChance",
+      "name": "暴击几率",
+      "type": "percent",
+      "unit": "%",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "desc": "+{value}% 暴击几率"
+    },
+    "CritDamage": {
+      "id": "CritDamage",
+      "name": "暴击伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "desc": "+{value}% 暴击伤害"
+    },
+    "MaxHealth": {
+      "id": "MaxHealth",
+      "name": "最大生命值",
+      "type": "flat",
+      "unit": "",
+      "min": 50,
+      "max": 350,
+      "step": 10,
+      "desc": "+{value} 最大生命值"
+    },
+    "MaxHealthPercent": {
+      "id": "MaxHealthPercent",
+      "name": "生命值加成",
+      "type": "percent",
+      "unit": "%",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "desc": "+{value}% 生命值"
+    },
+    "Armor": {
+      "id": "Armor",
+      "name": "护甲",
+      "type": "flat",
+      "unit": "",
+      "min": 20,
+      "max": 150,
+      "step": 5,
+      "desc": "+{value} 护甲"
+    },
+    "ArmorPercent": {
+      "id": "ArmorPercent",
+      "name": "护甲加成",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value}% 护甲"
+    },
+    "MagicResist": {
+      "id": "MagicResist",
+      "name": "魔法抗性",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value}% 魔法抗性"
+    },
+    "Dodge": {
+      "id": "Dodge",
+      "name": "闪避几率",
+      "type": "percent",
+      "unit": "%",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "desc": "+{value}% 闪避几率"
+    },
+    "CooldownReduction": {
+      "id": "CooldownReduction",
+      "name": "冷却缩减",
+      "type": "percent",
+      "unit": "%",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "desc": "+{value}% 冷却缩减"
+    },
+    "MaxMana": {
+      "id": "MaxMana",
+      "name": "最大法力值",
+      "type": "flat",
+      "unit": "",
+      "min": 25,
+      "max": 200,
+      "step": 5,
+      "desc": "+{value} 最大法力值"
+    },
+    "Thorns": {
+      "id": "Thorns",
+      "name": "荆棘",
+      "type": "percent",
+      "unit": "%",
+      "min": 40,
+      "max": 250,
+      "step": 10,
+      "desc": "+{value}% 荆棘伤害"
+    },
+    "ManaCostReduction": {
+      "id": "ManaCostReduction",
+      "name": "法力消耗减少",
+      "type": "percent",
+      "unit": "%",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "desc": "+{value}% 法力消耗降低"
+    },
+    "PotionCharges": {
+      "id": "PotionCharges",
+      "name": "额外药水充能",
+      "type": "flat",
+      "unit": "",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "desc": "+{value} 药水携带上限"
+    },
+    "LifeRegen": {
+      "id": "LifeRegen",
+      "name": "生命恢复",
+      "type": "flat",
+      "unit": "/秒",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value} 每秒生命恢复"
+    },
+    "MoveSpeed": {
+      "id": "MoveSpeed",
+      "name": "移动速度",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 18,
+      "step": 1,
+      "desc": "+{value}% 移动速度"
+    },
+    "LifeOnHit": {
+      "id": "LifeOnHit",
+      "name": "命中恢复生命",
+      "type": "flat",
+      "unit": "",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value} 命中恢复生命"
+    },
+    "LifeOnKill": {
+      "id": "LifeOnKill",
+      "name": "击杀恢复生命",
+      "type": "flat",
+      "unit": "",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "desc": "+{value} 击杀恢复生命"
+    },
+    "ManaOnKill": {
+      "id": "ManaOnKill",
+      "name": "击杀恢复法力",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "desc": "+{value} 击杀恢复法力"
+    },
+    "GoldFind": {
+      "id": "GoldFind",
+      "name": "金币发现",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 金币获取"
+    },
+    "MagicFind": {
+      "id": "MagicFind",
+      "name": "魔法发现",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value}% 魔法物品获取"
+    },
+    "HpPotionFind": {
+      "id": "HpPotionFind",
+      "name": "生命药水发现",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value}% 药水掉落几率"
+    },
+    "XPGain": {
+      "id": "XPGain",
+      "name": "经验值",
+      "type": "percent",
+      "unit": "%",
+      "min": 3,
+      "max": 18,
+      "step": 1,
+      "desc": "+{value}% 经验获取"
+    },
+    "DamagePhysical": {
+      "id": "DamagePhysical",
+      "name": "物理伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 物理伤害"
+    },
+    "DamageFire": {
+      "id": "DamageFire",
+      "name": "火焰伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 火焰伤害"
+    },
+    "DamageCold": {
+      "id": "DamageCold",
+      "name": "冰霜伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 冰霜伤害"
+    },
+    "DamageLightning": {
+      "id": "DamageLightning",
+      "name": "闪电伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 闪电伤害"
+    },
+    "DamagePoison": {
+      "id": "DamagePoison",
+      "name": "毒素伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 毒素伤害"
+    },
+    "DamageArcane": {
+      "id": "DamageArcane",
+      "name": "奥术伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 奥术伤害"
+    },
+    "DamageVsHealthy": {
+      "id": "DamageVsHealthy",
+      "name": "满血敌人伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 对满血敌人伤害"
+    },
+    "DamageVsInjured": {
+      "id": "DamageVsInjured",
+      "name": "受伤敌人伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 对受伤敌人伤害"
+    },
+    "DamageVsSlowed": {
+      "id": "DamageVsSlowed",
+      "name": "减速敌人伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 对减速敌人伤害"
+    },
+    "DamageVsStunned": {
+      "id": "DamageVsStunned",
+      "name": "眩晕敌人伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 对眩晕敌人伤害"
+    },
+    "DamageVsElite": {
+      "id": "DamageVsElite",
+      "name": "精英敌人伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "desc": "+{value}% 对精英/Boss伤害"
+    },
+    "VulnerableDamage": {
+      "id": "VulnerableDamage",
+      "name": "易伤伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 易伤额外伤害"
+    },
+    "BasicAttackDamage": {
+      "id": "BasicAttackDamage",
+      "name": "普通攻击伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 普通攻击伤害"
+    },
+    "StrongAttackDamage": {
+      "id": "StrongAttackDamage",
+      "name": "强力攻击伤害",
+      "type": "percent",
+      "unit": "%",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "desc": "+{value}% 强力技能伤害"
+    },
+    "AttackSpeedBonus": {
+      "id": "AttackSpeedBonus",
+      "name": "攻击速度加成",
+      "nameEn": "Attack Speed Bonus",
+      "type": "percentage",
+      "unit": "%",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value}% 攻击速度加成"
+    },
+    "WeaponDamage": {
+      "id": "WeaponDamage",
+      "name": "武器伤害",
+      "nameEn": "Weapon Damage",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} 武器伤害"
+    },
+    "WeaponSpeed": {
+      "id": "WeaponSpeed",
+      "name": "武器速度",
+      "nameEn": "Weapon Speed",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} 武器速度"
+    },
+    "DamageVsBleeding": {
+      "id": "DamageVsBleeding",
+      "name": "对流血目标伤害",
+      "nameEn": "Damage vs Bleeding",
+      "type": "percentage",
+      "unit": "%",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value}% 对流血目标伤害"
+    },
+    "DamageVsPoisoned": {
+      "id": "DamageVsPoisoned",
+      "name": "对中毒目标伤害",
+      "nameEn": "Damage vs Poisoned",
+      "type": "percentage",
+      "unit": "%",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value}% 对中毒目标伤害"
+    },
+    "GemSlots": {
+      "id": "GemSlots",
+      "name": "GemSlots",
+      "nameEn": "Gem Socket",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} GemSlots"
+    },
+    "PhysicalDamageReduction": {
+      "id": "PhysicalDamageReduction",
+      "name": "PhysicalDamageReduction",
+      "nameEn": "Physical Damage Reduction",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} PhysicalDamageReduction"
+    },
+    "FireDamageReduction": {
+      "id": "FireDamageReduction",
+      "name": "FireDamageReduction",
+      "nameEn": "Fire Damage Reduction",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} FireDamageReduction"
+    },
+    "ColdDamageReduction": {
+      "id": "ColdDamageReduction",
+      "name": "ColdDamageReduction",
+      "nameEn": "Cold Damage Reduction",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} ColdDamageReduction"
+    },
+    "LightningDamageReduction": {
+      "id": "LightningDamageReduction",
+      "name": "LightningDamageReduction",
+      "nameEn": "Lightning Damage Reduction",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} LightningDamageReduction"
+    },
+    "PoisonDamageReduction": {
+      "id": "PoisonDamageReduction",
+      "name": "PoisonDamageReduction",
+      "nameEn": "Poison Damage Reduction",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} PoisonDamageReduction"
+    },
+    "ArcaneDamageReduction": {
+      "id": "ArcaneDamageReduction",
+      "name": "ArcaneDamageReduction",
+      "nameEn": "Arcane Damage Reduction",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} ArcaneDamageReduction"
+    },
+    "Toughness": {
+      "id": "Toughness",
+      "name": "Toughness",
+      "nameEn": "Toughness",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} Toughness"
+    },
+    "Recovery": {
+      "id": "Recovery",
+      "name": "Recovery",
+      "nameEn": "Recovery",
+      "type": "flat",
+      "unit": "",
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "desc": "+{value} Recovery"
+    }
   },
   "slotAffixes": {
     "weapon": {
-      "prefix": ["Strength", "Damage", "AttackSpeed", "CritDamage", "DamagePhysical", "DamageFire", "DamageCold", "DamageLightning", "DamagePoison", "DamageArcane", "DamageVsElite", "DamageVsHealthy", "DamageVsInjured", "DamageVsSlowed", "DamageVsStunned", "VulnerableDamage", "BasicAttackDamage", "StrongAttackDamage"],
-      "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "HpPotionFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "Damage",
+        "AttackSpeed",
+        "CritDamage",
+        "DamagePhysical",
+        "DamageFire",
+        "DamageCold",
+        "DamageLightning",
+        "DamagePoison",
+        "DamageArcane",
+        "DamageVsElite",
+        "DamageVsHealthy",
+        "DamageVsInjured",
+        "DamageVsSlowed",
+        "DamageVsStunned",
+        "VulnerableDamage",
+        "BasicAttackDamage",
+        "StrongAttackDamage"
+      ],
+      "suffix": [
+        "LifeOnHit",
+        "LifeOnKill",
+        "ManaOnKill",
+        "HpPotionFind",
+        "XPGain"
+      ]
     },
     "helm": {
-      "prefix": ["Strength", "MaxHealth", "MaxMana", "ArmorPercent", "MagicResist", "Dodge", "CooldownReduction"],
-      "suffix": ["LifeRegen", "GoldFind", "MagicFind", "HpPotionFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "MaxHealth",
+        "MaxMana",
+        "ArmorPercent",
+        "MagicResist",
+        "Dodge",
+        "CooldownReduction"
+      ],
+      "suffix": [
+        "LifeRegen",
+        "GoldFind",
+        "MagicFind",
+        "HpPotionFind",
+        "XPGain"
+      ]
     },
     "shoulder": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "Thorns", "ArmorPercent", "Dodge", "CooldownReduction"],
-      "suffix": ["LifeRegen", "MoveSpeed", "LifeOnHit", "GoldFind", "MagicFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "MaxHealth",
+        "MaxHealthPercent",
+        "Thorns",
+        "ArmorPercent",
+        "Dodge",
+        "CooldownReduction"
+      ],
+      "suffix": [
+        "LifeRegen",
+        "MoveSpeed",
+        "LifeOnHit",
+        "GoldFind",
+        "MagicFind",
+        "XPGain"
+      ]
     },
     "chest": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "Damage", "AttackSpeed", "CritChance", "CritDamage", "Thorns"],
-      "suffix": ["LifeRegen", "LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "MaxHealth",
+        "MaxHealthPercent",
+        "Damage",
+        "AttackSpeed",
+        "CritChance",
+        "CritDamage",
+        "Thorns"
+      ],
+      "suffix": [
+        "LifeRegen",
+        "LifeOnHit",
+        "GoldFind",
+        "MagicFind",
+        "HpPotionFind",
+        "XPGain"
+      ]
     },
     "gloves": {
-      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "MagicResist", "ManaCostReduction", "CooldownReduction"],
-      "suffix": ["LifeOnHit", "ManaOnKill", "GoldFind", "MagicFind", "HpPotionFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "AttackSpeed",
+        "CritChance",
+        "CritDamage",
+        "MagicResist",
+        "ManaCostReduction",
+        "CooldownReduction"
+      ],
+      "suffix": [
+        "LifeOnHit",
+        "ManaOnKill",
+        "GoldFind",
+        "MagicFind",
+        "HpPotionFind",
+        "XPGain"
+      ]
     },
     "belt": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "Thorns", "MagicResist", "ManaCostReduction", "Dodge", "CooldownReduction", "PotionCharges"],
-      "suffix": ["LifeRegen", "LifeOnKill", "LifeOnHit", "GoldFind", "MagicFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "MaxHealth",
+        "MaxHealthPercent",
+        "Thorns",
+        "MagicResist",
+        "ManaCostReduction",
+        "Dodge",
+        "CooldownReduction",
+        "PotionCharges"
+      ],
+      "suffix": [
+        "LifeRegen",
+        "LifeOnKill",
+        "LifeOnHit",
+        "GoldFind",
+        "MagicFind",
+        "XPGain"
+      ]
     },
     "legs": {
-      "prefix": ["Strength", "MaxHealth", "MaxHealthPercent", "ArmorPercent", "Thorns", "MagicResist", "Dodge"],
-      "suffix": ["LifeRegen", "LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "MaxHealth",
+        "MaxHealthPercent",
+        "ArmorPercent",
+        "Thorns",
+        "MagicResist",
+        "Dodge"
+      ],
+      "suffix": [
+        "LifeRegen",
+        "LifeOnHit",
+        "GoldFind",
+        "MagicFind",
+        "HpPotionFind",
+        "XPGain"
+      ]
     },
     "boots": {
-      "prefix": ["Strength", "MaxHealth", "MaxMana", "Dodge", "CooldownReduction", "ManaCostReduction"],
-      "suffix": ["LifeOnHit", "GoldFind", "MagicFind", "HpPotionFind", "XPGain", "MoveSpeed"]
+      "prefix": [
+        "Strength",
+        "MaxHealth",
+        "MaxMana",
+        "Dodge",
+        "CooldownReduction",
+        "ManaCostReduction"
+      ],
+      "suffix": [
+        "LifeOnHit",
+        "GoldFind",
+        "MagicFind",
+        "HpPotionFind",
+        "XPGain",
+        "MoveSpeed"
+      ]
     },
     "necklace": {
-      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "DamagePhysical", "DamageFire", "DamageCold", "DamageLightning", "DamagePoison", "DamageArcane", "DamageVsHealthy", "VulnerableDamage", "BasicAttackDamage", "StrongAttackDamage", "MagicResist"],
-      "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "MagicFind", "MoveSpeed", "XPGain"]
+      "prefix": [
+        "Strength",
+        "AttackSpeed",
+        "CritChance",
+        "CritDamage",
+        "DamagePhysical",
+        "DamageFire",
+        "DamageCold",
+        "DamageLightning",
+        "DamagePoison",
+        "DamageArcane",
+        "DamageVsHealthy",
+        "VulnerableDamage",
+        "BasicAttackDamage",
+        "StrongAttackDamage",
+        "MagicResist"
+      ],
+      "suffix": [
+        "LifeOnHit",
+        "LifeOnKill",
+        "ManaOnKill",
+        "MagicFind",
+        "MoveSpeed",
+        "XPGain"
+      ]
     },
     "ring": {
-      "prefix": ["Strength", "AttackSpeed", "CritChance", "CritDamage", "DamagePhysical", "DamageFire", "DamageCold", "DamageLightning", "DamagePoison", "DamageArcane", "DamageVsHealthy", "VulnerableDamage", "BasicAttackDamage", "StrongAttackDamage", "MagicResist", "MaxMana"],
-      "suffix": ["LifeOnHit", "LifeOnKill", "ManaOnKill", "GoldFind", "MagicFind", "XPGain"]
+      "prefix": [
+        "Strength",
+        "AttackSpeed",
+        "CritChance",
+        "CritDamage",
+        "DamagePhysical",
+        "DamageFire",
+        "DamageCold",
+        "DamageLightning",
+        "DamagePoison",
+        "DamageArcane",
+        "DamageVsHealthy",
+        "VulnerableDamage",
+        "BasicAttackDamage",
+        "StrongAttackDamage",
+        "MagicResist",
+        "MaxMana"
+      ],
+      "suffix": [
+        "LifeOnHit",
+        "LifeOnKill",
+        "ManaOnKill",
+        "GoldFind",
+        "MagicFind",
+        "XPGain"
+      ]
     }
   }
 }

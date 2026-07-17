@@ -1846,6 +1846,758 @@
           "icon": "/images/icons/items/legendarygloves2.png"
         }
       ]
+    },
+    "CommonBelt1": {
+      "id": "CommonBelt1",
+      "name": "破旧铁扣腰带",
+      "nameEn": "Worn Iron-Buckle Belt",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "belt"
+    },
+    "CommonBelt2": {
+      "id": "CommonBelt2",
+      "name": "磨损皮革带",
+      "nameEn": "Frayed Leather Strap",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "belt"
+    },
+    "CommonBelt3": {
+      "id": "CommonBelt3",
+      "name": "简单皮带",
+      "nameEn": "Simple Leather Belt",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "belt"
+    },
+    "UncommonBelt1": {
+      "id": "UncommonBelt1",
+      "name": "坚固扣环腰带",
+      "nameEn": "Sturdy Buckled Belt",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "belt"
+    },
+    "UncommonBelt2": {
+      "id": "UncommonBelt2",
+      "name": "环扣腰带",
+      "nameEn": "Ringclasp Belt",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "belt"
+    },
+    "UncommonBelt3": {
+      "id": "UncommonBelt3",
+      "name": "旅者缠腰带",
+      "nameEn": "Wayfarer's Wrap Belt",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "belt"
+    },
+    "RareBelt1": {
+      "id": "RareBelt1",
+      "name": "翠绿鹰爪腰带",
+      "nameEn": "Verdant Talon Girdle",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "belt"
+    },
+    "RareBelt2": {
+      "id": "RareBelt2",
+      "name": "阳石腰带",
+      "nameEn": "Sunstone Sash",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "belt"
+    },
+    "RareBelt3": {
+      "id": "RareBelt3",
+      "name": "紫晶暗影腰带",
+      "nameEn": "Amethyst Shadow Sash",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "belt"
+    },
+    "LegendaryBelt1": {
+      "id": "LegendaryBelt1",
+      "name": "无底药带",
+      "nameEn": "Bottomless Potion Belt",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "CommonBoots1": {
+      "id": "CommonBoots1",
+      "name": "破旧旅行靴",
+      "nameEn": "Worn Travel Boots",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "boots"
+    },
+    "CommonBoots2": {
+      "id": "CommonBoots2",
+      "name": "农夫脚布",
+      "nameEn": "Peasant's Footwraps",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "boots"
+    },
+    "CommonBoots3": {
+      "id": "CommonBoots3",
+      "name": "皮革骑行靴",
+      "nameEn": "Hide Riding Boots",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "boots"
+    },
+    "UncommonBoots1": {
+      "id": "UncommonBoots1",
+      "name": "荆棘步靴",
+      "nameEn": "Thornstep Boots",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "boots"
+    },
+    "UncommonBoots2": {
+      "id": "UncommonBoots2",
+      "name": "毛皮内衬远足靴",
+      "nameEn": "Fur-Lined Trekkers",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "boots"
+    },
+    "UncommonBoots3": {
+      "id": "UncommonBoots3",
+      "name": "流浪者之靴",
+      "nameEn": "Wanderer's Boots",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "boots"
+    },
+    "RareBoots1": {
+      "id": "RareBoots1",
+      "name": "铁甲战靴",
+      "nameEn": "Ironclad Warboots",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "boots"
+    },
+    "RareBoots2": {
+      "id": "RareBoots2",
+      "name": "蓝宝石奥术靴",
+      "nameEn": "Sapphire Arcane Boots",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "boots"
+    },
+    "RareBoots3": {
+      "id": "RareBoots3",
+      "name": "红宝石镀金靴",
+      "nameEn": "Ruby-Gilded Boots",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "boots"
+    },
+    "LegendaryBoots1": {
+      "id": "LegendaryBoots1",
+      "name": "唤风者之靴",
+      "nameEn": "Boots of the Windcaller",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "CommonChestArmor1": {
+      "id": "CommonChestArmor1",
+      "name": "农夫短衫",
+      "nameEn": "Peasant's Tunic",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "chest"
+    },
+    "CommonChestArmor2": {
+      "id": "CommonChestArmor2",
+      "name": "破旧连帽皮甲",
+      "nameEn": "Tattered Hooded Jerkin",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "chest"
+    },
+    "CommonChestArmor3": {
+      "id": "CommonChestArmor3",
+      "name": "填充袄子",
+      "nameEn": "Padded Gambeson",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "chest"
+    },
+    "UncommonChestArmor1": {
+      "id": "UncommonChestArmor1",
+      "name": "铆钉锁甲背心",
+      "nameEn": "Riveted Mail Vest",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "chest"
+    },
+    "UncommonChestArmor2": {
+      "id": "UncommonChestArmor2",
+      "name": "翠绿连帽外袍",
+      "nameEn": "Verdant Hooded Garb",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "chest"
+    },
+    "UncommonChestArmor3": {
+      "id": "UncommonChestArmor3",
+      "name": "蓝哨岗袄子",
+      "nameEn": "Bluewatch Gambeson",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "chest"
+    },
+    "RareChestArmor1": {
+      "id": "RareChestArmor1",
+      "name": "金钉布甲",
+      "nameEn": "Goldstud Brigandine",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "chest"
+    },
+    "RareChestArmor2": {
+      "id": "RareChestArmor2",
+      "name": "印章护胸甲",
+      "nameEn": "Sigilguard Cuirass",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "chest"
+    },
+    "RareChestArmor3": {
+      "id": "RareChestArmor3",
+      "name": "银骑士板甲",
+      "nameEn": "Argent Knight's Plate",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "chest"
+    },
+    "LegendaryChestArmor1": {
+      "id": "LegendaryChestArmor1",
+      "name": "暴怒壁垒",
+      "nameEn": "Bulwark of Wrath",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "chest"
+    },
+    "LegendaryChestArmor2": {
+      "id": "LegendaryChestArmor2",
+      "name": "荆棘之心护胸甲",
+      "nameEn": "Thornheart Cuirass",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "chest"
+    },
+    "CommonHelm1": {
+      "id": "CommonHelm1",
+      "name": "流浪者宽边帽",
+      "nameEn": "Wanderer's Brimmed Hat",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "helm"
+    },
+    "CommonHelm2": {
+      "id": "CommonHelm2",
+      "name": "破旧皮革头巾",
+      "nameEn": "Worn Leather Hood",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "helm"
+    },
+    "CommonHelm3": {
+      "id": "CommonHelm3",
+      "name": "填充皮革头盔",
+      "nameEn": "Padded Leather Coif",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "helm"
+    },
+    "UncommonHelm1": {
+      "id": "UncommonHelm1",
+      "name": "铁鼻盔",
+      "nameEn": "Iron Nasal Helm",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "helm"
+    },
+    "UncommonHelm2": {
+      "id": "UncommonHelm2",
+      "name": "钢锅盔",
+      "nameEn": "Steel Kettle Helm",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "helm"
+    },
+    "UncommonHelm3": {
+      "id": "UncommonHelm3",
+      "name": "卫兵头盔",
+      "nameEn": "Guardsman's Helm",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "helm"
+    },
+    "RareHelm1": {
+      "id": "RareHelm1",
+      "name": "圣战者大头盔",
+      "nameEn": "Crusader's Great Helm",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "helm"
+    },
+    "RareHelm2": {
+      "id": "RareHelm2",
+      "name": "阳铸战盔",
+      "nameEn": "Sunforged Warhelm",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "helm"
+    },
+    "RareHelm3": {
+      "id": "RareHelm3",
+      "name": "厄运角盔",
+      "nameEn": "Doomhorn Helm",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "helm"
+    },
+    "LegendaryHelm1": {
+      "id": "LegendaryHelm1",
+      "name": "堕落王冠",
+      "nameEn": "Crown of the Fallen King",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "helm"
+    },
+    "CommonNeck1": {
+      "id": "CommonNeck1",
+      "name": "黑玉泪滴吊坠",
+      "nameEn": "Onyx Teardrop Pendant",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "amulet"
+    },
+    "CommonNeck2": {
+      "id": "CommonNeck2",
+      "name": "铁链项链",
+      "nameEn": "Iron Link Necklace",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "amulet"
+    },
+    "CommonNeck3": {
+      "id": "CommonNeck3",
+      "name": "简单银吊坠",
+      "nameEn": "Simple Silver Pendant",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "amulet"
+    },
+    "UncommonNeck1": {
+      "id": "UncommonNeck1",
+      "name": "红宝石泪滴吊坠",
+      "nameEn": "Ruby Drop Pendant",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "amulet"
+    },
+    "UncommonNeck2": {
+      "id": "UncommonNeck2",
+      "name": "棱晶四重护符",
+      "nameEn": "Prism Quartet Amulet",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "amulet"
+    },
+    "UncommonNeck3": {
+      "id": "UncommonNeck3",
+      "name": "黑曜叶片吊坠",
+      "nameEn": "Obsidian Leaf Pendant",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "amulet"
+    },
+    "RareNeck1": {
+      "id": "RareNeck1",
+      "name": "紫晶黄金护符",
+      "nameEn": "Amethyst Gold Amulet",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "amulet"
+    },
+    "RareNeck2": {
+      "id": "RareNeck2",
+      "name": "绿松石之眼护符",
+      "nameEn": "Turquoise Eye Amulet",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "amulet"
+    },
+    "RareNeck3": {
+      "id": "RareNeck3",
+      "name": "蓝宝石碎片护符",
+      "nameEn": "Sapphire Shard Amulet",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "amulet"
+    },
+    "LegendaryNeck1": {
+      "id": "LegendaryNeck1",
+      "name": "涌动心智吊坠",
+      "nameEn": "Pendant of the Surging Mind",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "LegendaryPants1": {
+      "id": "LegendaryPants1",
+      "name": "奥术之刃护胫",
+      "nameEn": "Greaves of the Arcane Edge",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "LegendaryPants2": {
+      "id": "LegendaryPants2",
+      "name": "坚毅药剂护胫",
+      "nameEn": "Greaves of the Stalwart Tonic",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "CommonRing1": {
+      "id": "CommonRing1",
+      "name": "朴素铁环",
+      "nameEn": "Plain Iron Band",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "ring"
+    },
+    "CommonRing2": {
+      "id": "CommonRing2",
+      "name": "铜环",
+      "nameEn": "Copper Band",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "ring"
+    },
+    "CommonRing3": {
+      "id": "CommonRing3",
+      "name": "锤制银戒指",
+      "nameEn": "Hammered Silver Ring",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "ring"
+    },
+    "UncommonRing1": {
+      "id": "UncommonRing1",
+      "name": "龙脊戒指",
+      "nameEn": "Drakespine Ring",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "ring"
+    },
+    "UncommonRing2": {
+      "id": "UncommonRing2",
+      "name": "石榴石环",
+      "nameEn": "Garnet Band",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "ring"
+    },
+    "UncommonRing3": {
+      "id": "UncommonRing3",
+      "name": "尖刺铁环",
+      "nameEn": "Spiked Iron Ring",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "ring"
+    },
+    "RareRing1": {
+      "id": "RareRing1",
+      "name": "阳石印戒",
+      "nameEn": "Sunstone Signet",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "ring"
+    },
+    "RareRing2": {
+      "id": "RareRing2",
+      "name": "魔女爪戒指",
+      "nameEn": "Coven Talon Ring",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "ring"
+    },
+    "RareRing3": {
+      "id": "RareRing3",
+      "name": "炭火焰环",
+      "nameEn": "Emberflame Band",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "ring"
+    },
+    "LegendaryRing1": {
+      "id": "LegendaryRing1",
+      "name": "巨龙血牙印戒",
+      "nameEn": "Bloodfang Signet of the Wyrm",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "LegendaryRing2": {
+      "id": "LegendaryRing2",
+      "name": "展露之戒",
+      "nameEn": "Ring of Revelation",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "CommonShoulder1": {
+      "id": "CommonShoulder1",
+      "name": "皮革肩甲",
+      "nameEn": "Leather Spaulder",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "shoulder"
+    },
+    "CommonShoulder2": {
+      "id": "CommonShoulder2",
+      "name": "破旧护肩",
+      "nameEn": "Worn Pauldron",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "shoulder"
+    },
+    "CommonShoulder3": {
+      "id": "CommonShoulder3",
+      "name": "填充护肩",
+      "nameEn": "Padded Shoulderguard",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "shoulder"
+    },
+    "UncommonShoulder1": {
+      "id": "UncommonShoulder1",
+      "name": "层叠铁护肩",
+      "nameEn": "Layered Iron Pauldron",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "shoulder"
+    },
+    "UncommonShoulder2": {
+      "id": "UncommonShoulder2",
+      "name": "铁肩板",
+      "nameEn": "Iron Shoulderplate",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "shoulder"
+    },
+    "UncommonShoulder3": {
+      "id": "UncommonShoulder3",
+      "name": "铆钉钢肩甲",
+      "nameEn": "Riveted Steel Spaulder",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "shoulder"
+    },
+    "RareShoulder1": {
+      "id": "RareShoulder1",
+      "name": "深红卫士护肩",
+      "nameEn": "Crimsonguard Pauldron",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "shoulder"
+    },
+    "RareShoulder2": {
+      "id": "RareShoulder2",
+      "name": "死颅护肩",
+      "nameEn": "Deathskull Pauldron",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "shoulder"
+    },
+    "RareShoulder3": {
+      "id": "RareShoulder3",
+      "name": "阳刺护肩",
+      "nameEn": "Sunspike Pauldron",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "shoulder"
+    },
+    "LegendaryShoulder1": {
+      "id": "LegendaryShoulder1",
+      "name": "甲壳尖刺护肩",
+      "nameEn": "Shell Spike Pauldron",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "shoulder"
+    },
+    "LegendaryShoulder2": {
+      "id": "LegendaryShoulder2",
+      "name": "元素爆发护肩",
+      "nameEn": "Elemental Burst Pauldron",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "shoulder"
+    },
+    "CommonAxe1": {
+      "id": "CommonAxe1",
+      "name": "樵夫小斧",
+      "nameEn": "Woodsman's Hatchet",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "weapon"
+    },
+    "RareAxe1": {
+      "id": "RareAxe1",
+      "name": "镀金裂颅斧",
+      "nameEn": "Gilded Ripper Axe",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "weapon"
+    },
+    "LegendaryAxe1": {
+      "id": "LegendaryAxe1",
+      "name": "北方巨人巨斧",
+      "nameEn": "Northern Giant's Great Axe",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "weapon"
+    },
+    "CommonMace1": {
+      "id": "CommonMace1",
+      "name": "铁刺锤",
+      "nameEn": "Iron Spiked Mace",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "weapon"
+    },
+    "UncommonMace1": {
+      "id": "UncommonMace1",
+      "name": "锻造战锤",
+      "nameEn": "Forged Warhammer",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "weapon"
+    },
+    "RareMace1": {
+      "id": "RareMace1",
+      "name": "阳爆权杖锤",
+      "nameEn": "Sunburst Scepter Mace",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "weapon"
+    },
+    "LegendaryMace1": {
+      "id": "LegendaryMace1",
+      "name": "地狱风暴之锤",
+      "nameEn": "Hellstorm Mace",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "weapon"
+    },
+    "CommonSword1": {
+      "id": "CommonSword1",
+      "name": "铁制武装剑",
+      "nameEn": "Iron Arming Sword",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "weapon"
+    },
+    "UncommonSword1": {
+      "id": "UncommonSword1",
+      "name": "蛇舌刃",
+      "nameEn": "Serpent's Tongue Blade",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "weapon"
+    },
+    "RareSword1": {
+      "id": "RareSword1",
+      "name": "黄金弯刀",
+      "nameEn": "Golden Falchion",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "weapon"
+    },
+    "LegendarySword1": {
+      "id": "LegendarySword1",
+      "name": "苦痛锯齿巨剑",
+      "nameEn": "Serrated Greatsword of Agony",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "weapon"
+    },
+    "CommonGloves1": {
+      "id": "CommonGloves1",
+      "name": "破旧皮革手套",
+      "nameEn": "Worn Leather Gloves",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "gloves"
+    },
+    "CommonGloves2": {
+      "id": "CommonGloves2",
+      "name": "铆钉兽皮手套",
+      "nameEn": "Studded Hide Gloves",
+      "quality": "common",
+      "qualityName": "普通",
+      "slot": "gloves"
+    },
+    "UncommonGloves1": {
+      "id": "UncommonGloves1",
+      "name": "钢板护手",
+      "nameEn": "Steel Plated Gauntlets",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "gloves"
+    },
+    "UncommonGloves2": {
+      "id": "UncommonGloves2",
+      "name": "翠绿皮革手套",
+      "nameEn": "Verdant Leather Gloves",
+      "quality": "uncommon",
+      "qualityName": "非凡",
+      "slot": "gloves"
+    },
+    "RareGloves1": {
+      "id": "RareGloves1",
+      "name": "死颅护手",
+      "nameEn": "Deathskull Gauntlets",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "gloves"
+    },
+    "RareGloves2": {
+      "id": "RareGloves2",
+      "name": "深红爪护手",
+      "nameEn": "Crimson Claw Gauntlets",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "slot": "gloves"
+    },
+    "LegendaryGloves1": {
+      "id": "LegendaryGloves1",
+      "name": "怒火护手",
+      "nameEn": "Ragefire Gauntlets",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
+    },
+    "LegendaryGloves2": {
+      "id": "LegendaryGloves2",
+      "name": "势不可挡护手",
+      "nameEn": "Unstoppable Gauntlets",
+      "quality": "legendary",
+      "qualityName": "传说",
+      "slot": "pants"
     }
   },
   "equipment_tree": {
