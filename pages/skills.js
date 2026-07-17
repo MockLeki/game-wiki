@@ -8,34 +8,34 @@ export async function getStaticProps() { return { props: {} } }
 // 每列是一条独立路径，列内有依赖关系
 const TREE_LAYOUT = {
   Warrior: [
-    // 第0层 (顶部)
-    { col: 0, tier: 0, talentIdx: 0, maxPoints: 3 }, // 力量
+    // 第0层 (顶部 - 无等级要求, 满级 5)
+    { col: 0, tier: 0, talentIdx: 0, maxPoints: 5 }, // 力量
     { col: 1, tier: 0, talentIdx: 1, maxPoints: 5 }, // 活力
-    { col: 2, tier: 0, talentIdx: 3, maxPoints: 5 }, // 攻击速度
-    { col: 3, tier: 0, talentIdx: 2, maxPoints: 3 }, // 护甲
-    { col: 4, tier: 0, talentIdx: 7, maxPoints: 5 }, // 生命恢复
-    // 第1层
-    { col: 0, tier: 1, talentIdx: 4, maxPoints: 3 }, // 暴击几率
-    { col: 1, tier: 1, talentIdx: 5, maxPoints: 3 }, // 暴击伤害
-    { col: 2, tier: 1, talentIdx: 6, maxPoints: 3 }, // 荆棘
-    { col: 3, tier: 1, talentIdx: 20, maxPoints: 3 }, // 防御姿态
-    { col: 4, tier: 1, talentIdx: 21, maxPoints: 1 }, // 击杀回蓝
+    { col: 2, tier: 0, talentIdx: 2, maxPoints: 5 }, // 护甲
+    { col: 3, tier: 0, talentIdx: 3, maxPoints: 3 }, // 暴击几率
+    { col: 4, tier: 0, talentIdx: 4, maxPoints: 5 }, // 荆棘
+    // 第1层 (5级要求)
+    { col: 0, tier: 1, talentIdx: 7, maxPoints: 5 }, // 生命恢复
+    { col: 1, tier: 1, talentIdx: 9, maxPoints: 5 }, // 凶猛
+    { col: 2, tier: 1, talentIdx: 5, maxPoints: 5 }, // 攻击速度
+    { col: 3, tier: 1, talentIdx: 6, maxPoints: 5 }, // 暴击伤害
+    { col: 4, tier: 1, talentIdx: 11, maxPoints: 3 }, // 战斗激励
     // 第2层
     { col: 0, tier: 2, talentIdx: 8, maxPoints: 5 }, // 残暴
-    { col: 1, tier: 2, talentIdx: 9, maxPoints: 5 }, // 凶猛
+    { col: 1, tier: 2, talentIdx: -1, maxPoints: 1, locked: true },
     { col: 2, tier: 2, talentIdx: 13, maxPoints: 5 }, // 荆棘强化
     { col: 3, tier: 2, talentIdx: 24, maxPoints: 5 }, // 猛攻
-    { col: 4, tier: 2, talentIdx: 22, maxPoints: 1 }, // 重整旗鼓
+    { col: 4, tier: 2, talentIdx: -1, maxPoints: 1, locked: true },
     // 第3层
     { col: 0, tier: 3, talentIdx: 12, maxPoints: 5 }, // 重击
-    { col: 1, tier: 3, talentIdx: 11, maxPoints: 1 }, // 战斗激励
+    { col: 1, tier: 3, talentIdx: 10, maxPoints: 3 }, // 劈砍狂怒
     { col: 2, tier: 3, talentIdx: 17, maxPoints: 1 }, // 怒火导引
     { col: 3, tier: 3, talentIdx: 18, maxPoints: 1 }, // [野兽] 强化
     { col: 4, tier: 3, talentIdx: 19, maxPoints: 1 }, // [人形] 强化
     // 第4层
-    { col: 0, tier: 4, talentIdx: 10, maxPoints: 3 }, // 劈砍狂怒
-    { col: 1, tier: 4, talentIdx: 14, maxPoints: 5 }, // 强化强力攻击
-    { col: 2, tier: 4, talentIdx: 15, maxPoints: 3 }, // 怒火注入
+    { col: 0, tier: 4, talentIdx: 14, maxPoints: 5 }, // 强化强力攻击
+    { col: 1, tier: 4, talentIdx: 15, maxPoints: 3 }, // 怒火注入
+    { col: 2, tier: 4, talentIdx: 22, maxPoints: 1 }, // 重整旗鼓
     { col: 3, tier: 4, talentIdx: 28, maxPoints: 1 }, // 强化烈焰打击
     { col: 4, tier: 4, talentIdx: 23, maxPoints: 3 }, // 专注
     // 第5层
@@ -90,18 +90,21 @@ const CLASS_ICONS = { Warrior: '⚔️', Sorcerer: '🔮' }
 
 // 解析天赋描述为加成类型
 function parseBonus(talent) {
-  if (!talent || !talent.desc) return { stat: null, perPoint: 0 }
-  const desc = talent.desc
+  if (!talent) return { stat: null, perPoint: 0 }
+  const name = talent.name || ''
+  const desc = talent.desc || ''
   let stat = '综合'
-  if (desc.includes('Strength')) stat = '力量'
-  else if (desc.includes('Max HP')) stat = '最大生命值'
-  else if (desc.includes('Armor') && desc.includes('Magic Resist')) stat = '护甲+魔抗'
-  else if (desc.includes('Attack Speed')) stat = '攻击速度'
-  else if (desc.includes('Critical Hit Chance')) stat = '暴击几率'
-  else if (desc.includes('Critical Hit Damage')) stat = '暴击伤害'
-  else if (desc.includes('Thorn') && !desc.includes('Boost')) stat = '荆棘'
-  else if (desc.includes('Life Regen')) stat = '生命恢复'
-  else if (desc.includes('Injured')) stat = '对受伤目标'
+  // 优先用中文名匹配
+  if (name === '力量' || desc.includes('力量')) stat = '力量'
+  else if (name === '活力' || desc.includes('最大生命值')) stat = '最大生命值'
+  else if (name === '护甲') stat = '护甲+魔抗'
+  else if (name === '暴击几率' || desc.includes('暴击几率')) stat = '暴击几率'
+  else if (name === '暴击伤害' || desc.includes('暴击伤害')) stat = '暴击伤害'
+  else if (name === '攻击速度' || desc.includes('攻击速度')) stat = '攻击速度'
+  else if (name === '荆棘' || (desc.includes('荆棘') && !desc.includes('强化'))) stat = '荆棘'
+  else if (name === '生命恢复' || desc.includes('生命恢复')) stat = '生命恢复'
+  else if (name === '凶猛' || desc.includes('对易伤目标')) stat = '对易伤目标伤害'
+  else if (name === '战斗激励') stat = '战吼冷却缩减'
   else if (desc.includes('Vulnerable')) stat = '对易伤目标'
   else if (desc.includes('Mana') && desc.includes('Cost')) stat = '法力消耗'
   return { stat, perPoint: 0 }  // 数值待游戏内截图
