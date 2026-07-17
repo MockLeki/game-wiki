@@ -183,83 +183,64 @@ const SLOTS = [
   { key: 'offhand', name: '副手', icon: '🛡' },
 ]
 
-// 模拟装备库（避免加载大文件，先用模拟数据）
-const ITEM_POOL = {
-  helm: [
-    { id: 'helm1', name: '战士头盔', quality: 'rare', stats: [{k:'armor',v:30},{k:'hp',v:50}] },
-    { id: 'helm2', name: '光辉战盔', quality: 'legendary', stats: [{k:'armor',v:80},{k:'str',v:10}] },
-  ],
-  chest: [
-    { id: 'chest1', name: '链甲胸甲', quality: 'rare', stats: [{k:'armor',v:50},{k:'hp',v:100}] },
-    { id: 'chest2', name: '古王胸甲', quality: 'legendary', stats: [{k:'armor',v:120},{k:'hp',v:200}] },
-  ],
-  shoulder: [
-    { id: 'shoulder1', name: '护肩', quality: 'uncommon', stats: [{k:'armor',v:20}] },
-    { id: 'shoulder2', name: '巨战护肩', quality: 'legendary', stats: [{k:'armor',v:60},{k:'str',v:8}] },
-  ],
-  pants: [
-    { id: 'pants1', name: '护腿', quality: 'rare', stats: [{k:'armor',v:40},{k:'hp',v:80}] },
-    { id: 'pants2', name: '战王护腿', quality: 'legendary', stats: [{k:'armor',v:100},{k:'hp',v:150}] },
-  ],
-  gloves: [
-    { id: 'gloves1', name: '皮手套', quality: 'uncommon', stats: [{k:'armor',v:15}] },
-    { id: 'gloves2', name: '巨人手套', quality: 'legendary', stats: [{k:'armor',v:40},{k:'str',v:6}] },
-  ],
-  boots: [
-    { id: 'boots1', name: '战靴', quality: 'rare', stats: [{k:'armor',v:25}] },
-    { id: 'boots2', name: '疾风战靴', quality: 'legendary', stats: [{k:'armor',v:50},{k:'aspd',v:5}] },
-  ],
-  belt: [
-    { id: 'belt1', name: '战腰', quality: 'uncommon', stats: [{k:'armor',v:15}] },
-    { id: 'belt2', name: '吸血腰', quality: 'legendary', stats: [{k:'hp',v:200},{k:'lifesteal',v:5}] },
-  ],
-  amulet: [
-    { id: 'amulet1', name: '力量护符', quality: 'rare', stats: [{k:'str',v:5}] },
-    { id: 'amulet2', name: '暴君之眼', quality: 'legendary', stats: [{k:'str',v:15},{k:'crit',v:3}] },
-  ],
-  ring1: [
-    { id: 'ring1a', name: '钢戒', quality: 'uncommon', stats: [{k:'armor',v:10}] },
-    { id: 'ring1b', name: '血之戒', quality: 'legendary', stats: [{k:'hp',v:100},{k:'str',v:8}] },
-  ],
-  ring2: [
-    { id: 'ring2a', name: '钢戒', quality: 'uncommon', stats: [{k:'armor',v:10}] },
-    { id: 'ring2b', name: '无尽怒火戒', quality: 'legendary', stats: [{k:'str',v:12},{k:'critdmg',v:10}] },
-  ],
-  weapon: [
-    { id: 'wpn1', name: '长剑', quality: 'rare', stats: [{k:'dmg',v:50}] },
-    { id: 'wpn2', name: '北方巨人巨斧', quality: 'legendary', stats: [{k:'dmg',v:150},{k:'str',v:10}] },
-  ],
-  offhand: [
-    { id: 'off1', name: '塔盾', quality: 'rare', stats: [{k:'armor',v:40}] },
-    { id: 'off2', name: '古王壁垒', quality: 'legendary', stats: [{k:'armor',v:100},{k:'block',v:15}] },
-  ],
-}
+// 装备数据 - 从 items.json 实时加载
+let ITEM_POOL = {}
+let ALL_ITEMS = []
 
-// ============================================
-// 天赋数据 (简化版)
-// ============================================
-const TALENT_TREE = {
-  Warrior: [
-    // 第0层
-    { tier: 0, col: 0, name: '力量', max: 5, perPoint: 5, stat: 'str' },
-    { tier: 0, col: 1, name: '活力', max: 5, perPoint: 50, stat: 'hp' },
-    { tier: 0, col: 2, name: '护甲', max: 5, perPoint: 25, stat: 'armor' },
-    { tier: 0, col: 3, name: '荆棘', max: 5, perPoint: 3, stat: 'thorn' },
-    { tier: 0, col: 4, name: '攻击速度', max: 5, perPoint: 2, stat: 'aspd' },
-    // 第1层
-    { tier: 1, col: 0, name: '暴击几率', max: 3, perPoint: 2, stat: 'crit' },
-    { tier: 1, col: 1, name: '生命恢复', max: 5, perPoint: 4, stat: 'hpregen' },
-    { tier: 1, col: 2, name: '暴击伤害', max: 5, perPoint: 3, stat: 'critdmg' },
-    { tier: 1, col: 3, name: '凶猛', max: 5, perPoint: 5, stat: 'dmgBonus' },
-    { tier: 1, col: 4, name: '战斗激励', max: 3, perPoint: 10, stat: 'proc' },
-    // 第2层
-    { tier: 2, col: 0, name: '专注', max: 5, perPoint: 1, stat: 'stun' },
-    { tier: 2, col: 1, name: '重击', max: 5, perPoint: 5, stat: 'vuln' },
-    { tier: 2, col: 2, name: '劈砍狂怒', max: 1, perPoint: 2, stat: 'aspd' },
-    { tier: 2, col: 3, name: '强化强力攻击', max: 5, perPoint: 5, stat: 'manaSave' },
-    { tier: 2, col: 4, name: '荆棘强化', max: 5, perPoint: 10, stat: 'thorn' },
-  ]
+async function loadItems() {
+  try {
+    const res = await fetch('/data/items.json')
+    const data = await res.json()
+    const qualities = data.equipment_tree || {}
+
+    const pool = {}
+    const all = []
+    const slotMap = { helm: '头盔', chest: '胸甲', shoulder: '护肩', pants: '护腿', gloves: '手套', boots: '靴子', belt: '腰带', necklace: '项链', ring: '戒指', ring1: '戒指', ring2: '戒指', weapon: '武器', offhand: '副手' }
+
+    for (const qKey in qualities) {
+      const qItems = qualities[qKey]
+      const qName = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }[qKey] || ''
+      if (!qItems || typeof qItems !== 'object') continue
+      for (const itemKey in qItems) {
+        const item = qItems[itemKey]
+        if (!item || typeof item !== 'object') continue
+        const keyLower = itemKey.toLowerCase()
+        let slotKey = null
+        if (keyLower.includes('helm')) slotKey = 'helm'
+        else if (keyLower.includes('chest') || keyLower.includes('breast')) slotKey = 'chest'
+        else if (keyLower.includes('shoulder')) slotKey = 'shoulder'
+        else if (keyLower.includes('pants') || keyLower.includes('leg')) slotKey = 'pants'
+        else if (keyLower.includes('glove')) slotKey = 'gloves'
+        else if (keyLower.includes('boot') || keyLower.includes('shoe')) slotKey = 'boots'
+        else if (keyLower.includes('belt')) slotKey = 'belt'
+        else if (keyLower.includes('neck') || keyLower.includes('amulet')) slotKey = 'amulet'
+        else if (keyLower.includes('ring')) slotKey = slotKey || null
+        else if (keyLower.includes('weapon') || keyLower.includes('axe') || keyLower.includes('sword') || keyLower.includes('dagger') || keyLower.includes('staff')) slotKey = 'weapon'
+        else continue
+        if (slotKey === null) {
+          if (keyLower.includes('ring')) { continue }
+          continue
+        }
+        if (!pool[slotKey]) pool[slotKey] = []
+        const stats = []
+        if (item.stats) {
+          for (const sk in item.stats) stats.push({ k: sk, v: item.stats[sk] })
+        } else {
+          const baseVal = { common: 10, uncommon: 25, rare: 50, legendary: 100 }[qKey] || 10
+          if (['helm','chest','shoulder','pants','gloves','boots','belt'].includes(slotKey)) stats.push({ k: 'armor', v: baseVal })
+          if (slotKey === 'weapon') stats.push({ k: 'dmg', v: baseVal * 2 })
+        }
+        const obj = { id: itemKey, name: item.name || itemKey, quality: qKey, stats, slot: slotKey }
+        pool[slotKey].push(obj)
+        all.push(obj)
+      }
+    }
+    for (const s of SLOTS) { if (!pool[s.key]) pool[s.key] = [] }
+    ITEM_POOL = pool; ALL_ITEMS = all
+    renderEquipList()
+  } catch (e) { console.error('Load items error', e) }
 }
+loadItems()
 
 // ============================================
 // 技能栏
