@@ -2,574 +2,562 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD 构筑模拟器 - 桌面破坏神</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>构筑模拟器 - 桌面破坏神</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: #1a1614; color: #efe6d8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 1rem; }
-h1 { color: #c9a55b; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 1rem; }
-.back-btn { font-size: 0.85rem; padding: 0.3rem 0.8rem; background: rgba(201,165,91,0.15); color: #c9a55b; text-decoration: none; border-radius: 6px; border: 1px solid rgba(201,165,91,0.3); margin-left: auto; }
-.back-btn:hover { background: rgba(201,165,91,0.25); color: #efe6d8; }
-h2 { color: #c9a55b; font-size: 1.1rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid #3d332b; }
-.tip-box { background: #181513; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; color: #c7b8a3; border-left: 4px solid #c9a55b; }
-.tip-box strong { color: #c9a55b; }
-.topbar { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background: #181513; border-radius: 8px; margin-bottom: 1rem; }
-.class-switch { display: flex; gap: 0.5rem; }
-.class-btn { display: flex; align-items: center; gap: 0.5rem; background: #2d2723; border: 2px solid #3d332b; color: #8f7f6e; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; }
-.class-btn.warrior.active { border-color: #c9a55b; color: #c9a55b; }
-.class-btn.sorcerer.active { border-color: #2196f3; color: #2196f3; }
-.action-btn { background: #2d2723; border: 1px solid #3d332b; color: #efe6d8; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; margin-left: 0.5rem; }
-.action-btn:hover { background: #3d332b; }
-.grid { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 1rem; }
-.section { background: #181513; border-radius: 8px; padding: 1rem; min-height: 600px; }
-.equip-slot { display: flex; align-items: center; gap: 0.8rem; background: #2d2723; padding: 0.6rem; border: 2px solid #c9a55b; border-radius: 6px; margin-bottom: 0.5rem; cursor: pointer; min-height: 50px; }
-.equip-slot:hover { background: #3d332b; border-color: #efe6d8; }
-.equip-slot.has-item { border-color: #c9a55b; background: #3d332b; }
-.equip-slot .slot-icon { font-size: 1.5rem; flex-shrink: 0; }
-.equip-slot .slot-label { font-size: 0.8rem; color: #c9a55b; display: block; margin-bottom: 0.2rem; }
-.equip-slot .slot-empty { color: #6b5d50; font-size: 0.85rem; font-style: italic; }
-.slot-icon { width: 40px; height: 40px; background: #1a1614; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
-.slot-label { font-size: 0.75rem; color: #8f7f6e; display: block; }
-.item-name { font-weight: bold; font-size: 0.9rem; }
-.item-empty { color: #555; font-size: 0.8rem; }
-.item-quality-common { color: #9e9e9e; }
-.item-quality-uncommon { color: #4caf50; }
-.item-quality-rare { color: #2196f3; }
-.item-quality-legendary { color: #ff9800; }
-.affix-slot-config { background: #2d2723; padding: 0.6rem; border-radius: 6px; margin-bottom: 0.6rem; }
-.slot-config-title { color: #c7b8a3; font-size: 0.9rem; margin-bottom: 0.4rem; }
-.affix-selector { display: flex; flex-direction: column; gap: 0.4rem; }
-.affix-selector select { width: 100%; background: #1a1614; color: #efe6d8; border: 1px solid #3d332b; padding: 0.3rem; border-radius: 4px; font-size: 0.8rem; }
-.affix-selector label { font-size: 0.75rem; color: #8f7f6e; display: block; margin-bottom: 0.2rem; }
-.sub-affixes { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-.sub-affix { background: #1a1614; color: #8f7f6e; border: 1px solid #3d332b; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.7rem; cursor: pointer; }
-.sub-affix.selected { background: #c9a55b; color: #1a1614; border-color: #c9a55b; }
-.skill-tabs { display: flex; gap: 0.5rem; margin-bottom: 0.8rem; }
-.tab-btn { flex: 1; background: #2d2723; color: #8f7f6e; border: 1px solid #3d332b; padding: 0.5rem; border-radius: 4px; cursor: pointer; }
-.tab-btn.active { background: rgba(201, 165, 91, 0.15); color: #c9a55b; border-color: #c9a55b; }
-.skill-slots { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.3rem; margin-bottom: 1rem; }
-.skill-slot-btn { background: #2d2723; border: 2px solid #3d332b; color: #8f7f6e; padding: 0.4rem; border-radius: 4px; cursor: pointer; }
-.skill-slot-btn:hover { border-color: #c9a55b; }
-.skill-slot-icon { font-size: 1.1rem; font-weight: bold; }
-.skill-slot-label { font-size: 0.65rem; }
-.skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; max-height: 400px; overflow-y: auto; }
-.skill-card { background: #2d2723; border: 1px solid #3d332b; padding: 0.4rem; border-radius: 4px; text-align: center; cursor: pointer; }
-.skill-card:hover { border-color: #c9a55b; }
-.skill-name { display: block; font-size: 0.75rem; color: #c7b8a3; }
-.skill-name-en { display: block; font-size: 0.6rem; color: #8f7f6e; }
-.skill-tag { display: inline-block; background: #c9a55b; color: #1a1614; padding: 0.1rem 0.3rem; border-radius: 2px; font-size: 0.6rem; margin-top: 0.2rem; }
-.class-summary { text-align: center; margin-bottom: 1rem; padding: 0.5rem; background: #2d2723; border-radius: 6px; }
-.class-name { color: #c9a55b; font-size: 1.3rem; font-weight: bold; }
-.primary-stat { color: #8f7f6e; font-size: 0.8rem; }
-.stat-row { display: flex; justify-content: space-between; padding: 0.3rem 0.5rem; border-bottom: 1px solid #2d2723; font-size: 0.85rem; }
-.stat-name { color: #c7b8a3; }
-.stat-value { color: #c9a55b; font-weight: bold; }
-.empty-stats { text-align: center; color: #555; padding: 1rem; font-size: 0.85rem; }
-.selected-item { display: flex; justify-content: space-between; background: #2d2723; padding: 0.3rem 0.5rem; border-radius: 3px; font-size: 0.8rem; margin-bottom: 0.2rem; }
-.slot-tag { color: #8f7f6e; }
-.item-name-mini { font-weight: bold; }
-.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
-.modal.active { display: flex; }
-.modal-content { background: #181513; border-radius: 8px; padding: 1.5rem; max-width: 800px; max-height: 80vh; overflow-y: auto; width: 90%; }
-.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #3d332b; }
-.modal-title { color: #c9a55b; font-size: 1.2rem; }
-.modal-close { background: #2d2723; border: 1px solid #3d332b; color: #efe6d8; padding: 0.3rem 0.6rem; border-radius: 4px; cursor: pointer; }
-.equipment-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-.equipment-item { background: #2d2723; padding: 0.6rem; border-radius: 4px; cursor: pointer; border-left: 3px solid #3d332b; }
-.equipment-item:hover { background: #3d332b; }
-.equipment-item.common { border-left-color: #9e9e9e; }
-.equipment-item.uncommon { border-left-color: #4caf50; }
-.equipment-item.rare { border-left-color: #2196f3; }
-.equipment-item.legendary { border-left-color: #ff9800; }
-.equipment-item-name { font-weight: bold; }
-.equipment-item-en { font-size: 0.75rem; color: #8f7f6e; }
-.modal-quality-filter { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-.modal-quality-btn { background: #2d2723; border: 1px solid #3d332b; color: #8f7f6e; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; }
-.modal-quality-btn.active { background: rgba(201, 165, 91, 0.15); color: #c9a55b; }
-.notice { background: rgba(201, 165, 91, 0.1); border: 1px solid #c9a55b; padding: 0.8rem; border-radius: 6px; margin-top: 1rem; color: #c7b8a3; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:linear-gradient(135deg,#030518 0%,#0a0a25 50%,#030518 100%);color:#d0d8f0;font-family:'Inter','Microsoft YaHei',sans-serif;min-height:100vh;padding:1rem}
+*::-webkit-scrollbar{width:8px;height:8px}
+*::-webkit-scrollbar-track{background:rgba(0,217,255,0.05)}
+*::-webkit-scrollbar-thumb{background:rgba(0,217,255,0.3);border-radius:4px}
+
+.topbar{display:flex;align-items:center;gap:1rem;background:linear-gradient(135deg,rgba(15,20,50,0.7) 0%,rgba(25,30,65,0.5) 100%);border:1px solid rgba(0,217,255,0.3);padding:0.8rem 1.2rem;margin-bottom:1rem;backdrop-filter:blur(8px)}
+.topbar h1{font-size:1.3rem;color:#7fffe0;font-weight:700;text-shadow:0 0 8px #00d9ff;letter-spacing:0.05em}
+.build-name{background:rgba(0,0,0,0.4);border:1px solid rgba(0,217,255,0.4);color:#fff;padding:0.4rem 0.8rem;font-size:0.9rem;width:200px}
+.class-tabs{display:flex;gap:0.4rem;margin-left:auto}
+.class-tab{padding:0.4rem 1rem;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.3);color:#a0a8c0;cursor:pointer;font-size:0.85rem}
+.class-tab.active{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,0,255,0.15) 100%);color:#7fffe0;border-color:#7fffe0;box-shadow:0 0 8px rgba(0,217,255,0.3)}
+.action-btn{padding:0.4rem 0.8rem;background:rgba(0,217,255,0.15);border:1px solid rgba(0,217,255,0.4);color:#7fffe0;cursor:pointer;font-size:0.85rem}
+.action-btn:hover{background:rgba(0,217,255,0.3);box-shadow:0 0 8px rgba(0,217,255,0.3)}
+.action-btn.danger{background:rgba(184,48,48,0.15);border-color:rgba(184,48,48,0.5);color:#ff6ec7}
+.action-btn.primary{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,0,255,0.2) 100%)}
+
+.main-grid{display:grid;grid-template-columns:280px 1fr 280px;gap:1rem;min-height:calc(100vh - 6rem)}
+.panel{background:linear-gradient(135deg,rgba(15,20,50,0.7) 0%,rgba(25,30,65,0.5) 100%);border:1px solid rgba(0,217,255,0.3);padding:1rem;backdrop-filter:blur(8px)}
+.panel-title{font-size:0.95rem;color:#7fffe0;font-weight:600;margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(0,217,255,0.3);text-shadow:0 0 4px #00d9ff;letter-spacing:0.05em;display:flex;align-items:center;gap:0.4rem}
+
+/* === 装备栏 === */
+.equip-list{display:flex;flex-direction:column;gap:0.4rem}
+.equip-slot{display:flex;align-items:center;gap:0.6rem;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);padding:0.4rem;cursor:pointer;transition:all 0.2s}
+.equip-slot:hover{border-color:#7fffe0;box-shadow:0 0 6px rgba(0,217,255,0.3)}
+.equip-slot.has-item{border-color:rgba(0,217,255,0.6);background:rgba(0,217,255,0.08)}
+.equip-slot .slot-icon{width:36px;height:36px;background:rgba(0,0,0,0.4);border:1px solid rgba(0,217,255,0.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.equip-slot .slot-info{flex:1;min-width:0}
+.equip-slot .slot-type{font-size:0.7rem;color:#6a7290;letter-spacing:0.05em}
+.equip-slot .slot-name{font-size:0.85rem;color:#d0d8f0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.equip-slot .slot-name.q-common{color:#9e9e9e}
+.equip-slot .slot-name.q-uncommon{color:#4caf50}
+.equip-slot .slot-name.q-rare{color:#2196f3}
+.equip-slot .slot-name.q-legendary{color:#ff9800}
+.equip-slot .slot-affixes{font-size:0.7rem;color:#6a7290}
+.equip-slot .slot-clear{opacity:0;background:rgba(184,48,48,0.3);border:1px solid #b83030;color:#fff;width:20px;height:20px;cursor:pointer;font-size:0.7rem;line-height:1}
+.equip-slot:hover .slot-clear{opacity:1}
+
+/* === 天赋树（精简）=== */
+.talent-tabs{display:flex;gap:0.3rem;margin-bottom:0.6rem}
+.talent-tab{flex:1;padding:0.3rem;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);color:#a0a8c0;cursor:pointer;font-size:0.75rem}
+.talent-tab.active{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,0,255,0.15) 100%);color:#7fffe0;border-color:#7fffe0}
+.talent-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.3rem;margin-bottom:0.6rem}
+.talent-node{position:relative;aspect-ratio:1;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.7rem;text-align:center;padding:0.2rem;color:#a0a8c0;transition:all 0.2s;min-height:50px}
+.talent-node:hover:not(.locked):not(.empty){border-color:#7fffe0;color:#fff;box-shadow:0 0 6px rgba(0,217,255,0.3)}
+.talent-node.has-points{border-color:#00d9ff;color:#7fffe0;background:rgba(0,217,255,0.15);box-shadow:0 0 6px rgba(0,217,255,0.3)}
+.talent-node.full{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,215,0,0.15) 100%);color:#ffd700;border-color:#ffd700}
+.talent-node.locked{opacity:0.3;cursor:not-allowed}
+.talent-node.empty{background:rgba(0,0,0,0.2);border:1px dashed rgba(0,217,255,0.1);color:#555}
+.talent-counter{position:absolute;top:2px;right:2px;background:rgba(0,217,255,0.8);color:#000;font-size:0.6rem;padding:0.05rem 0.2rem;font-weight:700}
+.talent-points-info{background:rgba(0,0,0,0.3);padding:0.4rem 0.6rem;border:1px solid rgba(0,217,255,0.2);font-size:0.8rem;color:#a0a8c0;display:flex;justify-content:space-between}
+.talent-points-info strong{color:#7fffe0;font-size:1rem}
+
+/* === 技能 === */
+.skill-bar{display:grid;grid-template-columns:repeat(6,1fr);gap:0.4rem;margin-bottom:0.8rem}
+.skill-slot{aspect-ratio:1;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer}
+.skill-slot:hover{border-color:#7fffe0}
+.skill-slot.active{border-color:#ffd700;box-shadow:0 0 8px rgba(255,215,0,0.4)}
+
+/* === 属性面板 === */
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:0.3rem 0;border-bottom:1px dashed rgba(0,217,255,0.1);font-size:0.8rem}
+.stat-row:last-child{border-bottom:none}
+.stat-label{color:#6a7290}
+.stat-value{color:#7fffe0;font-weight:600}
+.stat-value.positive{color:#4caf50}
+.stat-value.negative{color:#ff6ec7}
+.dmg-preview{background:linear-gradient(135deg,rgba(255,0,255,0.15) 0%,rgba(185,74,255,0.1) 100%);border:1px solid rgba(255,0,255,0.4);padding:0.6rem;margin:0.5rem 0;text-align:center}
+.dmg-num{font-size:1.6rem;color:#ffd700;font-weight:700;text-shadow:0 0 8px #ffd700;font-family:monospace}
+
+/* === 装备选择器模态 === */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:1000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.modal-content{background:#0a0a25;border:1px solid #00d9ff;width:90%;max-width:700px;max-height:80vh;display:flex;flex-direction:column;box-shadow:0 0 30px rgba(0,217,255,0.3)}
+.modal-header{padding:0.8rem 1rem;border-bottom:1px solid rgba(0,217,255,0.3);display:flex;justify-content:space-between;align-items:center}
+.modal-header h3{color:#7fffe0;font-size:1.1rem}
+.modal-close{background:none;border:1px solid rgba(0,217,255,0.3);color:#7fffe0;width:28px;height:28px;cursor:pointer;font-size:1rem}
+.modal-body{flex:1;overflow-y:auto;padding:1rem}
+.modal-item{display:flex;align-items:center;gap:0.8rem;padding:0.5rem;border:1px solid rgba(0,217,255,0.2);margin-bottom:0.4rem;cursor:pointer;transition:all 0.2s}
+.modal-item:hover{border-color:#7fffe0;background:rgba(0,217,255,0.1)}
+.modal-item .mi-icon{width:40px;height:40px;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.modal-item .mi-info{flex:1}
+.modal-item .mi-name{font-size:0.95rem;font-weight:600}
+.modal-item .mi-name.q-common{color:#9e9e9e}
+.modal-item .mi-name.q-uncommon{color:#4caf50}
+.modal-item .mi-name.q-rare{color:#2196f3}
+.modal-item .mi-name.q-legendary{color:#ff9800}
+.modal-item .mi-affix{font-size:0.75rem;color:#6a7290}
+.modal-search{width:100%;background:rgba(0,0,0,0.4);border:1px solid rgba(0,217,255,0.3);color:#fff;padding:0.5rem;margin-bottom:0.5rem;font-size:0.9rem}
+
+/* 移动端 */
+@media (max-width: 1024px){
+  .main-grid{grid-template-columns:1fr;gap:0.6rem}
+  .topbar{flex-wrap:wrap}
+  .build-name{width:100%}
+}
 </style>
 </head>
 <body>
 
-<h1>⚔️ BD 构筑模拟器 <a href="/" class="back-btn">← 返回 Wiki</a></h1>
-<div class="tip-box">
-<strong>基于游戏真实数据</strong>
-<p>本模拟器所有数据来自《桌面破坏神 Demo》游戏本体的 TextAsset 与已确认的截图中提取的数值。装备、词条、技能均与游戏内 1:1 对应。</p>
-</div>
-
 <div class="topbar">
-<div class="class-switch">
-<button id="btn-warrior" class="class-btn warrior active" onclick="setClass('warrior')">⚔️ 战士</button>
-<button id="btn-sorcerer" class="class-btn sorcerer" onclick="setClass('sorcerer')">🔮 法师</button>
-</div>
-<div>
-<button class="action-btn" onclick="saveBuild()">💾 保存</button>
-<button class="action-btn" onclick="loadBuild()">📂 载入</button>
-<button class="action-btn" onclick="clearBuild()">🗑️ 清空</button>
-<button class="action-btn" onclick="shareBuild()">🔗 分享</button>
-</div>
-</div>
-
-<div class="grid">
-
-<!-- LEFT: Equipment -->
-<div class="section">
-<h2>⚔️ 装备栏</h2>
-<div id="equipment-list"></div>
-</div>
-
-<!-- CENTER: Affixes & Skills -->
-<div class="section">
-<h2>📋 词条与技能</h2>
-<div class="skill-tabs">
-<button id="tab-affixes" class="tab-btn active" onclick="setAffixTab('affixes')">词条配置</button>
-<button id="tab-skills" class="tab-btn" onclick="setAffixTab('skills')">技能配置</button>
-</div>
-<div id="affix-tab-content"></div>
-<div id="skill-tab-content" style="display:none"></div>
-</div>
-
-<!-- RIGHT: Stats -->
-<div class="section">
-<h2>📊 属性预览</h2>
-<div class="class-summary">
-<div id="class-name" class="class-name">战士</div>
-<div id="primary-stat" class="primary-stat">主属性: 力量</div>
-</div>
-<div id="stats-list"></div>
-<h2 style="margin-top:1.5rem">📦 已选装备</h2>
-<div id="selected-list"></div>
-</div>
-
-</div>
-
-
-<div class="steam-box" id="steam-box" style="display:none">
-  <div class="steam-title">📊 Steam 数据</div>
-  <div class="steam-stats">
-    <div class="steam-stat">🎮 当前玩家: <span id="steam-players">-</span></div>
-    <div class="steam-stat">⭐ 好评: <span id="steam-reviews">-</span></div>
+  <h1>⚔ 构筑模拟器</h1>
+  <input id="buildName" class="build-name" placeholder="构筑名称..." value="我的构筑" />
+  <div class="class-tabs">
+    <button class="class-tab active" data-class="Warrior">⚔ 战士</button>
+    <button class="class-tab" data-class="Sorcerer">✨ 法师</button>
   </div>
-  <div class="steam-price" id="steam-price">-</div>
+  <button class="action-btn primary" id="shareBtn">🔗 分享</button>
+  <button class="action-btn danger" id="resetBtn">↻ 重置</button>
 </div>
 
-<div class="notice">
-<strong>📊 数据来源：</strong> 41 词条 · 10 部位词条池 · 112 件装备 · 90 技能，全部来自《桌面破坏神 Demo》游戏本体 TextAsset（Equipments.txt / Abilities.txt / Affixes.json）。
+<div class="main-grid">
+  <!-- 左侧: 装备栏 -->
+  <div class="panel">
+    <div class="panel-title">🛡 装备 (10)</div>
+    <div class="equip-list" id="equipList"></div>
+  </div>
+
+  <!-- 中间: 技能 + 天赋 -->
+  <div class="panel" style="display:flex;flex-direction:column">
+    <div class="panel-title">⚡ 技能 (6) <span style="margin-left:auto;font-size:0.75rem;color:#6a7290;font-weight:400">点击格子选技能</span></div>
+    <div class="skill-bar" id="skillBar"></div>
+
+    <div class="panel-title" style="margin-top:0.5rem">🌟 天赋树</div>
+    <div class="talent-tabs">
+      <button class="talent-tab active" data-class="Warrior">战士</button>
+    </div>
+    <div class="talent-points-info">
+      <span>已分配 / 满级</span>
+      <span><strong id="talentUsed">0</strong> / 32</span>
+    </div>
+    <div style="overflow-y:auto;flex:1;margin-top:0.5rem">
+      <div class="talent-grid" id="talentGrid"></div>
+    </div>
+  </div>
+
+  <!-- 右侧: 属性汇总 -->
+  <div class="panel">
+    <div class="panel-title">📊 属性总览</div>
+    <div class="stat-row"><span class="stat-label">生命值</span><span class="stat-value" id="stat-hp">0</span></div>
+    <div class="stat-row"><span class="stat-label">力量</span><span class="stat-value" id="stat-str">0</span></div>
+    <div class="stat-row"><span class="stat-label">智力</span><span class="stat-value" id="stat-int">0</span></div>
+    <div class="stat-row"><span class="stat-label">护甲</span><span class="stat-value" id="stat-armor">0</span></div>
+    <div class="stat-row"><span class="stat-label">魔法抗性</span><span class="stat-value" id="stat-mres">0</span></div>
+    <div class="stat-row"><span class="stat-label">暴击率</span><span class="stat-value" id="stat-crit">0%</span></div>
+    <div class="stat-row"><span class="stat-label">暴击伤害</span><span class="stat-value" id="stat-critdmg">0%</span></div>
+    <div class="stat-row"><span class="stat-label">攻击速度</span><span class="stat-value" id="stat-aspd">0%</span></div>
+    <div class="stat-row"><span class="stat-label">生命恢复</span><span class="stat-value" id="stat-hpregen">0/s</span></div>
+    <div class="stat-row"><span class="stat-label">荆棘</span><span class="stat-value" id="stat-thorn">0</span></div>
+
+    <div class="dmg-preview">
+      <div style="font-size:0.75rem;color:#a0a8c0">预估 DPS</div>
+      <div class="dmg-num" id="dpsNum">--</div>
+    </div>
+  </div>
 </div>
 
-<!-- Modal: Equipment selection -->
-<div id="equipment-modal" class="modal">
-<div class="modal-content">
-<div class="modal-header">
-<div class="modal-title">选择装备</div>
-<button class="modal-close" onclick="closeModal()">✕ 关闭</button>
-</div>
-<div class="modal-quality-filter">
-<button class="modal-quality-btn active" onclick="filterModalQuality('legendary', event)">传说</button>
-<button class="modal-quality-btn" onclick="filterModalQuality('rare', event)">稀有</button>
-<button class="modal-quality-btn" onclick="filterModalQuality('uncommon', event)">非凡</button>
-<button class="modal-quality-btn" onclick="filterModalQuality('common', event)">普通</button>
-<button class="modal-quality-btn" onclick="filterModalQuality('all', event)">全部</button>
-</div>
-<div id="modal-equipment-list" class="equipment-list"></div>
-</div>
-</div>
+<div id="modal"></div>
 
 <script>
-const DATA = {"affixes":{"Strength":{"id":"Strength","name":"力量","type":"flat","unit":"","min":5,"max":50,"step":1,"desc":"+{value} 力量"},"Dexterity":{"id":"Dexterity","name":"敏捷","type":"flat","unit":"","min":5,"max":50,"step":1,"desc":"+{value} 敏捷"},"Intelligence":{"id":"Intelligence","name":"智力","type":"flat","unit":"","min":5,"max":50,"step":1,"desc":"+{value} 智力"},"Damage":{"id":"Damage","name":"伤害","type":"flat","unit":"","min":3,"max":25,"step":1,"desc":"+{value} 伤害"},"AttackSpeed":{"id":"AttackSpeed","name":"攻击速度加成","type":"percent","unit":"%","min":3,"max":20,"step":1,"desc":"+{value}% 攻击速度"},"CritChance":{"id":"CritChance","name":"暴击几率","type":"percent","unit":"%","min":2,"max":12,"step":1,"desc":"+{value}% 暴击几率"},"CritDamage":{"id":"CritDamage","name":"暴击伤害","type":"percent","unit":"%","min":5,"max":30,"step":1,"desc":"+{value}% 暴击伤害"},"MaxHealth":{"id":"MaxHealth","name":"最大生命值","type":"flat","unit":"","min":50,"max":350,"step":10,"desc":"+{value} 最大生命值"},"MaxHealthPercent":{"id":"MaxHealthPercent","name":"生命值加成","type":"percent","unit":"%","min":3,"max":15,"step":1,"desc":"+{value}% 生命值"},"Armor":{"id":"Armor","name":"护甲","type":"flat","unit":"","min":20,"max":150,"step":5,"desc":"+{value} 护甲"},"ArmorPercent":{"id":"ArmorPercent","name":"护甲加成","type":"percent","unit":"%","min":5,"max":20,"step":1,"desc":"+{value}% 护甲"},"MagicResist":{"id":"MagicResist","name":"魔法抗性","type":"percent","unit":"%","min":5,"max":20,"step":1,"desc":"+{value}% 魔法抗性"},"Dodge":{"id":"Dodge","name":"闪避几率","type":"percent","unit":"%","min":2,"max":10,"step":1,"desc":"+{value}% 闪避几率"},"CooldownReduction":{"id":"CooldownReduction","name":"冷却缩减","type":"percent","unit":"%","min":3,"max":12,"step":1,"desc":"+{value}% 冷却缩减"},"MaxMana":{"id":"MaxMana","name":"最大法力值","type":"flat","unit":"","min":25,"max":200,"step":5,"desc":"+{value} 最大法力值"},"Thorns":{"id":"Thorns","name":"荆棘","type":"percent","unit":"%","min":40,"max":250,"step":10,"desc":"+{value}% 荆棘伤害"},"ManaCostReduction":{"id":"ManaCostReduction","name":"法力消耗减少","type":"percent","unit":"%","min":3,"max":12,"step":1,"desc":"+{value}% 法力消耗降低"},"PotionCharges":{"id":"PotionCharges","name":"额外药水充能","type":"flat","unit":"","min":1,"max":4,"step":1,"desc":"+{value} 药水携带上限"},"LifeRegen":{"id":"LifeRegen","name":"生命恢复","type":"flat","unit":"/秒","min":3,"max":20,"step":1,"desc":"+{value} 每秒生命恢复"},"MoveSpeed":{"id":"MoveSpeed","name":"移动速度","type":"percent","unit":"%","min":5,"max":18,"step":1,"desc":"+{value}% 移动速度"},"LifeOnHit":{"id":"LifeOnHit","name":"命中恢复生命","type":"flat","unit":"","min":3,"max":20,"step":1,"desc":"+{value} 命中恢复生命"},"LifeOnKill":{"id":"LifeOnKill","name":"击杀恢复生命","type":"flat","unit":"","min":10,"max":60,"step":5,"desc":"+{value} 击杀恢复生命"},"ManaOnKill":{"id":"ManaOnKill","name":"击杀恢复法力","type":"flat","unit":"","min":5,"max":30,"step":1,"desc":"+{value} 击杀恢复法力"},"GoldFind":{"id":"GoldFind","name":"金币发现","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 金币获取"},"MagicFind":{"id":"MagicFind","name":"魔法发现","type":"percent","unit":"%","min":5,"max":20,"step":1,"desc":"+{value}% 魔法物品获取"},"HpPotionFind":{"id":"HpPotionFind","name":"生命药水发现","type":"percent","unit":"%","min":5,"max":20,"step":1,"desc":"+{value}% 药水掉落几率"},"XPGain":{"id":"XPGain","name":"经验值","type":"percent","unit":"%","min":3,"max":18,"step":1,"desc":"+{value}% 经验获取"},"DamagePhysical":{"id":"DamagePhysical","name":"物理伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 物理伤害"},"DamageFire":{"id":"DamageFire","name":"火焰伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 火焰伤害"},"DamageCold":{"id":"DamageCold","name":"冰霜伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 冰霜伤害"},"DamageLightning":{"id":"DamageLightning","name":"闪电伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 闪电伤害"},"DamagePoison":{"id":"DamagePoison","name":"毒素伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 毒素伤害"},"DamageArcane":{"id":"DamageArcane","name":"奥术伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 奥术伤害"},"DamageVsHealthy":{"id":"DamageVsHealthy","name":"满血敌人伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 对满血敌人伤害"},"DamageVsInjured":{"id":"DamageVsInjured","name":"受伤敌人伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 对受伤敌人伤害"},"DamageVsSlowed":{"id":"DamageVsSlowed","name":"减速敌人伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 对减速敌人伤害"},"DamageVsStunned":{"id":"DamageVsStunned","name":"眩晕敌人伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 对眩晕敌人伤害"},"DamageVsElite":{"id":"DamageVsElite","name":"精英敌人伤害","type":"percent","unit":"%","min":5,"max":20,"step":1,"desc":"+{value}% 对精英/Boss伤害"},"VulnerableDamage":{"id":"VulnerableDamage","name":"易伤伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 易伤额外伤害"},"BasicAttackDamage":{"id":"BasicAttackDamage","name":"普通攻击伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 普通攻击伤害"},"StrongAttackDamage":{"id":"StrongAttackDamage","name":"强力攻击伤害","type":"percent","unit":"%","min":5,"max":25,"step":1,"desc":"+{value}% 强力技能伤害"}},"slotAffixes":{"weapon":{"prefix":["Strength","Damage","AttackSpeed","CritDamage","DamagePhysical","DamageFire","DamageCold","DamageLightning","DamagePoison","DamageArcane","DamageVsElite","DamageVsHealthy","DamageVsInjured","DamageVsSlowed","DamageVsStunned","VulnerableDamage","BasicAttackDamage","StrongAttackDamage"],"suffix":["LifeOnHit","LifeOnKill","ManaOnKill","HpPotionFind","XPGain"]},"helm":{"prefix":["Strength","MaxHealth","MaxMana","ArmorPercent","MagicResist","Dodge","CooldownReduction"],"suffix":["LifeRegen","GoldFind","MagicFind","HpPotionFind","XPGain"]},"shoulder":{"prefix":["Strength","MaxHealth","MaxHealthPercent","Thorns","ArmorPercent","Dodge","CooldownReduction"],"suffix":["LifeRegen","MoveSpeed","LifeOnHit","GoldFind","MagicFind","XPGain"]},"chest":{"prefix":["Strength","MaxHealth","MaxHealthPercent","Damage","AttackSpeed","CritChance","CritDamage","Thorns"],"suffix":["LifeRegen","LifeOnHit","GoldFind","MagicFind","HpPotionFind","XPGain"]},"gloves":{"prefix":["Strength","AttackSpeed","CritChance","CritDamage","MagicResist","ManaCostReduction","CooldownReduction"],"suffix":["LifeOnHit","ManaOnKill","GoldFind","MagicFind","HpPotionFind","XPGain"]},"belt":{"prefix":["Strength","MaxHealth","MaxHealthPercent","Thorns","MagicResist","ManaCostReduction","Dodge","CooldownReduction","PotionCharges"],"suffix":["LifeRegen","LifeOnKill","LifeOnHit","GoldFind","MagicFind","XPGain"]},"legs":{"prefix":["Strength","MaxHealth","MaxHealthPercent","ArmorPercent","Thorns","MagicResist","Dodge"],"suffix":["LifeRegen","LifeOnHit","GoldFind","MagicFind","HpPotionFind","XPGain"]},"boots":{"prefix":["Strength","MaxHealth","MaxMana","Dodge","CooldownReduction","ManaCostReduction"],"suffix":["LifeOnHit","GoldFind","MagicFind","HpPotionFind","XPGain","MoveSpeed"]},"necklace":{"prefix":["Strength","AttackSpeed","CritChance","CritDamage","DamagePhysical","DamageFire","DamageCold","DamageLightning","DamagePoison","DamageArcane","DamageVsHealthy","VulnerableDamage","BasicAttackDamage","StrongAttackDamage","MagicResist"],"suffix":["LifeOnHit","LifeOnKill","ManaOnKill","MagicFind","MoveSpeed","XPGain"]},"ring":{"prefix":["Strength","AttackSpeed","CritChance","CritDamage","DamagePhysical","DamageFire","DamageCold","DamageLightning","DamagePoison","DamageArcane","DamageVsHealthy","VulnerableDamage","BasicAttackDamage","StrongAttackDamage","MagicResist","MaxMana"],"suffix":["LifeOnHit","LifeOnKill","ManaOnKill","GoldFind","MagicFind","XPGain"]}},"equipmentBySlot":{"belt":[{"id":"CommonBelt1","name":"破旧铁扣腰带","nameEn":"Worn Iron-Buckle Belt","slot":"belt","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonbelt1.png"},{"id":"CommonBelt2","name":"磨损皮革带","nameEn":"Frayed Leather Strap","slot":"belt","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonbelt2.png"},{"id":"CommonBelt3","name":"简单皮带","nameEn":"Simple Leather Belt","slot":"belt","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonbelt3.png"},{"id":"UncommonBelt1","name":"坚固扣环腰带","nameEn":"Sturdy Buckled Belt","slot":"belt","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonbelt1.png"},{"id":"UncommonBelt2","name":"环扣腰带","nameEn":"Ringclasp Belt","slot":"belt","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonbelt2.png"},{"id":"UncommonBelt3","name":"旅者缠腰带","nameEn":"Wayfarer's Wrap Belt","slot":"belt","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonbelt3.png"},{"id":"RareBelt1","name":"翠绿鹰爪腰带","nameEn":"Verdant Talon Girdle","slot":"belt","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarebelt1.png"},{"id":"RareBelt2","name":"阳石腰带","nameEn":"Sunstone Sash","slot":"belt","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarebelt2.png"},{"id":"RareBelt3","name":"紫晶暗影腰带","nameEn":"Amethyst Shadow Sash","slot":"belt","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarebelt3.png"},{"id":"LegendaryBelt1","name":"无底药带","nameEn":"Bottomless Potion Belt","slot":"belt","quality":"legendary","desc":"药水使用次数+4。","descEn":"Increase Potion Charges by 4.","icon":"/images/icons/items/legendarybelt1.png"}],"boots":[{"id":"CommonBoots1","name":"破旧旅行靴","nameEn":"Worn Travel Boots","slot":"boots","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonboots1.png"},{"id":"CommonBoots2","name":"农夫脚布","nameEn":"Peasant's Footwraps","slot":"boots","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonboots2.png"},{"id":"CommonBoots3","name":"皮革骑行靴","nameEn":"Hide Riding Boots","slot":"boots","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonboots3.png"},{"id":"UncommonBoots1","name":"荆棘步靴","nameEn":"Thornstep Boots","slot":"boots","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonboots1.png"},{"id":"UncommonBoots2","name":"毛皮内衬远足靴","nameEn":"Fur-Lined Trekkers","slot":"boots","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonboots2.png"},{"id":"UncommonBoots3","name":"流浪者之靴","nameEn":"Wanderer's Boots","slot":"boots","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonboots3.png"},{"id":"RareBoots1","name":"铁甲战靴","nameEn":"Ironclad Warboots","slot":"boots","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareboots1.png"},{"id":"RareBoots2","name":"蓝宝石奥术靴","nameEn":"Sapphire Arcane Boots","slot":"boots","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareboots2.png"},{"id":"RareBoots3","name":"红宝石镀金靴","nameEn":"Ruby-Gilded Boots","slot":"boots","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareboots3.png"},{"id":"LegendaryBoots1","name":"唤风者之靴","nameEn":"Boots of the Windcaller","slot":"boots","quality":"legendary","desc":"击杀后4秒内移动速度+50%。","descEn":"+50% Movement Speed for 4 seconds after a kill.","icon":"/images/icons/items/legendaryboots1.png"}],"chest":[{"id":"CommonChestArmor1","name":"农夫短衫","nameEn":"Peasant's Tunic","slot":"chest","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonchestarmor1.png"},{"id":"CommonChestArmor2","name":"破旧连帽皮甲","nameEn":"Tattered Hooded Jerkin","slot":"chest","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonchestarmor2.png"},{"id":"CommonChestArmor3","name":"填充袄子","nameEn":"Padded Gambeson","slot":"chest","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonchestarmor3.png"},{"id":"UncommonChestArmor1","name":"铆钉锁甲背心","nameEn":"Riveted Mail Vest","slot":"chest","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonchestarmor1.png"},{"id":"UncommonChestArmor2","name":"翠绿连帽外袍","nameEn":"Verdant Hooded Garb","slot":"chest","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonchestarmor2.png"},{"id":"UncommonChestArmor3","name":"蓝哨岗袄子","nameEn":"Bluewatch Gambeson","slot":"chest","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonchestarmor3.png"},{"id":"RareChestArmor1","name":"金钉布甲","nameEn":"Goldstud Brigandine","slot":"chest","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarechestarmor1.png"},{"id":"RareChestArmor2","name":"印章护胸甲","nameEn":"Sigilguard Cuirass","slot":"chest","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarechestarmor2.png"},{"id":"RareChestArmor3","name":"银骑士板甲","nameEn":"Argent Knight's Plate","slot":"chest","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarechestarmor3.png"},{"id":"LegendaryChestArmor1","name":"暴怒壁垒","nameEn":"Bulwark of Wrath","slot":"chest","quality":"legendary","desc":"若怒气护盾在结束前未被打破，结束时对周围敌人造成相当于你最大生命值100%的物理伤害。","descEn":"If Rage Shield is not broken before expiration, deal 100% of your Max Health as Physical Damage to surrounding enemies upon expiration.","icon":"/images/icons/items/legendarychestarmor1.png"},{"id":"LegendaryChestArmor2","name":"荆棘之心护胸甲","nameEn":"Thornheart Cuirass","slot":"chest","quality":"legendary","desc":"荆棘造成的伤害提高500%，但失去20%最大生命值。","descEn":"Damage dealt by Thorns is increased by 500%, but you lose 20% Max Health.","icon":"/images/icons/items/legendarychestarmor2.png"},{"id":"LegendaryChestArmor3","name":"符文守护法衣","nameEn":"Runeward Vestment","slot":"chest","quality":"legendary","desc":"受到敌人暴击时，获得基于你最大生命值的精神护盾。（冷却8秒）","descEn":"When struck by an enemy critical hit, gain a Spirit Shield based on your Max Health. (8s cooldown)","icon":"/images/icons/items/legendarychestarmor3.png"}],"helm":[{"id":"CommonHelm1","name":"流浪者宽边帽","nameEn":"Wanderer's Brimmed Hat","slot":"helm","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonhelm1.png"},{"id":"CommonHelm2","name":"破旧皮革头巾","nameEn":"Worn Leather Hood","slot":"helm","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonhelm2.png"},{"id":"CommonHelm3","name":"填充皮革头盔","nameEn":"Padded Leather Coif","slot":"helm","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonhelm3.png"},{"id":"UncommonHelm1","name":"铁鼻盔","nameEn":"Iron Nasal Helm","slot":"helm","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonhelm1.png"},{"id":"UncommonHelm2","name":"钢锅盔","nameEn":"Steel Kettle Helm","slot":"helm","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonhelm2.png"},{"id":"UncommonHelm3","name":"卫兵头盔","nameEn":"Guardsman's Helm","slot":"helm","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonhelm3.png"},{"id":"RareHelm1","name":"圣战者大头盔","nameEn":"Crusader's Great Helm","slot":"helm","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarehelm1.png"},{"id":"RareHelm2","name":"阳铸战盔","nameEn":"Sunforged Warhelm","slot":"helm","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarehelm2.png"},{"id":"RareHelm3","name":"厄运角盔","nameEn":"Doomhorn Helm","slot":"helm","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarehelm3.png"},{"id":"LegendaryHelm1","name":"堕落王冠","nameEn":"Crown of the Fallen King","slot":"helm","quality":"legendary","desc":"击杀后3秒内攻击速度+30%。","descEn":"+30% Attack Speed for 3 seconds after a kill.","icon":"/images/icons/items/legendaryhelm1.png"},{"id":"LegendaryHelm2","name":"绯红风暴之兜","nameEn":"Kabuto of the Crimson Tempest","slot":"helm","quality":"legendary","desc":"旋风斩每次命中有几率施加[流血]。","descEn":"Whirlwind has a chance to inflict [Bleeding] on each hit.","icon":"/images/icons/items/legendaryhelm2.png"}],"necklace":[{"id":"CommonNeck1","name":"黑玉泪滴吊坠","nameEn":"Onyx Teardrop Pendant","slot":"necklace","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonneck1.png"},{"id":"CommonNeck2","name":"铁链项链","nameEn":"Iron Link Necklace","slot":"necklace","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonneck2.png"},{"id":"CommonNeck3","name":"简单银吊坠","nameEn":"Simple Silver Pendant","slot":"necklace","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonneck3.png"},{"id":"UncommonNeck1","name":"红宝石泪滴吊坠","nameEn":"Ruby Drop Pendant","slot":"necklace","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonneck1.png"},{"id":"UncommonNeck2","name":"棱晶四重护符","nameEn":"Prism Quartet Amulet","slot":"necklace","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonneck2.png"},{"id":"UncommonNeck3","name":"黑曜叶片吊坠","nameEn":"Obsidian Leaf Pendant","slot":"necklace","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonneck3.png"},{"id":"RareNeck1","name":"紫晶黄金护符","nameEn":"Amethyst Gold Amulet","slot":"necklace","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareneck1.png"},{"id":"RareNeck2","name":"绿松石之眼护符","nameEn":"Turquoise Eye Amulet","slot":"necklace","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareneck2.png"},{"id":"RareNeck3","name":"蓝宝石碎片护符","nameEn":"Sapphire Shard Amulet","slot":"necklace","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareneck3.png"},{"id":"LegendaryNeck1","name":"涌动心智吊坠","nameEn":"Pendant of the Surging Mind","slot":"necklace","quality":"legendary","desc":"每消耗100点法力，4秒内暴击几率+20%。","descEn":"Every 100 Mana spent, +20% Critical Hit Chance for 4 seconds.","icon":"/images/icons/items/legendaryneck1.png"},{"id":"LegendaryNeck2","name":"裂创怒吼吊坠","nameEn":"Bellow of the Open Wound","slot":"necklace","quality":"legendary","desc":"怒吼将立即引爆周围敌人身上残余的[流血]伤害。","descEn":"Rage Shout will trigger remaining [Bleeding] damage on surrounding enemies instantly.","icon":"/images/icons/items/legendaryneck2.png"},{"id":"LegendaryNeck3","name":"火焰领主项链","nameEn":"Fire Lord's Necklace","slot":"necklace","quality":"legendary","desc":"火元素将额外召唤一个火元素。","descEn":"Fire Elemental will summon one additional Fire Elemental.","icon":"/images/icons/items/legendaryneck3.png"}],"legs":[{"id":"CommonPant1","name":"亚麻马裤","nameEn":"Linen Breeches","slot":"legs","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonpant1.png"},{"id":"CommonPant2","name":"补丁长裤","nameEn":"Patched Trousers","slot":"legs","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonpant2.png"},{"id":"CommonPant3","name":"黑色布裤","nameEn":"Black Cloth Pants","slot":"legs","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonpant3.png"},{"id":"UncommonPant1","name":"加固兽皮护腿","nameEn":"Reinforced Hide Leggings","slot":"legs","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonpant1.png"},{"id":"UncommonPant2","name":"荆棘护卫护腿","nameEn":"Thornguard Leggings","slot":"legs","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonpant2.png"},{"id":"UncommonPant3","name":"林者马裤","nameEn":"Forester's Breeches","slot":"legs","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonpant3.png"},{"id":"RarePant1","name":"青钢护腿","nameEn":"Tealsteel Legguards","slot":"legs","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarepant1.png"},{"id":"RarePant2","name":"岩浆裂纹长裤","nameEn":"Magmacrack Trousers","slot":"legs","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarepant2.png"},{"id":"RarePant3","name":"镀金丝绸护腿","nameEn":"Gilded Silk Leggings","slot":"legs","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarepant3.png"},{"id":"LegendaryPants1","name":"奥术之刃护胫","nameEn":"Greaves of the Arcane Edge","slot":"legs","quality":"legendary","desc":"[附魔]技能的暴击伤害+150%。","descEn":"+150% Critical Hit Damage from [Enchanted] Abilities.","icon":"/images/icons/items/legendarypants1.png"},{"id":"LegendaryPants2","name":"坚毅药剂护胫","nameEn":"Greaves of the Stalwart Tonic","slot":"legs","quality":"legendary","desc":"饮用生命药水后，5秒内获得30%伤害减免。","descEn":"Gain 30% Damage Reduction for 5 seconds after consuming Health Potion.","icon":"/images/icons/items/legendarypants2.png"}],"ring":[{"id":"CommonRing1","name":"朴素铁环","nameEn":"Plain Iron Band","slot":"ring","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonring1.png"},{"id":"CommonRing2","name":"铜环","nameEn":"Copper Band","slot":"ring","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonring2.png"},{"id":"CommonRing3","name":"锤制银戒指","nameEn":"Hammered Silver Ring","slot":"ring","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonring3.png"},{"id":"UncommonRing1","name":"龙脊戒指","nameEn":"Drakespine Ring","slot":"ring","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonring1.png"},{"id":"UncommonRing2","name":"石榴石环","nameEn":"Garnet Band","slot":"ring","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonring2.png"},{"id":"UncommonRing3","name":"尖刺铁环","nameEn":"Spiked Iron Ring","slot":"ring","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonring3.png"},{"id":"RareRing1","name":"阳石印戒","nameEn":"Sunstone Signet","slot":"ring","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarering1.png"},{"id":"RareRing2","name":"魔女爪戒指","nameEn":"Coven Talon Ring","slot":"ring","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarering2.png"},{"id":"RareRing3","name":"炭火焰环","nameEn":"Emberflame Band","slot":"ring","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarering3.png"},{"id":"LegendaryRing1","name":"巨龙血牙印戒","nameEn":"Bloodfang Signet of the Wyrm","slot":"ring","quality":"legendary","desc":"半月打击将额外掷出两道月牙刃。","descEn":"Half Moon Strike will hurl two additional crescent blades.","icon":"/images/icons/items/legendaryring1.png"},{"id":"LegendaryRing2","name":"展露之戒","nameEn":"Ring of Revelation","slot":"ring","quality":"legendary","desc":"静止不动时，每秒获得+10%普通攻击伤害，最多叠加20层。","descEn":"While standing still, gain +10% Basic Attack Damage every second, stacking up to 20 times.","icon":"/images/icons/items/legendaryring2.png"}],"shoulder":[{"id":"CommonShoulder1","name":"皮革肩甲","nameEn":"Leather Spaulder","slot":"shoulder","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonshoulder1.png"},{"id":"CommonShoulder2","name":"破旧护肩","nameEn":"Worn Pauldron","slot":"shoulder","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonshoulder2.png"},{"id":"CommonShoulder3","name":"填充护肩","nameEn":"Padded Shoulderguard","slot":"shoulder","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonshoulder3.png"},{"id":"UncommonShoulder1","name":"层叠铁护肩","nameEn":"Layered Iron Pauldron","slot":"shoulder","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonshoulder1.png"},{"id":"UncommonShoulder2","name":"铁肩板","nameEn":"Iron Shoulderplate","slot":"shoulder","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonshoulder2.png"},{"id":"UncommonShoulder3","name":"铆钉钢肩甲","nameEn":"Riveted Steel Spaulder","slot":"shoulder","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonshoulder3.png"},{"id":"RareShoulder1","name":"深红卫士护肩","nameEn":"Crimsonguard Pauldron","slot":"shoulder","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareshoulder1.png"},{"id":"RareShoulder2","name":"死颅护肩","nameEn":"Deathskull Pauldron","slot":"shoulder","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareshoulder2.png"},{"id":"RareShoulder3","name":"阳刺护肩","nameEn":"Sunspike Pauldron","slot":"shoulder","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareshoulder3.png"},{"id":"LegendaryShoulder1","name":"甲壳尖刺护肩","nameEn":"Shell Spike Pauldron","slot":"shoulder","quality":"legendary","desc":"护甲的10%也会计入荆棘。","descEn":"10% of your Armor also contributes to Thorns.","icon":"/images/icons/items/legendaryshoulder1.png"},{"id":"LegendaryShoulder2","name":"元素爆发护肩","nameEn":"Elemental Burst Pauldron","slot":"shoulder","quality":"legendary","desc":"使用[强力攻击]技能后，6秒内火焰伤害和闪电伤害+50%。","descEn":"After using a [Strong Attack] Ability, gain +50% Fire and Lightning Damage for 6 seconds.","icon":"/images/icons/items/legendaryshoulder2.png"}],"weapon":[{"id":"CommonAxe1","name":"樵夫小斧","nameEn":"Woodsman's Hatchet","slot":"weapon","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonaxe1.png"},{"id":"UnCommonAxe1","name":"风化战斧","nameEn":"Weathered Battleaxe","slot":"weapon","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/uncommonaxe1.png"},{"id":"CommonMace1","name":"铁刺锤","nameEn":"Iron Spiked Mace","slot":"weapon","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonmace1.png"},{"id":"CommonSword1","name":"铁制武装剑","nameEn":"Iron Arming Sword","slot":"weapon","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonsword1.png"},{"id":"CommonStaff1","name":"带钩青铜法杖","nameEn":"Hooked Bronze Staff","slot":"weapon","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commonstaff1.png"},{"id":"UncommonMace1","name":"锻造战锤","nameEn":"Forged Warhammer","slot":"weapon","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonmace1.png"},{"id":"UncommonSword1","name":"蛇舌刃","nameEn":"Serpent's Tongue Blade","slot":"weapon","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonsword1.png"},{"id":"UncommonStaff1","name":"红宝石冠权杖","nameEn":"Rubycrown Scepter","slot":"weapon","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommonstaff1.png"},{"id":"RareAxe1","name":"镀金裂颅斧","nameEn":"Gilded Ripper Axe","slot":"weapon","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rareaxe1.png"},{"id":"RareMace1","name":"阳爆权杖锤","nameEn":"Sunburst Scepter Mace","slot":"weapon","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/raremace1.png"},{"id":"RareSword1","name":"黄金弯刀","nameEn":"Golden Falchion","slot":"weapon","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/raresword1.png"},{"id":"RareStaff1","name":"新月法杖","nameEn":"Lunar Crescent Staff","slot":"weapon","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/rarestaff1.png"},{"id":"LegendaryAxe1","name":"北方巨人巨斧","nameEn":"Northern Giant's Great Axe","slot":"weapon","quality":"legendary","desc":"每次[普通攻击]还会额外造成相当于50%武器伤害的冰霜伤害，并有3%几率冻结目标。","descEn":"Each [Basic Attack] also deals 50% of Weapon Damage as Cold Damage, with a 3% chance to Freeze the target on hit.","icon":"/images/icons/items/legendaryaxe1.png"},{"id":"LegendaryMace1","name":"地狱风暴之锤","nameEn":"Hellstorm Mace","slot":"weapon","quality":"legendary","desc":"每使用10次 [普通攻击] 技能，召唤一道闪电打击随机敌人，造成相当于1000%武器伤害的闪电伤害。","descEn":"Every 10 [Basic Attack] Abilities used, summons a Lightning Strike that deals 1000% Weapon Damage as Lightning Damage to a random enemy.","icon":"/images/icons/items/legendarymace1.png"},{"id":"LegendarySword1","name":"苦痛锯齿巨剑","nameEn":"Serrated Greatsword of Agony","slot":"weapon","quality":"legendary","desc":"对易伤目标额外获得30%暴击几率。","descEn":"Additional 30% Critical Chance against Vulnerable targets.","icon":"/images/icons/items/legendarysword1.png"},{"id":"LegendaryStaff1","name":"霜龙法杖","nameEn":"Staff of the Frostwyrm","slot":"weapon","quality":"legendary","desc":"冰碎片命中后弹射至1个额外敌人。","descEn":"Ice Shards deflect to 1 additional enemy on hit.","icon":"/images/icons/items/legendarystaff1.png"}],"gloves":[{"id":"CommonGloves1","name":"破旧皮革手套","nameEn":"Worn Leather Gloves","slot":"gloves","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commongloves1.png"},{"id":"CommonGloves2","name":"铆钉兽皮手套","nameEn":"Studded Hide Gloves","slot":"gloves","quality":"common","desc":"","descEn":"","icon":"/images/icons/items/commongloves2.png"},{"id":"UncommonGloves1","name":"钢板护手","nameEn":"Steel Plated Gauntlets","slot":"gloves","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommongloves1.png"},{"id":"UncommonGloves2","name":"翠绿皮革手套","nameEn":"Verdant Leather Gloves","slot":"gloves","quality":"uncommon","desc":"","descEn":"","icon":"/images/icons/items/uncommongloves2.png"},{"id":"RareGloves1","name":"死颅护手","nameEn":"Deathskull Gauntlets","slot":"gloves","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/raregloves1.png"},{"id":"RareGloves2","name":"深红爪护手","nameEn":"Crimson Claw Gauntlets","slot":"gloves","quality":"rare","desc":"","descEn":"","icon":"/images/icons/items/raregloves2.png"},{"id":"LegendaryGloves1","name":"怒火护手","nameEn":"Ragefire Gauntlets","slot":"gloves","quality":"legendary","desc":"烈焰打击有30%几率不消耗法力。","descEn":"Flame Strike has a 30% chance to cost no Mana.","icon":"/images/icons/items/legendarygloves1.png"},{"id":"LegendaryGloves2","name":"势不可挡护手","nameEn":"Unstoppable Gauntlets","slot":"gloves","quality":"legendary","desc":"技能每次命中获得1%护甲，持续5秒。（最多叠加100层）","descEn":"Each Ability hit grants 1% Armor for 5 seconds. (Max 100 stacks)","icon":"/images/icons/items/legendarygloves2.png"}]},"skills":[{"id":"SorcererBasicAttack3","name":"电击","nameEn":"Electrocute","class":"sorcerer","type":"active","tag":"BasicAttack","desc":"释放一道噼啪作响的扇形闪电，击中前方所有敌人，造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererBasicAttack3.png"},{"id":"SorcererBasicAttack1","name":"火球","nameEn":"Fire Ball","class":"sorcerer","type":"active","tag":"BasicAttack","desc":"召唤一枚追踪火球，命中后爆炸，对小范围内所有敌人造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererBasicAttack1.png"},{"id":"SorcererStrongAttack1","name":"烈焰吐息","nameEn":"Flame Breath","class":"sorcerer","type":"active","tag":"StrongAttack","desc":"释放一道锥形烈焰，吞噬前方敌人，造成{weaponDamage}武器伤害并使其灼烧。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererStrongAttack1.png"},{"id":"SorcererStrongAttack2","name":"冰陨石","nameEn":"Ice Meteor","class":"sorcerer","type":"active","tag":"StrongAttack","desc":"召唤一颗冰冻陨石，留下持续3秒的冰寒领域，每次跳动造成{weaponDamage}武器伤害并使范围内的敌人陷入冰寒。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererStrongAttack2.png"},{"id":"SorcererBasicAttack2","name":"冰碎片","nameEn":"Ice Shards","class":"sorcerer","type":"active","tag":"BasicAttack","desc":"投掷一枚冰霜碎片，击中单个敌人，造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererBasicAttack2.png"},{"id":"SorcererSpecial1","name":"冰霜新星","nameEn":"Ice Nova","class":"sorcerer","type":"active","tag":"Special","desc":"在身周释放一圈冰霜新星，对附近的敌人造成10%武器伤害并将其冰冻。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererSpecial1.png"},{"id":"SorcererSpecial2","name":"火元素","nameEn":"Fire Elemental","class":"sorcerer","type":"active","tag":"Special","desc":"召唤一个火元素，向敌人发射火球，造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererSpecial2.png"},{"id":"SorcererSpecial3","name":"法师特殊技能3","nameEn":"Mage Special Dummy 3","class":"sorcerer","type":"active","tag":"Special","desc":"法师特殊技能占位符 — 效果尚未实现。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererSpecial3.png"},{"id":"SorcererSpecial4","name":"法师特殊技能4","nameEn":"Mage Special Dummy 4","class":"sorcerer","type":"active","tag":"Special","desc":"法师特殊技能占位符 — 效果尚未实现。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererSpecial4.png"},{"id":"SorcererSpecial5","name":"法师特殊技能5","nameEn":"Mage Special Dummy 5","class":"sorcerer","type":"active","tag":"Special","desc":"法师特殊技能占位符 — 效果尚未实现。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererSpecial5.png"},{"id":"SorcererSpecial6","name":"法师特殊技能6","nameEn":"Mage Special Dummy 6","class":"sorcerer","type":"active","tag":"Special","desc":"法师特殊技能占位符 — 效果尚未实现。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererSpecial6.png"},{"id":"SorcererStrongAttack3","name":"闪电风暴","nameEn":"Lightning Storm","class":"sorcerer","type":"active","tag":"StrongAttack","desc":"召唤一场闪电风暴，随机击中3个敌人，对每个敌人造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/SorcererStrongAttack3.png"},{"id":"WarriorAoeVulnerable","name":"范围易伤","nameEn":"AOE Vulnerable","class":"warrior","type":"active","tag":"BasicAttack","desc":"对敌人施加易伤状态","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorAoeVulnerable.png"},{"id":"WarriorBasicAttack","name":"英勇打击","nameEn":"Valiant Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"对单个敌人发动迅捷近战攻击。造成{weaponDamage}武器伤害，有{chance}概率对目标施加[易伤]。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorBasicAttack.png"},{"id":"WarriorBasicAttack2","name":"横扫打击","nameEn":"Sweep Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"以宽阔的弧度挥动武器，打击前方所有敌人，造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorBasicAttack2.png"},{"id":"WarriorBasicAttack3","name":"血刃打击","nameEn":"Blood Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"刺穿一个敌人，造成{weaponDamage}武器伤害并施加流血，在5秒内造成250%武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorBasicAttack3.png"},{"id":"WarriorBasicAttack4","name":"血刃打击","nameEn":"Blood Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"对一个敌人发动强化打击，造成100%武器伤害并施加[流血]。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorBasicAttack4.png"},{"id":"WarriorBasicAttack5","name":"血刃打击","nameEn":"Blood Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"对一个敌人发动强化打击，造成100%武器伤害并施加[流血]。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorBasicAttack5.png"},{"id":"WarriorHeavyAttack1","name":"烈焰打击","nameEn":"Flame Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"将火焰灌注成毁灭性的单体打击，造成相当于{weaponDamage}武器伤害的火焰伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorHeavyAttack1.png"},{"id":"WarriorHeavyAttack2","name":"半月打击","nameEn":"Half Moon Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"投掷一把新月形刀刃，穿透路径上的所有敌人，对每个敌人造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorHeavyAttack2.png"},{"id":"WarriorHeavyAttack3","name":"旋风斩","nameEn":"Whirlwind","class":"warrior","type":"active","tag":"BasicAttack","desc":"向敌人旋转突进，快速攻击周围的敌人，每次造成{weaponDamage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorHeavyAttack3.png"},{"id":"WarriorHeavyAttack4","name":"半月打击2","nameEn":"Half Moon Strike 2","class":"warrior","type":"active","tag":"BasicAttack","desc":"更强力的新月形刀刃，撕裂直线上的所有敌人，造成250%武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorHeavyAttack4.png"},{"id":"WarriorHeavyAttack5","name":"半月打击2","nameEn":"Half Moon Strike 2","class":"warrior","type":"active","tag":"BasicAttack","desc":"更强力的新月形刀刃，撕裂直线上的所有敌人，造成250%武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorHeavyAttack5.png"},{"id":"WarriorRageShield","name":"狂怒护盾","nameEn":"Rage Shield","class":"warrior","type":"active","tag":"BasicAttack","desc":"以怒火屏障环绕自身，吸收最多相当于{shield}最大生命值的伤害，持续{duration}。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorRageShield.png"},{"id":"LegendaryChest3","name":"精神护盾","nameEn":"Spirit Shield","class":"warrior","type":"active","tag":"BasicAttack","desc":"魔法屏障可吸收最多相当于{shield}最大生命值的伤害。持续{duration}。","cooldown":0,"mana":0,"icon":"/images/icons/skills/LegendaryChest3.png"},{"id":"RageShieldStatus","name":"狂怒护盾","nameEn":"Rage Shield","class":"warrior","type":"active","tag":"BasicAttack","desc":"怒火屏障可吸收最多相当于{shield}最大生命值的伤害。持续{duration}。","cooldown":0,"mana":0,"icon":"/images/icons/skills/RageShieldStatus.png"},{"id":"WarriorRageShout","name":"怒吼","nameEn":"Rage Shout","class":"warrior","type":"active","tag":"BasicAttack","desc":"4秒内提升{attackSpeed}攻击速度。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorRageShout.png"},{"id":"WarriorSpecialDummy2","name":"特殊技能2","nameEn":"Special Dummy 2","class":"warrior","type":"active","tag":"Special","desc":"用速度爆发增强自身，短时间内大幅提升攻击速度。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorSpecialDummy2.png"},{"id":"WarriorSpecialDummy3","name":"特殊技能3","nameEn":"Special Dummy 3","class":"warrior","type":"active","tag":"Special","desc":"用速度爆发增强自身，短时间内大幅提升攻击速度。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorSpecialDummy3.png"},{"id":"WarriorSpecialDummy4","name":"特殊技能3","nameEn":"Special Dummy 3","class":"warrior","type":"active","tag":"Special","desc":"用速度爆发增强自身，短时间内大幅提升攻击速度。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorSpecialDummy4.png"},{"id":"WarriorSpecialDummy5","name":"特殊技能3","nameEn":"Special Dummy 3","class":"warrior","type":"active","tag":"Special","desc":"用速度爆发增强自身，短时间内大幅提升攻击速度。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WarriorSpecialDummy5.png"},{"id":"MonkBasicAttack1","name":"三重击","nameEn":"Threefold Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"打击单个敌人，造成{damage}武器伤害。每第三击化为强化终结技，对目标额外造成{damage2}。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkBasicAttack1.png"},{"id":"MonkBasicAttack2","name":"怒拳","nameEn":"Furious Fist","class":"warrior","type":"active","tag":"BasicAttack","desc":"向单个敌人挥出怒拳，造成{damage}武器伤害并积蓄气势——每次命中获得+1%攻击速度（最多叠加100层），持续{duration}秒。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkBasicAttack2.png"},{"id":"MonkBasicAttack2Status","name":"怒拳","nameEn":"Furious Fist","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkBasicAttack2Status.png"},{"id":"MonkBasicAttack3","name":"震地击","nameEn":"Seismic Strike","class":"warrior","type":"active","tag":"BasicAttack","desc":"用武器攻击单个目标。每第三次攻击将重重击出并激起冲击波，造成范围伤害。对目标造成{damage}武器伤害，第三击对周围敌人额外造成{damage2}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkBasicAttack3.png"},{"id":"MonkHeavyAttack1","name":"圣裁之击","nameEn":"Sacred Judgment","class":"warrior","type":"active","tag":"BasicAttack","desc":"旋身挥出一记迸发圣光雷电的武器重击，对单个敌人造成{damage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkHeavyAttack1.png"},{"id":"MonkHeavyAttack2","name":"穿刺突进","nameEn":"Piercing Lunge","class":"warrior","type":"active","tag":"BasicAttack","desc":"向前突进刺出致命一击，贯穿身前锥形范围内的所有敌人，造成{damage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkHeavyAttack2.png"},{"id":"MonkHeavyAttack3","name":"旋风棍式","nameEn":"Whirlwind Staff","class":"warrior","type":"active","tag":"BasicAttack","desc":"在身前掀起两道龙卷风，向敌人游走，对进入其中的敌人造成{damage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkHeavyAttack3.png"},{"id":"MonkSpecial1","name":"神圣法球","nameEn":"Sacred Orbs","class":"warrior","type":"active","tag":"Special","desc":"召唤一颗环绕自身旋转的神圣法球，对经过的每个敌人造成{damage}武器伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkSpecial1.png"},{"id":"MonkSpecial2","name":"灵气涌流","nameEn":"Spirit Stream","class":"warrior","type":"active","tag":"Special","desc":"引导灵气涌流贯通全身，每秒回复15%最大生命值，持续{duration}秒。","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkSpecial2.png"},{"id":"MonkSpecial2Status","name":"灵气涌流","nameEn":"Spirit Stream","class":"warrior","type":"active","tag":"Special","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/MonkSpecial2Status.png"},{"id":"DragonArmor","name":"火焰护甲","nameEn":"Flame Armor","class":"warrior","type":"active","tag":"BasicAttack","desc":"用火焰护甲保护玩家，减少20%受到的魔法伤害，持续5秒。","cooldown":0,"mana":0,"icon":"/images/icons/skills/DragonArmor.png"},{"id":"DragonBreathe","name":"燃烧吐息","nameEn":"Burning Breath","class":"warrior","type":"active","tag":"BasicAttack","desc":"向敌人喷射锥形燃烧火焰，对所有敌人造成伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/DragonBreathe.png"},{"id":"WerewolfHowl","name":"血月嚎叫","nameEn":"Bloodmoon Howl","class":"warrior","type":"active","tag":"BasicAttack","desc":"+{value} 攻击速度，持续5秒。","cooldown":0,"mana":0,"icon":"/images/icons/skills/WerewolfHowl.png"},{"id":"ManticoraSting","name":"蝎狮之刺","nameEn":"Manticora Sting","class":"warrior","type":"active","tag":"BasicAttack","desc":"对一个敌人造成毒素伤害并施加中毒状态。","cooldown":0,"mana":0,"icon":"/images/icons/skills/ManticoraSting.png"},{"id":"BigTreantHeal","name":"治愈之灵","nameEn":"Healing Spirit","class":"warrior","type":"active","tag":"BasicAttack","desc":"为玩家恢复相当于{value}最大生命值的生命。","cooldown":0,"mana":0,"icon":"/images/icons/skills/BigTreantHeal.png"},{"id":"Ability.Cooldown.WeaponSpeed","name":"冷却：{0}","nameEn":"Cooldown: {0}","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Cooldown.WeaponSpeed.png"},{"id":"Ability.Cooldown.WeaponSpeedValue","name":"武器速度","nameEn":"Weapon speed","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Cooldown.WeaponSpeedValue.png"},{"id":"Ability.Cooldown.Seconds","name":"冷却：{0} 秒","nameEn":"Cooldown: {0} seconds","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Cooldown.Seconds.png"},{"id":"Ability.Mana.Gain","name":"生成：{0} 法力","nameEn":"Generate: {0} Mana","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Mana.Gain.png"},{"id":"Ability.Mana.Cost","name":"消耗：{0} 法力","nameEn":"Cost: {0} Mana","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Mana.Cost.png"},{"id":"Ability.Level","name":"等级 {0}/{1}","nameEn":"Lv. {0}/{1}","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Level.png"},{"id":"Ability.LevelUncapped","name":"等级 {0}","nameEn":"Lv. {0}","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.LevelUncapped.png"},{"id":"Ability.Max","name":"最大","nameEn":"MAX","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Max.png"},{"id":"Ability.XP","name":"{0} / {1} 经验","nameEn":"{0} / {1} XP","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.XP.png"},{"id":"Ability.NextLevel","name":"下一等级：","nameEn":"Next Level:","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.NextLevel.png"},{"id":"Ability.Field.Cooldown","name":"冷却时间","nameEn":"Cooldown","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.Cooldown.png"},{"id":"Ability.Field.Range","name":"射程","nameEn":"Range","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.Range.png"},{"id":"Ability.Field.ManaCost","name":"法力消耗","nameEn":"Mana Cost","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.ManaCost.png"},{"id":"Ability.Field.DamageScaling","name":"伤害倍率","nameEn":"Damage Scaling","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.DamageScaling.png"},{"id":"Ability.Field.EffectChance","name":"效果概率","nameEn":"Effect Chance","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.EffectChance.png"},{"id":"Ability.Field.Duration","name":"持续时间","nameEn":"Duration","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.Duration.png"},{"id":"Ability.Field.DamagePerTick","name":"每跳伤害","nameEn":"Damage / Tick","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.DamagePerTick.png"},{"id":"Ability.Field.DamageReduction","name":"伤害减免","nameEn":"Damage Reduction","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.DamageReduction.png"},{"id":"Ability.Field.ShieldAmount","name":"护盾量","nameEn":"Shield Amount","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.ShieldAmount.png"},{"id":"Ability.Field.AttackSpeedScaling","name":"攻击速度倍率","nameEn":"Attack Speed Scaling","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.Field.AttackSpeedScaling.png"},{"id":"Ability.CooldownCD","name":"{0}秒 CD","nameEn":"{0}s CD","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/Ability.CooldownCD.png"},{"id":"AbilityTag.BasicAttack","name":"普通攻击","nameEn":"Basic Attack","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.BasicAttack.png"},{"id":"AbilityTag.StrongAttack","name":"强力攻击","nameEn":"Strong Attack","class":"warrior","type":"active","tag":"StrongAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.StrongAttack.png"},{"id":"AbilityTag.Special","name":"特殊","nameEn":"Special","class":"warrior","type":"active","tag":"Special","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Special.png"},{"id":"AbilityTag.AOE","name":"范围","nameEn":"AOE","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.AOE.png"},{"id":"AbilityTag.Warcry","name":"战吼","nameEn":"Warcry","class":"warrior","type":"active","tag":"Warcry","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Warcry.png"},{"id":"AbilityTag.Bleed","name":"流血","nameEn":"Bleed","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Bleed.png"},{"id":"AbilityTag.Enchanted","name":"附魔","nameEn":"Enchanted","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Enchanted.png"},{"id":"AbilityTag.Physical","name":"物理","nameEn":"Physical","class":"warrior","type":"active","tag":"BasicAttack","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Physical.png"},{"id":"AbilityTag.Fire","name":"火焰","nameEn":"Fire","class":"warrior","type":"active","tag":"Fire","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Fire.png"},{"id":"AbilityTag.Frost","name":"冰霜","nameEn":"Frost","class":"warrior","type":"active","tag":"Frost","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Frost.png"},{"id":"AbilityTag.Lightning","name":"闪电","nameEn":"Lightning","class":"warrior","type":"active","tag":"Lightning","desc":"","cooldown":0,"mana":0,"icon":"/images/icons/skills/AbilityTag.Lightning.png"},{"id":"EnemySlow","name":"减速","nameEn":"Slowed","class":"warrior","type":"active","tag":"BasicAttack","desc":"移动速度 -{value}，持续{duration}秒。","cooldown":0,"mana":0,"icon":"/images/icons/skills/EnemySlow.png"},{"id":"EnemyPoison","name":"中毒","nameEn":"Poisoned","class":"warrior","type":"active","tag":"BasicAttack","desc":"每2秒受到毒素伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/EnemyPoison.png"},{"id":"EnemyBleeding","name":"流血","nameEn":"Bleeding","class":"warrior","type":"active","tag":"BasicAttack","desc":"每秒受到物理伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/EnemyBleeding.png"},{"id":"EnemyAirWarlordScaleUp","name":"膨胀之怒","nameEn":"Swelling Fury","class":"warrior","type":"active","tag":"BasicAttack","desc":"身躯因熔岩之怒而膨胀，每层伤害提高 {value}。","cooldown":0,"mana":0,"icon":"/images/icons/skills/EnemyAirWarlordScaleUp.png"},{"id":"Vulnerable","name":"易伤","nameEn":"Vulnerable","class":"warrior","type":"active","tag":"BasicAttack","desc":"受到额外伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/Vulnerable.png"},{"id":"Burn","name":"灼烧","nameEn":"Burn","class":"warrior","type":"active","tag":"BasicAttack","desc":"每0.5秒受到火焰伤害。","cooldown":0,"mana":0,"icon":"/images/icons/skills/Burn.png"},{"id":"Chill","name":"冰寒","nameEn":"Chill","class":"warrior","type":"active","tag":"BasicAttack","desc":"攻击速度和移动速度降低{value}。","cooldown":0,"mana":0,"icon":"/images/icons/skills/Chill.png"},{"id":"Bleeding","name":"流血","nameEn":"Bleeding","class":"warrior","type":"active","tag":"BasicAttack","desc":"每秒受到物理伤害。再次施加时会累计剩余伤害并重置持续时间。","cooldown":0,"mana":0,"icon":"/images/icons/skills/Bleeding.png"},{"id":"Frozen","name":"冰冻","nameEn":"Frozen","class":"warrior","type":"active","tag":"BasicAttack","desc":"冰冻期间无法移动或行动。","cooldown":0,"mana":0,"icon":"/images/icons/skills/Frozen.png"},{"id":"Stunned","name":"眩晕","nameEn":"Stunned","class":"warrior","type":"active","tag":"BasicAttack","desc":"眩晕期间无法移动或行动。","cooldown":0,"mana":0,"icon":"/images/icons/skills/Stunned.png"},{"id":"QuickStun","name":"短暂眩晕","nameEn":"Short Stun","class":"warrior","type":"active","tag":"BasicAttack","desc":"短暂无法移动或行动。","cooldown":0,"mana":0,"icon":"/images/icons/skills/QuickStun.png"},{"id":"StaticElectricity","name":"静电","nameEn":"Electrostatic","class":"warrior","type":"active","tag":"BasicAttack","desc":"受到的闪电伤害增加。最多叠加5层。","cooldown":0,"mana":0,"icon":"/images/icons/skills/StaticElectricity.png"}]};
-let activeClass = 'warrior';
-let affixTab = 'affixes';
-let selectedEquipment = {};
-let selectedAffixes = {};
-let equippedSkills = {};
-let modalSlot = null;
-let modalQuality = 'legendary';
+'use strict';
 
-const SLOT_NAMES = { weapon: '武器', helm: '头盔', chest: '胸甲', shoulder: '护肩', necklace: '项链', gloves: '手套', belt: '腰带', legs: '护腿', boots: '靴子', ring: '戒指' };
-const SLOT_ICONS = { weapon: '⚔️', helm: '⛑️', chest: '🛡️', shoulder: '🦾', necklace: '📿', gloves: '🧤', belt: '🪢', legs: '👖', boots: '🥾', ring: '💍' };
-const QUALITY_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' };
+// ============================================
+// 装备数据 - 从 items.json 加载
+// ============================================
+const SLOTS = [
+  { key: 'helm', name: '头盔', icon: '🪖' },
+  { key: 'chest', name: '胸甲', icon: '🛡' },
+  { key: 'shoulder', name: '护肩', icon: '🦾' },
+  { key: 'pants', name: '护腿', icon: '👖' },
+  { key: 'gloves', name: '手套', icon: '🧤' },
+  { key: 'boots', name: '靴子', icon: '👢' },
+  { key: 'belt', name: '腰带', icon: '🪢' },
+  { key: 'amulet', name: '项链', icon: '📿' },
+  { key: 'ring1', name: '戒指 1', icon: '💍' },
+  { key: 'ring2', name: '戒指 2', icon: '💍' },
+  { key: 'weapon', name: '武器', icon: '⚔' },
+  { key: 'offhand', name: '副手', icon: '🛡' },
+]
 
-// Initialize
-function init() {
-  for (const slot of Object.keys(SLOT_NAMES)) {
-    selectedEquipment[slot] = null;
-    selectedAffixes[slot] = { main: null, sub: [] };
+// 模拟装备库（避免加载大文件，先用模拟数据）
+const ITEM_POOL = {
+  helm: [
+    { id: 'helm1', name: '战士头盔', quality: 'rare', stats: [{k:'armor',v:30},{k:'hp',v:50}] },
+    { id: 'helm2', name: '光辉战盔', quality: 'legendary', stats: [{k:'armor',v:80},{k:'str',v:10}] },
+  ],
+  chest: [
+    { id: 'chest1', name: '链甲胸甲', quality: 'rare', stats: [{k:'armor',v:50},{k:'hp',v:100}] },
+    { id: 'chest2', name: '古王胸甲', quality: 'legendary', stats: [{k:'armor',v:120},{k:'hp',v:200}] },
+  ],
+  shoulder: [
+    { id: 'shoulder1', name: '护肩', quality: 'uncommon', stats: [{k:'armor',v:20}] },
+    { id: 'shoulder2', name: '巨战护肩', quality: 'legendary', stats: [{k:'armor',v:60},{k:'str',v:8}] },
+  ],
+  pants: [
+    { id: 'pants1', name: '护腿', quality: 'rare', stats: [{k:'armor',v:40},{k:'hp',v:80}] },
+    { id: 'pants2', name: '战王护腿', quality: 'legendary', stats: [{k:'armor',v:100},{k:'hp',v:150}] },
+  ],
+  gloves: [
+    { id: 'gloves1', name: '皮手套', quality: 'uncommon', stats: [{k:'armor',v:15}] },
+    { id: 'gloves2', name: '巨人手套', quality: 'legendary', stats: [{k:'armor',v:40},{k:'str',v:6}] },
+  ],
+  boots: [
+    { id: 'boots1', name: '战靴', quality: 'rare', stats: [{k:'armor',v:25}] },
+    { id: 'boots2', name: '疾风战靴', quality: 'legendary', stats: [{k:'armor',v:50},{k:'aspd',v:5}] },
+  ],
+  belt: [
+    { id: 'belt1', name: '战腰', quality: 'uncommon', stats: [{k:'armor',v:15}] },
+    { id: 'belt2', name: '吸血腰', quality: 'legendary', stats: [{k:'hp',v:200},{k:'lifesteal',v:5}] },
+  ],
+  amulet: [
+    { id: 'amulet1', name: '力量护符', quality: 'rare', stats: [{k:'str',v:5}] },
+    { id: 'amulet2', name: '暴君之眼', quality: 'legendary', stats: [{k:'str',v:15},{k:'crit',v:3}] },
+  ],
+  ring1: [
+    { id: 'ring1a', name: '钢戒', quality: 'uncommon', stats: [{k:'armor',v:10}] },
+    { id: 'ring1b', name: '血之戒', quality: 'legendary', stats: [{k:'hp',v:100},{k:'str',v:8}] },
+  ],
+  ring2: [
+    { id: 'ring2a', name: '钢戒', quality: 'uncommon', stats: [{k:'armor',v:10}] },
+    { id: 'ring2b', name: '无尽怒火戒', quality: 'legendary', stats: [{k:'str',v:12},{k:'critdmg',v:10}] },
+  ],
+  weapon: [
+    { id: 'wpn1', name: '长剑', quality: 'rare', stats: [{k:'dmg',v:50}] },
+    { id: 'wpn2', name: '北方巨人巨斧', quality: 'legendary', stats: [{k:'dmg',v:150},{k:'str',v:10}] },
+  ],
+  offhand: [
+    { id: 'off1', name: '塔盾', quality: 'rare', stats: [{k:'armor',v:40}] },
+    { id: 'off2', name: '古王壁垒', quality: 'legendary', stats: [{k:'armor',v:100},{k:'block',v:15}] },
+  ],
+}
+
+// ============================================
+// 天赋数据 (简化版)
+// ============================================
+const TALENT_TREE = {
+  Warrior: [
+    // 第0层
+    { tier: 0, col: 0, name: '力量', max: 5, perPoint: 5, stat: 'str' },
+    { tier: 0, col: 1, name: '活力', max: 5, perPoint: 50, stat: 'hp' },
+    { tier: 0, col: 2, name: '护甲', max: 5, perPoint: 25, stat: 'armor' },
+    { tier: 0, col: 3, name: '荆棘', max: 5, perPoint: 3, stat: 'thorn' },
+    { tier: 0, col: 4, name: '攻击速度', max: 5, perPoint: 2, stat: 'aspd' },
+    // 第1层
+    { tier: 1, col: 0, name: '暴击几率', max: 3, perPoint: 2, stat: 'crit' },
+    { tier: 1, col: 1, name: '生命恢复', max: 5, perPoint: 4, stat: 'hpregen' },
+    { tier: 1, col: 2, name: '暴击伤害', max: 5, perPoint: 3, stat: 'critdmg' },
+    { tier: 1, col: 3, name: '凶猛', max: 5, perPoint: 5, stat: 'dmgBonus' },
+    { tier: 1, col: 4, name: '战斗激励', max: 3, perPoint: 10, stat: 'proc' },
+    // 第2层
+    { tier: 2, col: 0, name: '专注', max: 5, perPoint: 1, stat: 'stun' },
+    { tier: 2, col: 1, name: '重击', max: 5, perPoint: 5, stat: 'vuln' },
+    { tier: 2, col: 2, name: '劈砍狂怒', max: 1, perPoint: 2, stat: 'aspd' },
+    { tier: 2, col: 3, name: '强化强力攻击', max: 5, perPoint: 5, stat: 'manaSave' },
+    { tier: 2, col: 4, name: '荆棘强化', max: 5, perPoint: 10, stat: 'thorn' },
+  ]
+}
+
+// ============================================
+// 技能栏
+// ============================================
+const SKILL_SLOTS = [
+  { key: 'basic', name: '普通攻击', icon: '⚔' },
+  { key: 'core', name: '核心技能', icon: '💥' },
+  { key: 'def1', name: '防御 1', icon: '🛡' },
+  { key: 'def2', name: '防御 2', icon: '🛡' },
+  { key: 'bark1', name: '战吼 1', icon: '📯' },
+  { key: 'bark2', name: '战吼 2', icon: '📯' },
+]
+
+// ============================================
+// 状态
+// ============================================
+let state = {
+  buildName: '我的构筑',
+  activeClass: 'Warrior',
+  equips: {},  // { slotKey: item }
+  talents: {},  // { 'tier-col': points }
+  skills: {},  // { slotKey: skillName }
+}
+
+// 从 URL 加载
+function loadFromUrl() {
+  const hash = location.hash.slice(1)
+  if (!hash) return
+  try {
+    const decoded = JSON.parse(atob(decodeURIComponent(hash)))
+    if (decoded.name) state.buildName = decoded.name
+    if (decoded.class) state.activeClass = decoded.class
+    if (decoded.equips) state.equips = decoded.equips
+    if (decoded.talents) state.talents = decoded.talents
+  } catch (e) { console.warn('Load URL error', e) }
+}
+
+function saveToUrl() {
+  const data = {
+    name: state.buildName,
+    class: state.activeClass,
+    equips: state.equips,
+    talents: state.talents,
   }
-  for (let i = 0; i < 6; i++) equippedSkills['slot' + i] = null;
-  renderEquipmentList();
-  renderAffixTab();
-  renderSkillTab();
-  renderStats();
-  renderSelectedList();
+  const encoded = btoa(JSON.stringify(data))
+  history.replaceState(null, '', '#' + encodeURIComponent(encoded))
 }
 
-// 数据已内联（不再用 fetch），旧 loadData 残留函数已删除
-
-
-function setClass(c) {
-  activeClass = c;
-  document.getElementById('btn-warrior').classList.toggle('active', c === 'warrior');
-  document.getElementById('btn-sorcerer').classList.toggle('active', c === 'sorcerer');
-  document.getElementById('class-name').textContent = c === 'warrior' ? '战士' : '法师';
-  document.getElementById('primary-stat').textContent = '主属性: ' + (c === 'warrior' ? '力量' : '智力');
-  renderSkillTab();
+// ============================================
+// 渲染
+// ============================================
+function renderEquipList() {
+  const html = SLOTS.map(s => {
+    const item = state.equips[s.key]
+    const qClass = item ? `q-${item.quality}` : ''
+    const nameHtml = item
+      ? `<span class="slot-name ${qClass}">${item.name}</span><div class="slot-affixes">${item.stats.map(st=>`+${st.v} ${statName(st.k)}`).join(' · ')}</div>`
+      : `<span class="slot-name" style="color:#6a7290">${s.name}</span><div class="slot-affixes" style="color:#4a5070">点击装备</div>`
+    return `<div class="equip-slot ${item?'has-item':''}" data-slot="${s.key}">
+      <div class="slot-icon">${s.icon}</div>
+      <div class="slot-info">
+        <div class="slot-type">${s.name.toUpperCase()}</div>
+        ${nameHtml}
+      </div>
+      ${item ? `<button class="slot-clear" data-clear="${s.key}">×</button>` : ''}
+    </div>`
+  }).join('')
+  document.getElementById('equipList').innerHTML = html
 }
 
-function setAffixTab(t) {
-  affixTab = t;
-  document.getElementById('tab-affixes').classList.toggle('active', t === 'affixes');
-  document.getElementById('tab-skills').classList.toggle('active', t === 'skills');
-  document.getElementById('affix-tab-content').style.display = t === 'affixes' ? 'block' : 'none';
-  document.getElementById('skill-tab-content').style.display = t === 'skills' ? 'block' : 'none';
+function renderSkillBar() {
+  const html = SKILL_SLOTS.map(s => {
+    const skill = state.skills[s.key]
+    return `<div class="skill-slot ${skill?'active':''}" data-skill="${s.key}">${skill?.icon || s.icon}</div>`
+  }).join('')
+  document.getElementById('skillBar').innerHTML = html
 }
 
-function renderEquipmentList() {
-  const html = Object.keys(SLOT_NAMES).map(slot => {
-    const item = selectedEquipment[slot];
-    const qClass = item ? 'item-quality-' + item.quality : '';
-    return `<div class="equip-slot ${item ? 'has-item' : ''}" onclick="openModal('${slot}')">
-<div class="slot-icon">${SLOT_ICONS[slot]}</div>
-<div style="flex:1">
-<span class="slot-label">${SLOT_NAMES[slot]}</span>
-<span class="${qClass}" style="font-size:0.9rem;display:block">${item ? item.name : '<span class="slot-empty">点击选择装备...</span>'}</span>
-</div>
-</div>`;
-  }).join('');
-  document.getElementById('equipment-list').innerHTML = html;
-}
-
-function openModal(slot) {
-  modalSlot = slot;
-  modalQuality = 'legendary';
-  document.querySelectorAll('.modal-quality-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.modal-quality-btn')[0].classList.add('active');
-  renderModalEquipment();
-  document.getElementById('equipment-modal').classList.add('active');
-}
-
-function closeModal() {
-  document.getElementById('equipment-modal').classList.remove('active');
-}
-
-function filterModalQuality(q, e) {
-  modalQuality = q;
-  document.querySelectorAll('.modal-quality-btn').forEach(b => b.classList.remove('active'));
-  e.target.classList.add('active');
-  renderModalEquipment();
-}
-
-function renderModalEquipment() {
-  const slot = modalSlot;
-  let items = DATA.equipmentBySlot[slot] || [];
-  if (modalQuality !== 'all') {
-    items = items.filter(it => it.quality === modalQuality);
-  }
-  if (items.length === 0) {
-    document.getElementById('modal-equipment-list').innerHTML = '<div style="grid-column:1/-1;text-align:center;color:#8f7f6e;padding:2rem">该部位该品质无装备</div>';
-    return;
-  }
-  const html = items.map(item => `
-<div class="equipment-item ${item.quality}" onclick="selectEquipment('${item.id}')">
-<div class="equipment-item-name">${item.name}</div>
-<div class="equipment-item-en">${item.nameEn}</div>
-</div>`).join('');
-  document.getElementById('modal-equipment-list').innerHTML = html;
-}
-
-function selectEquipment(itemId) {
-  for (const q of ['legendary', 'rare', 'uncommon', 'common']) {
-    for (const s of Object.keys(SLOT_NAMES)) {
-      const items = DATA.equipment[q]?.[s] || [];
-      const found = items.find(it => it.id === itemId);
-      if (found) {
-        selectedEquipment[modalSlot] = found;
-        selectedAffixes[modalSlot] = { main: null, sub: [] };
-        closeModal();
-        renderEquipmentList();
-        renderAffixTab();
-        renderStats();
-        renderSelectedList();
-        return;
-      }
-    }
-  }
-}
-
-function renderAffixTab() {
-  const html = Object.keys(SLOT_NAMES).map(slot => {
-    const item = selectedEquipment[slot];
-    if (!item) {
-      return `<div class="affix-slot-config">
-<div class="slot-config-title">${SLOT_NAMES[slot]} - 未选择</div>
-<div class="item-empty" style="text-align:center;padding:0.5rem">请先选择此部位装备</div>
-</div>`;
-    }
-    const aff = selectedAffixes[slot] || { main: null, sub: [] };
-    const available = DATA.slotAffixes[slot] || { prefix: [], suffix: [] };
-    const prefixOptions = available.prefix.map(a => `<option value="${a}">${DATA.affixes[a]?.name || a} (${a})</option>`).join('');
-    const suffixOptions = available.suffix.map(a => `<option value="${a}">${DATA.affixes[a]?.name || a} (${a})</option>`).join('');
-    const allAff = [...(available.prefix || []), ...(available.suffix || [])];
-    const subButtons = allAff.map(a => {
-      const isSel = aff.sub.includes(a);
-      return `<button class="sub-affix ${isSel ? 'selected' : ''}" onclick="toggleSub('${slot}','${a}')">${DATA.affixes[a]?.name || a}</button>`;
-    }).join('');
-    return `<div class="affix-slot-config">
-<div class="slot-config-title">${SLOT_NAMES[slot]} - ${item.name}</div>
-<div class="affix-selector">
-<div class="affix-section-main">
-<label>主词条</label>
-<select onchange="selectMain('${slot}', this.value)">
-<option value="">-- 选择主词条 --</option>
-<optgroup label="前缀词条">${prefixOptions}</optgroup>
-<optgroup label="后缀词条">${suffixOptions}</optgroup>
-</select>
-</div>
-<div class="affix-section-sub">
-<label>副词条 (最多 3 个)</label>
-<div class="sub-affixes">${subButtons}</div>
-</div>
-</div>
-</div>`;
-  }).join('');
-  document.getElementById('affix-tab-content').innerHTML = html;
-}
-
-function selectMain(slot, value) {
-  if (!selectedAffixes[slot]) selectedAffixes[slot] = { main: null, sub: [] };
-  selectedAffixes[slot].main = value || null;
-  renderStats();
-}
-
-function toggleSub(slot, aff) {
-  if (!selectedAffixes[slot]) selectedAffixes[slot] = { main: null, sub: [] };
-  if (!selectedAffixes[slot].sub) selectedAffixes[slot].sub = [];
-  const idx = selectedAffixes[slot].sub.indexOf(aff);
-  if (idx >= 0) selectedAffixes[slot].sub.splice(idx, 1);
-  else if (selectedAffixes[slot].sub.length < 3) selectedAffixes[slot].sub.push(aff);
-  renderAffixTab();
-  renderStats();
-}
-
-function renderSkillTab() {
-  const classSkills = DATA.skills.filter(s => s.class === activeClass);
-  const skillSlots = Array.from({length: 6}, (_, i) => {
-    const sk = equippedSkills['slot' + i];
-    return `<div class="skill-slot-btn" onclick="clearSkillSlot(${i})">
-<div class="skill-slot-icon">${sk ? sk.name.substring(0,2) : (i+1)}</div>
-<div class="skill-slot-label">${sk ? sk.name : '槽 ' + (i+1)}</div>
-</div>`;
-  }).join('');
-  const skillsHtml = classSkills.map(s => `
-<div class="skill-card" onclick="equipSkill('${s.id}')">
-<span class="skill-name">${s.name}</span>
-<span class="skill-name-en">${s.nameEn}</span>
-<span class="skill-tag">${s.tag}</span>
-</div>`).join('');
-  document.getElementById('skill-tab-content').innerHTML = `
-<div style="margin-bottom:1rem">
-<h3 style="color:#c9a55b;font-size:0.95rem;margin-bottom:0.5rem">已配置技能</h3>
-<div class="skill-slots">${skillSlots}</div>
-</div>
-<div>
-<h3 style="color:#c9a55b;font-size:0.95rem;margin-bottom:0.5rem">可用技能 (${classSkills.length})</h3>
-<div class="skill-grid">${skillsHtml}</div>
-</div>`;
-}
-
-function clearSkillSlot(i) {
-  equippedSkills['slot' + i] = null;
-  renderSkillTab();
-}
-
-function equipSkill(skillId) {
-  const skill = DATA.skills.find(s => s.id === skillId);
-  if (!skill) return;
-  // Find first empty slot
-  for (let i = 0; i < 6; i++) {
-    if (!equippedSkills['slot' + i]) {
-      equippedSkills['slot' + i] = skill;
-      renderSkillTab();
-      return;
-    }
-  }
-  alert('技能槽已满');
+function renderTalentGrid() {
+  const tree = TALENT_TREE[state.activeClass] || []
+  const html = tree.map(t => {
+    const points = state.talents[`${t.tier}-${t.col}`] || 0
+    const cls = points === 0 ? '' : (points >= t.max ? 'full' : 'has-points')
+    return `<div class="talent-node ${cls}" data-tier="${t.tier}" data-col="${t.col}">
+      ${t.name}
+      ${points > 0 ? `<div class="talent-counter">${points}/${t.max}</div>` : ''}
+    </div>`
+  }).join('')
+  document.getElementById('talentGrid').innerHTML = html
 }
 
 function renderStats() {
-  const stats = {};
-  for (const slot in selectedAffixes) {
-    const aff = selectedAffixes[slot];
-    if (!aff) continue;
-    if (aff.main && DATA.affixes[aff.main]) {
-      const desc = DATA.affixes[aff.main].desc || '';
-      // Extract value from description (parse {0} placeholder)
-      // For now just show the name
-      if (!stats[aff.main]) stats[aff.main] = 0;
-      stats[aff.main] += 1;
+  // 从装备 + 天赋计算
+  let stats = { hp: 100, str: 0, int: 0, armor: 0, mres: 0, crit: 5, critdmg: 50, aspd: 0, hpregen: 0, thorn: 0, dmg: 10, dmgBonus: 0, stun: 0, vuln: 0, manaSave: 0 }
+  
+  // 装备属性
+  for (const key in state.equips) {
+    const item = state.equips[key]
+    item.stats.forEach(s => {
+      stats[s.k] = (stats[s.k] || 0) + s.v
+    })
+  }
+  
+  // 天赋
+  for (const key in state.talents) {
+    const [tier, col] = key.split('-').map(Number)
+    const t = (TALENT_TREE[state.activeClass]||[]).find(x => x.tier===tier && x.col===col)
+    if (t) stats[t.stat] = (stats[t.stat]||0) + state.talents[key] * t.perPoint
+  }
+  
+  document.getElementById('stat-hp').textContent = Math.round(stats.hp)
+  document.getElementById('stat-str').textContent = Math.round(stats.str)
+  document.getElementById('stat-int').textContent = Math.round(stats.int)
+  document.getElementById('stat-armor').textContent = Math.round(stats.armor)
+  document.getElementById('stat-mres').textContent = Math.round(stats.mres)
+  document.getElementById('stat-crit').textContent = stats.crit.toFixed(1) + '%'
+  document.getElementById('stat-critdmg').textContent = stats.critdmg.toFixed(0) + '%'
+  document.getElementById('stat-aspd').textContent = stats.aspd.toFixed(1) + '%'
+  document.getElementById('stat-hpregen').textContent = stats.hpregen.toFixed(1) + '/s'
+  document.getElementById('stat-thorn').textContent = Math.round(stats.thorn)
+  
+  // DPS 预估
+  const baseDmg = stats.dmg * (1 + stats.str * 0.01)
+  const critMult = 1 + (stats.crit/100) * (stats.critdmg/100)
+  const aspdMult = 1 + stats.aspd / 100
+  const bonusMult = 1 + (stats.dmgBonus||0) / 100
+  const dps = baseDmg * critMult * aspdMult * bonusMult
+  document.getElementById('dpsNum').textContent = Math.round(dps).toLocaleString()
+  
+  // 更新天赋已分配
+  const used = Object.values(state.talents).reduce((a,b)=>a+b, 0)
+  document.getElementById('talentUsed').textContent = used
+}
+
+function statName(k) {
+  const map = { hp: 'HP', str: '力量', int: '智力', armor: '护甲', mres: '魔抗', crit: '暴击率', critdmg: '暴击伤害', aspd: '攻速', hpregen: 'HP/s', thorn: '荆棘', dmg: '伤害', lifesteal: '吸血%', block: '格挡%', stun: '眩晕%', vuln: '易伤%', manaSave: '蓝耗%', dmgBonus: '增伤%', proc: '触发%' }
+  return map[k] || k
+}
+
+function renderAll() {
+  document.getElementById('buildName').value = state.buildName
+  document.querySelectorAll('.class-tab').forEach(t => t.classList.toggle('active', t.dataset.class === state.activeClass))
+  renderEquipList()
+  renderSkillBar()
+  renderTalentGrid()
+  renderStats()
+}
+
+// ============================================
+// 交互
+// ============================================
+function openItemPicker(slotKey) {
+  const slot = SLOTS.find(s => s.key === slotKey)
+  const items = ITEM_POOL[slotKey] || []
+  const html = `<div class="modal" id="modalInner">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>选择 ${slot.name}</h3>
+        <button class="modal-close" id="closeModal">×</button>
+      </div>
+      <div class="modal-body">
+        <input class="modal-search" placeholder="搜索装备..." id="searchInput" />
+        <div id="itemList">
+          ${items.map(item => renderModalItem(item)).join('')}
+        </div>
+      </div>
+    </div>
+  </div>`
+  document.getElementById('modal').innerHTML = html
+  
+  document.getElementById('closeModal').onclick = () => document.getElementById('modal').innerHTML = ''
+  document.getElementById('searchInput').oninput = (e) => {
+    const q = e.target.value.toLowerCase()
+    document.getElementById('itemList').innerHTML = items
+      .filter(it => it.name.toLowerCase().includes(q))
+      .map(item => renderModalItem(item)).join('')
+  }
+}
+
+function renderModalItem(item) {
+  return `<div class="modal-item" data-id="${item.id}">
+    <div class="mi-icon">⚔</div>
+    <div class="mi-info">
+      <div class="mi-name q-${item.quality}">${item.name}</div>
+      <div class="mi-affix">${item.stats.map(s=>`+${s.v} ${statName(s.k)}`).join(' · ')}</div>
+    </div>
+  </div>`
+}
+
+// 事件委托
+document.body.addEventListener('click', (e) => {
+  // 关闭模态
+  if (e.target.id === 'modal') document.getElementById('modal').innerHTML = ''
+  
+  // 装备槽点击
+  const slot = e.target.closest('.equip-slot')
+  if (slot && !e.target.closest('.slot-clear')) {
+    openItemPicker(slot.dataset.slot)
+    return
+  }
+  
+  // 装备清除
+  if (e.target.classList.contains('slot-clear')) {
+    delete state.equips[e.target.dataset.clear]
+    saveToUrl(); renderAll()
+    return
+  }
+  
+  // 模态内选择装备
+  const mi = e.target.closest('.modal-item')
+  if (mi) {
+    // 找到 slotKey - 通过 modal 上下文
+    // 简化：直接用当前 modal 的 slotKey
+    const all = ITEM_POOL
+    let picked = null
+    for (const k in all) {
+      picked = all[k].find(it => it.id === mi.dataset.id)
+      if (picked) break
     }
-    if (aff.sub) {
-      aff.sub.forEach(a => {
-        if (DATA.affixes[a]) {
-          if (!stats[a]) stats[a] = 0;
-          stats[a] += 1;
-        }
-      });
+    if (picked) {
+      // 找到是哪个 slot
+      let slotKey = null
+      for (const k in all) {
+        if (all[k].find(it => it.id === mi.dataset.id)) { slotKey = k; break }
+      }
+      if (slotKey) {
+        state.equips[slotKey] = picked
+        saveToUrl(); renderAll()
+        document.getElementById('modal').innerHTML = ''
+      }
     }
+    return
   }
-  const entries = Object.entries(stats);
-  if (entries.length === 0) {
-    document.getElementById('stats-list').innerHTML = '<div class="empty-stats">选择装备和词条后显示属性</div>';
-    return;
+  
+  // 技能栏点击
+  const ss = e.target.closest('.skill-slot')
+  if (ss) {
+    const skills = ['普通攻击', '顺劈', '猛击', '盾牌猛击', '战吼', '狂战之吼']
+    const idx = SKILL_SLOTS.findIndex(s => s.key === ss.dataset.skill)
+    state.skills[ss.dataset.skill] = { name: skills[idx] || '技能', icon: ss.textContent.trim() }
+    renderAll()
+    return
   }
-  const html = entries.map(([key, val]) => `
-<div class="stat-row">
-<span class="stat-name">${DATA.affixes[key]?.name || key}</span>
-<span class="stat-value">+${val}</span>
-</div>`).join('');
-  document.getElementById('stats-list').innerHTML = html;
-}
-
-function renderSelectedList() {
-  const html = Object.keys(SLOT_NAMES).map(slot => {
-    const item = selectedEquipment[slot];
-    if (!item) return '';
-    return `<div class="selected-item">
-<span class="slot-tag">${SLOT_NAMES[slot]}</span>
-<span class="item-name-mini item-quality-${item.quality}">${item.name}</span>
-</div>`;
-  }).join('');
-  document.getElementById('selected-list').innerHTML = html || '<div class="empty-stats">未选择装备</div>';
-}
-
-function saveBuild() {
-  const data = JSON.stringify({ class: activeClass, equipment: selectedEquipment, affixes: selectedAffixes, skills: equippedSkills });
-  try { localStorage.setItem('deskrawl_build', data); alert('构筑已保存'); }
-  catch (e) { alert('保存失败: ' + e.message); }
-}
-
-function loadBuild() {
-  const data = localStorage.getItem('deskrawl_build');
-  if (!data) { alert('没有保存的构筑'); return; }
-  try {
-    const b = JSON.parse(data);
-    activeClass = b.class || 'warrior';
-    selectedEquipment = b.equipment || {};
-    selectedAffixes = b.affixes || {};
-    equippedSkills = b.skills || {};
-    setClass(activeClass);
-    renderEquipmentList();
-    renderAffixTab();
-    renderSkillTab();
-    renderStats();
-    renderSelectedList();
-    alert('构筑已载入');
-  } catch (e) { alert('载入失败: ' + e.message); }
-}
-
-function clearBuild() {
-  if (!confirm('确定清空所有选择？')) return;
-  for (const slot of Object.keys(SLOT_NAMES)) {
-    selectedEquipment[slot] = null;
-    selectedAffixes[slot] = { main: null, sub: [] };
+  
+  // 天赋点击
+  const tn = e.target.closest('.talent-node')
+  if (tn) {
+    const tier = parseInt(tn.dataset.tier)
+    const col = parseInt(tn.dataset.col)
+    const key = `${tier}-${col}`
+    const used = Object.values(state.talents).reduce((a,b)=>a+b, 0)
+    const t = (TALENT_TREE[state.activeClass]||[]).find(x => x.tier===tier && x.col===col)
+    if (!t) return
+    const cur = state.talents[key] || 0
+    if (cur > 0) {
+      // 减少
+      state.talents[key] = cur - 1
+      if (state.talents[key] === 0) delete state.talents[key]
+    } else if (used < 32) {
+      state.talents[key] = 1
+    } else {
+      alert('已分配 32 点上限')
+    }
+    saveToUrl(); renderAll()
+    return
   }
-  for (let i = 0; i < 6; i++) equippedSkills['slot' + i] = null;
-  renderEquipmentList();
-  renderAffixTab();
-  renderSkillTab();
-  renderStats();
-  renderSelectedList();
+  
+  // 职业切换
+  const ct = e.target.closest('.class-tab')
+  if (ct) {
+    state.activeClass = ct.dataset.class
+    saveToUrl(); renderAll()
+  }
+})
+
+// 构筑名输入
+document.getElementById('buildName').addEventListener('input', (e) => {
+  state.buildName = e.target.value
+  saveToUrl()
+})
+
+// 分享 / 重置
+document.getElementById('shareBtn').onclick = () => {
+  const url = location.href
+  navigator.clipboard?.writeText(url).then(() => {
+    alert('✅ 构筑链接已复制到剪贴板\n' + url)
+  }) || prompt('复制此链接分享:', url)
 }
-
-// Data already loaded inline
-init();
-// Steam data loads async
-setTimeout(loadSteamData, 500);
-
-// === Steam Data ===
-async function loadSteamData() {
-  try {
-    const [players, info] = await Promise.all([
-      fetch('https://deskrawl.top/api/steam/players').then(r => r.json()),
-      fetch('https://deskrawl.top/api/steam/info').then(r => r.json())
-    ]);
-    document.getElementById('steam-players').textContent = players.players || '-';
-    document.getElementById('steam-reviews').textContent = (info.recommendations || '-') + ' 条推荐';
-    document.getElementById('steam-price').textContent = '💰 ' + (info.price || '-');
-  } catch(e) {
-    document.getElementById('steam-box').style.display = 'none';
+document.getElementById('resetBtn').onclick = () => {
+  if (confirm('确定要清空当前构筑吗？')) {
+    state.equips = {}; state.talents = {}; state.skills = {}
+    saveToUrl(); renderAll()
   }
 }
 
-// === Share Build ===
-async function shareBuild() {
-  const data = JSON.stringify({
-    class: activeClass,
-    equipment: selectedEquipment,
-    affixes: selectedAffixes,
-    skills: equippedSkills
-  });
-  try {
-    const res = await fetch('https://deskrawl.top/api/builds', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: data
-    });
-    const result = await res.json();
-    const url = result.url;
-    await navigator.clipboard.writeText(url);
-    alert('分享链接已复制到剪贴板: ' + url);
-  } catch(e) {
-    // Fallback: encode in URL hash
-    const encoded = btoa(unescape(encodeURIComponent(data)));
-    const url = location.origin + location.pathname + '#build=' + encoded;
-    await navigator.clipboard.writeText(url);
-    alert('分享链接已复制（本地模式）: ' + url);
-  }
-}
-
-// === Load Shared Build from URL ===
-function loadSharedBuild() {
-  const hash = location.hash;
-  if (hash.startsWith('#build=')) {
-    try {
-      const data = JSON.parse(decodeURIComponent(escape(atob(hash.substring(7)))));
-      activeClass = data.class || 'warrior';
-      selectedEquipment = data.equipment || {};
-      selectedAffixes = data.affixes || {};
-      equippedSkills = data.skills || {};
-      setClass(activeClass);
-      renderEquipmentList();
-      renderAffixTab();
-      renderSkillTab();
-      renderStats();
-      renderSelectedList();
-    } catch(e) { console.error('Failed to load shared build:', e); }
-  } else if (hash.startsWith('#share=')) {
-    // Try loading from API
-    fetch('https://deskrawl.top/api/builds/' + hash.substring(7))
-      .then(r => r.json())
-      .then(data => {
-        activeClass = data.class || 'warrior';
-        selectedEquipment = data.equipment || {};
-        selectedAffixes = data.affixes || {};
-        equippedSkills = data.skills || {};
-        setClass(activeClass);
-        renderEquipmentList();
-        renderAffixTab();
-        renderSkillTab();
-        renderStats();
-        renderSelectedList();
-      }).catch(() => {});
-  }
-}
-
-// Init with shared build if present
-loadSharedBuild();
-loadSteamData();
-
-// Steam box styles
-// (added inline for simplicity)
-
+// 启动
+loadFromUrl()
+renderAll()
 </script>
 </body>
 </html>
