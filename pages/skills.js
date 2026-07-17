@@ -8,42 +8,42 @@ export async function getStaticProps() { return { props: {} } }
 // 每列是一条独立路径，列内有依赖关系
 const TREE_LAYOUT = {
   Warrior: [
-    // 第0层 (顶部 - 无等级要求, 满级 5)
+    // 第0层 (0级 - 无等级要求, 满级 5)
     { col: 0, tier: 0, talentIdx: 0, maxPoints: 5 }, // 力量
     { col: 1, tier: 0, talentIdx: 1, maxPoints: 5 }, // 活力
     { col: 2, tier: 0, talentIdx: 2, maxPoints: 5 }, // 护甲
-    { col: 3, tier: 0, talentIdx: 3, maxPoints: 3 }, // 暴击几率
-    { col: 4, tier: 0, talentIdx: 4, maxPoints: 5 }, // 荆棘
+    { col: 3, tier: 0, talentIdx: 4, maxPoints: 5 }, // 荆棘
+    { col: 4, tier: 0, talentIdx: 5, maxPoints: 5 }, // 攻击速度
     // 第1层 (5级要求)
-    { col: 0, tier: 1, talentIdx: 7, maxPoints: 5 }, // 生命恢复
-    { col: 1, tier: 1, talentIdx: 9, maxPoints: 5 }, // 凶猛
-    { col: 2, tier: 1, talentIdx: 5, maxPoints: 5 }, // 攻击速度
-    { col: 3, tier: 1, talentIdx: 6, maxPoints: 5 }, // 暴击伤害
+    { col: 0, tier: 1, talentIdx: 3, maxPoints: 3 }, // 暴击几率
+    { col: 1, tier: 1, talentIdx: 7, maxPoints: 5 }, // 生命恢复
+    { col: 2, tier: 1, talentIdx: 6, maxPoints: 5 }, // 暴击伤害
+    { col: 3, tier: 1, talentIdx: 9, maxPoints: 5 }, // 凶猛
     { col: 4, tier: 1, talentIdx: 11, maxPoints: 3 }, // 战斗激励
-    // 第2层
-    { col: 0, tier: 2, talentIdx: 8, maxPoints: 5 }, // 残暴
-    { col: 1, tier: 2, talentIdx: -1, maxPoints: 1, locked: true },
-    { col: 2, tier: 2, talentIdx: 13, maxPoints: 5 }, // 荆棘强化
-    { col: 3, tier: 2, talentIdx: 24, maxPoints: 5 }, // 猛攻
-    { col: 4, tier: 2, talentIdx: -1, maxPoints: 1, locked: true },
+    // 第2层 (10级要求)
+    { col: 0, tier: 2, talentIdx: 23, maxPoints: 5 }, // 专注
+    { col: 1, tier: 2, talentIdx: 12, maxPoints: 5 }, // 重击
+    { col: 2, tier: 2, talentIdx: 10, maxPoints: 1 }, // 劈砍狂怒
+    { col: 3, tier: 2, talentIdx: 14, maxPoints: 5 }, // 强化强力攻击：法力
+    { col: 4, tier: 2, talentIdx: 13, maxPoints: 5 }, // 荆棘强化
     // 第3层
-    { col: 0, tier: 3, talentIdx: 12, maxPoints: 5 }, // 重击
-    { col: 1, tier: 3, talentIdx: 10, maxPoints: 3 }, // 劈砍狂怒
-    { col: 2, tier: 3, talentIdx: 17, maxPoints: 1 }, // 怒火导引
-    { col: 3, tier: 3, talentIdx: 18, maxPoints: 1 }, // [野兽] 强化
-    { col: 4, tier: 3, talentIdx: 19, maxPoints: 1 }, // [人形] 强化
+    { col: 0, tier: 3, talentIdx: 8, maxPoints: 5 }, // 残暴
+    { col: 1, tier: 3, talentIdx: 17, maxPoints: 1 }, // 怒火导引
+    { col: 2, tier: 3, talentIdx: 18, maxPoints: 1 }, // [野兽] 强化
+    { col: 3, tier: 3, talentIdx: 19, maxPoints: 1 }, // [人形] 强化
+    { col: 4, tier: 3, talentIdx: 22, maxPoints: 1 }, // 重整旗鼓
     // 第4层
-    { col: 0, tier: 4, talentIdx: 14, maxPoints: 5 }, // 强化强力攻击
-    { col: 1, tier: 4, talentIdx: 15, maxPoints: 3 }, // 怒火注入
-    { col: 2, tier: 4, talentIdx: 22, maxPoints: 1 }, // 重整旗鼓
-    { col: 3, tier: 4, talentIdx: 28, maxPoints: 1 }, // 强化烈焰打击
-    { col: 4, tier: 4, talentIdx: 23, maxPoints: 3 }, // 专注
+    { col: 0, tier: 4, talentIdx: 15, maxPoints: 3 }, // 怒火注入
+    { col: 1, tier: 4, talentIdx: 16, maxPoints: 1 }, // 强化战吼
+    { col: 2, tier: 4, talentIdx: 25, maxPoints: 1 }, // 强化烈焰打击
+    { col: 3, tier: 4, talentIdx: 23, maxPoints: 3 }, // 专注 (已被占用)
+    { col: 4, tier: 4, talentIdx: 27, maxPoints: 1 }, // 凶狠荆棘
     // 第5层
-    { col: 0, tier: 5, talentIdx: 16, maxPoints: 1 }, // 强化战吼
-    { col: 1, tier: 5, talentIdx: 25, maxPoints: 1 }, // 强化英勇打击
+    { col: 0, tier: 5, talentIdx: 24, maxPoints: 5 }, // 猛攻
+    { col: 1, tier: 5, talentIdx: 28, maxPoints: 1 }, // 强化英勇打击
     { col: 2, tier: 5, talentIdx: 26, maxPoints: 1 }, // [不死族] 强化
     { col: 3, tier: 5, talentIdx: 29, maxPoints: 1 }, // 溢血
-    { col: 4, tier: 5, talentIdx: 27, maxPoints: 1 }, // 凶狠荆棘
+    { col: 4, tier: 5, talentIdx: 20, maxPoints: 3 }, // 防御姿态
     // 第6层 (底部锁定)
     { col: 0, tier: 6, talentIdx: -1, maxPoints: 1, locked: true },
     { col: 1, tier: 6, talentIdx: -1, maxPoints: 1, locked: true },

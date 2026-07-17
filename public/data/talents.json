@@ -84,22 +84,31 @@
       {
         "name": "劈砍狂怒",
         "nameEn": "Cleaving Rage",
-        "desc": "釋放 [普通攻擊] 技能後 +{value} 攻擊速度，最多疊加5層"
+        "desc": "释放 [普通攻击] 技能后 +{value}% 攻击速度，最多叠加5层",
+        "perPoint": 2,
+        "unit": "%",
+        "maxPoints": 1
       },
       {
         "name": "重击",
         "nameEn": "Heavy Blow",
-        "desc": "暴擊有 {value} 機率使受害者陷入 [易傷]。"
+        "desc": "暴击有 {value}% 几率使受害者陷入 [易伤]（每级+5%）",
+        "perPoint": 5,
+        "unit": "%"
       },
       {
         "name": "荆棘强化",
         "nameEn": "Thorn Boost",
-        "desc": "+{value} 荊棘"
+        "desc": "+{value}% 荆棘（每级+10%）",
+        "perPoint": 10,
+        "unit": "%"
       },
       {
         "name": "强化强力攻击：法力",
         "nameEn": "Enhance Strong Attack: Mana",
-        "desc": "+{value} [強力攻擊] 法力消耗減少。"
+        "desc": "+{value}% [强力攻击] 法力消耗减少（每级+5%）",
+        "perPoint": 5,
+        "unit": "%"
       },
       {
         "name": "怒火注入",
@@ -144,7 +153,9 @@
       {
         "name": "专注",
         "nameEn": "Focus",
-        "desc": "[普通攻擊] 有 {stunChance} 機率暈眩敵人。"
+        "desc": "[普通攻击] 有 {value}% 几率眩晕敌人（每级+1%）",
+        "perPoint": 1,
+        "unit": "%"
       },
       {
         "name": "猛攻",
