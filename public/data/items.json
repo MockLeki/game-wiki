@@ -643,6 +643,1315 @@
     }
   ],
   "all_items": {
+    "common": {
+      "belt": [
+        {
+          "id": "CommonBelt1",
+          "name": "破旧铁扣腰带",
+          "nameEn": "Worn Iron-Buckle Belt",
+          "slot": "belt",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonbelt1.png"
+        },
+        {
+          "id": "CommonBelt2",
+          "name": "磨损皮革带",
+          "nameEn": "Frayed Leather Strap",
+          "slot": "belt",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonbelt2.png"
+        },
+        {
+          "id": "CommonBelt3",
+          "name": "简单皮带",
+          "nameEn": "Simple Leather Belt",
+          "slot": "belt",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonbelt3.png"
+        }
+      ],
+      "boots": [
+        {
+          "id": "CommonBoots1",
+          "name": "破旧旅行靴",
+          "nameEn": "Worn Travel Boots",
+          "slot": "boots",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonboots1.png"
+        },
+        {
+          "id": "CommonBoots2",
+          "name": "农夫脚布",
+          "nameEn": "Peasant's Footwraps",
+          "slot": "boots",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonboots2.png"
+        },
+        {
+          "id": "CommonBoots3",
+          "name": "皮革骑行靴",
+          "nameEn": "Hide Riding Boots",
+          "slot": "boots",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonboots3.png"
+        }
+      ],
+      "chest": [
+        {
+          "id": "CommonChestArmor1",
+          "name": "农夫短衫",
+          "nameEn": "Peasant's Tunic",
+          "slot": "chest",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonchestarmor1.png"
+        },
+        {
+          "id": "CommonChestArmor2",
+          "name": "破旧连帽皮甲",
+          "nameEn": "Tattered Hooded Jerkin",
+          "slot": "chest",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonchestarmor2.png"
+        },
+        {
+          "id": "CommonChestArmor3",
+          "name": "填充袄子",
+          "nameEn": "Padded Gambeson",
+          "slot": "chest",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonchestarmor3.png"
+        }
+      ],
+      "helm": [
+        {
+          "id": "CommonHelm1",
+          "name": "流浪者宽边帽",
+          "nameEn": "Wanderer's Brimmed Hat",
+          "slot": "helm",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonhelm1.png"
+        },
+        {
+          "id": "CommonHelm2",
+          "name": "破旧皮革头巾",
+          "nameEn": "Worn Leather Hood",
+          "slot": "helm",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonhelm2.png"
+        },
+        {
+          "id": "CommonHelm3",
+          "name": "填充皮革头盔",
+          "nameEn": "Padded Leather Coif",
+          "slot": "helm",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonhelm3.png"
+        }
+      ],
+      "necklace": [
+        {
+          "id": "CommonNeck1",
+          "name": "黑玉泪滴吊坠",
+          "nameEn": "Onyx Teardrop Pendant",
+          "slot": "necklace",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonneck1.png"
+        },
+        {
+          "id": "CommonNeck2",
+          "name": "铁链项链",
+          "nameEn": "Iron Link Necklace",
+          "slot": "necklace",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonneck2.png"
+        },
+        {
+          "id": "CommonNeck3",
+          "name": "简单银吊坠",
+          "nameEn": "Simple Silver Pendant",
+          "slot": "necklace",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonneck3.png"
+        }
+      ],
+      "ring": [
+        {
+          "id": "CommonRing1",
+          "name": "朴素铁环",
+          "nameEn": "Plain Iron Band",
+          "slot": "ring",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonring1.png"
+        },
+        {
+          "id": "CommonRing2",
+          "name": "铜环",
+          "nameEn": "Copper Band",
+          "slot": "ring",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonring2.png"
+        },
+        {
+          "id": "CommonRing3",
+          "name": "锤制银戒指",
+          "nameEn": "Hammered Silver Ring",
+          "slot": "ring",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonring3.png"
+        }
+      ],
+      "shoulder": [
+        {
+          "id": "CommonShoulder1",
+          "name": "皮革肩甲",
+          "nameEn": "Leather Spaulder",
+          "slot": "shoulder",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonshoulder1.png"
+        },
+        {
+          "id": "CommonShoulder2",
+          "name": "破旧护肩",
+          "nameEn": "Worn Pauldron",
+          "slot": "shoulder",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonshoulder2.png"
+        },
+        {
+          "id": "CommonShoulder3",
+          "name": "填充护肩",
+          "nameEn": "Padded Shoulderguard",
+          "slot": "shoulder",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonshoulder3.png"
+        }
+      ],
+      "weapon": [
+        {
+          "id": "CommonAxe1",
+          "name": "樵夫小斧",
+          "nameEn": "Woodsman's Hatchet",
+          "slot": "weapon",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonaxe1.png"
+        },
+        {
+          "id": "CommonMace1",
+          "name": "铁刺锤",
+          "nameEn": "Iron Spiked Mace",
+          "slot": "weapon",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonmace1.png"
+        },
+        {
+          "id": "CommonSword1",
+          "name": "铁制武装剑",
+          "nameEn": "Iron Arming Sword",
+          "slot": "weapon",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonsword1.png"
+        },
+        {
+          "id": "CommonStaff1",
+          "name": "带钩青铜法杖",
+          "nameEn": "Hooked Bronze Staff",
+          "slot": "weapon",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonstaff1.png"
+        }
+      ],
+      "gloves": [
+        {
+          "id": "CommonGloves1",
+          "name": "破旧皮革手套",
+          "nameEn": "Worn Leather Gloves",
+          "slot": "gloves",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commongloves1.png"
+        },
+        {
+          "id": "CommonGloves2",
+          "name": "铆钉兽皮手套",
+          "nameEn": "Studded Hide Gloves",
+          "slot": "gloves",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commongloves2.png"
+        }
+      ],
+      "pants": [
+        {
+          "id": "CommonPant1",
+          "name": "亚麻马裤",
+          "nameEn": "Linen Breeches",
+          "slot": "pants",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonpant1.png"
+        },
+        {
+          "id": "CommonPant2",
+          "name": "补丁长裤",
+          "nameEn": "Patched Trousers",
+          "slot": "pants",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonpant2.png"
+        },
+        {
+          "id": "CommonPant3",
+          "name": "黑色布裤",
+          "nameEn": "Black Cloth Pants",
+          "slot": "pants",
+          "quality": "common",
+          "qualityName": "普通",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/commonpant3.png"
+        }
+      ]
+    },
+    "uncommon": {
+      "belt": [
+        {
+          "id": "UncommonBelt1",
+          "name": "坚固扣环腰带",
+          "nameEn": "Sturdy Buckled Belt",
+          "slot": "belt",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonbelt1.png"
+        },
+        {
+          "id": "UncommonBelt2",
+          "name": "环扣腰带",
+          "nameEn": "Ringclasp Belt",
+          "slot": "belt",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonbelt2.png"
+        },
+        {
+          "id": "UncommonBelt3",
+          "name": "旅者缠腰带",
+          "nameEn": "Wayfarer's Wrap Belt",
+          "slot": "belt",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonbelt3.png"
+        }
+      ],
+      "boots": [
+        {
+          "id": "UncommonBoots1",
+          "name": "荆棘步靴",
+          "nameEn": "Thornstep Boots",
+          "slot": "boots",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonboots1.png"
+        },
+        {
+          "id": "UncommonBoots2",
+          "name": "毛皮内衬远足靴",
+          "nameEn": "Fur-Lined Trekkers",
+          "slot": "boots",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonboots2.png"
+        },
+        {
+          "id": "UncommonBoots3",
+          "name": "流浪者之靴",
+          "nameEn": "Wanderer's Boots",
+          "slot": "boots",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonboots3.png"
+        }
+      ],
+      "chest": [
+        {
+          "id": "UncommonChestArmor1",
+          "name": "铆钉锁甲背心",
+          "nameEn": "Riveted Mail Vest",
+          "slot": "chest",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonchestarmor1.png"
+        },
+        {
+          "id": "UncommonChestArmor2",
+          "name": "翠绿连帽外袍",
+          "nameEn": "Verdant Hooded Garb",
+          "slot": "chest",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonchestarmor2.png"
+        },
+        {
+          "id": "UncommonChestArmor3",
+          "name": "蓝哨岗袄子",
+          "nameEn": "Bluewatch Gambeson",
+          "slot": "chest",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonchestarmor3.png"
+        }
+      ],
+      "helm": [
+        {
+          "id": "UncommonHelm1",
+          "name": "铁鼻盔",
+          "nameEn": "Iron Nasal Helm",
+          "slot": "helm",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonhelm1.png"
+        },
+        {
+          "id": "UncommonHelm2",
+          "name": "钢锅盔",
+          "nameEn": "Steel Kettle Helm",
+          "slot": "helm",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonhelm2.png"
+        },
+        {
+          "id": "UncommonHelm3",
+          "name": "卫兵头盔",
+          "nameEn": "Guardsman's Helm",
+          "slot": "helm",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonhelm3.png"
+        }
+      ],
+      "necklace": [
+        {
+          "id": "UncommonNeck1",
+          "name": "红宝石泪滴吊坠",
+          "nameEn": "Ruby Drop Pendant",
+          "slot": "necklace",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonneck1.png"
+        },
+        {
+          "id": "UncommonNeck2",
+          "name": "棱晶四重护符",
+          "nameEn": "Prism Quartet Amulet",
+          "slot": "necklace",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonneck2.png"
+        },
+        {
+          "id": "UncommonNeck3",
+          "name": "黑曜叶片吊坠",
+          "nameEn": "Obsidian Leaf Pendant",
+          "slot": "necklace",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonneck3.png"
+        }
+      ],
+      "ring": [
+        {
+          "id": "UncommonRing1",
+          "name": "龙脊戒指",
+          "nameEn": "Drakespine Ring",
+          "slot": "ring",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonring1.png"
+        },
+        {
+          "id": "UncommonRing2",
+          "name": "石榴石环",
+          "nameEn": "Garnet Band",
+          "slot": "ring",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonring2.png"
+        },
+        {
+          "id": "UncommonRing3",
+          "name": "尖刺铁环",
+          "nameEn": "Spiked Iron Ring",
+          "slot": "ring",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonring3.png"
+        }
+      ],
+      "shoulder": [
+        {
+          "id": "UncommonShoulder1",
+          "name": "层叠铁护肩",
+          "nameEn": "Layered Iron Pauldron",
+          "slot": "shoulder",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonshoulder1.png"
+        },
+        {
+          "id": "UncommonShoulder2",
+          "name": "铁肩板",
+          "nameEn": "Iron Shoulderplate",
+          "slot": "shoulder",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonshoulder2.png"
+        },
+        {
+          "id": "UncommonShoulder3",
+          "name": "铆钉钢肩甲",
+          "nameEn": "Riveted Steel Spaulder",
+          "slot": "shoulder",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonshoulder3.png"
+        }
+      ],
+      "weapon": [
+        {
+          "id": "UncommonMace1",
+          "name": "锻造战锤",
+          "nameEn": "Forged Warhammer",
+          "slot": "weapon",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonmace1.png"
+        },
+        {
+          "id": "UncommonSword1",
+          "name": "蛇舌刃",
+          "nameEn": "Serpent's Tongue Blade",
+          "slot": "weapon",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonsword1.png"
+        },
+        {
+          "id": "UncommonStaff1",
+          "name": "红宝石冠权杖",
+          "nameEn": "Rubycrown Scepter",
+          "slot": "weapon",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonstaff1.png"
+        }
+      ],
+      "gloves": [
+        {
+          "id": "UncommonGloves1",
+          "name": "钢板护手",
+          "nameEn": "Steel Plated Gauntlets",
+          "slot": "gloves",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommongloves1.png"
+        },
+        {
+          "id": "UncommonGloves2",
+          "name": "翠绿皮革手套",
+          "nameEn": "Verdant Leather Gloves",
+          "slot": "gloves",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommongloves2.png"
+        }
+      ],
+      "pants": [
+        {
+          "id": "UncommonPant1",
+          "name": "加固兽皮护腿",
+          "nameEn": "Reinforced Hide Leggings",
+          "slot": "pants",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonpant1.png"
+        },
+        {
+          "id": "UncommonPant2",
+          "name": "荆棘护卫护腿",
+          "nameEn": "Thornguard Leggings",
+          "slot": "pants",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonpant2.png"
+        },
+        {
+          "id": "UncommonPant3",
+          "name": "林者马裤",
+          "nameEn": "Forester's Breeches",
+          "slot": "pants",
+          "quality": "uncommon",
+          "qualityName": "非凡",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/uncommonpant3.png"
+        }
+      ]
+    },
+    "rare": {
+      "belt": [
+        {
+          "id": "RareBelt1",
+          "name": "翠绿鹰爪腰带",
+          "nameEn": "Verdant Talon Girdle",
+          "slot": "belt",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarebelt1.png"
+        },
+        {
+          "id": "RareBelt2",
+          "name": "阳石腰带",
+          "nameEn": "Sunstone Sash",
+          "slot": "belt",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarebelt2.png"
+        },
+        {
+          "id": "RareBelt3",
+          "name": "紫晶暗影腰带",
+          "nameEn": "Amethyst Shadow Sash",
+          "slot": "belt",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarebelt3.png"
+        }
+      ],
+      "boots": [
+        {
+          "id": "RareBoots1",
+          "name": "铁甲战靴",
+          "nameEn": "Ironclad Warboots",
+          "slot": "boots",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareboots1.png"
+        },
+        {
+          "id": "RareBoots2",
+          "name": "蓝宝石奥术靴",
+          "nameEn": "Sapphire Arcane Boots",
+          "slot": "boots",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareboots2.png"
+        },
+        {
+          "id": "RareBoots3",
+          "name": "红宝石镀金靴",
+          "nameEn": "Ruby-Gilded Boots",
+          "slot": "boots",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareboots3.png"
+        }
+      ],
+      "chest": [
+        {
+          "id": "RareChestArmor1",
+          "name": "金钉布甲",
+          "nameEn": "Goldstud Brigandine",
+          "slot": "chest",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarechestarmor1.png"
+        },
+        {
+          "id": "RareChestArmor2",
+          "name": "印章护胸甲",
+          "nameEn": "Sigilguard Cuirass",
+          "slot": "chest",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarechestarmor2.png"
+        },
+        {
+          "id": "RareChestArmor3",
+          "name": "银骑士板甲",
+          "nameEn": "Argent Knight's Plate",
+          "slot": "chest",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarechestarmor3.png"
+        }
+      ],
+      "helm": [
+        {
+          "id": "RareHelm1",
+          "name": "圣战者大头盔",
+          "nameEn": "Crusader's Great Helm",
+          "slot": "helm",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarehelm1.png"
+        },
+        {
+          "id": "RareHelm2",
+          "name": "阳铸战盔",
+          "nameEn": "Sunforged Warhelm",
+          "slot": "helm",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarehelm2.png"
+        },
+        {
+          "id": "RareHelm3",
+          "name": "厄运角盔",
+          "nameEn": "Doomhorn Helm",
+          "slot": "helm",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarehelm3.png"
+        }
+      ],
+      "necklace": [
+        {
+          "id": "RareNeck1",
+          "name": "紫晶黄金护符",
+          "nameEn": "Amethyst Gold Amulet",
+          "slot": "necklace",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareneck1.png"
+        },
+        {
+          "id": "RareNeck2",
+          "name": "绿松石之眼护符",
+          "nameEn": "Turquoise Eye Amulet",
+          "slot": "necklace",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareneck2.png"
+        },
+        {
+          "id": "RareNeck3",
+          "name": "蓝宝石碎片护符",
+          "nameEn": "Sapphire Shard Amulet",
+          "slot": "necklace",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareneck3.png"
+        }
+      ],
+      "ring": [
+        {
+          "id": "RareRing1",
+          "name": "阳石印戒",
+          "nameEn": "Sunstone Signet",
+          "slot": "ring",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarering1.png"
+        },
+        {
+          "id": "RareRing2",
+          "name": "魔女爪戒指",
+          "nameEn": "Coven Talon Ring",
+          "slot": "ring",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarering2.png"
+        },
+        {
+          "id": "RareRing3",
+          "name": "炭火焰环",
+          "nameEn": "Emberflame Band",
+          "slot": "ring",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarering3.png"
+        }
+      ],
+      "shoulder": [
+        {
+          "id": "RareShoulder1",
+          "name": "深红卫士护肩",
+          "nameEn": "Crimsonguard Pauldron",
+          "slot": "shoulder",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareshoulder1.png"
+        },
+        {
+          "id": "RareShoulder2",
+          "name": "死颅护肩",
+          "nameEn": "Deathskull Pauldron",
+          "slot": "shoulder",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareshoulder2.png"
+        },
+        {
+          "id": "RareShoulder3",
+          "name": "阳刺护肩",
+          "nameEn": "Sunspike Pauldron",
+          "slot": "shoulder",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareshoulder3.png"
+        }
+      ],
+      "weapon": [
+        {
+          "id": "RareAxe1",
+          "name": "镀金裂颅斧",
+          "nameEn": "Gilded Ripper Axe",
+          "slot": "weapon",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rareaxe1.png"
+        },
+        {
+          "id": "RareMace1",
+          "name": "阳爆权杖锤",
+          "nameEn": "Sunburst Scepter Mace",
+          "slot": "weapon",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/raremace1.png"
+        },
+        {
+          "id": "RareSword1",
+          "name": "黄金弯刀",
+          "nameEn": "Golden Falchion",
+          "slot": "weapon",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/raresword1.png"
+        },
+        {
+          "id": "RareStaff1",
+          "name": "新月法杖",
+          "nameEn": "Lunar Crescent Staff",
+          "slot": "weapon",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarestaff1.png"
+        }
+      ],
+      "gloves": [
+        {
+          "id": "RareGloves1",
+          "name": "死颅护手",
+          "nameEn": "Deathskull Gauntlets",
+          "slot": "gloves",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/raregloves1.png"
+        },
+        {
+          "id": "RareGloves2",
+          "name": "深红爪护手",
+          "nameEn": "Crimson Claw Gauntlets",
+          "slot": "gloves",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/raregloves2.png"
+        }
+      ],
+      "pants": [
+        {
+          "id": "RarePant1",
+          "name": "青钢护腿",
+          "nameEn": "Tealsteel Legguards",
+          "slot": "pants",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarepant1.png"
+        },
+        {
+          "id": "RarePant2",
+          "name": "岩浆裂纹长裤",
+          "nameEn": "Magmacrack Trousers",
+          "slot": "pants",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarepant2.png"
+        },
+        {
+          "id": "RarePant3",
+          "name": "镀金丝绸护腿",
+          "nameEn": "Gilded Silk Leggings",
+          "slot": "pants",
+          "quality": "rare",
+          "qualityName": "稀有",
+          "desc": "",
+          "descEn": "",
+          "icon": "/images/icons/items/rarepant3.png"
+        }
+      ]
+    },
+    "legendary": {
+      "belt": [
+        {
+          "id": "LegendaryBelt1",
+          "name": "无底药带",
+          "nameEn": "Bottomless Potion Belt",
+          "slot": "belt",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "药水使用次数+4。",
+          "descEn": "Increase Potion Charges by 4.",
+          "icon": "/images/icons/items/legendarybelt1.png"
+        }
+      ],
+      "boots": [
+        {
+          "id": "LegendaryBoots1",
+          "name": "唤风者之靴",
+          "nameEn": "Boots of the Windcaller",
+          "slot": "boots",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "击杀后4秒内移动速度+50%。",
+          "descEn": "+50% Movement Speed for 4 seconds after a kill.",
+          "icon": "/images/icons/items/legendaryboots1.png"
+        }
+      ],
+      "chest": [
+        {
+          "id": "LegendaryChestArmor1",
+          "name": "暴怒壁垒",
+          "nameEn": "Bulwark of Wrath",
+          "slot": "chest",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "若怒气护盾在结束前未被打破，结束时对周围敌人造成相当于你最大生命值100%的物理伤害。",
+          "descEn": "If Rage Shield is not broken before expiration, deal 100% of your Max Health as Physical Damage to surrounding enemies upon expiration.",
+          "icon": "/images/icons/items/legendarychestarmor1.png"
+        },
+        {
+          "id": "LegendaryChestArmor2",
+          "name": "荆棘之心护胸甲",
+          "nameEn": "Thornheart Cuirass",
+          "slot": "chest",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "荆棘造成的伤害提高500%，但失去20%最大生命值。",
+          "descEn": "Damage dealt by Thorns is increased by 500%, but you lose 20% Max Health.",
+          "icon": "/images/icons/items/legendarychestarmor2.png"
+        },
+        {
+          "id": "LegendaryChestArmor3",
+          "name": "符文守护法衣",
+          "nameEn": "Runeward Vestment",
+          "slot": "chest",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "受到敌人暴击时，获得基于你最大生命值的精神护盾。（冷却8秒）",
+          "descEn": "When struck by an enemy critical hit, gain a Spirit Shield based on your Max Health. (8s cooldown)",
+          "icon": "/images/icons/items/legendarychestarmor3.png"
+        }
+      ],
+      "helm": [
+        {
+          "id": "LegendaryHelm1",
+          "name": "堕落王冠",
+          "nameEn": "Crown of the Fallen King",
+          "slot": "helm",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "击杀后3秒内攻击速度+30%。",
+          "descEn": "+30% Attack Speed for 3 seconds after a kill.",
+          "icon": "/images/icons/items/legendaryhelm1.png"
+        },
+        {
+          "id": "LegendaryHelm2",
+          "name": "绯红风暴之兜",
+          "nameEn": "Kabuto of the Crimson Tempest",
+          "slot": "helm",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "旋风斩每次命中有几率施加[流血]。",
+          "descEn": "Whirlwind has a chance to inflict [Bleeding] on each hit.",
+          "icon": "/images/icons/items/legendaryhelm2.png"
+        }
+      ],
+      "necklace": [
+        {
+          "id": "LegendaryNeck1",
+          "name": "涌动心智吊坠",
+          "nameEn": "Pendant of the Surging Mind",
+          "slot": "necklace",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "每消耗100点法力，4秒内暴击几率+20%。",
+          "descEn": "Every 100 Mana spent, +20% Critical Hit Chance for 4 seconds.",
+          "icon": "/images/icons/items/legendaryneck1.png"
+        },
+        {
+          "id": "LegendaryNeck2",
+          "name": "裂创怒吼吊坠",
+          "nameEn": "Bellow of the Open Wound",
+          "slot": "necklace",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "怒吼将立即引爆周围敌人身上残余的[流血]伤害。",
+          "descEn": "Rage Shout will trigger remaining [Bleeding] damage on surrounding enemies instantly.",
+          "icon": "/images/icons/items/legendaryneck2.png"
+        },
+        {
+          "id": "LegendaryNeck3",
+          "name": "火焰领主项链",
+          "nameEn": "Fire Lord's Necklace",
+          "slot": "necklace",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "火元素将额外召唤一个火元素。",
+          "descEn": "Fire Elemental will summon one additional Fire Elemental.",
+          "icon": "/images/icons/items/legendaryneck3.png"
+        }
+      ],
+      "legs": [
+        {
+          "id": "LegendaryPants1",
+          "name": "奥术之刃护胫",
+          "nameEn": "Greaves of the Arcane Edge",
+          "slot": "legs",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "[附魔]技能的暴击伤害+150%。",
+          "descEn": "+150% Critical Hit Damage from [Enchanted] Abilities.",
+          "icon": "/images/icons/items/legendarypants1.png"
+        },
+        {
+          "id": "LegendaryPants2",
+          "name": "坚毅药剂护胫",
+          "nameEn": "Greaves of the Stalwart Tonic",
+          "slot": "legs",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "饮用生命药水后，5秒内获得30%伤害减免。",
+          "descEn": "Gain 30% Damage Reduction for 5 seconds after consuming Health Potion.",
+          "icon": "/images/icons/items/legendarypants2.png"
+        }
+      ],
+      "ring": [
+        {
+          "id": "LegendaryRing1",
+          "name": "巨龙血牙印戒",
+          "nameEn": "Bloodfang Signet of the Wyrm",
+          "slot": "ring",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "半月打击将额外掷出两道月牙刃。",
+          "descEn": "Half Moon Strike will hurl two additional crescent blades.",
+          "icon": "/images/icons/items/legendaryring1.png"
+        },
+        {
+          "id": "LegendaryRing2",
+          "name": "展露之戒",
+          "nameEn": "Ring of Revelation",
+          "slot": "ring",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "静止不动时，每秒获得+10%普通攻击伤害，最多叠加20层。",
+          "descEn": "While standing still, gain +10% Basic Attack Damage every second, stacking up to 20 times.",
+          "icon": "/images/icons/items/legendaryring2.png"
+        }
+      ],
+      "shoulder": [
+        {
+          "id": "LegendaryShoulder1",
+          "name": "甲壳尖刺护肩",
+          "nameEn": "Shell Spike Pauldron",
+          "slot": "shoulder",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "护甲的10%也会计入荆棘。",
+          "descEn": "10% of your Armor also contributes to Thorns.",
+          "icon": "/images/icons/items/legendaryshoulder1.png"
+        },
+        {
+          "id": "LegendaryShoulder2",
+          "name": "元素爆发护肩",
+          "nameEn": "Elemental Burst Pauldron",
+          "slot": "shoulder",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "使用[强力攻击]技能后，6秒内火焰伤害和闪电伤害+50%。",
+          "descEn": "After using a [Strong Attack] Ability, gain +50% Fire and Lightning Damage for 6 seconds.",
+          "icon": "/images/icons/items/legendaryshoulder2.png"
+        }
+      ],
+      "weapon": [
+        {
+          "id": "LegendaryAxe1",
+          "name": "北方巨人巨斧",
+          "nameEn": "Northern Giant's Great Axe",
+          "slot": "weapon",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "每次[普通攻击]还会额外造成相当于50%武器伤害的冰霜伤害，并有3%几率冻结目标。",
+          "descEn": "Each [Basic Attack] also deals 50% of Weapon Damage as Cold Damage, with a 3% chance to Freeze the target on hit.",
+          "icon": "/images/icons/items/legendaryaxe1.png"
+        },
+        {
+          "id": "LegendaryMace1",
+          "name": "地狱风暴之锤",
+          "nameEn": "Hellstorm Mace",
+          "slot": "weapon",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "每使用10次 [普通攻击] 技能，召唤一道闪电打击随机敌人，造成相当于1000%武器伤害的闪电伤害。",
+          "descEn": "Every 10 [Basic Attack] Abilities used, summons a Lightning Strike that deals 1000% Weapon Damage as Lightning Damage to a random enemy.",
+          "icon": "/images/icons/items/legendarymace1.png"
+        },
+        {
+          "id": "LegendarySword1",
+          "name": "苦痛锯齿巨剑",
+          "nameEn": "Serrated Greatsword of Agony",
+          "slot": "weapon",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "对易伤目标额外获得30%暴击几率。",
+          "descEn": "Additional 30% Critical Chance against Vulnerable targets.",
+          "icon": "/images/icons/items/legendarysword1.png"
+        },
+        {
+          "id": "LegendaryStaff1",
+          "name": "霜龙法杖",
+          "nameEn": "Staff of the Frostwyrm",
+          "slot": "weapon",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "冰碎片命中后弹射至1个额外敌人。",
+          "descEn": "Ice Shards deflect to 1 additional enemy on hit.",
+          "icon": "/images/icons/items/legendarystaff1.png"
+        }
+      ],
+      "gloves": [
+        {
+          "id": "LegendaryGloves1",
+          "name": "怒火护手",
+          "nameEn": "Ragefire Gauntlets",
+          "slot": "gloves",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "烈焰打击有30%几率不消耗法力。",
+          "descEn": "Flame Strike has a 30% chance to cost no Mana.",
+          "icon": "/images/icons/items/legendarygloves1.png"
+        },
+        {
+          "id": "LegendaryGloves2",
+          "name": "势不可挡护手",
+          "nameEn": "Unstoppable Gauntlets",
+          "slot": "gloves",
+          "quality": "legendary",
+          "qualityName": "传说",
+          "desc": "技能每次命中获得1%护甲，持续5秒。（最多叠加100层）",
+          "descEn": "Each Ability hit grants 1% Armor for 5 seconds. (Max 100 stacks)",
+          "icon": "/images/icons/items/legendarygloves2.png"
+        }
+      ]
+    },
     "CommonBelt1": {
       "id": "CommonBelt1",
       "name": "破旧铁扣腰带",
@@ -1049,78 +2358,6 @@
       "nameEn": "Pendant of the Surging Mind",
       "quality": "legendary",
       "qualityName": "传说",
-      "slot": "pants"
-    },
-    "CommonPant1": {
-      "id": "CommonPant1",
-      "name": "亚麻马裤",
-      "nameEn": "Linen Breeches",
-      "quality": "common",
-      "qualityName": "普通",
-      "slot": "pants"
-    },
-    "CommonPant2": {
-      "id": "CommonPant2",
-      "name": "补丁长裤",
-      "nameEn": "Patched Trousers",
-      "quality": "common",
-      "qualityName": "普通",
-      "slot": "pants"
-    },
-    "CommonPant3": {
-      "id": "CommonPant3",
-      "name": "黑色布裤",
-      "nameEn": "Black Cloth Pants",
-      "quality": "common",
-      "qualityName": "普通",
-      "slot": "pants"
-    },
-    "UncommonPant1": {
-      "id": "UncommonPant1",
-      "name": "加固兽皮护腿",
-      "nameEn": "Reinforced Hide Leggings",
-      "quality": "uncommon",
-      "qualityName": "非凡",
-      "slot": "pants"
-    },
-    "UncommonPant2": {
-      "id": "UncommonPant2",
-      "name": "荆棘护卫护腿",
-      "nameEn": "Thornguard Leggings",
-      "quality": "uncommon",
-      "qualityName": "非凡",
-      "slot": "pants"
-    },
-    "UncommonPant3": {
-      "id": "UncommonPant3",
-      "name": "林者马裤",
-      "nameEn": "Forester's Breeches",
-      "quality": "uncommon",
-      "qualityName": "非凡",
-      "slot": "pants"
-    },
-    "RarePant1": {
-      "id": "RarePant1",
-      "name": "青钢护腿",
-      "nameEn": "Tealsteel Legguards",
-      "quality": "rare",
-      "qualityName": "稀有",
-      "slot": "pants"
-    },
-    "RarePant2": {
-      "id": "RarePant2",
-      "name": "岩浆裂纹长裤",
-      "nameEn": "Magmacrack Trousers",
-      "quality": "rare",
-      "qualityName": "稀有",
-      "slot": "pants"
-    },
-    "RarePant3": {
-      "id": "RarePant3",
-      "name": "镀金丝绸护腿",
-      "nameEn": "Gilded Silk Leggings",
-      "quality": "rare",
-      "qualityName": "稀有",
       "slot": "pants"
     },
     "LegendaryPants1": {
