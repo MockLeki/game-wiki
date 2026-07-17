@@ -87,12 +87,20 @@ export default function LeaderboardPanel({ compact = false }) {
   const [data, setData] = useState(null)
   const [tab, setTab] = useState('global')
   const [loading, setLoading] = useState(true)
+  const [news, setNews] = useState(null)
 
   useEffect(() => {
     fetch('/api/leaderboard')
       .then(r => r.json())
       .then(d => { setData(d); setLoading(false) })
       .catch(() => setLoading(false))
+  }, [])
+
+  useEffect(() => {
+    fetch('/api/steam/news')
+      .then(r => r.json())
+      .then(d => setNews(d.news?.slice(0, 2) || []))
+      .catch(() => {})
   }, [])
 
   // ============ 紧凑版：主界面用 ============
@@ -135,6 +143,26 @@ export default function LeaderboardPanel({ compact = false }) {
                 />
                 <StatCard label="Wiki 注册玩家" value={data.wikiPlayerCount || 0} unit="人" />
               </div>
+
+              {/* Steam 新闻 */}
+              {news && news.length > 0 && (
+                <div style={{marginTop:'1.2rem',borderTop:'1px solid rgba(0,217,255,0.15)',paddingTop:'0.8rem'}}>
+                  {news.map((n, i) => (
+                    <a key={n.gid}
+                      href={n.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display:'block', padding:'0.4rem 0', textDecoration:'none',
+                        borderBottom: i < news.length-1 ? '1px solid rgba(0,217,255,0.08)' : 'none'
+                      }}
+                    >
+                      <div style={{color:'#7fffe0',fontSize:'0.85rem',fontWeight:500,lineHeight:1.4}}>{n.title}</div>
+                      <div style={{color:'#6a7290',fontSize:'0.72rem',marginTop:'0.15rem'}}>{n.date} · {n.author || 'Dev'}</div>
+                    </a>
+                  ))}
+                </div>
+              )}
             </>
           )}
         </div>
