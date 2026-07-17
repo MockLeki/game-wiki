@@ -44,11 +44,35 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="steam-bar">
-          <div className="steam-stat-live"><span className="steam-dot"></span><span>在线</span><strong id="steam-count">-</strong></div>
-          <div className="steam-stat-live"><span>⭐</span><span>好评</span><strong id="steam-review">-</strong></div>
-          <div className="steam-stat-live"><span>💰</span><span>价格</span><strong id="steam-price">-</strong></div>
-        </div>
+        {/* QQ 玩家交流群入口 */}
+        <a
+          href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=tTr3PtGD-sn0ITvzpY4klDQwfNFri5q2&authKey=k62xg20XR6coL4RfYlizMm2Q8hh2abDXqnFAE1qxOARsHdgrza9zGkiY1Sh5IXUW&noverify=0&group_code=737018935"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="forum-cta"
+          style={{borderColor:'rgba(201,165,91,0.45)'}}
+        >
+          <div className="forum-cta-bg" />
+          <div className="forum-cta-content">
+            <div className="forum-cta-icon">💬</div>
+            <div className="forum-cta-text">
+              <div className="forum-cta-title">加入玩家 QQ 交流群</div>
+              <div className="forum-cta-subtitle">
+                群号
+                <strong style={{
+                  color:'#c9a96a', fontFamily:'monospace', fontSize:'1.05rem',
+                  letterSpacing:'0.1em', margin:'0 0.4rem',
+                  textShadow:'0 0 6px rgba(201,165,91,0.5)'
+                }}>737018935</strong>
+                · 讨论攻略 · 交流构筑 · 找队友
+              </div>
+            </div>
+            <div className="forum-cta-arrow" style={{
+              fontFamily:'monospace', fontSize:'1.05rem', letterSpacing:'0.1em',
+              color:'#c9a96a', textShadow:'0 0 6px rgba(201,165,91,0.6)'
+            }}>737018935</div>
+          </div>
+        </a>
 
         {/* 实时排行榜 */}
         <LeaderboardPanel compact />
