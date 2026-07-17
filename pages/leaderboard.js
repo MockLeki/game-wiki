@@ -23,85 +23,166 @@ export default function LeaderboardPage() {
           </div>
 
           {/* 实时在线 */}
-          {data?.players > 0 && (
+          {data?.players != null && (
             <div style={{textAlign:'center',marginBottom:'1rem'}}>
-              <span style={{color:'#7fffe0',fontSize:'1.1rem',textShadow:'0 0 6px #00d9ff'}}>
-                🔴 {data.players} 位玩家在线
+              <span style={{color:'#7fffe0',fontSize:'1.05rem',textShadow:'0 0 6px #00d9ff'}}>
+                🔴 Demo 当前在线: <strong style={{fontSize:'1.3rem',color:'#ffd700'}}>{data.players}</strong> 人
+                {data.totalPlaytime > 0 && <span style={{marginLeft:'1rem',color:'#a0a8c0'}}>· 全球累计: <strong style={{color:'#7fffe0'}}>{data.totalPlaytime.toLocaleString()}</strong> 小时</span>}
               </span>
             </div>
           )}
 
           {/* Tab 切换 */}
-          <div className="talent-tabs" style={{marginBottom:'1rem'}}>
-            <button className={`talent-tab ${tab==='players'?'active':''}`} onClick={()=>setTab('players')}>
-              🎮 成就排行
+          <div className="talent-tabs" style={{marginBottom:'1rem',flexWrap:'wrap'}}>
+            <button className={`talent-tab ${tab==='global'?'active':''}`} onClick={()=>setTab('global')}>
+              🌍 全球热度
             </button>
-            <button className={`talent-tab ${tab==='playtime'?'active':''}`} onClick={()=>setTab('playtime')}>
-              ⏱ 肝帝排行
+            <button className={`talent-tab ${tab==='rare'?'active':''}`} onClick={()=>setTab('rare')}>
+              🎯 稀有成就
+            </button>
+            <button className={`talent-tab ${tab==='hourly'?'active':''}`} onClick={()=>setTab('hourly')}>
+              📅 24h 在线分布
             </button>
             <button className={`talent-tab ${tab==='builders'?'active':''}`} onClick={()=>setTab('builders')}>
               ⚔ 构筑大师
             </button>
-            <button className={`talent-tab ${tab==='achievementsGlobal'?'active':''}`} onClick={()=>setTab('achievementsGlobal')}>
-              📊 成就统计
+            <button className={`talent-tab ${tab==='players'?'active':''}`} onClick={()=>setTab('players')}>
+              🎮 Wiki 玩家
+              {data?.wikiPlayerCount ? <span style={{marginLeft:4,opacity:0.7}}>({data.wikiPlayerCount})</span> : null}
             </button>
           </div>
         </div>
 
         {loading && <div style={{textAlign:'center',padding:'3rem',color:'#6a7290'}}>加载排行榜中...</div>}
 
-        {/* 玩家排行 */}
-        {tab === 'players' && data?.topPlayers?.length > 0 && (
+        {/* 全球热度 */}
+        {!loading && tab === 'global' && (
           <div className="panel">
-            <div className="panel-title">🎮 成就猎人 Top 20</div>
-            <RankTable items={data.topPlayers} cols={[
-              {key:'name', label:'玩家'},
-              {key:'achievements', label:'成就数', fmt:v=>`${v} 个`},
-            ]} />
-          </div>
-        )}
-        {tab === 'players' && data?.topPlayers?.length === 0 && !loading && (
-          <div className="panel" style={{textAlign:'center',padding:'3rem',color:'#6a7290'}}>
-            <div style={{fontSize:'2rem',marginBottom:'1rem'}}>🏆</div>
-            还没有玩家提交数据<br/>
-            <span style={{fontSize:'0.85rem',color:'#4a5270'}}>Steam 登录后自动提交成就和时长</span>
+            <div className="panel-title">🌍 全球热度</div>
+            <div style={{display:'grid',gridTemplateColumns:'repeat(2, 1fr)',gap:'1rem',padding:'1rem'}}>
+              <StatCard label="Demo 当前在线" value={data?.players || 0} unit="人" />
+              <StatCard label="全球累计时长" value={data?.totalPlaytime || 0} unit="小时" />
+              <StatCard label="完成至少 1 成就" value={data?.achievements?.length ? Math.round(data.achievements[0]?.percent || 0) : 0} unit="%" />
+              <StatCard label="Wiki 注册玩家" value={data?.wikiPlayerCount || 0} unit="人" />
+            </div>
+            <div style={{padding:'0 1rem 1rem',fontSize:'0.8rem',color:'#6a7290',textAlign:'center'}}>
+              数据来自 Steam 全局 API + Wiki KV · 10 分钟缓存
+            </div>
           </div>
         )}
 
-        {/* 肝帝排行 */}
-        {tab === 'playtime' && data?.topPlaytime?.length > 0 && (
+        {/* 稀有成就 */}
+        {!loading && tab === 'rare' && data?.achievements?.length > 0 && (
           <div className="panel">
-            <div className="panel-title">⏱ 游戏时长 Top 20</div>
-            <RankTable items={data.topPlaytime} cols={[
-              {key:'name', label:'玩家'},
-              {key:'playtime', label:'游戏时长', fmt:v=>`${Math.floor(v/60)}h ${v%60}m`},
-            ]} />
+            <div className="panel-title">🎯 全球成就完成率（最稀有 → 最普通）</div>
+            <div style={{padding:'0.5rem'}}>
+              {data.achievements.slice(0, 30).map((a, i) => (
+                <div key={a.name} style={{display:'flex',alignItems:'center',gap:'0.6rem',padding:'0.4rem',borderBottom:'1px solid rgba(0,217,255,0.1)'}}>
+                  <span style={{minWidth:30,color:'#6a7290',fontSize:'0.8rem',textAlign:'right'}}>#{i+1}</span>
+                  <span style={{flex:1,color:'#d0d8f0'}}>{a.name}</span>
+                  <div style={{width:200,height:8,background:'rgba(0,0,0,0.4)',borderRadius:4,overflow:'hidden'}}>
+                    <div style={{width:`${Math.min(100, a.percent)}%`,height:'100%',background:parseFloat(a.percent) < 10 ? '#ff6ec7' : parseFloat(a.percent) < 30 ? '#ffd700' : '#00d9ff',boxShadow:`0 0 6px ${parseFloat(a.percent) < 10 ? '#ff6ec7' : '#00d9ff'}`}} />
+                  </div>
+                  <span style={{minWidth:60,textAlign:'right',color:parseFloat(a.percent) < 10 ? '#ff6ec7' : parseFloat(a.percent) < 30 ? '#ffd700' : '#7fffe0',fontWeight:600,fontFamily:'monospace'}}>{a.percent}%</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {!loading && tab === 'rare' && data?.achievements?.length === 0 && (
+          <div className="panel" style={{textAlign:'center',padding:'2rem',color:'#6a7290'}}>
+            暂无成就数据（游戏可能还没配置成就）
+          </div>
+        )}
+
+        {/* 24h 在线分布 */}
+        {!loading && tab === 'hourly' && data?.hourly && (
+          <div className="panel">
+            <div className="panel-title">📅 24h 在线分布（历史峰值）</div>
+            <div style={{padding:'1rem'}}>
+              <HourlyChart data={data.hourly} />
+            </div>
+            <div style={{fontSize:'0.75rem',color:'#6a7290',textAlign:'center',paddingBottom:'1rem'}}>
+              数据来源：维基每 10 分钟采样的在线数峰值
+            </div>
           </div>
         )}
 
         {/* 构筑大师 */}
-        {tab === 'builders' && data?.topBuilders?.length > 0 && (
+        {!loading && tab === 'builders' && (
           <div className="panel">
             <div className="panel-title">⚔ 构筑大师 Top 20</div>
-            <RankTable items={data.topBuilders} cols={[
-              {key:'name', label:'职业'},
-              {key:'count', label:'分享数', fmt:v=>`${v} 套`},
-            ]} />
+            {data?.topBuilders?.length > 0 ? (
+              <RankTable items={data.topBuilders} cols={[
+                {key:'name', label:'职业'},
+                {key:'count', label:'分享数', fmt:v=>`${v} 套`},
+              ]} />
+            ) : (
+              <div style={{textAlign:'center',padding:'2rem',color:'#6a7290'}}>
+                还没有分享的构筑（去 /build 模拟器分享你的第一套）
+              </div>
+            )}
           </div>
         )}
 
-        {/* 成就统计 */}
-        {tab === 'achievementsGlobal' && data?.achievements?.length > 0 && (
+        {/* Wiki 玩家 */}
+        {!loading && tab === 'players' && (
           <div className="panel">
-            <div className="panel-title">📊 全球成就完成率</div>
-            <RankTable items={data.achievements} cols={[
-              {key:'name', label:'成就名称'},
-              {key:'percent', label:'完成率', fmt:v=>`${v}%`},
-            ]} />
+            <div className="panel-title">🎮 Wiki 注册玩家（成就 + 时长）</div>
+            {(data?.topPlayers?.length || 0) + (data?.topPlaytime?.length || 0) > 0 ? (
+              <>
+                <div style={{fontSize:'0.8rem',color:'#6a7290',padding:'0 1rem 0.5rem'}}>成就数 Top 5</div>
+                <RankTable items={data.topPlayers?.slice(0, 5) || []} cols={[
+                  {key:'name', label:'玩家'},
+                  {key:'achievements', label:'成就数', fmt:v=>`${v} 个`},
+                ]} />
+                <div style={{fontSize:'0.8rem',color:'#6a7290',padding:'1rem 1rem 0.5rem'}}>游戏时长 Top 5</div>
+                <RankTable items={data.topPlaytime?.slice(0, 5) || []} cols={[
+                  {key:'name', label:'玩家'},
+                  {key:'playtime', label:'时长', fmt:v=>`${Math.floor(v/60)}h ${v%60}m`},
+                ]} />
+              </>
+            ) : (
+              <div style={{textAlign:'center',padding:'2rem',color:'#6a7290'}}>
+                <div style={{fontSize:'2rem',marginBottom:'0.5rem'}}>🎮</div>
+                还没有 Wiki 玩家提交数据<br/>
+                <span style={{fontSize:'0.8rem'}}>Steam 登录后会自动提交你的成就和时长</span>
+              </div>
+            )}
           </div>
         )}
       </div>
     </Layout>
+  )
+}
+
+function StatCard({ label, value, unit }) {
+  return (
+    <div style={{background:'linear-gradient(135deg,rgba(15,20,50,0.7) 0%,rgba(25,30,65,0.5) 100%)',border:'1px solid rgba(0,217,255,0.3)',padding:'1rem',textAlign:'center'}}>
+      <div style={{fontSize:'0.8rem',color:'#6a7290',marginBottom:'0.5rem',letterSpacing:'0.05em'}}>{label}</div>
+      <div style={{fontSize:'1.8rem',color:'#7fffe0',fontWeight:700,fontFamily:'Orbitron, monospace',textShadow:'0 0 6px #00d9ff'}}>
+        {typeof value === 'number' ? value.toLocaleString() : value}
+        <span style={{fontSize:'0.9rem',color:'#a0a8c0',marginLeft:4,fontFamily:'Inter, sans-serif'}}>{unit}</span>
+      </div>
+    </div>
+  )
+}
+
+function HourlyChart({ data }) {
+  const max = Math.max(...Object.values(data).map(Number), 1)
+  return (
+    <div style={{display:'flex',alignItems:'flex-end',gap:'2px',height:120}}>
+      {Array.from({length:24}, (_, h) => {
+        const v = data[h] || 0
+        const h2 = (v / max) * 100
+        return (
+          <div key={h} style={{flex:1,display:'flex',flexDirection:'column',alignItems:'center',gap:4}}>
+            <div title={`${h}:00 - ${v}人`} style={{width:'100%',height:`${Math.max(4, h2)}%`,background:`linear-gradient(180deg, #7fffe0 0%, #00d9ff 100%)`,boxShadow:'0 0 4px rgba(0,217,255,0.5)',borderRadius:'2px 2px 0 0',minHeight:4}} />
+            <span style={{fontSize:'0.65rem',color:'#6a7290'}}>{h}</span>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
