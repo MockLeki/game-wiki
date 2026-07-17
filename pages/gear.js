@@ -29,11 +29,25 @@ export default function GearPage() {
   const allItems = useMemo(() => {
     const tree = itemsData.equipment_tree?.tree || itemsData.all_items || {}
     const result = []
-    for (const q of QUALITIES.slice(1).map(x => x.key)) {
-      for (const s of Object.keys(tree?.[q] || {})) {
-        for (const item of tree[q][s] || []) {
-          result.push(item)
+    // 处理嵌套结构: tree[quality][slot] = [items]
+    if (tree.legendary_weapons || tree.legendary_armor) {
+      for (const key of Object.keys(tree)) {
+        if (Array.isArray(tree[key])) {
+          for (const item of tree[key]) result.push(item)
         }
+      }
+    } else if (typeof tree === 'object' && !Array.isArray(tree) && tree.legendary) {
+      // 嵌套 quality -> slot
+      for (const q of Object.keys(tree)) {
+        for (const s of Object.keys(tree[q] || {})) {
+          for (const item of tree[q][s] || []) result.push(item)
+        }
+      }
+    } else if (typeof tree === 'object' && !Array.isArray(tree)) {
+      // 扁平 dict: {key: item} - 转为数组
+      for (const k of Object.keys(tree)) {
+        const v = tree[k]
+        if (v && typeof v === 'object' && v.id) result.push(v)
       }
     }
     return result
