@@ -156,6 +156,7 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
         </div>
         <div className="nav-right">
           <SteamLogin />
+          <Link href="/leaderboard" style={{fontSize:'0.85rem',color:'var(--text)'}}>排行榜</Link>
           <Link href="/faq" style={{fontSize:'0.85rem',color:'var(--text)'}}>常见问题</Link>
           <a href="https://deskrawl.freeflarum.com" target="_blank" rel="noopener" style={{fontSize:'0.85rem'}}>论坛</a>
         </div>
