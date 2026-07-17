@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import LeaderboardPanel from '../components/LeaderboardPanel'
 
 export default function Home() {
   const stats = [
@@ -48,6 +49,9 @@ export default function Home() {
           <div className="steam-stat-live"><span>⭐</span><span>好评</span><strong id="steam-review">-</strong></div>
           <div className="steam-stat-live"><span>💰</span><span>价格</span><strong id="steam-price">-</strong></div>
         </div>
+
+        {/* 实时排行榜 */}
+        <LeaderboardPanel compact />
 
         {/* 玩家社区论坛 - 跳转到 freeflarum */}
         <a

@@ -134,6 +134,20 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
     { path: '/affixes', label: '词条' },
     { path: '/build', label: '构筑' },
   ]
+
+  // 实时在线人数（每 60s 拉一次，给导航角标用）
+  const [online, setOnline] = useState(null)
+  useEffect(() => {
+    let alive = true
+    const load = () => fetch('/api/leaderboard')
+      .then(r => r.json())
+      .then(d => alive && setOnline(d?.players ?? null))
+      .catch(() => {})
+    load()
+    const t = setInterval(load, 60000)
+    return () => { alive = false; clearInterval(t) }
+  }, [])
+
   return (
     <>
       <Head>
@@ -156,7 +170,10 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
         </div>
         <div className="nav-right">
           <SteamLogin />
-          <Link href="/leaderboard" style={{fontSize:'0.85rem',color:'var(--text)'}}>排行榜</Link>
+          <Link href="/leaderboard" className="nav-leaderboard">
+            排行榜
+            {online > 0 && <span className="nav-online-badge">{online.toLocaleString()}</span>}
+          </Link>
           <Link href="/faq" style={{fontSize:'0.85rem',color:'var(--text)'}}>常见问题</Link>
           <a href="https://deskrawl.freeflarum.com" target="_blank" rel="noopener" style={{fontSize:'0.85rem'}}>论坛</a>
         </div>

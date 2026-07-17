@@ -171,6 +171,53 @@ a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(0, 217, 255, 0.6);
 .nav-right a { color: var(--text); font-size: 0.85rem; padding: 0.4rem 0.8rem; }
 .nav-right a:hover { color: var(--cyan-light); background: rgba(0, 217, 255, 0.1); }
 
+/* 排行榜按钮 + 在线人数角标 */
+.nav-leaderboard { position: relative; display: inline-flex; align-items: center; gap: 0.35rem; }
+.nav-online-badge {
+  display: inline-block;
+  min-width: 22px; padding: 0 0.4rem;
+  font-size: 0.7rem; font-weight: 700;
+  font-family: Orbitron, monospace;
+  color: #0a0806; background: var(--gold);
+  border: 1px solid var(--gold-light);
+  text-align: center; line-height: 1.5;
+  text-shadow: none;
+  box-shadow: 0 0 6px rgba(201, 165, 91, 0.6);
+  animation: onlinePulse 2s ease-in-out infinite;
+}
+@keyframes onlinePulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(201, 165, 91, 0.5); }
+  50% { box-shadow: 0 0 12px rgba(201, 165, 91, 0.95), 0 0 4px rgba(255, 200, 90, 0.8); }
+}
+
+/* === Panel (排行榜 / 通用面板) === */
+.panel {
+  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  border: 1px solid var(--border-cyan);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.08);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+.panel::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  box-shadow: 0 0 8px var(--cyan);
+}
+.panel-title {
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid var(--border-cyan);
+  color: var(--cyan-light);
+  font-size: 1.05rem; font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: Orbitron, sans-serif;
+  text-shadow: 0 0 6px var(--cyan);
+  background: linear-gradient(180deg, rgba(0, 217, 255, 0.06) 0%, transparent 100%);
+}
+
 /* === Container === */
 .page-wrap { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; position: relative; z-index: 2; }
 
