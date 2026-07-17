@@ -362,12 +362,18 @@ function renderStats() {
   document.getElementById('stat-hpregen').textContent = stats.hpregen.toFixed(1) + '/s'
   document.getElementById('stat-thorn').textContent = Math.round(stats.thorn)
   
-  // DPS 预估
-  const baseDmg = stats.dmg * (1 + stats.str * 0.01)
-  const critMult = 1 + (stats.crit/100) * (stats.critdmg/100)
-  const aspdMult = 1 + stats.aspd / 100
-  const bonusMult = 1 + (stats.dmgBonus||0) / 100
-  const dps = baseDmg * critMult * aspdMult * bonusMult
+  // DPS 预估（游戏公式）
+  // 力量每点 ≈ 1% 伤害加成
+  const dmgMult = 1 + (stats.str || 0) / 100 + ((stats.physical || 0) + (stats.dmgBonus || 0)) / 100
+  // 武器伤害 + 额外伤害
+  const baseDmg = (stats.weaponDmg || stats.dmg || 10) * dmgMult
+  // 暴击期望: 暴击率 * (1 + 暴击伤害/100) + 非暴击率 * 1
+  const critMult = 1 + ((stats.crit || 5) / 100) * ((stats.critdmg || 50) / 100)
+  // 攻速倍率
+  const weaponSpeed = stats.weaponSpeed || 1.2
+  const aspdMult = weaponSpeed * (1 + (stats.aspd || 0) / 100)
+  // 最终 DPS
+  const dps = baseDmg * critMult * aspdMult
   document.getElementById('dpsNum').textContent = Math.round(dps).toLocaleString()
   
   // 更新天赋已分配
@@ -376,7 +382,7 @@ function renderStats() {
 }
 
 function statName(k) {
-  const map = { hp: 'HP', str: '力量', int: '智力', armor: '护甲', mres: '魔抗', crit: '暴击率', critdmg: '暴击伤害', aspd: '攻速', hpregen: 'HP/s', thorn: '荆棘', dmg: '伤害', lifesteal: '吸血%', block: '格挡%', stun: '眩晕%', vuln: '易伤%', manaSave: '蓝耗%', dmgBonus: '增伤%', proc: '触发%' }
+  const map = { hp: '生命', str: '力量', dex: '敏捷', int: '智力', armor: '护甲', mres: '魔抗', dmg: '伤害', crit: '暴击率', critdmg: '暴击伤害', aspd: '攻速', hpregen: '生命恢复', thorn: '荆棘', dodge: '闪避', moveSpeed: '移速', lifeOnHit: '击中回复', lifeOnKill: '击杀回复', cdReduction: '冷却缩减', mana: '法力', goldFind: '金币掉落', magicFind: '物品掉落', poison: '毒素伤害', fire: '火焰伤害', cold: '冰霜伤害', lightning: '闪电伤害', physical: '物理伤害', lifesteal: '吸血', block: '格挡', stun: '眩晕', vuln: '易伤', manaSave: '省蓝%', dmgBonus: '增伤', proc: '触发率', weaponDmg: '武器伤害', weaponSpeed: '武器速度' }
   return map[k] || k
 }
 
