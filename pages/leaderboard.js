@@ -25,10 +25,16 @@ export default function LeaderboardPage() {
           {/* 实时在线 */}
           {data?.players != null && (
             <div style={{textAlign:'center',marginBottom:'1rem'}}>
-              <span style={{color:'#7fffe0',fontSize:'1.05rem',textShadow:'0 0 6px #00d9ff'}}>
-                🔴 Demo 当前在线: <strong style={{fontSize:'1.3rem',color:'#ffd700'}}>{data.players}</strong> 人
-                {data.totalPlaytime > 0 && <span style={{marginLeft:'1rem',color:'#a0a8c0'}}>· 全球累计: <strong style={{color:'#7fffe0'}}>{data.totalPlaytime.toLocaleString()}</strong> 小时</span>}
-              </span>
+              <div style={{color:'#7fffe0',fontSize:'1.05rem',textShadow:'0 0 6px #00d9ff'}}>
+                🔴 当前总在线: <strong style={{fontSize:'1.4rem',color:'#ffd700'}}>{data.players.toLocaleString()}</strong> 人
+              </div>
+              {(data.playersFull != null || data.playersDemo != null) && (
+                <div style={{fontSize:'0.8rem',color:'#a0a8c0',marginTop:'0.4rem'}}>
+                  正式版: <strong style={{color:'#7fffe0'}}>{data.playersFull || 0}</strong> · 
+                  Demo: <strong style={{color:'#7fffe0'}}>{data.playersDemo || 0}</strong>
+                  {data.totalPlaytime > 0 && <span style={{marginLeft:'0.8rem'}}>· 全球累计: <strong style={{color:'#7fffe0'}}>{data.totalPlaytime.toLocaleString()}</strong> 小时</span>}
+                </div>
+              )}
             </div>
           )}
 
