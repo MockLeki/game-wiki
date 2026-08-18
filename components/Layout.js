@@ -134,6 +134,7 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
     { path: '/minions', label: '仆从' },
     { path: '/levels', label: '关卡' },
     { path: '/fishing', label: '钓鱼' },
+    { path: '/loot', label: '掉落' },
     { path: '/affixes', label: '词条' },
     { path: '/build', label: '构筑' },
   ]

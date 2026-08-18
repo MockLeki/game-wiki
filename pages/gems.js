@@ -54,24 +54,51 @@ export default function GemsPage() {
                 {gemTypes[type]}
                 <span style={{ fontSize: '0.75rem', opacity: 0.6, marginLeft: '0.6rem' }}>{type}</span>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(170px, 1fr))', gap: '0.7rem', padding: '1rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(210px, 1fr))', gap: '0.7rem', padding: '1rem' }}>
                 {typeGems.map(g => {
                   const c = g.color || '#c9a227'
                   return (
-                    <div key={g.id} className="item-card" style={{ borderLeft: `3px solid ${c}`, textAlign: 'center' }}>
-                      {/* 宝石菱形图标 */}
-                      <div style={{
-                        width: 56, height: 56, margin: '0 auto 0.6rem',
-                        background: `linear-gradient(135deg, ${c} 0%, #1a1a1a 140%)`,
-                        clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-                        boxShadow: `0 0 12px ${c}88, inset 0 0 8px rgba(255,255,255,0.25)`,
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      }}>
-                        <span style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 700, textShadow: '0 0 4px #000' }}>T{g.tier}</span>
+                    <div key={g.id} className="item-card" style={{ borderLeft: `3px solid ${c}`, textAlign: 'left' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
+                        {/* 宝石菱形图标 */}
+                        <div style={{
+                          width: 48, height: 48, flexShrink: 0,
+                          background: `linear-gradient(135deg, ${c} 0%, #1a1a1a 140%)`,
+                          clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+                          boxShadow: `0 0 12px ${c}88, inset 0 0 8px rgba(255,255,255,0.25)`,
+                          display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        }}>
+                          <span style={{ color: '#fff', fontSize: '0.85rem', fontWeight: 700, textShadow: '0 0 4px #000' }}>T{g.tier}</span>
+                        </div>
+                        <div>
+                          <div style={{ color: '#8a8a8a', fontSize: '0.66rem', letterSpacing: '0.08em' }}>{TIER_NAMES[g.tier - 1]} · {TIER_SHAPES[g.tier - 1]}</div>
+                          <div className="item-name" style={{ fontSize: '0.9rem' }}>{g.name}</div>
+                          <div style={{ color: 'var(--muted)', fontSize: '0.66rem' }}>{g.nameEn}</div>
+                        </div>
                       </div>
-                      <div style={{ color: '#8a8a8a', fontSize: '0.68rem', letterSpacing: '0.08em' }}>{TIER_NAMES[g.tier - 1]} · {TIER_SHAPES[g.tier - 1]}</div>
-                      <div className="item-name" style={{ fontSize: '0.92rem', marginTop: '0.2rem' }}>{g.name}</div>
-                      <div style={{ color: 'var(--muted)', fontSize: '0.7rem', marginTop: '0.15rem' }}>{g.nameEn}</div>
+                      {/* 三套加成 */}
+                      {g.armorBonus?.length > 0 && (
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text)', padding: '0.25rem 0' }}>
+                          <span style={{ color: 'var(--muted)' }}>防具：</span>
+                          {g.armorBonus.map(b => b.text).join('、')}
+                        </div>
+                      )}
+                      {g.accessoryBonus?.length > 0 && (
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text)', padding: '0.25rem 0' }}>
+                          <span style={{ color: 'var(--muted)' }}>首饰：</span>
+                          {g.accessoryBonus.map(b => b.text).join('、')}
+                        </div>
+                      )}
+                      {g.weaponBonus?.length > 0 && (
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text)', padding: '0.25rem 0' }}>
+                          <span style={{ color: 'var(--muted)' }}>武器：</span>
+                          {g.weaponBonus.map(b => b.text).join('、')}
+                        </div>
+                      )}
+                      <div style={{ marginTop: '0.4rem', paddingTop: '0.4rem', borderTop: '1px solid var(--border)', fontSize: '0.7rem', color: 'var(--muted)', display: 'flex', justifyContent: 'space-between' }}>
+                        <span style={{ color: 'var(--gold)' }}>💰 {g.sellPrice?.toLocaleString()}</span>
+                        <span>Lv.{g.minDropLevel}{g.maxDropLevel && g.maxDropLevel > g.minDropLevel ? `-${g.maxDropLevel}` : '+'}</span>
+                      </div>
                     </div>
                   )
                 })}

@@ -1,0 +1,84 @@
+{
+  "blackMistChance": 0.01,
+  "ancientChance": 0.1,
+  "minBlackMistDifficulty": 1.0,
+  "minDivineDifficulty": 2.0,
+  "minSetDifficulty": 2.0,
+  "minLegendaryLevel": 10.0,
+  "runeDropChance": 0.3,
+  "runeMinDropLevel": 30.0,
+  "dropSettings": {
+    "normal": {
+      "min": {
+        "noDrop": 87.4,
+        "common": 9.0,
+        "uncommon": 3.0,
+        "rare": 0.6,
+        "legendary": 0.0
+      },
+      "max": {
+        "noDrop": 90.0,
+        "common": 4.9,
+        "uncommon": 3.5,
+        "rare": 1.4,
+        "legendary": 0.2
+      },
+      "divineChance": 0.0,
+      "gemDropChance": 0.01
+    },
+    "elite": {
+      "min": {
+        "noDrop": 40.2,
+        "common": 29.3,
+        "uncommon": 23.0,
+        "rare": 6.0,
+        "legendary": 1.5
+      },
+      "max": {
+        "noDrop": 19.6,
+        "common": 27.9,
+        "uncommon": 30.0,
+        "rare": 20.0,
+        "legendary": 2.5
+      },
+      "divineChance": 0.0003,
+      "gemDropChance": 0.06
+    },
+    "miniBoss": {
+      "min": {
+        "noDrop": 35.2,
+        "common": 33.8,
+        "uncommon": 22.0,
+        "rare": 7.0,
+        "legendary": 2.0
+      },
+      "max": {
+        "noDrop": 10.6,
+        "common": 28.4,
+        "uncommon": 32.0,
+        "rare": 25.0,
+        "legendary": 4.0
+      },
+      "divineChance": 0.0015,
+      "gemDropChance": 0.1
+    },
+    "boss": {
+      "min": {
+        "noDrop": 35.2,
+        "common": 33.8,
+        "uncommon": 22.0,
+        "rare": 7.0,
+        "legendary": 2.0
+      },
+      "max": {
+        "noDrop": 10.6,
+        "common": 28.4,
+        "uncommon": 32.0,
+        "rare": 25.0,
+        "legendary": 4.0
+      },
+      "divineChance": 0.001,
+      "gemDropChance": 0.12
+    }
+  }
+}

@@ -17,7 +17,38 @@
       "name": "粗糙的紫水晶球",
       "nameEn": "Raw Sphere Amethyst",
       "color": "#9b59b6",
-      "icon": "/images/icons/items/gem_amethyst_1.png"
+      "icon": "/images/icons/items/gem_amethyst_1.png",
+      "rarity": 0,
+      "sellPrice": 2000,
+      "minDropLevel": 15,
+      "maxDropLevel": 35,
+      "armorBonus": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "value": 5.0,
+          "text": "智力 +5"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 55,
+          "statCn": "奥术伤害减免",
+          "mod": 0,
+          "value": 0.05,
+          "text": "奥术伤害减免 +0.05"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 28,
+          "statCn": "奥术伤害",
+          "mod": 0,
+          "value": 0.1,
+          "text": "奥术伤害 +0.1"
+        }
+      ]
     },
     {
       "id": "GemAmethyst2",
@@ -27,7 +58,38 @@
       "name": "碎裂的紫水晶泪滴",
       "nameEn": "Chipped Teardrop Amethyst",
       "color": "#9b59b6",
-      "icon": "/images/icons/items/gem_amethyst_2.png"
+      "icon": "/images/icons/items/gem_amethyst_2.png",
+      "rarity": 0,
+      "sellPrice": 4000,
+      "minDropLevel": 25,
+      "maxDropLevel": 45,
+      "armorBonus": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "value": 10.0,
+          "text": "智力 +10"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 55,
+          "statCn": "奥术伤害减免",
+          "mod": 0,
+          "value": 0.07,
+          "text": "奥术伤害减免 +0.07"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 28,
+          "statCn": "奥术伤害",
+          "mod": 0,
+          "value": 0.2,
+          "text": "奥术伤害 +0.2"
+        }
+      ]
     },
     {
       "id": "GemAmethyst3",
@@ -37,7 +99,38 @@
       "name": "粗砺的紫水晶方块",
       "nameEn": "Rough Square Amethyst",
       "color": "#9b59b6",
-      "icon": "/images/icons/items/gem_amethyst_3.png"
+      "icon": "/images/icons/items/gem_amethyst_3.png",
+      "rarity": 0,
+      "sellPrice": 6000,
+      "minDropLevel": 35,
+      "maxDropLevel": 55,
+      "armorBonus": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "value": 15.0,
+          "text": "智力 +15"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 55,
+          "statCn": "奥术伤害减免",
+          "mod": 0,
+          "value": 0.09,
+          "text": "奥术伤害减免 +0.09"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 28,
+          "statCn": "奥术伤害",
+          "mod": 0,
+          "value": 0.3,
+          "text": "奥术伤害 +0.3"
+        }
+      ]
     },
     {
       "id": "GemAmethyst4",
@@ -47,7 +140,38 @@
       "name": "抛光的紫水晶菱形",
       "nameEn": "Polished Rhombus Amethyst",
       "color": "#9b59b6",
-      "icon": "/images/icons/items/gem_amethyst_4.png"
+      "icon": "/images/icons/items/gem_amethyst_4.png",
+      "rarity": 0,
+      "sellPrice": 8000,
+      "minDropLevel": 45,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "value": 20.0,
+          "text": "智力 +20"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 55,
+          "statCn": "奥术伤害减免",
+          "mod": 0,
+          "value": 0.11,
+          "text": "奥术伤害减免 +0.11"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 28,
+          "statCn": "奥术伤害",
+          "mod": 0,
+          "value": 0.4,
+          "text": "奥术伤害 +0.4"
+        }
+      ]
     },
     {
       "id": "GemAmethyst5",
@@ -57,7 +181,38 @@
       "name": "无瑕的紫水晶六边形",
       "nameEn": "Flawless Hexagon Amethyst",
       "color": "#9b59b6",
-      "icon": "/images/icons/items/gem_amethyst_5.png"
+      "icon": "/images/icons/items/gem_amethyst_5.png",
+      "rarity": 0,
+      "sellPrice": 10000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "value": 30.0,
+          "text": "智力 +30"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 55,
+          "statCn": "奥术伤害减免",
+          "mod": 0,
+          "value": 0.13,
+          "text": "奥术伤害减免 +0.13"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 28,
+          "statCn": "奥术伤害",
+          "mod": 0,
+          "value": 0.6,
+          "text": "奥术伤害 +0.6"
+        }
+      ]
     },
     {
       "id": "GemAmethyst6",
@@ -67,7 +222,38 @@
       "name": "璀璨的紫水晶八边形",
       "nameEn": "Radiant Octagon Amethyst",
       "color": "#9b59b6",
-      "icon": "/images/icons/items/gem_amethyst_6.png"
+      "icon": "/images/icons/items/gem_amethyst_6.png",
+      "rarity": 0,
+      "sellPrice": 12000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "value": 40.0,
+          "text": "智力 +40"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 55,
+          "statCn": "奥术伤害减免",
+          "mod": 0,
+          "value": 0.15,
+          "text": "奥术伤害减免 +0.15"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 28,
+          "statCn": "奥术伤害",
+          "mod": 0,
+          "value": 0.8,
+          "text": "奥术伤害 +0.8"
+        }
+      ]
     },
     {
       "id": "GemDiamond1",
@@ -77,7 +263,38 @@
       "name": "粗糙的钻石球",
       "nameEn": "Raw Sphere Diamond",
       "color": "#c8d6e5",
-      "icon": "/images/icons/items/gem_diamond_1.png"
+      "icon": "/images/icons/items/gem_diamond_1.png",
+      "rarity": 0,
+      "sellPrice": 2000,
+      "minDropLevel": 15,
+      "maxDropLevel": 35,
+      "armorBonus": [
+        {
+          "stat": 13,
+          "statCn": "冷却缩减",
+          "mod": 0,
+          "value": 0.01,
+          "text": "冷却缩减 +0.01"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 51,
+          "statCn": "物理伤害减免",
+          "mod": 0,
+          "value": 0.05,
+          "text": "物理伤害减免 +0.05"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 23,
+          "statCn": "物理伤害",
+          "mod": 0,
+          "value": 0.1,
+          "text": "物理伤害 +0.1"
+        }
+      ]
     },
     {
       "id": "GemDiamond2",
@@ -87,7 +304,38 @@
       "name": "碎裂的钻石泪滴",
       "nameEn": "Chipped Teardrop Diamond",
       "color": "#c8d6e5",
-      "icon": "/images/icons/items/gem_diamond_2.png"
+      "icon": "/images/icons/items/gem_diamond_2.png",
+      "rarity": 0,
+      "sellPrice": 4000,
+      "minDropLevel": 25,
+      "maxDropLevel": 45,
+      "armorBonus": [
+        {
+          "stat": 13,
+          "statCn": "冷却缩减",
+          "mod": 0,
+          "value": 0.02,
+          "text": "冷却缩减 +0.02"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 51,
+          "statCn": "物理伤害减免",
+          "mod": 0,
+          "value": 0.07,
+          "text": "物理伤害减免 +0.07"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 23,
+          "statCn": "物理伤害",
+          "mod": 0,
+          "value": 0.2,
+          "text": "物理伤害 +0.2"
+        }
+      ]
     },
     {
       "id": "GemDiamond3",
@@ -97,7 +345,38 @@
       "name": "粗砺的钻石方块",
       "nameEn": "Rough Square Diamond",
       "color": "#c8d6e5",
-      "icon": "/images/icons/items/gem_diamond_3.png"
+      "icon": "/images/icons/items/gem_diamond_3.png",
+      "rarity": 0,
+      "sellPrice": 6000,
+      "minDropLevel": 35,
+      "maxDropLevel": 55,
+      "armorBonus": [
+        {
+          "stat": 13,
+          "statCn": "冷却缩减",
+          "mod": 0,
+          "value": 0.03,
+          "text": "冷却缩减 +0.03"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 51,
+          "statCn": "物理伤害减免",
+          "mod": 0,
+          "value": 0.09,
+          "text": "物理伤害减免 +0.09"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 23,
+          "statCn": "物理伤害",
+          "mod": 0,
+          "value": 0.3,
+          "text": "物理伤害 +0.3"
+        }
+      ]
     },
     {
       "id": "GemDiamond4",
@@ -107,7 +386,38 @@
       "name": "抛光的钻石菱形",
       "nameEn": "Polished Rhombus Diamond",
       "color": "#c8d6e5",
-      "icon": "/images/icons/items/gem_diamond_4.png"
+      "icon": "/images/icons/items/gem_diamond_4.png",
+      "rarity": 0,
+      "sellPrice": 8000,
+      "minDropLevel": 45,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 13,
+          "statCn": "冷却缩减",
+          "mod": 0,
+          "value": 0.04,
+          "text": "冷却缩减 +0.04"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 51,
+          "statCn": "物理伤害减免",
+          "mod": 0,
+          "value": 0.11,
+          "text": "物理伤害减免 +0.11"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 23,
+          "statCn": "物理伤害",
+          "mod": 0,
+          "value": 0.4,
+          "text": "物理伤害 +0.4"
+        }
+      ]
     },
     {
       "id": "GemDiamond5",
@@ -117,7 +427,38 @@
       "name": "无瑕的钻石六边形",
       "nameEn": "Flawless Hexagon Diamond",
       "color": "#c8d6e5",
-      "icon": "/images/icons/items/gem_diamond_5.png"
+      "icon": "/images/icons/items/gem_diamond_5.png",
+      "rarity": 0,
+      "sellPrice": 10000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 13,
+          "statCn": "冷却缩减",
+          "mod": 0,
+          "value": 0.05,
+          "text": "冷却缩减 +0.05"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 51,
+          "statCn": "物理伤害减免",
+          "mod": 0,
+          "value": 0.13,
+          "text": "物理伤害减免 +0.13"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 23,
+          "statCn": "物理伤害",
+          "mod": 0,
+          "value": 0.6,
+          "text": "物理伤害 +0.6"
+        }
+      ]
     },
     {
       "id": "GemDiamond6",
@@ -127,7 +468,38 @@
       "name": "璀璨的钻石八边形",
       "nameEn": "Radiant Octagon Diamond",
       "color": "#c8d6e5",
-      "icon": "/images/icons/items/gem_diamond_6.png"
+      "icon": "/images/icons/items/gem_diamond_6.png",
+      "rarity": 0,
+      "sellPrice": 12000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 13,
+          "statCn": "冷却缩减",
+          "mod": 0,
+          "value": 0.06,
+          "text": "冷却缩减 +0.06"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 51,
+          "statCn": "物理伤害减免",
+          "mod": 0,
+          "value": 0.15,
+          "text": "物理伤害减免 +0.15"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 23,
+          "statCn": "物理伤害",
+          "mod": 0,
+          "value": 0.8,
+          "text": "物理伤害 +0.8"
+        }
+      ]
     },
     {
       "id": "GemEmerald1",
@@ -137,7 +509,38 @@
       "name": "粗糙的祖母绿球",
       "nameEn": "Raw Sphere Emerald",
       "color": "#2ecc71",
-      "icon": "/images/icons/items/gem_emerald_1.png"
+      "icon": "/images/icons/items/gem_emerald_1.png",
+      "rarity": 0,
+      "sellPrice": 2000,
+      "minDropLevel": 15,
+      "maxDropLevel": 35,
+      "armorBonus": [
+        {
+          "stat": 39,
+          "statCn": "荆棘",
+          "mod": 0,
+          "value": 10.0,
+          "text": "荆棘 +10"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 49,
+          "statCn": "毒素伤害减免",
+          "mod": 0,
+          "value": 0.05,
+          "text": "毒素伤害减免 +0.05"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 27,
+          "statCn": "毒素伤害",
+          "mod": 0,
+          "value": 0.1,
+          "text": "毒素伤害 +0.1"
+        }
+      ]
     },
     {
       "id": "GemEmerald2",
@@ -147,7 +550,38 @@
       "name": "碎裂的祖母绿泪滴",
       "nameEn": "Chipped Teardrop Emerald",
       "color": "#2ecc71",
-      "icon": "/images/icons/items/gem_emerald_2.png"
+      "icon": "/images/icons/items/gem_emerald_2.png",
+      "rarity": 0,
+      "sellPrice": 4000,
+      "minDropLevel": 25,
+      "maxDropLevel": 45,
+      "armorBonus": [
+        {
+          "stat": 39,
+          "statCn": "荆棘",
+          "mod": 0,
+          "value": 20.0,
+          "text": "荆棘 +20"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 49,
+          "statCn": "毒素伤害减免",
+          "mod": 0,
+          "value": 0.07,
+          "text": "毒素伤害减免 +0.07"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 27,
+          "statCn": "毒素伤害",
+          "mod": 0,
+          "value": 0.2,
+          "text": "毒素伤害 +0.2"
+        }
+      ]
     },
     {
       "id": "GemEmerald3",
@@ -157,7 +591,38 @@
       "name": "粗砺的祖母绿方块",
       "nameEn": "Rough Square Emerald",
       "color": "#2ecc71",
-      "icon": "/images/icons/items/gem_emerald_3.png"
+      "icon": "/images/icons/items/gem_emerald_3.png",
+      "rarity": 0,
+      "sellPrice": 6000,
+      "minDropLevel": 35,
+      "maxDropLevel": 55,
+      "armorBonus": [
+        {
+          "stat": 39,
+          "statCn": "荆棘",
+          "mod": 0,
+          "value": 40.0,
+          "text": "荆棘 +40"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 49,
+          "statCn": "毒素伤害减免",
+          "mod": 0,
+          "value": 0.09,
+          "text": "毒素伤害减免 +0.09"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 27,
+          "statCn": "毒素伤害",
+          "mod": 0,
+          "value": 0.3,
+          "text": "毒素伤害 +0.3"
+        }
+      ]
     },
     {
       "id": "GemEmerald4",
@@ -167,7 +632,38 @@
       "name": "抛光的祖母绿菱形",
       "nameEn": "Polished Rhombus Emerald",
       "color": "#2ecc71",
-      "icon": "/images/icons/items/gem_emerald_4.png"
+      "icon": "/images/icons/items/gem_emerald_4.png",
+      "rarity": 0,
+      "sellPrice": 8000,
+      "minDropLevel": 45,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 39,
+          "statCn": "荆棘",
+          "mod": 0,
+          "value": 80.0,
+          "text": "荆棘 +80"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 49,
+          "statCn": "毒素伤害减免",
+          "mod": 0,
+          "value": 0.11,
+          "text": "毒素伤害减免 +0.11"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 27,
+          "statCn": "毒素伤害",
+          "mod": 0,
+          "value": 0.4,
+          "text": "毒素伤害 +0.4"
+        }
+      ]
     },
     {
       "id": "GemEmerald5",
@@ -177,7 +673,38 @@
       "name": "无瑕的祖母绿六边形",
       "nameEn": "Flawless Hexagon Emerald",
       "color": "#2ecc71",
-      "icon": "/images/icons/items/gem_emerald_5.png"
+      "icon": "/images/icons/items/gem_emerald_5.png",
+      "rarity": 0,
+      "sellPrice": 10000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 39,
+          "statCn": "荆棘",
+          "mod": 0,
+          "value": 120.0,
+          "text": "荆棘 +120"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 49,
+          "statCn": "毒素伤害减免",
+          "mod": 0,
+          "value": 0.13,
+          "text": "毒素伤害减免 +0.13"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 27,
+          "statCn": "毒素伤害",
+          "mod": 0,
+          "value": 0.6,
+          "text": "毒素伤害 +0.6"
+        }
+      ]
     },
     {
       "id": "GemEmerald6",
@@ -187,7 +714,38 @@
       "name": "璀璨的祖母绿八边形",
       "nameEn": "Radiant Octagon Emerald",
       "color": "#2ecc71",
-      "icon": "/images/icons/items/gem_emerald_6.png"
+      "icon": "/images/icons/items/gem_emerald_6.png",
+      "rarity": 0,
+      "sellPrice": 12000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 39,
+          "statCn": "荆棘",
+          "mod": 0,
+          "value": 200.0,
+          "text": "荆棘 +200"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 49,
+          "statCn": "毒素伤害减免",
+          "mod": 0,
+          "value": 0.15,
+          "text": "毒素伤害减免 +0.15"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 27,
+          "statCn": "毒素伤害",
+          "mod": 0,
+          "value": 0.8,
+          "text": "毒素伤害 +0.8"
+        }
+      ]
     },
     {
       "id": "GemRuby1",
@@ -197,7 +755,38 @@
       "name": "粗糙的红宝石球",
       "nameEn": "Raw Sphere Ruby",
       "color": "#e03a3a",
-      "icon": "/images/icons/items/gem_ruby_1.png"
+      "icon": "/images/icons/items/gem_ruby_1.png",
+      "rarity": 0,
+      "sellPrice": 2000,
+      "minDropLevel": 15,
+      "maxDropLevel": 35,
+      "armorBonus": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "value": 5.0,
+          "text": "力量 +5"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 52,
+          "statCn": "火焰伤害减免",
+          "mod": 0,
+          "value": 0.05,
+          "text": "火焰伤害减免 +0.05"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 24,
+          "statCn": "火焰伤害",
+          "mod": 0,
+          "value": 0.1,
+          "text": "火焰伤害 +0.1"
+        }
+      ]
     },
     {
       "id": "GemRuby2",
@@ -207,7 +796,38 @@
       "name": "碎裂的红宝石泪滴",
       "nameEn": "Chipped Teardrop Ruby",
       "color": "#e03a3a",
-      "icon": "/images/icons/items/gem_ruby_2.png"
+      "icon": "/images/icons/items/gem_ruby_2.png",
+      "rarity": 0,
+      "sellPrice": 4000,
+      "minDropLevel": 25,
+      "maxDropLevel": 45,
+      "armorBonus": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "value": 10.0,
+          "text": "力量 +10"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 52,
+          "statCn": "火焰伤害减免",
+          "mod": 0,
+          "value": 0.07,
+          "text": "火焰伤害减免 +0.07"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 24,
+          "statCn": "火焰伤害",
+          "mod": 0,
+          "value": 0.2,
+          "text": "火焰伤害 +0.2"
+        }
+      ]
     },
     {
       "id": "GemRuby3",
@@ -217,7 +837,38 @@
       "name": "粗砺的红宝石方块",
       "nameEn": "Rough Square Ruby",
       "color": "#e03a3a",
-      "icon": "/images/icons/items/gem_ruby_3.png"
+      "icon": "/images/icons/items/gem_ruby_3.png",
+      "rarity": 0,
+      "sellPrice": 6000,
+      "minDropLevel": 35,
+      "maxDropLevel": 55,
+      "armorBonus": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "value": 15.0,
+          "text": "力量 +15"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 52,
+          "statCn": "火焰伤害减免",
+          "mod": 0,
+          "value": 0.09,
+          "text": "火焰伤害减免 +0.09"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 24,
+          "statCn": "火焰伤害",
+          "mod": 0,
+          "value": 0.3,
+          "text": "火焰伤害 +0.3"
+        }
+      ]
     },
     {
       "id": "GemRuby4",
@@ -227,7 +878,38 @@
       "name": "抛光的红宝石菱形",
       "nameEn": "Polished Rhombus Ruby",
       "color": "#e03a3a",
-      "icon": "/images/icons/items/gem_ruby_4.png"
+      "icon": "/images/icons/items/gem_ruby_4.png",
+      "rarity": 0,
+      "sellPrice": 8000,
+      "minDropLevel": 45,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "value": 20.0,
+          "text": "力量 +20"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 52,
+          "statCn": "火焰伤害减免",
+          "mod": 0,
+          "value": 0.11,
+          "text": "火焰伤害减免 +0.11"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 24,
+          "statCn": "火焰伤害",
+          "mod": 0,
+          "value": 0.4,
+          "text": "火焰伤害 +0.4"
+        }
+      ]
     },
     {
       "id": "GemRuby5",
@@ -237,7 +919,38 @@
       "name": "无瑕的红宝石六边形",
       "nameEn": "Flawless Hexagon Ruby",
       "color": "#e03a3a",
-      "icon": "/images/icons/items/gem_ruby_5.png"
+      "icon": "/images/icons/items/gem_ruby_5.png",
+      "rarity": 0,
+      "sellPrice": 10000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "value": 30.0,
+          "text": "力量 +30"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 52,
+          "statCn": "火焰伤害减免",
+          "mod": 0,
+          "value": 0.13,
+          "text": "火焰伤害减免 +0.13"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 24,
+          "statCn": "火焰伤害",
+          "mod": 0,
+          "value": 0.6,
+          "text": "火焰伤害 +0.6"
+        }
+      ]
     },
     {
       "id": "GemRuby6",
@@ -247,7 +960,38 @@
       "name": "璀璨的红宝石八边形",
       "nameEn": "Radiant Octagon Ruby",
       "color": "#e03a3a",
-      "icon": "/images/icons/items/gem_ruby_6.png"
+      "icon": "/images/icons/items/gem_ruby_6.png",
+      "rarity": 0,
+      "sellPrice": 12000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "value": 40.0,
+          "text": "力量 +40"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 52,
+          "statCn": "火焰伤害减免",
+          "mod": 0,
+          "value": 0.15,
+          "text": "火焰伤害减免 +0.15"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 24,
+          "statCn": "火焰伤害",
+          "mod": 0,
+          "value": 0.8,
+          "text": "火焰伤害 +0.8"
+        }
+      ]
     },
     {
       "id": "GemSapphire1",
@@ -257,7 +1001,38 @@
       "name": "粗糙的蓝宝石球",
       "nameEn": "Raw Sphere Sapphire",
       "color": "#3498db",
-      "icon": "/images/icons/items/gem_sapphire_1.png"
+      "icon": "/images/icons/items/gem_sapphire_1.png",
+      "rarity": 0,
+      "sellPrice": 2000,
+      "minDropLevel": 15,
+      "maxDropLevel": 35,
+      "armorBonus": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "value": 0.05,
+          "text": "最大生命值% +0.05"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 53,
+          "statCn": "冰霜伤害减免",
+          "mod": 0,
+          "value": 0.05,
+          "text": "冰霜伤害减免 +0.05"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 25,
+          "statCn": "冰霜伤害",
+          "mod": 0,
+          "value": 0.1,
+          "text": "冰霜伤害 +0.1"
+        }
+      ]
     },
     {
       "id": "GemSapphire2",
@@ -267,7 +1042,38 @@
       "name": "碎裂的蓝宝石泪滴",
       "nameEn": "Chipped Teardrop Sapphire",
       "color": "#3498db",
-      "icon": "/images/icons/items/gem_sapphire_2.png"
+      "icon": "/images/icons/items/gem_sapphire_2.png",
+      "rarity": 0,
+      "sellPrice": 4000,
+      "minDropLevel": 25,
+      "maxDropLevel": 45,
+      "armorBonus": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "value": 0.08,
+          "text": "最大生命值% +0.08"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 53,
+          "statCn": "冰霜伤害减免",
+          "mod": 0,
+          "value": 0.07,
+          "text": "冰霜伤害减免 +0.07"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 25,
+          "statCn": "冰霜伤害",
+          "mod": 0,
+          "value": 0.2,
+          "text": "冰霜伤害 +0.2"
+        }
+      ]
     },
     {
       "id": "GemSapphire3",
@@ -277,7 +1083,38 @@
       "name": "粗砺的蓝宝石方块",
       "nameEn": "Rough Square Sapphire",
       "color": "#3498db",
-      "icon": "/images/icons/items/gem_sapphire_3.png"
+      "icon": "/images/icons/items/gem_sapphire_3.png",
+      "rarity": 0,
+      "sellPrice": 6000,
+      "minDropLevel": 35,
+      "maxDropLevel": 55,
+      "armorBonus": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "value": 0.1,
+          "text": "最大生命值% +0.1"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 53,
+          "statCn": "冰霜伤害减免",
+          "mod": 0,
+          "value": 0.09,
+          "text": "冰霜伤害减免 +0.09"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 25,
+          "statCn": "冰霜伤害",
+          "mod": 0,
+          "value": 0.3,
+          "text": "冰霜伤害 +0.3"
+        }
+      ]
     },
     {
       "id": "GemSapphire4",
@@ -287,7 +1124,38 @@
       "name": "抛光的蓝宝石菱形",
       "nameEn": "Polished Rhombus Sapphire",
       "color": "#3498db",
-      "icon": "/images/icons/items/gem_sapphire_4.png"
+      "icon": "/images/icons/items/gem_sapphire_4.png",
+      "rarity": 0,
+      "sellPrice": 8000,
+      "minDropLevel": 45,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "value": 0.12,
+          "text": "最大生命值% +0.12"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 53,
+          "statCn": "冰霜伤害减免",
+          "mod": 0,
+          "value": 0.11,
+          "text": "冰霜伤害减免 +0.11"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 25,
+          "statCn": "冰霜伤害",
+          "mod": 0,
+          "value": 0.4,
+          "text": "冰霜伤害 +0.4"
+        }
+      ]
     },
     {
       "id": "GemSapphire5",
@@ -297,7 +1165,38 @@
       "name": "无瑕的蓝宝石六边形",
       "nameEn": "Flawless Hexagon Sapphire",
       "color": "#3498db",
-      "icon": "/images/icons/items/gem_sapphire_5.png"
+      "icon": "/images/icons/items/gem_sapphire_5.png",
+      "rarity": 0,
+      "sellPrice": 10000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "value": 0.15,
+          "text": "最大生命值% +0.15"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 53,
+          "statCn": "冰霜伤害减免",
+          "mod": 0,
+          "value": 0.13,
+          "text": "冰霜伤害减免 +0.13"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 25,
+          "statCn": "冰霜伤害",
+          "mod": 0,
+          "value": 0.6,
+          "text": "冰霜伤害 +0.6"
+        }
+      ]
     },
     {
       "id": "GemSapphire6",
@@ -307,7 +1206,38 @@
       "name": "璀璨的蓝宝石八边形",
       "nameEn": "Radiant Octagon Sapphire",
       "color": "#3498db",
-      "icon": "/images/icons/items/gem_sapphire_6.png"
+      "icon": "/images/icons/items/gem_sapphire_6.png",
+      "rarity": 0,
+      "sellPrice": 12000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "value": 0.2,
+          "text": "最大生命值% +0.2"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 53,
+          "statCn": "冰霜伤害减免",
+          "mod": 0,
+          "value": 0.15,
+          "text": "冰霜伤害减免 +0.15"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 25,
+          "statCn": "冰霜伤害",
+          "mod": 0,
+          "value": 0.8,
+          "text": "冰霜伤害 +0.8"
+        }
+      ]
     },
     {
       "id": "GemTopaz1",
@@ -317,7 +1247,38 @@
       "name": "粗糙的黄玉球",
       "nameEn": "Raw Sphere Topaz",
       "color": "#f1c40f",
-      "icon": "/images/icons/items/gem_topaz_1.png"
+      "icon": "/images/icons/items/gem_topaz_1.png",
+      "rarity": 0,
+      "sellPrice": 2000,
+      "minDropLevel": 15,
+      "maxDropLevel": 35,
+      "armorBonus": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "value": 5.0,
+          "text": "敏捷 +5"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 54,
+          "statCn": "闪电伤害减免",
+          "mod": 0,
+          "value": 0.05,
+          "text": "闪电伤害减免 +0.05"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 26,
+          "statCn": "闪电伤害",
+          "mod": 0,
+          "value": 0.1,
+          "text": "闪电伤害 +0.1"
+        }
+      ]
     },
     {
       "id": "GemTopaz2",
@@ -327,7 +1288,38 @@
       "name": "碎裂的黄玉泪滴",
       "nameEn": "Chipped Teardrop Topaz",
       "color": "#f1c40f",
-      "icon": "/images/icons/items/gem_topaz_2.png"
+      "icon": "/images/icons/items/gem_topaz_2.png",
+      "rarity": 0,
+      "sellPrice": 4000,
+      "minDropLevel": 25,
+      "maxDropLevel": 45,
+      "armorBonus": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "value": 10.0,
+          "text": "敏捷 +10"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 54,
+          "statCn": "闪电伤害减免",
+          "mod": 0,
+          "value": 0.07,
+          "text": "闪电伤害减免 +0.07"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 26,
+          "statCn": "闪电伤害",
+          "mod": 0,
+          "value": 0.2,
+          "text": "闪电伤害 +0.2"
+        }
+      ]
     },
     {
       "id": "GemTopaz3",
@@ -337,7 +1329,38 @@
       "name": "粗砺的黄玉方块",
       "nameEn": "Rough Square Topaz",
       "color": "#f1c40f",
-      "icon": "/images/icons/items/gem_topaz_3.png"
+      "icon": "/images/icons/items/gem_topaz_3.png",
+      "rarity": 0,
+      "sellPrice": 6000,
+      "minDropLevel": 35,
+      "maxDropLevel": 55,
+      "armorBonus": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "value": 15.0,
+          "text": "敏捷 +15"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 54,
+          "statCn": "闪电伤害减免",
+          "mod": 0,
+          "value": 0.09,
+          "text": "闪电伤害减免 +0.09"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 26,
+          "statCn": "闪电伤害",
+          "mod": 0,
+          "value": 0.3,
+          "text": "闪电伤害 +0.3"
+        }
+      ]
     },
     {
       "id": "GemTopaz4",
@@ -347,7 +1370,38 @@
       "name": "抛光的黄玉菱形",
       "nameEn": "Polished Rhombus Topaz",
       "color": "#f1c40f",
-      "icon": "/images/icons/items/gem_topaz_4.png"
+      "icon": "/images/icons/items/gem_topaz_4.png",
+      "rarity": 0,
+      "sellPrice": 8000,
+      "minDropLevel": 45,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "value": 20.0,
+          "text": "敏捷 +20"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 54,
+          "statCn": "闪电伤害减免",
+          "mod": 0,
+          "value": 0.11,
+          "text": "闪电伤害减免 +0.11"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 26,
+          "statCn": "闪电伤害",
+          "mod": 0,
+          "value": 0.4,
+          "text": "闪电伤害 +0.4"
+        }
+      ]
     },
     {
       "id": "GemTopaz5",
@@ -357,7 +1411,38 @@
       "name": "无瑕的黄玉六边形",
       "nameEn": "Flawless Hexagon Topaz",
       "color": "#f1c40f",
-      "icon": "/images/icons/items/gem_topaz_5.png"
+      "icon": "/images/icons/items/gem_topaz_5.png",
+      "rarity": 0,
+      "sellPrice": 10000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "value": 30.0,
+          "text": "敏捷 +30"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 54,
+          "statCn": "闪电伤害减免",
+          "mod": 0,
+          "value": 0.13,
+          "text": "闪电伤害减免 +0.13"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 26,
+          "statCn": "闪电伤害",
+          "mod": 0,
+          "value": 0.6,
+          "text": "闪电伤害 +0.6"
+        }
+      ]
     },
     {
       "id": "GemTopaz6",
@@ -367,7 +1452,38 @@
       "name": "璀璨的黄玉八边形",
       "nameEn": "Radiant Octagon Topaz",
       "color": "#f1c40f",
-      "icon": "/images/icons/items/gem_topaz_6.png"
+      "icon": "/images/icons/items/gem_topaz_6.png",
+      "rarity": 0,
+      "sellPrice": 12000,
+      "minDropLevel": 999,
+      "maxDropLevel": 0,
+      "armorBonus": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "value": 40.0,
+          "text": "敏捷 +40"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 54,
+          "statCn": "闪电伤害减免",
+          "mod": 0,
+          "value": 0.15,
+          "text": "闪电伤害减免 +0.15"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 26,
+          "statCn": "闪电伤害",
+          "mod": 0,
+          "value": 0.8,
+          "text": "闪电伤害 +0.8"
+        }
+      ]
     }
   ]
 }

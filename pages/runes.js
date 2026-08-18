@@ -61,7 +61,7 @@ export default function RunesPage() {
                   <div style={{ color: 'var(--muted)', fontSize: '0.78rem', margin: '0.5rem 0 0.4rem', letterSpacing: '0.05em' }}>
                     — {SKILL_NAMES[skill] || skill} —
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.6rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))', gap: '0.6rem' }}>
                     {runes.map(r => (
                       <div key={r.id} className="item-card" style={{ padding: '0.7rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.3rem' }}>
@@ -77,6 +77,20 @@ export default function RunesPage() {
                             <div style={{ color: 'var(--muted)', fontSize: '0.68rem' }}>{r.nameEn}</div>
                           </div>
                         </div>
+                        {/* 属性加成 */}
+                        {r.attributes?.length > 0 && (
+                          <div style={{ fontSize: '0.75rem', color: 'var(--text)', lineHeight: 1.5, padding: '0.3rem 0' }}>
+                            {r.attributes.map((a, i) => (
+                              <div key={i} style={{ color: 'var(--cyan-light)' }}>{a.text}</div>
+                            ))}
+                          </div>
+                        )}
+                        {/* 技能等级强化 */}
+                        {r.abilityLevels && (
+                          <div style={{ fontSize: '0.7rem', color: 'var(--muted)', marginTop: '0.3rem', paddingTop: '0.3rem', borderTop: '1px solid var(--border)' }}>
+                            技能等级 +{r.abilityLevels}（每 {r.everyNRuneLevels} 符文等级）
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -90,11 +104,16 @@ export default function RunesPage() {
         {tab === 'uncommon' && (
           <div className="panel">
             <div className="panel-title">✨ 普通符文</div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.7rem', padding: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '0.7rem', padding: '1rem' }}>
               {uncommon.map(r => (
                 <div key={r.id} className="item-card q-uncommon" style={{ padding: '0.8rem' }}>
                   <div className="item-name" style={{ fontSize: '0.92rem' }}>{r.name}</div>
                   <div style={{ color: 'var(--muted)', fontSize: '0.7rem', marginTop: '0.2rem' }}>{r.nameEn}</div>
+                  {r.attributes?.length > 0 && (
+                    <div style={{ fontSize: '0.75rem', color: 'var(--cyan-light)', lineHeight: 1.5, marginTop: '0.4rem' }}>
+                      {r.attributes.map((a, i) => <div key={i}>{a.text}</div>)}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

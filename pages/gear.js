@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import Link from 'next/link'
 import { useState, useMemo } from 'react'
 import itemsData from '../public/data/items.json'
 
@@ -91,6 +92,9 @@ export default function GearPage() {
               </div>
               <div style={{ color: 'var(--muted)', fontSize: '0.8rem', marginTop: '0.5rem' }}>
                 通过「暗影」夫人（Lady "Shadow"，神秘物品商人）处放入装备 → 揭开黑雾 → 逐条选择属性 → 完全揭示。
+              </div>
+              <div style={{ color: 'var(--l-divine)', fontSize: '0.8rem', marginTop: '0.4rem', fontWeight: 600 }}>
+                掉落概率 1% · 难度 1 以上触发 · <Link href="/loot" style={{ color: 'var(--cyan-light)' }}>查看完整掉落概率 →</Link>
               </div>
             </div>
           </div>

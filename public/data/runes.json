@@ -19,63 +19,162 @@
       "name": "放血",
       "nameEn": "Bloodletting",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 45,
+          "statCn": "对流血敌人伤害",
+          "mod": 0,
+          "base": 0.15,
+          "perLevel": 0.03,
+          "text": "+0.15（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "UncommonRune_DamageVsDistant",
       "name": "远射",
       "nameEn": "Longshot",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 58,
+          "statCn": "对远程敌人伤害",
+          "mod": 0,
+          "base": 0.23,
+          "perLevel": 0,
+          "text": "+0.23"
+        }
+      ]
     },
     {
       "id": "UncommonRune_DamageVsElite",
       "name": "巨人杀手",
       "nameEn": "Giantslayer",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 32,
+          "statCn": "对精英伤害",
+          "mod": 0,
+          "base": null,
+          "perLevel": 0.03,
+          "text": "（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "UncommonRune_DamageVsHealthy",
       "name": "伏击",
       "nameEn": "Ambush",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 29,
+          "statCn": "对健康敌人伤害",
+          "mod": 0,
+          "base": null,
+          "perLevel": 0.03,
+          "text": "（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "UncommonRune_DamageVsInjured",
       "name": "处决",
       "nameEn": "Execution",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 30,
+          "statCn": "对受伤敌人伤害",
+          "mod": 0,
+          "base": null,
+          "perLevel": 0,
+          "text": ""
+        }
+      ]
     },
     {
       "id": "UncommonRune_DamageVsPoisoned",
       "name": "疫病",
       "nameEn": "Blight",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 46,
+          "statCn": "对中毒敌人伤害",
+          "mod": 0,
+          "base": 0.49,
+          "perLevel": 0.03,
+          "text": "+0.49（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "UncommonRune_DamageVsSlowed",
       "name": "罗网",
       "nameEn": "Snare",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 31,
+          "statCn": "对减速敌人伤害",
+          "mod": 0,
+          "base": 0.16,
+          "perLevel": 0,
+          "text": "+0.16"
+        }
+      ]
     },
     {
       "id": "UncommonRune_DamageVsStunned",
       "name": "恍惚",
       "nameEn": "Daze",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 43,
+          "statCn": "对眩晕敌人伤害",
+          "mod": 0,
+          "base": 0.35,
+          "perLevel": 0,
+          "text": "+0.35"
+        }
+      ]
     },
     {
       "id": "UncommonRune_VulnerableDamage",
       "name": "脆弱",
       "nameEn": "Frailty",
       "quality": "uncommon",
-      "qualityName": "非凡"
+      "qualityName": "非凡",
+      "sellPrice": 500,
+      "attributes": [
+        {
+          "stat": 40,
+          "statCn": "易伤伤害",
+          "mod": 0,
+          "base": 0.41,
+          "perLevel": 0,
+          "text": "+0.41"
+        }
+      ]
     }
   ],
   "rare": [
@@ -88,7 +187,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "BasicAttack",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "base": 25.18,
+          "perLevel": 3.22,
+          "text": "+25.18（每级+3.22）"
+        }
+      ]
     },
     {
       "id": "RareRune_HunterBasicAttack2",
@@ -99,7 +211,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "BasicAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "base": 0.08,
+          "perLevel": 0.02,
+          "text": "+0.08（每级+0.02）"
+        }
+      ]
     },
     {
       "id": "RareRune_HunterBasicAttack3",
@@ -110,7 +235,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "BasicAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 14,
+          "statCn": "最大法力",
+          "mod": 0,
+          "base": 30.1,
+          "perLevel": 0.8,
+          "text": "+30.1（每级+0.8）"
+        }
+      ]
     },
     {
       "id": "RareRune_HunterHeavyAttack1",
@@ -121,7 +259,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "HeavyAttack",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 44,
+          "statCn": "护甲%",
+          "mod": 0,
+          "base": 0.12,
+          "perLevel": 0,
+          "text": "+0.12"
+        }
+      ]
     },
     {
       "id": "RareRune_HunterHeavyAttack2",
@@ -132,7 +283,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "HeavyAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 59,
+          "statCn": "魔法抗性%",
+          "mod": 0,
+          "base": 0.03,
+          "perLevel": 0,
+          "text": "+0.03"
+        }
+      ]
     },
     {
       "id": "RareRune_HunterHeavyAttack3",
@@ -143,7 +307,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "HeavyAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 57,
+          "statCn": "移动速度%",
+          "mod": 0,
+          "base": 0.04,
+          "perLevel": 0,
+          "text": "+0.04"
+        }
+      ]
     },
     {
       "id": "RareRune_HunterSpecial1",
@@ -154,7 +331,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "Special",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 17,
+          "statCn": "生命药水发现",
+          "mod": 0,
+          "base": 0.17,
+          "perLevel": 0,
+          "text": "+0.17"
+        }
+      ]
     },
     {
       "id": "RareRune_HunterSpecial2",
@@ -165,7 +355,20 @@
       "hero": "Hunter",
       "heroName": "猎人",
       "skill": "Special",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "base": 21.25,
+          "perLevel": 2,
+          "text": "+21.25（每级+2）"
+        }
+      ]
     },
     {
       "id": "RareRune_MonkBasicAttack1",
@@ -176,7 +379,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "BasicAttack",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "base": null,
+          "perLevel": null,
+          "text": ""
+        }
+      ]
     },
     {
       "id": "RareRune_MonkBasicAttack2",
@@ -187,7 +403,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "BasicAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "base": 0.11,
+          "perLevel": 0.03,
+          "text": "+0.11（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "RareRune_MonkBasicAttack3",
@@ -198,7 +427,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "BasicAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 14,
+          "statCn": "最大法力",
+          "mod": 0,
+          "base": 23.7,
+          "perLevel": 1.13,
+          "text": "+23.7（每级+1.13）"
+        }
+      ]
     },
     {
       "id": "RareRune_MonkHeavyAttack1",
@@ -209,7 +451,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "HeavyAttack",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 44,
+          "statCn": "护甲%",
+          "mod": 0,
+          "base": 0.06,
+          "perLevel": 0,
+          "text": "+0.06"
+        }
+      ]
     },
     {
       "id": "RareRune_MonkHeavyAttack2",
@@ -220,7 +475,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "HeavyAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 59,
+          "statCn": "魔法抗性%",
+          "mod": 0,
+          "base": 0.09,
+          "perLevel": 0.03,
+          "text": "+0.09（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "RareRune_MonkHeavyAttack3",
@@ -231,7 +499,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "HeavyAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 57,
+          "statCn": "移动速度%",
+          "mod": 0,
+          "base": 0.08,
+          "perLevel": 0,
+          "text": "+0.08"
+        }
+      ]
     },
     {
       "id": "RareRune_MonkSpecial1",
@@ -242,7 +523,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "Special",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 17,
+          "statCn": "生命药水发现",
+          "mod": 0,
+          "base": 0.29,
+          "perLevel": 0,
+          "text": "+0.29"
+        }
+      ]
     },
     {
       "id": "RareRune_MonkSpecial2",
@@ -253,7 +547,20 @@
       "hero": "Monk",
       "heroName": "武僧",
       "skill": "Special",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 1,
+          "statCn": "敏捷",
+          "mod": 0,
+          "base": 8.6,
+          "perLevel": 2.27,
+          "text": "+8.6（每级+2.27）"
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererBasicAttack1",
@@ -264,7 +571,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "BasicAttack",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "base": 8.54,
+          "perLevel": 2.58,
+          "text": "+8.54（每级+2.58）"
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererBasicAttack2",
@@ -275,7 +595,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "BasicAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "base": null,
+          "perLevel": null,
+          "text": ""
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererBasicAttack3",
@@ -286,7 +619,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "BasicAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 14,
+          "statCn": "最大法力",
+          "mod": 0,
+          "base": null,
+          "perLevel": null,
+          "text": ""
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererSpecial1",
@@ -297,7 +643,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "Special",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 17,
+          "statCn": "生命药水发现",
+          "mod": 0,
+          "base": 0.17,
+          "perLevel": 0,
+          "text": "+0.17"
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererSpecial2",
@@ -308,7 +667,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "Special",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 2,
+          "statCn": "智力",
+          "mod": 0,
+          "base": null,
+          "perLevel": 7.4,
+          "text": "（每级+7.4）"
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererStrongAttack1",
@@ -319,7 +691,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "StrongAttack",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 44,
+          "statCn": "护甲%",
+          "mod": 0,
+          "base": 0.12,
+          "perLevel": 0.03,
+          "text": "+0.12（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererStrongAttack2",
@@ -330,7 +715,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "StrongAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 59,
+          "statCn": "魔法抗性%",
+          "mod": 0,
+          "base": 0.05,
+          "perLevel": 0,
+          "text": "+0.05"
+        }
+      ]
     },
     {
       "id": "RareRune_SorcererStrongAttack3",
@@ -341,7 +739,20 @@
       "hero": "Sorcerer",
       "heroName": "法师",
       "skill": "StrongAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 57,
+          "statCn": "移动速度%",
+          "mod": 0,
+          "base": 0.05,
+          "perLevel": 0,
+          "text": "+0.05"
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorBasicAttack",
@@ -352,7 +763,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "BasicAttack",
-      "tier": ""
+      "tier": "",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "base": 9.23,
+          "perLevel": 2.97,
+          "text": "+9.23（每级+2.97）"
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorBasicAttack2",
@@ -363,7 +787,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "BasicAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 42,
+          "statCn": "最大生命值%",
+          "mod": 0,
+          "base": null,
+          "perLevel": null,
+          "text": ""
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorBasicAttack3",
@@ -374,7 +811,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "BasicAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 14,
+          "statCn": "最大法力",
+          "mod": 0,
+          "base": null,
+          "perLevel": null,
+          "text": ""
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorHeavyAttack1",
@@ -385,7 +835,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "HeavyAttack",
-      "tier": "1"
+      "tier": "1",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 44,
+          "statCn": "护甲%",
+          "mod": 0,
+          "base": 0.1,
+          "perLevel": 0.03,
+          "text": "+0.1（每级+0.03）"
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorHeavyAttack2",
@@ -396,7 +859,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "HeavyAttack",
-      "tier": "2"
+      "tier": "2",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 59,
+          "statCn": "魔法抗性%",
+          "mod": 0,
+          "base": null,
+          "perLevel": null,
+          "text": ""
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorHeavyAttack3",
@@ -407,7 +883,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "HeavyAttack",
-      "tier": "3"
+      "tier": "3",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 57,
+          "statCn": "移动速度%",
+          "mod": 0,
+          "base": 0.06,
+          "perLevel": 0,
+          "text": "+0.06"
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorRageShield",
@@ -418,7 +907,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "RageShield",
-      "tier": ""
+      "tier": "",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 0,
+          "statCn": "力量",
+          "mod": 0,
+          "base": 31.92,
+          "perLevel": 6.58,
+          "text": "+31.92（每级+6.58）"
+        }
+      ]
     },
     {
       "id": "RareRune_WarriorRageShout",
@@ -429,7 +931,20 @@
       "hero": "Warrior",
       "heroName": "战士",
       "skill": "RageShout",
-      "tier": ""
+      "tier": "",
+      "sellPrice": 5000,
+      "abilityLevels": 1,
+      "everyNRuneLevels": 6,
+      "attributes": [
+        {
+          "stat": 17,
+          "statCn": "生命药水发现",
+          "mod": 0,
+          "base": 0.13,
+          "perLevel": 0,
+          "text": "+0.13"
+        }
+      ]
     }
   ],
   "set": {
