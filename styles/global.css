@@ -698,3 +698,7 @@ input:focus, textarea:focus, select:focus {
   .hero-title { font-size: 2.2rem; }
   .nav-links { display: none; }
 }
+
+/* === 站点统计网格 === */
+.site-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+@media (max-width: 768px) { .site-stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 1rem; } }

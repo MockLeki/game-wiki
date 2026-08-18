@@ -1,12 +1,19 @@
 import { useState, useEffect } from 'react'
 
+// 本地时区日期字符串（避免 UTC 偏移）
+function localDateStr(d) {
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${y}-${m}-${day}`
+}
+
 export default function SiteStats() {
   const [stats, setStats] = useState(null)
 
   useEffect(() => {
     let alive = true
-    const today = new Date().toISOString().slice(0, 10)
-    const visitedKey = `wiki_visited_${today}`
+    const visitedKey = `wiki_visited_${localDateStr(new Date())}`
 
     async function load() {
       try {
@@ -33,31 +40,35 @@ export default function SiteStats() {
 
   if (!stats) return null
 
+  const cells = [
+    { label: '总访问量', value: stats.total, highlight: true },
+    { label: '今日访问', value: stats.today || 0 },
+    { label: '昨日访问', value: stats.yesterday || 0 },
+    { label: '最高单日', value: stats.peak || 0 },
+  ]
+
   return (
     <div className="panel" style={{ marginTop: '1.5rem' }}>
       <div className="panel-title">📊 站点数据</div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.8rem', padding: '1rem 1.2rem' }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ color: 'var(--muted)', fontSize: '0.78rem', letterSpacing: '0.05em' }}>总访问量</div>
-          <div style={{ color: 'var(--cyan-light)', fontSize: '1.9rem', fontWeight: 700, fontFamily: 'Cinzel, serif', textShadow: '0 0 6px rgba(201,162,39,0.4)' }}>
-            {stats.total.toLocaleString()}
+      <div className="site-stats-grid" style={{ padding: '1rem 1.2rem' }}>
+        {cells.map((c, i) => (
+          <div key={c.label} style={{
+            textAlign: 'center',
+            borderLeft: i > 0 ? '1px solid var(--border)' : 'none',
+          }}>
+            <div style={{ color: 'var(--muted)', fontSize: '0.78rem', letterSpacing: '0.05em' }}>{c.label}</div>
+            <div style={{
+              color: c.highlight ? 'var(--cyan-light)' : 'var(--text-bright)',
+              fontSize: '1.9rem', fontWeight: 700, fontFamily: 'Cinzel, serif',
+              textShadow: c.highlight ? '0 0 6px rgba(201,162,39,0.4)' : 'none',
+            }}>
+              {c.value.toLocaleString()}
+            </div>
           </div>
-        </div>
-        <div style={{ textAlign: 'center', borderLeft: '1px solid var(--border)', borderRight: '1px solid var(--border)' }}>
-          <div style={{ color: 'var(--muted)', fontSize: '0.78rem', letterSpacing: '0.05em' }}>今日访问</div>
-          <div style={{ color: 'var(--text-bright)', fontSize: '1.9rem', fontWeight: 700, fontFamily: 'Cinzel, serif' }}>
-            {stats.today.toLocaleString()}
-          </div>
-        </div>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ color: 'var(--muted)', fontSize: '0.78rem', letterSpacing: '0.05em' }}>数据起点</div>
-          <div style={{ color: 'var(--text-bright)', fontSize: '1.9rem', fontWeight: 700, fontFamily: 'Cinzel, serif' }}>
-            {stats.start.toLocaleString()}
-          </div>
-        </div>
+        ))}
       </div>
       <div style={{ padding: '0 1.2rem 0.9rem', fontSize: '0.75rem', color: 'var(--muted)', textAlign: 'center' }}>
-        自 Wiki 建站以来的累计访问量 · 同一设备当天仅计一次
+        自 Wiki 建站以来的累计访问量（起点 {stats.start ? stats.start.toLocaleString() : '15,000'}）· 同一设备当天仅计一次
       </div>
     </div>
   )
