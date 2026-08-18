@@ -128,6 +128,8 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
   const isActive = (path) => router.pathname === path ? 'active' : ''
   const navItems = [
     { path: '/gear', label: '装备' },
+    { path: '/gems', label: '宝石' },
+    { path: '/runes', label: '符文' },
     { path: '/skills', label: '技能' },
     { path: '/minions', label: '仆从' },
     { path: '/levels', label: '关卡' },

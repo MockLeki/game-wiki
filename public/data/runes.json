@@ -1,0 +1,482 @@
+{
+  "uncommon": [
+    {
+      "id": "UncommonRune1",
+      "name": "力量符文",
+      "nameEn": "Rune of Power",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune2",
+      "name": "敏捷符文",
+      "nameEn": "Rune of Agility",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsBleeding",
+      "name": "放血",
+      "nameEn": "Bloodletting",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsDistant",
+      "name": "远射",
+      "nameEn": "Longshot",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsElite",
+      "name": "巨人杀手",
+      "nameEn": "Giantslayer",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsHealthy",
+      "name": "伏击",
+      "nameEn": "Ambush",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsInjured",
+      "name": "处决",
+      "nameEn": "Execution",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsPoisoned",
+      "name": "疫病",
+      "nameEn": "Blight",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsSlowed",
+      "name": "罗网",
+      "nameEn": "Snare",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_DamageVsStunned",
+      "name": "恍惚",
+      "nameEn": "Daze",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    },
+    {
+      "id": "UncommonRune_VulnerableDamage",
+      "name": "脆弱",
+      "nameEn": "Frailty",
+      "quality": "uncommon",
+      "qualityName": "非凡"
+    }
+  ],
+  "rare": [
+    {
+      "id": "RareRune_HunterBasicAttack1",
+      "name": "毒箭符文",
+      "nameEn": "Poison Shot Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "BasicAttack",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_HunterBasicAttack2",
+      "name": "奥术炸弹符文",
+      "nameEn": "Arcane Bomb Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "BasicAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_HunterBasicAttack3",
+      "name": "飞刀连击符文",
+      "nameEn": "Knife Barrage Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "BasicAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_HunterHeavyAttack1",
+      "name": "稳固射击符文",
+      "nameEn": "Steady Shot Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "HeavyAttack",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_HunterHeavyAttack2",
+      "name": "多重射击符文",
+      "nameEn": "Multishot Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "HeavyAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_HunterHeavyAttack3",
+      "name": "急速射击符文",
+      "nameEn": "Rapid Fire Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "HeavyAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_HunterSpecial1",
+      "name": "毒陷阱符文",
+      "nameEn": "Poison Trap Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "Special",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_HunterSpecial2",
+      "name": "冲击波符文",
+      "nameEn": "Shockwave Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "skill": "Special",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_MonkBasicAttack1",
+      "name": "三重击符文",
+      "nameEn": "Threefold Strike Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "BasicAttack",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_MonkBasicAttack2",
+      "name": "怒拳符文",
+      "nameEn": "Furious Fist Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "BasicAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_MonkBasicAttack3",
+      "name": "震地击符文",
+      "nameEn": "Seismic Strike Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "BasicAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_MonkHeavyAttack1",
+      "name": "圣裁之击符文",
+      "nameEn": "Sacred Judgment Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "HeavyAttack",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_MonkHeavyAttack2",
+      "name": "穿刺突进符文",
+      "nameEn": "Piercing Lunge Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "HeavyAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_MonkHeavyAttack3",
+      "name": "旋风棍式符文",
+      "nameEn": "Whirlwind Staff Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "HeavyAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_MonkSpecial1",
+      "name": "神圣法球符文",
+      "nameEn": "Sacred Orbs Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "Special",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_MonkSpecial2",
+      "name": "灵气涌流符文",
+      "nameEn": "Spirit Stream Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "skill": "Special",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_SorcererBasicAttack1",
+      "name": "火球符文",
+      "nameEn": "Fire Ball Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "BasicAttack",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_SorcererBasicAttack2",
+      "name": "冰碎片符文",
+      "nameEn": "Ice Shards Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "BasicAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_SorcererBasicAttack3",
+      "name": "电击符文",
+      "nameEn": "Electrocute Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "BasicAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_SorcererSpecial1",
+      "name": "冰霜新星符文",
+      "nameEn": "Ice Nova Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "Special",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_SorcererSpecial2",
+      "name": "火元素符文",
+      "nameEn": "Fire Elemental Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "Special",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_SorcererStrongAttack1",
+      "name": "烈焰吐息符文",
+      "nameEn": "Flame Breath Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "StrongAttack",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_SorcererStrongAttack2",
+      "name": "冰陨石符文",
+      "nameEn": "Ice Meteor Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "StrongAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_SorcererStrongAttack3",
+      "name": "闪电风暴符文",
+      "nameEn": "Lightning Storm Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "skill": "StrongAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_WarriorBasicAttack",
+      "name": "英勇打击符文",
+      "nameEn": "Valiant Strike Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "BasicAttack",
+      "tier": ""
+    },
+    {
+      "id": "RareRune_WarriorBasicAttack2",
+      "name": "横扫打击符文",
+      "nameEn": "Sweep Strike Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "BasicAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_WarriorBasicAttack3",
+      "name": "血刃打击符文",
+      "nameEn": "Blood Strike Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "BasicAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_WarriorHeavyAttack1",
+      "name": "烈焰打击符文",
+      "nameEn": "Flame Strike Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "HeavyAttack",
+      "tier": "1"
+    },
+    {
+      "id": "RareRune_WarriorHeavyAttack2",
+      "name": "半月打击符文",
+      "nameEn": "Half Moon Strike Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "HeavyAttack",
+      "tier": "2"
+    },
+    {
+      "id": "RareRune_WarriorHeavyAttack3",
+      "name": "旋风斩符文",
+      "nameEn": "Whirlwind Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "HeavyAttack",
+      "tier": "3"
+    },
+    {
+      "id": "RareRune_WarriorRageShield",
+      "name": "狂怒护盾符文",
+      "nameEn": "Rage Shield Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "RageShield",
+      "tier": ""
+    },
+    {
+      "id": "RareRune_WarriorRageShout",
+      "name": "怒吼符文",
+      "nameEn": "Rage Shout Rune",
+      "quality": "rare",
+      "qualityName": "稀有",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "skill": "RageShout",
+      "tier": ""
+    }
+  ],
+  "set": {
+    "name": "阿瑟隆的坚盾",
+    "nameEn": "Strong Shield of the Atheron",
+    "pieces": [
+      {
+        "id": "SetRune1_1",
+        "name": "阿瑟隆之盾符文 (I)",
+        "nameEn": "Rune of Atheron's Shield (I)"
+      },
+      {
+        "id": "SetRune1_2",
+        "name": "阿瑟隆之盾符文 (II)",
+        "nameEn": "Rune of Atheron's Shield (II)"
+      },
+      {
+        "id": "SetRune1_3",
+        "name": "阿瑟隆之盾符文 (III)",
+        "nameEn": "Rune of Atheron's Shield (III)"
+      },
+      {
+        "id": "SetRune1_4",
+        "name": "阿瑟隆之盾符文 (IV)",
+        "nameEn": "Rune of Atheron's Shield (IV)"
+      },
+      {
+        "id": "SetRune1_5",
+        "name": "阿瑟隆之盾符文 (V)",
+        "nameEn": "Rune of Atheron's Shield (V)"
+      },
+      {
+        "id": "SetRune1_6",
+        "name": "阿瑟隆之盾符文 (VI)",
+        "nameEn": "Rune of Atheron's Shield (VI)"
+      }
+    ],
+    "effects": [
+      "+10%暴击几率。",
+      "暴击时回复5%的最大生命值。",
+      "怒气护盾额外提供20%暴击几率和50%暴击伤害。"
+    ]
+  },
+  "heroes": {
+    "Warrior": "战士",
+    "Sorcerer": "法师",
+    "Hunter": "猎人",
+    "Monk": "武僧"
+  }
+}

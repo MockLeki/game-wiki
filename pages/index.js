@@ -4,7 +4,9 @@ import LeaderboardPanel from '../components/LeaderboardPanel'
 
 export default function Home() {
   const stats = [
-    { icon: '⚔️', name: '装备', num: 112, link: '/gear' },
+    { icon: '⚔️', name: '装备', num: 126, link: '/gear' },
+    { icon: '💎', name: '宝石', num: 36, link: '/gems' },
+    { icon: '🔮', name: '符文', num: 43, link: '/runes' },
     { icon: '🐺', name: '仆从', num: 36, link: '/minions' },
     { icon: '🗺️', name: '关卡', num: 12, link: '/world' },
     { icon: '🎯', name: '技能', num: 90, link: '/skills' },

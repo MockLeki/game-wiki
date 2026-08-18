@@ -4,7 +4,7 @@ import itemsData from '../public/data/items.json'
 
 export async function getStaticProps() { return { props: {} } }
 
-const SLOTS = { weapon: '武器', helm: '头盔', chest: '胸甲', shoulder: '护肩', necklace: '项链', gloves: '手套', belt: '腰带', legs: '护腿', boots: '靴子', ring: '戒指' }
+const SLOTS = { weapon: '武器', helm: '头盔', chest: '胸甲', shoulder: '护肩', necklace: '项链', gloves: '手套', belt: '腰带', legs: '护腿', boots: '靴子', ring: '戒指', back: '背部' }
 // 使用每件装备的专属图标（来自 items.json 的 icon 字段）
 function getIcon(item) {
   return item.icon || '/images/items/ring.png'
@@ -15,9 +15,10 @@ const QUALITIES = [
   { key: 'uncommon', name: '非凡', class: 'chip-uncommon' },
   { key: 'rare', name: '稀有', class: 'chip-rare' },
   { key: 'legendary', name: '传说', class: 'chip-legendary' },
+  { key: 'divine', name: '神圣', class: 'chip-divine' },
 ]
-const Q_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }
-const Q_BADGE_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }
+const Q_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说', divine: '神圣' }
+const Q_BADGE_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说', divine: '神圣' }
 
 export default function GearPage() {
   const [search, setSearch] = useState('')
@@ -61,7 +62,7 @@ export default function GearPage() {
       return true
     })
     if (sort === 'rarity') {
-      const order2 = { legendary: 4, rare: 3, uncommon: 2, common: 1 }
+      const order2 = { divine: 5, legendary: 4, rare: 3, uncommon: 2, common: 1 }
       result = result.sort((a, b) => order === 'desc' ? order2[b.quality] - order2[a.quality] : order2[a.quality] - order2[b.quality])
     } else if (sort === 'name') {
       result = result.sort((a, b) => order === 'desc' ? b.name.localeCompare(a.name) : a.name.localeCompare(b.name))
@@ -75,8 +76,24 @@ export default function GearPage() {
         <div className="hero-card" style={{padding: '1.5rem'}}>
           <h1 className="hero-title" style={{fontSize: '2.2rem', textAlign: 'left'}}>装备数据库</h1>
           <p className="hero-subtitle" style={{textAlign: 'left', margin: 0}}>
-            浏览 112 件桌面破坏神装备，含 4 品质、10 部位、词条、获取途径。
+            浏览 126 件桌面破坏神装备，含 5 品质、11 部位、词条、获取途径。
           </p>
+        </div>
+
+        {/* 黑雾装备机制说明 */}
+        <div className="panel" style={{ marginBottom: '1.5rem' }}>
+          <div className="panel-title">🌫 黑雾装备</div>
+          <div style={{ padding: '1rem 1.2rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+            <img src="/images/icons/slot_bg_legendary_blackmist.png" alt="黑雾装备" style={{ width: 64, height: 64, flexShrink: 0, border: '1px solid var(--border-cyan)' }} />
+            <div style={{ flex: 1 }}>
+              <div style={{ color: 'var(--text)', fontSize: '0.9rem', lineHeight: 1.7 }}>
+                黑雾装备是强大且可自定义的传奇装备，拥有最高的属性数值。它蕴含 <strong style={{ color: 'var(--gold)' }}>7 条隐藏属性</strong>——揭开每条属性上的迷雾即可显现两个选项，选择其一应用到装备上。
+              </div>
+              <div style={{ color: 'var(--muted)', fontSize: '0.8rem', marginTop: '0.5rem' }}>
+                通过「暗影」夫人（Lady "Shadow"，神秘物品商人）处放入装备 → 揭开黑雾 → 逐条选择属性 → 完全揭示。
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -113,8 +130,8 @@ export default function GearPage() {
           <div className="sidebar-section">
             <h4>统计</h4>
             <div style={{color: 'var(--text)', fontSize: '0.85rem', lineHeight: 1.8}}>
-              总装备: <span style={{color: 'var(--gold)'}}>112</span><br/>
-              稀有度: <span style={{color: 'var(--gold)'}}>4</span><br/>
+              总装备: <span style={{color: 'var(--gold)'}}>126</span><br/>
+              稀有度: <span style={{color: 'var(--gold)'}}>5</span><br/>
               品质等级: <span style={{color: 'var(--gold)'}}>90</span>
             </div>
           </div>

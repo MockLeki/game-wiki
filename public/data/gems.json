@@ -1,0 +1,373 @@
+{
+  "gemTypes": {
+    "Ruby": "红宝石",
+    "Amethyst": "紫水晶",
+    "Diamond": "钻石",
+    "Topaz": "黄玉",
+    "Emerald": "祖母绿",
+    "Sapphire": "蓝宝石"
+  },
+  "tiers": 6,
+  "gems": [
+    {
+      "id": "GemAmethyst1",
+      "type": "Amethyst",
+      "typeName": "紫水晶",
+      "tier": 1,
+      "name": "粗糙的紫水晶球",
+      "nameEn": "Raw Sphere Amethyst",
+      "color": "#9b59b6",
+      "icon": "/images/icons/items/gem_amethyst_1.png"
+    },
+    {
+      "id": "GemAmethyst2",
+      "type": "Amethyst",
+      "typeName": "紫水晶",
+      "tier": 2,
+      "name": "碎裂的紫水晶泪滴",
+      "nameEn": "Chipped Teardrop Amethyst",
+      "color": "#9b59b6",
+      "icon": "/images/icons/items/gem_amethyst_2.png"
+    },
+    {
+      "id": "GemAmethyst3",
+      "type": "Amethyst",
+      "typeName": "紫水晶",
+      "tier": 3,
+      "name": "粗砺的紫水晶方块",
+      "nameEn": "Rough Square Amethyst",
+      "color": "#9b59b6",
+      "icon": "/images/icons/items/gem_amethyst_3.png"
+    },
+    {
+      "id": "GemAmethyst4",
+      "type": "Amethyst",
+      "typeName": "紫水晶",
+      "tier": 4,
+      "name": "抛光的紫水晶菱形",
+      "nameEn": "Polished Rhombus Amethyst",
+      "color": "#9b59b6",
+      "icon": "/images/icons/items/gem_amethyst_4.png"
+    },
+    {
+      "id": "GemAmethyst5",
+      "type": "Amethyst",
+      "typeName": "紫水晶",
+      "tier": 5,
+      "name": "无瑕的紫水晶六边形",
+      "nameEn": "Flawless Hexagon Amethyst",
+      "color": "#9b59b6",
+      "icon": "/images/icons/items/gem_amethyst_5.png"
+    },
+    {
+      "id": "GemAmethyst6",
+      "type": "Amethyst",
+      "typeName": "紫水晶",
+      "tier": 6,
+      "name": "璀璨的紫水晶八边形",
+      "nameEn": "Radiant Octagon Amethyst",
+      "color": "#9b59b6",
+      "icon": "/images/icons/items/gem_amethyst_6.png"
+    },
+    {
+      "id": "GemDiamond1",
+      "type": "Diamond",
+      "typeName": "钻石",
+      "tier": 1,
+      "name": "粗糙的钻石球",
+      "nameEn": "Raw Sphere Diamond",
+      "color": "#c8d6e5",
+      "icon": "/images/icons/items/gem_diamond_1.png"
+    },
+    {
+      "id": "GemDiamond2",
+      "type": "Diamond",
+      "typeName": "钻石",
+      "tier": 2,
+      "name": "碎裂的钻石泪滴",
+      "nameEn": "Chipped Teardrop Diamond",
+      "color": "#c8d6e5",
+      "icon": "/images/icons/items/gem_diamond_2.png"
+    },
+    {
+      "id": "GemDiamond3",
+      "type": "Diamond",
+      "typeName": "钻石",
+      "tier": 3,
+      "name": "粗砺的钻石方块",
+      "nameEn": "Rough Square Diamond",
+      "color": "#c8d6e5",
+      "icon": "/images/icons/items/gem_diamond_3.png"
+    },
+    {
+      "id": "GemDiamond4",
+      "type": "Diamond",
+      "typeName": "钻石",
+      "tier": 4,
+      "name": "抛光的钻石菱形",
+      "nameEn": "Polished Rhombus Diamond",
+      "color": "#c8d6e5",
+      "icon": "/images/icons/items/gem_diamond_4.png"
+    },
+    {
+      "id": "GemDiamond5",
+      "type": "Diamond",
+      "typeName": "钻石",
+      "tier": 5,
+      "name": "无瑕的钻石六边形",
+      "nameEn": "Flawless Hexagon Diamond",
+      "color": "#c8d6e5",
+      "icon": "/images/icons/items/gem_diamond_5.png"
+    },
+    {
+      "id": "GemDiamond6",
+      "type": "Diamond",
+      "typeName": "钻石",
+      "tier": 6,
+      "name": "璀璨的钻石八边形",
+      "nameEn": "Radiant Octagon Diamond",
+      "color": "#c8d6e5",
+      "icon": "/images/icons/items/gem_diamond_6.png"
+    },
+    {
+      "id": "GemEmerald1",
+      "type": "Emerald",
+      "typeName": "祖母绿",
+      "tier": 1,
+      "name": "粗糙的祖母绿球",
+      "nameEn": "Raw Sphere Emerald",
+      "color": "#2ecc71",
+      "icon": "/images/icons/items/gem_emerald_1.png"
+    },
+    {
+      "id": "GemEmerald2",
+      "type": "Emerald",
+      "typeName": "祖母绿",
+      "tier": 2,
+      "name": "碎裂的祖母绿泪滴",
+      "nameEn": "Chipped Teardrop Emerald",
+      "color": "#2ecc71",
+      "icon": "/images/icons/items/gem_emerald_2.png"
+    },
+    {
+      "id": "GemEmerald3",
+      "type": "Emerald",
+      "typeName": "祖母绿",
+      "tier": 3,
+      "name": "粗砺的祖母绿方块",
+      "nameEn": "Rough Square Emerald",
+      "color": "#2ecc71",
+      "icon": "/images/icons/items/gem_emerald_3.png"
+    },
+    {
+      "id": "GemEmerald4",
+      "type": "Emerald",
+      "typeName": "祖母绿",
+      "tier": 4,
+      "name": "抛光的祖母绿菱形",
+      "nameEn": "Polished Rhombus Emerald",
+      "color": "#2ecc71",
+      "icon": "/images/icons/items/gem_emerald_4.png"
+    },
+    {
+      "id": "GemEmerald5",
+      "type": "Emerald",
+      "typeName": "祖母绿",
+      "tier": 5,
+      "name": "无瑕的祖母绿六边形",
+      "nameEn": "Flawless Hexagon Emerald",
+      "color": "#2ecc71",
+      "icon": "/images/icons/items/gem_emerald_5.png"
+    },
+    {
+      "id": "GemEmerald6",
+      "type": "Emerald",
+      "typeName": "祖母绿",
+      "tier": 6,
+      "name": "璀璨的祖母绿八边形",
+      "nameEn": "Radiant Octagon Emerald",
+      "color": "#2ecc71",
+      "icon": "/images/icons/items/gem_emerald_6.png"
+    },
+    {
+      "id": "GemRuby1",
+      "type": "Ruby",
+      "typeName": "红宝石",
+      "tier": 1,
+      "name": "粗糙的红宝石球",
+      "nameEn": "Raw Sphere Ruby",
+      "color": "#e03a3a",
+      "icon": "/images/icons/items/gem_ruby_1.png"
+    },
+    {
+      "id": "GemRuby2",
+      "type": "Ruby",
+      "typeName": "红宝石",
+      "tier": 2,
+      "name": "碎裂的红宝石泪滴",
+      "nameEn": "Chipped Teardrop Ruby",
+      "color": "#e03a3a",
+      "icon": "/images/icons/items/gem_ruby_2.png"
+    },
+    {
+      "id": "GemRuby3",
+      "type": "Ruby",
+      "typeName": "红宝石",
+      "tier": 3,
+      "name": "粗砺的红宝石方块",
+      "nameEn": "Rough Square Ruby",
+      "color": "#e03a3a",
+      "icon": "/images/icons/items/gem_ruby_3.png"
+    },
+    {
+      "id": "GemRuby4",
+      "type": "Ruby",
+      "typeName": "红宝石",
+      "tier": 4,
+      "name": "抛光的红宝石菱形",
+      "nameEn": "Polished Rhombus Ruby",
+      "color": "#e03a3a",
+      "icon": "/images/icons/items/gem_ruby_4.png"
+    },
+    {
+      "id": "GemRuby5",
+      "type": "Ruby",
+      "typeName": "红宝石",
+      "tier": 5,
+      "name": "无瑕的红宝石六边形",
+      "nameEn": "Flawless Hexagon Ruby",
+      "color": "#e03a3a",
+      "icon": "/images/icons/items/gem_ruby_5.png"
+    },
+    {
+      "id": "GemRuby6",
+      "type": "Ruby",
+      "typeName": "红宝石",
+      "tier": 6,
+      "name": "璀璨的红宝石八边形",
+      "nameEn": "Radiant Octagon Ruby",
+      "color": "#e03a3a",
+      "icon": "/images/icons/items/gem_ruby_6.png"
+    },
+    {
+      "id": "GemSapphire1",
+      "type": "Sapphire",
+      "typeName": "蓝宝石",
+      "tier": 1,
+      "name": "粗糙的蓝宝石球",
+      "nameEn": "Raw Sphere Sapphire",
+      "color": "#3498db",
+      "icon": "/images/icons/items/gem_sapphire_1.png"
+    },
+    {
+      "id": "GemSapphire2",
+      "type": "Sapphire",
+      "typeName": "蓝宝石",
+      "tier": 2,
+      "name": "碎裂的蓝宝石泪滴",
+      "nameEn": "Chipped Teardrop Sapphire",
+      "color": "#3498db",
+      "icon": "/images/icons/items/gem_sapphire_2.png"
+    },
+    {
+      "id": "GemSapphire3",
+      "type": "Sapphire",
+      "typeName": "蓝宝石",
+      "tier": 3,
+      "name": "粗砺的蓝宝石方块",
+      "nameEn": "Rough Square Sapphire",
+      "color": "#3498db",
+      "icon": "/images/icons/items/gem_sapphire_3.png"
+    },
+    {
+      "id": "GemSapphire4",
+      "type": "Sapphire",
+      "typeName": "蓝宝石",
+      "tier": 4,
+      "name": "抛光的蓝宝石菱形",
+      "nameEn": "Polished Rhombus Sapphire",
+      "color": "#3498db",
+      "icon": "/images/icons/items/gem_sapphire_4.png"
+    },
+    {
+      "id": "GemSapphire5",
+      "type": "Sapphire",
+      "typeName": "蓝宝石",
+      "tier": 5,
+      "name": "无瑕的蓝宝石六边形",
+      "nameEn": "Flawless Hexagon Sapphire",
+      "color": "#3498db",
+      "icon": "/images/icons/items/gem_sapphire_5.png"
+    },
+    {
+      "id": "GemSapphire6",
+      "type": "Sapphire",
+      "typeName": "蓝宝石",
+      "tier": 6,
+      "name": "璀璨的蓝宝石八边形",
+      "nameEn": "Radiant Octagon Sapphire",
+      "color": "#3498db",
+      "icon": "/images/icons/items/gem_sapphire_6.png"
+    },
+    {
+      "id": "GemTopaz1",
+      "type": "Topaz",
+      "typeName": "黄玉",
+      "tier": 1,
+      "name": "粗糙的黄玉球",
+      "nameEn": "Raw Sphere Topaz",
+      "color": "#f1c40f",
+      "icon": "/images/icons/items/gem_topaz_1.png"
+    },
+    {
+      "id": "GemTopaz2",
+      "type": "Topaz",
+      "typeName": "黄玉",
+      "tier": 2,
+      "name": "碎裂的黄玉泪滴",
+      "nameEn": "Chipped Teardrop Topaz",
+      "color": "#f1c40f",
+      "icon": "/images/icons/items/gem_topaz_2.png"
+    },
+    {
+      "id": "GemTopaz3",
+      "type": "Topaz",
+      "typeName": "黄玉",
+      "tier": 3,
+      "name": "粗砺的黄玉方块",
+      "nameEn": "Rough Square Topaz",
+      "color": "#f1c40f",
+      "icon": "/images/icons/items/gem_topaz_3.png"
+    },
+    {
+      "id": "GemTopaz4",
+      "type": "Topaz",
+      "typeName": "黄玉",
+      "tier": 4,
+      "name": "抛光的黄玉菱形",
+      "nameEn": "Polished Rhombus Topaz",
+      "color": "#f1c40f",
+      "icon": "/images/icons/items/gem_topaz_4.png"
+    },
+    {
+      "id": "GemTopaz5",
+      "type": "Topaz",
+      "typeName": "黄玉",
+      "tier": 5,
+      "name": "无瑕的黄玉六边形",
+      "nameEn": "Flawless Hexagon Topaz",
+      "color": "#f1c40f",
+      "icon": "/images/icons/items/gem_topaz_5.png"
+    },
+    {
+      "id": "GemTopaz6",
+      "type": "Topaz",
+      "typeName": "黄玉",
+      "tier": 6,
+      "name": "璀璨的黄玉八边形",
+      "nameEn": "Radiant Octagon Topaz",
+      "color": "#f1c40f",
+      "icon": "/images/icons/items/gem_topaz_6.png"
+    }
+  ]
+}
