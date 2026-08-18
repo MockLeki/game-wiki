@@ -68,7 +68,7 @@ export default function SiteStats() {
         ))}
       </div>
       <div style={{ padding: '0 1.2rem 0.9rem', fontSize: '0.75rem', color: 'var(--muted)', textAlign: 'center' }}>
-        自 Wiki 建站以来的累计访问量（起点 {stats.start ? stats.start.toLocaleString() : '15,000'}）· 同一设备当天仅计一次
+        自 Wiki 建站以来的累计访问量 · 同一设备当天仅计一次
       </div>
     </div>
   )
