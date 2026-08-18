@@ -1,35 +1,17 @@
 import { useState, useEffect } from 'react'
 
-// 本地时区日期字符串（避免 UTC 偏移）
-function localDateStr(d) {
-  const y = d.getFullYear()
-  const m = String(d.getMonth() + 1).padStart(2, '0')
-  const day = String(d.getDate()).padStart(2, '0')
-  return `${y}-${m}-${day}`
-}
-
 export default function SiteStats() {
   const [stats, setStats] = useState(null)
 
   useEffect(() => {
     let alive = true
-    const visitedKey = `wiki_visited_${localDateStr(new Date())}`
 
     async function load() {
       try {
-        // 先读当前数据
-        const r = await fetch('/api/stats')
-        const d = await r.json()
-        if (!alive) return
-        setStats(d)
-
-        // 同一浏览器当天只计一次，避免刷新重复计数
-        if (!localStorage.getItem(visitedKey)) {
-          localStorage.setItem(visitedKey, '1')
-          const p = await fetch('/api/stats', { method: 'POST' })
-          const pd = await p.json()
-          if (alive) setStats(pd)
-        }
+        // 每次进入 wiki 都 +1（不做设备去重）
+        const p = await fetch('/api/stats', { method: 'POST' })
+        const d = await p.json()
+        if (alive) setStats(d)
       } catch (e) {
         // API 未部署时静默失败
       }
@@ -68,7 +50,7 @@ export default function SiteStats() {
         ))}
       </div>
       <div style={{ padding: '0 1.2rem 0.9rem', fontSize: '0.75rem', color: 'var(--muted)', textAlign: 'center' }}>
-        自 Wiki 建站以来的累计访问量 · 同一设备当天仅计一次
+        自 Wiki 建站以来的累计访问量 · 每次进入 +1
       </div>
     </div>
   )
