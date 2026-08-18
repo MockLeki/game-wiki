@@ -133,15 +133,14 @@ export default function LeaderboardPanel({ compact = false }) {
                   </div>
                 )}
               </div>
-              {/* 3 卡片 */}
-              <div style={{display:'grid',gridTemplateColumns:'repeat(3, 1fr)',gap:'0.8rem'}}>
+              {/* 2 卡片（删 Wiki 注册玩家；正式版以后再做） */}
+              <div style={{display:'grid',gridTemplateColumns:'repeat(2, 1fr)',gap:'0.8rem'}}>
                 <StatCard label="Demo 当前在线" value={data.players || 0} unit="人" />
                 <StatCard
                   label="完成至少 1 成就"
                   value={data.achievements?.length ? Math.round(data.achievements[0]?.percent || 0) : 0}
                   unit="%"
                 />
-                <StatCard label="Wiki 注册玩家" value={data.wikiPlayerCount || 0} unit="人" />
               </div>
 
               {/* Steam 新闻 */}

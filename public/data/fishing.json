@@ -1,0 +1,125 @@
+{
+  "beach": {
+    "name": "塔赞渔滩",
+    "nameEn": "Tazan Fishing Beach",
+    "desc": "塔赞之城外的一小片沙滩，几名渔人在此浅滩垂钓。这里只有一根鱼竿、一只水桶，以及今日上钩的收获。",
+    "descEn": "A short strip of sand just outside the City of Tazan, where a few anglers work the shallows. Nothing here but a rod, a bucket, and whatever is biting today."
+  },
+  "priceTiers": {
+    "good_gold": {
+      "cn": "好价钱",
+      "en": "Good Gold",
+      "rank": 1
+    },
+    "handsomely": {
+      "cn": "丰厚金币",
+      "en": "Handsomely",
+      "rank": 3
+    },
+    "small_fortune": {
+      "cn": "一笔小财富",
+      "en": "A Small Fortune",
+      "rank": 8
+    }
+  },
+  "fish": [
+    {
+      "id": "CommonFish1",
+      "type": "fish",
+      "quality": "common",
+      "priceTier": "good_gold",
+      "priceRank": 1,
+      "name": "白骨鱼骸",
+      "nameEn": "Bleached Fishbones",
+      "desc": "曾在此游弋之物只余白骨，其余的都进了海鸥的肚子。商人愿意为它付出可观的金币。",
+      "descEn": "Whatever swam here left only bone. The gulls got the rest. A merchant will pay good gold for it."
+    },
+    {
+      "id": "CommonFish2",
+      "type": "fish",
+      "quality": "common",
+      "priceTier": "good_gold",
+      "priceRank": 1,
+      "name": "条纹文蛤",
+      "nameEn": "Banded Clam",
+      "desc": "紧闭如铁，比看上去更沉。厨子们最爱用它熬汤。商人愿意为它付出可观的金币。",
+      "descEn": "Sealed tight and heavier than it looks. Cooks swear by the broth. A merchant will pay good gold for it."
+    },
+    {
+      "id": "UnCommonFish1",
+      "type": "fish",
+      "quality": "uncommon",
+      "priceTier": "handsomely",
+      "priceRank": 3,
+      "name": "锈钳螯虾",
+      "nameEn": "Rustclaw Crayfish",
+      "desc": "双钳能夹碎指节。徒手去抓也值得冒这个险。商人愿意为它付出丰厚的金币。",
+      "descEn": "Its pincers can crack a knuckle. Worth the risk of catching one by hand. A merchant will pay handsomely for it."
+    },
+    {
+      "id": "UnCommonFish2",
+      "type": "fish",
+      "quality": "uncommon",
+      "priceTier": "handsomely",
+      "priceRank": 3,
+      "name": "月鳞鲦",
+      "nameEn": "Moonscale Dace",
+      "desc": "苍白如沉底的银币。渔妇说它只在无云之夜浮上来。商人愿意为它付出丰厚的金币。",
+      "descEn": "Pale as a drowned coin. Fishwives say it only rises on cloudless nights. A merchant will pay handsomely for it."
+    },
+    {
+      "id": "RareFish1",
+      "type": "fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 8,
+      "name": "辉鳍神仙鱼",
+      "nameEn": "Glimmerfin Angel",
+      "desc": "日落之后，鳞片仍久久含光。收藏家愿以重金求一条完好的。商人愿意为它掏出一小笔财富。",
+      "descEn": "Its scales hold light long after the sun is gone. Collectors pay in gold for a whole one. A merchant will pay a small fortune for it."
+    },
+    {
+      "id": "RareFish2",
+      "type": "fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 8,
+      "name": "珊瑚绯鱼",
+      "nameEn": "Coralbloom Sunfish",
+      "desc": "礁石般的绯红，触手温热。一离开浅水便会死去。商人愿意为它掏出一小笔财富。",
+      "descEn": "Reef-red and warm to the touch. It dies the moment it leaves the shallows. A merchant will pay a small fortune for it."
+    },
+    {
+      "id": "PotionFish1",
+      "type": "potion_fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 6,
+      "name": "青斑鱼",
+      "nameEn": "Greenspot Grouper",
+      "desc": "每秒回复10点生命，持续1小时。",
+      "descEn": "Restore 10 Life per second for 1 hour.",
+      "effect": "1小时内每秒回复10点生命值",
+      "effectEn": "Restore 10 Life/sec for 1 hour"
+    },
+    {
+      "id": "PotionFish2",
+      "type": "potion_fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 6,
+      "name": "翡翠墨鱿",
+      "nameEn": "Jadeink Squid",
+      "desc": "获得105点荆棘，持续1小时。",
+      "descEn": "Gain 105 Thorns for 1 hour.",
+      "effect": "1小时内获得105点荆棘",
+      "effectEn": "Gain 105 Thorns for 1 hour"
+    }
+  ],
+  "stats": {
+    "common": 2,
+    "uncommon": 2,
+    "rare": 4,
+    "total": 8
+  }
+}

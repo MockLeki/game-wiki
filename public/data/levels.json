@@ -242,5 +242,70 @@
     "drops": [],
     "description": "尚未解锁的神秘区域，英雄需要达到特定条件才能进入。",
     "enemies": []
+  },
+  {
+    "key": "Fishing-Beach",
+    "name": "塔赞渔滩",
+    "nameEn": "Tazan Fishing Beach",
+    "area": "塔赞群岛",
+    "level": "不限",
+    "difficulty": "安全",
+    "boss": "无",
+    "drops": [
+      "鱼类（8种）",
+      "金币"
+    ],
+    "description": "塔赞之城外的一小片沙滩，几名渔人在此浅滩垂钓。这里只有一根鱼竿、一只水桶，以及今日上钩的收获。",
+    "enemies": [],
+    "isFishing": true,
+    "id": 13
+  },
+  {
+    "key": "TrainingGrounds",
+    "name": "训练场",
+    "nameEn": "Training Grounds",
+    "area": "阿瑟隆王国",
+    "level": "不限",
+    "difficulty": "安全",
+    "boss": "无（训练假人）",
+    "drops": [],
+    "description": "一片安静的空地，立着一个打不坏的训练假人。随意测试你的装备与技能——假人永远不会倒下，也不会还手，你可以随时离开。",
+    "enemies": [
+      "训练假人"
+    ],
+    "id": 14
+  },
+  {
+    "key": "TreasureForest",
+    "name": "梦幻国王森林",
+    "nameEn": "Dreamy Kings Woods",
+    "area": "国王森林",
+    "level": "中高级",
+    "difficulty": "困难",
+    "boss": "未知",
+    "drops": [
+      "宝物",
+      "紫色装备"
+    ],
+    "description": "国王森林南部的一片梦幻之地。梦境中的谜之生物在此出没，同时藏有大量宝物。",
+    "enemies": [
+      "梦境生物"
+    ],
+    "id": 15
+  },
+  {
+    "key": "RedForest",
+    "name": "绯红山谷",
+    "nameEn": "The Crimson Vale",
+    "area": "绯红之地",
+    "level": "高级",
+    "difficulty": "极难",
+    "boss": "未知",
+    "drops": [],
+    "description": "一个被猩红浸染的山谷，充斥着来自地狱的异象。",
+    "enemies": [
+      "地狱生物"
+    ],
+    "id": 16
   }
 ]
