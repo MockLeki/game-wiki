@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
 import LeaderboardPanel from '../components/LeaderboardPanel'
+import SiteStats from '../components/SiteStats'
 
 export default function Home() {
   const stats = [
@@ -45,6 +46,9 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        {/* 站点访问统计 */}
+        <SiteStats />
 
         {/* QQ 玩家交流群入口 */}
         <a
