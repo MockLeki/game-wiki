@@ -130,12 +130,15 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
     { path: '/gear', label: '装备' },
     { path: '/gems', label: '宝石' },
     { path: '/runes', label: '符文' },
+    { path: '/items', label: '物品' },
     { path: '/skills', label: '技能' },
     { path: '/minions', label: '仆从' },
     { path: '/levels', label: '关卡' },
     { path: '/fishing', label: '钓鱼' },
     { path: '/loot', label: '掉落' },
     { path: '/affixes', label: '词条' },
+    { path: '/world', label: '地图' },
+    { path: '/systems', label: '新系统' },
     { path: '/build', label: '构筑' },
   ]
 

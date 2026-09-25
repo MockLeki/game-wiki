@@ -1,0 +1,1337 @@
+{
+  "groups": [
+    {
+      "id": "ore",
+      "name": "矿石",
+      "icon": "⛏",
+      "items": [
+        {
+          "id": "ore1",
+          "name": "铁矿石",
+          "nameEn": "Iron Ore",
+          "desc": "一块未经冶炼的铁矿石。熔炼后可用作升级装备的材料。",
+          "descEn": "A chunk of raw iron ore. Smelted down as a reagent for upgrading equipment.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "ore2",
+          "name": "金矿石",
+          "nameEn": "Gold Ore",
+          "desc": "一块未经冶炼的金矿石。熔炼后可用作升级装备的材料。",
+          "descEn": "A nugget of raw gold ore. Smelted down as a reagent for upgrading equipment.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "ore3",
+          "name": "大地精华",
+          "nameEn": "Earth Essence",
+          "desc": "分解强力装备时释放的原始大地精华。用作升级装备的材料。",
+          "descEn": "A concentrated essence of primal earth, released when powerful equipment is salvaged. Used as a reagent for upgrading equipment.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        }
+      ]
+    },
+    {
+      "id": "plant",
+      "name": "草药",
+      "icon": "🌿",
+      "items": [
+        {
+          "id": "plant1",
+          "name": "蘑菇",
+          "nameEn": "Mushroom",
+          "desc": "一种采集的蘑菇，具有强效特性。用作酿造药水的材料。",
+          "descEn": "A foraged mushroom with potent properties. Used as an ingredient for brewing potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant2",
+          "name": "星叶草",
+          "nameEn": "Starleaf",
+          "desc": "一种闪烁着星光的稀有叶片。用作酿造药水的材料。",
+          "descEn": "A rare leaf that shimmers with starlight. Used as an ingredient for brewing potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant3",
+          "name": "橡树叶",
+          "nameEn": "Oak Leaf",
+          "desc": "一种来自古老橡树的坚韧叶片。用作酿造药水的材料。",
+          "descEn": "A sturdy leaf from an ancient oak. Used as an ingredient for brewing potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant4",
+          "name": "沙漠玫瑰",
+          "nameEn": "Desert Rose",
+          "desc": "一种绽放于塔赞沙漠的稀有红花。用作酿造强效药水的材料。",
+          "descEn": "A rare red flower that blooms in the Tazan Desert. Used as an ingredient for brewing powerful potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant5",
+          "name": "潮丝海带",
+          "nameEn": "Tidesilk Kelp",
+          "desc": "从潮间浅滩采集的丝滑海带。用作酿造药水的材料。",
+          "descEn": "Silken kelp gathered from the tidal shallows. Used as an ingredient for brewing potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant6",
+          "name": "绯红珊瑚",
+          "nameEn": "Crimson Coral",
+          "desc": "从海岸礁石上撬下的鲜红珊瑚枝。用作酿造强效药水的材料。",
+          "descEn": "A vivid red branch prised from a shoreline reef. Used as an ingredient for brewing powerful potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant7",
+          "name": "焰绽花",
+          "nameEn": "Emberbloom",
+          "desc": "在绯红山谷的蕨丛中绽放的朔红花朵。用作酿造强效药剂的材料。",
+          "descEn": "A scarlet bloom that opens among the ferns of the Crimson Valley. Used as an ingredient for brewing powerful potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant8",
+          "name": "瘮刺草",
+          "nameEn": "Gallthorn",
+          "desc": "贫瘁之地所产的绯红多刺仙人掌。剖开外皮，内里的荚果呈苍绿色，触之如蜡。用作酿造强效药剂的材料。",
+          "descEn": "A barbed crimson cactus of the Barrens. Split the rind and the pods within are pale sage and waxy. Used as an ingredient for brewing powerful potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant_snow1",
+          "name": "霜花",
+          "nameEn": "Frostbloom",
+          "desc": "一种在雪中绽放的蓝色花朵。用作酿造药水的材料。",
+          "descEn": "A blue flower that blooms among the snow. Used as an ingredient for brewing potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "plant_snow2",
+          "name": "雪叶草",
+          "nameEn": "Snowleaf",
+          "desc": "一种长着冰蓝色叶片的耐寒草药。用作酿造药水的材料。",
+          "descEn": "A hardy herb with icy blue leaves. Used as an ingredient for brewing potions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        }
+      ]
+    },
+    {
+      "id": "bossmat",
+      "name": "首领材料",
+      "icon": "👹",
+      "items": [
+        {
+          "id": "BeachCrabBossMat",
+          "name": "怒潮巨螯",
+          "nameEn": "Tidewrath Pincer",
+          "desc": "蟹王的巨螯，即便死后依旧紧紧闭合。如此顽固的甲壳向来为匠人所珍视。",
+          "descEn": "The greater claw of the crab king, still clenched shut in death. Craftsmen prize shell this stubborn.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "BigTreantMat",
+          "name": "古橡树皮",
+          "nameEn": "Elder Oak Bark",
+          "desc": "从一棵奋力反抗的树上撬下的厚重树皮，树液仍在渗出。存放得越久，它便越发坚硬。",
+          "descEn": "A slab of bark prised from a tree that fought back, sap still seeping. It only grows harder the longer it is kept.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "DefiledKeepDragonMat",
+          "name": "污秽古龙鳞",
+          "nameEn": "Defiled Wyrm Scales",
+          "desc": "从污秽古龙身上剥下的暗色鳞片，腐化之力盘踞于坚如钢铁的边缘。",
+          "descEn": "Dark scales stripped from the Defiled Wyrm. Corruption clings to their iron-hard edges.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "DesertManticoraBossMat",
+          "name": "蝎狮毒囊",
+          "nameEn": "Manticore Venom Sac",
+          "desc": "从蝎狮尾部取下的肿胀毒刺囊，此刻仍在抽搐。在有人琢磨出用途之前，最好将它封好。",
+          "descEn": "The bloated sting sac from a manticore's tail, twitching even now. Best kept sealed until someone finds a use for it.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "OgreBossMat",
+          "name": "食人魔之心",
+          "nameEn": "Ogre Heart",
+          "desc": "依旧温热，在掌心里微弱地跳动着。炼金术士从不多问，只管收下。",
+          "descEn": "Still warm, still beating faintly against the palm. Alchemists accept it without asking questions.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "RedDesertAirWarlordMat",
+          "name": "红岩碎块",
+          "nameEn": "Redrock Shard",
+          "desc": "从红岩领主身上崩落的一块烈日炙烤过的岩石。即便入夜许久，它依然温热。",
+          "descEn": "A wedge of sun-baked stone chipped from the Redrock Lord himself. It stays warm long after nightfall.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "RedForestDragonMat",
+          "name": "绯红龙眼",
+          "nameEn": "Crimson Wyrm Eye",
+          "desc": "绯红谷之主的金色眼眸，狭长的瞳孔仍在追逐光芒。",
+          "descEn": "The golden eye of the Lord of the Crimson Vale. Its slit pupil still follows the light.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "SnowHillFrostDragonMat",
+          "name": "霜心结晶",
+          "nameEn": "Frostheart Crystal",
+          "desc": "凝结于冰霜巨龙心脏旁的晶体，没有火焰能融化封存其中的寒冬。",
+          "descEn": "A crystal formed beside the Frost Dragon's heart. No flame can melt the winter sealed within.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "VolcanoDemonLordMat",
+          "name": "灰烬领主之角",
+          "nameEn": "Cinderlord Horns",
+          "desc": "取自灰烬之主的焦红双角，深深的纹路中仍有余烬闪烁。",
+          "descEn": "Scorched red horns taken from the Lord of the Cinder. Embers glow deep within their ridges.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        }
+      ]
+    },
+    {
+      "id": "special",
+      "name": "特殊材料",
+      "icon": "🗝",
+      "items": [
+        {
+          "id": "Skull",
+          "name": "恶魔头骨",
+          "nameEn": "Demon's Skull",
+          "desc": "黄金首领关卡的必需材料。由银色首领掉落。",
+          "descEn": "Required material for the Golden Boss stage. Dropped by Silver Bosses.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "SkullNightmare",
+          "name": "噩梦头骨",
+          "nameEn": "Skull of Nightmare",
+          "desc": "由噩梦难度的银色首领掉落。进入该难度下的黄金首领关卡和神话裂隙所需的材料。",
+          "descEn": "Dropped by Silver Bosses on Nightmare difficulty. Required to enter Golden Boss stages and the Mythic Rift on that difficulty.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "SkullInferno",
+          "name": "炼狱头骨",
+          "nameEn": "Skull of Inferno",
+          "desc": "由炼狱难度的银色首领掉落。进入该难度下的黄金首领关卡和神话裂隙所需的材料。",
+          "descEn": "Dropped by Silver Bosses on Inferno difficulty. Required to enter Golden Boss stages and the Mythic Rift on that difficulty.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "SoulShard",
+          "name": "灵魂碎片",
+          "nameEn": "Soul Shard",
+          "desc": "从倒下的首领身上剥离并凝结而成的灵魂。某些商人只接受它作为交易货币。",
+          "descEn": "A soul torn from a fallen boss and crystallized. Certain merchants trade for nothing else.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "TreasureMapKey",
+          "name": "白银宝藏钥匙",
+          "nameEn": "Silver Treasure Key",
+          "desc": "一把白银宝藏钥匙。进入梦幻领域的必需材料，有极低概率从普通难度的怪物身上掉落。",
+          "descEn": "A silver treasure key. Required to enter the dream realm. Has an extremely low chance to drop from monsters on Normal difficulty.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "TreasureMapKeyNightmare",
+          "name": "黄金宝藏钥匙",
+          "nameEn": "Golden Treasure Key",
+          "desc": "一把黄金宝藏钥匙。进入梦幻领域的必需材料，有极低概率从噩梦难度的怪物身上掉落。",
+          "descEn": "A golden treasure key. Required to enter the dream realm. Has an extremely low chance to drop from monsters on Nightmare difficulty.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "TreasureMapKeyInferno",
+          "name": "皇家宝藏钥匙",
+          "nameEn": "Royal Treasure Key",
+          "desc": "一把皇家宝藏钥匙。进入梦幻领域的必需材料，有极低概率从炼狱难度的怪物身上掉落。",
+          "descEn": "A royal treasure key. Required to enter the dream realm. Has an extremely low chance to drop from monsters on Inferno difficulty.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        }
+      ]
+    },
+    {
+      "id": "hppotion",
+      "name": "生命药水",
+      "icon": "🧪",
+      "items": [
+        {
+          "id": "HpPotion1",
+          "name": "小型生命药水",
+          "nameEn": "Minor Health Potion",
+          "desc": "立即恢复25点HP，然后在3秒内恢复最大HP的30%。",
+          "descEn": "Instantly restores 25 HP, then restores 30% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "HpPotion2",
+          "name": "生命药水",
+          "nameEn": "Health Potion",
+          "desc": "立即恢复75点HP，然后在3秒内恢复最大HP的30%。",
+          "descEn": "Instantly restores 75 HP, then restores 30% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "HpPotion3",
+          "name": "大型生命药水",
+          "nameEn": "Greater Health Potion",
+          "desc": "立即恢复150点HP，然后在3秒内恢复最大HP的35%。",
+          "descEn": "Instantly restores 150 HP, then restores 35% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "HpPotion4",
+          "name": "顶级生命药水",
+          "nameEn": "Superior Health Potion",
+          "desc": "立即恢复300点HP，然后在3秒内恢复最大HP的35%。",
+          "descEn": "Instantly restores 300 HP, then restores 35% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "HpPotion5",
+          "name": "至尊生命药水",
+          "nameEn": "Supreme Health Potion",
+          "desc": "立即恢复600点HP，然后在3秒内恢复最大HP的40%。",
+          "descEn": "Instantly restores 600 HP, then restores 40% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "HpPotion6",
+          "name": "神圣生命药水",
+          "nameEn": "Divine Health Potion",
+          "desc": "立即恢复1000点HP，然后在3秒内恢复最大HP的40%。",
+          "descEn": "Instantly restores 1000 HP, then restores 40% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "HpPotion7",
+          "name": "神话生命药水",
+          "nameEn": "Mythic Health Potion",
+          "desc": "立即恢复1500点HP，然后在3秒内恢复最大HP的45%。",
+          "descEn": "Instantly restores 1500 HP, then restores 45% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "HpPotion8",
+          "name": "永恒生命药水",
+          "nameEn": "Eternal Health Potion",
+          "desc": "立即恢复2000点HP，然后在3秒内恢复最大HP的45%。",
+          "descEn": "Instantly restores 2000 HP, then restores 45% of max HP over 3 seconds.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        }
+      ]
+    },
+    {
+      "id": "buffpotion",
+      "name": "增益药水",
+      "icon": "⚗",
+      "items": [
+        {
+          "id": "ArmorPotion1",
+          "name": "铁木合剂",
+          "nameEn": "Flask of the Ironbark",
+          "desc": "在1小时内增加20%的护甲。",
+          "descEn": "Increase Armor by 20% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "AttackSpeedPotion1",
+          "name": "迅捷合剂",
+          "nameEn": "Flask of the Swift",
+          "desc": "在1小时内增加10%的攻击速度。",
+          "descEn": "Increase Attack Speed by 10% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "AttackSpeedPotion2",
+          "name": "高级迅捷合剂",
+          "nameEn": "Greater Flask of the Swift",
+          "desc": "在1小时内增加20%的攻击速度。",
+          "descEn": "Increase Attack Speed by 20% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "CinderbloodPotion",
+          "name": "高级活力合剂",
+          "nameEn": "Greater Flask of Vitality",
+          "desc": "最大生命值提高15%，持续1小时。",
+          "descEn": "Increase Maximum Health by 15% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "CrimsonHuntPotion",
+          "name": "高级杀戮合剂",
+          "nameEn": "Greater Flask of Slaying",
+          "desc": "对精英和首领的伤害提高20%，持续1小时。",
+          "descEn": "Increase damage against Elites and Bosses by 20% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "CritPotion1",
+          "name": "残酷合剂",
+          "nameEn": "Flask of the Cruel",
+          "desc": "在1小时内增加5%的暴击几率。",
+          "descEn": "Increase Crit Chance by 5% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "CritPotion2",
+          "name": "高级残酷合剂",
+          "nameEn": "Greater Flask of the Cruel",
+          "desc": "在1小时内增加10%的暴击几率。",
+          "descEn": "Increase Crit Chance by 10% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "DodgePotion1",
+          "name": "疾风合剂",
+          "nameEn": "Flask of the Wind",
+          "desc": "在1小时内增加5%的闪避几率。",
+          "descEn": "Increase Dodge Chance by 5% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "ExpPotion1",
+          "name": "经验药水",
+          "nameEn": "Experience Potion",
+          "desc": "在1小时内增加10%的经验获取量。",
+          "descEn": "Increase Experience gained by 10% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "FrostmindPotion",
+          "name": "高级专注合剂",
+          "nameEn": "Greater Flask of Focus",
+          "desc": "获得10%冷却缩减，持续1小时。",
+          "descEn": "Gain 10% Cooldown Reduction for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "GoldPotion1",
+          "name": "黄金药水",
+          "nameEn": "Potion of Gold",
+          "desc": "在1小时内增加10%的金币获取量。",
+          "descEn": "Increase Gold gained by 10% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "MovementPotion1",
+          "name": "速度药水",
+          "nameEn": "Potion of Speed",
+          "desc": "在1小时内增加15%的移动速度。",
+          "descEn": "Increase Movement Speed by 15% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "StormheartPotion",
+          "name": "高级高效合剂",
+          "nameEn": "Greater Flask of Efficiency",
+          "desc": "获得10%法力消耗缩减，持续1小时。",
+          "descEn": "Gain 10% Mana Cost Reduction for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "WyrmwardPotion",
+          "name": "高级抗性合剂",
+          "nameEn": "Greater Flask of Resistance",
+          "desc": "魔法抗性提高20%，持续1小时。",
+          "descEn": "Increase Magic Resist by 20% for 1 hour.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        }
+      ]
+    },
+    {
+      "id": "chest",
+      "name": "宝箱",
+      "icon": "🎁",
+      "items": [
+        {
+          "id": "RandomChest",
+          "name": "神秘胸甲",
+          "nameEn": "Mystery Chest Armor",
+          "desc": "获得一件随机稀有度的胸甲。",
+          "descEn": "Obtain one Chest armor of random Rarity.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "TreasureChest1",
+          "name": "银色宝箱",
+          "nameEn": "Silver Treasure Chest",
+          "desc": "一个镀金箱子。打开后释放若干物品，有机会掉落传奇品质道具。",
+          "descEn": "A gilded chest. Opens to release a handful of items with a chance at Legendary quality drops.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "TreasureChest2",
+          "name": "黄金宝箱",
+          "nameEn": "Golden Treasure Chest",
+          "desc": "一个装满战利品的镀金宝箱，打开后释放大量物品，有机会获得传奇或神圣品质的掉落物。",
+          "descEn": "A gilded chest brimming with plunder. Opens to release a bounty of items with a chance at Legendary or Divine quality drops.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        },
+        {
+          "id": "TreasureChest3",
+          "name": "神话宝箱",
+          "nameEn": "Mythic Treasure Chest",
+          "desc": "一个以符文封印、来自神话裂隙的宝箱。打开后可获得强力物品，并有机会掉落传奇或神圣品质的装备。",
+          "descEn": "A rune-bound chest claimed from the Mythic Rift. Opens to release powerful items with a chance at Legendary or Divine quality drops.",
+          "rarity": 0,
+          "rarityName": "普通",
+          "sellPrice": null
+        }
+      ]
+    },
+    {
+      "id": "rein",
+      "name": "随从缰绳",
+      "icon": "🐎",
+      "items": [
+        {
+          "id": "Rein_BeachCrabBoss",
+          "name": "怒潮蟹王之缰",
+          "nameEn": "Rein of the Tidewrath Crab King",
+          "slave": "BeachCrabBoss",
+          "slaveName": "怒潮蟹王",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 7000,
+          "desc": "使用后可永久解锁「怒潮蟹王」作为同伴。"
+        },
+        {
+          "id": "Rein_BeachHermitCrab",
+          "name": "漂壳寄居蟹之缰",
+          "nameEn": "Rein of the Driftshell Hermit Crab",
+          "slave": "BeachHermitCrab",
+          "slaveName": "漂壳寄居蟹",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「漂壳寄居蟹」作为同伴。"
+        },
+        {
+          "id": "Rein_BeachNaga",
+          "name": "浅滩娜迦之缰",
+          "nameEn": "Rein of the Shoal Naga",
+          "slave": "BeachNaga",
+          "slaveName": "浅滩娜迦",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「浅滩娜迦」作为同伴。"
+        },
+        {
+          "id": "Rein_BeachSerpent",
+          "name": "咸鳞海蛇之缰",
+          "nameEn": "Rein of the Brinescale Serpent",
+          "slave": "BeachSerpent",
+          "slaveName": "咸鳞海蛇",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「咸鳞海蛇」作为同伴。"
+        },
+        {
+          "id": "Rein_BeachSquid",
+          "name": "礁岩鱿鱼之缰",
+          "nameEn": "Rein of the Reef Squid",
+          "slave": "BeachSquid",
+          "slaveName": "礁岩鱿鱼",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「礁岩鱿鱼」作为同伴。"
+        },
+        {
+          "id": "Rein_BeachTurtleBoss",
+          "name": "远古守甲巨龟之缰",
+          "nameEn": "Rein of the Ancient Shellwarden",
+          "slave": "BeachTurtleBoss",
+          "slaveName": "远古守甲巨龟",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 7000,
+          "desc": "使用后可永久解锁「远古守甲巨龟」作为同伴。"
+        },
+        {
+          "id": "Rein_BigTreant",
+          "name": "远古橡树树人之缰",
+          "nameEn": "Rein of the Ancient Oak Treant",
+          "slave": "BigTreant",
+          "slaveName": "远古橡树树人",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「远古橡树树人」作为同伴。"
+        },
+        {
+          "id": "Rein_BlackHorse",
+          "name": "黑马之缰",
+          "nameEn": "Rein of the Dark Horse",
+          "slave": "BlackHorse",
+          "slaveName": "黑马",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「黑马」作为同伴。"
+        },
+        {
+          "id": "Rein_BlueMammoth",
+          "name": "蓝色猛犸象之缰",
+          "nameEn": "Rein of the Blue Mammoth",
+          "slave": "BlueMammoth",
+          "slaveName": "蓝色猛犸象",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 50000,
+          "desc": "使用后可永久解锁「蓝色猛犸象」作为同伴。"
+        },
+        {
+          "id": "Rein_Boar",
+          "name": "野猪之缰",
+          "nameEn": "Rein of the Boar",
+          "slave": "Boar",
+          "slaveName": "野猪",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「野猪」作为同伴。"
+        },
+        {
+          "id": "Rein_BrownPony",
+          "name": "栗色小马之缰",
+          "nameEn": "Rein of the Chestnut Pony",
+          "slave": "BrownPony",
+          "slaveName": "栗色小马",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「栗色小马」作为同伴。"
+        },
+        {
+          "id": "Rein_Bull",
+          "name": "橡背驮牛之缰",
+          "nameEn": "Rein of the Oakback Pack Bull",
+          "slave": "Bull",
+          "slaveName": "橡背驮牛",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「橡背驮牛」作为同伴。"
+        },
+        {
+          "id": "Rein_DarkElfMage",
+          "name": "黑暗精灵法师之缰",
+          "nameEn": "Rein of the Dark Elf Mage",
+          "slave": "DarkElfMage",
+          "slaveName": "黑暗精灵法师",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 5000,
+          "desc": "使用后可永久解锁「黑暗精灵法师」作为同伴。"
+        },
+        {
+          "id": "Rein_DefiledKeepAxemaster",
+          "name": "不死斧师之缰",
+          "nameEn": "Rein of the Undead Axemaster",
+          "slave": "DefiledKeepAxemaster",
+          "slaveName": "不死斧师",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「不死斧师」作为同伴。"
+        },
+        {
+          "id": "Rein_DefiledKeepDragon",
+          "name": "污秽古龙之缰",
+          "nameEn": "Rein of the Defiled Wyrm",
+          "slave": "DefiledKeepDragon",
+          "slaveName": "污秽古龙",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「污秽古龙」作为同伴。"
+        },
+        {
+          "id": "Rein_DefiledKeepOoze",
+          "name": "污秽黏怪之缰",
+          "nameEn": "Rein of the Defiled Ooze",
+          "slave": "DefiledKeepOoze",
+          "slaveName": "污秽黏怪",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「污秽黏怪」作为同伴。"
+        },
+        {
+          "id": "Rein_DefiledKeepReaper",
+          "name": "白骨死神之缰",
+          "nameEn": "Rein of the Bone Reaper",
+          "slave": "DefiledKeepReaper",
+          "slaveName": "白骨死神",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「白骨死神」作为同伴。"
+        },
+        {
+          "id": "Rein_DefiledKeepScarab",
+          "name": "腐尸圣甲虫之缰",
+          "nameEn": "Rein of the Carrion Scarab",
+          "slave": "DefiledKeepScarab",
+          "slaveName": "腐尸圣甲虫",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「腐尸圣甲虫」作为同伴。"
+        },
+        {
+          "id": "Rein_DefiledKeepSuccubus",
+          "name": "要塞魅魔之缰",
+          "nameEn": "Rein of the Keep Succubus",
+          "slave": "DefiledKeepSuccubus",
+          "slaveName": "要塞魅魔",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「要塞魅魔」作为同伴。"
+        },
+        {
+          "id": "Rein_DesertEagle",
+          "name": "沙丘之鹰之缰",
+          "nameEn": "Rein of the Dune Eagle",
+          "slave": "DesertEagle",
+          "slaveName": "沙丘之鹰",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「沙丘之鹰」作为同伴。"
+        },
+        {
+          "id": "Rein_DesertHarpy",
+          "name": "沙暴鹰身女妖女王之缰",
+          "nameEn": "Rein of the Sandstorm Harpy Queen",
+          "slave": "DesertHarpy",
+          "slaveName": "沙暴鹰身女妖女王",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 7000,
+          "desc": "使用后可永久解锁「沙暴鹰身女妖女王」作为同伴。"
+        },
+        {
+          "id": "Rein_DesertKoboldThief",
+          "name": "沙漠狗头人盗贼之缰",
+          "nameEn": "Rein of the Sand Kobold Thief",
+          "slave": "DesertKoboldThief",
+          "slaveName": "沙漠狗头人盗贼",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「沙漠狗头人盗贼」作为同伴。"
+        },
+        {
+          "id": "Rein_DesertKoboldWarrior",
+          "name": "沙漠狗头人战士之缰",
+          "nameEn": "Rein of the Sand Kobold Warrior",
+          "slave": "DesertKoboldWarrior",
+          "slaveName": "沙漠狗头人战士",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「沙漠狗头人战士」作为同伴。"
+        },
+        {
+          "id": "Rein_DesertManticoraBoss",
+          "name": "恐怖沙漠蝎狮之缰",
+          "nameEn": "Rein of the Dread Sand Manticore",
+          "slave": "DesertManticoraBoss",
+          "slaveName": "恐怖沙漠蝎狮",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 7000,
+          "desc": "使用后可永久解锁「恐怖沙漠蝎狮」作为同伴。"
+        },
+        {
+          "id": "Rein_DesertWasp",
+          "name": "沙漠黄蜂之缰",
+          "nameEn": "Rein of the Sand Wasp",
+          "slave": "DesertWasp",
+          "slaveName": "沙漠黄蜂",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 150,
+          "desc": "使用后可永久解锁「沙漠黄蜂」作为同伴。"
+        },
+        {
+          "id": "Rein_Dragon",
+          "name": "Dragon之缰",
+          "nameEn": "Rein of the Dragon",
+          "slave": "Dragon",
+          "slaveName": "Dragon",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 1,
+          "desc": "使用后可永久解锁「Dragon」作为同伴。"
+        },
+        {
+          "id": "Rein_FishingWaterDragon",
+          "name": "飞鱼王之缰",
+          "nameEn": "Rein of the Flying Fish King",
+          "slave": "FishingWaterDragon",
+          "slaveName": "飞鱼王",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 1,
+          "desc": "使用后可永久解锁「飞鱼王」作为同伴。"
+        },
+        {
+          "id": "Rein_ForestSpiderKing",
+          "name": "剧毒女王之缰",
+          "nameEn": "Rein of the Venom Queen",
+          "slave": "ForestSpiderKing",
+          "slaveName": "剧毒女王",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 7000,
+          "desc": "使用后可永久解锁「剧毒女王」作为同伴。"
+        },
+        {
+          "id": "Rein_GoblinWarrior",
+          "name": "哥布林战士之缰",
+          "nameEn": "Rein of the Goblin Warrior",
+          "slave": "GoblinWarrior",
+          "slaveName": "哥布林战士",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 150,
+          "desc": "使用后可永久解锁「哥布林战士」作为同伴。"
+        },
+        {
+          "id": "Rein_Ogre",
+          "name": "食人魔之缰",
+          "nameEn": "Rein of the Ogre",
+          "slave": "Ogre",
+          "slaveName": "食人魔",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 7000,
+          "desc": "使用后可永久解锁「食人魔」作为同伴。"
+        },
+        {
+          "id": "Rein_OrcWarrior",
+          "name": "兽人斗士之缰",
+          "nameEn": "Rein of the Orc Fighter",
+          "slave": "OrcWarrior",
+          "slaveName": "兽人斗士",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「兽人斗士」作为同伴。"
+        },
+        {
+          "id": "Rein_PoisonSpider",
+          "name": "毒液蜘蛛之缰",
+          "nameEn": "Rein of the Venomous Spider",
+          "slave": "PoisonSpider",
+          "slaveName": "毒液蜘蛛",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 150,
+          "desc": "使用后可永久解锁「毒液蜘蛛」作为同伴。"
+        },
+        {
+          "id": "Rein_Raptor",
+          "name": "迅猛龙之缰",
+          "nameEn": "Rein of the Raptor",
+          "slave": "Raptor",
+          "slaveName": "迅猛龙",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 1000,
+          "desc": "使用后可永久解锁「迅猛龙」作为同伴。"
+        },
+        {
+          "id": "Rein_RedDesertAirWarlord",
+          "name": "红岩领主之缰",
+          "nameEn": "Rein of the Redrock Lord",
+          "slave": "RedDesertAirWarlord",
+          "slaveName": "红岩领主",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「红岩领主」作为同伴。"
+        },
+        {
+          "id": "Rein_RedDesertCrocodile",
+          "name": "荒原鳄鱼之缰",
+          "nameEn": "Rein of the Barrens Crocodile",
+          "slave": "RedDesertCrocodile",
+          "slaveName": "荒原鳄鱼",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 150,
+          "desc": "使用后可永久解锁「荒原鳄鱼」作为同伴。"
+        },
+        {
+          "id": "Rein_RedDesertImp",
+          "name": "焦土小恶魔之缰",
+          "nameEn": "Rein of the Scorched Imp",
+          "slave": "RedDesertImp",
+          "slaveName": "焦土小恶魔",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「焦土小恶魔」作为同伴。"
+        },
+        {
+          "id": "Rein_RedDesertRockGolem",
+          "name": "红岩魔像之缰",
+          "nameEn": "Rein of the Redrock Golem",
+          "slave": "RedDesertRockGolem",
+          "slaveName": "红岩魔像",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「红岩魔像」作为同伴。"
+        },
+        {
+          "id": "Rein_RedDesertSatyr",
+          "name": "荒原萨特之缰",
+          "nameEn": "Rein of the Barrens Satyr",
+          "slave": "RedDesertSatyr",
+          "slaveName": "荒原萨特",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「荒原萨特」作为同伴。"
+        },
+        {
+          "id": "Rein_RedDesertSerparmat",
+          "name": "吞噬者瑟帕玛特之缰",
+          "nameEn": "Rein of the Serparmat the Devourer",
+          "slave": "RedDesertSerparmat",
+          "slaveName": "吞噬者瑟帕玛特",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「吞噬者瑟帕玛特」作为同伴。"
+        },
+        {
+          "id": "Rein_RedForestBear",
+          "name": "灰熊之缰",
+          "nameEn": "Rein of the Grizzly Bear",
+          "slave": "RedForestBear",
+          "slaveName": "灰熊",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「灰熊」作为同伴。"
+        },
+        {
+          "id": "Rein_RedForestDragon",
+          "name": "绯红谷之主之缰",
+          "nameEn": "Rein of the Lord of the Crimson Vale",
+          "slave": "RedForestDragon",
+          "slaveName": "绯红谷之主",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「绯红谷之主」作为同伴。"
+        },
+        {
+          "id": "Rein_RedForestFaeDragon",
+          "name": "精灵龙之缰",
+          "nameEn": "Rein of the Fae Dragon",
+          "slave": "RedForestFaeDragon",
+          "slaveName": "精灵龙",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「精灵龙」作为同伴。"
+        },
+        {
+          "id": "Rein_RedForestGiant",
+          "name": "绯红守护者之缰",
+          "nameEn": "Rein of the Crimson Guardian",
+          "slave": "RedForestGiant",
+          "slaveName": "绯红守护者",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「绯红守护者」作为同伴。"
+        },
+        {
+          "id": "Rein_RedForestHobgoblin",
+          "name": "哥布林巨人之缰",
+          "nameEn": "Rein of the Goblin Giant",
+          "slave": "RedForestHobgoblin",
+          "slaveName": "哥布林巨人",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「哥布林巨人」作为同伴。"
+        },
+        {
+          "id": "Rein_RedForestTiger",
+          "name": "山虎之缰",
+          "nameEn": "Rein of the Mountain Tiger",
+          "slave": "RedForestTiger",
+          "slaveName": "山虎",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「山虎」作为同伴。"
+        },
+        {
+          "id": "Rein_SkeletonArcher",
+          "name": "骷髅弓箭手之缰",
+          "nameEn": "Rein of the Skeleton Archer",
+          "slave": "SkeletonArcher",
+          "slaveName": "骷髅弓箭手",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「骷髅弓箭手」作为同伴。"
+        },
+        {
+          "id": "Rein_SkeletonWarrior",
+          "name": "骷髅战士之缰",
+          "nameEn": "Rein of the Skeleton Warrior",
+          "slave": "SkeletonWarrior",
+          "slaveName": "骷髅战士",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「骷髅战士」作为同伴。"
+        },
+        {
+          "id": "Rein_SnowHillFrostDragon",
+          "name": "冰霜巨龙之缰",
+          "nameEn": "Rein of the Frost Dragon",
+          "slave": "SnowHillFrostDragon",
+          "slaveName": "冰霜巨龙",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「冰霜巨龙」作为同伴。"
+        },
+        {
+          "id": "Rein_SnowHillIceHound",
+          "name": "冰霜猎犬之缰",
+          "nameEn": "Rein of the Ice Hound",
+          "slave": "SnowHillIceHound",
+          "slaveName": "冰霜猎犬",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 6000,
+          "desc": "使用后可永久解锁「冰霜猎犬」作为同伴。"
+        },
+        {
+          "id": "Rein_SnowHillRockElemental",
+          "name": "冰岩元素之缰",
+          "nameEn": "Rein of the Ice Rock Elemental",
+          "slave": "SnowHillRockElemental",
+          "slaveName": "冰岩元素",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「冰岩元素」作为同伴。"
+        },
+        {
+          "id": "Rein_SnowHillSlime",
+          "name": "冰霜史莱姆之缰",
+          "nameEn": "Rein of the Frost Slime",
+          "slave": "SnowHillSlime",
+          "slaveName": "冰霜史莱姆",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「冰霜史莱姆」作为同伴。"
+        },
+        {
+          "id": "Rein_SnowHillWhelp",
+          "name": "冰霜幼龙之缰",
+          "nameEn": "Rein of the Frost Whelp",
+          "slave": "SnowHillWhelp",
+          "slaveName": "冰霜幼龙",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「冰霜幼龙」作为同伴。"
+        },
+        {
+          "id": "Rein_SnowHillZombieWarrior",
+          "name": "冰封僵尸战士之缰",
+          "nameEn": "Rein of the Frozen Zombie Warrior",
+          "slave": "SnowHillZombieWarrior",
+          "slaveName": "冰封僵尸战士",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「冰封僵尸战士」作为同伴。"
+        },
+        {
+          "id": "Rein_Spider",
+          "name": "黑蜘蛛之缰",
+          "nameEn": "Rein of the Black Spider",
+          "slave": "Spider",
+          "slaveName": "黑蜘蛛",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 150,
+          "desc": "使用后可永久解锁「黑蜘蛛」作为同伴。"
+        },
+        {
+          "id": "Rein_Stumplin",
+          "name": "树桩怪之缰",
+          "nameEn": "Rein of the Stumplin",
+          "slave": "Stumplin",
+          "slaveName": "树桩怪",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「树桩怪」作为同伴。"
+        },
+        {
+          "id": "Rein_TazanCamel",
+          "name": "塔赞骆驼之缰",
+          "nameEn": "Rein of the Tazan Camel",
+          "slave": "TazanCamel",
+          "slaveName": "塔赞骆驼",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 2500,
+          "desc": "使用后可永久解锁「塔赞骆驼」作为同伴。"
+        },
+        {
+          "id": "Rein_VolcanoCinderlash",
+          "name": "焰鞭魔之缰",
+          "nameEn": "Rein of the Cinderlash",
+          "slave": "VolcanoCinderlash",
+          "slaveName": "焰鞭魔",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「焰鞭魔」作为同伴。"
+        },
+        {
+          "id": "Rein_VolcanoDemonLord",
+          "name": "灰烬之主之缰",
+          "nameEn": "Rein of the Lord of the Cinder",
+          "slave": "VolcanoDemonLord",
+          "slaveName": "灰烬之主",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「灰烬之主」作为同伴。"
+        },
+        {
+          "id": "Rein_VolcanoDragon",
+          "name": "焰牙之缰",
+          "nameEn": "Rein of the Emberfang",
+          "slave": "VolcanoDragon",
+          "slaveName": "焰牙",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 10000,
+          "desc": "使用后可永久解锁「焰牙」作为同伴。"
+        },
+        {
+          "id": "Rein_VolcanoEmberBat",
+          "name": "余烬蝠之缰",
+          "nameEn": "Rein of the Ember Bat",
+          "slave": "VolcanoEmberBat",
+          "slaveName": "余烬蝠",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「余烬蝠」作为同伴。"
+        },
+        {
+          "id": "Rein_VolcanoHellguard",
+          "name": "炼狱卫士之缰",
+          "nameEn": "Rein of the Hellguard",
+          "slave": "VolcanoHellguard",
+          "slaveName": "炼狱卫士",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「炼狱卫士」作为同伴。"
+        },
+        {
+          "id": "Rein_VolcanoMagmaGolem",
+          "name": "熔岩魔像之缰",
+          "nameEn": "Rein of the Magma Golem",
+          "slave": "VolcanoMagmaGolem",
+          "slaveName": "熔岩魔像",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「熔岩魔像」作为同伴。"
+        },
+        {
+          "id": "Rein_Werewolf",
+          "name": "血月狼人之缰",
+          "nameEn": "Rein of the Bloodmoon Werewolf",
+          "slave": "Werewolf",
+          "slaveName": "血月狼人",
+          "rarity": 3,
+          "rarityName": "传说",
+          "sellPrice": 1000,
+          "desc": "使用后可永久解锁「血月狼人」作为同伴。"
+        },
+        {
+          "id": "Rein_WhiteHorse",
+          "name": "白马之缰",
+          "nameEn": "Rein of the White Horse",
+          "slave": "WhiteHorse",
+          "slaveName": "白马",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 3000,
+          "desc": "使用后可永久解锁「白马」作为同伴。"
+        },
+        {
+          "id": "Rein_ZombieWolf",
+          "name": "变异之狼之缰",
+          "nameEn": "Rein of the Mutating Wolf",
+          "slave": "ZombieWolf",
+          "slaveName": "变异之狼",
+          "rarity": 2,
+          "rarityName": "稀有",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「变异之狼」作为同伴。"
+        },
+        {
+          "id": "Rein_wolf",
+          "name": "wolf之缰",
+          "nameEn": "Rein of the wolf",
+          "slave": "wolf",
+          "slaveName": "wolf",
+          "rarity": 1,
+          "rarityName": "非凡",
+          "sellPrice": 300,
+          "desc": "使用后可永久解锁「wolf」作为同伴。"
+        }
+      ]
+    }
+  ],
+  "syncDate": "2026-09-25"
+}
