@@ -9,7 +9,7 @@ export default function Home() {
     { icon: '💎', name: '宝石', num: 36, link: '/gems' },
     { icon: '🔮', name: '符文', num: 121, link: '/runes' },
     { icon: '🐺', name: '仆从', num: 68, link: '/minions' },
-    { icon: '🗺️', name: '关卡', num: 23, link: '/world' },
+    { icon: '🗺️', name: '关卡', num: 23, link: '/levels' },
     { icon: '🎯', name: '技能', num: 90, link: '/skills' },
     { icon: '✨', name: '词条', num: 41, link: '/affixes' },
     { icon: '📜', name: '构筑', num: 0, link: '/build' },
