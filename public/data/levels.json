@@ -42,7 +42,7 @@
     "id": 3,
     "name": "维尔达克之城",
     "nameEn": "City of Veldak",
-    "key": "ColdTown",
+    "key": "SnowTown",
     "area": "维尔达克",
     "level": "不限",
     "difficulty": "安全",
@@ -51,7 +51,10 @@
       "药水",
       "北山地穴钥匙"
     ],
-    "description": "北方冰雪之城，英雄们可以从这里进入北山地穴副本。",
+    "description": [
+      "A frostbound city standing against the endless winter, its sturdy walls and blazing hearths offering refuge from the frozen wilds. Veldak is home to the gateway into the Mythic Rift, where heroes face their greatest challenges.",
+      "一座傲立于无尽寒冬中的冰封之城，坚固的城墙与熊熊炉火为人们挡住冰原荒野。维尔达克坐落着通往神话裂隙的入口，英雄们将在其中迎接最严峻的挑战。"
+    ],
     "enemies": []
   },
   {
@@ -104,8 +107,8 @@
   },
   {
     "id": 6,
-    "name": "北山地穴",
-    "nameEn": "Northhill Crypt",
+    "name": "尖塔山丘墓穴",
+    "nameEn": "Spire Hill Crypt",
     "key": "Dungeon",
     "area": "北山地穴",
     "level": "Lv.15+",
@@ -125,8 +128,8 @@
   },
   {
     "id": 7,
-    "name": "北山地穴·下层",
-    "nameEn": "Northhill Crypt Lower",
+    "name": "尖塔山丘墓穴下层",
+    "nameEn": "Spire Hill Crypt Lower",
     "key": "DungeonL",
     "area": "北山地穴",
     "level": "Lv.20+",
@@ -186,8 +189,8 @@
   },
   {
     "id": 10,
-    "name": "红色沙漠",
-    "nameEn": "Red Desert",
+    "name": "贫瘠之地",
+    "nameEn": "The Barrens",
     "key": "RedDesert",
     "area": "贫瘠之地",
     "level": "Lv.30+",
@@ -307,5 +310,116 @@
       "地狱生物"
     ],
     "id": 16
+  },
+  {
+    "id": 17,
+    "key": "SnowHill",
+    "name": "维尔达克高地",
+    "nameEn": "Veldak Highlands",
+    "area": "维尔达克",
+    "level": "Lv.52+",
+    "difficulty": "极难",
+    "boss": "未知",
+    "drops": [],
+    "description": "",
+    "enemies": []
+  },
+  {
+    "id": 18,
+    "key": "DefiledKeep",
+    "name": "污秽要塞",
+    "nameEn": "The Defiled Keep",
+    "area": "污秽要塞",
+    "level": "Lv.58+",
+    "difficulty": "极难",
+    "boss": "未知",
+    "drops": [],
+    "description": "",
+    "enemies": []
+  },
+  {
+    "id": 19,
+    "key": "Volcano",
+    "name": "灰烬之冠",
+    "nameEn": "The Cinder Crown",
+    "area": "灰烬之冠",
+    "level": "Lv.65+",
+    "difficulty": "地狱",
+    "boss": "未知",
+    "drops": [],
+    "description": "",
+    "enemies": []
+  },
+  {
+    "id": 20,
+    "key": "TreasureBarrens",
+    "name": "梦幻贫瘠之地",
+    "nameEn": "Dreamy Barrens",
+    "area": "贫瘠之地",
+    "level": "Lv.46+",
+    "difficulty": "困难",
+    "boss": "未知",
+    "drops": [],
+    "description": [
+      "A dreamlike mirage adrift over the Barrens, where enigmatic creatures born of dreams roam and treasure lies in abundance.",
+      "漂浮在贫瘠之地上空的梦幻蜃景。梦境中的谜之生物在此出没，同时藏有大量宝物。"
+    ],
+    "enemies": []
+  },
+  {
+    "id": 21,
+    "key": "TreasureKeep",
+    "name": "梦幻要塞",
+    "nameEn": "Dreamy Keep",
+    "area": "污秽要塞",
+    "level": "Lv.65+",
+    "difficulty": "极难",
+    "boss": "未知",
+    "drops": [],
+    "description": [
+      "A dreamlike realm hidden deep within the Defiled Keep, where enigmatic creatures born of dreams roam and treasure lies in abundance.",
+      "隐藏在污秽要塞深处的一处梦幻之地。梦境中的谜之生物在此出没，同时藏有大量宝物。"
+    ],
+    "enemies": []
+  },
+  {
+    "id": 22,
+    "key": "Fishing-SnowLake",
+    "name": "维尔达克天池",
+    "nameEn": "Veldak Sky Lake",
+    "area": "维尔达克",
+    "level": "不限",
+    "difficulty": "安全",
+    "boss": "无",
+    "drops": [
+      "鱼类",
+      "金币"
+    ],
+    "description": [
+      "A clear lake nestled among Veldak's snowy peaks. Strange fish stir in its icy depths, while patient anglers cast their lines from the frozen shore.",
+      "一汪清澈的天池静卧于维尔达克的雪峰之间。奇异的鱼儿游弋在冰冷的深水中，耐心的渔人从结霜的岸边垂下钓线。"
+    ],
+    "enemies": [],
+    "isFishing": true
+  },
+  {
+    "id": 23,
+    "key": "Fishing-VolcanoLake",
+    "name": "灰烬湖",
+    "nameEn": "Cinder Lake",
+    "area": "灰烬之冠",
+    "level": "不限",
+    "difficulty": "安全",
+    "boss": "无",
+    "drops": [
+      "鱼类",
+      "金币"
+    ],
+    "description": [
+      "Ash drifts over the warm waters beneath the Cinder Crown. On the blackened shore, anglers listen to the volcano rumble as they wait for the next bite.",
+      "灰烬之冠脚下，浮灰在温暖的湖面上飘荡。渔人守在焦黑的岸边，听着火山的低鸣，等待鱼儿再次咬钩。"
+    ],
+    "enemies": [],
+    "isFishing": true
   }
 ]

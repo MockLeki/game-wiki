@@ -1,12 +1,12 @@
 {
-  "blackMistChance": 0.01,
+  "blackMistChance": 0.0018,
   "ancientChance": 0.1,
   "minBlackMistDifficulty": 1.0,
   "minDivineDifficulty": 2.0,
   "minSetDifficulty": 2.0,
   "minLegendaryLevel": 10.0,
-  "runeDropChance": 0.3,
-  "runeMinDropLevel": 30.0,
+  "runeDropChance": 0.02,
+  "runeMinDropLevel": 40.0,
   "dropSettings": {
     "normal": {
       "min": {
@@ -17,67 +17,67 @@
         "legendary": 0.0
       },
       "max": {
-        "noDrop": 90.0,
-        "common": 4.9,
-        "uncommon": 3.5,
-        "rare": 1.4,
-        "legendary": 0.2
+        "noDrop": 95.0,
+        "common": 2.5,
+        "uncommon": 1.35,
+        "rare": 1.0,
+        "legendary": 0.15
       },
       "divineChance": 0.0,
       "gemDropChance": 0.01
     },
     "elite": {
       "min": {
-        "noDrop": 40.2,
-        "common": 29.3,
+        "noDrop": 0.0,
+        "common": 69.5,
         "uncommon": 23.0,
-        "rare": 6.0,
-        "legendary": 1.5
+        "rare": 6.5,
+        "legendary": 1.0
       },
       "max": {
-        "noDrop": 19.6,
-        "common": 27.9,
-        "uncommon": 30.0,
+        "noDrop": 0.0,
+        "common": 47.5,
+        "uncommon": 31.0,
         "rare": 20.0,
-        "legendary": 2.5
+        "legendary": 1.5
       },
-      "divineChance": 0.0003,
+      "divineChance": 3.0,
       "gemDropChance": 0.06
     },
     "miniBoss": {
       "min": {
         "noDrop": 35.2,
         "common": 33.8,
-        "uncommon": 22.0,
+        "uncommon": 22.5,
         "rare": 7.0,
-        "legendary": 2.0
+        "legendary": 1.5
       },
       "max": {
         "noDrop": 10.6,
         "common": 28.4,
         "uncommon": 32.0,
         "rare": 25.0,
-        "legendary": 4.0
+        "legendary": 2.0
       },
-      "divineChance": 0.0015,
+      "divineChance": 1.0,
       "gemDropChance": 0.1
     },
     "boss": {
       "min": {
-        "noDrop": 35.2,
-        "common": 33.8,
-        "uncommon": 22.0,
-        "rare": 7.0,
+        "noDrop": 0.0,
+        "common": 51.8,
+        "uncommon": 30.0,
+        "rare": 16.2,
         "legendary": 2.0
       },
       "max": {
-        "noDrop": 10.6,
-        "common": 28.4,
-        "uncommon": 32.0,
-        "rare": 25.0,
-        "legendary": 4.0
+        "noDrop": 0.0,
+        "common": 14.0,
+        "uncommon": 37.5,
+        "rare": 45.0,
+        "legendary": 3.5
       },
-      "divineChance": 0.001,
+      "divineChance": 2.0,
       "gemDropChance": 0.12
     }
   }

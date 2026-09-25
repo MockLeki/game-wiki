@@ -114,12 +114,127 @@
       "descEn": "Gain 105 Thorns for 1 hour.",
       "effect": "1小时内获得105点荆棘",
       "effectEn": "Gain 105 Thorns for 1 hour"
+    },
+    {
+      "id": "CommonFish3",
+      "type": "fish",
+      "quality": "common",
+      "priceTier": "good_gold",
+      "priceRank": 1,
+      "name": "霜蚀鱼骨",
+      "nameEn": "Frostworn Fishbones",
+      "desc": "弯曲的鱼骨在湖冰下磨得光滑，原本的鱼儿几乎不留痕迹。商人愿意为它们付出不少金币。",
+      "descEn": "Curved bones polished smooth beneath the lake ice. Little remains of the fish they held together. A merchant will pay good gold for them.",
+      "spot": "snowLake"
+    },
+    {
+      "id": "UnCommonFish3",
+      "type": "fish",
+      "quality": "uncommon",
+      "priceTier": "handsomely",
+      "priceRank": 3,
+      "name": "霜纹螺壳",
+      "nameEn": "Frostcoil Shell",
+      "desc": "蓝色螺壳的每道棱纹都凝着白霜，即使放在熊熊炉火旁也依旧冰冷。商人愿意为它慷慨解囊。",
+      "descEn": "Frost clings to every ridge of this blue spiral shell. It stays cold beside a roaring fire. A merchant will pay handsomely for it.",
+      "spot": "snowLake"
+    },
+    {
+      "id": "RareFish3",
+      "type": "fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 8,
+      "name": "碧蓝帆鳍鱼",
+      "nameEn": "Azure Sailfin",
+      "desc": "宽大的蓝色鱼鳍在冰下如丝绸般舒展。两侧闪烁的条纹令收藏家趋之若鹜。商人愿意为它掏出一小笔财富。",
+      "descEn": "Its broad blue fins unfurl like silk beneath the ice. Collectors prize the shimmering stripes along its sides. A merchant will pay a small fortune for it.",
+      "spot": "snowLake"
+    },
+    {
+      "id": "PotionFish3",
+      "type": "potion_fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 8,
+      "name": "霜光水母",
+      "nameEn": "Frostglow Jellyfish",
+      "desc": "每秒恢复4点法力，持续1小时。",
+      "descEn": "Restore 4 Mana per second for 1 hour.",
+      "spot": "snowLake",
+      "effect": "每秒恢复4点法力，持续1小时"
+    },
+    {
+      "id": "UnCommonFish4",
+      "type": "fish",
+      "quality": "uncommon",
+      "priceTier": "handsomely",
+      "priceRank": 3,
+      "name": "硫磺泥鳅",
+      "nameEn": "Brimstone Loach",
+      "desc": "它盘绕在湖底热泉暖透的石头上。离水许久，黄色的鱼鳍仍在抽动。商人愿意为它付出丰厚的金币。",
+      "descEn": "It curls around stones warmed by vents below the lakebed. Its yellow fins twitch long after it leaves the water. A merchant will pay handsomely for it.",
+      "spot": "volcanoLake"
+    },
+    {
+      "id": "RareFish4",
+      "type": "fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 8,
+      "name": "烬纹螺壳",
+      "nameEn": "Cindercoil Shell",
+      "desc": "沉重的螺壳上盘绕着暖琥珀色的纹带。细灰积聚在沟纹之中。商人愿意为它掏出一小笔财富。",
+      "descEn": "Warm amber bands wind around this heavy spiral shell. Fine ash gathers in its grooves. A merchant will pay a small fortune for it.",
+      "spot": "volcanoLake"
+    },
+    {
+      "id": "PotionFish4",
+      "type": "potion_fish",
+      "quality": "rare",
+      "priceTier": "small_fortune",
+      "priceRank": 8,
+      "name": "烬壳蟹",
+      "nameEn": "Cindershell Crab",
+      "desc": "受到的所有伤害减少10%，持续1小时。",
+      "descEn": "Reduce all damage taken by 10% for 1 hour.",
+      "spot": "volcanoLake",
+      "effect": "受到的所有伤害减少10%，持续1小时"
     }
   ],
   "stats": {
-    "common": 2,
-    "uncommon": 2,
-    "rare": 4,
-    "total": 8
+    "common": 3,
+    "uncommon": 4,
+    "rare": 8,
+    "total": 15
+  },
+  "spots": {
+    "beach": {
+      "key": "Fishing-Beach",
+      "name": "塔赞渔滩",
+      "nameEn": "Tazan Fishing Beach",
+      "desc": [
+        "A short strip of sand just outside the City of Tazan, where a few anglers work the shallows. Nothing here but a rod, a bucket, and whatever is biting today.",
+        "塔赞之城外的一小片沙滩，几名渔人在此浅滩垂钓。这里只有一根鱼竿、一只水桶，以及今日上钩的收获。"
+      ]
+    },
+    "snowLake": {
+      "key": "Fishing-SnowLake",
+      "name": "维尔达克天池",
+      "nameEn": "Veldak Sky Lake",
+      "desc": [
+        "A clear lake nestled among Veldak's snowy peaks. Strange fish stir in its icy depths, while patient anglers cast their lines from the frozen shore.",
+        "一汪清澈的天池静卧于维尔达克的雪峰之间。奇异的鱼儿游弋在冰冷的深水中，耐心的渔人从结霜的岸边垂下钓线。"
+      ]
+    },
+    "volcanoLake": {
+      "key": "Fishing-VolcanoLake",
+      "name": "灰烬湖",
+      "nameEn": "Cinder Lake",
+      "desc": [
+        "Ash drifts over the warm waters beneath the Cinder Crown. On the blackened shore, anglers listen to the volcano rumble as they wait for the next bite.",
+        "灰烬之冠脚下，浮灰在温暖的湖面上飘荡。渔人守在焦黑的岸边，听着火山的低鸣，等待鱼儿再次咬钩。"
+      ]
+    }
   }
 }

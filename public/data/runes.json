@@ -27,10 +27,12 @@
           "statCn": "对流血敌人伤害",
           "mod": 0,
           "base": 0.15,
-          "perLevel": 0.03,
-          "text": "+0.15（每级+0.03）"
+          "perLevel": 0,
+          "text": "对流血敌人伤害 +0.15"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_DamageVsDistant",
@@ -46,9 +48,11 @@
           "mod": 0,
           "base": 0.23,
           "perLevel": 0,
-          "text": "+0.23"
+          "text": "对远程敌人伤害 +0.23"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_DamageVsElite",
@@ -63,10 +67,12 @@
           "statCn": "对精英伤害",
           "mod": 0,
           "base": null,
-          "perLevel": 0.03,
-          "text": "（每级+0.03）"
+          "perLevel": 0,
+          "text": "对精英伤害"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_DamageVsHealthy",
@@ -81,10 +87,12 @@
           "statCn": "对健康敌人伤害",
           "mod": 0,
           "base": null,
-          "perLevel": 0.03,
-          "text": "（每级+0.03）"
+          "perLevel": 0,
+          "text": "对健康敌人伤害"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_DamageVsInjured",
@@ -100,9 +108,11 @@
           "mod": 0,
           "base": null,
           "perLevel": 0,
-          "text": ""
+          "text": "对受伤敌人伤害"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_DamageVsPoisoned",
@@ -117,10 +127,12 @@
           "statCn": "对中毒敌人伤害",
           "mod": 0,
           "base": 0.49,
-          "perLevel": 0.03,
-          "text": "+0.49（每级+0.03）"
+          "perLevel": 0,
+          "text": "对中毒敌人伤害 +0.49"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_DamageVsSlowed",
@@ -136,9 +148,11 @@
           "mod": 0,
           "base": 0.16,
           "perLevel": 0,
-          "text": "+0.16"
+          "text": "对减速敌人伤害 +0.16"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_DamageVsStunned",
@@ -150,13 +164,15 @@
       "attributes": [
         {
           "stat": 43,
-          "statCn": "对眩晕敌人伤害",
+          "statCn": "对定身敌人伤害",
           "mod": 0,
           "base": 0.35,
           "perLevel": 0,
-          "text": "+0.35"
+          "text": "对定身敌人伤害 +0.35"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     },
     {
       "id": "UncommonRune_VulnerableDamage",
@@ -168,13 +184,15 @@
       "attributes": [
         {
           "stat": 40,
-          "statCn": "易伤伤害",
+          "statCn": "对易伤敌人伤害",
           "mod": 0,
           "base": 0.41,
           "perLevel": 0,
-          "text": "+0.41"
+          "text": "对易伤敌人伤害 +0.41"
         }
-      ]
+      ],
+      "abilityLevels": null,
+      "everyNRuneLevels": null
     }
   ],
   "rare": [
@@ -189,16 +207,16 @@
       "skill": "BasicAttack",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 1,
           "statCn": "敏捷",
           "mod": 0,
-          "base": 25.18,
-          "perLevel": 3.22,
-          "text": "+25.18（每级+3.22）"
+          "base": 25.24,
+          "perLevel": 0.81,
+          "text": "敏捷 +25.24（每级+0.81）"
         }
       ]
     },
@@ -213,16 +231,16 @@
       "skill": "BasicAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 42,
           "statCn": "最大生命值%",
           "mod": 0,
           "base": 0.08,
-          "perLevel": 0.02,
-          "text": "+0.08（每级+0.02）"
+          "perLevel": 0,
+          "text": "最大生命值% +0.08"
         }
       ]
     },
@@ -237,8 +255,8 @@
       "skill": "BasicAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 14,
@@ -246,7 +264,7 @@
           "mod": 0,
           "base": 30.1,
           "perLevel": 0.8,
-          "text": "+30.1（每级+0.8）"
+          "text": "最大法力 +30.1（每级+0.8）"
         }
       ]
     },
@@ -261,16 +279,16 @@
       "skill": "HeavyAttack",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 44,
           "statCn": "护甲%",
           "mod": 0,
-          "base": 0.12,
+          "base": 0.46,
           "perLevel": 0,
-          "text": "+0.12"
+          "text": "护甲% +0.46"
         }
       ]
     },
@@ -285,16 +303,16 @@
       "skill": "HeavyAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 59,
           "statCn": "魔法抗性%",
           "mod": 0,
-          "base": 0.03,
+          "base": 0.14,
           "perLevel": 0,
-          "text": "+0.03"
+          "text": "魔法抗性% +0.14"
         }
       ]
     },
@@ -309,8 +327,8 @@
       "skill": "HeavyAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 57,
@@ -318,7 +336,7 @@
           "mod": 0,
           "base": 0.04,
           "perLevel": 0,
-          "text": "+0.04"
+          "text": "移动速度% +0.04"
         }
       ]
     },
@@ -333,16 +351,16 @@
       "skill": "Special",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 17,
           "statCn": "生命药水发现",
           "mod": 0,
           "base": 0.17,
-          "perLevel": 0,
-          "text": "+0.17"
+          "perLevel": 0.06,
+          "text": "生命药水发现 +0.17（每级+0.06）"
         }
       ]
     },
@@ -357,16 +375,16 @@
       "skill": "Special",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 1,
           "statCn": "敏捷",
           "mod": 0,
-          "base": 21.25,
-          "perLevel": 2,
-          "text": "+21.25（每级+2）"
+          "base": 21.32,
+          "perLevel": 0.51,
+          "text": "敏捷 +21.32（每级+0.51）"
         }
       ]
     },
@@ -381,8 +399,8 @@
       "skill": "BasicAttack",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 1,
@@ -390,7 +408,7 @@
           "mod": 0,
           "base": null,
           "perLevel": null,
-          "text": ""
+          "text": "敏捷"
         }
       ]
     },
@@ -405,16 +423,16 @@
       "skill": "BasicAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 42,
           "statCn": "最大生命值%",
           "mod": 0,
           "base": 0.11,
-          "perLevel": 0.03,
-          "text": "+0.11（每级+0.03）"
+          "perLevel": 0,
+          "text": "最大生命值% +0.11"
         }
       ]
     },
@@ -429,8 +447,8 @@
       "skill": "BasicAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 14,
@@ -438,7 +456,7 @@
           "mod": 0,
           "base": 23.7,
           "perLevel": 1.13,
-          "text": "+23.7（每级+1.13）"
+          "text": "最大法力 +23.7（每级+1.13）"
         }
       ]
     },
@@ -453,16 +471,16 @@
       "skill": "HeavyAttack",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 44,
           "statCn": "护甲%",
           "mod": 0,
-          "base": 0.06,
+          "base": 0.25,
           "perLevel": 0,
-          "text": "+0.06"
+          "text": "护甲% +0.25"
         }
       ]
     },
@@ -477,16 +495,16 @@
       "skill": "HeavyAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 59,
           "statCn": "魔法抗性%",
           "mod": 0,
-          "base": 0.09,
+          "base": 0.38,
           "perLevel": 0.03,
-          "text": "+0.09（每级+0.03）"
+          "text": "魔法抗性% +0.38（每级+0.03）"
         }
       ]
     },
@@ -501,8 +519,8 @@
       "skill": "HeavyAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 57,
@@ -510,7 +528,7 @@
           "mod": 0,
           "base": 0.08,
           "perLevel": 0,
-          "text": "+0.08"
+          "text": "移动速度% +0.08"
         }
       ]
     },
@@ -525,16 +543,16 @@
       "skill": "Special",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 17,
           "statCn": "生命药水发现",
           "mod": 0,
           "base": 0.29,
-          "perLevel": 0,
-          "text": "+0.29"
+          "perLevel": 0.08,
+          "text": "生命药水发现 +0.29（每级+0.08）"
         }
       ]
     },
@@ -549,16 +567,16 @@
       "skill": "Special",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 1,
           "statCn": "敏捷",
           "mod": 0,
-          "base": 8.6,
-          "perLevel": 2.27,
-          "text": "+8.6（每级+2.27）"
+          "base": 8.57,
+          "perLevel": 0.57,
+          "text": "敏捷 +8.57（每级+0.57）"
         }
       ]
     },
@@ -573,16 +591,16 @@
       "skill": "BasicAttack",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 2,
           "statCn": "智力",
           "mod": 0,
-          "base": 8.54,
-          "perLevel": 2.58,
-          "text": "+8.54（每级+2.58）"
+          "base": 8.51,
+          "perLevel": 0.65,
+          "text": "智力 +8.51（每级+0.65）"
         }
       ]
     },
@@ -597,8 +615,8 @@
       "skill": "BasicAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 42,
@@ -606,7 +624,7 @@
           "mod": 0,
           "base": null,
           "perLevel": null,
-          "text": ""
+          "text": "最大生命值%"
         }
       ]
     },
@@ -621,8 +639,8 @@
       "skill": "BasicAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 14,
@@ -630,7 +648,7 @@
           "mod": 0,
           "base": null,
           "perLevel": null,
-          "text": ""
+          "text": "最大法力"
         }
       ]
     },
@@ -645,16 +663,16 @@
       "skill": "Special",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 17,
           "statCn": "生命药水发现",
           "mod": 0,
           "base": 0.17,
-          "perLevel": 0,
-          "text": "+0.17"
+          "perLevel": 0.03,
+          "text": "生命药水发现 +0.17（每级+0.03）"
         }
       ]
     },
@@ -669,16 +687,16 @@
       "skill": "Special",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 2,
           "statCn": "智力",
           "mod": 0,
           "base": null,
-          "perLevel": 7.4,
-          "text": "（每级+7.4）"
+          "perLevel": 1.85,
+          "text": "智力"
         }
       ]
     },
@@ -693,16 +711,16 @@
       "skill": "StrongAttack",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 44,
           "statCn": "护甲%",
           "mod": 0,
-          "base": 0.12,
-          "perLevel": 0.03,
-          "text": "+0.12（每级+0.03）"
+          "base": 0.46,
+          "perLevel": 0,
+          "text": "护甲% +0.46"
         }
       ]
     },
@@ -717,16 +735,16 @@
       "skill": "StrongAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 59,
           "statCn": "魔法抗性%",
           "mod": 0,
-          "base": 0.05,
+          "base": 0.18,
           "perLevel": 0,
-          "text": "+0.05"
+          "text": "魔法抗性% +0.18"
         }
       ]
     },
@@ -741,8 +759,8 @@
       "skill": "StrongAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 57,
@@ -750,7 +768,7 @@
           "mod": 0,
           "base": 0.05,
           "perLevel": 0,
-          "text": "+0.05"
+          "text": "移动速度% +0.05"
         }
       ]
     },
@@ -765,16 +783,16 @@
       "skill": "BasicAttack",
       "tier": "",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 0,
           "statCn": "力量",
           "mod": 0,
-          "base": 9.23,
-          "perLevel": 2.97,
-          "text": "+9.23（每级+2.97）"
+          "base": 9.2,
+          "perLevel": 0.75,
+          "text": "力量 +9.2（每级+0.75）"
         }
       ]
     },
@@ -789,8 +807,8 @@
       "skill": "BasicAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 42,
@@ -798,7 +816,7 @@
           "mod": 0,
           "base": null,
           "perLevel": null,
-          "text": ""
+          "text": "最大生命值%"
         }
       ]
     },
@@ -813,8 +831,8 @@
       "skill": "BasicAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 14,
@@ -822,7 +840,7 @@
           "mod": 0,
           "base": null,
           "perLevel": null,
-          "text": ""
+          "text": "最大法力"
         }
       ]
     },
@@ -837,16 +855,16 @@
       "skill": "HeavyAttack",
       "tier": "1",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 44,
           "statCn": "护甲%",
           "mod": 0,
-          "base": 0.1,
+          "base": 0.4,
           "perLevel": 0.03,
-          "text": "+0.1（每级+0.03）"
+          "text": "护甲% +0.4（每级+0.03）"
         }
       ]
     },
@@ -861,8 +879,8 @@
       "skill": "HeavyAttack",
       "tier": "2",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 59,
@@ -870,7 +888,7 @@
           "mod": 0,
           "base": null,
           "perLevel": null,
-          "text": ""
+          "text": "魔法抗性%"
         }
       ]
     },
@@ -885,8 +903,8 @@
       "skill": "HeavyAttack",
       "tier": "3",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 57,
@@ -894,7 +912,7 @@
           "mod": 0,
           "base": 0.06,
           "perLevel": 0,
-          "text": "+0.06"
+          "text": "移动速度% +0.06"
         }
       ]
     },
@@ -909,16 +927,16 @@
       "skill": "RageShield",
       "tier": "",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 0,
           "statCn": "力量",
           "mod": 0,
-          "base": 31.92,
-          "perLevel": 6.58,
-          "text": "+31.92（每级+6.58）"
+          "base": 32,
+          "perLevel": 1.64,
+          "text": "力量 +32（每级+1.64）"
         }
       ]
     },
@@ -933,65 +951,676 @@
       "skill": "RageShout",
       "tier": "",
       "sellPrice": 5000,
-      "abilityLevels": 1,
-      "everyNRuneLevels": 6,
+      "abilityLevels": null,
+      "everyNRuneLevels": null,
       "attributes": [
         {
           "stat": 17,
           "statCn": "生命药水发现",
           "mod": 0,
           "base": 0.13,
-          "perLevel": 0,
-          "text": "+0.13"
+          "perLevel": 0.04,
+          "text": "生命药水发现 +0.13（每级+0.04）"
         }
       ]
     }
   ],
-  "set": {
-    "name": "阿瑟隆的坚盾",
-    "nameEn": "Strong Shield of the Atheron",
-    "pieces": [
-      {
-        "id": "SetRune1_1",
-        "name": "阿瑟隆之盾符文 (I)",
-        "nameEn": "Rune of Atheron's Shield (I)"
-      },
-      {
-        "id": "SetRune1_2",
-        "name": "阿瑟隆之盾符文 (II)",
-        "nameEn": "Rune of Atheron's Shield (II)"
-      },
-      {
-        "id": "SetRune1_3",
-        "name": "阿瑟隆之盾符文 (III)",
-        "nameEn": "Rune of Atheron's Shield (III)"
-      },
-      {
-        "id": "SetRune1_4",
-        "name": "阿瑟隆之盾符文 (IV)",
-        "nameEn": "Rune of Atheron's Shield (IV)"
-      },
-      {
-        "id": "SetRune1_5",
-        "name": "阿瑟隆之盾符文 (V)",
-        "nameEn": "Rune of Atheron's Shield (V)"
-      },
-      {
-        "id": "SetRune1_6",
-        "name": "阿瑟隆之盾符文 (VI)",
-        "nameEn": "Rune of Atheron's Shield (VI)"
-      }
-    ],
-    "effects": [
-      "+10%暴击几率。",
-      "暴击时回复5%的最大生命值。",
-      "怒气护盾额外提供20%暴击几率和50%暴击伤害。"
-    ]
-  },
   "heroes": {
     "Warrior": "战士",
     "Sorcerer": "法师",
     "Hunter": "猎人",
     "Monk": "武僧"
-  }
+  },
+  "sets": [
+    {
+      "id": "HunterSetRune1",
+      "name": "设阱者的传承",
+      "nameEn": "Trapper’s Legacy",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "pieces": [
+        {
+          "id": "HunterSetRune1_1",
+          "name": "设阱者的传承 I",
+          "nameEn": "Trapper’s Legacy I",
+          "tier": "1"
+        },
+        {
+          "id": "HunterSetRune1_2",
+          "name": "设阱者的传承 II",
+          "nameEn": "Trapper’s Legacy II",
+          "tier": "2"
+        },
+        {
+          "id": "HunterSetRune1_3",
+          "name": "设阱者的传承 III",
+          "nameEn": "Trapper’s Legacy III",
+          "tier": "3"
+        },
+        {
+          "id": "HunterSetRune1_4",
+          "name": "设阱者的传承 IV",
+          "nameEn": "Trapper’s Legacy IV",
+          "tier": "4"
+        },
+        {
+          "id": "HunterSetRune1_5",
+          "name": "设阱者的传承 V",
+          "nameEn": "Trapper’s Legacy V",
+          "tier": "5"
+        },
+        {
+          "id": "HunterSetRune1_6",
+          "name": "设阱者的传承 VI",
+          "nameEn": "Trapper’s Legacy VI",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "陷阱造成的直接伤害提高60%。",
+        "被你的陷阱命中的敌人获得你的死亡印记，持续3.5秒，使你对其暴击几率提高30%。",
+        "陷阱触发7秒后重新就绪。施放陷阱技能会替换你现有的同类陷阱。"
+      ]
+    },
+    {
+      "id": "HunterSetRune2",
+      "name": "神射手的决心",
+      "nameEn": "Deadeye’s Resolve",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "pieces": [
+        {
+          "id": "HunterSetRune2_1",
+          "name": "神射手的决心 I",
+          "nameEn": "Deadeye’s Resolve I",
+          "tier": "1"
+        },
+        {
+          "id": "HunterSetRune2_2",
+          "name": "神射手的决心 II",
+          "nameEn": "Deadeye’s Resolve II",
+          "tier": "2"
+        },
+        {
+          "id": "HunterSetRune2_3",
+          "name": "神射手的决心 III",
+          "nameEn": "Deadeye’s Resolve III",
+          "tier": "3"
+        },
+        {
+          "id": "HunterSetRune2_4",
+          "name": "神射手的决心 IV",
+          "nameEn": "Deadeye’s Resolve IV",
+          "tier": "4"
+        },
+        {
+          "id": "HunterSetRune2_5",
+          "name": "神射手的决心 V",
+          "nameEn": "Deadeye’s Resolve V",
+          "tier": "5"
+        },
+        {
+          "id": "HunterSetRune2_6",
+          "name": "神射手的决心 VI",
+          "nameEn": "Deadeye’s Resolve VI",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "物理伤害提高50%。",
+        "引导急速射击时，获得25%伤害减免。",
+        "神射手的专注愈发敏锐。急速射击的箭矢现在可穿透最多3个目标。"
+      ]
+    },
+    {
+      "id": "HunterSetRune3",
+      "name": "毒牙",
+      "nameEn": "Venomfang",
+      "hero": "Hunter",
+      "heroName": "猎人",
+      "pieces": [
+        {
+          "id": "HunterSetRune3_1",
+          "name": "毒牙 I",
+          "nameEn": "Venomfang I",
+          "tier": "1"
+        },
+        {
+          "id": "HunterSetRune3_2",
+          "name": "毒牙 II",
+          "nameEn": "Venomfang II",
+          "tier": "2"
+        },
+        {
+          "id": "HunterSetRune3_3",
+          "name": "毒牙 III",
+          "nameEn": "Venomfang III",
+          "tier": "3"
+        },
+        {
+          "id": "HunterSetRune3_4",
+          "name": "毒牙 IV",
+          "nameEn": "Venomfang IV",
+          "tier": "4"
+        },
+        {
+          "id": "HunterSetRune3_5",
+          "name": "毒牙 V",
+          "nameEn": "Venomfang V",
+          "tier": "5"
+        },
+        {
+          "id": "HunterSetRune3_6",
+          "name": "毒牙 VI",
+          "nameEn": "Venomfang VI",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "对中毒敌人的伤害提高70%。",
+        "施加中毒时，使目标的移动速度降低25%，攻击速度降低20%，持续5秒。再次施加中毒会刷新减速持续时间。",
+        "施放毒素射击时有50%几率额外发射一枚弧线毒弹，对小范围内的敌人造成120%武器伤害的毒素伤害，并使所有命中的敌人中毒。"
+      ]
+    },
+    {
+      "id": "MonkSetRune1",
+      "name": "百手",
+      "nameEn": "Hundred Hands",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "pieces": [
+        {
+          "id": "MonkSetRune1_1",
+          "name": "百手符文 (I)",
+          "nameEn": "Hundred Hands Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "MonkSetRune1_2",
+          "name": "百手符文 (II)",
+          "nameEn": "Hundred Hands Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "MonkSetRune1_3",
+          "name": "百手符文 (III)",
+          "nameEn": "Hundred Hands Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "MonkSetRune1_4",
+          "name": "百手符文 (IV)",
+          "nameEn": "Hundred Hands Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "MonkSetRune1_5",
+          "name": "百手符文 (V)",
+          "nameEn": "Hundred Hands Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "MonkSetRune1_6",
+          "name": "百手符文 (VI)",
+          "nameEn": "Hundred Hands Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "普通攻击伤害 +100%。",
+        "[怒拳]的每层还额外提供 +3% 物理伤害，20层时最高 +60%。",
+        "怒拳有25%几率免费施放双金掌，且不会击退敌人。"
+      ]
+    },
+    {
+      "id": "MonkSetRune2",
+      "name": "九天轮",
+      "nameEn": "Wheel of Nine Heavens",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "pieces": [
+        {
+          "id": "MonkSetRune2_1",
+          "name": "九天轮符文 (I)",
+          "nameEn": "Wheel of Nine Heavens Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "MonkSetRune2_2",
+          "name": "九天轮符文 (II)",
+          "nameEn": "Wheel of Nine Heavens Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "MonkSetRune2_3",
+          "name": "九天轮符文 (III)",
+          "nameEn": "Wheel of Nine Heavens Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "MonkSetRune2_4",
+          "name": "九天轮符文 (IV)",
+          "nameEn": "Wheel of Nine Heavens Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "MonkSetRune2_5",
+          "name": "九天轮符文 (V)",
+          "nameEn": "Wheel of Nine Heavens Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "MonkSetRune2_6",
+          "name": "九天轮符文 (VI)",
+          "nameEn": "Wheel of Nine Heavens Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "特殊技能伤害 +100%。",
+        "神圣法球将额外召唤一颗法球。",
+        "神圣法球持续时间结束时不再消散，而是脱离轨道飞向最近的敌人，在3米范围内爆开，造成相当于300%武器伤害的闪电伤害。"
+      ]
+    },
+    {
+      "id": "MonkSetRune3",
+      "name": "蛇信",
+      "nameEn": "Serpent's Tongue",
+      "hero": "Monk",
+      "heroName": "武僧",
+      "pieces": [
+        {
+          "id": "MonkSetRune3_1",
+          "name": "蛇信符文 (I)",
+          "nameEn": "Serpent's Tongue Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "MonkSetRune3_2",
+          "name": "蛇信符文 (II)",
+          "nameEn": "Serpent's Tongue Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "MonkSetRune3_3",
+          "name": "蛇信符文 (III)",
+          "nameEn": "Serpent's Tongue Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "MonkSetRune3_4",
+          "name": "蛇信符文 (IV)",
+          "nameEn": "Serpent's Tongue Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "MonkSetRune3_5",
+          "name": "蛇信符文 (V)",
+          "nameEn": "Serpent's Tongue Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "MonkSetRune3_6",
+          "name": "蛇信符文 (VI)",
+          "nameEn": "Serpent's Tongue Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "强力攻击伤害 +50%。",
+        "穿刺突进的法力消耗减半。",
+        "穿刺突进会使敌人[易伤]，且每次施放使一个随机[特殊]技能的冷却时间减少1秒。"
+      ]
+    },
+    {
+      "id": "SorcererSetRune1",
+      "name": "炼狱盟约",
+      "nameEn": "Infernal Covenant",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "pieces": [
+        {
+          "id": "SorcererSetRune1_1",
+          "name": "炼狱盟约符文 (I)",
+          "nameEn": "Infernal Covenant Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "SorcererSetRune1_2",
+          "name": "炼狱盟约符文 (II)",
+          "nameEn": "Infernal Covenant Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "SorcererSetRune1_3",
+          "name": "炼狱盟约符文 (III)",
+          "nameEn": "Infernal Covenant Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "SorcererSetRune1_4",
+          "name": "炼狱盟约符文 (IV)",
+          "nameEn": "Infernal Covenant Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "SorcererSetRune1_5",
+          "name": "炼狱盟约符文 (V)",
+          "nameEn": "Infernal Covenant Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "SorcererSetRune1_6",
+          "name": "炼狱盟约符文 (VI)",
+          "nameEn": "Infernal Covenant Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "对灼烧敌人的伤害 +65%。",
+        "火元素获得炎爆术作为额外技能。",
+        "火元素获得火陨石作为额外技能。"
+      ]
+    },
+    {
+      "id": "SorcererSetRune2",
+      "name": "冰封弹幕",
+      "nameEn": "Frozen Barrage",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "pieces": [
+        {
+          "id": "SorcererSetRune2_1",
+          "name": "冰封弹幕符文 (I)",
+          "nameEn": "Frozen Barrage Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "SorcererSetRune2_2",
+          "name": "冰封弹幕符文 (II)",
+          "nameEn": "Frozen Barrage Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "SorcererSetRune2_3",
+          "name": "冰封弹幕符文 (III)",
+          "nameEn": "Frozen Barrage Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "SorcererSetRune2_4",
+          "name": "冰封弹幕符文 (IV)",
+          "nameEn": "Frozen Barrage Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "SorcererSetRune2_5",
+          "name": "冰封弹幕符文 (V)",
+          "nameEn": "Frozen Barrage Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "SorcererSetRune2_6",
+          "name": "冰封弹幕符文 (VI)",
+          "nameEn": "Frozen Barrage Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "对减速敌人的伤害 +65%。",
+        "冰片也会施加[冰寒]。",
+        "冰片额外发射3枚投射物。"
+      ]
+    },
+    {
+      "id": "SorcererSetRune3",
+      "name": "唤雷者",
+      "nameEn": "Stormcaller",
+      "hero": "Sorcerer",
+      "heroName": "法师",
+      "pieces": [
+        {
+          "id": "SorcererSetRune3_1",
+          "name": "唤雷者符文 (I)",
+          "nameEn": "Stormcaller Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "SorcererSetRune3_2",
+          "name": "唤雷者符文 (II)",
+          "nameEn": "Stormcaller Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "SorcererSetRune3_3",
+          "name": "唤雷者符文 (III)",
+          "nameEn": "Stormcaller Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "SorcererSetRune3_4",
+          "name": "唤雷者符文 (IV)",
+          "nameEn": "Stormcaller Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "SorcererSetRune3_5",
+          "name": "唤雷者符文 (V)",
+          "nameEn": "Stormcaller Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "SorcererSetRune3_6",
+          "name": "唤雷者符文 (VI)",
+          "nameEn": "Stormcaller Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "闪电伤害 +50%。",
+        "闪电风暴的每次雷击都会造成溅射伤害。",
+        "闪电风暴的每次雷击都会生成一个闪电球，在小范围内周期性造成闪电伤害。"
+      ]
+    },
+    {
+      "id": "WarriorSetRune1",
+      "name": "阿瑟隆的坚盾",
+      "nameEn": "Strong Shield of the Atheron",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "pieces": [
+        {
+          "id": "WarriorSetRune1_1",
+          "name": "阿瑟隆之盾符文 (I)",
+          "nameEn": "Rune of Atheron's Shield (I)",
+          "tier": "1"
+        },
+        {
+          "id": "WarriorSetRune1_2",
+          "name": "阿瑟隆之盾符文 (II)",
+          "nameEn": "Rune of Atheron's Shield (II)",
+          "tier": "2"
+        },
+        {
+          "id": "WarriorSetRune1_3",
+          "name": "阿瑟隆之盾符文 (III)",
+          "nameEn": "Rune of Atheron's Shield (III)",
+          "tier": "3"
+        },
+        {
+          "id": "WarriorSetRune1_4",
+          "name": "阿瑟隆之盾符文 (IV)",
+          "nameEn": "Rune of Atheron's Shield (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "WarriorSetRune1_5",
+          "name": "阿瑟隆之盾符文 (V)",
+          "nameEn": "Rune of Atheron's Shield (V)",
+          "tier": "5"
+        },
+        {
+          "id": "WarriorSetRune1_6",
+          "name": "阿瑟隆之盾符文 (VI)",
+          "nameEn": "Rune of Atheron's Shield (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "+10%暴击几率。",
+        "暴击时回复5%的最大生命值。",
+        "怒气护盾额外提供20%暴击几率和50%暴击伤害。"
+      ]
+    },
+    {
+      "id": "WarriorSetRune2",
+      "name": "风暴之眼",
+      "nameEn": "Eye of the Storm",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "pieces": [
+        {
+          "id": "WarriorSetRune2_1",
+          "name": "风暴之眼符文 (I)",
+          "nameEn": "Eye of the Storm Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "WarriorSetRune2_2",
+          "name": "风暴之眼符文 (II)",
+          "nameEn": "Eye of the Storm Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "WarriorSetRune2_3",
+          "name": "风暴之眼符文 (III)",
+          "nameEn": "Eye of the Storm Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "WarriorSetRune2_4",
+          "name": "风暴之眼符文 (IV)",
+          "nameEn": "Eye of the Storm Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "WarriorSetRune2_5",
+          "name": "风暴之眼符文 (V)",
+          "nameEn": "Eye of the Storm Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "WarriorSetRune2_6",
+          "name": "风暴之眼符文 (VI)",
+          "nameEn": "Eye of the Storm Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "物理伤害 +50%。",
+        "旋风斩的攻击与旋转速度提升25%，持续时间延长3秒。",
+        "引导旋风斩时，除了[战吼]能力外，还可以施放所有[特殊]能力。"
+      ]
+    },
+    {
+      "id": "WarriorSetRune3",
+      "name": "山岳之重",
+      "nameEn": "Weight of the Mountain",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "pieces": [
+        {
+          "id": "WarriorSetRune3_1",
+          "name": "山岳之重符文 (I)",
+          "nameEn": "Weight of the Mountain Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "WarriorSetRune3_2",
+          "name": "山岳之重符文 (II)",
+          "nameEn": "Weight of the Mountain Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "WarriorSetRune3_3",
+          "name": "山岳之重符文 (III)",
+          "nameEn": "Weight of the Mountain Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "WarriorSetRune3_4",
+          "name": "山岳之重符文 (IV)",
+          "nameEn": "Weight of the Mountain Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "WarriorSetRune3_5",
+          "name": "山岳之重符文 (V)",
+          "nameEn": "Weight of the Mountain Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "WarriorSetRune3_6",
+          "name": "山岳之重符文 (VI)",
+          "nameEn": "Weight of the Mountain Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "特殊技能伤害 +100%。",
+        "每次施放[普通攻击]使裂地击的冷却时间减少0.8秒。",
+        "你造成的昏迷结束时，敌人陷入[碎骨]状态8秒，受到你的暴击伤害提高250%。"
+      ]
+    },
+    {
+      "id": "WarriorSetRune4",
+      "name": "秋收之月",
+      "nameEn": "Harvest Moon",
+      "hero": "Warrior",
+      "heroName": "战士",
+      "pieces": [
+        {
+          "id": "WarriorSetRune4_1",
+          "name": "秋收之月符文 (I)",
+          "nameEn": "Harvest Moon Rune (I)",
+          "tier": "1"
+        },
+        {
+          "id": "WarriorSetRune4_2",
+          "name": "秋收之月符文 (II)",
+          "nameEn": "Harvest Moon Rune (II)",
+          "tier": "2"
+        },
+        {
+          "id": "WarriorSetRune4_3",
+          "name": "秋收之月符文 (III)",
+          "nameEn": "Harvest Moon Rune (III)",
+          "tier": "3"
+        },
+        {
+          "id": "WarriorSetRune4_4",
+          "name": "秋收之月符文 (IV)",
+          "nameEn": "Harvest Moon Rune (IV)",
+          "tier": "4"
+        },
+        {
+          "id": "WarriorSetRune4_5",
+          "name": "秋收之月符文 (V)",
+          "nameEn": "Harvest Moon Rune (V)",
+          "tier": "5"
+        },
+        {
+          "id": "WarriorSetRune4_6",
+          "name": "秋收之月符文 (VI)",
+          "nameEn": "Harvest Moon Rune (VI)",
+          "tier": "6"
+        }
+      ],
+      "effects": [
+        "强力攻击伤害 +50%。",
+        "半月斩每命中一名敌人便获得一层[弦月势能]，持续3秒，最多20层。每层提供+1法力回复和+1%暴击几率。",
+        "半月斩的刃不再飞掠而过，而是在瞄准处追猎周围的敌人，持续3秒，每0.5秒切割每个敌人一次。"
+      ]
+    }
+  ]
 }

@@ -12,6 +12,16 @@ const QUALITY_COLORS = {
 }
 const Q_NAMES = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说', divine: '神圣' }
 
+// 概率格式化：保留有效位数（0.18% / 10% / 0.01% 等）
+function fmtPct(v) {
+  if (v == null) return '0%'
+  const p = v * 100
+  if (p >= 10) return `${Math.round(p)}%`
+  if (p >= 1) return `${p.toFixed(1)}%`
+  if (p > 0) return `${p.toFixed(2)}%`
+  return '0%'
+}
+
 // 掉落向量展示
 function LootVectorBar({ label, min, max, colors }) {
   return (
@@ -49,7 +59,7 @@ export default function LootPage() {
           <div style={{ padding: '1rem 1.2rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '0.8rem' }}>
             <div style={{ textAlign: 'center' }}>
               <div style={{ color: 'var(--l-divine)', fontSize: '2.2rem', fontWeight: 700, fontFamily: 'Cinzel, serif', textShadow: '0 0 8px rgba(255,59,59,0.5)' }}>
-                {Math.round(blackMistChance * 100)}%
+                {fmtPct(blackMistChance)}
               </div>
               <div style={{ color: 'var(--muted)', fontSize: '0.78rem' }}>黑雾装备掉落概率</div>
             </div>

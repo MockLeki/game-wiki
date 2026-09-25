@@ -20,8 +20,8 @@
       "icon": "/images/icons/items/gem_amethyst_1.png",
       "rarity": 0,
       "sellPrice": 2000,
-      "minDropLevel": 15,
-      "maxDropLevel": 35,
+      "minDropLevel": 30,
+      "maxDropLevel": 34,
       "armorBonus": [
         {
           "stat": 2,
@@ -61,8 +61,8 @@
       "icon": "/images/icons/items/gem_amethyst_2.png",
       "rarity": 0,
       "sellPrice": 4000,
-      "minDropLevel": 25,
-      "maxDropLevel": 45,
+      "minDropLevel": 35,
+      "maxDropLevel": 39,
       "armorBonus": [
         {
           "stat": 2,
@@ -86,8 +86,8 @@
           "stat": 28,
           "statCn": "奥术伤害",
           "mod": 0,
-          "value": 0.2,
-          "text": "奥术伤害 +0.2"
+          "value": 0.15,
+          "text": "奥术伤害 +0.15"
         }
       ]
     },
@@ -102,8 +102,8 @@
       "icon": "/images/icons/items/gem_amethyst_3.png",
       "rarity": 0,
       "sellPrice": 6000,
-      "minDropLevel": 35,
-      "maxDropLevel": 55,
+      "minDropLevel": 40,
+      "maxDropLevel": 44,
       "armorBonus": [
         {
           "stat": 2,
@@ -127,8 +127,8 @@
           "stat": 28,
           "statCn": "奥术伤害",
           "mod": 0,
-          "value": 0.3,
-          "text": "奥术伤害 +0.3"
+          "value": 0.2,
+          "text": "奥术伤害 +0.2"
         }
       ]
     },
@@ -168,8 +168,8 @@
           "stat": 28,
           "statCn": "奥术伤害",
           "mod": 0,
-          "value": 0.4,
-          "text": "奥术伤害 +0.4"
+          "value": 0.25,
+          "text": "奥术伤害 +0.25"
         }
       ]
     },
@@ -191,8 +191,8 @@
           "stat": 2,
           "statCn": "智力",
           "mod": 0,
-          "value": 30.0,
-          "text": "智力 +30"
+          "value": 25.0,
+          "text": "智力 +25"
         }
       ],
       "accessoryBonus": [
@@ -209,8 +209,8 @@
           "stat": 28,
           "statCn": "奥术伤害",
           "mod": 0,
-          "value": 0.6,
-          "text": "奥术伤害 +0.6"
+          "value": 0.35,
+          "text": "奥术伤害 +0.35"
         }
       ]
     },
@@ -232,8 +232,8 @@
           "stat": 2,
           "statCn": "智力",
           "mod": 0,
-          "value": 40.0,
-          "text": "智力 +40"
+          "value": 30.0,
+          "text": "智力 +30"
         }
       ],
       "accessoryBonus": [
@@ -250,8 +250,8 @@
           "stat": 28,
           "statCn": "奥术伤害",
           "mod": 0,
-          "value": 0.8,
-          "text": "奥术伤害 +0.8"
+          "value": 0.5,
+          "text": "奥术伤害 +0.5"
         }
       ]
     },
@@ -266,8 +266,8 @@
       "icon": "/images/icons/items/gem_diamond_1.png",
       "rarity": 0,
       "sellPrice": 2000,
-      "minDropLevel": 15,
-      "maxDropLevel": 35,
+      "minDropLevel": 30,
+      "maxDropLevel": 34,
       "armorBonus": [
         {
           "stat": 13,
@@ -282,8 +282,8 @@
           "stat": 51,
           "statCn": "物理伤害减免",
           "mod": 0,
-          "value": 0.05,
-          "text": "物理伤害减免 +0.05"
+          "value": 0.04,
+          "text": "物理伤害减免 +0.04"
         }
       ],
       "weaponBonus": [
@@ -307,8 +307,49 @@
       "icon": "/images/icons/items/gem_diamond_2.png",
       "rarity": 0,
       "sellPrice": 4000,
-      "minDropLevel": 25,
-      "maxDropLevel": 45,
+      "minDropLevel": 35,
+      "maxDropLevel": 39,
+      "armorBonus": [
+        {
+          "stat": 13,
+          "statCn": "冷却缩减",
+          "mod": 0,
+          "value": 0.015,
+          "text": "冷却缩减 +0.015"
+        }
+      ],
+      "accessoryBonus": [
+        {
+          "stat": 51,
+          "statCn": "物理伤害减免",
+          "mod": 0,
+          "value": 0.055,
+          "text": "物理伤害减免 +0.055"
+        }
+      ],
+      "weaponBonus": [
+        {
+          "stat": 23,
+          "statCn": "物理伤害",
+          "mod": 0,
+          "value": 0.15,
+          "text": "物理伤害 +0.15"
+        }
+      ]
+    },
+    {
+      "id": "GemDiamond3",
+      "type": "Diamond",
+      "typeName": "钻石",
+      "tier": 3,
+      "name": "粗砺的钻石方块",
+      "nameEn": "Rough Square Diamond",
+      "color": "#c8d6e5",
+      "icon": "/images/icons/items/gem_diamond_3.png",
+      "rarity": 0,
+      "sellPrice": 6000,
+      "minDropLevel": 40,
+      "maxDropLevel": 44,
       "armorBonus": [
         {
           "stat": 13,
@@ -338,47 +379,6 @@
       ]
     },
     {
-      "id": "GemDiamond3",
-      "type": "Diamond",
-      "typeName": "钻石",
-      "tier": 3,
-      "name": "粗砺的钻石方块",
-      "nameEn": "Rough Square Diamond",
-      "color": "#c8d6e5",
-      "icon": "/images/icons/items/gem_diamond_3.png",
-      "rarity": 0,
-      "sellPrice": 6000,
-      "minDropLevel": 35,
-      "maxDropLevel": 55,
-      "armorBonus": [
-        {
-          "stat": 13,
-          "statCn": "冷却缩减",
-          "mod": 0,
-          "value": 0.03,
-          "text": "冷却缩减 +0.03"
-        }
-      ],
-      "accessoryBonus": [
-        {
-          "stat": 51,
-          "statCn": "物理伤害减免",
-          "mod": 0,
-          "value": 0.09,
-          "text": "物理伤害减免 +0.09"
-        }
-      ],
-      "weaponBonus": [
-        {
-          "stat": 23,
-          "statCn": "物理伤害",
-          "mod": 0,
-          "value": 0.3,
-          "text": "物理伤害 +0.3"
-        }
-      ]
-    },
-    {
       "id": "GemDiamond4",
       "type": "Diamond",
       "typeName": "钻石",
@@ -396,8 +396,8 @@
           "stat": 13,
           "statCn": "冷却缩减",
           "mod": 0,
-          "value": 0.04,
-          "text": "冷却缩减 +0.04"
+          "value": 0.025,
+          "text": "冷却缩减 +0.025"
         }
       ],
       "accessoryBonus": [
@@ -405,8 +405,8 @@
           "stat": 51,
           "statCn": "物理伤害减免",
           "mod": 0,
-          "value": 0.11,
-          "text": "物理伤害减免 +0.11"
+          "value": 0.085,
+          "text": "物理伤害减免 +0.085"
         }
       ],
       "weaponBonus": [
@@ -414,8 +414,8 @@
           "stat": 23,
           "statCn": "物理伤害",
           "mod": 0,
-          "value": 0.4,
-          "text": "物理伤害 +0.4"
+          "value": 0.25,
+          "text": "物理伤害 +0.25"
         }
       ]
     },
@@ -437,8 +437,8 @@
           "stat": 13,
           "statCn": "冷却缩减",
           "mod": 0,
-          "value": 0.05,
-          "text": "冷却缩减 +0.05"
+          "value": 0.03,
+          "text": "冷却缩减 +0.03"
         }
       ],
       "accessoryBonus": [
@@ -446,8 +446,8 @@
           "stat": 51,
           "statCn": "物理伤害减免",
           "mod": 0,
-          "value": 0.13,
-          "text": "物理伤害减免 +0.13"
+          "value": 0.1,
+          "text": "物理伤害减免 +0.1"
         }
       ],
       "weaponBonus": [
@@ -455,8 +455,8 @@
           "stat": 23,
           "statCn": "物理伤害",
           "mod": 0,
-          "value": 0.6,
-          "text": "物理伤害 +0.6"
+          "value": 0.35,
+          "text": "物理伤害 +0.35"
         }
       ]
     },
@@ -478,8 +478,8 @@
           "stat": 13,
           "statCn": "冷却缩减",
           "mod": 0,
-          "value": 0.06,
-          "text": "冷却缩减 +0.06"
+          "value": 0.04,
+          "text": "冷却缩减 +0.04"
         }
       ],
       "accessoryBonus": [
@@ -487,8 +487,8 @@
           "stat": 51,
           "statCn": "物理伤害减免",
           "mod": 0,
-          "value": 0.15,
-          "text": "物理伤害减免 +0.15"
+          "value": 0.115,
+          "text": "物理伤害减免 +0.115"
         }
       ],
       "weaponBonus": [
@@ -496,8 +496,8 @@
           "stat": 23,
           "statCn": "物理伤害",
           "mod": 0,
-          "value": 0.8,
-          "text": "物理伤害 +0.8"
+          "value": 0.5,
+          "text": "物理伤害 +0.5"
         }
       ]
     },
@@ -512,8 +512,8 @@
       "icon": "/images/icons/items/gem_emerald_1.png",
       "rarity": 0,
       "sellPrice": 2000,
-      "minDropLevel": 15,
-      "maxDropLevel": 35,
+      "minDropLevel": 30,
+      "maxDropLevel": 34,
       "armorBonus": [
         {
           "stat": 39,
@@ -553,8 +553,8 @@
       "icon": "/images/icons/items/gem_emerald_2.png",
       "rarity": 0,
       "sellPrice": 4000,
-      "minDropLevel": 25,
-      "maxDropLevel": 45,
+      "minDropLevel": 35,
+      "maxDropLevel": 39,
       "armorBonus": [
         {
           "stat": 39,
@@ -578,8 +578,8 @@
           "stat": 27,
           "statCn": "毒素伤害",
           "mod": 0,
-          "value": 0.2,
-          "text": "毒素伤害 +0.2"
+          "value": 0.15,
+          "text": "毒素伤害 +0.15"
         }
       ]
     },
@@ -594,8 +594,8 @@
       "icon": "/images/icons/items/gem_emerald_3.png",
       "rarity": 0,
       "sellPrice": 6000,
-      "minDropLevel": 35,
-      "maxDropLevel": 55,
+      "minDropLevel": 40,
+      "maxDropLevel": 44,
       "armorBonus": [
         {
           "stat": 39,
@@ -619,8 +619,8 @@
           "stat": 27,
           "statCn": "毒素伤害",
           "mod": 0,
-          "value": 0.3,
-          "text": "毒素伤害 +0.3"
+          "value": 0.2,
+          "text": "毒素伤害 +0.2"
         }
       ]
     },
@@ -660,8 +660,8 @@
           "stat": 27,
           "statCn": "毒素伤害",
           "mod": 0,
-          "value": 0.4,
-          "text": "毒素伤害 +0.4"
+          "value": 0.25,
+          "text": "毒素伤害 +0.25"
         }
       ]
     },
@@ -683,8 +683,8 @@
           "stat": 39,
           "statCn": "荆棘",
           "mod": 0,
-          "value": 120.0,
-          "text": "荆棘 +120"
+          "value": 105.0,
+          "text": "荆棘 +105"
         }
       ],
       "accessoryBonus": [
@@ -701,8 +701,8 @@
           "stat": 27,
           "statCn": "毒素伤害",
           "mod": 0,
-          "value": 0.6,
-          "text": "毒素伤害 +0.6"
+          "value": 0.35,
+          "text": "毒素伤害 +0.35"
         }
       ]
     },
@@ -724,8 +724,8 @@
           "stat": 39,
           "statCn": "荆棘",
           "mod": 0,
-          "value": 200.0,
-          "text": "荆棘 +200"
+          "value": 130.0,
+          "text": "荆棘 +130"
         }
       ],
       "accessoryBonus": [
@@ -742,8 +742,8 @@
           "stat": 27,
           "statCn": "毒素伤害",
           "mod": 0,
-          "value": 0.8,
-          "text": "毒素伤害 +0.8"
+          "value": 0.5,
+          "text": "毒素伤害 +0.5"
         }
       ]
     },
@@ -758,8 +758,8 @@
       "icon": "/images/icons/items/gem_ruby_1.png",
       "rarity": 0,
       "sellPrice": 2000,
-      "minDropLevel": 15,
-      "maxDropLevel": 35,
+      "minDropLevel": 30,
+      "maxDropLevel": 34,
       "armorBonus": [
         {
           "stat": 0,
@@ -799,8 +799,8 @@
       "icon": "/images/icons/items/gem_ruby_2.png",
       "rarity": 0,
       "sellPrice": 4000,
-      "minDropLevel": 25,
-      "maxDropLevel": 45,
+      "minDropLevel": 35,
+      "maxDropLevel": 39,
       "armorBonus": [
         {
           "stat": 0,
@@ -824,8 +824,8 @@
           "stat": 24,
           "statCn": "火焰伤害",
           "mod": 0,
-          "value": 0.2,
-          "text": "火焰伤害 +0.2"
+          "value": 0.15,
+          "text": "火焰伤害 +0.15"
         }
       ]
     },
@@ -840,8 +840,8 @@
       "icon": "/images/icons/items/gem_ruby_3.png",
       "rarity": 0,
       "sellPrice": 6000,
-      "minDropLevel": 35,
-      "maxDropLevel": 55,
+      "minDropLevel": 40,
+      "maxDropLevel": 44,
       "armorBonus": [
         {
           "stat": 0,
@@ -865,8 +865,8 @@
           "stat": 24,
           "statCn": "火焰伤害",
           "mod": 0,
-          "value": 0.3,
-          "text": "火焰伤害 +0.3"
+          "value": 0.2,
+          "text": "火焰伤害 +0.2"
         }
       ]
     },
@@ -906,8 +906,8 @@
           "stat": 24,
           "statCn": "火焰伤害",
           "mod": 0,
-          "value": 0.4,
-          "text": "火焰伤害 +0.4"
+          "value": 0.25,
+          "text": "火焰伤害 +0.25"
         }
       ]
     },
@@ -929,8 +929,8 @@
           "stat": 0,
           "statCn": "力量",
           "mod": 0,
-          "value": 30.0,
-          "text": "力量 +30"
+          "value": 25.0,
+          "text": "力量 +25"
         }
       ],
       "accessoryBonus": [
@@ -947,8 +947,8 @@
           "stat": 24,
           "statCn": "火焰伤害",
           "mod": 0,
-          "value": 0.6,
-          "text": "火焰伤害 +0.6"
+          "value": 0.35,
+          "text": "火焰伤害 +0.35"
         }
       ]
     },
@@ -970,8 +970,8 @@
           "stat": 0,
           "statCn": "力量",
           "mod": 0,
-          "value": 40.0,
-          "text": "力量 +40"
+          "value": 30.0,
+          "text": "力量 +30"
         }
       ],
       "accessoryBonus": [
@@ -988,8 +988,8 @@
           "stat": 24,
           "statCn": "火焰伤害",
           "mod": 0,
-          "value": 0.8,
-          "text": "火焰伤害 +0.8"
+          "value": 0.5,
+          "text": "火焰伤害 +0.5"
         }
       ]
     },
@@ -1004,8 +1004,8 @@
       "icon": "/images/icons/items/gem_sapphire_1.png",
       "rarity": 0,
       "sellPrice": 2000,
-      "minDropLevel": 15,
-      "maxDropLevel": 35,
+      "minDropLevel": 30,
+      "maxDropLevel": 34,
       "armorBonus": [
         {
           "stat": 42,
@@ -1045,8 +1045,8 @@
       "icon": "/images/icons/items/gem_sapphire_2.png",
       "rarity": 0,
       "sellPrice": 4000,
-      "minDropLevel": 25,
-      "maxDropLevel": 45,
+      "minDropLevel": 35,
+      "maxDropLevel": 39,
       "armorBonus": [
         {
           "stat": 42,
@@ -1070,8 +1070,8 @@
           "stat": 25,
           "statCn": "冰霜伤害",
           "mod": 0,
-          "value": 0.2,
-          "text": "冰霜伤害 +0.2"
+          "value": 0.15,
+          "text": "冰霜伤害 +0.15"
         }
       ]
     },
@@ -1086,8 +1086,8 @@
       "icon": "/images/icons/items/gem_sapphire_3.png",
       "rarity": 0,
       "sellPrice": 6000,
-      "minDropLevel": 35,
-      "maxDropLevel": 55,
+      "minDropLevel": 40,
+      "maxDropLevel": 44,
       "armorBonus": [
         {
           "stat": 42,
@@ -1111,8 +1111,8 @@
           "stat": 25,
           "statCn": "冰霜伤害",
           "mod": 0,
-          "value": 0.3,
-          "text": "冰霜伤害 +0.3"
+          "value": 0.2,
+          "text": "冰霜伤害 +0.2"
         }
       ]
     },
@@ -1152,8 +1152,8 @@
           "stat": 25,
           "statCn": "冰霜伤害",
           "mod": 0,
-          "value": 0.4,
-          "text": "冰霜伤害 +0.4"
+          "value": 0.25,
+          "text": "冰霜伤害 +0.25"
         }
       ]
     },
@@ -1193,8 +1193,8 @@
           "stat": 25,
           "statCn": "冰霜伤害",
           "mod": 0,
-          "value": 0.6,
-          "text": "冰霜伤害 +0.6"
+          "value": 0.35,
+          "text": "冰霜伤害 +0.35"
         }
       ]
     },
@@ -1216,8 +1216,8 @@
           "stat": 42,
           "statCn": "最大生命值%",
           "mod": 0,
-          "value": 0.2,
-          "text": "最大生命值% +0.2"
+          "value": 0.18,
+          "text": "最大生命值% +0.18"
         }
       ],
       "accessoryBonus": [
@@ -1234,8 +1234,8 @@
           "stat": 25,
           "statCn": "冰霜伤害",
           "mod": 0,
-          "value": 0.8,
-          "text": "冰霜伤害 +0.8"
+          "value": 0.5,
+          "text": "冰霜伤害 +0.5"
         }
       ]
     },
@@ -1250,8 +1250,8 @@
       "icon": "/images/icons/items/gem_topaz_1.png",
       "rarity": 0,
       "sellPrice": 2000,
-      "minDropLevel": 15,
-      "maxDropLevel": 35,
+      "minDropLevel": 30,
+      "maxDropLevel": 34,
       "armorBonus": [
         {
           "stat": 1,
@@ -1291,8 +1291,8 @@
       "icon": "/images/icons/items/gem_topaz_2.png",
       "rarity": 0,
       "sellPrice": 4000,
-      "minDropLevel": 25,
-      "maxDropLevel": 45,
+      "minDropLevel": 35,
+      "maxDropLevel": 39,
       "armorBonus": [
         {
           "stat": 1,
@@ -1316,8 +1316,8 @@
           "stat": 26,
           "statCn": "闪电伤害",
           "mod": 0,
-          "value": 0.2,
-          "text": "闪电伤害 +0.2"
+          "value": 0.15,
+          "text": "闪电伤害 +0.15"
         }
       ]
     },
@@ -1332,8 +1332,8 @@
       "icon": "/images/icons/items/gem_topaz_3.png",
       "rarity": 0,
       "sellPrice": 6000,
-      "minDropLevel": 35,
-      "maxDropLevel": 55,
+      "minDropLevel": 40,
+      "maxDropLevel": 44,
       "armorBonus": [
         {
           "stat": 1,
@@ -1357,8 +1357,8 @@
           "stat": 26,
           "statCn": "闪电伤害",
           "mod": 0,
-          "value": 0.3,
-          "text": "闪电伤害 +0.3"
+          "value": 0.2,
+          "text": "闪电伤害 +0.2"
         }
       ]
     },
@@ -1398,8 +1398,8 @@
           "stat": 26,
           "statCn": "闪电伤害",
           "mod": 0,
-          "value": 0.4,
-          "text": "闪电伤害 +0.4"
+          "value": 0.25,
+          "text": "闪电伤害 +0.25"
         }
       ]
     },
@@ -1421,8 +1421,8 @@
           "stat": 1,
           "statCn": "敏捷",
           "mod": 0,
-          "value": 30.0,
-          "text": "敏捷 +30"
+          "value": 25.0,
+          "text": "敏捷 +25"
         }
       ],
       "accessoryBonus": [
@@ -1439,8 +1439,8 @@
           "stat": 26,
           "statCn": "闪电伤害",
           "mod": 0,
-          "value": 0.6,
-          "text": "闪电伤害 +0.6"
+          "value": 0.35,
+          "text": "闪电伤害 +0.35"
         }
       ]
     },
@@ -1462,8 +1462,8 @@
           "stat": 1,
           "statCn": "敏捷",
           "mod": 0,
-          "value": 40.0,
-          "text": "敏捷 +40"
+          "value": 30.0,
+          "text": "敏捷 +30"
         }
       ],
       "accessoryBonus": [
@@ -1480,8 +1480,8 @@
           "stat": 26,
           "statCn": "闪电伤害",
           "mod": 0,
-          "value": 0.8,
-          "text": "闪电伤害 +0.8"
+          "value": 0.5,
+          "text": "闪电伤害 +0.5"
         }
       ]
     }

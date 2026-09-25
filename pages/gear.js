@@ -77,7 +77,7 @@ export default function GearPage() {
         <div className="hero-card" style={{padding: '1.5rem'}}>
           <h1 className="hero-title" style={{fontSize: '2.2rem', textAlign: 'left'}}>装备数据库</h1>
           <p className="hero-subtitle" style={{textAlign: 'left', margin: 0}}>
-            浏览 126 件桌面破坏神装备，含 5 品质、11 部位、词条、获取途径。
+            浏览 {allItems.length} 件桌面破坏神装备，含 5 品质、11 部位、词条、获取途径。
           </p>
         </div>
 
@@ -94,7 +94,7 @@ export default function GearPage() {
                 通过「暗影」夫人（Lady "Shadow"，神秘物品商人）处放入装备 → 揭开黑雾 → 逐条选择属性 → 完全揭示。
               </div>
               <div style={{ color: 'var(--l-divine)', fontSize: '0.8rem', marginTop: '0.4rem', fontWeight: 600 }}>
-                掉落概率 1% · 难度 1 以上触发 · <Link href="/loot" style={{ color: 'var(--cyan-light)' }}>查看完整掉落概率 →</Link>
+                掉落概率 0.18% · 难度 1 以上触发 · <Link href="/loot" style={{ color: 'var(--cyan-light)' }}>查看完整掉落概率 →</Link>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function GearPage() {
           <div className="sidebar-section">
             <h4>统计</h4>
             <div style={{color: 'var(--text)', fontSize: '0.85rem', lineHeight: 1.8}}>
-              总装备: <span style={{color: 'var(--gold)'}}>126</span><br/>
+              总装备: <span style={{color: 'var(--gold)'}}>{allItems.length}</span><br/>
               稀有度: <span style={{color: 'var(--gold)'}}>5</span><br/>
               品质等级: <span style={{color: 'var(--gold)'}}>90</span>
             </div>

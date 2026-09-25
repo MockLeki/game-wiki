@@ -5,11 +5,11 @@ import SiteStats from '../components/SiteStats'
 
 export default function Home() {
   const stats = [
-    { icon: '⚔️', name: '装备', num: 126, link: '/gear' },
+    { icon: '⚔️', name: '装备', num: 209, link: '/gear' },
     { icon: '💎', name: '宝石', num: 36, link: '/gems' },
-    { icon: '🔮', name: '符文', num: 43, link: '/runes' },
-    { icon: '🐺', name: '仆从', num: 36, link: '/minions' },
-    { icon: '🗺️', name: '关卡', num: 12, link: '/world' },
+    { icon: '🔮', name: '符文', num: 121, link: '/runes' },
+    { icon: '🐺', name: '仆从', num: 68, link: '/minions' },
+    { icon: '🗺️', name: '关卡', num: 23, link: '/world' },
     { icon: '🎯', name: '技能', num: 90, link: '/skills' },
     { icon: '✨', name: '词条', num: 41, link: '/affixes' },
     { icon: '📜', name: '构筑', num: 0, link: '/build' },
@@ -30,6 +30,17 @@ export default function Home() {
           <div className="site-disclaimer">
             本网站由噜总制作，无官方认证。如果觉得画风/风格做得不好，请您另寻其他网站。
             如果害怕信息泄露，右上角 Steam 可不进行登录。感谢配合！
+          </div>
+          <div style={{ marginTop: '0.9rem' }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+              padding: '0.3rem 0.9rem', fontSize: '0.82rem', letterSpacing: '0.04em',
+              background: 'rgba(201,162,39,0.08)', border: '1px solid rgba(201,162,39,0.35)',
+              color: 'var(--gold)', borderRadius: 2,
+            }}>
+              <span style={{ fontSize: '1rem' }}>📅</span>
+              数据已同步至游戏正式版 · 更新日期 2026-09-25
+            </span>
           </div>
           <div className="hero-divider">
             <span className="hero-divider-icon">⚔</span>

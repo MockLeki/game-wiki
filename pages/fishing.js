@@ -15,7 +15,10 @@ const TIER_COLORS = {
 }
 
 export default function FishingPage() {
-  const { beach, priceTiers, fish, stats } = fishingData
+  const { beach, priceTiers, fish, stats, spots } = fishingData
+  const spotList = spots ? Object.values(spots) : []
+  const SPOT_CN = { beach: '塔赞渔滩', snowLake: '维尔达克天池', volcanoLake: '灰烬湖' }
+  const SPOT_COLOR = { beach: 'var(--cyan)', snowLake: '#7ec8e3', volcanoLake: '#ff6b35' }
 
   // 按品质 + 价格档分组
   const grouped = {}
@@ -28,6 +31,7 @@ export default function FishingPage() {
     const items = fish.filter(f => f.priceTier === k)
     return { key: k, label: v.cn, labelEn: v.en, rank: v.rank, count: items.length }
   })
+  const qCount = q => (grouped[q] || []).length
 
   return (
     <Layout title="钓鱼出货图 - 桌面破坏神">
@@ -35,10 +39,20 @@ export default function FishingPage() {
         <div className="hero-card" style={{ padding: '1.5rem' }}>
           <h1 className="hero-title" style={{ fontSize: '2.2rem', textAlign: 'left' }}>🎣 钓鱼出货图</h1>
           <p className="hero-subtitle" style={{ textAlign: 'left', margin: 0 }}>
-            {beach.name}（{beach.nameEn}）— 共 {stats.total} 种可钓上钩的鱼。
+            共 {stats.total} 种可钓上钩的鱼，分布在 {spotList.length || 1} 个钓点。
           </p>
-          <div style={{ color: 'var(--text)', fontSize: '0.85rem', marginTop: '0.8rem', padding: '0.6rem 1rem', background: 'rgba(0,0,0,0.3)', borderLeft: '3px solid var(--gold)' }}>
-            {beach.desc}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.6rem', marginTop: '0.8rem' }}>
+            {spotList.length > 0 ? spotList.map(s => (
+              <div key={s.key} style={{ color: 'var(--text)', fontSize: '0.82rem', padding: '0.6rem 0.9rem', background: 'rgba(0,0,0,0.3)', borderLeft: '3px solid var(--gold)' }}>
+                <strong style={{ color: 'var(--gold)' }}>{s.name}</strong>
+                <span style={{ color: 'var(--muted)', fontSize: '0.72rem', marginLeft: '0.4rem' }}>{s.nameEn}</span>
+                <div style={{ color: 'var(--muted)', fontSize: '0.76rem', marginTop: '0.2rem' }}>{s.desc}</div>
+              </div>
+            )) : (
+              <div style={{ color: 'var(--text)', fontSize: '0.85rem', padding: '0.6rem 1rem', background: 'rgba(0,0,0,0.3)', borderLeft: '3px solid var(--gold)' }}>
+                {beach.desc}
+              </div>
+            )}
           </div>
         </div>
 
@@ -86,13 +100,18 @@ export default function FishingPage() {
                   background: QUALITY_COLORS[q], color: q === 'common' ? '#000' : '#fff',
                   fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.05em'
                 }}>{q}</span>
-                {q === 'rare' ? '稀有 / 药效鱼（4 种）' : q === 'uncommon' ? '非凡鱼（2 种）' : '普通鱼（2 种）'}
+                {q === 'rare' ? `稀有 / 药效鱼（${qCount('rare')} 种）` : q === 'uncommon' ? `非凡鱼（${qCount('uncommon')} 种）` : `普通鱼（${qCount('common')} 种）`}
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0.7rem', padding: '1rem' }}>
                 {grouped[q].map(f => (
                   <div key={f.id} className={`item-card q-${f.quality}`} style={{ padding: '0.9rem' }}>
                     <div className="item-name" style={{ fontSize: '0.95rem' }}>{f.name}</div>
                     <div style={{ color: 'var(--muted)', fontSize: '0.7rem', marginBottom: '0.5rem' }}>{f.nameEn}</div>
+                    {f.spot && (
+                      <div style={{ display: 'inline-block', fontSize: '0.68rem', color: SPOT_COLOR[f.spot] || 'var(--muted)', marginBottom: '0.4rem', padding: '0.1rem 0.5rem', border: '1px solid var(--border)' }}>
+                        📍 {SPOT_CN[f.spot] || f.spot}
+                      </div>
+                    )}
                     <div style={{ color: 'var(--text)', fontSize: '0.82rem', lineHeight: 1.5 }}>{f.desc}</div>
                     {f.effect && (
                       <div style={{ marginTop: '0.5rem', padding: '0.3rem 0.6rem', background: 'rgba(201,162,39,0.1)', border: '1px solid var(--border)', fontSize: '0.78rem', color: 'var(--gold)' }}>

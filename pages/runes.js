@@ -15,7 +15,14 @@ export default function RunesPage() {
   const heroes = runesData.heroes || {}
   const uncommon = runesData.uncommon || []
   const rare = runesData.rare || []
-  const setRune = runesData.set || {}
+  const sets = runesData.sets || []
+  // 套装按英雄分组
+  const setsByHero = {}
+  for (const s of sets) {
+    const h = s.hero || 'Other'
+    if (!setsByHero[h]) setsByHero[h] = []
+    setsByHero[h].push(s)
+  }
 
   // 稀有符文按英雄分组
   const rareByHero = {}
@@ -31,7 +38,7 @@ export default function RunesPage() {
         <div className="hero-card" style={{ padding: '1.5rem' }}>
           <h1 className="hero-title" style={{ fontSize: '2.2rem', textAlign: 'left' }}>符文图鉴</h1>
           <p className="hero-subtitle" style={{ textAlign: 'left', margin: 0 }}>
-            符文可镶嵌于技能，强化对应技能效果。含普通符文 {uncommon.length} 种、稀有符文 {rare.length} 种、套装符文 1 套。
+            符文可镶嵌于技能，强化对应技能效果。含普通符文 {uncommon.length} 种、稀有符文 {rare.length} 种、套装符文 {sets.length} 套。
           </p>
         </div>
 
@@ -121,32 +128,41 @@ export default function RunesPage() {
         )}
 
         {/* 套装符文 */}
-        {tab === 'set' && setRune.name && (
-          <div className="panel">
-            <div className="panel-title">🛡 套装符文 · {setRune.name}</div>
-            <div style={{ padding: '1rem' }}>
-              <div style={{ color: 'var(--muted)', fontSize: '0.8rem', marginBottom: '0.8rem' }}>{setRune.nameEn}</div>
-              {/* 6 件 */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.6rem', marginBottom: '1rem' }}>
-                {(setRune.pieces || []).map(p => (
-                  <div key={p.id} className="item-card q-legendary" style={{ padding: '0.7rem', textAlign: 'center' }}>
-                    <div className="item-name" style={{ fontSize: '0.85rem' }}>{p.name}</div>
+        {tab === 'set' && Object.entries(heroes).map(([heroKey, heroName]) => {
+          const heroSets = (setsByHero[heroKey] || []).sort((a, b) => a.id.localeCompare(b.id))
+          if (!heroSets.length) return null
+          return (
+            <div key={heroKey} className="panel" style={{ marginBottom: '1.2rem' }}>
+              <div className="panel-title">🛡 {heroName} 套装 <span style={{ fontSize: '0.75rem', opacity: 0.6, marginLeft: '0.5rem' }}>{heroSets.length} 套</span></div>
+              {heroSets.map(setRune => (
+                <div key={setRune.id} style={{ padding: '1rem', borderTop: '1px solid var(--border)' }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '0.3rem' }}>
+                    <span className="item-name" style={{ fontSize: '1.05rem' }}>{setRune.name}</span>
+                    <span style={{ color: 'var(--muted)', fontSize: '0.78rem' }}>{setRune.nameEn}</span>
                   </div>
-                ))}
-              </div>
-              {/* 套装效果 */}
-              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '0.8rem' }}>
-                <div style={{ color: 'var(--cyan-light)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem' }}>套装效果</div>
-                {(setRune.effects || []).map((e, i) => (
-                  <div key={i} style={{ color: 'var(--text)', fontSize: '0.85rem', padding: '0.3rem 0', borderBottom: '1px dashed var(--border)' }}>
-                    <span style={{ color: 'var(--gold)', marginRight: '0.4rem' }}>{['2件套', '4件套', '6件套'][i] || `${i + 1}件套`}</span>
-                    {e}
+                  {/* 6 件 */}
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '0.5rem', margin: '0.6rem 0 0.8rem' }}>
+                    {(setRune.pieces || []).map(p => (
+                      <div key={p.id} className="item-card q-legendary" style={{ padding: '0.5rem', textAlign: 'center' }}>
+                        <div className="item-name" style={{ fontSize: '0.8rem' }}>{p.name}</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                  {/* 套装效果 */}
+                  <div style={{ borderTop: '1px solid var(--border)', paddingTop: '0.6rem' }}>
+                    <div style={{ color: 'var(--cyan-light)', fontSize: '0.82rem', fontWeight: 600, marginBottom: '0.4rem' }}>套装效果</div>
+                    {(setRune.effects || []).map((e, i) => (
+                      <div key={i} style={{ color: 'var(--text)', fontSize: '0.85rem', padding: '0.3rem 0', borderBottom: '1px dashed var(--border)' }}>
+                        <span style={{ color: 'var(--gold)', marginRight: '0.4rem' }}>{['2件套', '4件套', '6件套'][i] || `${i + 1}件套`}</span>
+                        {e}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-        )}
+          )
+        })}
       </div>
     </Layout>
   )
