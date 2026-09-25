@@ -72,13 +72,25 @@ export default function RunesPage() {
                     {runes.map(r => (
                       <div key={r.id} className="item-card" style={{ padding: '0.7rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.3rem' }}>
-                          <span style={{
-                            width: 22, height: 22, flexShrink: 0,
-                            background: 'linear-gradient(135deg, #4a90d9 0%, #1a1a1a 140%)',
-                            clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            color: '#fff', fontSize: '0.6rem', fontWeight: 700,
-                          }}>{r.tier}</span>
+                          {r.icon ? (
+                            <span style={{ position: 'relative', width: 34, height: 34, flexShrink: 0, display: 'inline-block' }}>
+                              <img src={r.icon} alt="" style={{ width: 34, height: 34, objectFit: 'contain', filter: 'drop-shadow(0 0 4px rgba(0,0,0,0.7))' }} />
+                              <span style={{
+                                position: 'absolute', right: -5, bottom: -3,
+                                background: '#0a0605', border: '1px solid #4a90d9',
+                                color: '#7fb8e8', fontSize: '0.55rem', fontWeight: 700,
+                                padding: '0 0.22rem', lineHeight: 1.4,
+                              }}>{r.tier}</span>
+                            </span>
+                          ) : (
+                            <span style={{
+                              width: 22, height: 22, flexShrink: 0,
+                              background: 'linear-gradient(135deg, #4a90d9 0%, #1a1a1a 140%)',
+                              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+                              display: 'flex', alignItems: 'center', justifyContent: 'center',
+                              color: '#fff', fontSize: '0.6rem', fontWeight: 700,
+                            }}>{r.tier}</span>
+                          )}
                           <div style={{ flex: 1 }}>
                             <div className="item-name" style={{ fontSize: '0.88rem' }}>{r.name}</div>
                             <div style={{ color: 'var(--muted)', fontSize: '0.68rem' }}>{r.nameEn}</div>
@@ -114,8 +126,13 @@ export default function RunesPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '0.7rem', padding: '1rem' }}>
               {uncommon.map(r => (
                 <div key={r.id} className="item-card q-uncommon" style={{ padding: '0.8rem' }}>
-                  <div className="item-name" style={{ fontSize: '0.92rem' }}>{r.name}</div>
-                  <div style={{ color: 'var(--muted)', fontSize: '0.7rem', marginTop: '0.2rem' }}>{r.nameEn}</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    {r.icon && <img src={r.icon} alt="" style={{ width: 30, height: 30, objectFit: 'contain', flexShrink: 0 }} />}
+                    <div>
+                      <div className="item-name" style={{ fontSize: '0.92rem' }}>{r.name}</div>
+                      <div style={{ color: 'var(--muted)', fontSize: '0.7rem', marginTop: '0.2rem' }}>{r.nameEn}</div>
+                    </div>
+                  </div>
                   {r.attributes?.length > 0 && (
                     <div style={{ fontSize: '0.75rem', color: 'var(--cyan-light)', lineHeight: 1.5, marginTop: '0.4rem' }}>
                       {r.attributes.map((a, i) => <div key={i}>{a.text}</div>)}

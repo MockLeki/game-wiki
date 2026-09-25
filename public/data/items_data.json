@@ -13,7 +13,8 @@
           "descEn": "A chunk of raw iron ore. Smelted down as a reagent for upgrading equipment.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/ore1.png"
         },
         {
           "id": "ore2",
@@ -23,7 +24,8 @@
           "descEn": "A nugget of raw gold ore. Smelted down as a reagent for upgrading equipment.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/ore2.png"
         },
         {
           "id": "ore3",
@@ -33,7 +35,8 @@
           "descEn": "A concentrated essence of primal earth, released when powerful equipment is salvaged. Used as a reagent for upgrading equipment.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/ore3.png"
         }
       ]
     },
@@ -50,7 +53,8 @@
           "descEn": "A foraged mushroom with potent properties. Used as an ingredient for brewing potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant1.png"
         },
         {
           "id": "plant2",
@@ -60,7 +64,8 @@
           "descEn": "A rare leaf that shimmers with starlight. Used as an ingredient for brewing potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant2.png"
         },
         {
           "id": "plant3",
@@ -70,7 +75,8 @@
           "descEn": "A sturdy leaf from an ancient oak. Used as an ingredient for brewing potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant3.png"
         },
         {
           "id": "plant4",
@@ -80,7 +86,8 @@
           "descEn": "A rare red flower that blooms in the Tazan Desert. Used as an ingredient for brewing powerful potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant4.png"
         },
         {
           "id": "plant5",
@@ -90,7 +97,8 @@
           "descEn": "Silken kelp gathered from the tidal shallows. Used as an ingredient for brewing potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant5.png"
         },
         {
           "id": "plant6",
@@ -100,7 +108,8 @@
           "descEn": "A vivid red branch prised from a shoreline reef. Used as an ingredient for brewing powerful potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant6.png"
         },
         {
           "id": "plant7",
@@ -110,7 +119,8 @@
           "descEn": "A scarlet bloom that opens among the ferns of the Crimson Valley. Used as an ingredient for brewing powerful potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant7.png"
         },
         {
           "id": "plant8",
@@ -120,7 +130,8 @@
           "descEn": "A barbed crimson cactus of the Barrens. Split the rind and the pods within are pale sage and waxy. Used as an ingredient for brewing powerful potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant8.png"
         },
         {
           "id": "plant_snow1",
@@ -130,7 +141,8 @@
           "descEn": "A blue flower that blooms among the snow. Used as an ingredient for brewing potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant_snow1.png"
         },
         {
           "id": "plant_snow2",
@@ -140,7 +152,8 @@
           "descEn": "A hardy herb with icy blue leaves. Used as an ingredient for brewing potions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/plant_snow2.png"
         }
       ]
     },
@@ -157,7 +170,8 @@
           "descEn": "The greater claw of the crab king, still clenched shut in death. Craftsmen prize shell this stubborn.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/beachcrabbossmat.png"
         },
         {
           "id": "BigTreantMat",
@@ -167,7 +181,8 @@
           "descEn": "A slab of bark prised from a tree that fought back, sap still seeping. It only grows harder the longer it is kept.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/bigtreantmat.png"
         },
         {
           "id": "DefiledKeepDragonMat",
@@ -177,7 +192,8 @@
           "descEn": "Dark scales stripped from the Defiled Wyrm. Corruption clings to their iron-hard edges.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/defiledkeepdragonmat.png"
         },
         {
           "id": "DesertManticoraBossMat",
@@ -187,7 +203,8 @@
           "descEn": "The bloated sting sac from a manticore's tail, twitching even now. Best kept sealed until someone finds a use for it.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/desertmanticorabossmat.png"
         },
         {
           "id": "OgreBossMat",
@@ -197,7 +214,8 @@
           "descEn": "Still warm, still beating faintly against the palm. Alchemists accept it without asking questions.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/ogrebossmat.png"
         },
         {
           "id": "RedDesertAirWarlordMat",
@@ -207,7 +225,8 @@
           "descEn": "A wedge of sun-baked stone chipped from the Redrock Lord himself. It stays warm long after nightfall.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/reddesertairwarlordmat.png"
         },
         {
           "id": "RedForestDragonMat",
@@ -217,7 +236,8 @@
           "descEn": "The golden eye of the Lord of the Crimson Vale. Its slit pupil still follows the light.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/redforestdragonmat.png"
         },
         {
           "id": "SnowHillFrostDragonMat",
@@ -227,7 +247,8 @@
           "descEn": "A crystal formed beside the Frost Dragon's heart. No flame can melt the winter sealed within.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/snowhillfrostdragonmat.png"
         },
         {
           "id": "VolcanoDemonLordMat",
@@ -237,7 +258,8 @@
           "descEn": "Scorched red horns taken from the Lord of the Cinder. Embers glow deep within their ridges.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/volcanodemonlordmat.png"
         }
       ]
     },
@@ -254,7 +276,8 @@
           "descEn": "Required material for the Golden Boss stage. Dropped by Silver Bosses.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/skull.png"
         },
         {
           "id": "SkullNightmare",
@@ -264,7 +287,8 @@
           "descEn": "Dropped by Silver Bosses on Nightmare difficulty. Required to enter Golden Boss stages and the Mythic Rift on that difficulty.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/skullnightmare.png"
         },
         {
           "id": "SkullInferno",
@@ -274,7 +298,8 @@
           "descEn": "Dropped by Silver Bosses on Inferno difficulty. Required to enter Golden Boss stages and the Mythic Rift on that difficulty.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/skullinferno.png"
         },
         {
           "id": "SoulShard",
@@ -284,7 +309,8 @@
           "descEn": "A soul torn from a fallen boss and crystallized. Certain merchants trade for nothing else.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/soulshard.png"
         },
         {
           "id": "TreasureMapKey",
@@ -294,7 +320,8 @@
           "descEn": "A silver treasure key. Required to enter the dream realm. Has an extremely low chance to drop from monsters on Normal difficulty.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/treasuremapkey.png"
         },
         {
           "id": "TreasureMapKeyNightmare",
@@ -304,7 +331,8 @@
           "descEn": "A golden treasure key. Required to enter the dream realm. Has an extremely low chance to drop from monsters on Nightmare difficulty.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/treasuremapkeynightmare.png"
         },
         {
           "id": "TreasureMapKeyInferno",
@@ -314,7 +342,8 @@
           "descEn": "A royal treasure key. Required to enter the dream realm. Has an extremely low chance to drop from monsters on Inferno difficulty.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/treasuremapkeyinferno.png"
         }
       ]
     },
@@ -331,7 +360,8 @@
           "descEn": "Instantly restores 25 HP, then restores 30% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion1.png"
         },
         {
           "id": "HpPotion2",
@@ -341,7 +371,8 @@
           "descEn": "Instantly restores 75 HP, then restores 30% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion2.png"
         },
         {
           "id": "HpPotion3",
@@ -351,7 +382,8 @@
           "descEn": "Instantly restores 150 HP, then restores 35% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion3.png"
         },
         {
           "id": "HpPotion4",
@@ -361,7 +393,8 @@
           "descEn": "Instantly restores 300 HP, then restores 35% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion4.png"
         },
         {
           "id": "HpPotion5",
@@ -371,7 +404,8 @@
           "descEn": "Instantly restores 600 HP, then restores 40% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion5.png"
         },
         {
           "id": "HpPotion6",
@@ -381,7 +415,8 @@
           "descEn": "Instantly restores 1000 HP, then restores 40% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion6.png"
         },
         {
           "id": "HpPotion7",
@@ -391,7 +426,8 @@
           "descEn": "Instantly restores 1500 HP, then restores 45% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion7.png"
         },
         {
           "id": "HpPotion8",
@@ -401,7 +437,8 @@
           "descEn": "Instantly restores 2000 HP, then restores 45% of max HP over 3 seconds.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/hppotion8.png"
         }
       ]
     },
@@ -418,7 +455,8 @@
           "descEn": "Increase Armor by 20% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/armorpotion1.png"
         },
         {
           "id": "AttackSpeedPotion1",
@@ -428,7 +466,8 @@
           "descEn": "Increase Attack Speed by 10% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/attackspeedpotion1.png"
         },
         {
           "id": "AttackSpeedPotion2",
@@ -438,7 +477,8 @@
           "descEn": "Increase Attack Speed by 20% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/attackspeedpotion2.png"
         },
         {
           "id": "CinderbloodPotion",
@@ -448,7 +488,8 @@
           "descEn": "Increase Maximum Health by 15% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/cinderbloodpotion.png"
         },
         {
           "id": "CrimsonHuntPotion",
@@ -458,7 +499,8 @@
           "descEn": "Increase damage against Elites and Bosses by 20% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/crimsonhuntpotion.png"
         },
         {
           "id": "CritPotion1",
@@ -468,7 +510,8 @@
           "descEn": "Increase Crit Chance by 5% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/critpotion1.png"
         },
         {
           "id": "CritPotion2",
@@ -478,7 +521,8 @@
           "descEn": "Increase Crit Chance by 10% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/critpotion2.png"
         },
         {
           "id": "DodgePotion1",
@@ -488,7 +532,8 @@
           "descEn": "Increase Dodge Chance by 5% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/dodgepotion1.png"
         },
         {
           "id": "ExpPotion1",
@@ -498,7 +543,8 @@
           "descEn": "Increase Experience gained by 10% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/exppotion1.png"
         },
         {
           "id": "FrostmindPotion",
@@ -508,7 +554,8 @@
           "descEn": "Gain 10% Cooldown Reduction for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/frostmindpotion.png"
         },
         {
           "id": "GoldPotion1",
@@ -518,7 +565,8 @@
           "descEn": "Increase Gold gained by 10% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/goldpotion1.png"
         },
         {
           "id": "MovementPotion1",
@@ -528,7 +576,8 @@
           "descEn": "Increase Movement Speed by 15% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/movementpotion1.png"
         },
         {
           "id": "StormheartPotion",
@@ -538,7 +587,8 @@
           "descEn": "Gain 10% Mana Cost Reduction for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/stormheartpotion.png"
         },
         {
           "id": "WyrmwardPotion",
@@ -548,7 +598,8 @@
           "descEn": "Increase Magic Resist by 20% for 1 hour.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/wyrmwardpotion.png"
         }
       ]
     },
@@ -575,7 +626,8 @@
           "descEn": "A gilded chest. Opens to release a handful of items with a chance at Legendary quality drops.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/treasurechest1.png"
         },
         {
           "id": "TreasureChest2",
@@ -585,7 +637,8 @@
           "descEn": "A gilded chest brimming with plunder. Opens to release a bounty of items with a chance at Legendary or Divine quality drops.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/treasurechest2.png"
         },
         {
           "id": "TreasureChest3",
@@ -595,7 +648,8 @@
           "descEn": "A rune-bound chest claimed from the Mythic Rift. Opens to release powerful items with a chance at Legendary or Divine quality drops.",
           "rarity": 0,
           "rarityName": "普通",
-          "sellPrice": null
+          "sellPrice": null,
+          "icon": "/images/icons/items_data/treasurechest3.png"
         }
       ]
     },
@@ -613,7 +667,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 7000,
-          "desc": "使用后可永久解锁「怒潮蟹王」作为同伴。"
+          "desc": "使用后可永久解锁「怒潮蟹王」作为同伴。",
+          "icon": "/images/icons/items_data/rein_beachcrabboss.png"
         },
         {
           "id": "Rein_BeachHermitCrab",
@@ -624,7 +679,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「漂壳寄居蟹」作为同伴。"
+          "desc": "使用后可永久解锁「漂壳寄居蟹」作为同伴。",
+          "icon": "/images/icons/items_data/rein_beachhermitcrab.png"
         },
         {
           "id": "Rein_BeachNaga",
@@ -635,7 +691,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「浅滩娜迦」作为同伴。"
+          "desc": "使用后可永久解锁「浅滩娜迦」作为同伴。",
+          "icon": "/images/icons/items_data/rein_beachnaga.png"
         },
         {
           "id": "Rein_BeachSerpent",
@@ -646,7 +703,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「咸鳞海蛇」作为同伴。"
+          "desc": "使用后可永久解锁「咸鳞海蛇」作为同伴。",
+          "icon": "/images/icons/items_data/rein_beachserpent.png"
         },
         {
           "id": "Rein_BeachSquid",
@@ -657,7 +715,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「礁岩鱿鱼」作为同伴。"
+          "desc": "使用后可永久解锁「礁岩鱿鱼」作为同伴。",
+          "icon": "/images/icons/items_data/rein_beachsquid.png"
         },
         {
           "id": "Rein_BeachTurtleBoss",
@@ -668,7 +727,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 7000,
-          "desc": "使用后可永久解锁「远古守甲巨龟」作为同伴。"
+          "desc": "使用后可永久解锁「远古守甲巨龟」作为同伴。",
+          "icon": "/images/icons/items_data/rein_beachturtleboss.png"
         },
         {
           "id": "Rein_BigTreant",
@@ -679,7 +739,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「远古橡树树人」作为同伴。"
+          "desc": "使用后可永久解锁「远古橡树树人」作为同伴。",
+          "icon": "/images/icons/items_data/rein_bigtreant.png"
         },
         {
           "id": "Rein_BlackHorse",
@@ -690,7 +751,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「黑马」作为同伴。"
+          "desc": "使用后可永久解锁「黑马」作为同伴。",
+          "icon": "/images/icons/items_data/rein_blackhorse.png"
         },
         {
           "id": "Rein_BlueMammoth",
@@ -701,7 +763,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 50000,
-          "desc": "使用后可永久解锁「蓝色猛犸象」作为同伴。"
+          "desc": "使用后可永久解锁「蓝色猛犸象」作为同伴。",
+          "icon": "/images/icons/items_data/rein_bluemammoth.png"
         },
         {
           "id": "Rein_Boar",
@@ -712,7 +775,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「野猪」作为同伴。"
+          "desc": "使用后可永久解锁「野猪」作为同伴。",
+          "icon": "/images/icons/items_data/rein_boar.png"
         },
         {
           "id": "Rein_BrownPony",
@@ -723,7 +787,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「栗色小马」作为同伴。"
+          "desc": "使用后可永久解锁「栗色小马」作为同伴。",
+          "icon": "/images/icons/items_data/rein_brownpony.png"
         },
         {
           "id": "Rein_Bull",
@@ -734,7 +799,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「橡背驮牛」作为同伴。"
+          "desc": "使用后可永久解锁「橡背驮牛」作为同伴。",
+          "icon": "/images/icons/items_data/rein_bull.png"
         },
         {
           "id": "Rein_DarkElfMage",
@@ -745,7 +811,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 5000,
-          "desc": "使用后可永久解锁「黑暗精灵法师」作为同伴。"
+          "desc": "使用后可永久解锁「黑暗精灵法师」作为同伴。",
+          "icon": "/images/icons/items_data/rein_darkelfmage.png"
         },
         {
           "id": "Rein_DefiledKeepAxemaster",
@@ -756,7 +823,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「不死斧师」作为同伴。"
+          "desc": "使用后可永久解锁「不死斧师」作为同伴。",
+          "icon": "/images/icons/items_data/rein_defiledkeepaxemaster.png"
         },
         {
           "id": "Rein_DefiledKeepDragon",
@@ -767,7 +835,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「污秽古龙」作为同伴。"
+          "desc": "使用后可永久解锁「污秽古龙」作为同伴。",
+          "icon": "/images/icons/items_data/rein_defiledkeepdragon.png"
         },
         {
           "id": "Rein_DefiledKeepOoze",
@@ -778,7 +847,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「污秽黏怪」作为同伴。"
+          "desc": "使用后可永久解锁「污秽黏怪」作为同伴。",
+          "icon": "/images/icons/items_data/rein_defiledkeepooze.png"
         },
         {
           "id": "Rein_DefiledKeepReaper",
@@ -789,7 +859,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「白骨死神」作为同伴。"
+          "desc": "使用后可永久解锁「白骨死神」作为同伴。",
+          "icon": "/images/icons/items_data/rein_defiledkeepreaper.png"
         },
         {
           "id": "Rein_DefiledKeepScarab",
@@ -800,7 +871,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「腐尸圣甲虫」作为同伴。"
+          "desc": "使用后可永久解锁「腐尸圣甲虫」作为同伴。",
+          "icon": "/images/icons/items_data/rein_defiledkeepscarab.png"
         },
         {
           "id": "Rein_DefiledKeepSuccubus",
@@ -811,7 +883,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「要塞魅魔」作为同伴。"
+          "desc": "使用后可永久解锁「要塞魅魔」作为同伴。",
+          "icon": "/images/icons/items_data/rein_defiledkeepsuccubus.png"
         },
         {
           "id": "Rein_DesertEagle",
@@ -822,7 +895,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「沙丘之鹰」作为同伴。"
+          "desc": "使用后可永久解锁「沙丘之鹰」作为同伴。",
+          "icon": "/images/icons/items_data/rein_deserteagle.png"
         },
         {
           "id": "Rein_DesertHarpy",
@@ -833,7 +907,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 7000,
-          "desc": "使用后可永久解锁「沙暴鹰身女妖女王」作为同伴。"
+          "desc": "使用后可永久解锁「沙暴鹰身女妖女王」作为同伴。",
+          "icon": "/images/icons/items_data/rein_desertharpy.png"
         },
         {
           "id": "Rein_DesertKoboldThief",
@@ -844,7 +919,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「沙漠狗头人盗贼」作为同伴。"
+          "desc": "使用后可永久解锁「沙漠狗头人盗贼」作为同伴。",
+          "icon": "/images/icons/items_data/rein_desertkoboldthief.png"
         },
         {
           "id": "Rein_DesertKoboldWarrior",
@@ -855,7 +931,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「沙漠狗头人战士」作为同伴。"
+          "desc": "使用后可永久解锁「沙漠狗头人战士」作为同伴。",
+          "icon": "/images/icons/items_data/rein_desertkoboldwarrior.png"
         },
         {
           "id": "Rein_DesertManticoraBoss",
@@ -866,7 +943,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 7000,
-          "desc": "使用后可永久解锁「恐怖沙漠蝎狮」作为同伴。"
+          "desc": "使用后可永久解锁「恐怖沙漠蝎狮」作为同伴。",
+          "icon": "/images/icons/items_data/rein_desertmanticoraboss.png"
         },
         {
           "id": "Rein_DesertWasp",
@@ -877,7 +955,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 150,
-          "desc": "使用后可永久解锁「沙漠黄蜂」作为同伴。"
+          "desc": "使用后可永久解锁「沙漠黄蜂」作为同伴。",
+          "icon": "/images/icons/items_data/rein_desertwasp.png"
         },
         {
           "id": "Rein_Dragon",
@@ -888,7 +967,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 1,
-          "desc": "使用后可永久解锁「Dragon」作为同伴。"
+          "desc": "使用后可永久解锁「Dragon」作为同伴。",
+          "icon": "/images/icons/items_data/rein_dragon.png"
         },
         {
           "id": "Rein_FishingWaterDragon",
@@ -899,7 +979,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 1,
-          "desc": "使用后可永久解锁「飞鱼王」作为同伴。"
+          "desc": "使用后可永久解锁「飞鱼王」作为同伴。",
+          "icon": "/images/icons/items_data/rein_fishingwaterdragon.png"
         },
         {
           "id": "Rein_ForestSpiderKing",
@@ -910,7 +991,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 7000,
-          "desc": "使用后可永久解锁「剧毒女王」作为同伴。"
+          "desc": "使用后可永久解锁「剧毒女王」作为同伴。",
+          "icon": "/images/icons/items_data/rein_forestspiderking.png"
         },
         {
           "id": "Rein_GoblinWarrior",
@@ -921,7 +1003,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 150,
-          "desc": "使用后可永久解锁「哥布林战士」作为同伴。"
+          "desc": "使用后可永久解锁「哥布林战士」作为同伴。",
+          "icon": "/images/icons/items_data/rein_goblinwarrior.png"
         },
         {
           "id": "Rein_Ogre",
@@ -932,7 +1015,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 7000,
-          "desc": "使用后可永久解锁「食人魔」作为同伴。"
+          "desc": "使用后可永久解锁「食人魔」作为同伴。",
+          "icon": "/images/icons/items_data/rein_ogre.png"
         },
         {
           "id": "Rein_OrcWarrior",
@@ -943,7 +1027,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「兽人斗士」作为同伴。"
+          "desc": "使用后可永久解锁「兽人斗士」作为同伴。",
+          "icon": "/images/icons/items_data/rein_orcwarrior.png"
         },
         {
           "id": "Rein_PoisonSpider",
@@ -954,7 +1039,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 150,
-          "desc": "使用后可永久解锁「毒液蜘蛛」作为同伴。"
+          "desc": "使用后可永久解锁「毒液蜘蛛」作为同伴。",
+          "icon": "/images/icons/items_data/rein_poisonspider.png"
         },
         {
           "id": "Rein_Raptor",
@@ -965,7 +1051,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 1000,
-          "desc": "使用后可永久解锁「迅猛龙」作为同伴。"
+          "desc": "使用后可永久解锁「迅猛龙」作为同伴。",
+          "icon": "/images/icons/items_data/rein_raptor.png"
         },
         {
           "id": "Rein_RedDesertAirWarlord",
@@ -976,7 +1063,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「红岩领主」作为同伴。"
+          "desc": "使用后可永久解锁「红岩领主」作为同伴。",
+          "icon": "/images/icons/items_data/rein_reddesertairwarlord.png"
         },
         {
           "id": "Rein_RedDesertCrocodile",
@@ -987,7 +1075,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 150,
-          "desc": "使用后可永久解锁「荒原鳄鱼」作为同伴。"
+          "desc": "使用后可永久解锁「荒原鳄鱼」作为同伴。",
+          "icon": "/images/icons/items_data/rein_reddesertcrocodile.png"
         },
         {
           "id": "Rein_RedDesertImp",
@@ -998,7 +1087,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「焦土小恶魔」作为同伴。"
+          "desc": "使用后可永久解锁「焦土小恶魔」作为同伴。",
+          "icon": "/images/icons/items_data/rein_reddesertimp.png"
         },
         {
           "id": "Rein_RedDesertRockGolem",
@@ -1009,7 +1099,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「红岩魔像」作为同伴。"
+          "desc": "使用后可永久解锁「红岩魔像」作为同伴。",
+          "icon": "/images/icons/items_data/rein_reddesertrockgolem.png"
         },
         {
           "id": "Rein_RedDesertSatyr",
@@ -1020,7 +1111,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「荒原萨特」作为同伴。"
+          "desc": "使用后可永久解锁「荒原萨特」作为同伴。",
+          "icon": "/images/icons/items_data/rein_reddesertsatyr.png"
         },
         {
           "id": "Rein_RedDesertSerparmat",
@@ -1031,7 +1123,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「吞噬者瑟帕玛特」作为同伴。"
+          "desc": "使用后可永久解锁「吞噬者瑟帕玛特」作为同伴。",
+          "icon": "/images/icons/items_data/rein_reddesertserparmat.png"
         },
         {
           "id": "Rein_RedForestBear",
@@ -1042,7 +1135,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「灰熊」作为同伴。"
+          "desc": "使用后可永久解锁「灰熊」作为同伴。",
+          "icon": "/images/icons/items_data/rein_redforestbear.png"
         },
         {
           "id": "Rein_RedForestDragon",
@@ -1053,7 +1147,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「绯红谷之主」作为同伴。"
+          "desc": "使用后可永久解锁「绯红谷之主」作为同伴。",
+          "icon": "/images/icons/items_data/rein_redforestdragon.png"
         },
         {
           "id": "Rein_RedForestFaeDragon",
@@ -1064,7 +1159,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「精灵龙」作为同伴。"
+          "desc": "使用后可永久解锁「精灵龙」作为同伴。",
+          "icon": "/images/icons/items_data/rein_redforestfaedragon.png"
         },
         {
           "id": "Rein_RedForestGiant",
@@ -1075,7 +1171,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「绯红守护者」作为同伴。"
+          "desc": "使用后可永久解锁「绯红守护者」作为同伴。",
+          "icon": "/images/icons/items_data/rein_redforestgiant.png"
         },
         {
           "id": "Rein_RedForestHobgoblin",
@@ -1086,7 +1183,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「哥布林巨人」作为同伴。"
+          "desc": "使用后可永久解锁「哥布林巨人」作为同伴。",
+          "icon": "/images/icons/items_data/rein_redforesthobgoblin.png"
         },
         {
           "id": "Rein_RedForestTiger",
@@ -1097,7 +1195,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「山虎」作为同伴。"
+          "desc": "使用后可永久解锁「山虎」作为同伴。",
+          "icon": "/images/icons/items_data/rein_redforesttiger.png"
         },
         {
           "id": "Rein_SkeletonArcher",
@@ -1119,7 +1218,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「骷髅战士」作为同伴。"
+          "desc": "使用后可永久解锁「骷髅战士」作为同伴。",
+          "icon": "/images/icons/items_data/rein_skeletonwarrior.png"
         },
         {
           "id": "Rein_SnowHillFrostDragon",
@@ -1130,7 +1230,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「冰霜巨龙」作为同伴。"
+          "desc": "使用后可永久解锁「冰霜巨龙」作为同伴。",
+          "icon": "/images/icons/items_data/rein_snowhillfrostdragon.png"
         },
         {
           "id": "Rein_SnowHillIceHound",
@@ -1141,7 +1242,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 6000,
-          "desc": "使用后可永久解锁「冰霜猎犬」作为同伴。"
+          "desc": "使用后可永久解锁「冰霜猎犬」作为同伴。",
+          "icon": "/images/icons/items_data/rein_snowhillicehound.png"
         },
         {
           "id": "Rein_SnowHillRockElemental",
@@ -1152,7 +1254,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「冰岩元素」作为同伴。"
+          "desc": "使用后可永久解锁「冰岩元素」作为同伴。",
+          "icon": "/images/icons/items_data/rein_snowhillrockelemental.png"
         },
         {
           "id": "Rein_SnowHillSlime",
@@ -1163,7 +1266,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「冰霜史莱姆」作为同伴。"
+          "desc": "使用后可永久解锁「冰霜史莱姆」作为同伴。",
+          "icon": "/images/icons/items_data/rein_snowhillslime.png"
         },
         {
           "id": "Rein_SnowHillWhelp",
@@ -1174,7 +1278,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「冰霜幼龙」作为同伴。"
+          "desc": "使用后可永久解锁「冰霜幼龙」作为同伴。",
+          "icon": "/images/icons/items_data/rein_snowhillwhelp.png"
         },
         {
           "id": "Rein_SnowHillZombieWarrior",
@@ -1185,7 +1290,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「冰封僵尸战士」作为同伴。"
+          "desc": "使用后可永久解锁「冰封僵尸战士」作为同伴。",
+          "icon": "/images/icons/items_data/rein_snowhillzombiewarrior.png"
         },
         {
           "id": "Rein_Spider",
@@ -1196,7 +1302,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 150,
-          "desc": "使用后可永久解锁「黑蜘蛛」作为同伴。"
+          "desc": "使用后可永久解锁「黑蜘蛛」作为同伴。",
+          "icon": "/images/icons/items_data/rein_spider.png"
         },
         {
           "id": "Rein_Stumplin",
@@ -1207,7 +1314,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「树桩怪」作为同伴。"
+          "desc": "使用后可永久解锁「树桩怪」作为同伴。",
+          "icon": "/images/icons/items_data/rein_stumplin.png"
         },
         {
           "id": "Rein_TazanCamel",
@@ -1218,7 +1326,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 2500,
-          "desc": "使用后可永久解锁「塔赞骆驼」作为同伴。"
+          "desc": "使用后可永久解锁「塔赞骆驼」作为同伴。",
+          "icon": "/images/icons/items_data/rein_tazancamel.png"
         },
         {
           "id": "Rein_VolcanoCinderlash",
@@ -1229,7 +1338,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「焰鞭魔」作为同伴。"
+          "desc": "使用后可永久解锁「焰鞭魔」作为同伴。",
+          "icon": "/images/icons/items_data/rein_volcanocinderlash.png"
         },
         {
           "id": "Rein_VolcanoDemonLord",
@@ -1240,7 +1350,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「灰烬之主」作为同伴。"
+          "desc": "使用后可永久解锁「灰烬之主」作为同伴。",
+          "icon": "/images/icons/items_data/rein_volcanodemonlord.png"
         },
         {
           "id": "Rein_VolcanoDragon",
@@ -1251,7 +1362,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 10000,
-          "desc": "使用后可永久解锁「焰牙」作为同伴。"
+          "desc": "使用后可永久解锁「焰牙」作为同伴。",
+          "icon": "/images/icons/items_data/rein_volcanodragon.png"
         },
         {
           "id": "Rein_VolcanoEmberBat",
@@ -1262,7 +1374,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「余烬蝠」作为同伴。"
+          "desc": "使用后可永久解锁「余烬蝠」作为同伴。",
+          "icon": "/images/icons/items_data/rein_volcanoemberbat.png"
         },
         {
           "id": "Rein_VolcanoHellguard",
@@ -1273,7 +1386,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「炼狱卫士」作为同伴。"
+          "desc": "使用后可永久解锁「炼狱卫士」作为同伴。",
+          "icon": "/images/icons/items_data/rein_volcanohellguard.png"
         },
         {
           "id": "Rein_VolcanoMagmaGolem",
@@ -1284,7 +1398,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「熔岩魔像」作为同伴。"
+          "desc": "使用后可永久解锁「熔岩魔像」作为同伴。",
+          "icon": "/images/icons/items_data/rein_volcanomagmagolem.png"
         },
         {
           "id": "Rein_Werewolf",
@@ -1295,7 +1410,8 @@
           "rarity": 3,
           "rarityName": "传说",
           "sellPrice": 1000,
-          "desc": "使用后可永久解锁「血月狼人」作为同伴。"
+          "desc": "使用后可永久解锁「血月狼人」作为同伴。",
+          "icon": "/images/icons/items_data/rein_werewolf.png"
         },
         {
           "id": "Rein_WhiteHorse",
@@ -1306,7 +1422,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 3000,
-          "desc": "使用后可永久解锁「白马」作为同伴。"
+          "desc": "使用后可永久解锁「白马」作为同伴。",
+          "icon": "/images/icons/items_data/rein_whitehorse.png"
         },
         {
           "id": "Rein_ZombieWolf",
@@ -1317,7 +1434,8 @@
           "rarity": 2,
           "rarityName": "稀有",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「变异之狼」作为同伴。"
+          "desc": "使用后可永久解锁「变异之狼」作为同伴。",
+          "icon": "/images/icons/items_data/rein_zombiewolf.png"
         },
         {
           "id": "Rein_wolf",
@@ -1328,7 +1446,8 @@
           "rarity": 1,
           "rarityName": "非凡",
           "sellPrice": 300,
-          "desc": "使用后可永久解锁「wolf」作为同伴。"
+          "desc": "使用后可永久解锁「wolf」作为同伴。",
+          "icon": "/images/icons/items_data/rein_wolf.png"
         }
       ]
     }

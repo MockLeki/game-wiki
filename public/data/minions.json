@@ -1009,7 +1009,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/armoredhorse_icon.png",
       "passives": []
     },
     {
@@ -1024,7 +1024,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/beachcrabboss_icon.png",
       "passives": []
     },
     {
@@ -1039,7 +1039,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/beachhermitcrab_icon.png",
       "passives": []
     },
     {
@@ -1054,7 +1054,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/beachnaga_icon.png",
       "passives": []
     },
     {
@@ -1069,7 +1069,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/beachserpent_icon.png",
       "passives": []
     },
     {
@@ -1084,7 +1084,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/beachsquid_icon.png",
       "passives": []
     },
     {
@@ -1099,7 +1099,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/beachturtleboss_icon.png",
       "passives": []
     },
     {
@@ -1129,7 +1129,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/defiledkeepaxemaster_icon.png",
       "passives": []
     },
     {
@@ -1144,7 +1144,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/defiledkeepdragon_icon.png",
       "passives": []
     },
     {
@@ -1159,7 +1159,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/defiledkeepooze_icon.png",
       "passives": []
     },
     {
@@ -1174,7 +1174,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/defiledkeepreaper_icon.png",
       "passives": []
     },
     {
@@ -1189,7 +1189,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/defiledkeepscarab_icon.png",
       "passives": []
     },
     {
@@ -1204,7 +1204,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/defiledkeepsuccubus_icon.png",
       "passives": []
     },
     {
@@ -1219,7 +1219,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/fishingwaterdragon_icon.png",
       "passives": []
     },
     {
@@ -1234,7 +1234,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/raptor_icon.png",
       "passives": []
     },
     {
@@ -1249,7 +1249,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/redforestbear_icon.png",
       "passives": []
     },
     {
@@ -1264,7 +1264,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/redforestdragon_icon.png",
       "passives": []
     },
     {
@@ -1279,7 +1279,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/redforestfaedragon_icon.png",
       "passives": []
     },
     {
@@ -1294,7 +1294,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/redforestgiant_icon.png",
       "passives": []
     },
     {
@@ -1309,7 +1309,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/redforesthobgoblin_icon.png",
       "passives": []
     },
     {
@@ -1324,7 +1324,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/redforesttiger_icon.png",
       "passives": []
     },
     {
@@ -1339,7 +1339,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/snowhillfrostdragon_icon.png",
       "passives": []
     },
     {
@@ -1354,7 +1354,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/snowhillicehound_icon.png",
       "passives": []
     },
     {
@@ -1369,7 +1369,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/snowhillrockelemental_icon.png",
       "passives": []
     },
     {
@@ -1384,7 +1384,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/snowhillslime_icon.png",
       "passives": []
     },
     {
@@ -1399,7 +1399,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/snowhillwhelp_icon.png",
       "passives": []
     },
     {
@@ -1414,7 +1414,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/snowhillzombiewarrior_icon.png",
       "passives": []
     },
     {
@@ -1429,7 +1429,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/tazancamel_icon.png",
       "passives": []
     },
     {
@@ -1444,7 +1444,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/volcanocinderlash_icon.png",
       "passives": []
     },
     {
@@ -1459,7 +1459,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/volcanodemonlord_icon.png",
       "passives": []
     },
     {
@@ -1474,7 +1474,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/volcanodragon_icon.png",
       "passives": []
     },
     {
@@ -1489,7 +1489,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/volcanoemberbat_icon.png",
       "passives": []
     },
     {
@@ -1504,7 +1504,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/volcanohellguard_icon.png",
       "passives": []
     },
     {
@@ -1519,7 +1519,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/volcanomagmagolem_icon.png",
       "passives": []
     },
     {
@@ -1534,7 +1534,7 @@
       "level": 1,
       "weight": 1,
       "location": "",
-      "image": "",
+      "image": "/images/minions/whitehorse_icon.png",
       "passives": []
     }
   ],

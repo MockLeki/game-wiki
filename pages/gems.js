@@ -60,15 +60,27 @@ export default function GemsPage() {
                   return (
                     <div key={g.id} className="item-card" style={{ borderLeft: `3px solid ${c}`, textAlign: 'left' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
-                        {/* 宝石菱形图标 */}
-                        <div style={{
-                          width: 48, height: 48, flexShrink: 0,
-                          background: `linear-gradient(135deg, ${c} 0%, #1a1a1a 140%)`,
-                          clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-                          boxShadow: `0 0 12px ${c}88, inset 0 0 8px rgba(255,255,255,0.25)`,
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        }}>
-                          <span style={{ color: '#fff', fontSize: '0.85rem', fontWeight: 700, textShadow: '0 0 4px #000' }}>T{g.tier}</span>
+                        {/* 游戏内实拍宝石图标 + 等级角标 */}
+                        <div style={{ position: 'relative', width: 48, height: 48, flexShrink: 0 }}>
+                          {g.icon ? (
+                            <img src={g.icon} alt={g.name} style={{ width: 48, height: 48, objectFit: 'contain', filter: 'drop-shadow(0 0 6px rgba(0,0,0,0.7))' }} />
+                          ) : (
+                            <div style={{
+                              width: 48, height: 48,
+                              background: `linear-gradient(135deg, ${c} 0%, #1a1a1a 140%)`,
+                              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+                              boxShadow: `0 0 12px ${c}88, inset 0 0 8px rgba(255,255,255,0.25)`,
+                              display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            }}>
+                              <span style={{ color: '#fff', fontSize: '0.85rem', fontWeight: 700, textShadow: '0 0 4px #000' }}>T{g.tier}</span>
+                            </div>
+                          )}
+                          <span style={{
+                            position: 'absolute', right: -4, bottom: -4,
+                            background: '#0a0605', border: `1px solid ${c}`,
+                            color: c, fontSize: '0.58rem', fontWeight: 700,
+                            padding: '0 0.25rem', lineHeight: 1.4,
+                          }}>T{g.tier}</span>
                         </div>
                         <div>
                           <div style={{ color: '#8a8a8a', fontSize: '0.66rem', letterSpacing: '0.08em' }}>{TIER_NAMES[g.tier - 1]} · {TIER_SHAPES[g.tier - 1]}</div>

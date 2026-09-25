@@ -32,7 +32,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevsbleeding.png"
     },
     {
       "id": "UncommonRune_DamageVsDistant",
@@ -52,7 +53,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevsdistant.png"
     },
     {
       "id": "UncommonRune_DamageVsElite",
@@ -72,7 +74,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevselite.png"
     },
     {
       "id": "UncommonRune_DamageVsHealthy",
@@ -92,7 +95,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevshealthy.png"
     },
     {
       "id": "UncommonRune_DamageVsInjured",
@@ -112,7 +116,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevsinjured.png"
     },
     {
       "id": "UncommonRune_DamageVsPoisoned",
@@ -132,7 +137,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevspoisoned.png"
     },
     {
       "id": "UncommonRune_DamageVsSlowed",
@@ -152,7 +158,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevsslowed.png"
     },
     {
       "id": "UncommonRune_DamageVsStunned",
@@ -172,7 +179,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_damagevsstunned.png"
     },
     {
       "id": "UncommonRune_VulnerableDamage",
@@ -192,7 +200,8 @@
         }
       ],
       "abilityLevels": null,
-      "everyNRuneLevels": null
+      "everyNRuneLevels": null,
+      "icon": "/images/icons/runes/uncommonrune_vulnerabledamage.png"
     }
   ],
   "rare": [
@@ -218,7 +227,8 @@
           "perLevel": 0.81,
           "text": "敏捷 +25.24（每级+0.81）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterbasicattack1.png"
     },
     {
       "id": "RareRune_HunterBasicAttack2",
@@ -242,7 +252,8 @@
           "perLevel": 0,
           "text": "最大生命值% +0.08"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterbasicattack2.png"
     },
     {
       "id": "RareRune_HunterBasicAttack3",
@@ -266,7 +277,8 @@
           "perLevel": 0.8,
           "text": "最大法力 +30.1（每级+0.8）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterbasicattack3.png"
     },
     {
       "id": "RareRune_HunterHeavyAttack1",
@@ -290,7 +302,8 @@
           "perLevel": 0,
           "text": "护甲% +0.46"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterheavyattack1.png"
     },
     {
       "id": "RareRune_HunterHeavyAttack2",
@@ -314,7 +327,8 @@
           "perLevel": 0,
           "text": "魔法抗性% +0.14"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterheavyattack2.png"
     },
     {
       "id": "RareRune_HunterHeavyAttack3",
@@ -338,7 +352,8 @@
           "perLevel": 0,
           "text": "移动速度% +0.04"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterheavyattack3.png"
     },
     {
       "id": "RareRune_HunterSpecial1",
@@ -362,7 +377,8 @@
           "perLevel": 0.06,
           "text": "生命药水发现 +0.17（每级+0.06）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterspecial1.png"
     },
     {
       "id": "RareRune_HunterSpecial2",
@@ -386,7 +402,8 @@
           "perLevel": 0.51,
           "text": "敏捷 +21.32（每级+0.51）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_hunterspecial2.png"
     },
     {
       "id": "RareRune_MonkBasicAttack1",
@@ -410,7 +427,8 @@
           "perLevel": null,
           "text": "敏捷"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkbasicattack1.png"
     },
     {
       "id": "RareRune_MonkBasicAttack2",
@@ -434,7 +452,8 @@
           "perLevel": 0,
           "text": "最大生命值% +0.11"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkbasicattack2.png"
     },
     {
       "id": "RareRune_MonkBasicAttack3",
@@ -458,7 +477,8 @@
           "perLevel": 1.13,
           "text": "最大法力 +23.7（每级+1.13）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkbasicattack3.png"
     },
     {
       "id": "RareRune_MonkHeavyAttack1",
@@ -482,7 +502,8 @@
           "perLevel": 0,
           "text": "护甲% +0.25"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkheavyattack1.png"
     },
     {
       "id": "RareRune_MonkHeavyAttack2",
@@ -506,7 +527,8 @@
           "perLevel": 0.03,
           "text": "魔法抗性% +0.38（每级+0.03）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkheavyattack2.png"
     },
     {
       "id": "RareRune_MonkHeavyAttack3",
@@ -530,7 +552,8 @@
           "perLevel": 0,
           "text": "移动速度% +0.08"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkheavyattack3.png"
     },
     {
       "id": "RareRune_MonkSpecial1",
@@ -554,7 +577,8 @@
           "perLevel": 0.08,
           "text": "生命药水发现 +0.29（每级+0.08）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkspecial1.png"
     },
     {
       "id": "RareRune_MonkSpecial2",
@@ -578,7 +602,8 @@
           "perLevel": 0.57,
           "text": "敏捷 +8.57（每级+0.57）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_monkspecial2.png"
     },
     {
       "id": "RareRune_SorcererBasicAttack1",
@@ -602,7 +627,8 @@
           "perLevel": 0.65,
           "text": "智力 +8.51（每级+0.65）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererbasicattack1.png"
     },
     {
       "id": "RareRune_SorcererBasicAttack2",
@@ -626,7 +652,8 @@
           "perLevel": null,
           "text": "最大生命值%"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererbasicattack2.png"
     },
     {
       "id": "RareRune_SorcererBasicAttack3",
@@ -650,7 +677,8 @@
           "perLevel": null,
           "text": "最大法力"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererbasicattack3.png"
     },
     {
       "id": "RareRune_SorcererSpecial1",
@@ -674,7 +702,8 @@
           "perLevel": 0.03,
           "text": "生命药水发现 +0.17（每级+0.03）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererspecial1.png"
     },
     {
       "id": "RareRune_SorcererSpecial2",
@@ -698,7 +727,8 @@
           "perLevel": 1.85,
           "text": "智力"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererspecial2.png"
     },
     {
       "id": "RareRune_SorcererStrongAttack1",
@@ -722,7 +752,8 @@
           "perLevel": 0,
           "text": "护甲% +0.46"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererstrongattack1.png"
     },
     {
       "id": "RareRune_SorcererStrongAttack2",
@@ -746,7 +777,8 @@
           "perLevel": 0,
           "text": "魔法抗性% +0.18"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererstrongattack2.png"
     },
     {
       "id": "RareRune_SorcererStrongAttack3",
@@ -770,7 +802,8 @@
           "perLevel": 0,
           "text": "移动速度% +0.05"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_sorcererstrongattack3.png"
     },
     {
       "id": "RareRune_WarriorBasicAttack",
@@ -794,7 +827,8 @@
           "perLevel": 0.75,
           "text": "力量 +9.2（每级+0.75）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorbasicattack.png"
     },
     {
       "id": "RareRune_WarriorBasicAttack2",
@@ -818,7 +852,8 @@
           "perLevel": null,
           "text": "最大生命值%"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorbasicattack2.png"
     },
     {
       "id": "RareRune_WarriorBasicAttack3",
@@ -842,7 +877,8 @@
           "perLevel": null,
           "text": "最大法力"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorbasicattack3.png"
     },
     {
       "id": "RareRune_WarriorHeavyAttack1",
@@ -866,7 +902,8 @@
           "perLevel": 0.03,
           "text": "护甲% +0.4（每级+0.03）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorheavyattack1.png"
     },
     {
       "id": "RareRune_WarriorHeavyAttack2",
@@ -890,7 +927,8 @@
           "perLevel": null,
           "text": "魔法抗性%"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorheavyattack2.png"
     },
     {
       "id": "RareRune_WarriorHeavyAttack3",
@@ -914,7 +952,8 @@
           "perLevel": 0,
           "text": "移动速度% +0.06"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorheavyattack3.png"
     },
     {
       "id": "RareRune_WarriorRageShield",
@@ -938,7 +977,8 @@
           "perLevel": 1.64,
           "text": "力量 +32（每级+1.64）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorrageshield.png"
     },
     {
       "id": "RareRune_WarriorRageShout",
@@ -962,7 +1002,8 @@
           "perLevel": 0.04,
           "text": "生命药水发现 +0.13（每级+0.04）"
         }
-      ]
+      ],
+      "icon": "/images/icons/runes/rarerune_warriorrageshout.png"
     }
   ],
   "heroes": {
@@ -983,19 +1024,22 @@
           "id": "HunterSetRune1_1",
           "name": "设阱者的传承 I",
           "nameEn": "Trapper’s Legacy I",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/huntersetrune1_1.png"
         },
         {
           "id": "HunterSetRune1_2",
           "name": "设阱者的传承 II",
           "nameEn": "Trapper’s Legacy II",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/huntersetrune1_2.png"
         },
         {
           "id": "HunterSetRune1_3",
           "name": "设阱者的传承 III",
           "nameEn": "Trapper’s Legacy III",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/huntersetrune1_3.png"
         },
         {
           "id": "HunterSetRune1_4",
@@ -1007,13 +1051,15 @@
           "id": "HunterSetRune1_5",
           "name": "设阱者的传承 V",
           "nameEn": "Trapper’s Legacy V",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/huntersetrune1_5.png"
         },
         {
           "id": "HunterSetRune1_6",
           "name": "设阱者的传承 VI",
           "nameEn": "Trapper’s Legacy VI",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/huntersetrune1_6.png"
         }
       ],
       "effects": [
@@ -1033,37 +1079,43 @@
           "id": "HunterSetRune2_1",
           "name": "神射手的决心 I",
           "nameEn": "Deadeye’s Resolve I",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/huntersetrune2_1.png"
         },
         {
           "id": "HunterSetRune2_2",
           "name": "神射手的决心 II",
           "nameEn": "Deadeye’s Resolve II",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/huntersetrune2_2.png"
         },
         {
           "id": "HunterSetRune2_3",
           "name": "神射手的决心 III",
           "nameEn": "Deadeye’s Resolve III",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/huntersetrune2_3.png"
         },
         {
           "id": "HunterSetRune2_4",
           "name": "神射手的决心 IV",
           "nameEn": "Deadeye’s Resolve IV",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/huntersetrune2_4.png"
         },
         {
           "id": "HunterSetRune2_5",
           "name": "神射手的决心 V",
           "nameEn": "Deadeye’s Resolve V",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/huntersetrune2_5.png"
         },
         {
           "id": "HunterSetRune2_6",
           "name": "神射手的决心 VI",
           "nameEn": "Deadeye’s Resolve VI",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/huntersetrune2_6.png"
         }
       ],
       "effects": [
@@ -1083,37 +1135,43 @@
           "id": "HunterSetRune3_1",
           "name": "毒牙 I",
           "nameEn": "Venomfang I",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/huntersetrune3_1.png"
         },
         {
           "id": "HunterSetRune3_2",
           "name": "毒牙 II",
           "nameEn": "Venomfang II",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/huntersetrune3_2.png"
         },
         {
           "id": "HunterSetRune3_3",
           "name": "毒牙 III",
           "nameEn": "Venomfang III",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/huntersetrune3_3.png"
         },
         {
           "id": "HunterSetRune3_4",
           "name": "毒牙 IV",
           "nameEn": "Venomfang IV",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/huntersetrune3_4.png"
         },
         {
           "id": "HunterSetRune3_5",
           "name": "毒牙 V",
           "nameEn": "Venomfang V",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/huntersetrune3_5.png"
         },
         {
           "id": "HunterSetRune3_6",
           "name": "毒牙 VI",
           "nameEn": "Venomfang VI",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/huntersetrune3_6.png"
         }
       ],
       "effects": [
@@ -1133,37 +1191,43 @@
           "id": "MonkSetRune1_1",
           "name": "百手符文 (I)",
           "nameEn": "Hundred Hands Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/monksetrune1_1.png"
         },
         {
           "id": "MonkSetRune1_2",
           "name": "百手符文 (II)",
           "nameEn": "Hundred Hands Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/monksetrune1_2.png"
         },
         {
           "id": "MonkSetRune1_3",
           "name": "百手符文 (III)",
           "nameEn": "Hundred Hands Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/monksetrune1_3.png"
         },
         {
           "id": "MonkSetRune1_4",
           "name": "百手符文 (IV)",
           "nameEn": "Hundred Hands Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/monksetrune1_4.png"
         },
         {
           "id": "MonkSetRune1_5",
           "name": "百手符文 (V)",
           "nameEn": "Hundred Hands Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/monksetrune1_5.png"
         },
         {
           "id": "MonkSetRune1_6",
           "name": "百手符文 (VI)",
           "nameEn": "Hundred Hands Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/monksetrune1_6.png"
         }
       ],
       "effects": [
@@ -1183,37 +1247,43 @@
           "id": "MonkSetRune2_1",
           "name": "九天轮符文 (I)",
           "nameEn": "Wheel of Nine Heavens Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/monksetrune2_1.png"
         },
         {
           "id": "MonkSetRune2_2",
           "name": "九天轮符文 (II)",
           "nameEn": "Wheel of Nine Heavens Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/monksetrune2_2.png"
         },
         {
           "id": "MonkSetRune2_3",
           "name": "九天轮符文 (III)",
           "nameEn": "Wheel of Nine Heavens Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/monksetrune2_3.png"
         },
         {
           "id": "MonkSetRune2_4",
           "name": "九天轮符文 (IV)",
           "nameEn": "Wheel of Nine Heavens Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/monksetrune2_4.png"
         },
         {
           "id": "MonkSetRune2_5",
           "name": "九天轮符文 (V)",
           "nameEn": "Wheel of Nine Heavens Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/monksetrune2_5.png"
         },
         {
           "id": "MonkSetRune2_6",
           "name": "九天轮符文 (VI)",
           "nameEn": "Wheel of Nine Heavens Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/monksetrune2_6.png"
         }
       ],
       "effects": [
@@ -1233,37 +1303,43 @@
           "id": "MonkSetRune3_1",
           "name": "蛇信符文 (I)",
           "nameEn": "Serpent's Tongue Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/monksetrune3_1.png"
         },
         {
           "id": "MonkSetRune3_2",
           "name": "蛇信符文 (II)",
           "nameEn": "Serpent's Tongue Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/monksetrune3_2.png"
         },
         {
           "id": "MonkSetRune3_3",
           "name": "蛇信符文 (III)",
           "nameEn": "Serpent's Tongue Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/monksetrune3_3.png"
         },
         {
           "id": "MonkSetRune3_4",
           "name": "蛇信符文 (IV)",
           "nameEn": "Serpent's Tongue Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/monksetrune3_4.png"
         },
         {
           "id": "MonkSetRune3_5",
           "name": "蛇信符文 (V)",
           "nameEn": "Serpent's Tongue Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/monksetrune3_5.png"
         },
         {
           "id": "MonkSetRune3_6",
           "name": "蛇信符文 (VI)",
           "nameEn": "Serpent's Tongue Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/monksetrune3_6.png"
         }
       ],
       "effects": [
@@ -1283,37 +1359,43 @@
           "id": "SorcererSetRune1_1",
           "name": "炼狱盟约符文 (I)",
           "nameEn": "Infernal Covenant Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/sorcerersetrune1_1.png"
         },
         {
           "id": "SorcererSetRune1_2",
           "name": "炼狱盟约符文 (II)",
           "nameEn": "Infernal Covenant Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/sorcerersetrune1_2.png"
         },
         {
           "id": "SorcererSetRune1_3",
           "name": "炼狱盟约符文 (III)",
           "nameEn": "Infernal Covenant Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/sorcerersetrune1_3.png"
         },
         {
           "id": "SorcererSetRune1_4",
           "name": "炼狱盟约符文 (IV)",
           "nameEn": "Infernal Covenant Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/sorcerersetrune1_4.png"
         },
         {
           "id": "SorcererSetRune1_5",
           "name": "炼狱盟约符文 (V)",
           "nameEn": "Infernal Covenant Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/sorcerersetrune1_5.png"
         },
         {
           "id": "SorcererSetRune1_6",
           "name": "炼狱盟约符文 (VI)",
           "nameEn": "Infernal Covenant Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/sorcerersetrune1_6.png"
         }
       ],
       "effects": [
@@ -1333,37 +1415,43 @@
           "id": "SorcererSetRune2_1",
           "name": "冰封弹幕符文 (I)",
           "nameEn": "Frozen Barrage Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/sorcerersetrune2_1.png"
         },
         {
           "id": "SorcererSetRune2_2",
           "name": "冰封弹幕符文 (II)",
           "nameEn": "Frozen Barrage Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/sorcerersetrune2_2.png"
         },
         {
           "id": "SorcererSetRune2_3",
           "name": "冰封弹幕符文 (III)",
           "nameEn": "Frozen Barrage Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/sorcerersetrune2_3.png"
         },
         {
           "id": "SorcererSetRune2_4",
           "name": "冰封弹幕符文 (IV)",
           "nameEn": "Frozen Barrage Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/sorcerersetrune2_4.png"
         },
         {
           "id": "SorcererSetRune2_5",
           "name": "冰封弹幕符文 (V)",
           "nameEn": "Frozen Barrage Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/sorcerersetrune2_5.png"
         },
         {
           "id": "SorcererSetRune2_6",
           "name": "冰封弹幕符文 (VI)",
           "nameEn": "Frozen Barrage Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/sorcerersetrune2_6.png"
         }
       ],
       "effects": [
@@ -1383,37 +1471,43 @@
           "id": "SorcererSetRune3_1",
           "name": "唤雷者符文 (I)",
           "nameEn": "Stormcaller Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/sorcerersetrune3_1.png"
         },
         {
           "id": "SorcererSetRune3_2",
           "name": "唤雷者符文 (II)",
           "nameEn": "Stormcaller Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/sorcerersetrune3_2.png"
         },
         {
           "id": "SorcererSetRune3_3",
           "name": "唤雷者符文 (III)",
           "nameEn": "Stormcaller Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/sorcerersetrune3_3.png"
         },
         {
           "id": "SorcererSetRune3_4",
           "name": "唤雷者符文 (IV)",
           "nameEn": "Stormcaller Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/sorcerersetrune3_4.png"
         },
         {
           "id": "SorcererSetRune3_5",
           "name": "唤雷者符文 (V)",
           "nameEn": "Stormcaller Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/sorcerersetrune3_5.png"
         },
         {
           "id": "SorcererSetRune3_6",
           "name": "唤雷者符文 (VI)",
           "nameEn": "Stormcaller Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/sorcerersetrune3_6.png"
         }
       ],
       "effects": [
@@ -1433,37 +1527,43 @@
           "id": "WarriorSetRune1_1",
           "name": "阿瑟隆之盾符文 (I)",
           "nameEn": "Rune of Atheron's Shield (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/warriorsetrune1_1.png"
         },
         {
           "id": "WarriorSetRune1_2",
           "name": "阿瑟隆之盾符文 (II)",
           "nameEn": "Rune of Atheron's Shield (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/warriorsetrune1_2.png"
         },
         {
           "id": "WarriorSetRune1_3",
           "name": "阿瑟隆之盾符文 (III)",
           "nameEn": "Rune of Atheron's Shield (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/warriorsetrune1_3.png"
         },
         {
           "id": "WarriorSetRune1_4",
           "name": "阿瑟隆之盾符文 (IV)",
           "nameEn": "Rune of Atheron's Shield (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/warriorsetrune1_4.png"
         },
         {
           "id": "WarriorSetRune1_5",
           "name": "阿瑟隆之盾符文 (V)",
           "nameEn": "Rune of Atheron's Shield (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/warriorsetrune1_5.png"
         },
         {
           "id": "WarriorSetRune1_6",
           "name": "阿瑟隆之盾符文 (VI)",
           "nameEn": "Rune of Atheron's Shield (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/warriorsetrune1_6.png"
         }
       ],
       "effects": [
@@ -1483,37 +1583,43 @@
           "id": "WarriorSetRune2_1",
           "name": "风暴之眼符文 (I)",
           "nameEn": "Eye of the Storm Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/warriorsetrune2_1.png"
         },
         {
           "id": "WarriorSetRune2_2",
           "name": "风暴之眼符文 (II)",
           "nameEn": "Eye of the Storm Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/warriorsetrune2_2.png"
         },
         {
           "id": "WarriorSetRune2_3",
           "name": "风暴之眼符文 (III)",
           "nameEn": "Eye of the Storm Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/warriorsetrune2_3.png"
         },
         {
           "id": "WarriorSetRune2_4",
           "name": "风暴之眼符文 (IV)",
           "nameEn": "Eye of the Storm Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/warriorsetrune2_4.png"
         },
         {
           "id": "WarriorSetRune2_5",
           "name": "风暴之眼符文 (V)",
           "nameEn": "Eye of the Storm Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/warriorsetrune2_5.png"
         },
         {
           "id": "WarriorSetRune2_6",
           "name": "风暴之眼符文 (VI)",
           "nameEn": "Eye of the Storm Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/warriorsetrune2_6.png"
         }
       ],
       "effects": [
@@ -1533,37 +1639,43 @@
           "id": "WarriorSetRune3_1",
           "name": "山岳之重符文 (I)",
           "nameEn": "Weight of the Mountain Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/warriorsetrune3_1.png"
         },
         {
           "id": "WarriorSetRune3_2",
           "name": "山岳之重符文 (II)",
           "nameEn": "Weight of the Mountain Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/warriorsetrune3_2.png"
         },
         {
           "id": "WarriorSetRune3_3",
           "name": "山岳之重符文 (III)",
           "nameEn": "Weight of the Mountain Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/warriorsetrune3_3.png"
         },
         {
           "id": "WarriorSetRune3_4",
           "name": "山岳之重符文 (IV)",
           "nameEn": "Weight of the Mountain Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/warriorsetrune3_4.png"
         },
         {
           "id": "WarriorSetRune3_5",
           "name": "山岳之重符文 (V)",
           "nameEn": "Weight of the Mountain Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/warriorsetrune3_5.png"
         },
         {
           "id": "WarriorSetRune3_6",
           "name": "山岳之重符文 (VI)",
           "nameEn": "Weight of the Mountain Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/warriorsetrune3_6.png"
         }
       ],
       "effects": [
@@ -1583,37 +1695,43 @@
           "id": "WarriorSetRune4_1",
           "name": "秋收之月符文 (I)",
           "nameEn": "Harvest Moon Rune (I)",
-          "tier": "1"
+          "tier": "1",
+          "icon": "/images/icons/runes/warriorsetrune4_1.png"
         },
         {
           "id": "WarriorSetRune4_2",
           "name": "秋收之月符文 (II)",
           "nameEn": "Harvest Moon Rune (II)",
-          "tier": "2"
+          "tier": "2",
+          "icon": "/images/icons/runes/warriorsetrune4_2.png"
         },
         {
           "id": "WarriorSetRune4_3",
           "name": "秋收之月符文 (III)",
           "nameEn": "Harvest Moon Rune (III)",
-          "tier": "3"
+          "tier": "3",
+          "icon": "/images/icons/runes/warriorsetrune4_3.png"
         },
         {
           "id": "WarriorSetRune4_4",
           "name": "秋收之月符文 (IV)",
           "nameEn": "Harvest Moon Rune (IV)",
-          "tier": "4"
+          "tier": "4",
+          "icon": "/images/icons/runes/warriorsetrune4_4.png"
         },
         {
           "id": "WarriorSetRune4_5",
           "name": "秋收之月符文 (V)",
           "nameEn": "Harvest Moon Rune (V)",
-          "tier": "5"
+          "tier": "5",
+          "icon": "/images/icons/runes/warriorsetrune4_5.png"
         },
         {
           "id": "WarriorSetRune4_6",
           "name": "秋收之月符文 (VI)",
           "nameEn": "Harvest Moon Rune (VI)",
-          "tier": "6"
+          "tier": "6",
+          "icon": "/images/icons/runes/warriorsetrune4_6.png"
         }
       ],
       "effects": [

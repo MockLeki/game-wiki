@@ -105,8 +105,13 @@ export default function FishingPage() {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0.7rem', padding: '1rem' }}>
                 {grouped[q].map(f => (
                   <div key={f.id} className={`item-card q-${f.quality}`} style={{ padding: '0.9rem' }}>
-                    <div className="item-name" style={{ fontSize: '0.95rem' }}>{f.name}</div>
-                    <div style={{ color: 'var(--muted)', fontSize: '0.7rem', marginBottom: '0.5rem' }}>{f.nameEn}</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                      {f.icon && <img src={f.icon} alt={f.name} style={{ width: 44, height: 44, objectFit: 'contain', flexShrink: 0, filter: 'drop-shadow(0 0 5px rgba(0,0,0,0.7))' }} />}
+                      <div style={{ minWidth: 0 }}>
+                        <div className="item-name" style={{ fontSize: '0.95rem' }}>{f.name}</div>
+                        <div style={{ color: 'var(--muted)', fontSize: '0.7rem' }}>{f.nameEn}</div>
+                      </div>
+                    </div>
                     {f.spot && (
                       <div style={{ display: 'inline-block', fontSize: '0.68rem', color: SPOT_COLOR[f.spot] || 'var(--muted)', marginBottom: '0.4rem', padding: '0.1rem 0.5rem', border: '1px solid var(--border)' }}>
                         📍 {SPOT_CN[f.spot] || f.spot}

@@ -32,7 +32,8 @@
       "name": "白骨鱼骸",
       "nameEn": "Bleached Fishbones",
       "desc": "曾在此游弋之物只余白骨，其余的都进了海鸥的肚子。商人愿意为它付出可观的金币。",
-      "descEn": "Whatever swam here left only bone. The gulls got the rest. A merchant will pay good gold for it."
+      "descEn": "Whatever swam here left only bone. The gulls got the rest. A merchant will pay good gold for it.",
+      "icon": "/images/icons/fish/commonfish1.png"
     },
     {
       "id": "CommonFish2",
@@ -43,7 +44,8 @@
       "name": "条纹文蛤",
       "nameEn": "Banded Clam",
       "desc": "紧闭如铁，比看上去更沉。厨子们最爱用它熬汤。商人愿意为它付出可观的金币。",
-      "descEn": "Sealed tight and heavier than it looks. Cooks swear by the broth. A merchant will pay good gold for it."
+      "descEn": "Sealed tight and heavier than it looks. Cooks swear by the broth. A merchant will pay good gold for it.",
+      "icon": "/images/icons/fish/commonfish2.png"
     },
     {
       "id": "UnCommonFish1",
@@ -54,7 +56,8 @@
       "name": "锈钳螯虾",
       "nameEn": "Rustclaw Crayfish",
       "desc": "双钳能夹碎指节。徒手去抓也值得冒这个险。商人愿意为它付出丰厚的金币。",
-      "descEn": "Its pincers can crack a knuckle. Worth the risk of catching one by hand. A merchant will pay handsomely for it."
+      "descEn": "Its pincers can crack a knuckle. Worth the risk of catching one by hand. A merchant will pay handsomely for it.",
+      "icon": "/images/icons/fish/uncommonfish1.png"
     },
     {
       "id": "UnCommonFish2",
@@ -65,7 +68,8 @@
       "name": "月鳞鲦",
       "nameEn": "Moonscale Dace",
       "desc": "苍白如沉底的银币。渔妇说它只在无云之夜浮上来。商人愿意为它付出丰厚的金币。",
-      "descEn": "Pale as a drowned coin. Fishwives say it only rises on cloudless nights. A merchant will pay handsomely for it."
+      "descEn": "Pale as a drowned coin. Fishwives say it only rises on cloudless nights. A merchant will pay handsomely for it.",
+      "icon": "/images/icons/fish/uncommonfish2.png"
     },
     {
       "id": "RareFish1",
@@ -76,7 +80,8 @@
       "name": "辉鳍神仙鱼",
       "nameEn": "Glimmerfin Angel",
       "desc": "日落之后，鳞片仍久久含光。收藏家愿以重金求一条完好的。商人愿意为它掏出一小笔财富。",
-      "descEn": "Its scales hold light long after the sun is gone. Collectors pay in gold for a whole one. A merchant will pay a small fortune for it."
+      "descEn": "Its scales hold light long after the sun is gone. Collectors pay in gold for a whole one. A merchant will pay a small fortune for it.",
+      "icon": "/images/icons/fish/rarefish1.png"
     },
     {
       "id": "RareFish2",
@@ -87,7 +92,8 @@
       "name": "珊瑚绯鱼",
       "nameEn": "Coralbloom Sunfish",
       "desc": "礁石般的绯红，触手温热。一离开浅水便会死去。商人愿意为它掏出一小笔财富。",
-      "descEn": "Reef-red and warm to the touch. It dies the moment it leaves the shallows. A merchant will pay a small fortune for it."
+      "descEn": "Reef-red and warm to the touch. It dies the moment it leaves the shallows. A merchant will pay a small fortune for it.",
+      "icon": "/images/icons/fish/rarefish2.png"
     },
     {
       "id": "PotionFish1",
@@ -100,7 +106,8 @@
       "desc": "每秒回复10点生命，持续1小时。",
       "descEn": "Restore 10 Life per second for 1 hour.",
       "effect": "1小时内每秒回复10点生命值",
-      "effectEn": "Restore 10 Life/sec for 1 hour"
+      "effectEn": "Restore 10 Life/sec for 1 hour",
+      "icon": "/images/icons/fish/potionfish1.png"
     },
     {
       "id": "PotionFish2",
@@ -113,7 +120,8 @@
       "desc": "获得105点荆棘，持续1小时。",
       "descEn": "Gain 105 Thorns for 1 hour.",
       "effect": "1小时内获得105点荆棘",
-      "effectEn": "Gain 105 Thorns for 1 hour"
+      "effectEn": "Gain 105 Thorns for 1 hour",
+      "icon": "/images/icons/fish/potionfish2.png"
     },
     {
       "id": "CommonFish3",
@@ -125,7 +133,8 @@
       "nameEn": "Frostworn Fishbones",
       "desc": "弯曲的鱼骨在湖冰下磨得光滑，原本的鱼儿几乎不留痕迹。商人愿意为它们付出不少金币。",
       "descEn": "Curved bones polished smooth beneath the lake ice. Little remains of the fish they held together. A merchant will pay good gold for them.",
-      "spot": "snowLake"
+      "spot": "snowLake",
+      "icon": "/images/icons/fish/commonfish3.png"
     },
     {
       "id": "UnCommonFish3",
@@ -137,7 +146,8 @@
       "nameEn": "Frostcoil Shell",
       "desc": "蓝色螺壳的每道棱纹都凝着白霜，即使放在熊熊炉火旁也依旧冰冷。商人愿意为它慷慨解囊。",
       "descEn": "Frost clings to every ridge of this blue spiral shell. It stays cold beside a roaring fire. A merchant will pay handsomely for it.",
-      "spot": "snowLake"
+      "spot": "snowLake",
+      "icon": "/images/icons/fish/uncommonfish3.png"
     },
     {
       "id": "RareFish3",
@@ -149,7 +159,8 @@
       "nameEn": "Azure Sailfin",
       "desc": "宽大的蓝色鱼鳍在冰下如丝绸般舒展。两侧闪烁的条纹令收藏家趋之若鹜。商人愿意为它掏出一小笔财富。",
       "descEn": "Its broad blue fins unfurl like silk beneath the ice. Collectors prize the shimmering stripes along its sides. A merchant will pay a small fortune for it.",
-      "spot": "snowLake"
+      "spot": "snowLake",
+      "icon": "/images/icons/fish/rarefish3.png"
     },
     {
       "id": "PotionFish3",
@@ -162,7 +173,8 @@
       "desc": "每秒恢复4点法力，持续1小时。",
       "descEn": "Restore 4 Mana per second for 1 hour.",
       "spot": "snowLake",
-      "effect": "每秒恢复4点法力，持续1小时"
+      "effect": "每秒恢复4点法力，持续1小时",
+      "icon": "/images/icons/fish/potionfish3.png"
     },
     {
       "id": "UnCommonFish4",
@@ -174,7 +186,8 @@
       "nameEn": "Brimstone Loach",
       "desc": "它盘绕在湖底热泉暖透的石头上。离水许久，黄色的鱼鳍仍在抽动。商人愿意为它付出丰厚的金币。",
       "descEn": "It curls around stones warmed by vents below the lakebed. Its yellow fins twitch long after it leaves the water. A merchant will pay handsomely for it.",
-      "spot": "volcanoLake"
+      "spot": "volcanoLake",
+      "icon": "/images/icons/fish/uncommonfish4.png"
     },
     {
       "id": "RareFish4",
@@ -186,7 +199,8 @@
       "nameEn": "Cindercoil Shell",
       "desc": "沉重的螺壳上盘绕着暖琥珀色的纹带。细灰积聚在沟纹之中。商人愿意为它掏出一小笔财富。",
       "descEn": "Warm amber bands wind around this heavy spiral shell. Fine ash gathers in its grooves. A merchant will pay a small fortune for it.",
-      "spot": "volcanoLake"
+      "spot": "volcanoLake",
+      "icon": "/images/icons/fish/rarefish4.png"
     },
     {
       "id": "PotionFish4",
@@ -199,7 +213,8 @@
       "desc": "受到的所有伤害减少10%，持续1小时。",
       "descEn": "Reduce all damage taken by 10% for 1 hour.",
       "spot": "volcanoLake",
-      "effect": "受到的所有伤害减少10%，持续1小时"
+      "effect": "受到的所有伤害减少10%，持续1小时",
+      "icon": "/images/icons/fish/potionfish4.png"
     }
   ],
   "stats": {

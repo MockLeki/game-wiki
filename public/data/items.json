@@ -918,7 +918,7 @@
           "qualityName": "传说",
           "desc": "饮用生命药水时还会立即恢复40%的最大法力值。",
           "descEn": "Drinking a Health Potion also instantly restores 40% of your Maximum Mana.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarybelt2.png"
         },
         {
           "id": "LegendaryBelt3",
@@ -929,7 +929,7 @@
           "qualityName": "传说",
           "desc": "饮用生命药水后，全部伤害 +35%，持续6秒。",
           "descEn": "Drinking a Health Potion grants +35% All Damage for 6 seconds.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarybelt3.png"
         }
       ],
       "boots": [
@@ -953,7 +953,7 @@
           "qualityName": "传说",
           "desc": "踏风步持续期间，你还获得30%攻击速度。",
           "descEn": "While Wind Steps is active, you also gain 30% Attack Speed.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryboots2.png"
         },
         {
           "id": "LegendaryBoots3",
@@ -964,7 +964,7 @@
           "qualityName": "传说",
           "desc": "移动时每秒恢复3%最大生命值。",
           "descEn": "Restore 3% of Max Health per second while moving.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryboots3.png"
         }
       ],
       "chest": [
@@ -1010,7 +1010,7 @@
           "qualityName": "传说",
           "desc": "灵气涌流不再治疗你，转而每秒脉动，对周围的敌人造成相当于160%武器伤害的闪电伤害。",
           "descEn": "Spirit Stream no longer heals you. Instead it pulses every second, dealing 160% weapon damage as Lightning damage to nearby enemies.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarychestarmor4.png"
         },
         {
           "id": "LegendaryChestArmor5",
@@ -1021,7 +1021,7 @@
           "qualityName": "传说",
           "desc": "生命值低于30%时受到伤害，进入无敌状态，持续4秒。（冷却25秒）",
           "descEn": "Taking damage while below 30% Health makes you Invulnerable for 4 seconds. (25s cooldown)",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarychestarmor5.png"
         },
         {
           "id": "LegendaryChestArmor6",
@@ -1032,7 +1032,7 @@
           "qualityName": "传说",
           "desc": "获得相当于闪避几率50%的额外物理伤害减免。",
           "descEn": "Gain bonus Physical Damage Reduction equal to 50% of your Dodge Chance.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarychestarmor6.png"
         }
       ],
       "helm": [
@@ -1067,7 +1067,7 @@
           "qualityName": "传说",
           "desc": "旋风棍式将掀起4道龙卷风，但每道体积缩小25%，且游走时间缩短。",
           "descEn": "Whirlwind Staff conjures 4 tornados, but each is 25% smaller and wanders for a shorter time.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryhelm3.png"
         },
         {
           "id": "LegendaryHelm4",
@@ -1078,7 +1078,7 @@
           "qualityName": "传说",
           "desc": "每次普通攻击获得1层专注，持续10秒，最多叠加5层。下一次强力攻击消耗所有专注，每层使该次攻击额外造成20%伤害。",
           "descEn": "Each Basic Attack grants 1 stack of Focus for 10 seconds, up to 5 stacks. Your next Strong Attack consumes all Focus, dealing 20% extra damage per stack.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryhelm4.png"
         },
         {
           "id": "LegendaryHelm5",
@@ -1089,7 +1089,7 @@
           "qualityName": "传说",
           "desc": "[幻影形态]持续期间获得+100%奥术伤害和+100%毒素伤害。",
           "descEn": "Gain +100% Arcane Damage and +100% Poison Damage while [Phantom Form] is active.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryhelm5.png"
         }
       ],
       "necklace": [
@@ -1135,7 +1135,7 @@
           "qualityName": "传说",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryneck4.png"
         },
         {
           "id": "LegendaryNeck5",
@@ -1146,7 +1146,7 @@
           "qualityName": "传说",
           "desc": "生命值高于80%时，全部伤害 +75%。",
           "descEn": "+75% All Damage while you are Healthy (above 80% HP).",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryneck5.png"
         }
       ],
       "legs": [
@@ -1181,7 +1181,7 @@
           "qualityName": "传说",
           "desc": "击杀敌人后，获得15点法力恢复，持续4秒。",
           "descEn": "Killing an enemy grants 15 Mana Regeneration for 4 seconds.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarypants3.png"
         }
       ],
       "ring": [
@@ -1216,7 +1216,7 @@
           "qualityName": "传说",
           "desc": "神圣法球将额外召唤一颗法球。",
           "descEn": "Sacred Orbs conjures one additional orb.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryring3.png"
         },
         {
           "id": "LegendaryRing4",
@@ -1227,7 +1227,7 @@
           "qualityName": "传说",
           "desc": "每第4次火球会化为炎爆术，追踪目标并轰然炸裂，伤害爆炸范围内的所有敌人。",
           "descEn": "Every 4th Fire Ball becomes a Pyroblast that seeks its target and erupts, damaging all enemies caught in the blast.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryring4.png"
         },
         {
           "id": "LegendaryRing5",
@@ -1238,7 +1238,7 @@
           "qualityName": "传说",
           "desc": "你的技能造成至多50%的额外伤害，随法力充盈程度提升。",
           "descEn": "Your abilities deal up to 50% increased damage, scaling with how full your Mana is.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryring5.png"
         },
         {
           "id": "LegendaryRing6",
@@ -1249,7 +1249,7 @@
           "qualityName": "传说",
           "desc": "奥术技能获得+9%暴击几率。",
           "descEn": "Arcane abilities gain +9% Critical Hit Chance.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryring6.png"
         },
         {
           "id": "LegendaryRing7",
@@ -1260,7 +1260,7 @@
           "qualityName": "传说",
           "desc": "战斗中仅剩1个存活敌人时，你的攻击速度提高35%。",
           "descEn": "Your Attack Speed increases by 35% while in combat with only one living enemy remaining.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryring7.png"
         }
       ],
       "shoulder": [
@@ -1295,7 +1295,7 @@
           "qualityName": "传说",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryshoulder3.png"
         }
       ],
       "weapon": [
@@ -1352,7 +1352,7 @@
           "qualityName": "传说",
           "desc": "对[定身]或[减速]的敌人 +100% 暴击伤害。",
           "descEn": "+100% Critical Damage against [Immobilized] or [Slowed] enemies.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarystaff2.png"
         },
         {
           "id": "LegendaryBow1",
@@ -1363,7 +1363,7 @@
           "qualityName": "传说",
           "desc": "施放基础攻击时，有10%的几率额外免费施放奥术箭雨。",
           "descEn": "Casting a basic attack has a 10% chance to also cast Arcane Arrowstorm for free.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarybow1.png"
         },
         {
           "id": "LegendaryBow2",
@@ -1374,7 +1374,7 @@
           "qualityName": "传说",
           "desc": "你的毒素技能命中敌人时，有15%的几率召唤一群乌鸦攻击目标，造成总计720%武器伤害的毒素伤害。",
           "descEn": "Your Poison ability hits have a 15% chance to summon a flock of crows to attack the target, dealing a total of 720% weapon damage as Poison damage.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarybow2.png"
         }
       ],
       "gloves": [
@@ -1409,7 +1409,7 @@
           "qualityName": "传说",
           "desc": "闪电风暴 +150% 暴击伤害。",
           "descEn": "+150% Critical Damage with Lightning Storm.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarygloves3.png"
         },
         {
           "id": "LegendaryGloves4",
@@ -1420,7 +1420,7 @@
           "qualityName": "传说",
           "desc": "[怒拳]的每层还额外提供 +1% 闪避几率。",
           "descEn": "Each stack of [Furious Fist] also grants +1% Dodge Chance.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarygloves4.png"
         },
         {
           "id": "LegendaryGloves5",
@@ -1431,7 +1431,7 @@
           "qualityName": "传说",
           "desc": "飞刀连击和二连矢可穿透1个目标。",
           "descEn": "Knife Barrage and Twin Arrows can pierce through one target.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarygloves5.png"
         },
         {
           "id": "LegendaryGloves6",
@@ -1442,7 +1442,7 @@
           "qualityName": "传说",
           "desc": "你的持续伤害提高80%。",
           "descEn": "Your Damage Over Time deals 80% increased damage.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendarygloves6.png"
         }
       ],
       "back": [
@@ -1455,7 +1455,7 @@
           "qualityName": "传说",
           "desc": "一件缀满永霜结晶的破烂披风，取自一位在被遗忘的墓穴前冻毙已久的守墓人。",
           "descEn": "A tattered cloak crowned with everfrost crystals, torn from a warden long frozen at a forgotten tomb.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryback1.png"
         },
         {
           "id": "LegendaryBack2",
@@ -1466,7 +1466,7 @@
           "qualityName": "传说",
           "desc": "裁自一座在日落时分覆灭的宫廷旗帜，琥珀色的褶皱中仍留存着那最后暮光的余温。",
           "descEn": "Cut from the banners of a court that fell at sundown, its amber folds still hold the warmth of that final dusk.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryback2.png"
         },
         {
           "id": "LegendaryBack3",
@@ -1477,7 +1477,7 @@
           "qualityName": "传说",
           "desc": "一件厚实的雪白毛皮披风，曾属于一处被无尽寒冬掩埋的山隘的最后一位守望者。",
           "descEn": "A thick cloak of snow-white fur, worn by the last warden of a mountain pass buried beneath an endless winter.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryback3.png"
         },
         {
           "id": "LegendaryBack4",
@@ -1488,7 +1488,7 @@
           "qualityName": "传说",
           "desc": "陨落的苍穹哨卫遗下的褐金色双翼，羽间仍留存着被遗忘时代最后一缕光的余温。",
           "descEn": "Tawny wings of a fallen sky sentinel, their feathers still warm with the last light of a forgotten age.",
-          "icon": "/images/icons/slot_bg_legendary.png"
+          "icon": "/images/icons/items/legendaryback4.png"
         }
       ]
     },
@@ -1536,7 +1536,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarebelt4.png"
         }
       ],
       "boots": [
@@ -1582,7 +1582,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareboots4.png"
         }
       ],
       "chest": [
@@ -1628,7 +1628,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarechestarmor4.png"
         },
         {
           "id": "RareChestArmor5",
@@ -1639,7 +1639,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarechestarmor5.png"
         },
         {
           "id": "RareChestArmor6",
@@ -1650,7 +1650,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarechestarmor6.png"
         },
         {
           "id": "RareChestArmor7",
@@ -1661,7 +1661,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarechestarmor7.png"
         },
         {
           "id": "RareChestArmor8",
@@ -1672,7 +1672,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarechestarmor8.png"
         }
       ],
       "helm": [
@@ -1718,7 +1718,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarehelm4.png"
         },
         {
           "id": "RareHelm5",
@@ -1729,7 +1729,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarehelm5.png"
         },
         {
           "id": "RareHelm6",
@@ -1740,7 +1740,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarehelm6.png"
         },
         {
           "id": "RareHelm7",
@@ -1751,7 +1751,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarehelm7.png"
         },
         {
           "id": "RareHelm8",
@@ -1762,7 +1762,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarehelm8.png"
         }
       ],
       "necklace": [
@@ -1808,7 +1808,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareneck4.png"
         }
       ],
       "ring": [
@@ -1854,7 +1854,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarering4.png"
         }
       ],
       "shoulder": [
@@ -1900,7 +1900,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareshoulder4.png"
         },
         {
           "id": "RareShoulder5",
@@ -1911,7 +1911,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareshoulder5.png"
         },
         {
           "id": "RareShoulder6",
@@ -1922,7 +1922,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareshoulder6.png"
         },
         {
           "id": "RareShoulder7",
@@ -1933,7 +1933,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareshoulder7.png"
         },
         {
           "id": "RareShoulder8",
@@ -1944,7 +1944,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareshoulder8.png"
         }
       ],
       "weapon": [
@@ -2001,7 +2001,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareaxe2.png"
         },
         {
           "id": "RareBow1",
@@ -2012,7 +2012,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarebow1.png"
         },
         {
           "id": "RareBow2",
@@ -2023,7 +2023,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarebow2.png"
         },
         {
           "id": "RareBow3",
@@ -2034,7 +2034,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarebow3.png"
         },
         {
           "id": "RareMace2",
@@ -2045,7 +2045,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/raremace2.png"
         },
         {
           "id": "RareStaff2",
@@ -2056,7 +2056,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarestaff2.png"
         },
         {
           "id": "RareSword2",
@@ -2067,7 +2067,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/raresword2.png"
         }
       ],
       "gloves": [
@@ -2102,7 +2102,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/raregloves3.png"
         },
         {
           "id": "RareGloves4",
@@ -2113,7 +2113,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/raregloves4.png"
         }
       ],
       "pants": [
@@ -2161,7 +2161,7 @@
           "qualityName": "稀有",
           "desc": "一件彰显冒险老手身份的披风。",
           "descEn": "A cape that marks a seasoned adventurer.",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareback1.png"
         },
         {
           "id": "RareBack2",
@@ -2172,7 +2172,7 @@
           "qualityName": "稀有",
           "desc": "一件彰显冒险老手身份的披风。",
           "descEn": "A cape that marks a seasoned adventurer.",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareback2.png"
         },
         {
           "id": "RareBack3",
@@ -2183,7 +2183,7 @@
           "qualityName": "稀有",
           "desc": "一件彰显冒险老手身份的披风。",
           "descEn": "A cape that marks a seasoned adventurer.",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rareback3.png"
         }
       ],
       "legs": [
@@ -2196,7 +2196,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarepant4.png"
         },
         {
           "id": "RarePant5",
@@ -2207,7 +2207,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarepant5.png"
         },
         {
           "id": "RarePant6",
@@ -2218,7 +2218,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarepant6.png"
         },
         {
           "id": "RarePant7",
@@ -2229,7 +2229,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarepant7.png"
         },
         {
           "id": "RarePant8",
@@ -2240,7 +2240,7 @@
           "qualityName": "稀有",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_rare.png"
+          "icon": "/images/icons/items/rarepant8.png"
         }
       ]
     },
@@ -2288,7 +2288,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonbelt4.png"
         }
       ],
       "boots": [
@@ -2334,7 +2334,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonboots4.png"
         }
       ],
       "chest": [
@@ -2380,7 +2380,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonchestarmor4.png"
         }
       ],
       "helm": [
@@ -2426,7 +2426,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonhelm4.png"
         }
       ],
       "necklace": [
@@ -2472,7 +2472,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonneck4.png"
         }
       ],
       "ring": [
@@ -2518,7 +2518,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonring4.png"
         }
       ],
       "shoulder": [
@@ -2564,7 +2564,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonshoulder4.png"
         }
       ],
       "weapon": [
@@ -2610,7 +2610,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonaxe1.png"
         },
         {
           "id": "UncommonBow1",
@@ -2621,7 +2621,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonbow1.png"
         }
       ],
       "gloves": [
@@ -2656,7 +2656,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommongloves3.png"
         },
         {
           "id": "UncommonGloves4",
@@ -2667,7 +2667,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommongloves4.png"
         }
       ],
       "pants": [
@@ -2715,7 +2715,7 @@
           "qualityName": "非凡",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_uncommon.png"
+          "icon": "/images/icons/items/uncommonpant4.png"
         }
       ]
     },
@@ -2763,7 +2763,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonbelt4.png"
         }
       ],
       "boots": [
@@ -2809,7 +2809,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonboots4.png"
         }
       ],
       "chest": [
@@ -2855,7 +2855,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonchestarmor4.png"
         }
       ],
       "helm": [
@@ -2901,7 +2901,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonhelm4.png"
         }
       ],
       "necklace": [
@@ -2947,7 +2947,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonneck4.png"
         }
       ],
       "ring": [
@@ -2993,7 +2993,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonring4.png"
         }
       ],
       "shoulder": [
@@ -3039,7 +3039,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonshoulder4.png"
         }
       ],
       "weapon": [
@@ -3096,7 +3096,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonbow1.png"
         },
         {
           "id": "CommonStaff2",
@@ -3107,7 +3107,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonstaff2.png"
         }
       ],
       "gloves": [
@@ -3142,7 +3142,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commongloves3.png"
         },
         {
           "id": "CommonGloves4",
@@ -3153,7 +3153,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commongloves4.png"
         }
       ],
       "pants": [
@@ -3201,7 +3201,7 @@
           "qualityName": "普通",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_common.png"
+          "icon": "/images/icons/items/commonpant4.png"
         }
       ]
     },
@@ -3217,7 +3217,7 @@
           "qualityName": "神圣",
           "desc": "一对彰显圣光虔诚信徒身份的辉耀之翼。",
           "descEn": "Radiant wings that mark a devoted follower of the Light.",
-          "icon": "/images/icons/divine_wing_1.png"
+          "icon": "/images/icons/items/divineback1.png"
         },
         {
           "id": "DivineBack2",
@@ -3228,7 +3228,7 @@
           "qualityName": "神圣",
           "desc": "自灰烬之主倒下之处扯下的双翼，焦黑的翼膜仍灼烧着他那火山王座的熔炉之热。",
           "descEn": "Wings torn from the Lord of the Cinder where he fell, their charred membranes still glowing with the furnace-heat of his mountain throne.",
-          "icon": "/images/icons/slot_bg_divine.png"
+          "icon": "/images/icons/items/divineback2.png"
         }
       ],
       "weapon": [
@@ -3241,7 +3241,7 @@
           "qualityName": "神圣",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_divine.png"
+          "icon": "/images/icons/items/divinebow1.png"
         },
         {
           "id": "DivineMace1",
@@ -3252,7 +3252,7 @@
           "qualityName": "神圣",
           "desc": "暴击几率+5%，暴击伤害+120%。",
           "descEn": "+5% Critical Hit Chance and +120% Critical Hit Damage.",
-          "icon": "/images/icons/slot_bg_divine.png"
+          "icon": "/images/icons/items/divinemace1.png"
         },
         {
           "id": "DivineSword1",
@@ -3263,7 +3263,7 @@
           "qualityName": "神圣",
           "desc": "每次命中有25%几率获得一层[收割灵魂]。消耗25层释放灵魂冲击，对附近所有敌人造成相当于800%武器伤害的物理伤害，并使其陷入[恍惚]。",
           "descEn": "Every hit has a 25% chance to gain a stack of [Harvest of Souls]. Consumes 25 stacks to release Soul Impact, dealing 800% Weapon Damage as Physical Damage to all nearby enemies and applying [Dazed] to them.",
-          "icon": "/images/icons/slot_bg_divine.png"
+          "icon": "/images/icons/items/divinesword1.png"
         }
       ],
       "helm": [
@@ -3276,7 +3276,7 @@
           "qualityName": "神圣",
           "desc": "",
           "descEn": "",
-          "icon": "/images/icons/slot_bg_divine.png"
+          "icon": "/images/icons/items/divinehelm1.png"
         },
         {
           "id": "DivineHelm2",
@@ -3287,7 +3287,7 @@
           "qualityName": "神圣",
           "desc": "受到的所有伤害减少25%。",
           "descEn": "Reduces all damage taken by 25%.",
-          "icon": "/images/icons/slot_bg_divine.png"
+          "icon": "/images/icons/items/divinehelm2.png"
         }
       ],
       "ring": [
@@ -3300,7 +3300,7 @@
           "qualityName": "神圣",
           "desc": "所有技能等级+10。",
           "descEn": "All ability levels +10.",
-          "icon": "/images/icons/slot_bg_divine.png"
+          "icon": "/images/icons/items/divinering1.png"
         }
       ]
     }

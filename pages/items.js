@@ -58,7 +58,10 @@ export default function ItemsPage() {
                 {g.items.map(it => (
                   <div key={it.id} className="item-card" style={{ padding: '0.55rem 0.7rem', borderLeft: `3px solid ${RARITY_COLOR[it.rarity]}` }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.4rem' }}>
-                      <span className="item-name" style={{ fontSize: '0.85rem' }}>{it.name}</span>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', minWidth: 0 }}>
+                        {it.icon && <img src={it.icon} alt="" style={{ width: 26, height: 26, objectFit: 'contain', flexShrink: 0 }} />}
+                        <span className="item-name" style={{ fontSize: '0.85rem' }}>{it.name}</span>
+                      </span>
                       <span style={{ color: RARITY_COLOR[it.rarity], fontSize: '0.68rem', flexShrink: 0 }}>{it.rarityName}</span>
                     </div>
                     <div style={{ color: 'var(--muted)', fontSize: '0.68rem' }}>{it.nameEn}</div>
@@ -71,11 +74,16 @@ export default function ItemsPage() {
                   const chest = fmtChest(it)
                   return (
                     <div key={it.id} className="item-card" style={{ padding: '0.85rem', borderLeft: `3px solid ${RARITY_COLOR[it.rarity]}` }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem' }}>
-                        <span className="item-name" style={{ fontSize: '0.95rem' }}>{it.name}</span>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', minWidth: 0 }}>
+                          {it.icon && <img src={it.icon} alt="" style={{ width: 40, height: 40, objectFit: 'contain', flexShrink: 0, filter: 'drop-shadow(0 0 4px rgba(0,0,0,0.6))' }} />}
+                          <span style={{ minWidth: 0 }}>
+                            <span className="item-name" style={{ fontSize: '0.95rem', display: 'block' }}>{it.name}</span>
+                            <span style={{ color: 'var(--muted)', fontSize: '0.7rem' }}>{it.nameEn}</span>
+                          </span>
+                        </span>
                         <span style={{ color: RARITY_COLOR[it.rarity], fontSize: '0.7rem', flexShrink: 0 }}>{it.rarityName}</span>
                       </div>
-                      <div style={{ color: 'var(--muted)', fontSize: '0.7rem', marginBottom: '0.45rem' }}>{it.nameEn}</div>
                       {it.desc && <div style={{ color: 'var(--text)', fontSize: '0.8rem', lineHeight: 1.55 }}>{it.desc}</div>}
                       {it.InstantHealAmount != null && (
                         <div style={{ color: 'var(--cyan-light)', fontSize: '0.78rem', marginTop: '0.35rem' }}>立即恢复 {it.InstantHealAmount} 点生命</div>

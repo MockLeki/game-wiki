@@ -154,12 +154,14 @@ a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(201, 162, 39, 0.6)
   0%, 100% { box-shadow: 0 0 4px var(--cyan); }
   50% { box-shadow: 0 0 12px var(--cyan-light), 0 0 20px var(--cyan); }
 }
-.nav-links { display: flex; gap: 0.3rem; }
+.nav-links { display: flex; gap: 0.15rem; flex-wrap: wrap; }
 .nav-links a {
   color: var(--text); font-size: 0.9rem; font-weight: 500;
-  padding: 0.45rem 0.9rem; border: 1px solid transparent;
+  padding: 0.45rem 0.7rem; border: 1px solid transparent;
   letter-spacing: 0.05em; position: relative;
   transition: all 0.2s;
+  white-space: nowrap;
+  writing-mode: horizontal-tb;
 }
 .nav-links a:hover, .nav-links a.active {
   color: var(--cyan-light);
@@ -702,3 +704,120 @@ input:focus, textarea:focus, select:focus {
 /* === 站点统计网格 === */
 .site-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
 @media (max-width: 768px) { .site-stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 1rem; } }
+
+/* ===================== 世界地图页 ===================== */
+.world-map-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1rem;
+}
+.world-map-title {
+  color: var(--gold);
+  font-family: Cinzel, serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.7rem;
+}
+.world-map {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border-cyan);
+  background: #0a0605;
+  line-height: 0;
+}
+.world-map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 6, 5, 0.82);
+  border: 1px solid var(--pin-color, var(--border-cyan));
+  padding: 0.15rem 0.45rem 0.15rem 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+.map-pin:hover { box-shadow: 0 0 10px var(--pin-color, var(--cyan)); }
+.map-pin.selected {
+  border-color: var(--gold);
+  box-shadow: 0 0 12px var(--gold);
+  z-index: 5;
+}
+.map-pin .pin-icon { font-size: 0.85rem; line-height: 1; }
+.map-pin .pin-label {
+  color: var(--text);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+.map-detail-card {
+  position: relative;
+  margin-top: 1rem;
+  background: var(--bg-card-2);
+  border: 1px solid var(--gold);
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 0 14px rgba(201, 162, 39, 0.15);
+}
+.map-detail-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 26px; height: 26px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.map-detail-close:hover { color: var(--gold); border-color: var(--gold); }
+.map-detail-btn {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border-cyan);
+  color: var(--cyan-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-right: 0.6rem;
+}
+.map-detail-btn:hover { border-color: var(--gold); color: var(--gold); }
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+.world-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--l-rare);
+  padding: 0.8rem 0.9rem;
+}
+.world-card-header { display: flex; align-items: center; gap: 0.6rem; }
+.world-card-icon { font-size: 1.3rem; line-height: 1; }
+.world-card-titles { min-width: 0; }
+.world-card-cn { color: var(--text-bright); font-size: 0.95rem; }
+.world-card-en { color: var(--muted); font-size: 0.72rem; }
+.world-card-meta { margin-top: 0.45rem; }
+.world-difficulty { font-size: 0.8rem; letter-spacing: 0.04em; }
+.controls { display: flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.85rem; }
+.controls select {
+  background: var(--bg-card-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.5rem;
+}
+@media (max-width: 768px) {
+  .map-pin .pin-label { display: none; }
+  .map-pin { padding: 0.2rem; }
+}

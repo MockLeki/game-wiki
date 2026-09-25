@@ -23,6 +23,7 @@ const SPECIES_ICON = {
   元素: '/images/minions/gray_63_dragon.png',
 }
 function getMinionIcon(m) {
+  if (m.image) return m.image
   if (m.name?.includes('黑龙') || m.name?.includes('Dragon')) return '/images/minions/gray_63_dragon.png'
   if (m.name?.includes('狼人') || m.name?.includes('Werewolf')) return '/images/minions/werewolf_icon.png'
   if (m.name?.includes('蜘蛛') || m.name?.includes('Spider')) return '/images/minions/spider_icon.png'
