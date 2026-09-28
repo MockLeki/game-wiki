@@ -117,25 +117,18 @@ export default function LeaderboardPanel({ compact = false }) {
           {loading && <div style={{textAlign:'center',padding:'2rem',color:'#6a7290'}}>加载中...</div>}
           {!loading && data && (
             <>
-              {/* 顶部"当前总在线" */}
+              {/* 顶部"正式版当前在线" */}
               <div style={{textAlign:'center',marginBottom:'1rem'}}>
                 <div style={{color:'#7fffe0',fontSize:'1rem',textShadow:'0 0 6px #00d9ff'}}>
-                  🔴 当前总在线：
+                  🔴 正式版当前在线：
                   <strong style={{fontSize:'1.4rem',color:'#ffd700',margin:'0 0.3rem'}}>
                     {data.players?.toLocaleString() || 0}
                   </strong>人
                 </div>
-                {(data.playersDemo != null || data.playersBeta != null) && (
-                  <div style={{fontSize:'0.78rem',color:'#a0a8c0',marginTop:'0.3rem'}}>
-                    Demo <strong style={{color:'#7fffe0'}}>{data.playersDemo || 0}</strong>
-                    <span style={{margin:'0 0.4rem',color:'#4a5470'}}>·</span>
-                    B测 <strong style={{color:'#7fffe0'}}>{data.playersBeta || 0}</strong>
-                  </div>
-                )}
               </div>
-              {/* 2 卡片（删 Wiki 注册玩家；正式版以后再做） */}
+              {/* 2 卡片 */}
               <div style={{display:'grid',gridTemplateColumns:'repeat(2, 1fr)',gap:'0.8rem'}}>
-                <StatCard label="Demo 当前在线" value={data.players || 0} unit="人" />
+                <StatCard label="正式版在线" value={data.players || 0} unit="人" />
                 <StatCard
                   label="完成至少 1 成就"
                   value={data.achievements?.length ? Math.round(data.achievements[0]?.percent || 0) : 0}
@@ -172,19 +165,12 @@ export default function LeaderboardPanel({ compact = false }) {
   // ============ 完整版：排行榜页用 ============
   return (
     <>
-      {/* 实时在线 */}
+      {/* 实时在线（正式版） */}
       {data?.players != null && (
         <div style={{textAlign:'center',marginBottom:'1rem'}}>
           <div style={{color:'#7fffe0',fontSize:'1.05rem',textShadow:'0 0 6px #00d9ff'}}>
-            🔴 当前总在线: <strong style={{fontSize:'1.4rem',color:'#ffd700'}}>{data.players.toLocaleString()}</strong> 人
+            🔴 正式版当前在线: <strong style={{fontSize:'1.4rem',color:'#ffd700'}}>{data.players.toLocaleString()}</strong> 人
           </div>
-          {(data.playersDemo != null || data.playersBeta != null) && (
-            <div style={{fontSize:'0.8rem',color:'#a0a8c0',marginTop:'0.4rem'}}>
-              Demo: <strong style={{color:'#7fffe0'}}>{data.playersDemo || 0}</strong> · 
-              B测: <strong style={{color:'#7fffe0'}}>{data.playersBeta || 0}</strong>
-              {data.totalPlaytime > 0 && <span style={{marginLeft:'0.8rem'}}>· 全球累计: <strong style={{color:'#7fffe0'}}>{data.totalPlaytime.toLocaleString()}</strong> 小时</span>}
-            </div>
-          )}
         </div>
       )}
 
@@ -206,7 +192,7 @@ export default function LeaderboardPanel({ compact = false }) {
         <div className="panel">
           <div className="panel-title">🌍 全球热度</div>
           <div style={{display:'grid',gridTemplateColumns:'repeat(2, 1fr)',gap:'1rem',padding:'1rem'}}>
-            <StatCard label="Demo 当前在线" value={data?.players || 0} unit="人" />
+            <StatCard label="正式版在线" value={data?.players || 0} unit="人" />
             <StatCard
               label="完成至少 1 成就"
               value={data?.achievements?.length ? Math.round(data.achievements[0]?.percent || 0) : 0}
