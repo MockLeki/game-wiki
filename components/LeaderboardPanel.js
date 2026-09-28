@@ -21,7 +21,8 @@ function StatCard({ label, value, unit }) {
 }
 
 function HourlyChart({ data }) {
-  const max = Math.max(...Object.values(data).map(Number), 1)
+  const safe = data && typeof data === 'object' ? data : {}
+  const max = Math.max(...Object.values(safe).map(Number), 1)
   return (
     <div style={{display:'flex',alignItems:'flex-end',gap:'2px',height:120}}>
       {Array.from({length:24}, (_, h) => {

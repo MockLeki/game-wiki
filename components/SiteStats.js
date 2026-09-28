@@ -23,7 +23,7 @@ export default function SiteStats() {
   if (!stats) return null
 
   const cells = [
-    { label: '总访问量', value: stats.total, highlight: true },
+    { label: '总访问量', value: stats.total || 0, highlight: true },
     { label: '今日访问', value: stats.today || 0 },
     { label: '昨日访问', value: stats.yesterday || 0 },
     { label: '最高单日', value: stats.peak || 0 },
