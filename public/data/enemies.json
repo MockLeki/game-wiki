@@ -1,0 +1,2456 @@
+[
+  {
+    "key": "DefiledKeepSuccubus",
+    "cn": "要塞魅魔",
+    "en": "Keep Succubus",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 250,
+      "BaseDamage": 10,
+      "BaseMoveSpeed": 1.7,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.5,
+      "BaseDodgeChance": 0.3,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DefiledKeepSuccubus",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "DefiledKeepSuccubusSpear",
+      "DefiledKeepSuccubusHeal"
+    ],
+    "loc": [
+      "DefiledKeep1",
+      "DefiledKeep2",
+      "DefiledKeep3",
+      "DefiledKeep4",
+      "DefiledKeep5",
+      "DefiledKeep6"
+    ]
+  },
+  {
+    "key": "DefiledKeepAxemaster",
+    "cn": "不死斧师",
+    "en": "Undead Axemaster",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 300,
+      "BaseDamage": 16,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DefiledKeepAxemaster",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "DefiledKeep2",
+      "DefiledKeep3",
+      "DefiledKeep4",
+      "DefiledKeep5",
+      "DefiledKeep6",
+      "DefiledKeep7"
+    ]
+  },
+  {
+    "key": "DefiledKeepOoze",
+    "cn": "污秽黏怪",
+    "en": "Defiled Ooze",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 350,
+      "BaseDamage": 14,
+      "BaseMoveSpeed": 1.4,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DefiledKeepOoze",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "DefiledKeep1",
+      "DefiledKeep3",
+      "DefiledKeep4",
+      "DefiledKeep5",
+      "DefiledKeep7"
+    ]
+  },
+  {
+    "key": "DefiledKeepReaper",
+    "cn": "白骨死神",
+    "en": "Bone Reaper",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6400,
+      "BaseDamage": 26,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_DefiledKeepReaper",
+        "chance": 0.0006000000284984708
+      }
+    ],
+    "abilities": [
+      "DefiledKeepReaperBasicAttack",
+      "DefiledKeepReaperStorm"
+    ],
+    "loc": [
+      "DefiledKeep4"
+    ]
+  },
+  {
+    "key": "DefiledKeepDragon",
+    "cn": "污秽古龙",
+    "en": "Defiled Wyrm",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6000,
+      "BaseDamage": 36,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_DefiledKeepDragon",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "DefiledKeepDragonMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryRing7",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "DefiledKeepDragonSpew"
+    ],
+    "loc": [
+      "DefiledKeep7"
+    ]
+  },
+  {
+    "key": "VolcanoMagmaGolem",
+    "cn": "熔岩魔像",
+    "en": "Magma Golem",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 700,
+      "BaseDamage": 18,
+      "BaseMoveSpeed": 1.3,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.6,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_VolcanoMagmaGolem",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Volcano4",
+      "Volcano5",
+      "Volcano6",
+      "Volcano7"
+    ]
+  },
+  {
+    "key": "DefiledKeepScarab",
+    "cn": "腐尸圣甲虫",
+    "en": "Carrion Scarab",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 250,
+      "BaseDamage": 14,
+      "BaseMoveSpeed": 1.85,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DefiledKeepScarab",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "DefiledKeepScarabBurst"
+    ],
+    "loc": [
+      "DefiledKeep2",
+      "DefiledKeep3",
+      "DefiledKeep4",
+      "DefiledKeep5",
+      "DefiledKeep6",
+      "DefiledKeep7"
+    ]
+  },
+  {
+    "key": "VolcanoDragon",
+    "cn": "焰牙",
+    "en": "Emberfang",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6000,
+      "BaseDamage": 30,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.6,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_VolcanoDragon",
+        "chance": 0.0003000000142492354
+      }
+    ],
+    "abilities": [
+      "VolcanoDragonFireball",
+      "VolcanoDragonMeteor"
+    ],
+    "loc": [
+      "Volcano4"
+    ]
+  },
+  {
+    "key": "OrcWarrior",
+    "cn": "兽人斗士",
+    "en": "Orc Fighter",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 130,
+      "BaseDamage": 12,
+      "BaseMoveSpeed": 1.8,
+      "BaseCritChance": 0,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_OrcWarrior",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Dungeon2",
+      "Dungeon3",
+      "Dungeon4",
+      "DungeonL1",
+      "DungeonL2",
+      "DungeonL3",
+      "MythicDungeon"
+    ]
+  },
+  {
+    "key": "TreasureForestDragon",
+    "cn": "梦幻森林小飞龙",
+    "en": "Dreamwood Drakeling",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 30,
+      "BaseDamage": 1,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.5,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "TreasureBarrens",
+      "TreasureForest",
+      "TreasureKeep"
+    ]
+  },
+  {
+    "key": "SnowHillFrostDragon",
+    "cn": "冰霜巨龙",
+    "en": "Frost Dragon",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 7000,
+      "BaseDamage": 26,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_SnowHillFrostDragon",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "SnowHillFrostDragonMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryShoulder3",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "SnowhillFrostDragonMelee",
+      "SnowhillFrostDragonIcebolt"
+    ],
+    "loc": [
+      "SnowHill7"
+    ]
+  },
+  {
+    "key": "Wolf",
+    "cn": "灰森林狼",
+    "en": "Grey Forest Wolf",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 30,
+      "BaseDamage": 4,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_wolf",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Forest1",
+      "Forest2",
+      "Forest3",
+      "Forest5",
+      "Forest6",
+      "Forest7"
+    ]
+  },
+  {
+    "key": "Dragon",
+    "cn": "Dragon",
+    "en": "Dragon",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 12000000,
+      "BaseDamage": 50,
+      "BaseMoveSpeed": 1,
+      "BaseCritChance": 0,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "TreasureChest2",
+        "chance": 1
+      }
+    ],
+    "abilities": [
+      "EnemyDragonBreathe",
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "MythicDungeon"
+    ]
+  },
+  {
+    "key": "RedDesertImp",
+    "cn": "焦土小恶魔",
+    "en": "Scorched Imp",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 140,
+      "BaseDamage": 10,
+      "BaseMoveSpeed": 1.4,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.65,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedDesertImp",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "ImpFireball"
+    ],
+    "loc": [
+      "RedDesert2",
+      "RedDesert3",
+      "RedDesert4",
+      "RedDesert5",
+      "RedDesert6",
+      "RedDesert7"
+    ]
+  },
+  {
+    "key": "TreasureBarrensDragonBoss",
+    "cn": "梦幻荒沙宝藏飞龙",
+    "en": "Dreamsand Treasure Drake",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 300,
+      "BaseDamage": 1,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.5,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "TreasureChest2",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest3",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest3",
+        "chance": 0.5
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.30000001192092896
+      },
+      {
+        "item": "GemAmethyst3",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemDiamond3",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemEmerald3",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemRuby3",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemSapphire3",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemTopaz3",
+        "chance": 0.699999988079071
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "TreasureBarrens"
+    ]
+  },
+  {
+    "key": "BeachCrabBoss",
+    "cn": "怒潮蟹王",
+    "en": "Tidewrath Crab King",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6000,
+      "BaseDamage": 36,
+      "BaseMoveSpeed": 1,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_BeachCrabBoss",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "BeachCrabBossMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryPants2",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "BeachCrabBossRevive"
+    ],
+    "loc": [
+      "Beach7"
+    ]
+  },
+  {
+    "key": "DesertEagle",
+    "cn": "沙丘之鹰",
+    "en": "Dune Eagle",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 300,
+      "BaseDamage": 18,
+      "BaseMoveSpeed": 2,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DesertEagle",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Desert1",
+      "Desert2",
+      "Desert3",
+      "Desert4",
+      "Desert5"
+    ]
+  },
+  {
+    "key": "BeachSerpent",
+    "cn": "咸鳞海蛇",
+    "en": "Brinescale Serpent",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 350,
+      "BaseDamage": 18,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_BeachSerpent",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "BeachSerpentSpit"
+    ],
+    "loc": [
+      "Beach5",
+      "Beach6",
+      "Beach7"
+    ]
+  },
+  {
+    "key": "RedForestHobgoblin",
+    "cn": "哥布林巨人",
+    "en": "Goblin Giant",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 7000,
+      "BaseDamage": 40,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 1,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_RedForestHobgoblin",
+        "chance": 0.0006000000284984708
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "HobgoblinBloodFrenzy"
+    ],
+    "loc": [
+      "RedForest4"
+    ]
+  },
+  {
+    "key": "SnowHillZombieWarrior",
+    "cn": "冰封僵尸战士",
+    "en": "Frozen Zombie Warrior",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 300,
+      "BaseDamage": 15,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.6,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_SnowHillZombieWarrior",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttackFrost"
+    ],
+    "loc": [
+      "SnowHill3",
+      "SnowHill4",
+      "SnowHill5",
+      "SnowHill6",
+      "SnowHill7"
+    ]
+  },
+  {
+    "key": "Boar",
+    "cn": "野猪",
+    "en": "Boar",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 50,
+      "BaseDamage": 6,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.05,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_Boar",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Forest3",
+      "Forest4",
+      "Forest5",
+      "Forest6",
+      "Forest7"
+    ]
+  },
+  {
+    "key": "TreasureKeepDragonBoss",
+    "cn": "梦幻宝库宝藏飞龙",
+    "en": "Dreamvault Treasure Drake",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 300,
+      "BaseDamage": 1,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.5,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "TreasureChest3",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest3",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest3",
+        "chance": 0.5
+      },
+      {
+        "item": "TreasureChest3",
+        "chance": 0.30000001192092896
+      },
+      {
+        "item": "GemAmethyst4",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemDiamond4",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemEmerald4",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemRuby4",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemSapphire4",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemTopaz4",
+        "chance": 0.699999988079071
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "TreasureKeep"
+    ]
+  },
+  {
+    "key": "SnowHillRockElemental",
+    "cn": "冰岩元素",
+    "en": "Ice Rock Elemental",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 500,
+      "BaseDamage": 20,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.6,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_SnowHillRockElemental",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "SnowhillRockElementalLightingAttk"
+    ],
+    "loc": [
+      "SnowHill6",
+      "SnowHill7"
+    ]
+  },
+  {
+    "key": "SkeletonArcher",
+    "cn": "骷髅弓箭手",
+    "en": "Skeleton Archer",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 90,
+      "BaseDamage": 7,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.83,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_SkeletonArcher",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyShootArrow"
+    ],
+    "loc": [
+      "Dungeon1",
+      "Dungeon2",
+      "Dungeon3",
+      "Dungeon4",
+      "DungeonL1",
+      "DungeonL2",
+      "DungeonL3"
+    ]
+  },
+  {
+    "key": "RedDesertRockGolem",
+    "cn": "红岩魔像",
+    "en": "Redrock Golem",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 280,
+      "BaseDamage": 24,
+      "BaseMoveSpeed": 1.4,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedDesertRockGolem",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "RedDesert5",
+      "RedDesert6",
+      "RedDesert7"
+    ]
+  },
+  {
+    "key": "BeachHermitCrab_BossMinion",
+    "cn": "怒潮寄居蟹",
+    "en": "Tidewrath Hermit Crab",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 200,
+      "BaseDamage": 8,
+      "BaseMoveSpeed": 1.2,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_BeachHermitCrab",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Beach7"
+    ]
+  },
+  {
+    "key": "DesertHarpy",
+    "cn": "沙暴鹰身女妖女王",
+    "en": "Sandstorm Harpy Queen",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 3200,
+      "BaseDamage": 18,
+      "BaseMoveSpeed": 2,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_DesertHarpy",
+        "chance": 0.0006000000284984708
+      }
+    ],
+    "abilities": [
+      "HarpyWindSpell"
+    ],
+    "loc": [
+      "Desert4"
+    ]
+  },
+  {
+    "key": "RedForestGiant",
+    "cn": "绯红守护者",
+    "en": "Crimson Guardian",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 260,
+      "BaseDamage": 16,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedForestGiant",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "RedForestGiantBoulderThrow",
+      "EnemyBigHeal"
+    ],
+    "loc": [
+      "RedForest3",
+      "RedForest4",
+      "RedForest5",
+      "RedForest6",
+      "RedForest7"
+    ]
+  },
+  {
+    "key": "Ogre",
+    "cn": "食人魔",
+    "en": "Ogre",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 4000,
+      "BaseDamage": 25,
+      "BaseMoveSpeed": 1,
+      "BaseCritChance": 0.2,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_Ogre",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "OgreBossMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryGloves2",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "DungeonL3"
+    ]
+  },
+  {
+    "key": "Stumplin",
+    "cn": "树桩怪",
+    "en": "Stumplin",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 120,
+      "BaseDamage": 13,
+      "BaseMoveSpeed": 1.25,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_Stumplin",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "CorruptForest4",
+      "CorruptForest5",
+      "CorruptForest6",
+      "CorruptForest7"
+    ]
+  },
+  {
+    "key": "ZombieWolf",
+    "cn": "变异之狼",
+    "en": "Mutating Wolf",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 160,
+      "BaseDamage": 15,
+      "BaseMoveSpeed": 1.3,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_ZombieWolf",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "CorruptForest1",
+      "CorruptForest2",
+      "CorruptForest3",
+      "CorruptForest4",
+      "CorruptForest5",
+      "CorruptForest6",
+      "CorruptForest7"
+    ]
+  },
+  {
+    "key": "RedDesertSatyr",
+    "cn": "荒原萨特",
+    "en": "Barrens Satyr",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 160,
+      "BaseDamage": 12,
+      "BaseMoveSpeed": 1.4,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.5,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedDesertSatyr",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "RedDesert1",
+      "RedDesert2",
+      "RedDesert3",
+      "RedDesert4",
+      "RedDesert5",
+      "RedDesert6",
+      "RedDesert7"
+    ]
+  },
+  {
+    "key": "DarkElfMage",
+    "cn": "黑暗精灵法师",
+    "en": "Dark Elf Mage",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 900,
+      "BaseDamage": 20,
+      "BaseMoveSpeed": 1.8,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "Rein_DarkElfMage",
+        "chance": 0.0006000000284984708
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      }
+    ],
+    "abilities": [
+      "ElfMageFireBall"
+    ],
+    "loc": [
+      "Dungeon4",
+      "MythicDungeon"
+    ]
+  },
+  {
+    "key": "DesertWasp",
+    "cn": "沙漠黄蜂",
+    "en": "Sand Wasp",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 120,
+      "BaseDamage": 14,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DesertWasp",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "WaspPoisonSpit"
+    ],
+    "loc": [
+      "Desert1",
+      "Desert2",
+      "Desert3",
+      "Desert6",
+      "Desert7"
+    ]
+  },
+  {
+    "key": "ForestSpiderKing",
+    "cn": "剧毒女王",
+    "en": "Venom Queen",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 4000,
+      "BaseDamage": 24,
+      "BaseMoveSpeed": 1.25,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_ForestSpiderKing",
+        "chance": 0.0006000000284984708
+      }
+    ],
+    "abilities": [
+      "SpiderPoisonSpit"
+    ],
+    "loc": [
+      "CorruptForest4"
+    ]
+  },
+  {
+    "key": "BeachHermitCrab",
+    "cn": "漂壳寄居蟹",
+    "en": "Driftshell Hermit Crab",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 160,
+      "BaseDamage": 10,
+      "BaseMoveSpeed": 1.2,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_BeachHermitCrab",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Beach1",
+      "Beach2",
+      "Beach3"
+    ]
+  },
+  {
+    "key": "SnowHillWhelp",
+    "cn": "冰霜幼龙",
+    "en": "Frost Whelp",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 350,
+      "BaseDamage": 14,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_SnowHillWhelp",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "SnowhillWhelpSpit"
+    ],
+    "loc": [
+      "SnowHill1",
+      "SnowHill2",
+      "SnowHill3",
+      "SnowHill4",
+      "SnowHill5",
+      "SnowHill6",
+      "SnowHill7"
+    ]
+  },
+  {
+    "key": "RedForestTiger",
+    "cn": "山虎",
+    "en": "Mountain Tiger",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 220,
+      "BaseDamage": 16,
+      "BaseMoveSpeed": 3,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedForestTiger",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "RedForest1",
+      "RedForest2",
+      "RedForest3",
+      "RedForest4",
+      "RedForest5",
+      "RedForest6"
+    ]
+  },
+  {
+    "key": "RedForestBear",
+    "cn": "灰熊",
+    "en": "Grizzly Bear",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 280,
+      "BaseDamage": 14,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedForestBear",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "RedForest1",
+      "RedForest2",
+      "RedForest3",
+      "RedForest4",
+      "RedForest5",
+      "RedForest6"
+    ]
+  },
+  {
+    "key": "SkeletonWarrior",
+    "cn": "骷髅战士",
+    "en": "Skeleton Warrior",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 50,
+      "BaseDamage": 5,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_SkeletonWarrior",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "MythicDungeon"
+    ]
+  },
+  {
+    "key": "BeachTurtleBoss",
+    "cn": "远古守甲巨龟",
+    "en": "Ancient Shellwarden",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 7500,
+      "BaseDamage": 32,
+      "BaseMoveSpeed": 0.8,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.4,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_BeachTurtleBoss",
+        "chance": 0.0006000000284984708
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "BeachTurtleBossSpit"
+    ],
+    "loc": [
+      "Beach4"
+    ]
+  },
+  {
+    "key": "Raptor",
+    "cn": "迅猛龙",
+    "en": "Raptor",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 600,
+      "BaseDamage": 18,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_Raptor",
+        "chance": 0.0006000000284984708
+      },
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "RaptorBleedAttack"
+    ],
+    "loc": [
+      "Forest4"
+    ]
+  },
+  {
+    "key": "RedDesertAirWarlord",
+    "cn": "红岩领主",
+    "en": "Redrock Lord",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6000,
+      "BaseDamage": 36,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 1,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedDesertAirWarlord",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "RedDesertAirWarlordMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryRing5",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "AirWarlordDamageUp"
+    ],
+    "loc": [
+      "RedDesert7"
+    ]
+  },
+  {
+    "key": "RedForestDragon",
+    "cn": "绯红谷之主",
+    "en": "Lord of the Crimson Vale",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6500,
+      "BaseDamage": 36,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedForestDragon",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "RedForestDragonMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryChestArmor5",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "RedForestDragonBasicAttack",
+      "RedForestDragonEarthAbility",
+      "RedForestDragonDashAbility"
+    ],
+    "loc": [
+      "RedForest7"
+    ]
+  },
+  {
+    "key": "Spider",
+    "cn": "黑蜘蛛",
+    "en": "Black Spider",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 15,
+      "BaseDamage": 3,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.05,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_Spider",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Forest1",
+      "Forest2",
+      "Forest3",
+      "Forest4",
+      "Forest5"
+    ]
+  },
+  {
+    "key": "DesertManticoraBoss",
+    "cn": "恐怖沙漠蝎狮",
+    "en": "Dread Sand Manticore",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6000,
+      "BaseDamage": 14,
+      "BaseMoveSpeed": 2.2,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DesertManticoraBoss",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "DesertManticoraBossMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryBelt1",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "ManticoraPoisonSting",
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Desert7"
+    ]
+  },
+  {
+    "key": "BeachNaga",
+    "cn": "浅滩娜迦",
+    "en": "Shoal Naga",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 280,
+      "BaseDamage": 16,
+      "BaseMoveSpeed": 1.4,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_BeachNaga",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Beach1",
+      "Beach2",
+      "Beach3",
+      "Beach4",
+      "Beach6",
+      "Beach7"
+    ]
+  },
+  {
+    "key": "TreasureForestDragonBoss",
+    "cn": "梦幻森林宝藏飞龙",
+    "en": "Dreamwood Treasure Drake",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 300,
+      "BaseDamage": 1,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.5,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "TreasureChest1",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.5
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.30000001192092896
+      },
+      {
+        "item": "GemAmethyst2",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemDiamond2",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemEmerald2",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemRuby2",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemSapphire2",
+        "chance": 0.699999988079071
+      },
+      {
+        "item": "GemTopaz2",
+        "chance": 0.699999988079071
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "TreasureForest"
+    ]
+  },
+  {
+    "key": "BeachSquid",
+    "cn": "礁岩鱿鱼",
+    "en": "Reef Squid",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 200,
+      "BaseDamage": 15,
+      "BaseMoveSpeed": 1.2,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_BeachSquid",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "BeachSquidExplode"
+    ],
+    "loc": [
+      "Beach3",
+      "Beach4",
+      "Beach5",
+      "Beach6",
+      "Beach7"
+    ]
+  },
+  {
+    "key": "GoblinWarrior",
+    "cn": "哥布林战士",
+    "en": "Goblin Warrior",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 70,
+      "BaseDamage": 6,
+      "BaseMoveSpeed": 2,
+      "BaseCritChance": 0,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_GoblinWarrior",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Dungeon1",
+      "Dungeon2",
+      "Dungeon3",
+      "Dungeon4",
+      "DungeonL3",
+      "MythicDungeon"
+    ]
+  },
+  {
+    "key": "BigTreant",
+    "cn": "远古橡树树人",
+    "en": "Ancient Oak Treant",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 6000,
+      "BaseDamage": 30,
+      "BaseMoveSpeed": 1,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_BigTreant",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "BigTreantMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "LegendaryBelt2",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "EnemyBigHeal"
+    ],
+    "loc": [
+      "CorruptForest7"
+    ]
+  },
+  {
+    "key": "Werewolf",
+    "cn": "血月狼人",
+    "en": "Bloodmoon Werewolf",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 900,
+      "BaseDamage": 21,
+      "BaseMoveSpeed": 2,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_Werewolf",
+        "chance": 0.00039999998989515007
+      },
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "LegendaryBoots3",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "EnemyHowl"
+    ],
+    "loc": [
+      "Forest7"
+    ]
+  },
+  {
+    "key": "DesertKoboldWarrior",
+    "cn": "沙漠狗头人战士",
+    "en": "Sand Kobold Warrior",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 300,
+      "BaseDamage": 10,
+      "BaseMoveSpeed": 1.3,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DesertKoboldWarrior",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Desert4",
+      "Desert5",
+      "Desert6",
+      "Desert7"
+    ]
+  },
+  {
+    "key": "PoisonSpider",
+    "cn": "毒液蜘蛛",
+    "en": "Venomous Spider",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 100,
+      "BaseDamage": 11,
+      "BaseMoveSpeed": 1.25,
+      "BaseCritChance": 0.05,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.67,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_PoisonSpider",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "SpiderPoisonSpit"
+    ],
+    "loc": [
+      "CorruptForest1",
+      "CorruptForest2",
+      "CorruptForest3",
+      "CorruptForest4",
+      "CorruptForest5"
+    ]
+  },
+  {
+    "key": "TreasureForestDragon2",
+    "cn": "梦幻森林小飞龙",
+    "en": "Dreamwood Drakeling",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 25,
+      "BaseDamage": 1,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.5,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "TreasureBarrens",
+      "TreasureForest",
+      "TreasureKeep"
+    ]
+  },
+  {
+    "key": "RedDesertCrocodile",
+    "cn": "荒原鳄鱼",
+    "en": "Barrens Crocodile",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 200,
+      "BaseDamage": 18,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0.15,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedDesertCrocodile",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "RedDesert1",
+      "RedDesert2",
+      "RedDesert3",
+      "RedDesert4",
+      "RedDesert5",
+      "RedDesert6"
+    ]
+  },
+  {
+    "key": "SnowHillIceHound",
+    "cn": "冰霜猎犬",
+    "en": "Ice Hound",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 5700,
+      "BaseDamage": 20,
+      "BaseMoveSpeed": 1.4,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_SnowHillIceHound",
+        "chance": 0.0006000000284984708
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "SnowhillIceHoundLightningAttk",
+      "SnowhillIceHoundCharge"
+    ],
+    "loc": [
+      "SnowHill4"
+    ]
+  },
+  {
+    "key": "RedForestFaeDragon",
+    "cn": "精灵龙",
+    "en": "Fae Dragon",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 130,
+      "BaseDamage": 10,
+      "BaseMoveSpeed": 1.4,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_RedForestFaeDragon",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "FaeDragonArcaneBall"
+    ],
+    "loc": [
+      "RedForest5",
+      "RedForest6",
+      "RedForest7"
+    ]
+  },
+  {
+    "key": "SnowHillSlime",
+    "cn": "冰霜史莱姆",
+    "en": "Frost Slime",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 160,
+      "BaseDamage": 12,
+      "BaseMoveSpeed": 1.2,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_SnowHillSlime",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "SnowHill1",
+      "SnowHill2",
+      "SnowHill3",
+      "SnowHill4"
+    ]
+  },
+  {
+    "key": "DesertKoboldThief",
+    "cn": "沙漠狗头人盗贼",
+    "en": "Sand Kobold Thief",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 150,
+      "BaseDamage": 14,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_DesertKoboldThief",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Desert2",
+      "Desert3",
+      "Desert4",
+      "Desert5",
+      "Desert6",
+      "Desert7"
+    ]
+  },
+  {
+    "key": "RedDesertSerparmat",
+    "cn": "吞噬者瑟帕玛特",
+    "en": "Serparmat the Devourer",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 3000,
+      "BaseDamage": 30,
+      "BaseMoveSpeed": 2,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0.2,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Skull",
+        "chance": 1
+      },
+      {
+        "item": "SkullNightmare",
+        "chance": 1
+      },
+      {
+        "item": "SkullInferno",
+        "chance": 1
+      },
+      {
+        "item": "TreasureChest1",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_RedDesertSerparmat",
+        "chance": 0.0006000000284984708
+      }
+    ],
+    "abilities": [
+      "SeparmatBleedAttack"
+    ],
+    "loc": [
+      "RedDesert4"
+    ]
+  },
+  {
+    "key": "VolcanoHellguard",
+    "cn": "炼狱卫士",
+    "en": "Hellguard",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 350,
+      "BaseDamage": 20,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_VolcanoHellguard",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Volcano1",
+      "Volcano2",
+      "Volcano3",
+      "Volcano4"
+    ]
+  },
+  {
+    "key": "VolcanoDemonLord",
+    "cn": "灰烬之主",
+    "en": "Lord of the Cinder",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 10000,
+      "BaseDamage": 35,
+      "BaseMoveSpeed": 1.6,
+      "BaseCritChance": 0.15,
+      "BaseCritDamage": 2,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "TreasureChest2",
+        "chance": 0.05000000074505806
+      },
+      {
+        "item": "Rein_VolcanoDemonLord",
+        "chance": 0.00019999999494757503
+      },
+      {
+        "item": "VolcanoDemonLordMat",
+        "chance": 0.20000000298023224
+      },
+      {
+        "item": "DivineBack2",
+        "chance": 1.9999999494757503e-05
+      },
+      {
+        "item": "LegendaryNeck1",
+        "chance": 0.004999999888241291
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack",
+      "VolcanoDemonLordWingSlam"
+    ],
+    "loc": [
+      "Volcano7"
+    ]
+  },
+  {
+    "key": "VolcanoEmberBat",
+    "cn": "余烬蝠",
+    "en": "Ember Bat",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 200,
+      "BaseDamage": 15,
+      "BaseMoveSpeed": 1.9,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 1.25,
+      "BaseDodgeChance": 0.2,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_VolcanoEmberBat",
+        "chance": 0.0024999999441206455
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttack"
+    ],
+    "loc": [
+      "Volcano3",
+      "Volcano4",
+      "Volcano5",
+      "Volcano6",
+      "Volcano7"
+    ]
+  },
+  {
+    "key": "VolcanoCinderlash",
+    "cn": "焰鞭魔",
+    "en": "Cinderlash",
+    "type": "Normal",
+    "boss": false,
+    "stats": {
+      "BaseMaxHealth": 200,
+      "BaseDamage": 18,
+      "BaseMoveSpeed": 1.5,
+      "BaseCritChance": 0.1,
+      "BaseCritDamage": 1.5,
+      "BaseAttackSpeed": 0.75,
+      "BaseDodgeChance": 0,
+      "BaseMaxMana": 100
+    },
+    "drops": [
+      {
+        "item": "Rein_VolcanoCinderlash",
+        "chance": 0.0020000000949949026
+      }
+    ],
+    "abilities": [
+      "EnemyBasicAttackLongerRangeFIre"
+    ],
+    "loc": [
+      "Volcano1",
+      "Volcano2",
+      "Volcano3",
+      "Volcano4",
+      "Volcano5",
+      "Volcano6",
+      "Volcano7"
+    ]
+  }
+]

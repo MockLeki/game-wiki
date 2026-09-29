@@ -1,0 +1,622 @@
+[
+  {
+    "key": "GemUpgradeAmethyst2",
+    "cn": "碎裂的紫水晶泪滴",
+    "type": "Gem",
+    "output": "GemAmethyst2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemAmethyst1",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeAmethyst3",
+    "cn": "粗砺的紫水晶方块",
+    "type": "Gem",
+    "output": "GemAmethyst3",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemAmethyst2",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeAmethyst4",
+    "cn": "抛光的紫水晶菱形",
+    "type": "Gem",
+    "output": "GemAmethyst4",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemAmethyst3",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeAmethyst5",
+    "cn": "无瑕的紫水晶六边形",
+    "type": "Gem",
+    "output": "GemAmethyst5",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemAmethyst4",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeAmethyst6",
+    "cn": "璀璨的紫水晶八边形",
+    "type": "Gem",
+    "output": "GemAmethyst6",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemAmethyst5",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeDiamond2",
+    "cn": "碎裂的钻石泪滴",
+    "type": "Gem",
+    "output": "GemDiamond2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemDiamond1",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeDiamond3",
+    "cn": "粗砺的钻石方块",
+    "type": "Gem",
+    "output": "GemDiamond3",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemDiamond2",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeDiamond4",
+    "cn": "抛光的钻石菱形",
+    "type": "Gem",
+    "output": "GemDiamond4",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemDiamond3",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeDiamond5",
+    "cn": "无瑕的钻石六边形",
+    "type": "Gem",
+    "output": "GemDiamond5",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemDiamond4",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeDiamond6",
+    "cn": "璀璨的钻石八边形",
+    "type": "Gem",
+    "output": "GemDiamond6",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemDiamond5",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeEmerald2",
+    "cn": "碎裂的祖母绿泪滴",
+    "type": "Gem",
+    "output": "GemEmerald2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemEmerald1",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeEmerald3",
+    "cn": "粗砺的祖母绿方块",
+    "type": "Gem",
+    "output": "GemEmerald3",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemEmerald2",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeEmerald4",
+    "cn": "抛光的祖母绿菱形",
+    "type": "Gem",
+    "output": "GemEmerald4",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemEmerald3",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeEmerald5",
+    "cn": "无瑕的祖母绿六边形",
+    "type": "Gem",
+    "output": "GemEmerald5",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemEmerald4",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeEmerald6",
+    "cn": "璀璨的祖母绿八边形",
+    "type": "Gem",
+    "output": "GemEmerald6",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemEmerald5",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeRuby2",
+    "cn": "碎裂的红宝石泪滴",
+    "type": "Gem",
+    "output": "GemRuby2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemRuby1",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeRuby3",
+    "cn": "粗砺的红宝石方块",
+    "type": "Gem",
+    "output": "GemRuby3",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemRuby2",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeRuby4",
+    "cn": "抛光的红宝石菱形",
+    "type": "Gem",
+    "output": "GemRuby4",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemRuby3",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeRuby5",
+    "cn": "无瑕的红宝石六边形",
+    "type": "Gem",
+    "output": "GemRuby5",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemRuby4",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeRuby6",
+    "cn": "璀璨的红宝石八边形",
+    "type": "Gem",
+    "output": "GemRuby6",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemRuby5",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeSapphire2",
+    "cn": "碎裂的蓝宝石泪滴",
+    "type": "Gem",
+    "output": "GemSapphire2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemSapphire1",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeSapphire3",
+    "cn": "粗砺的蓝宝石方块",
+    "type": "Gem",
+    "output": "GemSapphire3",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemSapphire2",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeSapphire4",
+    "cn": "抛光的蓝宝石菱形",
+    "type": "Gem",
+    "output": "GemSapphire4",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemSapphire3",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeSapphire5",
+    "cn": "无瑕的蓝宝石六边形",
+    "type": "Gem",
+    "output": "GemSapphire5",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemSapphire4",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeSapphire6",
+    "cn": "璀璨的蓝宝石八边形",
+    "type": "Gem",
+    "output": "GemSapphire6",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemSapphire5",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeTopaz2",
+    "cn": "碎裂的黄玉泪滴",
+    "type": "Gem",
+    "output": "GemTopaz2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemTopaz1",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeTopaz3",
+    "cn": "粗砺的黄玉方块",
+    "type": "Gem",
+    "output": "GemTopaz3",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemTopaz2",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeTopaz4",
+    "cn": "抛光的黄玉菱形",
+    "type": "Gem",
+    "output": "GemTopaz4",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemTopaz3",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeTopaz5",
+    "cn": "无瑕的黄玉六边形",
+    "type": "Gem",
+    "output": "GemTopaz5",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemTopaz4",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "GemUpgradeTopaz6",
+    "cn": "璀璨的黄玉八边形",
+    "type": "Gem",
+    "output": "GemTopaz6",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "GemTopaz5",
+        "amt": 10
+      }
+    ]
+  },
+  {
+    "key": "ArmorPotionLv1",
+    "cn": "铁木合剂",
+    "type": "Consumable",
+    "output": "ArmorPotion1",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant3",
+        "amt": 6
+      },
+      {
+        "item": "BigTreantMat",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "AttackSpeedPotionLv1",
+    "cn": "迅捷合剂",
+    "type": "Consumable",
+    "output": "AttackSpeedPotion1",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant2",
+        "amt": 3
+      },
+      {
+        "item": "Skull",
+        "amt": 1
+      }
+    ]
+  },
+  {
+    "key": "AttackSpeedPotionLv2",
+    "cn": "高级迅捷合剂",
+    "type": "Consumable",
+    "output": "AttackSpeedPotion2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant4",
+        "amt": 6
+      },
+      {
+        "item": "OgreBossMat",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "CinderbloodPotionRecipe",
+    "cn": "高级活力合剂",
+    "type": "Consumable",
+    "output": "CinderbloodPotion",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant6",
+        "amt": 6
+      },
+      {
+        "item": "VolcanoDemonLordMat",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "CrimsonHuntPotionRecipe",
+    "cn": "高级杀戮合剂",
+    "type": "Consumable",
+    "output": "CrimsonHuntPotion",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant4",
+        "amt": 6
+      },
+      {
+        "item": "RedForestDragonMat",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "CritPotionLv1",
+    "cn": "残酷合剂",
+    "type": "Consumable",
+    "output": "CritPotion1",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant2",
+        "amt": 3
+      },
+      {
+        "item": "Skull",
+        "amt": 1
+      }
+    ]
+  },
+  {
+    "key": "CritPotionLv2",
+    "cn": "高级残酷合剂",
+    "type": "Consumable",
+    "output": "CritPotion2",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant4",
+        "amt": 6
+      },
+      {
+        "item": "DesertManticoraBossMat",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "DodgePotionLv1",
+    "cn": "疾风合剂",
+    "type": "Consumable",
+    "output": "DodgePotion1",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant1",
+        "amt": 10
+      },
+      {
+        "item": "Skull",
+        "amt": 1
+      }
+    ]
+  },
+  {
+    "key": "ExpPotionLv1",
+    "cn": "经验药水",
+    "type": "Consumable",
+    "output": "ExpPotion1",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant1",
+        "amt": 15
+      }
+    ]
+  },
+  {
+    "key": "FrostmindPotionRecipe",
+    "cn": "高级专注合剂",
+    "type": "Consumable",
+    "output": "FrostmindPotion",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant2",
+        "amt": 6
+      },
+      {
+        "item": "SnowHillFrostDragonMat",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "GoldPotionLv1",
+    "cn": "黄金药水",
+    "type": "Consumable",
+    "output": "GoldPotion1",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant2",
+        "amt": 3
+      },
+      {
+        "item": "ore2",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "MovementPotiontLv1",
+    "cn": "速度药水",
+    "type": "Consumable",
+    "output": "MovementPotion1",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant2",
+        "amt": 4
+      }
+    ]
+  },
+  {
+    "key": "StormheartPotionRecipe",
+    "cn": "高级高效合剂",
+    "type": "Consumable",
+    "output": "StormheartPotion",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant5",
+        "amt": 6
+      },
+      {
+        "item": "RedDesertAirWarlordMat",
+        "amt": 2
+      }
+    ]
+  },
+  {
+    "key": "WyrmwardPotionRecipe",
+    "cn": "高级抗性合剂",
+    "type": "Consumable",
+    "output": "WyrmwardPotion",
+    "outQty": 1,
+    "ing": [
+      {
+        "item": "plant3",
+        "amt": 6
+      },
+      {
+        "item": "DefiledKeepDragonMat",
+        "amt": 2
+      }
+    ]
+  }
+]

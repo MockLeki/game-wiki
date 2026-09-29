@@ -1,0 +1,682 @@
+[
+  {
+    "key": "LifeSkill 1",
+    "cn": "金币发现 I",
+    "en": "Gold Find I",
+    "desc": "金币发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill"
+  },
+  {
+    "key": "LifeSkill 10",
+    "cn": "金币发现 I",
+    "en": "Gold Find I",
+    "desc": "金币发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 1"
+  },
+  {
+    "key": "LifeSkill 11",
+    "cn": "自动补充",
+    "en": "Auto Refill",
+    "desc": "返回城镇或从死亡中复活后自动补充药水使用次数。",
+    "max": 1,
+    "prereq": "LifeSkill 3"
+  },
+  {
+    "key": "LifeSkill 12",
+    "cn": "战斗药水自动使用槽",
+    "en": "Combat Potion Auto-Use Slot",
+    "desc": "解锁一个战斗药水槽，每当其增益效果未生效时，在战斗中自动使用所分配的药水。",
+    "max": 1,
+    "prereq": "LifeSkill 3"
+  },
+  {
+    "key": "LifeSkill 13",
+    "cn": "储物页",
+    "en": "Storage Page",
+    "desc": "解锁一个额外的储物页。",
+    "max": 1,
+    "prereq": "LifeSkill 6"
+  },
+  {
+    "key": "LifeSkill 14",
+    "cn": "材料发现 I",
+    "en": "Material Find I",
+    "desc": "从资源点采集到的材料提升 16%",
+    "max": 1,
+    "prereq": "LifeSkill 5"
+  },
+  {
+    "key": "LifeSkill 15",
+    "cn": "物品发现 I",
+    "en": "Item Find I",
+    "desc": "物品发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 5"
+  },
+  {
+    "key": "LifeSkill 16",
+    "cn": "金币发现 I",
+    "en": "Gold Find I",
+    "desc": "金币发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 5"
+  },
+  {
+    "key": "LifeSkill 17",
+    "cn": "药水发现 II",
+    "en": "Potion Find II",
+    "desc": "药水发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 13"
+  },
+  {
+    "key": "LifeSkill 18",
+    "cn": "药水发现 I",
+    "en": "Potion Find I",
+    "desc": "药水发现提升 3%",
+    "max": 1,
+    "prereq": "LifeSkill 13"
+  },
+  {
+    "key": "LifeSkill 19",
+    "cn": "物品发现 I",
+    "en": "Item Find I",
+    "desc": "物品发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 13"
+  },
+  {
+    "key": "LifeSkill 2",
+    "cn": "物品发现 I",
+    "en": "Item Find I",
+    "desc": "物品发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill"
+  },
+  {
+    "key": "LifeSkill 20",
+    "cn": "金币发现 I",
+    "en": "Gold Find I",
+    "desc": "金币发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 12"
+  },
+  {
+    "key": "LifeSkill 21",
+    "cn": "材料发现 I",
+    "en": "Material Find I",
+    "desc": "从资源点采集到的材料提升 16%",
+    "max": 1,
+    "prereq": "LifeSkill 12"
+  },
+  {
+    "key": "LifeSkill 22",
+    "cn": "载重 I",
+    "en": "Capacity I",
+    "desc": "载重提升 1",
+    "max": 1,
+    "prereq": "LifeSkill 12"
+  },
+  {
+    "key": "LifeSkill 23",
+    "cn": "药水发现 I",
+    "en": "Potion Find I",
+    "desc": "药水发现提升 3%",
+    "max": 1,
+    "prereq": "LifeSkill 11"
+  },
+  {
+    "key": "LifeSkill 24",
+    "cn": "物品发现 I",
+    "en": "Item Find I",
+    "desc": "物品发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 11"
+  },
+  {
+    "key": "LifeSkill 25",
+    "cn": "复活冷却缩减 I",
+    "en": "Revive Cooldown Reduction I",
+    "desc": "自动复活冷却时间缩短 1s。",
+    "max": 1,
+    "prereq": "LifeSkill 11"
+  },
+  {
+    "key": "LifeSkill 26",
+    "cn": "物品发现 II",
+    "en": "Item Find II",
+    "desc": "物品发现提升 20%",
+    "max": 1,
+    "prereq": "LifeSkill 7"
+  },
+  {
+    "key": "LifeSkill 27",
+    "cn": "金币发现 I",
+    "en": "Gold Find I",
+    "desc": "金币发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 7"
+  },
+  {
+    "key": "LifeSkill 28",
+    "cn": "经验获取 I",
+    "en": "XP Gain I",
+    "desc": "经验获取提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 7"
+  },
+  {
+    "key": "LifeSkill 29",
+    "cn": "垂钓直觉 I",
+    "en": "Angler's Instinct I",
+    "desc": "钓鱼成功率提升 25%。",
+    "max": 1,
+    "prereq": "LifeSkill 8"
+  },
+  {
+    "key": "LifeSkill 3",
+    "cn": "复活冷却缩减 I",
+    "en": "Revive Cooldown Reduction I",
+    "desc": "自动复活冷却时间缩短 1s。",
+    "max": 1,
+    "prereq": "LifeSkill"
+  },
+  {
+    "key": "LifeSkill 30",
+    "cn": "迅捷抛竿 I",
+    "en": "Swift Cast I",
+    "desc": "每次垂钓所需时间缩短 10%。",
+    "max": 1,
+    "prereq": "LifeSkill 8"
+  },
+  {
+    "key": "LifeSkill 31",
+    "cn": "灵魂圣匣 II",
+    "en": "Soul Reliquary II",
+    "desc": "灵魂碎片携带上限提升 200。",
+    "max": 1,
+    "prereq": "LifeSkill 8"
+  },
+  {
+    "key": "LifeSkill 32",
+    "cn": "材料发现 I",
+    "en": "Material Find I",
+    "desc": "从资源点采集到的材料提升 16%",
+    "max": 1,
+    "prereq": "LifeSkill 10"
+  },
+  {
+    "key": "LifeSkill 33",
+    "cn": "远征补给 I",
+    "en": "Expedition Supplies I",
+    "desc": "离线奖励时长上限提升 2 小时。",
+    "max": 1,
+    "prereq": "LifeSkill 10"
+  },
+  {
+    "key": "LifeSkill 34",
+    "cn": "经验获取 I",
+    "en": "XP Gain I",
+    "desc": "经验获取提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 10"
+  },
+  {
+    "key": "LifeSkill 35",
+    "cn": "自动填充背包",
+    "en": "Auto-Fill Inventory",
+    "desc": "马车已满时，新收集的战利品会在背包有空间时送入背包。",
+    "max": 1,
+    "prereq": "LifeSkill 9"
+  },
+  {
+    "key": "LifeSkill 36",
+    "cn": "物品发现 I",
+    "en": "Item Find I",
+    "desc": "物品发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 9"
+  },
+  {
+    "key": "LifeSkill 37",
+    "cn": "载重 I",
+    "en": "Capacity I",
+    "desc": "载重提升 1",
+    "max": 1,
+    "prereq": "LifeSkill 9"
+  },
+  {
+    "key": "LifeSkill 38",
+    "cn": "载重 I",
+    "en": "Capacity I",
+    "desc": "载重提升 1",
+    "max": 1,
+    "prereq": "LifeSkill 37"
+  },
+  {
+    "key": "LifeSkill 39",
+    "cn": "药水发现 II",
+    "en": "Potion Find II",
+    "desc": "药水发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 36"
+  },
+  {
+    "key": "LifeSkill 4",
+    "cn": "经验获取 I",
+    "en": "XP Gain I",
+    "desc": "经验获取提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill"
+  },
+  {
+    "key": "LifeSkill 40",
+    "cn": "金币发现 I",
+    "en": "Gold Find I",
+    "desc": "金币发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 35"
+  },
+  {
+    "key": "LifeSkill 41",
+    "cn": "经验获取 I",
+    "en": "XP Gain I",
+    "desc": "经验获取提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 34"
+  },
+  {
+    "key": "LifeSkill 42",
+    "cn": "远征补给 I",
+    "en": "Expedition Supplies I",
+    "desc": "离线奖励时长上限提升 2 小时。",
+    "max": 1,
+    "prereq": "LifeSkill 33"
+  },
+  {
+    "key": "LifeSkill 43",
+    "cn": "材料发现 II",
+    "en": "Material Find II",
+    "desc": "从资源点采集到的材料提升 30%",
+    "max": 1,
+    "prereq": "LifeSkill 32"
+  },
+  {
+    "key": "LifeSkill 44",
+    "cn": "灵魂圣匣 III",
+    "en": "Soul Reliquary III",
+    "desc": "灵魂碎片携带上限提升 300。",
+    "max": 1,
+    "prereq": "LifeSkill 31"
+  },
+  {
+    "key": "LifeSkill 45",
+    "cn": "迅捷抛竿 II",
+    "en": "Swift Cast II",
+    "desc": "每次垂钓所需时间缩短 15%。",
+    "max": 1,
+    "prereq": "LifeSkill 30"
+  },
+  {
+    "key": "LifeSkill 46",
+    "cn": "垂钓直觉 II",
+    "en": "Angler's Instinct II",
+    "desc": "钓鱼成功率提升 35%。",
+    "max": 1,
+    "prereq": "LifeSkill 29"
+  },
+  {
+    "key": "LifeSkill 47",
+    "cn": "载重 I",
+    "en": "Capacity I",
+    "desc": "载重提升 1",
+    "max": 1,
+    "prereq": "LifeSkill 26"
+  },
+  {
+    "key": "LifeSkill 48",
+    "cn": "金币发现 II",
+    "en": "Gold Find II",
+    "desc": "金币发现提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 27"
+  },
+  {
+    "key": "LifeSkill 49",
+    "cn": "经验获取 I",
+    "en": "XP Gain I",
+    "desc": "经验获取提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 28"
+  },
+  {
+    "key": "LifeSkill 5",
+    "cn": "远征营地",
+    "en": "Expedition Camp",
+    "desc": "你不在时，你的角色会继续狩猎。金币与经验将根据你已解锁的最高区域持续累积，并在你下次进入城镇时领取。",
+    "max": 1,
+    "prereq": "LifeSkill 4"
+  },
+  {
+    "key": "LifeSkill 50",
+    "cn": "复活冷却缩减 II",
+    "en": "Revive Cooldown Reduction II",
+    "desc": "自动复活冷却时间缩短 3s。",
+    "max": 1,
+    "prereq": "LifeSkill 25"
+  },
+  {
+    "key": "LifeSkill 51",
+    "cn": "经验获取 I",
+    "en": "XP Gain I",
+    "desc": "经验获取提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 24"
+  },
+  {
+    "key": "LifeSkill 52",
+    "cn": "药水发现 I",
+    "en": "Potion Find I",
+    "desc": "药水发现提升 3%",
+    "max": 1,
+    "prereq": "LifeSkill 23"
+  },
+  {
+    "key": "LifeSkill 53",
+    "cn": "材料发现 II",
+    "en": "Material Find II",
+    "desc": "从资源点采集到的材料提升 30%",
+    "max": 1,
+    "prereq": "LifeSkill 21"
+  },
+  {
+    "key": "LifeSkill 54",
+    "cn": "载重 II",
+    "en": "Capacity II",
+    "desc": "载重提升 2",
+    "max": 1,
+    "prereq": "LifeSkill 22"
+  },
+  {
+    "key": "LifeSkill 55",
+    "cn": "材料发现 I",
+    "en": "Material Find I",
+    "desc": "从资源点采集到的材料提升 16%",
+    "max": 1,
+    "prereq": "LifeSkill 20"
+  },
+  {
+    "key": "LifeSkill 56",
+    "cn": "复活冷却缩减 I",
+    "en": "Revive Cooldown Reduction I",
+    "desc": "自动复活冷却时间缩短 1s。",
+    "max": 1,
+    "prereq": "LifeSkill 19"
+  },
+  {
+    "key": "LifeSkill 57",
+    "cn": "药水发现 I",
+    "en": "Potion Find I",
+    "desc": "药水发现提升 3%",
+    "max": 1,
+    "prereq": "LifeSkill 18"
+  },
+  {
+    "key": "LifeSkill 58",
+    "cn": "装备自动分解",
+    "en": "Equipment Auto-Salvage",
+    "desc": "在战斗中，马车拾取所选稀有度的装备时会立即自动将其分解为制作材料。已分解的装备不会占用马车空间。",
+    "max": 1,
+    "prereq": "LifeSkill 38"
+  },
+  {
+    "key": "LifeSkill 59",
+    "cn": "金币发现 II",
+    "en": "Gold Find II",
+    "desc": "金币发现提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 16"
+  },
+  {
+    "key": "LifeSkill 6",
+    "cn": "载重 I",
+    "en": "Capacity I",
+    "desc": "载重提升 1",
+    "max": 1,
+    "prereq": "LifeSkill 4"
+  },
+  {
+    "key": "LifeSkill 60",
+    "cn": "材料发现 I",
+    "en": "Material Find I",
+    "desc": "从资源点采集到的材料提升 16%",
+    "max": 1,
+    "prereq": "LifeSkill 14"
+  },
+  {
+    "key": "LifeSkill 61",
+    "cn": "物品发现 I",
+    "en": "Item Find I",
+    "desc": "物品发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 15"
+  },
+  {
+    "key": "LifeSkill 62",
+    "cn": "材料发现 II",
+    "en": "Material Find II",
+    "desc": "从资源点采集到的材料提升 30%",
+    "max": 1,
+    "prereq": "LifeSkill 17"
+  },
+  {
+    "key": "LifeSkill 63",
+    "cn": "金币发现 II",
+    "en": "Gold Find II",
+    "desc": "金币发现提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 40"
+  },
+  {
+    "key": "LifeSkill 64",
+    "cn": "经验获取 II",
+    "en": "XP Gain II",
+    "desc": "经验获取提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 41"
+  },
+  {
+    "key": "LifeSkill 65",
+    "cn": "远征补给 II",
+    "en": "Expedition Supplies II",
+    "desc": "离线奖励时长上限提升 4 小时。",
+    "max": 1,
+    "prereq": "LifeSkill 42"
+  },
+  {
+    "key": "LifeSkill 66",
+    "cn": "灵魂圣匣 IV",
+    "en": "Soul Reliquary IV",
+    "desc": "灵魂碎片携带上限提升 400。",
+    "max": 1,
+    "prereq": "LifeSkill 44"
+  },
+  {
+    "key": "LifeSkill 67",
+    "cn": "迅捷抛竿 III",
+    "en": "Swift Cast III",
+    "desc": "每次垂钓所需时间缩短 25%。",
+    "max": 1,
+    "prereq": "LifeSkill 45"
+  },
+  {
+    "key": "LifeSkill 68",
+    "cn": "载重 II",
+    "en": "Capacity II",
+    "desc": "载重提升 2",
+    "max": 1,
+    "prereq": "LifeSkill 47"
+  },
+  {
+    "key": "LifeSkill 69",
+    "cn": "经验获取 II",
+    "en": "XP Gain II",
+    "desc": "经验获取提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 49"
+  },
+  {
+    "key": "LifeSkill 7",
+    "cn": "载重 I",
+    "en": "Capacity I",
+    "desc": "载重提升 1",
+    "max": 1,
+    "prereq": "LifeSkill 2"
+  },
+  {
+    "key": "LifeSkill 70",
+    "cn": "经验获取 II",
+    "en": "XP Gain II",
+    "desc": "经验获取提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 51"
+  },
+  {
+    "key": "LifeSkill 71",
+    "cn": "药水发现 II",
+    "en": "Potion Find II",
+    "desc": "药水发现提升 10%",
+    "max": 1,
+    "prereq": "LifeSkill 53"
+  },
+  {
+    "key": "LifeSkill 72",
+    "cn": "金币发现 II",
+    "en": "Gold Find II",
+    "desc": "金币发现提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 55"
+  },
+  {
+    "key": "LifeSkill 73",
+    "cn": "储物页",
+    "en": "Storage Page",
+    "desc": "解锁一个额外的储物页。",
+    "max": 1,
+    "prereq": "LifeSkill 56"
+  },
+  {
+    "key": "LifeSkill 74",
+    "cn": "材料发现 II",
+    "en": "Material Find II",
+    "desc": "从资源点采集到的材料提升 30%",
+    "max": 1,
+    "prereq": "LifeSkill 60"
+  },
+  {
+    "key": "LifeSkill 75",
+    "cn": "物品发现 II",
+    "en": "Item Find II",
+    "desc": "物品发现提升 20%",
+    "max": 1,
+    "prereq": "LifeSkill 61"
+  },
+  {
+    "key": "LifeSkill 76",
+    "cn": "储物页",
+    "en": "Storage Page",
+    "desc": "解锁一个额外的储物页。",
+    "max": 1,
+    "prereq": "LifeSkill 46"
+  },
+  {
+    "key": "LifeSkill 77",
+    "cn": "经验获取 II",
+    "en": "XP Gain II",
+    "desc": "经验获取提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 57"
+  },
+  {
+    "key": "LifeSkill 78",
+    "cn": "辅助药水自动使用槽",
+    "en": "Utility Potion Auto-Use Slot",
+    "desc": "解锁一个辅助药水槽，每当其增益效果未生效时，在战斗中自动使用所分配的药水。",
+    "max": 1,
+    "prereq": "LifeSkill 52"
+  },
+  {
+    "key": "LifeSkill 79",
+    "cn": "食物自动使用槽",
+    "en": "Food Auto-Use Slot",
+    "desc": "解锁一个食物槽，每当其增益效果未生效时，在战斗中自动使用所分配的食物。",
+    "max": 1,
+    "prereq": "LifeSkill 78"
+  },
+  {
+    "key": "LifeSkill 8",
+    "cn": "灵魂圣匣 I",
+    "en": "Soul Reliquary I",
+    "desc": "灵魂碎片携带上限提升 100。",
+    "max": 1,
+    "prereq": "LifeSkill 2"
+  },
+  {
+    "key": "LifeSkill 80",
+    "cn": "经验获取 II",
+    "en": "XP Gain II",
+    "desc": "经验获取提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 79"
+  },
+  {
+    "key": "LifeSkill 81",
+    "cn": "金币发现 II",
+    "en": "Gold Find II",
+    "desc": "金币发现提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 79"
+  },
+  {
+    "key": "LifeSkill 82",
+    "cn": "载重 II",
+    "en": "Capacity II",
+    "desc": "载重提升 2",
+    "max": 1,
+    "prereq": "LifeSkill 79"
+  },
+  {
+    "key": "LifeSkill 83",
+    "cn": "经验获取 II",
+    "en": "XP Gain II",
+    "desc": "经验获取提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 73"
+  },
+  {
+    "key": "LifeSkill 84",
+    "cn": "金币发现 II",
+    "en": "Gold Find II",
+    "desc": "金币发现提升 15%",
+    "max": 1,
+    "prereq": "LifeSkill 77"
+  },
+  {
+    "key": "LifeSkill 9",
+    "cn": "装备自动出售",
+    "en": "Equipment Auto-Sell",
+    "desc": "在战斗中，马车拾取所选稀有度的装备时会立即自动出售。已出售的装备不会占用马车空间。",
+    "max": 1,
+    "prereq": "LifeSkill 1"
+  },
+  {
+    "key": "LifeSkill",
+    "cn": "自动恢复",
+    "en": "Auto Recovery",
+    "desc": "返回城镇时自动恢复满血。",
+    "max": 1,
+    "prereq": null
+  }
+]
