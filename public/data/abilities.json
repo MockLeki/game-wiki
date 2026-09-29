@@ -1,0 +1,823 @@
+[
+  {
+    "key": "HunterBasicAttack",
+    "hero": "Hunter",
+    "heroCn": "猎人",
+    "type": "BasicAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "毒箭",
+        "nameEn": "Poison Shot",
+        "desc": "射出一支毒箭，造成相当于{weaponDamage}武器伤害的毒素伤害，并有{chance}概率使目标陷入[中毒]。",
+        "descEn": "Fire a poisoned arrow that deals {weaponDamage} weapon damage as Poison damage, with a {chance} chance to inflict [Poisoned]."
+      },
+      {
+        "level": 2,
+        "name": "奥术炸弹",
+        "nameEn": "Arcane Bomb",
+        "desc": "发射一枚追踪的奥术弹，命中时引爆，对爆炸范围内的所有敌人造成相当于{weaponDamage}武器伤害的奥术伤害。",
+        "descEn": "Launch a homing arcane charge that detonates on impact, dealing {weaponDamage} weapon damage as Arcane damage to all enemies caught in the blast."
+      },
+      {
+        "level": 3,
+        "name": "飞刀连击",
+        "nameEn": "Knife Barrage",
+        "desc": "快速掷出一连串飞刀，至多攻击附近三名敌人，每把飞刀造成相当于{weaponDamage}武器伤害的物理伤害。",
+        "descEn": "Hurl a flurry of throwing knives at up to three nearby enemies in quick succession, each knife dealing {weaponDamage} weapon damage as Physical damage."
+      },
+      {
+        "level": 4,
+        "name": "二连矢",
+        "nameEn": "Twin Arrows",
+        "desc": "快速射出两支箭矢，至多攻击附近两名敌人，每支箭矢造成相当于{weaponDamage}武器伤害的物理伤害。若只有一名敌人，两支箭矢都会命中该敌人。",
+        "descEn": "Fire two arrows in quick succession at up to two nearby enemies, each dealing {weaponDamage} weapon damage as Physical damage. If only one enemy is available, both arrows strike it."
+      }
+    ],
+    "name": "毒箭",
+    "nameEn": "Poison Shot"
+  },
+  {
+    "key": "HunterHeavyAttack",
+    "hero": "Hunter",
+    "heroCn": "猎人",
+    "type": "HeavyAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "稳固射击",
+        "nameEn": "Steady Shot",
+        "desc": "射出一支强力的箭矢，穿透路径上的所有敌人，造成相当于{value}武器伤害的物理伤害。",
+        "descEn": "Loose a powerful arrow that pierces every enemy in its path, dealing {value} weapon damage as Physical damage."
+      },
+      {
+        "level": 2,
+        "name": "多重射击",
+        "nameEn": "Multishot",
+        "desc": "在扇形范围内射出漫天箭雨，对范围内的所有敌人造成相当于{weaponDamage}武器伤害的奥术伤害。",
+        "descEn": "Loose a storm of arrows in a wide cone, striking every enemy caught in it for {weaponDamage} weapon damage as Arcane damage."
+      },
+      {
+        "level": 3,
+        "name": "急速射击",
+        "nameEn": "Rapid Fire",
+        "desc": "驻足原地，持续2秒向目标倾泻箭雨，每支箭造成相当于{weaponDamage}武器伤害的物理伤害。",
+        "descEn": "Plant your feet and pour a stream of arrows into your target for 2 seconds, each arrow dealing {weaponDamage} weapon damage as Physical damage."
+      },
+      {
+        "level": 4,
+        "name": "剧毒弹",
+        "nameEn": "Venom Bolt",
+        "desc": "射出一枚强力毒素弹，命中时爆裂，对附近所有敌人造成相当于{weaponDamage}武器伤害的毒素伤害，并使其陷入[中毒]。",
+        "descEn": "Fire a powerful poisoned projectile that bursts on impact, dealing {weaponDamage} weapon damage as Poison damage to all nearby enemies and inflicting [Poisoned]."
+      }
+    ],
+    "name": "稳固射击",
+    "nameEn": "Steady Shot"
+  },
+  {
+    "key": "HunterPoison",
+    "hero": "Hunter",
+    "heroCn": "猎人",
+    "type": "Poison",
+    "levels": [
+      {
+        "level": 1,
+        "name": "中毒",
+        "nameEn": "Poisoned",
+        "desc": "每2秒受到相当于{weaponDamage}武器伤害的毒素伤害。最多叠加100层。",
+        "descEn": "Take {weaponDamage} weapon damage as Poison damage every 2 seconds. Stacks up to 100 times."
+      }
+    ],
+    "name": "中毒",
+    "nameEn": "Poisoned"
+  },
+  {
+    "key": "HunterSpecial",
+    "hero": "Hunter",
+    "heroCn": "猎人",
+    "type": "Special",
+    "levels": [
+      {
+        "level": 1,
+        "name": "毒陷阱",
+        "nameEn": "Poison Trap",
+        "desc": "布置一个陷阱，当敌人踏上时引爆，对周围所有敌人造成相当于{weaponDamage}武器伤害的毒素伤害，并有{chance}概率施加2层[中毒]。",
+        "descEn": "Set a trap that detonates when an enemy steps on it, dealing {weaponDamage} weapon damage as Poison damage to everything nearby with a {chance} chance to inflict 2 stacks of [Poisoned]."
+      },
+      {
+        "level": 2,
+        "name": "冲击波",
+        "nameEn": "Shockwave",
+        "desc": "射出一发震荡箭矢，爆发出冲击波，对身前所有敌人造成相当于{weaponDamage}武器伤害的物理伤害，将其击退，并有{chance}概率使其陷入[短暂眩晕]。",
+        "descEn": "Fire a concussive shot that erupts into a shockwave, dealing {weaponDamage} weapon damage as Physical damage to all enemies in front of you, knocking them back with a {chance} chance to inflict [Short Stun]."
+      },
+      {
+        "level": 3,
+        "name": "冰霜陷阱",
+        "nameEn": "Frost Trap",
+        "desc": "布置一个陷阱，当敌人踏上时引爆，对周围所有敌人造成相当于{weaponDamage}武器伤害的冰霜伤害，并有{chance}概率使其陷入[深度冻结]。",
+        "descEn": "Set a trap that detonates when an enemy steps on it, dealing {weaponDamage} weapon damage as Cold damage to everything nearby with a {chance} chance to inflict [Deep Freeze]."
+      },
+      {
+        "level": 4,
+        "name": "奥术箭雨",
+        "nameEn": "Arcane Arrowstorm",
+        "desc": "召唤一阵奥术箭雨，对笼罩其中的敌人反复造成相当于{weaponDamage}武器伤害的奥术伤害。",
+        "descEn": "Call down a rain of arcane arrows that repeatedly deals {weaponDamage} weapon damage as Arcane damage to enemies caught beneath it."
+      },
+      {
+        "level": 5,
+        "name": "幻影形态",
+        "nameEn": "Phantom Form",
+        "desc": "进入幻影形态，持续{duration}，获得{dodge}闪避几率和{attackSpeed}攻击速度。",
+        "descEn": "Take on a phantom form for {duration}, gaining {dodge} Dodge Chance and {attackSpeed} Attack Speed."
+      },
+      {
+        "level": 6,
+        "name": "照明弹",
+        "nameEn": "Flare",
+        "desc": "发射一枚命中时爆裂的照明弹，使附近所有敌人陷入[易伤]，持续{duration}。",
+        "descEn": "Fire a flare that bursts on impact, inflicting [Vulnerable] on all nearby enemies for {duration}."
+      }
+    ],
+    "name": "毒陷阱",
+    "nameEn": "Poison Trap"
+  },
+  {
+    "key": "MonkBasicAttack",
+    "hero": "Monk",
+    "heroCn": "武僧",
+    "type": "BasicAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "三重击",
+        "nameEn": "Threefold Strike",
+        "desc": "打击单个敌人，造成{damage}武器伤害。每第三击化为强化终结技，对目标额外造成{damage2}。",
+        "descEn": "Strike a single enemy for {damage} weapon damage. Every third blow flows into an empowered finisher, dealing {damage2} weapon damage to the target."
+      },
+      {
+        "level": 2,
+        "name": "怒拳",
+        "nameEn": "Furious Fist",
+        "desc": "向单个敌人挥出怒拳，造成{damage}武器伤害并积蓄气势——每次命中获得+{attackSpeed}攻击速度（最多叠加20层），持续{duration}秒。",
+        "descEn": "Unleash a furious fist at one enemy for {damage} weapon damage, building momentum — each strike grants +{attackSpeed} Attack Speed (up to 20 stacks) for {duration} seconds."
+      },
+      {
+        "level": 3,
+        "name": "震地击",
+        "nameEn": "Seismic Strike",
+        "desc": "用武器攻击单个目标。每第三次攻击将重重击出并激起冲击波，造成范围伤害。对目标造成{damage}武器伤害，第三击对周围敌人额外造成{damage2}武器伤害。",
+        "descEn": "Attack a single target with your weapon. Every 3rd attack strikes heavily and unleashes a shockwave, dealing area damage. Deals {damage} weapon damage to the target; the 3rd strike deals an additional {damage2} weapon damage to nearby enemies."
+      },
+      {
+        "level": 4,
+        "name": "气弹",
+        "nameEn": "Chi Bolt",
+        "desc": "向单个敌人投出凝聚的气劲，造成{damage}武器伤害。每第三发气弹命中时，还会为你恢复{heal}的最大生命值。",
+        "descEn": "Hurl a bolt of focused chi at a single enemy for {damage} weapon damage. Every third bolt also restores {heal} of your Max Health when it hits."
+      }
+    ],
+    "name": "三重击",
+    "nameEn": "Threefold Strike"
+  },
+  {
+    "key": "MonkGatheredForce",
+    "hero": "Monk",
+    "heroCn": "武僧",
+    "type": "GatheredForce",
+    "levels": [
+      {
+        "level": 1,
+        "name": "贯劲",
+        "nameEn": "Gathered Force",
+        "desc": "每次强力攻击消耗一次已积攒的贯劲。",
+        "descEn": "Each Strong Attack consumes one stored charge."
+      }
+    ],
+    "name": "贯劲",
+    "nameEn": "Gathered Force"
+  },
+  {
+    "key": "MonkHeavyAttack",
+    "hero": "Monk",
+    "heroCn": "武僧",
+    "type": "HeavyAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "圣裁之击",
+        "nameEn": "Sacred Judgment",
+        "desc": "旋身挥出一记迸发圣光雷电的武器重击，对目标造成相当于{damage}武器伤害的雷电伤害，并对附近的敌人造成相当于{damage2}武器伤害的雷电伤害。",
+        "descEn": "Whirl and bring down a weapon strike crackling with holy lightning, dealing {damage} weapon damage as Lightning to the target and {damage2} weapon damage as Lightning to nearby enemies."
+      },
+      {
+        "level": 2,
+        "name": "穿刺突进",
+        "nameEn": "Piercing Lunge",
+        "desc": "向前突进刺出致命一击，贯穿身前锥形范围内的所有敌人，造成{damage}武器伤害。",
+        "descEn": "Lunge forward with a piercing thrust, skewering every enemy in a cone before you for {damage} weapon damage."
+      },
+      {
+        "level": 3,
+        "name": "旋风棍式",
+        "nameEn": "Whirlwind Staff",
+        "desc": "在身前掀起两道龙卷风，向敌人游走，对进入其中的敌人造成{damage}武器伤害。",
+        "descEn": "Conjure two tornados before you that wander toward enemies, dealing {damage} weapon damage to any enemy caught inside."
+      },
+      {
+        "level": 4,
+        "name": "双金掌",
+        "nameEn": "Golden Palms",
+        "desc": "双掌向前推出，凝出两只金色巨手横扫身前的扇形范围，对其中所有敌人造成{damage}武器伤害并将其击退。",
+        "descEn": "Thrust both palms forward, conjuring two golden hands that sweep every enemy in a wide arc before you for {damage} weapon damage and drive them back."
+      }
+    ],
+    "name": "圣裁之击",
+    "nameEn": "Sacred Judgment"
+  },
+  {
+    "key": "MonkIronConstitution",
+    "hero": "Monk",
+    "heroCn": "武僧",
+    "type": "IronConstitution",
+    "levels": [
+      {
+        "level": 1,
+        "name": "铁血体魄",
+        "nameEn": "Iron Constitution",
+        "desc": "受到伤害降低 {reduction}，持续 {duration}。",
+        "descEn": "Damage taken reduced by {reduction} for {duration}."
+      }
+    ],
+    "name": "铁血体魄",
+    "nameEn": "Iron Constitution"
+  },
+  {
+    "key": "MonkSpecial",
+    "hero": "Monk",
+    "heroCn": "武僧",
+    "type": "Special",
+    "levels": [
+      {
+        "level": 1,
+        "name": "神圣法球",
+        "nameEn": "Sacred Orbs",
+        "desc": "召唤一颗环绕自身旋转的神圣法球，对经过的每个敌人造成相当于{damage}武器伤害的闪电伤害。",
+        "descEn": "Conjure a sacred orb that circles you, striking each enemy it passes through for {damage} weapon damage as Lightning damage."
+      },
+      {
+        "level": 2,
+        "name": "灵气涌流",
+        "nameEn": "Spirit Stream",
+        "desc": "引导灵气涌流贯通全身，每秒回复{value}最大生命值，持续{duration}秒。",
+        "descEn": "Channel a stream of spirit through your body, healing {value} of your Max Health every second for {duration} seconds."
+      },
+      {
+        "level": 3,
+        "name": "冲锋",
+        "nameEn": "Charge",
+        "desc": "冲锋撞向目标，随后重击周围所有敌人，造成{weaponDamage}武器伤害并晕眩{duration}。",
+        "descEn": "Charge the target, then slam every enemy around you for {weaponDamage} weapon damage and stun them for {duration}."
+      },
+      {
+        "level": 4,
+        "name": "灵体分身",
+        "nameEn": "Spirit Twin",
+        "desc": "在身旁召唤一具灵体分身，持续{duration}。它会复现你的普通攻击与强力攻击，攻击你所攻击的敌人。",
+        "descEn": "Summon a spirit twin at your side for {duration}. It mirrors your Basic and Strong attacks, striking the enemies you strike."
+      },
+      {
+        "level": 5,
+        "name": "踏风步",
+        "nameEn": "Wind Steps",
+        "desc": "踏风而行，持续{duration}，获得{dodge}闪避几率。",
+        "descEn": "Ride the wind for {duration}, gaining {dodge} Dodge Chance."
+      },
+      {
+        "level": 6,
+        "name": "神圣雷霆",
+        "nameEn": "Divine Thunder",
+        "desc": "屹立不动，引落神圣雷霆，每次脉冲对周围敌人造成{damage}武器伤害，并使其恍惚{duration}。",
+        "descEn": "Stand fast and call down holy lightning, each pulse striking nearby enemies for {damage} weapon damage and leaving them Dazed for {duration}."
+      }
+    ],
+    "name": "神圣法球",
+    "nameEn": "Sacred Orbs"
+  },
+  {
+    "key": "MonkSpiritStreamDamageReduction",
+    "hero": "Monk",
+    "heroCn": "武僧",
+    "type": "SpiritStreamDamageReduction",
+    "levels": [
+      {
+        "level": 1,
+        "name": "护持之息",
+        "nameEn": "Sheltering Breath",
+        "desc": "受到伤害降低 {value}，持续 {duration}。",
+        "descEn": "Damage taken reduced by {value} for {duration}."
+      }
+    ],
+    "name": "护持之息",
+    "nameEn": "Sheltering Breath"
+  },
+  {
+    "key": "SorcererBasicAttack",
+    "hero": "Sorcerer",
+    "heroCn": "法师",
+    "type": "BasicAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "火球",
+        "nameEn": "Fire Ball",
+        "desc": "召唤一枚追踪火球，命中后爆炸，对小范围内所有敌人造成{weaponDamage}武器伤害。",
+        "descEn": "Conjure a homing fireball that explodes on impact, dealing {weaponDamage} weapon damage to all enemies in a small area."
+      },
+      {
+        "level": 2,
+        "name": "冰碎片",
+        "nameEn": "Ice Shards",
+        "desc": "投掷一枚冰霜碎片，击中单个敌人，造成{weaponDamage}武器伤害。",
+        "descEn": "Hurl an icy shard that strikes a single enemy for {weaponDamage} weapon damage."
+      },
+      {
+        "level": 3,
+        "name": "电击",
+        "nameEn": "Electrocute",
+        "desc": "释放一道噼啪作响的扇形闪电，击中前方所有敌人，造成{weaponDamage}武器伤害。",
+        "descEn": "Unleash a fan of crackling lightning that strikes every enemy in front for {weaponDamage} weapon damage."
+      },
+      {
+        "level": 4,
+        "name": "烈焰雷电",
+        "nameEn": "Flame Lightning",
+        "desc": "向随机一名敌人降下烈焰雷电，造成相当于{fireDamage}武器伤害的火焰伤害与{lightningDamage}武器伤害的闪电伤害。",
+        "descEn": "Call down a bolt of flame and lightning on a random enemy, dealing {fireDamage} weapon damage as Fire and {lightningDamage} weapon damage as Lightning."
+      }
+    ],
+    "name": "火球",
+    "nameEn": "Fire Ball"
+  },
+  {
+    "key": "SorcererSpecial",
+    "hero": "Sorcerer",
+    "heroCn": "法师",
+    "type": "Special",
+    "levels": [
+      {
+        "level": 1,
+        "name": "冰霜新星",
+        "nameEn": "Ice Nova",
+        "desc": "在身周释放一圈冰霜新星，对附近的敌人造成10%武器伤害并将其冰冻。",
+        "descEn": "Release a nova of frost around you, dealing 10% weapon damage to nearby enemies and freezing them solid."
+      },
+      {
+        "level": 2,
+        "name": "火元素",
+        "nameEn": "Fire Elemental",
+        "desc": "召唤一个火元素，向敌人发射火球，造成{weaponDamage}武器伤害。",
+        "descEn": "Summon a fire elemental that shoots fireballs at an enemy for {weaponDamage} of your weapon damage."
+      },
+      {
+        "level": 3,
+        "name": "寒冰屏障",
+        "nameEn": "Ice Block",
+        "desc": "将自身封入寒冰之中，持续{duration}，期间无法行动但免疫所有伤害。冰块随后碎裂，对附近所有敌人造成冰霜伤害。",
+        "descEn": "Encase yourself in ice for {duration}, unable to act but immune to all damage. The ice then shatters, dealing Cold damage to all nearby enemies."
+      },
+      {
+        "level": 4,
+        "name": "火陨石",
+        "nameEn": "Fire Meteor",
+        "desc": "召唤一颗烈焰陨石，落地时爆裂，对爆炸范围内的所有敌人造成{weaponDamage}武器伤害并使其灼烧。",
+        "descEn": "Call down a blazing meteor that erupts on impact, dealing {weaponDamage} weapon damage to all enemies in the blast and setting them Burning."
+      },
+      {
+        "level": 5,
+        "name": "烈焰光环",
+        "nameEn": "Flame Aura",
+        "desc": "以烈焰环绕自身，持续{duration}，获得{critChance}暴击几率与{critDamage}暴击伤害。",
+        "descEn": "Wreathe yourself in flame for {duration}, gaining {critChance} critical hit chance and {critDamage} critical hit damage."
+      },
+      {
+        "level": 6,
+        "name": "雷云",
+        "nameEn": "Lightning Cloud",
+        "desc": "在目标上方召唤一片雷云，在4秒内降下8道闪电，每道对附近的敌人造成{weaponDamage}武器伤害，并有{chance}概率使其陷入[短暂眩晕]。",
+        "descEn": "Summon a storm cloud over the target that calls down 8 lightning bolts over 4 seconds, each dealing {weaponDamage} weapon damage to nearby enemies with a {chance} chance to inflict [Short Stun]."
+      }
+    ],
+    "name": "冰霜新星",
+    "nameEn": "Ice Nova"
+  },
+  {
+    "key": "SorcererStrongAttack",
+    "hero": "Sorcerer",
+    "heroCn": "法师",
+    "type": "StrongAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "烈焰吐息",
+        "nameEn": "Flame Breath",
+        "desc": "喷吐一道直线烈焰，对路径上的敌人造成{weaponDamage}武器伤害并使其灼烧。",
+        "descEn": "Unleash a stream of roaring flame in a line, dealing {weaponDamage} weapon damage to enemies in its path and setting them Burning."
+      },
+      {
+        "level": 2,
+        "name": "冰陨石",
+        "nameEn": "Ice Meteor",
+        "desc": "召唤一颗冰冻陨石，留下持续3秒的冰寒领域，每次跳动造成{weaponDamage}武器伤害并使范围内的敌人陷入冰寒。",
+        "descEn": "Call down a frozen meteor that leaves a chilling field for 3 seconds, dealing {weaponDamage} weapon damage per tick and chilling enemies caught inside."
+      },
+      {
+        "level": 3,
+        "name": "闪电风暴",
+        "nameEn": "Lightning Storm",
+        "desc": "召唤一场闪电风暴，随机击中3个敌人，对每个敌人造成{weaponDamage}武器伤害。",
+        "descEn": "Conjure a storm of lightning that strikes 3 random enemies, dealing {weaponDamage} weapon damage to each."
+      },
+      {
+        "level": 4,
+        "name": "冰霜光束",
+        "nameEn": "Frost Beam",
+        "desc": "引导一道冰霜光束持续3秒，每次跳动对路径上的所有敌人造成{weaponDamage}武器伤害。",
+        "descEn": "Channel a beam of frost for 3 seconds, striking every enemy in its path for {weaponDamage} weapon damage each tick."
+      }
+    ],
+    "name": "烈焰吐息",
+    "nameEn": "Flame Breath"
+  },
+  {
+    "key": "WarriorAoeVulnerable",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "AoeVulnerable",
+    "levels": [
+      {
+        "level": 1,
+        "name": "范围易伤",
+        "nameEn": "AOE Vulnerable",
+        "desc": "对敌人施加易伤状态",
+        "descEn": "Apply vulnerable to enemies"
+      }
+    ],
+    "name": "范围易伤",
+    "nameEn": "AOE Vulnerable"
+  },
+  {
+    "key": "WarriorBasicAttack",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "BasicAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "英勇打击",
+        "nameEn": "Valiant Strike",
+        "desc": "对单个敌人发动迅捷近战攻击。造成{weaponDamage}武器伤害，有{chance}概率对目标施加[易伤]。",
+        "descEn": "A swift melee strike on a single enemy. Deals {weaponDamage} weapon damage with {chance} chance inflict [Vulnerable] to the target."
+      },
+      {
+        "level": 2,
+        "name": "横扫",
+        "nameEn": "Cleave",
+        "desc": "以宽阔的弧度挥动武器，打击前方所有敌人，造成{weaponDamage}武器伤害。",
+        "descEn": "Sweep your weapon in a wide arc, striking all enemies in front for {weaponDamage} weapon damage."
+      },
+      {
+        "level": 3,
+        "name": "血刃",
+        "nameEn": "Bloodblade",
+        "desc": "刺穿一个敌人，造成{weaponDamage}武器伤害并施加流血，在{duration}内造成250%武器伤害。",
+        "descEn": "Pierce one enemy for {weaponDamage} weapon damage and inflict Bleeding, which deals 250% weapon damage over {duration}."
+      },
+      {
+        "level": 4,
+        "name": "稳固打击",
+        "nameEn": "Steady Blow",
+        "desc": "对单个敌人造成{weaponDamage}武器伤害，并为自身叠加一层[堡垒]。",
+        "descEn": "Strike one enemy for {weaponDamage} weapon damage and steel yourself, gaining a stack of [Bulwark]."
+      }
+    ],
+    "name": "英勇打击",
+    "nameEn": "Valiant Strike"
+  },
+  {
+    "key": "WarriorBloodlust",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "Bloodlust",
+    "levels": [
+      {
+        "level": 1,
+        "name": "嗜血",
+        "nameEn": "Bloodlust",
+        "desc": "每层提升你造成的伤害，最多10层。持续 {duration}，每次获得时刷新。",
+        "descEn": "Each stack increases the damage you deal, up to 10 stacks. Lasts {duration}, refreshed on every gain."
+      }
+    ],
+    "name": "嗜血",
+    "nameEn": "Bloodlust"
+  },
+  {
+    "key": "WarriorBulwark",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "Bulwark",
+    "levels": [
+      {
+        "level": 1,
+        "name": "堡垒",
+        "nameEn": "Bulwark",
+        "desc": "每层提升{defense}护甲与魔法抵抗，最多5层。持续{duration}，每次命中刷新。",
+        "descEn": "Each stack grants {defense} Armor and Magic Resist, up to 5 stacks. Lasts {duration}, refreshed on every hit."
+      }
+    ],
+    "name": "堡垒",
+    "nameEn": "Bulwark"
+  },
+  {
+    "key": "WarriorChargedReady",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "ChargedReady",
+    "levels": [
+      {
+        "level": 1,
+        "name": "蓄势待发",
+        "nameEn": "Charged and Ready",
+        "desc": "所有伤害 +{damage}，持续 {duration}。",
+        "descEn": "All damage +{damage} for {duration}."
+      }
+    ],
+    "name": "蓄势待发",
+    "nameEn": "Charged and Ready"
+  },
+  {
+    "key": "WarriorChargedStacks",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "ChargedStacks",
+    "levels": [
+      {
+        "level": 1,
+        "name": "蓄势",
+        "nameEn": "Charge",
+        "desc": "普攻击中积累蓄势，达到10层后消耗蓄势并触发蓄势待发。",
+        "descEn": "Basic Attack hits build charges. At 10 charges, consume them to activate Charged and Ready."
+      }
+    ],
+    "name": "蓄势",
+    "nameEn": "Charge"
+  },
+  {
+    "key": "WarriorCrescentMomentum",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "CrescentMomentum",
+    "levels": [
+      {
+        "level": 1,
+        "name": "弦月势能",
+        "nameEn": "Crescent Momentum",
+        "desc": "每层提供{manaRegen}法力回复和{crit}暴击几率，最多20层。持续{duration}。",
+        "descEn": "Each stack grants {manaRegen} Mana Regeneration and {crit} Critical Hit Chance, up to 20 stacks. Lasts {duration}."
+      }
+    ],
+    "name": "弦月势能",
+    "nameEn": "Crescent Momentum"
+  },
+  {
+    "key": "WarriorDemoralized",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "Demoralized",
+    "levels": [
+      {
+        "level": 1,
+        "name": "挫志",
+        "nameEn": "Demoralized",
+        "desc": "造成的伤害降低 {value}。",
+        "descEn": "Damage dealt is reduced by {value}."
+      }
+    ],
+    "name": "挫志",
+    "nameEn": "Demoralized"
+  },
+  {
+    "key": "WarriorFlameStrikeSplash",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "FlameStrikeSplash",
+    "levels": [
+      {
+        "level": 1,
+        "name": "蔓延烈焰",
+        "nameEn": "Spreading Flame",
+        "desc": "对周围敌人造成 {splash} 武器伤害作为火焰伤害。",
+        "descEn": "Deals {splash} weapon damage as Fire to enemies around you."
+      }
+    ],
+    "name": "蔓延烈焰",
+    "nameEn": "Spreading Flame"
+  },
+  {
+    "key": "WarriorFractured",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "Fractured",
+    "levels": [
+      {
+        "level": 1,
+        "name": "碎骨",
+        "nameEn": "Fractured",
+        "desc": "你对该敌人造成的暴击伤害提高250%。",
+        "descEn": "You deal +250% Critical Hit Damage to this enemy."
+      }
+    ],
+    "name": "碎骨",
+    "nameEn": "Fractured"
+  },
+  {
+    "key": "WarriorHeavyAttack",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "HeavyAttack",
+    "levels": [
+      {
+        "level": 1,
+        "name": "烈焰斩",
+        "nameEn": "Flame Strike",
+        "desc": "将火焰灌注成毁灭性的单体打击，造成相当于{weaponDamage}武器伤害的火焰伤害。",
+        "descEn": "Channel flame into a devastating single-target blow, dealing {weaponDamage} weapon damage as Fire Damage."
+      },
+      {
+        "level": 2,
+        "name": "半月斩",
+        "nameEn": "Half Moon Slash",
+        "desc": "投掷一把新月形刀刃，穿透路径上的所有敌人，对每个敌人造成{weaponDamage}武器伤害。",
+        "descEn": "Hurl a crescent blade that pierces every enemy in its path, dealing {weaponDamage} weapon damage to each."
+      },
+      {
+        "level": 3,
+        "name": "旋风斩",
+        "nameEn": "Whirlwind",
+        "desc": "向敌人旋转突进，快速攻击周围的敌人，每次造成{weaponDamage}武器伤害。",
+        "descEn": "Spin towards enemies and attack surrounding enemies for {weaponDamage} weapon damage rapidly."
+      },
+      {
+        "level": 4,
+        "name": "裂血连击",
+        "nameEn": "Rending Onslaught",
+        "desc": "向附近敌人挥出 3 道凶狠的切割，每次造成{weaponDamage}武器伤害并施加流血，在{duration}内造成250%武器伤害。",
+        "descEn": "Carve 3 savage cuts across nearby enemies, each dealing {weaponDamage} weapon damage and inflicting Bleeding, which deals 250% weapon damage over {duration}."
+      }
+    ],
+    "name": "烈焰斩",
+    "nameEn": "Flame Strike"
+  },
+  {
+    "key": "WarriorInnerFurnace",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "InnerFurnace",
+    "levels": [
+      {
+        "level": 1,
+        "name": "内焰熔炉",
+        "nameEn": "Forge Within",
+        "desc": "[强力攻击]伤害 +{damage}，技能法力消耗降低 {costReduction}。",
+        "descEn": "[Strong Attack] damage +{damage}. Ability Mana costs reduced by {costReduction}."
+      }
+    ],
+    "name": "内焰熔炉",
+    "nameEn": "Forge Within"
+  },
+  {
+    "key": "WarriorIronThorn",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "IronThorn",
+    "levels": [
+      {
+        "level": 1,
+        "name": "铁棘",
+        "nameEn": "Iron Thorn",
+        "desc": "荆棘提升{thorns}。每秒对周围的敌人造成相当于荆棘值{pulse}的物理伤害。",
+        "descEn": "Thorns increased by {thorns}. Every second, enemies around you take {pulse} of your Thorns as physical damage."
+      }
+    ],
+    "name": "铁棘",
+    "nameEn": "Iron Thorn"
+  },
+  {
+    "key": "WarriorIronward",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "Ironward",
+    "levels": [
+      {
+        "level": 1,
+        "name": "铁壁护盾",
+        "nameEn": "Ironward",
+        "desc": "每次普攻击中获得 {shield} 最大生命的护盾，持续 {duration}。",
+        "descEn": "Each Basic Attack hit adds a shield equal to {shield} of your Max HP for {duration}."
+      }
+    ],
+    "name": "铁壁护盾",
+    "nameEn": "Ironward"
+  },
+  {
+    "key": "WarriorMoltenMight",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "MoltenMight",
+    "levels": [
+      {
+        "level": 1,
+        "name": "熔铸之力",
+        "nameEn": "Molten Might",
+        "desc": "[强力攻击]伤害提高{damage}。技能法力消耗降低{costReduction}。",
+        "descEn": "[Strong Attack] damage increased by {damage}. Abilities cost {costReduction} less Mana."
+      }
+    ],
+    "name": "熔铸之力",
+    "nameEn": "Molten Might"
+  },
+  {
+    "key": "WarriorRageShield",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "RageShield",
+    "levels": [
+      {
+        "level": 1,
+        "name": "狂怒护盾",
+        "nameEn": "Rage Shield",
+        "desc": "以怒火屏障环绕自身，吸收最多相当于{shield}最大生命值的伤害，持续{duration}。",
+        "descEn": "Surround yourself with a barrier of rage that absorbs up to {shield} of your Max HP in damage, lasting {duration}."
+      }
+    ],
+    "name": "狂怒护盾",
+    "nameEn": "Rage Shield"
+  },
+  {
+    "key": "WarriorRageShout",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "RageShout",
+    "levels": [
+      {
+        "level": 1,
+        "name": "怒吼",
+        "nameEn": "Rage Shout",
+        "desc": "4秒内提升{attackSpeed}攻击速度。",
+        "descEn": "Increase {attackSpeed} attack speed for 4 seconds."
+      }
+    ],
+    "name": "怒吼",
+    "nameEn": "Rage Shout"
+  },
+  {
+    "key": "WarriorSpecial",
+    "hero": "Warrior",
+    "heroCn": "战士",
+    "type": "Special",
+    "levels": [
+      {
+        "level": 3,
+        "name": "夺命钩爪",
+        "nameEn": "Deadly Hook",
+        "desc": "投掷锁链钩爪，穿透路径上的所有敌人，造成{weaponDamage}武器伤害，并将其拉回身前，使其陷入易伤。",
+        "descEn": "Hurl a hook that pierces every enemy in its path, dealing {weaponDamage} weapon damage, then reels them back to you and leaves them Vulnerable."
+      },
+      {
+        "level": 4,
+        "name": "裂地击",
+        "nameEn": "Earthstrike",
+        "desc": "以震耳欲聋的巨响砸击地面，冲击波沿地面向前撕裂，对路径上的所有敌人造成{weaponDamage}武器伤害并使其昏迷。",
+        "descEn": "Smash the ground with a deafening crack, tearing a shockwave through the ground ahead of you. Deals {weaponDamage} weapon damage to every enemy in its path and stuns them."
+      },
+      {
+        "level": 5,
+        "name": "铁棘",
+        "nameEn": "Iron Thorn",
+        "desc": "以铁棘护体{duration}。荆棘提升{thorns}，并每秒向周围的敌人造成相当于荆棘值{pulse}的物理伤害。",
+        "descEn": "Clad yourself in iron spikes for {duration}. Thorns is increased by {thorns}, and every second you lash out at enemies around you for {pulse} of your Thorns as physical damage."
+      },
+      {
+        "level": 6,
+        "name": "熔铸之力",
+        "nameEn": "Molten Might",
+        "desc": "点燃体内熔炉：立即恢复{rage}最大法力值，并在{duration}内使[强力攻击]伤害提高{damage}，技能法力消耗降低{costReduction}。",
+        "descEn": "Stoke the forge within: instantly recover {rage} of your Max Mana, then for {duration} your [Strong Attack] damage is increased by {damage} and abilities cost {costReduction} less Mana."
+      }
+    ],
+    "name": "夺命钩爪",
+    "nameEn": "Deadly Hook"
+  }
+]

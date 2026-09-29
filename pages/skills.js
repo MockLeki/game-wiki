@@ -1,6 +1,8 @@
 import Layout from '../components/Layout'
 import { useState, useEffect } from 'react'
 import talents from '../public/data/talents.json'
+import talentsFull from '../public/data/talents_full.json'
+import abilities from '../public/data/abilities.json'
 
 export async function getStaticProps() { return { props: {} } }
 
@@ -87,6 +89,8 @@ const TREE_LAYOUT = {
 const TOTAL_POINTS = 32
 const CLASS_NAMES = { Warrior: '战士', Sorcerer: '法师' }
 const CLASS_ICONS = { Warrior: '⚔️', Sorcerer: '🔮' }
+const HERO_NAME = { Warrior: '战士', Sorcerer: '法师', Hunter: '猎人', Monk: '武僧' }
+const HERO_ICON = { Warrior: '⚔️', Sorcerer: '🔮', Hunter: '🏹', Monk: '👊' }
 
 // 解析天赋描述为加成类型
 function parseBonus(talent) {
@@ -117,6 +121,7 @@ export default function SkillsPage() {
   }))
 
   const [activeClass, setActiveClass] = useState('Warrior')
+  const [viewMode, setViewMode] = useState('tree')  // tree | talents | abilities
   const [alloc, setAlloc] = useState({})  // {Warrior: {talentIdx: points}}
   const [hoveredTalent, setHoveredTalent] = useState(null)  // 悬停天赋弹窗
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
@@ -233,9 +238,12 @@ export default function SkillsPage() {
       <div className="page-wrap" style={{maxWidth: 1400}}>
         {/* Tab 切换 */}
         <div style={{display: 'flex', gap: '0', marginBottom: '0.5rem', borderBottom: '2px solid var(--border-gold)'}}>
-          <button className="talent-tab active">⚔️ 战斗天赋</button>
+          <button className={`talent-tab ${viewMode === 'tree' ? 'active' : ''}`} onClick={() => setViewMode('tree')}>⚔️ 天赋树模拟器</button>
+          <button className={`talent-tab ${viewMode === 'talents' ? 'active' : ''}`} onClick={() => setViewMode('talents')}>📜 全天赋图鉴（{talentsFull.length}）</button>
+          <button className={`talent-tab ${viewMode === 'abilities' ? 'active' : ''}`} onClick={() => setViewMode('abilities')}>🎯 技能图鉴（{abilities.length}）</button>
         </div>
 
+        {viewMode === 'tree' && (
         <div className="talent-tree-container">
           {/* 左侧等级条 */}
           <div className="talent-level-rail">
@@ -382,6 +390,57 @@ export default function SkillsPage() {
             </div>
           </div>
         </div>
+        )}
+
+        {viewMode === 'talents' && (
+          <div>
+            {['Warrior', 'Sorcerer', 'Hunter', 'Monk'].map(hero => {
+              const list = talentsFull.filter(t => t.class === hero)
+              if (!list.length) return null
+              return (
+                <div key={hero} className="panel" style={{marginBottom: '1rem'}}>
+                  <div className="panel-title">{HERO_ICON[hero]} {HERO_NAME[hero]} · {list.length} 个天赋</div>
+                  <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '0.6rem', padding: '1rem'}}>
+                    {list.map(t => (
+                      <div key={t.key} className="item-card" style={{padding: '0.7rem 0.9rem', borderLeft: '3px solid var(--gold)'}}>
+                        <div className="item-name" style={{fontSize: '0.9rem'}}>{t.name}</div>
+                        {t.desc && <div style={{color: 'var(--muted)', fontSize: '0.78rem', marginTop: '0.3rem', lineHeight: 1.6}}>{t.desc}</div>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        )}
+
+        {viewMode === 'abilities' && (
+          <div>
+            {['Warrior', 'Sorcerer', 'Hunter', 'Monk'].map(hero => {
+              const list = abilities.filter(a => a.hero === hero)
+              if (!list.length) return null
+              return (
+                <div key={hero} className="panel" style={{marginBottom: '1rem'}}>
+                  <div className="panel-title">{HERO_ICON[hero]} {HERO_NAME[hero]} · {list.length} 个技能</div>
+                  <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '0.6rem', padding: '1rem'}}>
+                    {list.map(a => {
+                      const lv = a.levels[0]
+                      return (
+                        <div key={a.key} className="item-card" style={{padding: '0.7rem 0.9rem', borderLeft: '3px solid var(--border-cyan)'}}>
+                          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
+                            <div className="item-name" style={{fontSize: '0.9rem'}}>{lv?.name || a.name}</div>
+                            {a.levels.length > 1 && <span style={{color: 'var(--gold)', fontSize: '0.68rem'}}>{a.levels.length} 级</span>}
+                          </div>
+                          {lv?.desc && <div style={{color: 'var(--muted)', fontSize: '0.78rem', marginTop: '0.3rem', lineHeight: 1.6}}>{lv.desc}</div>}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </Layout>
   )

@@ -1,0 +1,1772 @@
+[
+  {
+    "key": "HunterTalent0",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 0,
+    "name": "敏捷",
+    "nameEn": "Dexterity",
+    "desc": "+{value} 敏捷",
+    "descEn": "+{value} Dexterity"
+  },
+  {
+    "key": "HunterTalent1",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 1,
+    "name": "闪避几率",
+    "nameEn": "Dodge Chance",
+    "desc": "+{value} 闪避几率",
+    "descEn": "+{value} Dodge Chance"
+  },
+  {
+    "key": "HunterTalent2",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 2,
+    "name": "攻击速度",
+    "nameEn": "Attack Speed",
+    "desc": "+{value1} 攻击速度，+{value2} 伤害。",
+    "descEn": "+{value1} Attack Speed and +{value2} Damage."
+  },
+  {
+    "key": "HunterTalent3",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 3,
+    "name": "远射",
+    "nameEn": "Long Shot",
+    "desc": "+{value} 对远处敌人的伤害。",
+    "descEn": "+{value} Damage to Distant enemies."
+  },
+  {
+    "key": "HunterTalent4",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 4,
+    "name": "疾行",
+    "nameEn": "Fleet Footed",
+    "desc": "移动速度 +{value}。",
+    "descEn": "+{value} Move Speed."
+  },
+  {
+    "key": "HunterTalent5",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 5,
+    "name": "稳固瞄准",
+    "nameEn": "Steady Aim",
+    "desc": "+{value} [强力攻击] 射程。",
+    "descEn": "+{value} [Strong Attack] Range."
+  },
+  {
+    "key": "HunterTalent6",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 6,
+    "name": "神射手",
+    "nameEn": "Sharpshooter",
+    "desc": "+{value} 对远处敌人的暴击几率。",
+    "descEn": "+{value} Critical Hit Chance against Distant enemies."
+  },
+  {
+    "key": "HunterTalent7",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 7,
+    "name": "毒物学识",
+    "nameEn": "Venom Lore",
+    "desc": "+{value1} 对中毒敌人的伤害，+{value2} 毒素伤害减免。",
+    "descEn": "+{value1} Damage to Poisoned enemies and +{value2} Poison Damage Reduction."
+  },
+  {
+    "key": "HunterTalent8",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 8,
+    "name": "硬化兽皮",
+    "nameEn": "Hardened Hide",
+    "desc": "+{value} 暴击伤害减免。",
+    "descEn": "+{value} Critical Damage Reduction."
+  },
+  {
+    "key": "HunterTalent9",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 9,
+    "name": "求生本能",
+    "nameEn": "Survival Instinct",
+    "desc": "被至少3名敌人包围时，+{value} 闪避几率。",
+    "descEn": "+{value} Dodge Chance while surrounded by at least 3 enemies."
+  },
+  {
+    "key": "HunterTalent10",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 10,
+    "name": "强力齐射",
+    "nameEn": "Forceful Volley",
+    "desc": "[多重射击] 命中有 {chance} 几率将敌人击退 {distance}。",
+    "descEn": "[Multishot] hits have a {chance} chance to knock enemies back {distance}."
+  },
+  {
+    "key": "HunterTalent11",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 11,
+    "name": "致命毒素",
+    "nameEn": "Deadly Toxin",
+    "desc": "+{potency} [中毒] 伤害，+{duration} 持续时间。",
+    "descEn": "+{potency} [Poisoned] Damage and +{duration} Duration."
+  },
+  {
+    "key": "HunterTalent12",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 12,
+    "name": "快速陷阱",
+    "nameEn": "Quick Traps",
+    "desc": "+{value} [陷阱] 技能冷却缩减。",
+    "descEn": "+{value} [Trap] Abilities Cooldown reduction."
+  },
+  {
+    "key": "HunterTalent13",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 13,
+    "name": "奥术知识",
+    "nameEn": "Arcane Knowledge",
+    "desc": "+{value1} 奥术伤害，+{value2} 魔法抗性。",
+    "descEn": "+{value1} Arcane Damage and +{value2} Magic Resist."
+  },
+  {
+    "key": "HunterTalent14",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 14,
+    "name": "[野兽] 奴隶强化",
+    "nameEn": "[Beast] Slave Boost",
+    "desc": "出战的 [野兽] 提供 {value} 攻击速度。",
+    "descEn": "Active [Beast] provides {value} Attack Speed."
+  },
+  {
+    "key": "HunterTalent15",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 15,
+    "name": "[恶魔] 奴隶强化",
+    "nameEn": "[Demon] Slave Boost",
+    "desc": "出战的 [恶魔] 提供 {value} 敏捷。",
+    "descEn": "Active [Demon] provides {value} Dexterity."
+  },
+  {
+    "key": "HunterTalent16",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 16,
+    "name": "震荡冲击",
+    "nameEn": "Concussive Force",
+    "desc": "[冲击波] 将敌人额外击退 {distance}。",
+    "descEn": "[Shockwave] knocks enemies back an additional {distance}."
+  },
+  {
+    "key": "HunterTalent17",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 17,
+    "name": "破绽陷阱",
+    "nameEn": "Exposing Traps",
+    "desc": "[陷阱] 命中有 {chance} 几率使目标陷入 [易伤] {duration}。",
+    "descEn": "[Trap] hits have a {chance} chance to inflict [Vulnerable] for {duration}."
+  },
+  {
+    "key": "HunterTalent18",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 18,
+    "name": "双重射击",
+    "nameEn": "Double Tap",
+    "desc": "[普通攻击] 有 {chance} 几率攻击两次。",
+    "descEn": "[Basic Attack] has a {chance} chance to strike twice."
+  },
+  {
+    "key": "HunterTalent19",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 19,
+    "name": "毒素汲取",
+    "nameEn": "Toxic Siphon",
+    "desc": "+{value} 毒素伤害，+{lifeOnHit} 命中恢复生命。",
+    "descEn": "+{value} Poison Damage and +{lifeOnHit} Life on Hit."
+  },
+  {
+    "key": "HunterTalent20",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 20,
+    "name": "独行猎手",
+    "nameEn": "Lone Hunter",
+    "desc": "周围没有敌人时，获得 {attackSpeed} 攻击速度，以及 {damage} 物理、毒素和奥术伤害。",
+    "descEn": "While no enemies are nearby, gain {attackSpeed} Attack Speed and {damage} Physical, Poison, and Arcane Damage."
+  },
+  {
+    "key": "HunterTalent21",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 21,
+    "name": "迅速重置",
+    "nameEn": "Rapid Reset",
+    "desc": "施放一次 [强力攻击] 会使所有 [陷阱] 技能的冷却时间缩短 {value}。",
+    "descEn": "Casting a [Strong Attack] reduces all [Trap] ability cooldowns by {value}."
+  },
+  {
+    "key": "HunterTalent22",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 22,
+    "name": "高效强攻",
+    "nameEn": "Efficient Assault",
+    "desc": "+{value} [强力攻击] 法力消耗减少。",
+    "descEn": "+{value} [Strong Attack] Mana Cost reduction."
+  },
+  {
+    "key": "HunterTalent23",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 23,
+    "name": "喘息之机",
+    "nameEn": "Second Wind",
+    "desc": "脱离战斗时，获得 +{value} 法力恢复。",
+    "descEn": "While out of combat, gain +{value} Mana Regeneration."
+  },
+  {
+    "key": "HunterTalent24",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 24,
+    "name": "巨型陷阱",
+    "nameEn": "Oversized Traps",
+    "desc": "[陷阱] 尺寸和触发范围扩大 {value}。",
+    "descEn": "[Trap] size and trigger range increased by {value}."
+  },
+  {
+    "key": "HunterTalent25",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 25,
+    "name": "龙之庇护",
+    "nameEn": "Dragon's Protection",
+    "desc": "当龙类奴隶激活时，获得 +{maxHealth} 最大生命值和 +{dodge} 闪避几率。",
+    "descEn": "While a Dragon-species slave is active, gain +{maxHealth} Max Health and +{dodge} Dodge Chance."
+  },
+  {
+    "key": "HunterTalent26",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 26,
+    "name": "强化毒箭",
+    "nameEn": "Improved Poison Shot",
+    "desc": "毒箭施加[中毒]的几率提高 {chance}。",
+    "descEn": "Poison Shot has +{chance} chance to apply [Poisoned]."
+  },
+  {
+    "key": "HunterTalent27",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 27,
+    "name": "强化奥术炸弹",
+    "nameEn": "Improved Arcane Bomb",
+    "desc": "奥术炸弹的爆炸半径扩大 {value}。",
+    "descEn": "Arcane Bomb splash radius increased by {value}."
+  },
+  {
+    "key": "HunterTalent28",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 28,
+    "name": "死亡标记",
+    "nameEn": "Marked for Death",
+    "desc": "你施加的[易伤]持续时间延长 {duration}。",
+    "descEn": "[Vulnerable] applied by you lasts {duration} longer."
+  },
+  {
+    "key": "HunterTalent29",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 29,
+    "name": "致命陷阱",
+    "nameEn": "Deadly Traps",
+    "desc": "对[陷阱]技能 +{value} 暴击几率",
+    "descEn": "+{value} Critical Hit Chance to [Trap] Abilities"
+  },
+  {
+    "key": "HunterTalent30",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 30,
+    "name": "致命飞刀连击",
+    "nameEn": "Deadly Knife Barrage",
+    "desc": "[飞刀连击]获得 +{value} 暴击几率。",
+    "descEn": "[Knife Barrage] gains +{value} Critical Hit Chance."
+  },
+  {
+    "key": "HunterTalent31",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 31,
+    "name": "飞刀风暴",
+    "nameEn": "Knife Storm",
+    "desc": "[飞刀连击]额外攻击 {value} 个敌人。",
+    "descEn": "[Knife Barrage] targets {value} additional enemies."
+  },
+  {
+    "key": "HunterTalent32",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 32,
+    "name": "强化二连矢",
+    "nameEn": "Improved Twin Arrows",
+    "desc": "命中敌人后每支[二连矢]投射物会随机弹射至另一名敌人。[二连矢]伤害提高 {damage}。",
+    "descEn": "After hitting an enemy each [Twin Arrows] projectile ricochets to another random enemy. [Twin Arrows] deals {damage} more damage."
+  },
+  {
+    "key": "HunterTalent33",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 33,
+    "name": "强化稳固射击",
+    "nameEn": "Improved Steady Shot",
+    "desc": "[稳固射击]的投射物每穿透一名敌人，后续伤害提高 {value}。",
+    "descEn": "[Steady Shot] deals {value} more damage for each enemy its projectile has already pierced."
+  },
+  {
+    "key": "HunterTalent34",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 34,
+    "name": "强化幻影形态",
+    "nameEn": "Empowered Phantom Form",
+    "desc": "[幻影形态]的闪避几率和攻击速度加成提高 {value}。",
+    "descEn": "[Phantom Form]'s Dodge Chance and Attack Speed bonuses are increased by {value}."
+  },
+  {
+    "key": "HunterTalent35",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 35,
+    "name": "物理残暴",
+    "nameEn": "Physical Brutality",
+    "desc": "对[物理]技能 +{value} 暴击伤害",
+    "descEn": "+{value} Critical Hit Damage to [Physical] Abilities"
+  },
+  {
+    "key": "HunterTalent36",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 36,
+    "name": "毒液汲取",
+    "nameEn": "Venomous Leech",
+    "desc": "[中毒]每次生效有 {chance} 几率触发命中恢复生命。",
+    "descEn": "[Poisoned] ticks have a {chance} chance to trigger Life on Hit."
+  },
+  {
+    "key": "HunterTalent37",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 37,
+    "name": "持续火力",
+    "nameEn": "Sustained Fire",
+    "desc": "[急速射击]的引导持续时间延长 {value}。",
+    "descEn": "[Rapid Fire]'s channel duration is increased by {value}."
+  },
+  {
+    "key": "HunterTalent38",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 38,
+    "name": "暴击注毒",
+    "nameEn": "Critical Injection",
+    "desc": "[毒素]技能暴击时有 {chance} 几率额外施加 1 层[中毒]。",
+    "descEn": "Critical Hits with [Poison] abilities have a {chance} chance to apply an additional stack of [Poisoned]."
+  },
+  {
+    "key": "HunterTalent39",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 39,
+    "name": "奥术侵蚀",
+    "nameEn": "Arcane Corrosion",
+    "desc": "[奥术箭雨]命中时有 {chance} 几率施加[奥术侵蚀]。[奥术炸弹]或[多重射击]命中时会消耗所有层数，并在 1 层时造成相当于 {damage1} 武器伤害的奥术伤害，2 层时造成 {damage2}。",
+    "descEn": "[Arcane Arrowstorm] hits have a {chance} chance to apply [Arcane Corrosion]. A hit from [Arcane Bomb] or [Multishot] consumes all stacks and deals {damage1} weapon damage at 1 stack or {damage2} at 2 stacks as Arcane damage."
+  },
+  {
+    "key": "HunterTalent40",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 40,
+    "name": "困兽反击",
+    "nameEn": "Cornered Beast",
+    "desc": "生命值低于 {threshold} 时受到伤害会使 {radius} 内的敌人陷入[眩晕]，持续 {duration}。该效果每 {cooldown} 最多触发一次。",
+    "descEn": "Taking damage while below {threshold} Health inflicts [Stunned] on enemies within {radius} for {duration}. This can trigger once every {cooldown}."
+  },
+  {
+    "key": "HunterTalent41",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 41,
+    "name": "炫光回能",
+    "nameEn": "Dazzling Recovery",
+    "desc": "施放[致盲射击]技能时恢复 {mana} 法力。",
+    "descEn": "Casting a [Blinding Shot] ability restores {mana} Mana."
+  },
+  {
+    "key": "HunterTalent42",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 42,
+    "name": "急速照明弹",
+    "nameEn": "Rapid Flare",
+    "desc": "+{value} [照明弹]冷却时间缩减。",
+    "descEn": "+{value} [Flare] Cooldown reduction."
+  },
+  {
+    "key": "HunterTalent43",
+    "class": "Hunter",
+    "classCn": "猎人",
+    "index": 43,
+    "name": "奥术充能",
+    "nameEn": "Arcane Charge",
+    "desc": "施放[奥术]技能获得[奥术充能]，持续 {duration}，每层提高 {value} 奥术伤害（最多 50 层）。",
+    "descEn": "Casting an [Arcane] ability grants [Arcane Charge] for {duration}, increasing Arcane Damage by {value} per stack (Max 50 stacks)."
+  },
+  {
+    "key": "MonkTalent0",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 0,
+    "name": "敏捷",
+    "nameEn": "Dexterity",
+    "desc": "+{value} 敏捷",
+    "descEn": "+{value} Dexterity"
+  },
+  {
+    "key": "MonkTalent1",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 1,
+    "name": "闪避几率",
+    "nameEn": "Dodge Chance",
+    "desc": "+{value} 闪避几率",
+    "descEn": "+{value} Dodge Chance"
+  },
+  {
+    "key": "MonkTalent2",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 2,
+    "name": "移动速度",
+    "nameEn": "Movement Speed",
+    "desc": "+{value} 移动速度",
+    "descEn": "+{value} Movement Speed"
+  },
+  {
+    "key": "MonkTalent3",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 3,
+    "name": "活力",
+    "nameEn": "Vitality",
+    "desc": "+{value} 最大生命值",
+    "descEn": "+{value} Max HP"
+  },
+  {
+    "key": "MonkTalent4",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 4,
+    "name": "最大法力值",
+    "nameEn": "Max Mana",
+    "desc": "+{value} 最大法力值",
+    "descEn": "+{value} Max Mana"
+  },
+  {
+    "key": "MonkTalent5",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 5,
+    "name": "攻击速度",
+    "nameEn": "Attack Speed",
+    "desc": "+{value} 攻击速度",
+    "descEn": "+{value} Attack Speed"
+  },
+  {
+    "key": "MonkTalent6",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 6,
+    "name": "物理伤害",
+    "nameEn": "Physical Damage",
+    "desc": "+{value} 物理伤害",
+    "descEn": "+{value} Physical Damage"
+  },
+  {
+    "key": "MonkTalent7",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 7,
+    "name": "治疗与魔法抗性",
+    "nameEn": "Healing & Magic Resist",
+    "desc": "+{value} 受到治疗，+{resistance} 魔法抗性",
+    "descEn": "+{value} Healing Received and +{resistance} Magic Resist"
+  },
+  {
+    "key": "MonkTalent8",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 8,
+    "name": "击杀恢复法力",
+    "nameEn": "Mana On Kill",
+    "desc": "+{value} 击杀恢复法力",
+    "descEn": "+{value} Mana On Kill"
+  },
+  {
+    "key": "MonkTalent9",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 9,
+    "name": "横扫修行",
+    "nameEn": "Sweeping Discipline",
+    "desc": "对[范围]技能 +{value} 伤害",
+    "descEn": "+{value} Damage to [AOE] abilities"
+  },
+  {
+    "key": "MonkTalent10",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 10,
+    "name": "强化闪电技能：暴击几率",
+    "nameEn": "Enhance Lightning Abilities: Critical Hit Chance",
+    "desc": "对[闪电]技能 +{value} 暴击几率",
+    "descEn": "+{value} Critical Hit Chance to [Lightning] Abilities"
+  },
+  {
+    "key": "MonkTalent11",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 11,
+    "name": "闪电伤害",
+    "nameEn": "Lightning Damage",
+    "desc": "+{value} 闪电伤害",
+    "descEn": "+{value} Lightning Damage"
+  },
+  {
+    "key": "MonkTalent12",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 12,
+    "name": "连环劲",
+    "nameEn": "Chain Force",
+    "desc": "每施放 {casts} 次普通攻击，该次攻击的直接伤害提高 {value}。",
+    "descEn": "Every {casts} casts of Basic Attack, that attack deals {value} more direct damage."
+  },
+  {
+    "key": "MonkTalent13",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 13,
+    "name": "余震",
+    "nameEn": "Aftershock",
+    "desc": "震地击的第三次打击有 {chance} 几率施加[恍惚]状态",
+    "descEn": "The third strike from Seismic Strike has a {chance} chance to inflict [Dazed] status"
+  },
+  {
+    "key": "MonkTalent14",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 14,
+    "name": "[野兽]仆从增益",
+    "nameEn": "[Beast] Slave Boost",
+    "desc": "激活的[野兽]提供 {value} 敏捷",
+    "descEn": "Active [Beast] provides {value} Dexterity"
+  },
+  {
+    "key": "MonkTalent15",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 15,
+    "name": "[元素]仆从增益",
+    "nameEn": "[Elemental] Slave Boost",
+    "desc": "激活的[元素]提供 +{value} 魔法抗性和 +{lightning} 闪电伤害",
+    "descEn": "Active [Elemental] provides +{value} Magic Resist and +{lightning} Lightning Damage"
+  },
+  {
+    "key": "MonkTalent16",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 16,
+    "name": "启明",
+    "nameEn": "Illumination",
+    "desc": "[闪电]技能的暴击有 {chance} 几率触发你的击杀恢复法力",
+    "descEn": "Critical Hit from [Lightning] abilities will have {chance} chance to trigger your Mana On Kill"
+  },
+  {
+    "key": "MonkTalent17",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 17,
+    "name": "雷鸣",
+    "nameEn": "Thunderclap",
+    "desc": "圣裁之击的冲击波有 {chance} 几率使命中的敌人眩晕",
+    "descEn": "Sacred Judgment's shockwave has a {chance} chance to stun the enemies it strikes"
+  },
+  {
+    "key": "MonkTalent18",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 18,
+    "name": "旋风震退",
+    "nameEn": "Cyclone Repulse",
+    "desc": "旋风棍式命中时将敌人击退 {value} 码。",
+    "descEn": "Whirlwind Staff hits knock enemies back {value} meters."
+  },
+  {
+    "key": "MonkTalent19",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 19,
+    "name": "魔法抗性",
+    "nameEn": "Magic Resist",
+    "desc": "+{value} 魔法抗性",
+    "descEn": "+{value} Magic Resist"
+  },
+  {
+    "key": "MonkTalent20",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 20,
+    "name": "强化三重击：暴击伤害",
+    "nameEn": "Enhance Threefold Strike: Critical Damage",
+    "desc": "对三重击 +{value} 暴击伤害",
+    "descEn": "+{value} Critical Damage to Threefold Strike"
+  },
+  {
+    "key": "MonkTalent21",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 21,
+    "name": "微风之流",
+    "nameEn": "Zephyr's Flow",
+    "desc": "每次闪避将产生 {value} 法力",
+    "descEn": "Each Dodge will generate {value} Mana"
+  },
+  {
+    "key": "MonkTalent22",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 22,
+    "name": "乘隙而击",
+    "nameEn": "Exploit Weakness",
+    "desc": "对[恍惚]敌人的伤害提高 {value}。",
+    "descEn": "+{value} Damage to [Dazed] enemies."
+  },
+  {
+    "key": "MonkTalent23",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 23,
+    "name": "护持之息",
+    "nameEn": "Sheltering Breath",
+    "desc": "施放灵气涌流后，受到伤害降低 {value}，持续 {duration}。",
+    "descEn": "Casting Spirit Stream reduces damage taken by {value} for {duration}."
+  },
+  {
+    "key": "MonkTalent24",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 24,
+    "name": "治愈之灵",
+    "nameEn": "Healing Spirit",
+    "desc": "使[气术]技能的冷却时间减少 {value}。",
+    "descEn": "Reduce the cooldown of [Chi] abilities by {value}."
+  },
+  {
+    "key": "MonkTalent25",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 25,
+    "name": "强化穿刺突进：伤害",
+    "nameEn": "Enhance Piercing Lunge: Damage",
+    "desc": "对穿刺突进 +{value} 伤害",
+    "descEn": "+{value} Damage to Piercing Lunge"
+  },
+  {
+    "key": "MonkTalent26",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 26,
+    "name": "强化神圣法球：速度",
+    "nameEn": "Enhance Sacred Orbs: Speed",
+    "desc": "神圣法球 +{value} 旋转速度",
+    "descEn": "+{value} rotation speed to Sacred Orbs"
+  },
+  {
+    "key": "MonkTalent27",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 27,
+    "name": "[人形] 奴隶强化",
+    "nameEn": "[Humanoid] Slave Boost",
+    "desc": "出战的 [人形] 提供 {value} 对精英敌人的伤害。",
+    "descEn": "Active [Humanoid] provides {value} Damage vs Elite."
+  },
+  {
+    "key": "MonkTalent28",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 28,
+    "name": "贯劲",
+    "nameEn": "Gathered Force",
+    "desc": "每施放 {casts} 次普通攻击积攒一次贯劲，次数可累积。每次强力攻击消耗一次，使该次伤害独立提高 {value}。",
+    "descEn": "Every {casts} Basic Attack casts store one charge. Each Strong Attack spends one charge to deal {value} more damage. Charges accumulate."
+  },
+  {
+    "key": "MonkTalent29",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 29,
+    "name": "沉重之手",
+    "nameEn": "Heavy Hands",
+    "desc": "对[强力攻击]技能 +{value} 暴击伤害",
+    "descEn": "+{value} Critical Damage to [Strong Attack] abilities"
+  },
+  {
+    "key": "MonkTalent30",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 30,
+    "name": "疾风尾流",
+    "nameEn": "Slipstream",
+    "desc": "冲锋提供 +{value} 闪避几率，持续 {duration}",
+    "descEn": "Charge grants +{value} Dodge Chance for {duration}"
+  },
+  {
+    "key": "MonkTalent31",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 31,
+    "name": "强化灵体分身：持续时间",
+    "nameEn": "Enhance Spirit Twin: Duration",
+    "desc": "灵体分身的持续时间延长 {value}",
+    "descEn": "Spirit Twin lingers {value} longer"
+  },
+  {
+    "key": "MonkTalent32",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 32,
+    "name": "强劲",
+    "nameEn": "Vigor",
+    "desc": "对[物理]技能 +{value} 暴击几率",
+    "descEn": "+{value} Critical Hit Chance to [Physical] Abilities"
+  },
+  {
+    "key": "MonkTalent33",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 33,
+    "name": "基本功",
+    "nameEn": "Fundamentals",
+    "desc": "对[普通攻击]技能 +{value} 伤害",
+    "descEn": "+{value} Damage to [Basic Attack] Abilities"
+  },
+  {
+    "key": "MonkTalent34",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 34,
+    "name": "强化双金掌：伤害与法力消耗",
+    "nameEn": "Enhance Golden Palms: Damage & Mana Cost",
+    "desc": "双金掌的法力消耗降低 {mana}，并造成 +{damage} 伤害",
+    "descEn": "Golden Palms costs {mana} less Mana and deals +{damage} Damage"
+  },
+  {
+    "key": "MonkTalent36",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 36,
+    "name": "无相",
+    "nameEn": "Formless",
+    "desc": "获得相当于你 {value} 闪避几率的额外暴击伤害。",
+    "descEn": "Gain bonus Critical Damage equal to {value} of your Dodge Chance."
+  },
+  {
+    "key": "MonkTalent37",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 37,
+    "name": "强化气弹：治疗",
+    "nameEn": "Enhance Chi Bolt: Healing",
+    "desc": "气弹的第三发额外回复你 {value} 最大生命值",
+    "descEn": "Chi Bolt's third bolt restores an additional {value} of your Max Health"
+  },
+  {
+    "key": "MonkTalent38",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 38,
+    "name": "强化神圣雷霆：伤害",
+    "nameEn": "Enhance Divine Thunder: Damage",
+    "desc": "对神圣雷霆 +{value} 伤害",
+    "descEn": "+{value} Damage to Divine Thunder"
+  },
+  {
+    "key": "MonkTalent39",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 39,
+    "name": "气脉相同",
+    "nameEn": "Shared Chi",
+    "desc": "施放与上一次不同的[气术]技能时，恢复 {value} 最大法力。首次施放不回蓝。",
+    "descEn": "Casting a different [Chi] ability from your previous [Chi] ability restores {value} of Max Mana. The first cast restores no mana."
+  },
+  {
+    "key": "MonkTalent41",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 41,
+    "name": "蓄电法球",
+    "nameEn": "Charged Orb",
+    "desc": "神圣法球命中时有 {chance} 几率施加 {stacks} 层[静电]。",
+    "descEn": "Sacred Orbs hits have a {chance} chance to apply {stacks} stack of [Electrostatic]."
+  },
+  {
+    "key": "MonkTalent42",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 42,
+    "name": "雷霆降临",
+    "nameEn": "Thundering",
+    "desc": "[闪电]技能命中拥有 5 层[静电]的敌人时，消耗这些层数并召唤一道落雷，造成 {damage} 武器伤害的闪电伤害",
+    "descEn": "A [Lightning] hit on an enemy with 5 stacks of [Electrostatic] consumes them, calling down a lightning strike for {damage} weapon damage as Lightning damage"
+  },
+  {
+    "key": "MonkTalent43",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 43,
+    "name": "镜影步",
+    "nameEn": "Mirror Steps",
+    "desc": "闪避成功后获得 +{value} 物理伤害，持续 {duration}",
+    "descEn": "After dodging, gain +{value} Physical Damage for {duration}"
+  },
+  {
+    "key": "MonkTalent44",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 44,
+    "name": "铁血体魄",
+    "nameEn": "Iron Constitution",
+    "desc": "受到致命伤时恢复满血，并使受到伤害降低 {reduction}，持续 {duration}。冷却：{cooldown}。",
+    "descEn": "A lethal blow restores you to full health and reduces damage taken by {reduction} for {duration}. Cooldown: {cooldown}."
+  },
+  {
+    "key": "MonkTalent45",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 45,
+    "name": "护体真气",
+    "nameEn": "Chi Ward",
+    "desc": "每实际消耗 1 点法力，恢复 {value} 点生命。",
+    "descEn": "Restore {value} Health for each Mana spent."
+  },
+  {
+    "key": "MonkTalent46",
+    "class": "Monk",
+    "classCn": "武僧",
+    "index": 46,
+    "name": "倾气",
+    "nameEn": "Chi Expenditure",
+    "desc": "施放强力攻击后，消耗全部剩余法力。每额外消耗 1 点法力，该次攻击的直接伤害提高 {damagePerMana}。",
+    "descEn": "After casting a Strong Attack, spend all remaining Mana. Each extra Mana spent increases that attack’s direct damage by {damagePerMana}."
+  },
+  {
+    "key": "SorcererTalent0",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 0,
+    "name": "奥术洞察",
+    "nameEn": "Arcane Insight",
+    "desc": "+{value} 智力",
+    "descEn": "+{value} Intelligence"
+  },
+  {
+    "key": "SorcererTalent1",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 1,
+    "name": "法力涌流",
+    "nameEn": "Mana Flow",
+    "desc": "+{value} 最大法力值",
+    "descEn": "+{value} Max Mana"
+  },
+  {
+    "key": "SorcererTalent2",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 2,
+    "name": "冰霜护甲",
+    "nameEn": "Frost Armor",
+    "desc": "获得 {value} 点护甲，并使总护甲提高 {armor}。",
+    "descEn": "Gain {value} Armor and increase your total Armor by {armor}."
+  },
+  {
+    "key": "SorcererTalent3",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 3,
+    "name": "奥术延伸",
+    "nameEn": "Arcane Reach",
+    "desc": "+{value} [普通攻击] 射程。",
+    "descEn": "+{value} [Basic Attack] Range."
+  },
+  {
+    "key": "SorcererTalent4",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 4,
+    "name": "灼热之刃",
+    "nameEn": "Searing Edge",
+    "desc": "+{value} [普通攻击] 暴击几率。",
+    "descEn": "+{value} [Basic Attack] Critical Hit Chance."
+  },
+  {
+    "key": "SorcererTalent5",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 5,
+    "name": "点燃",
+    "nameEn": "Ignite",
+    "desc": "暴击有 {value} 几率使受害者陷入 [灼烧]。",
+    "descEn": "Critical Hits have a {value} chance to apply [Burn] to the victim."
+  },
+  {
+    "key": "SorcererTalent6",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 6,
+    "name": "冰寒惩戒",
+    "nameEn": "Cold Retribution",
+    "desc": "获得 {armor} 护甲加成。近战攻击者有 {value} 几率陷入 [冰寒]，持续 {duration}。",
+    "descEn": "Gain {armor} increased Armor. Melee attackers have a {value} chance to receive [Chill] for {duration}."
+  },
+  {
+    "key": "SorcererTalent7",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 7,
+    "name": "碎冰",
+    "nameEn": "Shattering Ice",
+    "desc": "对 [冰冻] 敌人 +{value} 暴击几率。",
+    "descEn": "+{value} Critical Hit Chance against [Frozen] enemies."
+  },
+  {
+    "key": "SorcererTalent8",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 8,
+    "name": "焚烧",
+    "nameEn": "Immolation",
+    "desc": "火球有 {chance} 几率使目标陷入 [灼烧]。",
+    "descEn": "Fire Ball has a {chance} chance to apply [Burn] to the target."
+  },
+  {
+    "key": "SorcererTalent9",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 9,
+    "name": "寒霜精通",
+    "nameEn": "Frost Mastery",
+    "desc": "+{value} 冰霜伤害",
+    "descEn": "+{value} Cold Damage"
+  },
+  {
+    "key": "SorcererTalent10",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 10,
+    "name": "燎原之火",
+    "nameEn": "Conflagration",
+    "desc": "+{value} 对灼烧目标的伤害",
+    "descEn": "+{value} Damage to Burning targets"
+  },
+  {
+    "key": "SorcererTalent11",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 11,
+    "name": "法力恢复",
+    "nameEn": "Mana Regeneration",
+    "desc": "+{value} 法力恢复",
+    "descEn": "+{value} Mana Regen"
+  },
+  {
+    "key": "SorcererTalent12",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 12,
+    "name": "速冻",
+    "nameEn": "Flash Freeze",
+    "desc": "使敌人陷入 [冰寒] 时有 {value} 几率同时施加 [冰冻]。",
+    "descEn": "Applying [Chill] to an enemy has a {value} chance to also apply [Frozen]."
+  },
+  {
+    "key": "SorcererTalent13",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 13,
+    "name": "[野兽] 奴隶强化",
+    "nameEn": "[Beast] Slave Boost",
+    "desc": "出战的 [野兽] 提供 {value} 生命药水发现。",
+    "descEn": "Active [Beast] provides {value} Health Potion Find."
+  },
+  {
+    "key": "SorcererTalent14",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 14,
+    "name": "[恶魔] 奴隶强化",
+    "nameEn": "[Demon] Slave Boost",
+    "desc": "出战的 [恶魔] 提供 {value} 智力。",
+    "descEn": "Active [Demon] provides {value} Intelligence."
+  },
+  {
+    "key": "SorcererTalent15",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 15,
+    "name": "爆燃",
+    "nameEn": "Combustion",
+    "desc": "击杀处于[灼烧]状态的敌人时，有 {chance} 几率引发烈焰爆炸，对附近敌人造成 {damage} 武器伤害。",
+    "descEn": "When you kill an enemy affected by [Burn], there is a {chance} chance to trigger a fiery explosion, dealing {damage} weapon damage to nearby enemies."
+  },
+  {
+    "key": "SorcererTalent16",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 16,
+    "name": "严寒",
+    "nameEn": "Deep Chill",
+    "desc": "你的 [冰寒] 强度提升 {potency}，减速更强且持续更久。",
+    "descEn": "Your [Chill] is {potency} more potent, slowing enemies more and lasting longer."
+  },
+  {
+    "key": "SorcererTalent17",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 17,
+    "name": "雷霆震慑",
+    "nameEn": "Thunderstruck",
+    "desc": "闪电风暴击中的敌人有 {stunChance} 几率陷入 [短暂眩晕]，持续 {duration}。",
+    "descEn": "Lightning Storm has a {stunChance} chance to apply [Short Stun] to enemies it hits for {duration}."
+  },
+  {
+    "key": "SorcererTalent18",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 18,
+    "name": "法力导流",
+    "nameEn": "Mana Conduit",
+    "desc": "[普通攻击] 额外生成 +{value} 法力。",
+    "descEn": "[Basic Attack] generates +{value} Mana."
+  },
+  {
+    "key": "SorcererTalent19",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 19,
+    "name": "电能护盾",
+    "nameEn": "Electrical Shield",
+    "desc": "+{armor} 护甲。近战攻击者有 {chance} 几率使你获得 {mana} 法力。",
+    "descEn": "+{armor} Armor. Melee attackers have a {chance} chance to grant you {mana} Mana."
+  },
+  {
+    "key": "SorcererTalent20",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 20,
+    "name": "风暴处决者",
+    "nameEn": "Storm Executioner",
+    "desc": "+{lightning} 闪电伤害。+{elite} 对精英敌人的伤害。",
+    "descEn": "+{lightning} Lightning Damage. +{elite} Damage to Elite enemies."
+  },
+  {
+    "key": "SorcererTalent21",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 21,
+    "name": "烈焰守护",
+    "nameEn": "Flame Ward",
+    "desc": "+{fire} 火焰伤害。+{magicResist} 魔法抗性。",
+    "descEn": "+{fire} Fire Damage. +{magicResist} Magic Resist."
+  },
+  {
+    "key": "SorcererTalent22",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 22,
+    "name": "强化冰碎片：伤害",
+    "nameEn": "Enhance Ice Shards: Damage",
+    "desc": "+{value} [冰碎片] 伤害。",
+    "descEn": "+{value} [Ice Shards] Damage."
+  },
+  {
+    "key": "SorcererTalent23",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 23,
+    "name": "强化电击：法力获取",
+    "nameEn": "Enhance Electrocute: Mana Gain",
+    "desc": "[电击] +{value} 法力获取。",
+    "descEn": "+{value} Mana Gain from [Electrocute]."
+  },
+  {
+    "key": "SorcererTalent24",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 24,
+    "name": "强化冰陨石：法力消耗",
+    "nameEn": "Enhance Ice Meteor: Mana Cost",
+    "desc": "+{value} [冰陨石] 法力消耗减少。",
+    "descEn": "+{value} [Ice Meteor] Mana Cost reduction."
+  },
+  {
+    "key": "SorcererTalent25",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 25,
+    "name": "强化烈焰吐息：暴击伤害",
+    "nameEn": "Enhance Flame Breath: Crit Damage",
+    "desc": "+{value} [烈焰吐息] 暴击伤害。",
+    "descEn": "+{value} [Flame Breath] Critical Hit Damage."
+  },
+  {
+    "key": "SorcererTalent26",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 26,
+    "name": "风暴导体",
+    "nameEn": "Storm Conduit",
+    "desc": "[电击] 有 {chance} 几率同时施放 [闪电风暴]。",
+    "descEn": "[Electrocute] has a {chance} chance to also cast [Lightning Storm]."
+  },
+  {
+    "key": "SorcererTalent27",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 27,
+    "name": "静电充能",
+    "nameEn": "Static Charge",
+    "desc": "闪电技能击中敌人时有 {stunChance} 几率施加 [静电]。",
+    "descEn": "Lightning abilities have a {stunChance} chance to apply [Electrostatic] to enemies they hit."
+  },
+  {
+    "key": "SorcererTalent28",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 28,
+    "name": "寒霜迅捷",
+    "nameEn": "Frost Alacrity",
+    "desc": "冰霜技能的冷却时间减少 {value}。",
+    "descEn": "Reduces the cooldown of Frost abilities by {value}."
+  },
+  {
+    "key": "SorcererTalent29",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 29,
+    "name": "等离子传导",
+    "nameEn": "Plasma Conduction",
+    "desc": "[烈焰雷电]对受[灼烧]影响的敌人造成的伤害提高 +{burningDamage}，敌人身上每层[静电]使造成的伤害提高 +{electrostaticDamage}。敌人同时拥有两种效果时两个加成均生效。",
+    "descEn": "[Flame Lightning] deals +{burningDamage} damage to enemies affected by [Burn] and +{electrostaticDamage} damage per stack of [Electrostatic] on the enemy. Both bonuses apply when the enemy has both effects."
+  },
+  {
+    "key": "SorcererTalent30",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 30,
+    "name": "冰霜光束扩展",
+    "nameEn": "Frost Beam Expansion",
+    "desc": "[冰霜光束]的长度和宽度提高 {value}。",
+    "descEn": "[Frost Beam]'s length and width are increased by {value}."
+  },
+  {
+    "key": "SorcererTalent31",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 31,
+    "name": "冰霜蓄能",
+    "nameEn": "Frozen Reservoir",
+    "desc": "施放[冰霜新星]时有 {chance} 几率恢复 {value} 点法力值。",
+    "descEn": "Casting [Ice Nova] has a {chance} chance to restore {value} Mana."
+  },
+  {
+    "key": "SorcererTalent32",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 32,
+    "name": "元素狂怒",
+    "nameEn": "Elemental Fury",
+    "desc": "[火元素]的攻击速度提高 {value}。",
+    "descEn": "[Fire Elemental] attacks {value} faster."
+  },
+  {
+    "key": "SorcererTalent33",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 33,
+    "name": "寒冰复苏",
+    "nameEn": "Frozen Renewal",
+    "desc": "[寒冰屏障]期间，每秒恢复最大生命值的 {value}。",
+    "descEn": "Restore {value} of your maximum Health every second during [Ice Block]."
+  },
+  {
+    "key": "SorcererTalent34",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 34,
+    "name": "天灾",
+    "nameEn": "Cataclysm",
+    "desc": "[火陨石]造成 +{damage} 伤害，但冷却时间延长 {cooldown}。",
+    "descEn": "[Fire Meteor] deals +{damage} Damage but has a {cooldown} longer Cooldown."
+  },
+  {
+    "key": "SorcererTalent35",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 35,
+    "name": "烈焰守护",
+    "nameEn": "Flame Ward",
+    "desc": "[烈焰光环]激活期间，护甲和魔法抗性提高 {value}。",
+    "descEn": "While [Flame Aura] is active, gain +{value} Armor and Magic Resist."
+  },
+  {
+    "key": "SorcererTalent36",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 36,
+    "name": "持久雷云",
+    "nameEn": "Lingering Storm",
+    "desc": "[雷云]的地面效果持续时间延长 {value}。",
+    "descEn": "[Lightning Cloud]'s ground effect lasts {value} longer."
+  },
+  {
+    "key": "SorcererTalent37",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 37,
+    "name": "永冻",
+    "nameEn": "Permafrost",
+    "desc": "你施加的[冰冻]持续时间延长 {duration}。",
+    "descEn": "[Frozen] applied by you lasts {duration} longer."
+  },
+  {
+    "key": "SorcererTalent38",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 38,
+    "name": "奥术暴露",
+    "nameEn": "Arcane Exposure",
+    "desc": "每施放 {casts} 次[强力攻击]，就会对命中的目标施加[易伤]。",
+    "descEn": "Every {casts} casts of [Strong Attack] apply [Vulnerable] to targets hit."
+  },
+  {
+    "key": "SorcererTalent39",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 39,
+    "name": "奥术储能",
+    "nameEn": "Arcane Reservoir",
+    "desc": "你的最大法力值的 {value} 会加成到智力。",
+    "descEn": "{value} of your Max Mana is added to Intelligence."
+  },
+  {
+    "key": "SorcererTalent40",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 40,
+    "name": "奥术动能",
+    "nameEn": "Arcane Momentum",
+    "desc": "施放[特殊]技能会使[普通攻击]伤害提高 {value}，持续 {duration}。",
+    "descEn": "Casting a [Special] Ability increases [Basic Attack] damage by {value} for {duration}."
+  },
+  {
+    "key": "SorcererTalent41",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 41,
+    "name": "电流传导",
+    "nameEn": "Current Transfer",
+    "desc": "受[静电]影响的敌人死亡时，有 {chance} 几率对 {radius} 范围内的敌人施加[静电]。",
+    "descEn": "When an enemy affected by [Electrostatic] dies, it has a {chance} chance to apply [Electrostatic] to enemies within {radius}."
+  },
+  {
+    "key": "SorcererTalent42",
+    "class": "Sorcerer",
+    "classCn": "法师",
+    "index": 42,
+    "name": "风暴精通",
+    "nameEn": "Storm Mastery",
+    "desc": "[闪电]技能获得 +{critDamage} 暴击伤害，并获得 +{resistance} 闪电伤害减免。",
+    "descEn": "Gain +{critDamage} Critical Hit Damage to [Lightning] Abilities and +{resistance} Lightning Damage Reduction."
+  },
+  {
+    "key": "WarriorTalent0",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 0,
+    "name": "力量",
+    "nameEn": "Strength",
+    "desc": "+{value} 力量",
+    "descEn": "+{value} Strength"
+  },
+  {
+    "key": "WarriorTalent1",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 1,
+    "name": "活力",
+    "nameEn": "Vitality",
+    "desc": "+{value} 最大生命值与 +{regen} 生命恢复",
+    "descEn": "+{value} Max HP and +{regen} Life Regen"
+  },
+  {
+    "key": "WarriorTalent2",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 2,
+    "name": "护甲",
+    "nameEn": "Armor",
+    "desc": "+{value1} 护甲，+{value2} 魔法抗性",
+    "descEn": "+{value1} Armor and +{value2} Magic Resist"
+  },
+  {
+    "key": "WarriorTalent3",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 3,
+    "name": "迎击",
+    "nameEn": "Hold the Line",
+    "desc": "附近有至少3名存活敌人时，受到的伤害降低 {value}。",
+    "descEn": "Take {value} less damage while at least 3 living enemies are nearby."
+  },
+  {
+    "key": "WarriorTalent4",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 4,
+    "name": "暴击几率",
+    "nameEn": "Critical Hit Chance",
+    "desc": "+{value} 暴击几率",
+    "descEn": "+{value} Critical Hit Chance"
+  },
+  {
+    "key": "WarriorTalent5",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 5,
+    "name": "暴击伤害",
+    "nameEn": "Critical Hit Damage",
+    "desc": "+{value} 暴击伤害",
+    "descEn": "+{value} Critical Hit Damage"
+  },
+  {
+    "key": "WarriorTalent6",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 6,
+    "name": "荆棘",
+    "nameEn": "Thorn",
+    "desc": "+{value} 荆棘",
+    "descEn": "+{value} Thorn"
+  },
+  {
+    "key": "WarriorTalent7",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 7,
+    "name": "生命恢复",
+    "nameEn": "Life Regeneration",
+    "desc": "+{value} 生命恢复",
+    "descEn": "+{value} Life Regen"
+  },
+  {
+    "key": "WarriorTalent8",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 8,
+    "name": "挫志怒吼",
+    "nameEn": "Demoralizing Shout",
+    "desc": "施放[战吼]时，使附近敌人造成的伤害降低 {value}，持续 {duration}。",
+    "descEn": "Casting a [Warcry] reduces nearby enemies’ damage dealt by {value} for {duration}."
+  },
+  {
+    "key": "WarriorTalent9",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 9,
+    "name": "弱点掌握",
+    "nameEn": "Weakness Mastery",
+    "desc": "+{value} 对易伤目标的伤害",
+    "descEn": "+{value} Damage to Vulnerable targets"
+  },
+  {
+    "key": "WarriorTalent10",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 10,
+    "name": "劈砍狂怒",
+    "nameEn": "Cleaving Rage",
+    "desc": "释放 [普通攻击] 技能后，每层 +{value} 攻击速度，最多叠加10层。",
+    "descEn": "Casting a [Basic Attack] ability grants +{value} Attack Speed per stack (up to 10 stacks)."
+  },
+  {
+    "key": "WarriorTalent11",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 11,
+    "name": "战斗激励",
+    "nameEn": "Battle Inspiration",
+    "desc": "施放[战吼]时，使另一个[特殊]技能的剩余冷却减少 {value} 秒。",
+    "descEn": "Casting a [Warcry] reduces the other [Special] ability’s remaining cooldown by {value} second."
+  },
+  {
+    "key": "WarriorTalent12",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 12,
+    "name": "重击",
+    "nameEn": "Heavy Blow",
+    "desc": "[强力攻击]的直接伤害暴击命中敌人时，使其陷入[易伤]，持续 {duration}。",
+    "descEn": "[Strong Attack] direct critical hits inflict [Vulnerable] for {duration}."
+  },
+  {
+    "key": "WarriorTalent13",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 13,
+    "name": "荆棘强化",
+    "nameEn": "Thorn Boost",
+    "desc": "+{value} 荆棘",
+    "descEn": "+{value} Thorn"
+  },
+  {
+    "key": "WarriorTalent14",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 14,
+    "name": "强化强力攻击：法力",
+    "nameEn": "Enhance Strong Attack: Mana",
+    "desc": "+{value} [强力攻击] 法力消耗减少。",
+    "descEn": "+{value} [Strong Attack] Mana Cost reduction."
+  },
+  {
+    "key": "WarriorTalent15",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 15,
+    "name": "怒火注入",
+    "nameEn": "Rage Infusion",
+    "desc": "+{strongAttackDamage} [强力攻击] 伤害，但也 +{strongAttackManaCost} 法力消耗。",
+    "descEn": "+{strongAttackDamage} [Strong Attack] Damage, but also +{strongAttackManaCost} Mana Cost."
+  },
+  {
+    "key": "WarriorTalent16",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 16,
+    "name": "强化战吼：冷却",
+    "nameEn": "Enhance Warcry: Cooldown",
+    "desc": "+{value} [战吼] 技能冷却缩减。",
+    "descEn": "+{value} [Warcry] Abilities Cooldown reduction."
+  },
+  {
+    "key": "WarriorTalent17",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 17,
+    "name": "怒火导引",
+    "nameEn": "Rage Channeling",
+    "desc": "激活狂怒护盾时生成 {value} 法力",
+    "descEn": "Generate {value} Mana upon activating Rage Shield"
+  },
+  {
+    "key": "WarriorTalent18",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 18,
+    "name": "[野兽] 奴隶强化",
+    "nameEn": "[Beast] Slave Boost",
+    "desc": "出战的 [野兽] 提供 {value} 力量提升。",
+    "descEn": "Active [Beast] provides {value} Strength increase."
+  },
+  {
+    "key": "WarriorTalent19",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 19,
+    "name": "[人形] 奴隶强化",
+    "nameEn": "[Humanoid] Slave Boost",
+    "desc": "出战的 [人形] 提供 {value} 对精英敌人的伤害。",
+    "descEn": "Active [Humanoid] provides {value} Damage vs Elite."
+  },
+  {
+    "key": "WarriorTalent20",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 20,
+    "name": "防御姿态",
+    "nameEn": "Defensive Stance",
+    "desc": "+{value} 护甲",
+    "descEn": "+{value} Armor"
+  },
+  {
+    "key": "WarriorTalent22",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 22,
+    "name": "重整旗鼓",
+    "nameEn": "Second Wind",
+    "desc": "当生命值低于最大生命值的50%时回复 {value}。（冷却6秒）",
+    "descEn": "Heal {value} when HP drop below 50% Max HP. (6 seconds cooldown)"
+  },
+  {
+    "key": "WarriorTalent23",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 23,
+    "name": "震荡打击",
+    "nameEn": "Concussive Strikes",
+    "desc": "[普通攻击] 有 {stunChance} 几率眩晕敌人。",
+    "descEn": "[Basic Attack] have {stunChance} to stun the enemy."
+  },
+  {
+    "key": "WarriorTalent24",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 24,
+    "name": "乘胜追击",
+    "nameEn": "Press the Advantage",
+    "desc": "+{value} 对眩晕目标的伤害",
+    "descEn": "+{value} Damage on Stunned targets."
+  },
+  {
+    "key": "WarriorTalent25",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 25,
+    "name": "蔓延烈焰",
+    "nameEn": "Spreading Flame",
+    "desc": "烈焰斩会对周围敌人溅射 {splash} 武器伤害作为火焰伤害。",
+    "descEn": "Flame Strike splashes {splash} weapon damage as Fire to nearby enemies."
+  },
+  {
+    "key": "WarriorTalent26",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 26,
+    "name": "强化英勇打击：法力获取",
+    "nameEn": "Enhance Valiant Strike: Mana Gain",
+    "desc": "英勇打击 +{value} 法力获取。",
+    "descEn": "+{value} Mana Gain from Valiant Strike."
+  },
+  {
+    "key": "WarriorTalent27",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 27,
+    "name": "[不死族] 奴隶强化",
+    "nameEn": "[Undead] Slave Boost",
+    "desc": "出战的 [不死族] 提供 {value} 暴击伤害。",
+    "descEn": "Active [Undead] provides {value} Critical Hit Damage."
+  },
+  {
+    "key": "WarriorTalent28",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 28,
+    "name": "凶狠荆棘",
+    "nameEn": "Vicious Thorns",
+    "desc": "荆棘可以触发暴击。",
+    "descEn": "Thorn can trigger Critical Hit."
+  },
+  {
+    "key": "WarriorTalent30",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 30,
+    "name": "溢血",
+    "nameEn": "Hemorrhage",
+    "desc": "你击杀流血敌人时，将其剩余流血伤害的 {value} 作为物理血爆，伤害 {radius} 米内的其他敌人。",
+    "descEn": "When you kill a Bleeding enemy, deal {value} of its remaining Bleed damage as a Physical blood explosion to other enemies within {radius} meters."
+  },
+  {
+    "key": "WarriorTalent31",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 31,
+    "name": "放血",
+    "nameEn": "Bloodletting",
+    "desc": "+{value} [流血] 技能伤害。",
+    "descEn": "+{value} [Bleed] Ability Damage."
+  },
+  {
+    "key": "WarriorTalent33",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 33,
+    "name": "怒吼强化",
+    "nameEn": "Enhance Rage Shout",
+    "desc": "怒吼的攻击速度加成提升 {value}，并延长 {duration}。",
+    "descEn": "Rage Shout's Attack Speed bonus is {value} stronger and lasts {duration} longer."
+  },
+  {
+    "key": "WarriorTalent34",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 34,
+    "name": "弦月收割",
+    "nameEn": "Crescent Harvest",
+    "desc": "半月斩造成的伤害 +{damage}。 半月斩击杀敌人时恢复 {mana} 最大法力值。",
+    "descEn": "Half Moon Slash deals +{damage} Damage. Each enemy killed by Half Moon Slash restores {mana} of your Max Mana."
+  },
+  {
+    "key": "WarriorTalent37",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 37,
+    "name": "蓄势待发",
+    "nameEn": "Charged and Ready",
+    "desc": "普攻击中获得蓄势，达到 {stacks} 层后获得所有伤害 +{damage}，持续 {duration}。",
+    "descEn": "Basic Attack hits grant a charge. At {stacks} charges, gain +{damage} to all damage for {duration}."
+  },
+  {
+    "key": "WarriorTalent38",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 38,
+    "name": "铁壁护盾",
+    "nameEn": "Ironward",
+    "desc": "每次普攻击中获得 {shield} 最大生命的护盾，持续 {duration}。",
+    "descEn": "Each Basic Attack hit adds a shield equal to {shield} of your Max HP for {duration}."
+  },
+  {
+    "key": "WarriorTalent39",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 39,
+    "name": "巅峰状态",
+    "nameEn": "Peak Condition",
+    "desc": "生命值高于80%时，全部伤害 +{value}。",
+    "descEn": "+{value} All Damage while you are Healthy (above 80% HP)."
+  },
+  {
+    "key": "WarriorTalent42",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 42,
+    "name": "深化创伤",
+    "nameEn": "Deepening Wounds",
+    "desc": "[流血]技能命中生命值低于 {threshold} 的非首领敌人时，有 {value} 几率将其斩杀。",
+    "descEn": "[Bleed] Ability hits have a {value} chance to execute non-Boss enemies below {threshold} HP."
+  },
+  {
+    "key": "WarriorTalent43",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 43,
+    "name": "强化英勇打击：易伤几率",
+    "nameEn": "Enhance Valiant Strike: Vulnerable Chance",
+    "desc": "英勇打击额外获得 {value} 几率造成 [易伤]。",
+    "descEn": "Valiant Strike has an additional {value} chance to inflict [Vulnerable]."
+  },
+  {
+    "key": "WarriorTalent44",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 44,
+    "name": "怒火回流",
+    "nameEn": "Returning Fury",
+    "desc": "每次承受敌人的直接命中时，恢复 {mana} 最大法力。",
+    "descEn": "Each direct enemy hit restores {mana} of your Max Mana."
+  },
+  {
+    "key": "WarriorTalent45",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 45,
+    "name": "屠夫韵律",
+    "nameEn": "Butcher's Rhythm",
+    "desc": "裂血连击额外劈砍 {value} 次。",
+    "descEn": "Rending Onslaught carves {value} additional cuts."
+  },
+  {
+    "key": "WarriorTalent46",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 46,
+    "name": "专注武技",
+    "nameEn": "Focused Technique",
+    "desc": "[普通攻击]伤害 +{damage}，普攻获得的法力 −{manaGain}。",
+    "descEn": "[Basic Attack] damage +{damage}, but Mana gained from Basic Attacks −{manaGain}."
+  },
+  {
+    "key": "WarriorTalent47",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 47,
+    "name": "内焰熔炉",
+    "nameEn": "Forge Within",
+    "desc": "每秒消耗 {mana} 最大法力，获得[强力攻击]伤害 +{damage}，技能法力消耗降低 {costReduction}。",
+    "descEn": "Consumes {mana} of your Max Mana each second to gain +{damage} [Strong Attack] damage and {costReduction} reduced ability Mana cost."
+  },
+  {
+    "key": "WarriorTalent48",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 48,
+    "name": "嗜血",
+    "nameEn": "Bloodlust",
+    "desc": "当敌人在流血状态下死亡，或被 [流血] 技能击杀时，获得一层 [嗜血]，持续 {duration}，每层提升 {value} 伤害，最多叠加10层。",
+    "descEn": "When an enemy dies while Bleeding, or is slain by a [Bleed] Ability, gain a stack of [Bloodlust] for {duration}, increasing your Damage by {value} per stack, up to 10 stacks."
+  },
+  {
+    "key": "WarriorTalent49",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 49,
+    "name": "反攻风暴",
+    "nameEn": "Counterattack Storm",
+    "desc": "每承受 {hits} 次敌人直接命中，向附近敌人释放反击，造成 {damage} 武器伤害的物理伤害。",
+    "descEn": "After every {hits} direct enemy hits, counterattack nearby enemies for {damage} weapon damage as Physical damage."
+  },
+  {
+    "key": "WarriorTalent60",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 60,
+    "name": "铁血",
+    "nameEn": "Ironblood",
+    "desc": "你的最大生命值的 {value} 会加成到荆棘。",
+    "descEn": "{value} of your Max HP is added to your Thorn."
+  },
+  {
+    "key": "WarriorTalent61",
+    "class": "Warrior",
+    "classCn": "战士",
+    "index": 61,
+    "name": "死神之刃",
+    "nameEn": "Reaper's Toll",
+    "desc": "旋风斩的攻击与旋转速度提升 {value}。引导旋风斩期间，移动速度提高 {movement}。",
+    "descEn": "Whirlwind strikes and spins {value} faster. +{movement} Movement Speed while channeling Whirlwind."
+  }
+]
