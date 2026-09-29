@@ -2,549 +2,368 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>构筑模拟器 - 桌面破坏神</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>桌面破坏神 BD 模拟器</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:linear-gradient(135deg,#030518 0%,#0a0a25 50%,#030518 100%);color:#d0d8f0;font-family:'Inter','Microsoft YaHei',sans-serif;min-height:100vh;padding:1rem}
-*::-webkit-scrollbar{width:8px;height:8px}
-*::-webkit-scrollbar-track{background:rgba(0,217,255,0.05)}
-*::-webkit-scrollbar-thumb{background:rgba(0,217,255,0.3);border-radius:4px}
-
-.topbar{display:flex;align-items:center;gap:1rem;background:linear-gradient(135deg,rgba(15,20,50,0.7) 0%,rgba(25,30,65,0.5) 100%);border:1px solid rgba(0,217,255,0.3);padding:0.8rem 1.2rem;margin-bottom:1rem;backdrop-filter:blur(8px)}
-.topbar h1{font-size:1.3rem;color:#7fffe0;font-weight:700;text-shadow:0 0 8px #00d9ff;letter-spacing:0.05em}
-.build-name{background:rgba(0,0,0,0.4);border:1px solid rgba(0,217,255,0.4);color:#fff;padding:0.4rem 0.8rem;font-size:0.9rem;width:200px}
-.class-tabs{display:flex;gap:0.4rem;margin-left:auto}
-.class-tab{padding:0.4rem 1rem;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.3);color:#a0a8c0;cursor:pointer;font-size:0.85rem}
-.class-tab.active{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,0,255,0.15) 100%);color:#7fffe0;border-color:#7fffe0;box-shadow:0 0 8px rgba(0,217,255,0.3)}
-.action-btn{padding:0.4rem 0.8rem;background:rgba(0,217,255,0.15);border:1px solid rgba(0,217,255,0.4);color:#7fffe0;cursor:pointer;font-size:0.85rem}
-.action-btn:hover{background:rgba(0,217,255,0.3);box-shadow:0 0 8px rgba(0,217,255,0.3)}
-.action-btn.danger{background:rgba(184,48,48,0.15);border-color:rgba(184,48,48,0.5);color:#ff6ec7}
-.action-btn.primary{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,0,255,0.2) 100%)}
-
-.main-grid{display:grid;grid-template-columns:280px 1fr 280px;gap:1rem;min-height:calc(100vh - 6rem)}
-.panel{background:linear-gradient(135deg,rgba(15,20,50,0.7) 0%,rgba(25,30,65,0.5) 100%);border:1px solid rgba(0,217,255,0.3);padding:1rem;backdrop-filter:blur(8px)}
-.panel-title{font-size:0.95rem;color:#7fffe0;font-weight:600;margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(0,217,255,0.3);text-shadow:0 0 4px #00d9ff;letter-spacing:0.05em;display:flex;align-items:center;gap:0.4rem}
-
-/* === 装备栏 === */
-.equip-list{display:flex;flex-direction:column;gap:0.4rem}
-.equip-slot{display:flex;align-items:center;gap:0.6rem;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);padding:0.4rem;cursor:pointer;transition:all 0.2s}
-.equip-slot:hover{border-color:#7fffe0;box-shadow:0 0 6px rgba(0,217,255,0.3)}
-.equip-slot.has-item{border-color:rgba(0,217,255,0.6);background:rgba(0,217,255,0.08)}
-.equip-slot .slot-icon{width:36px;height:36px;background:rgba(0,0,0,0.4);border:1px solid rgba(0,217,255,0.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-.equip-slot .slot-info{flex:1;min-width:0}
-.equip-slot .slot-type{font-size:0.7rem;color:#6a7290;letter-spacing:0.05em}
-.equip-slot .slot-name{font-size:0.85rem;color:#d0d8f0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.equip-slot .slot-name.q-common{color:#9e9e9e}
-.equip-slot .slot-name.q-uncommon{color:#4caf50}
-.equip-slot .slot-name.q-rare{color:#2196f3}
-.equip-slot .slot-name.q-legendary{color:#ff9800}
-.equip-slot .slot-affixes{font-size:0.7rem;color:#6a7290}
-.equip-slot .slot-clear{opacity:0;background:rgba(184,48,48,0.3);border:1px solid #b83030;color:#fff;width:20px;height:20px;cursor:pointer;font-size:0.7rem;line-height:1}
-.equip-slot:hover .slot-clear{opacity:1}
-
-/* === 天赋树（精简）=== */
-.talent-tabs{display:flex;gap:0.3rem;margin-bottom:0.6rem}
-.talent-tab{flex:1;padding:0.3rem;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);color:#a0a8c0;cursor:pointer;font-size:0.75rem}
-.talent-tab.active{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,0,255,0.15) 100%);color:#7fffe0;border-color:#7fffe0}
-.talent-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.3rem;margin-bottom:0.6rem}
-.talent-node{position:relative;aspect-ratio:1;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.7rem;text-align:center;padding:0.2rem;color:#a0a8c0;transition:all 0.2s;min-height:50px}
-.talent-node:hover:not(.locked):not(.empty){border-color:#7fffe0;color:#fff;box-shadow:0 0 6px rgba(0,217,255,0.3)}
-.talent-node.has-points{border-color:#00d9ff;color:#7fffe0;background:rgba(0,217,255,0.15);box-shadow:0 0 6px rgba(0,217,255,0.3)}
-.talent-node.full{background:linear-gradient(135deg,rgba(0,217,255,0.3) 0%,rgba(255,215,0,0.15) 100%);color:#ffd700;border-color:#ffd700}
-.talent-node.locked{opacity:0.3;cursor:not-allowed}
-.talent-node.empty{background:rgba(0,0,0,0.2);border:1px dashed rgba(0,217,255,0.1);color:#555}
-.talent-counter{position:absolute;top:2px;right:2px;background:rgba(0,217,255,0.8);color:#000;font-size:0.6rem;padding:0.05rem 0.2rem;font-weight:700}
-.talent-points-info{background:rgba(0,0,0,0.3);padding:0.4rem 0.6rem;border:1px solid rgba(0,217,255,0.2);font-size:0.8rem;color:#a0a8c0;display:flex;justify-content:space-between}
-.talent-points-info strong{color:#7fffe0;font-size:1rem}
-
-/* === 技能 === */
-.skill-bar{display:grid;grid-template-columns:repeat(6,1fr);gap:0.4rem;margin-bottom:0.8rem}
-.skill-slot{aspect-ratio:1;background:rgba(0,0,0,0.3);border:1px solid rgba(0,217,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer}
-.skill-slot:hover{border-color:#7fffe0}
-.skill-slot.active{border-color:#ffd700;box-shadow:0 0 8px rgba(255,215,0,0.4)}
-
-/* === 属性面板 === */
-.stat-row{display:flex;justify-content:space-between;align-items:center;padding:0.3rem 0;border-bottom:1px dashed rgba(0,217,255,0.1);font-size:0.8rem}
-.stat-row:last-child{border-bottom:none}
-.stat-label{color:#6a7290}
-.stat-value{color:#7fffe0;font-weight:600}
-.stat-value.positive{color:#4caf50}
-.stat-value.negative{color:#ff6ec7}
-.dmg-preview{background:linear-gradient(135deg,rgba(255,0,255,0.15) 0%,rgba(185,74,255,0.1) 100%);border:1px solid rgba(255,0,255,0.4);padding:0.6rem;margin:0.5rem 0;text-align:center}
-.dmg-num{font-size:1.6rem;color:#ffd700;font-weight:700;text-shadow:0 0 8px #ffd700;font-family:monospace}
-
-/* === 装备选择器模态 === */
-.modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:1000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
-.modal-content{background:#0a0a25;border:1px solid #00d9ff;width:90%;max-width:700px;max-height:80vh;display:flex;flex-direction:column;box-shadow:0 0 30px rgba(0,217,255,0.3)}
-.modal-header{padding:0.8rem 1rem;border-bottom:1px solid rgba(0,217,255,0.3);display:flex;justify-content:space-between;align-items:center}
-.modal-header h3{color:#7fffe0;font-size:1.1rem}
-.modal-close{background:none;border:1px solid rgba(0,217,255,0.3);color:#7fffe0;width:28px;height:28px;cursor:pointer;font-size:1rem}
-.modal-body{flex:1;overflow-y:auto;padding:1rem}
-.modal-item{display:flex;align-items:center;gap:0.8rem;padding:0.5rem;border:1px solid rgba(0,217,255,0.2);margin-bottom:0.4rem;cursor:pointer;transition:all 0.2s}
-.modal-item:hover{border-color:#7fffe0;background:rgba(0,217,255,0.1)}
-.modal-item .mi-icon{width:40px;height:40px;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
-.modal-item .mi-info{flex:1}
-.modal-item .mi-name{font-size:0.95rem;font-weight:600}
-.modal-item .mi-name.q-common{color:#9e9e9e}
-.modal-item .mi-name.q-uncommon{color:#4caf50}
-.modal-item .mi-name.q-rare{color:#2196f3}
-.modal-item .mi-name.q-legendary{color:#ff9800}
-.modal-item .mi-affix{font-size:0.75rem;color:#6a7290}
-.modal-search{width:100%;background:rgba(0,0,0,0.4);border:1px solid rgba(0,217,255,0.3);color:#fff;padding:0.5rem;margin-bottom:0.5rem;font-size:0.9rem}
-
-/* 移动端 */
-@media (max-width: 1024px){
-  .main-grid{grid-template-columns:1fr;gap:0.6rem}
-  .topbar{flex-wrap:wrap}
-  .build-name{width:100%}
+:root{
+  --bg:#0a0605; --panel:#14100d; --card:#1a1410; --border:#3a2d20;
+  --gold:#c9a227; --gold-l:#e8c86a; --red:#b3181f; --blood:#7a1013;
+  --text:#cfc0a4; --muted:#8a7a63; --bright:#f0e6d0;
+  --common:#9a9a9a; --uncommon:#4cd964; --rare:#4aa8ff; --legendary:#ffb020; --divine:#ff4040;
 }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:
+  radial-gradient(ellipse 70% 40% at 50% 0%, rgba(178,24,31,.08), transparent 60%),
+  radial-gradient(ellipse 50% 30% at 80% 100%, rgba(201,162,39,.05), transparent 60%),
+  #0a0605;
+  color:var(--text); font-family:"Microsoft YaHei",sans-serif; min-height:100vh; line-height:1.6}
+h1,h2,h3{font-family:Cinzel,"Times New Roman",serif}
+.header{text-align:center;padding:1.6rem 1rem 1rem;border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(122,16,19,.25), transparent)}
+.header h1{color:var(--gold);font-size:2rem;letter-spacing:.1em;text-shadow:0 0 18px rgba(201,162,39,.4)}
+.header .sub{color:var(--muted);font-size:.85rem;margin-top:.3rem}
+.heroes{display:flex;justify-content:center;gap:.8rem;margin-top:1rem;flex-wrap:wrap}
+.hero-btn{background:var(--card);border:1px solid var(--border);color:var(--text);
+  padding:.5rem 1.3rem;cursor:pointer;font-size:.9rem;letter-spacing:.05em;transition:.2s}
+.hero-btn:hover{border-color:var(--gold)}
+.hero-btn.active{background:linear-gradient(180deg,#3a1a0d,#2a1208);border-color:var(--gold);
+  color:var(--gold-l);box-shadow:0 0 12px rgba(201,162,39,.3)}
+.layout{display:grid;grid-template-columns:300px 1fr 300px;gap:1rem;padding:1rem;max-width:1500px;margin:0 auto}
+@media(max-width:1100px){.layout{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--border);margin-bottom:1rem}
+.panel-title{color:var(--gold);font-size:.95rem;letter-spacing:.08em;padding:.7rem 1rem;
+  border-bottom:1px solid var(--border);font-family:Cinzel,serif}
+.panel-body{padding:.8rem 1rem}
+/* 装备槽位 */
+.slot-row{margin-bottom:.5rem}
+.slot-label{color:var(--muted);font-size:.72rem;letter-spacing:.05em;margin-bottom:.2rem}
+select,button,option{font-family:inherit}
+.slot-select{width:100%;background:var(--card);color:var(--text);border:1px solid var(--border);
+  padding:.45rem .6rem;font-size:.85rem;cursor:pointer}
+.slot-select:focus{outline:none;border-color:var(--gold)}
+.q-common{color:var(--common)} .q-uncommon{color:var(--uncommon)} .q-rare{color:var(--rare)}
+.q-legendary{color:var(--legendary)} .q-divine{color:var(--divine)}
+/* 装备详情 */
+.eq-detail{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);
+  padding:.8rem 1rem;margin-top:.5rem}
+.eq-name{font-size:1.05rem;color:var(--bright)}
+.eq-meta{font-size:.75rem;color:var(--muted);margin-top:.2rem}
+.eq-effects{margin-top:.4rem;font-size:.78rem}
+.eq-eff-tag{display:inline-block;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.3);
+  color:var(--gold-l);padding:.1rem .5rem;margin:.15rem .2rem 0 0;border-radius:3px;font-size:.72rem}
+/* 属性汇总 */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+.stat-item{display:flex;justify-content:space-between;padding:.35rem .5rem;background:var(--card);
+  border:1px solid var(--border);font-size:.82rem}
+.stat-item .sv{color:var(--gold-l);font-weight:600;font-family:monospace}
+.stat-summary{border:1px solid var(--gold);background:linear-gradient(180deg,rgba(201,162,39,.1),transparent);
+  padding:.8rem;margin-bottom:.8rem;text-align:center}
+.stat-summary .big{font-size:1.8rem;color:var(--gold);font-family:Cinzel,serif}
+/* 宝石符文 */
+.gem-card,.rune-card{background:var(--card);border:1px solid var(--border);padding:.6rem .8rem;
+  margin-bottom:.5rem;cursor:pointer;transition:.15s}
+.gem-card:hover,.rune-card:hover{border-color:var(--gold)}
+.gem-card.active,.rune-card.active{border-color:var(--gold);background:rgba(201,162,39,.08)}
+.gem-bonus,.rune-attr{font-size:.75rem;color:var(--muted);margin-top:.3rem}
+.gem-bonus span{color:var(--gold-l)}
+.tab-bar{display:flex;border-bottom:1px solid var(--border)}
+.tab{flex:1;text-align:center;padding:.5rem;cursor:pointer;color:var(--muted);font-size:.85rem;border-bottom:2px solid transparent}
+.tab.active{color:var(--gold-l);border-bottom-color:var(--gold)}
+.note{font-size:.72rem;color:var(--muted);padding:.6rem 1rem;border-top:1px solid var(--border);margin-top:.5rem}
+.tag{display:inline-block;font-size:.68rem;padding:.1rem .45rem;border-radius:3px;margin-left:.3rem;vertical-align:middle}
+.scroll{max-height:460px;overflow-y:auto}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-track{background:transparent}
 </style>
 </head>
 <body>
-
-<div class="topbar">
-  <h1>⚔ 构筑模拟器</h1>
-  <input id="buildName" class="build-name" placeholder="构筑名称..." value="我的构筑" />
-  <div class="class-tabs">
-    <button class="class-tab active" data-class="Warrior">⚔ 战士</button>
-    <button class="class-tab" data-class="Sorcerer">✨ 法师</button>
-  </div>
-  <button class="action-btn primary" id="shareBtn">🔗 分享</button>
-  <button class="action-btn danger" id="resetBtn">↻ 重置</button>
+<div class="header">
+  <h1>⚔ 桌面破坏神 · BD 模拟器</h1>
+  <div class="sub">Deskrawl Build Simulator · 数据提取自游戏正式版 v6（2026-09-29）</div>
+  <div class="heroes" id="heroes"></div>
 </div>
 
-<div class="main-grid">
-  <!-- 左侧: 装备栏 -->
-  <div class="panel">
-    <div class="panel-title">🛡 装备 (10)</div>
-    <div class="equip-list" id="equipList"></div>
-  </div>
-
-  <!-- 中间: 技能 + 天赋 -->
-  <div class="panel" style="display:flex;flex-direction:column">
-    <div class="panel-title">⚡ 技能 (6) <span style="margin-left:auto;font-size:0.75rem;color:#6a7290;font-weight:400">点击格子选技能</span></div>
-    <div class="skill-bar" id="skillBar"></div>
-
-    <div class="panel-title" style="margin-top:0.5rem">🌟 天赋树</div>
-    <div class="talent-tabs">
-      <button class="talent-tab active" data-class="Warrior">战士</button>
+<div class="layout">
+  <!-- 左栏：装备 -->
+  <div>
+    <div class="panel">
+      <div class="panel-title">装备槽位</div>
+      <div class="panel-body" id="slots"></div>
     </div>
-    <div class="talent-points-info">
-      <span>已分配 / 满级</span>
-      <span><strong id="talentUsed">0</strong> / 32</span>
-    </div>
-    <div style="overflow-y:auto;flex:1;margin-top:0.5rem">
-      <div class="talent-grid" id="talentGrid"></div>
+    <div class="panel">
+      <div class="panel-title">词条池（该部位可出）</div>
+      <div class="panel-body" id="affixPool"></div>
     </div>
   </div>
 
-  <!-- 右侧: 属性汇总 -->
-  <div class="panel">
-    <div class="panel-title">📊 属性总览</div>
-    <div class="stat-row"><span class="stat-label">生命值</span><span class="stat-value" id="stat-hp">0</span></div>
-    <div class="stat-row"><span class="stat-label">力量</span><span class="stat-value" id="stat-str">0</span></div>
-    <div class="stat-row"><span class="stat-label">智力</span><span class="stat-value" id="stat-int">0</span></div>
-    <div class="stat-row"><span class="stat-label">护甲</span><span class="stat-value" id="stat-armor">0</span></div>
-    <div class="stat-row"><span class="stat-label">魔法抗性</span><span class="stat-value" id="stat-mres">0</span></div>
-    <div class="stat-row"><span class="stat-label">暴击率</span><span class="stat-value" id="stat-crit">0%</span></div>
-    <div class="stat-row"><span class="stat-label">暴击伤害</span><span class="stat-value" id="stat-critdmg">0%</span></div>
-    <div class="stat-row"><span class="stat-label">攻击速度</span><span class="stat-value" id="stat-aspd">0%</span></div>
-    <div class="stat-row"><span class="stat-label">生命恢复</span><span class="stat-value" id="stat-hpregen">0/s</span></div>
-    <div class="stat-row"><span class="stat-label">荆棘</span><span class="stat-value" id="stat-thorn">0</span></div>
+  <!-- 中栏：属性汇总 + 详情 -->
+  <div>
+    <div class="panel">
+      <div class="panel-title">属性汇总</div>
+      <div class="panel-body" id="statSummary"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">当前装备详情</div>
+      <div class="panel-body" id="eqDetail"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">掉落速查</div>
+      <div class="panel-body" id="lootInfo"></div>
+    </div>
+  </div>
 
-    <div class="dmg-preview">
-      <div style="font-size:0.75rem;color:#a0a8c0">预估 DPS</div>
-      <div class="dmg-num" id="dpsNum">--</div>
+  <!-- 右栏：宝石符文 -->
+  <div>
+    <div class="panel">
+      <div class="panel-title">宝石 / 符文</div>
+      <div class="tab-bar">
+        <div class="tab active" data-tab="gems">宝石 (36)</div>
+        <div class="tab" data-tab="runes">符文 (119)</div>
+      </div>
+      <div class="panel-body">
+        <div id="gemsTab" class="scroll"></div>
+        <div id="runesTab" class="scroll" style="display:none"></div>
+      </div>
     </div>
   </div>
 </div>
 
-<div id="modal"></div>
+<div class="note" style="text-align:center;padding:1rem">
+  数据来源：游戏本地数据反编译提取（装备209件 / 宝石36 / 符文119 / 词条池 / 掉落表）。
+  传奇·神圣装备的「特效」已标注类型，具体数值存于 Unity 的 [SerializeReference] 字段（需运行时注入获取）。
+</div>
 
+<script src="bd_data.js"></script>
 <script>
-'use strict';
 
-// ============================================
-// 装备数据 - 从 items.json 加载
-// ============================================
-const SLOTS = [
-  { key: 'helm', name: '头盔', icon: '🪖' },
-  { key: 'chest', name: '胸甲', icon: '🛡' },
-  { key: 'shoulder', name: '护肩', icon: '🦾' },
-  { key: 'pants', name: '护腿', icon: '👖' },
-  { key: 'gloves', name: '手套', icon: '🧤' },
-  { key: 'boots', name: '靴子', icon: '👢' },
-  { key: 'belt', name: '腰带', icon: '🪢' },
-  { key: 'amulet', name: '项链', icon: '📿' },
-  { key: 'ring1', name: '戒指 1', icon: '💍' },
-  { key: 'ring2', name: '戒指 2', icon: '💍' },
-  { key: 'weapon', name: '武器', icon: '⚔' },
-  { key: 'offhand', name: '副手', icon: '🛡' },
-]
 
-// 装备数据 - 从 items.json 实时加载
-let ITEM_POOL = {}
-let ALL_ITEMS = []
+const EN = BD_DATA.enums.enums || BD_DATA.enums;  // 兼容双重嵌套
+const STAT = EN.statType;
+const MOD = {0:'+',1:'+%',2:'×'};
+const RARITY = EN.rarity;
+const RARITY_CLASS = {0:'q-common',1:'q-uncommon',2:'q-rare',3:'q-legendary',4:'q-divine',5:'q-legendary'};
+const SLOT = EN.slot;
+const HEROES = ['野蛮人战士','猎人','法师','武僧'];
+const HERO_CLASS = {0:'Barbarian',1:'Hunter',2:'Mage',3:'Monk'};
 
-async function loadItems() {
-  try {
-    const res = await fetch('/data/items.json')
-    const data = await res.json()
-    const qualities = data.equipment_tree || {}
+let selectedHero = 0;
+let selectedEq = {};   // slot -> equipment
+let selectedGems = {}; // slot(1=武器,2=防具,3=首饰) -> gem
+let selectedRunes = {};// runeId -> rune
 
-    const pool = {}
-    const all = []
-    const slotMap = { helm: '头盔', chest: '胸甲', shoulder: '护肩', pants: '护腿', gloves: '手套', boots: '靴子', belt: '腰带', necklace: '项链', ring: '戒指', ring1: '戒指', ring2: '戒指', weapon: '武器', offhand: '副手' }
+function fmt(v, mod){
+  if(v == null) return '';
+  if(mod === 0) return '+' + (Math.round(v*100)/100);
+  if(mod === 1) return '+' + (Math.round(v*10000)/100) + '%';
+  if(mod === 2) return '×' + (Math.round(v*100)/100);
+  return String(v);
+}
+function bonusText(b){
+  return (STAT[b.stat]||b.stat) + ' ' + fmt(b.value, b.mod);
+}
+function attrText(a){
+  let t = (STAT[a.stat]||a.stat) + ' ' + fmt(a.base, a.mod);
+  if(a.perLevel) t += '（每级' + fmt(a.perLevel, a.mod) + '）';
+  return t;
+}
 
-    for (const qKey in qualities) {
-      const qItems = qualities[qKey]
-      const qName = { common: '普通', uncommon: '非凡', rare: '稀有', legendary: '传说' }[qKey] || ''
-      if (!qItems || typeof qItems !== 'object') continue
-      for (const itemKey in qItems) {
-        const item = qItems[itemKey]
-        if (!item || typeof item !== 'object') continue
-        const keyLower = itemKey.toLowerCase()
-        let slotKey = null
-        if (keyLower.includes('helm')) slotKey = 'helm'
-        else if (keyLower.includes('chest') || keyLower.includes('breast')) slotKey = 'chest'
-        else if (keyLower.includes('shoulder')) slotKey = 'shoulder'
-        else if (keyLower.includes('pants') || keyLower.includes('leg')) slotKey = 'pants'
-        else if (keyLower.includes('glove')) slotKey = 'gloves'
-        else if (keyLower.includes('boot') || keyLower.includes('shoe')) slotKey = 'boots'
-        else if (keyLower.includes('belt')) slotKey = 'belt'
-        else if (keyLower.includes('neck') || keyLower.includes('amulet')) slotKey = 'amulet'
-        else if (keyLower.includes('ring')) slotKey = slotKey || null
-        else if (keyLower.includes('weapon') || keyLower.includes('axe') || keyLower.includes('sword') || keyLower.includes('dagger') || keyLower.includes('staff')) slotKey = 'weapon'
-        else continue
-        if (slotKey === null) {
-          if (keyLower.includes('ring')) { continue }
-          continue
-        }
-        if (!pool[slotKey]) pool[slotKey] = []
-        const stats = []
-        if (item.stats) {
-          for (const sk in item.stats) stats.push({ k: sk, v: item.stats[sk] })
-        } else {
-          const baseVal = { common: 10, uncommon: 25, rare: 50, legendary: 100 }[qKey] || 10
-          if (['helm','chest','shoulder','pants','gloves','boots','belt'].includes(slotKey)) stats.push({ k: 'armor', v: baseVal })
-          if (slotKey === 'weapon') stats.push({ k: 'dmg', v: baseVal * 2 })
-        }
-        const obj = { id: itemKey, name: item.name || itemKey, quality: qKey, stats, slot: slotKey }
-        pool[slotKey].push(obj)
-        all.push(obj)
-      }
+// 渲染职业
+const heroesEl = document.getElementById('heroes');
+HEROES.forEach((h,i)=>{
+  const b = document.createElement('button');
+  b.className = 'hero-btn' + (i===selectedHero?' active':'');
+  b.textContent = h;
+  b.onclick = ()=>{ selectedHero = i; renderHeroes(); };
+  heroesEl.appendChild(b);
+});
+function renderHeroes(){
+  [...heroesEl.children].forEach((b,i)=>b.className='hero-btn'+(i===selectedHero?' active':''));
+}
+
+// 渲染装备槽位
+const slotsEl = document.getElementById('slots');
+const slotKeys = [1,2,3,4,5,6,7,8,9,10,11];
+slotKeys.forEach(slot=>{
+  const row = document.createElement('div');
+  row.className = 'slot-row';
+  const label = document.createElement('div');
+  label.className = 'slot-label';
+  label.textContent = SLOT[slot] || ('槽位'+slot);
+  const sel = document.createElement('select');
+  sel.className = 'slot-select';
+  sel.dataset.slot = slot;
+  const none = document.createElement('option');
+  none.value = ''; none.textContent = '— 空 —';
+  sel.appendChild(none);
+  BD_DATA.equipment.filter(e=>e.slot===slot).forEach(e=>{
+    const o = document.createElement('option');
+    o.value = e.id;
+    o.textContent = `[${RARITY[e.rarity]}] ${e.name}`;
+    o.className = RARITY_CLASS[e.rarity];
+    sel.appendChild(o);
+  });
+  sel.onchange = ()=>{ selectedEq[slot] = BD_DATA.equipment.find(e=>e.id===sel.value); renderAll(); };
+  row.appendChild(label); row.appendChild(sel);
+  slotsEl.appendChild(row);
+});
+
+// 词条池
+const affixEl = document.getElementById('affixPool');
+function renderAffixPool(slot){
+  const pool = (BD_DATA.affixPools.slotPools||[]).find(p=>p.slot===slot);
+  if(!pool){ affixEl.innerHTML = '<div style="color:var(--muted);font-size:.8rem">该部位无词条池</div>'; return; }
+  const socket = (BD_DATA.affixPools.gemSockets||[]).find(s=>s.slot===slot);
+  let html = '<div style="font-size:.75rem;color:var(--muted)">主词条：</div><div style="margin-bottom:.5rem">' +
+    pool.primary.map(s=>`<span class="tag" style="background:rgba(201,162,39,.12);color:var(--gold-l)">${s.statCn}</span>`).join('') + '</div>';
+  html += '<div style="font-size:.75rem;color:var(--muted)">副词条：</div><div>' +
+    pool.secondary.map(s=>`<span class="tag" style="background:rgba(74,168,255,.12);color:#6cb8ff">${s.statCn}</span>`).join('') + '</div>';
+  if(socket && socket.maxSockets>0) html += `<div style="font-size:.75rem;margin-top:.5rem;color:var(--muted)">宝石孔：<span style="color:var(--gold-l)">${socket.maxSockets} 个</span>（${BD_DATA.affixPools.minLevelForSockets}级解锁）</div>`;
+  affixEl.innerHTML = html;
+}
+
+// 宝石/符文 tab
+const gemsTab = document.getElementById('gemsTab');
+const runesTab = document.getElementById('runesTab');
+function renderGems(){
+  gemsTab.innerHTML = '';
+  BD_DATA.gems.forEach(g=>{
+    const card = document.createElement('div');
+    card.className = 'gem-card';
+    const name = document.createElement('div');
+    name.innerHTML = `<span style="color:var(--bright);font-size:.85rem">${g.name}</span>`;
+    const bonus = document.createElement('div');
+    bonus.className = 'gem-bonus';
+    let parts = [];
+    if(g.armor.length) parts.push('防具: ' + g.armor.map(bonusText).join(', '));
+    if(g.accessory.length) parts.push('首饰: ' + g.accessory.map(bonusText).join(', '));
+    if(g.weapon.length) parts.push('武器: ' + g.weapon.map(bonusText).join(', '));
+    bonus.innerHTML = parts.join('<br>');
+    card.appendChild(name); card.appendChild(bonus);
+    card.onclick = ()=>{
+      // 简化：点击宝石放到武器槽（可再点切换）
+      if(selectedGems[1]===g){ delete selectedGems[1]; card.classList.remove('active'); }
+      else { selectedGems[1]=g; [...gemsTab.children].forEach(c=>c.classList.remove('active')); card.classList.add('active'); }
+      renderAll();
+    };
+    gemsTab.appendChild(card);
+  });
+}
+function renderRunes(){
+  runesTab.innerHTML = '';
+  BD_DATA.runes.forEach(r=>{
+    const card = document.createElement('div');
+    card.className = 'rune-card';
+    const name = document.createElement('div');
+    name.innerHTML = `<span style="color:var(--bright);font-size:.85rem">${r.name}</span>`;
+    const attr = document.createElement('div');
+    attr.className = 'rune-attr';
+    attr.textContent = r.attributes.map(attrText).join('；');
+    card.appendChild(name); card.appendChild(attr);
+    card.onclick = ()=>{
+      if(selectedRunes[r.id]){ delete selectedRunes[r.id]; card.classList.remove('active'); }
+      else { selectedRunes[r.id]=r; card.classList.add('active'); }
+      renderAll();
+    };
+    runesTab.appendChild(card);
+  });
+}
+document.querySelectorAll('.tab').forEach(t=>{
+  t.onclick = ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    const isGems = t.dataset.tab==='gems';
+    gemsTab.style.display = isGems?'block':'none';
+    runesTab.style.display = isGems?'none':'block';
+  };
+});
+
+// 属性汇总
+function renderStatSummary(){
+  const totals = {};  // stat -> {v, mod} (统一用百分比近似)
+  const flat = {};    // stat -> flat值
+  // 宝石（武器槽）
+  if(selectedGems[1]) selectedGems[1].weapon.forEach(b=>{ flat[b.stat]=(flat[b.stat]||0)+b.value; });
+  if(selectedGems[1]) selectedGems[1].armor.forEach(b=>{ flat[b.stat]=(flat[b.stat]||0)+b.value; });
+  if(selectedGems[1]) selectedGems[1].accessory.forEach(b=>{ flat[b.stat]=(flat[b.stat]||0)+b.value; });
+  // 符文
+  Object.values(selectedRunes).forEach(r=>r.attributes.forEach(a=>{
+    if(a.mod===0) flat[a.stat]=(flat[a.stat]||0)+(a.base||0);
+  }));
+  const rows = Object.keys(flat).map(k=>{
+    const v = flat[k];
+    return {stat:k, name:STAT[k]||k, text:(v>0?'+':'')+Math.round(v*100)/100};
+  });
+  const summaryEl = document.getElementById('statSummary');
+  let html = '<div class="stat-summary"><div class="big">'+selectedEqCount()+'</div><div style="font-size:.75rem;color:var(--muted)">已装备件数 / 11</div></div>';
+  if(rows.length===0){
+    html += '<div style="color:var(--muted);font-size:.82rem;text-align:center;padding:1rem">选择宝石或符文后，这里显示加成汇总</div>';
+  } else {
+    html += '<div class="stat-grid">';
+    rows.sort((a,b)=>b.stat-a.stat===0?0:a.name.localeCompare(b.name)).forEach(r=>{
+      html += `<div class="stat-item"><span>${r.name}</span><span class="sv">${r.text}</span></div>`;
+    });
+    html += '</div>';
+  }
+  summaryEl.innerHTML = html;
+}
+function selectedEqCount(){
+  return Object.values(selectedEq).filter(Boolean).length;
+}
+
+// 装备详情
+function renderEqDetail(){
+  const el = document.getElementById('eqDetail');
+  const items = Object.entries(selectedEq).filter(([s,e])=>e);
+  if(items.length===0){
+    el.innerHTML = '<div style="color:var(--muted);font-size:.82rem;text-align:center;padding:.5rem">点击左侧槽位选择装备查看详情</div>';
+    return;
+  }
+  let html = '';
+  items.forEach(([slot,e])=>{
+    html += `<div class="eq-detail">
+      <div class="eq-name"><span class="${RARITY_CLASS[e.rarity]}">${e.name}</span>
+        <span class="tag" style="background:rgba(138,122,99,.15);color:var(--muted)">${SLOT[e.slot]}</span></div>
+      <div class="eq-meta">品质：${RARITY[e.rarity]} · 掉落等级 ${e.minDropLevel}${e.maxDropLevel?('~'+e.maxDropLevel):'+'} · 售价 ${e.sellPrice} 金币</div>`;
+    if(e.effects && e.effects.length){
+      html += '<div class="eq-effects">特效：' + e.effects.map(x=>`<span class="eq-eff-tag">${x}</span>`).join('') + '</div>';
     }
-    for (const s of SLOTS) { if (!pool[s.key]) pool[s.key] = [] }
-    ITEM_POOL = pool; ALL_ITEMS = all
-    renderEquipList()
-  } catch (e) { console.error('Load items error', e) }
-}
-loadItems()
-
-// ============================================
-// 技能栏
-// ============================================
-const SKILL_SLOTS = [
-  { key: 'basic', name: '普通攻击', icon: '⚔' },
-  { key: 'core', name: '核心技能', icon: '💥' },
-  { key: 'def1', name: '防御 1', icon: '🛡' },
-  { key: 'def2', name: '防御 2', icon: '🛡' },
-  { key: 'bark1', name: '战吼 1', icon: '📯' },
-  { key: 'bark2', name: '战吼 2', icon: '📯' },
-]
-
-// ============================================
-// 状态
-// ============================================
-let state = {
-  buildName: '我的构筑',
-  activeClass: 'Warrior',
-  equips: {},  // { slotKey: item }
-  talents: {},  // { 'tier-col': points }
-  skills: {},  // { slotKey: skillName }
+    html += '</div>';
+  });
+  el.innerHTML = html;
 }
 
-// 从 URL 加载
-function loadFromUrl() {
-  const hash = location.hash.slice(1)
-  if (!hash) return
-  try {
-    const decoded = JSON.parse(atob(decodeURIComponent(hash)))
-    if (decoded.name) state.buildName = decoded.name
-    if (decoded.class) state.activeClass = decoded.class
-    if (decoded.equips) state.equips = decoded.equips
-    if (decoded.talents) state.talents = decoded.talents
-  } catch (e) { console.warn('Load URL error', e) }
+// 掉落速查
+function renderLoot(){
+  const l = BD_DATA.loot;
+  const el = document.getElementById('lootInfo');
+  let html = `<div style="font-size:.78rem;color:var(--muted);line-height:1.9">
+    黑雾装备：<span style="color:var(--divine)">${(l.blackMistChance*100).toFixed(1)}%</span> ·
+    古老品质：<span style="color:var(--gold-l)">${(l.ancientChance*100).toFixed(0)}%</span> ·
+    符文：<span style="color:var(--gold-l)">${((l.runeDropChance||0)*100).toFixed(0)}%</span>（${l.runeMinDropLevel||'?'}级起）</div>`;
+  html += '<div style="margin-top:.6rem">';
+  Object.entries(l.dropSettings).forEach(([k,s])=>{
+    const cn = {normal:'普通怪',elite:'精英',miniboss:'小Boss',boss:'Boss',mythicboss:'神话Boss'}[k]||k;
+    const max = s.max||{};
+    html += `<div style="font-size:.75rem;padding:.3rem .5rem;border-bottom:1px dashed var(--border)">
+      <span style="color:var(--bright)">${cn}</span> <span style="color:var(--muted)">roll ${s.rollAttempts}次 · 传说${(max.legendary||0)}% · 神圣${((s.divineChance||0)*100).toFixed(3)}% · 宝石${((s.gemDropChance||0)*100).toFixed(0)}%</span></div>`;
+  });
+  html += '</div>';
+  el.innerHTML = html;
 }
 
-function saveToUrl() {
-  const data = {
-    name: state.buildName,
-    class: state.activeClass,
-    equips: state.equips,
-    talents: state.talents,
-  }
-  const encoded = btoa(JSON.stringify(data))
-  history.replaceState(null, '', '#' + encodeURIComponent(encoded))
+function renderAll(){
+  renderStatSummary();
+  renderEqDetail();
+  // 词条池跟随第一个有装备的槽位，否则槽位1
+  const equippedSlot = Object.keys(selectedEq).find(s=>selectedEq[s]) || 1;
+  renderAffixPool(parseInt(equippedSlot));
 }
-
-// ============================================
-// 渲染
-// ============================================
-function renderEquipList() {
-  const html = SLOTS.map(s => {
-    const item = state.equips[s.key]
-    const qClass = item ? `q-${item.quality}` : ''
-    const nameHtml = item
-      ? `<span class="slot-name ${qClass}">${item.name}</span><div class="slot-affixes">${item.stats.map(st=>`+${st.v} ${statName(st.k)}`).join(' · ')}</div>`
-      : `<span class="slot-name" style="color:#6a7290">${s.name}</span><div class="slot-affixes" style="color:#4a5070">点击装备</div>`
-    return `<div class="equip-slot ${item?'has-item':''}" data-slot="${s.key}">
-      <div class="slot-icon">${s.icon}</div>
-      <div class="slot-info">
-        <div class="slot-type">${s.name.toUpperCase()}</div>
-        ${nameHtml}
-      </div>
-      ${item ? `<button class="slot-clear" data-clear="${s.key}">×</button>` : ''}
-    </div>`
-  }).join('')
-  document.getElementById('equipList').innerHTML = html
+function onSlotSelect(slot){
+  const sel = document.querySelector(`select[data-slot="${slot}"]`);
+  if(!sel) return;
 }
-
-function renderSkillBar() {
-  const html = SKILL_SLOTS.map(s => {
-    const skill = state.skills[s.key]
-    return `<div class="skill-slot ${skill?'active':''}" data-skill="${s.key}">${skill?.icon || s.icon}</div>`
-  }).join('')
-  document.getElementById('skillBar').innerHTML = html
-}
-
-function renderTalentGrid() {
-  const tree = TALENT_TREE[state.activeClass] || []
-  const html = tree.map(t => {
-    const points = state.talents[`${t.tier}-${t.col}`] || 0
-    const cls = points === 0 ? '' : (points >= t.max ? 'full' : 'has-points')
-    return `<div class="talent-node ${cls}" data-tier="${t.tier}" data-col="${t.col}">
-      ${t.name}
-      ${points > 0 ? `<div class="talent-counter">${points}/${t.max}</div>` : ''}
-    </div>`
-  }).join('')
-  document.getElementById('talentGrid').innerHTML = html
-}
-
-function renderStats() {
-  // 从装备 + 天赋计算
-  let stats = { hp: 100, str: 0, int: 0, armor: 0, mres: 0, crit: 5, critdmg: 50, aspd: 0, hpregen: 0, thorn: 0, dmg: 10, dmgBonus: 0, stun: 0, vuln: 0, manaSave: 0 }
-  
-  // 装备属性
-  for (const key in state.equips) {
-    const item = state.equips[key]
-    item.stats.forEach(s => {
-      stats[s.k] = (stats[s.k] || 0) + s.v
-    })
-  }
-  
-  // 天赋
-  for (const key in state.talents) {
-    const [tier, col] = key.split('-').map(Number)
-    const t = (TALENT_TREE[state.activeClass]||[]).find(x => x.tier===tier && x.col===col)
-    if (t) stats[t.stat] = (stats[t.stat]||0) + state.talents[key] * t.perPoint
-  }
-  
-  document.getElementById('stat-hp').textContent = Math.round(stats.hp)
-  document.getElementById('stat-str').textContent = Math.round(stats.str)
-  document.getElementById('stat-int').textContent = Math.round(stats.int)
-  document.getElementById('stat-armor').textContent = Math.round(stats.armor)
-  document.getElementById('stat-mres').textContent = Math.round(stats.mres)
-  document.getElementById('stat-crit').textContent = stats.crit.toFixed(1) + '%'
-  document.getElementById('stat-critdmg').textContent = stats.critdmg.toFixed(0) + '%'
-  document.getElementById('stat-aspd').textContent = stats.aspd.toFixed(1) + '%'
-  document.getElementById('stat-hpregen').textContent = stats.hpregen.toFixed(1) + '/s'
-  document.getElementById('stat-thorn').textContent = Math.round(stats.thorn)
-  
-  // DPS 预估（游戏公式）
-  // 力量每点 ≈ 1% 伤害加成
-  const dmgMult = 1 + (stats.str || 0) / 100 + ((stats.physical || 0) + (stats.dmgBonus || 0)) / 100
-  // 武器伤害 + 额外伤害
-  const baseDmg = (stats.weaponDmg || stats.dmg || 10) * dmgMult
-  // 暴击期望: 暴击率 * (1 + 暴击伤害/100) + 非暴击率 * 1
-  const critMult = 1 + ((stats.crit || 5) / 100) * ((stats.critdmg || 50) / 100)
-  // 攻速倍率
-  const weaponSpeed = stats.weaponSpeed || 1.2
-  const aspdMult = weaponSpeed * (1 + (stats.aspd || 0) / 100)
-  // 最终 DPS
-  const dps = baseDmg * critMult * aspdMult
-  document.getElementById('dpsNum').textContent = Math.round(dps).toLocaleString()
-  
-  // 更新天赋已分配
-  const used = Object.values(state.talents).reduce((a,b)=>a+b, 0)
-  document.getElementById('talentUsed').textContent = used
-}
-
-function statName(k) {
-  const map = { hp: '生命', str: '力量', dex: '敏捷', int: '智力', armor: '护甲', mres: '魔抗', dmg: '伤害', crit: '暴击率', critdmg: '暴击伤害', aspd: '攻速', hpregen: '生命恢复', thorn: '荆棘', dodge: '闪避', moveSpeed: '移速', lifeOnHit: '击中回复', lifeOnKill: '击杀回复', cdReduction: '冷却缩减', mana: '法力', goldFind: '金币掉落', magicFind: '物品掉落', poison: '毒素伤害', fire: '火焰伤害', cold: '冰霜伤害', lightning: '闪电伤害', physical: '物理伤害', lifesteal: '吸血', block: '格挡', stun: '眩晕', vuln: '易伤', manaSave: '省蓝%', dmgBonus: '增伤', proc: '触发率', weaponDmg: '武器伤害', weaponSpeed: '武器速度' }
-  return map[k] || k
-}
-
-function renderAll() {
-  document.getElementById('buildName').value = state.buildName
-  document.querySelectorAll('.class-tab').forEach(t => t.classList.toggle('active', t.dataset.class === state.activeClass))
-  renderEquipList()
-  renderSkillBar()
-  renderTalentGrid()
-  renderStats()
-}
-
-// ============================================
-// 交互
-// ============================================
-function openItemPicker(slotKey) {
-  const slot = SLOTS.find(s => s.key === slotKey)
-  const items = ITEM_POOL[slotKey] || []
-  const html = `<div class="modal" id="modalInner">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>选择 ${slot.name}</h3>
-        <button class="modal-close" id="closeModal">×</button>
-      </div>
-      <div class="modal-body">
-        <input class="modal-search" placeholder="搜索装备..." id="searchInput" />
-        <div id="itemList">
-          ${items.map(item => renderModalItem(item)).join('')}
-        </div>
-      </div>
-    </div>
-  </div>`
-  document.getElementById('modal').innerHTML = html
-  
-  document.getElementById('closeModal').onclick = () => document.getElementById('modal').innerHTML = ''
-  document.getElementById('searchInput').oninput = (e) => {
-    const q = e.target.value.toLowerCase()
-    document.getElementById('itemList').innerHTML = items
-      .filter(it => it.name.toLowerCase().includes(q))
-      .map(item => renderModalItem(item)).join('')
-  }
-}
-
-function renderModalItem(item) {
-  return `<div class="modal-item" data-id="${item.id}">
-    <div class="mi-icon">⚔</div>
-    <div class="mi-info">
-      <div class="mi-name q-${item.quality}">${item.name}</div>
-      <div class="mi-affix">${item.stats.map(s=>`+${s.v} ${statName(s.k)}`).join(' · ')}</div>
-    </div>
-  </div>`
-}
-
-// 事件委托
-document.body.addEventListener('click', (e) => {
-  // 关闭模态
-  if (e.target.id === 'modal') document.getElementById('modal').innerHTML = ''
-  
-  // 装备槽点击
-  const slot = e.target.closest('.equip-slot')
-  if (slot && !e.target.closest('.slot-clear')) {
-    openItemPicker(slot.dataset.slot)
-    return
-  }
-  
-  // 装备清除
-  if (e.target.classList.contains('slot-clear')) {
-    delete state.equips[e.target.dataset.clear]
-    saveToUrl(); renderAll()
-    return
-  }
-  
-  // 模态内选择装备
-  const mi = e.target.closest('.modal-item')
-  if (mi) {
-    // 找到 slotKey - 通过 modal 上下文
-    // 简化：直接用当前 modal 的 slotKey
-    const all = ITEM_POOL
-    let picked = null
-    for (const k in all) {
-      picked = all[k].find(it => it.id === mi.dataset.id)
-      if (picked) break
-    }
-    if (picked) {
-      // 找到是哪个 slot
-      let slotKey = null
-      for (const k in all) {
-        if (all[k].find(it => it.id === mi.dataset.id)) { slotKey = k; break }
-      }
-      if (slotKey) {
-        state.equips[slotKey] = picked
-        saveToUrl(); renderAll()
-        document.getElementById('modal').innerHTML = ''
-      }
-    }
-    return
-  }
-  
-  // 技能栏点击
-  const ss = e.target.closest('.skill-slot')
-  if (ss) {
-    const skills = ['普通攻击', '顺劈', '猛击', '盾牌猛击', '战吼', '狂战之吼']
-    const idx = SKILL_SLOTS.findIndex(s => s.key === ss.dataset.skill)
-    state.skills[ss.dataset.skill] = { name: skills[idx] || '技能', icon: ss.textContent.trim() }
-    renderAll()
-    return
-  }
-  
-  // 天赋点击
-  const tn = e.target.closest('.talent-node')
-  if (tn) {
-    const tier = parseInt(tn.dataset.tier)
-    const col = parseInt(tn.dataset.col)
-    const key = `${tier}-${col}`
-    const used = Object.values(state.talents).reduce((a,b)=>a+b, 0)
-    const t = (TALENT_TREE[state.activeClass]||[]).find(x => x.tier===tier && x.col===col)
-    if (!t) return
-    const cur = state.talents[key] || 0
-    if (cur > 0) {
-      // 减少
-      state.talents[key] = cur - 1
-      if (state.talents[key] === 0) delete state.talents[key]
-    } else if (used < 32) {
-      state.talents[key] = 1
-    } else {
-      alert('已分配 32 点上限')
-    }
-    saveToUrl(); renderAll()
-    return
-  }
-  
-  // 职业切换
-  const ct = e.target.closest('.class-tab')
-  if (ct) {
-    state.activeClass = ct.dataset.class
-    saveToUrl(); renderAll()
-  }
-})
-
-// 构筑名输入
-document.getElementById('buildName').addEventListener('input', (e) => {
-  state.buildName = e.target.value
-  saveToUrl()
-})
-
-// 分享 / 重置
-document.getElementById('shareBtn').onclick = () => {
-  const url = location.href
-  navigator.clipboard?.writeText(url).then(() => {
-    alert('✅ 构筑链接已复制到剪贴板\n' + url)
-  }) || prompt('复制此链接分享:', url)
-}
-document.getElementById('resetBtn').onclick = () => {
-  if (confirm('确定要清空当前构筑吗？')) {
-    state.equips = {}; state.talents = {}; state.skills = {}
-    saveToUrl(); renderAll()
-  }
-}
-
-// 启动
-loadFromUrl()
-renderAll()
+renderGems(); renderRunes(); renderAffixPool(1); renderLoot(); renderStatSummary(); renderEqDetail();
 </script>
 </body>
 </html>
