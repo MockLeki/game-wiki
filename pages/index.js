@@ -3,14 +3,29 @@ import Link from 'next/link'
 import LeaderboardPanel from '../components/LeaderboardPanel'
 import SiteStats from '../components/SiteStats'
 
-export default function Home() {
+export async function getStaticProps() {
+  const equipment = require('../public/data/equipment_tree.json')
+  const items = require('../public/data/items.json')
+  const world = require('../public/data/world_regions.json')
+
+  const equipCount = Object.values(equipment.tree).reduce(
+    (a, bySlot) => a + Object.values(bySlot).reduce((c, arr) => c + arr.length, 0), 0)
+  const itemCount = ['legendary_weapons', 'legendary_armor', 'legendary_jewelry', 'consumables',
+    'exp_books', 'chests', 'materials', 'random_boxes', 'companion_reins']
+    .reduce((a, k) => a + (items[k]?.length || 0), 0)
+  const levelCount = world.reduce((a, r) => a + r.levels.length, 0)
+
+  return { props: { equipCount, itemCount, levelCount, updatedAt: '2026-10-29' } }
+}
+
+export default function Home({ equipCount, itemCount, levelCount, updatedAt }) {
   const stats = [
-    { icon: '⚔️', name: '装备', num: 209, link: '/gear' },
+    { icon: '⚔️', name: '装备', num: equipCount, link: '/gear' },
     { icon: '💎', name: '宝石', num: 36, link: '/gems' },
     { icon: '🔮', name: '符文', num: 121, link: '/runes' },
-    { icon: '🎒', name: '物品', num: 121, link: '/items' },
+    { icon: '🎒', name: '物品', num: itemCount, link: '/items' },
     { icon: '🐺', name: '仆从', num: 68, link: '/minions' },
-    { icon: '🗺️', name: '关卡', num: 23, link: '/levels' },
+    { icon: '🗺️', name: '关卡', num: levelCount, link: '/levels' },
     { icon: '🎯', name: '技能', num: 90, link: '/skills' },
     { icon: '✨', name: '词条', num: 41, link: '/affixes' },
   ]
@@ -39,7 +54,11 @@ export default function Home() {
               color: 'var(--gold)', borderRadius: 2,
             }}>
               <span style={{ fontSize: '1rem' }}>📅</span>
-              数据已同步至游戏正式版 · 更新日期 2026-09-25
+              数据已同步至游戏正式版 · 更新日期 {updatedAt}
+              <Link href="/news" style={{
+                marginLeft: '0.4rem', color: 'var(--gold)',
+                borderBottom: '1px dotted rgba(201,162,39,0.5)', textDecoration: 'none',
+              }}>查看更新记录</Link>
             </span>
           </div>
           <div className="hero-divider">

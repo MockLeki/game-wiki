@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, Fragment } from 'react'
 
 function SteamLogin() {
   const [user, setUser] = useState(null)
@@ -127,20 +127,25 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
   const router = useRouter()
   const isActive = (path) => router.pathname === path ? 'active' : ''
   const navItems = [
+    // 图鉴
     { path: '/gear', label: '装备' },
+    { path: '/items', label: '物品' },
     { path: '/gems', label: '宝石' },
     { path: '/runes', label: '符文' },
-    { path: '/items', label: '物品' },
     { path: '/skills', label: '技能' },
     { path: '/minions', label: '仆从' },
     { path: '/levels', label: '关卡' },
     { path: '/codex', label: '图鉴' },
-    { path: '/fishing', label: '钓鱼' },
-    { path: '/loot', label: '掉落' },
-    { path: '/affixes', label: '词条' },
-    { path: '/world', label: '地图' },
+    // 世界
+    { path: '/world', label: '地图', sep: true },
     { path: '/systems', label: '新系统' },
+    // 工具
+    { path: '/affixes', label: '词条', sep: true },
+    { path: '/loot', label: '掉落' },
+    { path: '/fishing', label: '钓鱼' },
     { path: '/build', label: '构筑' },
+    // 动态
+    { path: '/news', label: '更新', sep: true },
   ]
 
   // 实时在线人数（每 60s 拉一次，给导航角标用）
@@ -173,7 +178,15 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
         </Link>
         <div className="nav-links">
           {navItems.map(n => (
-            <Link key={n.path} href={n.path} className={isActive(n.path)}>{n.label}</Link>
+            <Fragment key={n.path}>
+              {n.sep && (
+                <span style={{
+                  width: 1, height: 13, margin: '0 0.45rem',
+                  background: 'rgba(201,162,39,0.28)', display: 'inline-block', flexShrink: 0,
+                }} />
+              )}
+              <Link href={n.path} className={isActive(n.path)}>{n.label}</Link>
+            </Fragment>
           ))}
         </div>
         <div className="nav-right">
