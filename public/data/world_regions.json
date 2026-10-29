@@ -1,0 +1,1862 @@
+[
+ {
+  "key": "Forest",
+  "name": "国王森林",
+  "summary": "7 个关卡，敌人等级 1–10。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 1,
+  "levelTo": 10,
+  "levels": [
+   {
+    "index": 1,
+    "name": "国王森林: 1",
+    "levelFrom": 1,
+    "levelTo": 2,
+    "waves": 6,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "黑蜘蛛",
+      "count": "3"
+     },
+     {
+      "name": "灰森林狼",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "国王森林: 2",
+    "levelFrom": 3,
+    "levelTo": 4,
+    "waves": 7,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "黑蜘蛛",
+      "count": "4"
+     },
+     {
+      "name": "灰森林狼",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "国王森林: 3",
+    "levelFrom": 5,
+    "levelTo": 6,
+    "waves": 8,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "野猪",
+      "count": "2"
+     },
+     {
+      "name": "黑蜘蛛",
+      "count": "6"
+     },
+     {
+      "name": "灰森林狼",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "国王森林: 4",
+    "levelFrom": 7,
+    "levelTo": 7,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "野猪",
+      "count": "3"
+     },
+     {
+      "name": "黑蜘蛛",
+      "count": "6"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "国王森林: 5",
+    "levelFrom": 8,
+    "levelTo": 8,
+    "waves": 8,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "野猪",
+      "count": "2"
+     },
+     {
+      "name": "黑蜘蛛",
+      "count": "6"
+     },
+     {
+      "name": "灰森林狼",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "国王森林: 6",
+    "levelFrom": 9,
+    "levelTo": 9,
+    "waves": 8,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "野猪",
+      "count": "3"
+     },
+     {
+      "name": "灰森林狼",
+      "count": "5"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "国王森林: 7",
+    "levelFrom": 10,
+    "levelTo": 10,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "野猪",
+      "count": "4"
+     },
+     {
+      "name": "灰森林狼",
+      "count": "6"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "Dungeon",
+  "name": "尖塔山丘墓穴",
+  "summary": "4 个关卡，敌人等级 11–16。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 4,
+  "levelFrom": 11,
+  "levelTo": 16,
+  "levels": [
+   {
+    "index": 1,
+    "name": "尖塔山丘墓穴: 1",
+    "levelFrom": 11,
+    "levelTo": 12,
+    "waves": 8,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "骷髅弓箭手",
+      "count": "3"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "6"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "2"
+     },
+     {
+      "name": "骷髅弓箭手",
+      "count": "1"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "尖塔山丘墓穴: 2",
+    "levelFrom": 13,
+    "levelTo": 14,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "骷髅弓箭手",
+      "count": "4"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "7"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "3"
+     },
+     {
+      "name": "骷髅弓箭手",
+      "count": "1"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "尖塔山丘墓穴: 3",
+    "levelFrom": 15,
+    "levelTo": 15,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "骷髅弓箭手",
+      "count": "4"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "7"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "3"
+     },
+     {
+      "name": "骷髅弓箭手",
+      "count": "1"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "尖塔山丘墓穴: 4",
+    "levelFrom": 16,
+    "levelTo": 16,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "骷髅弓箭手",
+      "count": "4"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "7"
+     },
+     {
+      "name": "哥布林战士",
+      "count": "4"
+     },
+     {
+      "name": "骷髅弓箭手",
+      "count": "2"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "2"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "DungeonL",
+  "name": "尖塔山丘墓穴下层",
+  "summary": "3 个关卡，敌人等级 17–19。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 3,
+  "levelFrom": 17,
+  "levelTo": 19,
+  "levels": [
+   {
+    "index": 1,
+    "name": "尖塔山丘墓穴下层: 1",
+    "levelFrom": 17,
+    "levelTo": 17,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "骷髅弓箭手",
+      "count": "6"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "2"
+     },
+     {
+      "name": "骷髅弓箭手",
+      "count": "4"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "尖塔山丘墓穴下层: 2",
+    "levelFrom": 18,
+    "levelTo": 18,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "骷髅弓箭手",
+      "count": "6"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "2"
+     },
+     {
+      "name": "骷髅弓箭手",
+      "count": "4"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "5"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "尖塔山丘墓穴下层: 3",
+    "levelFrom": 19,
+    "levelTo": 19,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "哥布林战士",
+      "count": "11"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "3"
+     },
+     {
+      "name": "骷髅弓箭手",
+      "count": "5"
+     },
+     {
+      "name": "兽人斗士",
+      "count": "5"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "CorruptForest",
+  "name": "国王森林南部",
+  "summary": "7 个关卡，敌人等级 20–28。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 20,
+  "levelTo": 28,
+  "levels": [
+   {
+    "index": 1,
+    "name": "国王森林南部: 1",
+    "levelFrom": 20,
+    "levelTo": 21,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "变异之狼",
+      "count": "2"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "国王森林南部: 2",
+    "levelFrom": 22,
+    "levelTo": 23,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "变异之狼",
+      "count": "3"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "4"
+     },
+     {
+      "name": "变异之狼",
+      "count": "2"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "国王森林南部: 3",
+    "levelFrom": 24,
+    "levelTo": 24,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "变异之狼",
+      "count": "3"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "4"
+     },
+     {
+      "name": "变异之狼",
+      "count": "2"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "国王森林南部: 4",
+    "levelFrom": 25,
+    "levelTo": 25,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "变异之狼",
+      "count": "3"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "2"
+     },
+     {
+      "name": "树桩怪",
+      "count": "4"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "2"
+     },
+     {
+      "name": "变异之狼",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "国王森林南部: 5",
+    "levelFrom": 26,
+    "levelTo": 26,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "变异之狼",
+      "count": "3"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "2"
+     },
+     {
+      "name": "树桩怪",
+      "count": "4"
+     },
+     {
+      "name": "毒液蜘蛛",
+      "count": "3"
+     },
+     {
+      "name": "变异之狼",
+      "count": "5"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "国王森林南部: 6",
+    "levelFrom": 27,
+    "levelTo": 27,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "变异之狼",
+      "count": "4"
+     },
+     {
+      "name": "树桩怪",
+      "count": "3"
+     },
+     {
+      "name": "变异之狼",
+      "count": "2"
+     },
+     {
+      "name": "树桩怪",
+      "count": "6"
+     },
+     {
+      "name": "树桩怪",
+      "count": "9"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "国王森林南部: 7",
+    "levelFrom": 28,
+    "levelTo": 28,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "变异之狼",
+      "count": "4"
+     },
+     {
+      "name": "树桩怪",
+      "count": "3"
+     },
+     {
+      "name": "变异之狼",
+      "count": "2"
+     },
+     {
+      "name": "树桩怪",
+      "count": "6"
+     },
+     {
+      "name": "树桩怪",
+      "count": "9"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "Desert",
+  "name": "塔赞荒漠",
+  "summary": "7 个关卡，敌人等级 28–34。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 28,
+  "levelTo": 34,
+  "levels": [
+   {
+    "index": 1,
+    "name": "塔赞荒漠: 1",
+    "levelFrom": 28,
+    "levelTo": 29,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "沙丘之鹰",
+      "count": "1"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "塔赞荒漠: 2",
+    "levelFrom": 30,
+    "levelTo": 30,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "沙丘之鹰",
+      "count": "1"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "3"
+     },
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "3"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "塔赞荒漠: 3",
+    "levelFrom": 31,
+    "levelTo": 31,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "沙丘之鹰",
+      "count": "1"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "3"
+     },
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "3"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "塔赞荒漠: 4",
+    "levelFrom": 32,
+    "levelTo": 32,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "沙丘之鹰",
+      "count": "2"
+     },
+     {
+      "name": "沙漠狗头人战士",
+      "count": "3"
+     },
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "塔赞荒漠: 5",
+    "levelFrom": 33,
+    "levelTo": 33,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "2"
+     },
+     {
+      "name": "沙漠狗头人战士",
+      "count": "2"
+     },
+     {
+      "name": "沙丘之鹰",
+      "count": "2"
+     },
+     {
+      "name": "沙漠狗头人战士",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "塔赞荒漠: 6",
+    "levelFrom": 34,
+    "levelTo": 34,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "2"
+     },
+     {
+      "name": "沙漠狗头人战士",
+      "count": "2"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "4"
+     },
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "2"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "塔赞荒漠: 7",
+    "levelFrom": 34,
+    "levelTo": 34,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "2"
+     },
+     {
+      "name": "沙漠狗头人战士",
+      "count": "2"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "4"
+     },
+     {
+      "name": "沙漠狗头人盗贼",
+      "count": "2"
+     },
+     {
+      "name": "沙漠黄蜂",
+      "count": "3"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "Beach",
+  "name": "塔赞群岛",
+  "summary": "7 个关卡，敌人等级 34–40。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 34,
+  "levelTo": 40,
+  "levels": [
+   {
+    "index": 1,
+    "name": "塔赞群岛: 1",
+    "levelFrom": 34,
+    "levelTo": 35,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "漂壳寄居蟹",
+      "count": "5"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "塔赞群岛: 2",
+    "levelFrom": 36,
+    "levelTo": 36,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "漂壳寄居蟹",
+      "count": "5"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "2"
+     },
+     {
+      "name": "漂壳寄居蟹",
+      "count": "4"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "1"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "塔赞群岛: 3",
+    "levelFrom": 37,
+    "levelTo": 37,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "礁岩鱿鱼",
+      "count": "4"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "3"
+     },
+     {
+      "name": "漂壳寄居蟹",
+      "count": "4"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "塔赞群岛: 4",
+    "levelFrom": 38,
+    "levelTo": 38,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "浅滩娜迦",
+      "count": "3"
+     },
+     {
+      "name": "礁岩鱿鱼",
+      "count": "5"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "1"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "塔赞群岛: 5",
+    "levelFrom": 39,
+    "levelTo": 39,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "礁岩鱿鱼",
+      "count": "4"
+     },
+     {
+      "name": "咸鳞海蛇",
+      "count": "1"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "塔赞群岛: 6",
+    "levelFrom": 40,
+    "levelTo": 40,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "礁岩鱿鱼",
+      "count": "5"
+     },
+     {
+      "name": "咸鳞海蛇",
+      "count": "2"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "塔赞群岛: 7",
+    "levelFrom": 40,
+    "levelTo": 40,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "礁岩鱿鱼",
+      "count": "7"
+     },
+     {
+      "name": "咸鳞海蛇",
+      "count": "2"
+     },
+     {
+      "name": "浅滩娜迦",
+      "count": "3"
+     },
+     {
+      "name": "咸鳞海蛇",
+      "count": "1"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "RedDesert",
+  "name": "贫瘠之地",
+  "summary": "7 个关卡，敌人等级 40–46。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 40,
+  "levelTo": 46,
+  "levels": [
+   {
+    "index": 1,
+    "name": "贫瘠之地: 1",
+    "levelFrom": 40,
+    "levelTo": 41,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "荒原鳄鱼",
+      "count": "1"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "贫瘠之地: 2",
+    "levelFrom": 42,
+    "levelTo": 42,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "荒原鳄鱼",
+      "count": "1"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "2"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "3"
+     },
+     {
+      "name": "荒原鳄鱼",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "贫瘠之地: 3",
+    "levelFrom": 43,
+    "levelTo": 43,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "荒原萨特",
+      "count": "3"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "2"
+     },
+     {
+      "name": "荒原鳄鱼",
+      "count": "2"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "3"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "贫瘠之地: 4",
+    "levelFrom": 44,
+    "levelTo": 44,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "荒原鳄鱼",
+      "count": "3"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "4"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "贫瘠之地: 5",
+    "levelFrom": 45,
+    "levelTo": 45,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "红岩魔像",
+      "count": "1"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "4"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "2"
+     },
+     {
+      "name": "荒原鳄鱼",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "贫瘠之地: 6",
+    "levelFrom": 46,
+    "levelTo": 46,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "红岩魔像",
+      "count": "1"
+     },
+     {
+      "name": "荒原鳄鱼",
+      "count": "3"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "2"
+     },
+     {
+      "name": "红岩魔像",
+      "count": "2"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "3"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "6"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "贫瘠之地: 7",
+    "levelFrom": 46,
+    "levelTo": 46,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "红岩魔像",
+      "count": "2"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "3"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "4"
+     },
+     {
+      "name": "焦土小恶魔",
+      "count": "4"
+     },
+     {
+      "name": "红岩魔像",
+      "count": "1"
+     },
+     {
+      "name": "荒原萨特",
+      "count": "3"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "RedForest",
+  "name": "绯红山谷",
+  "summary": "7 个关卡，敌人等级 46–52。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 46,
+  "levelTo": 52,
+  "levels": [
+   {
+    "index": 1,
+    "name": "绯红山谷: 1",
+    "levelFrom": 46,
+    "levelTo": 47,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "灰熊",
+      "count": "1"
+     },
+     {
+      "name": "山虎",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "绯红山谷: 2",
+    "levelFrom": 48,
+    "levelTo": 48,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "灰熊",
+      "count": "2"
+     },
+     {
+      "name": "山虎",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "绯红山谷: 3",
+    "levelFrom": 49,
+    "levelTo": 49,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "灰熊",
+      "count": "2"
+     },
+     {
+      "name": "绯红守护者",
+      "count": "2"
+     },
+     {
+      "name": "山虎",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "绯红山谷: 4",
+    "levelFrom": 50,
+    "levelTo": 50,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "灰熊",
+      "count": "2"
+     },
+     {
+      "name": "绯红守护者",
+      "count": "3"
+     },
+     {
+      "name": "山虎",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "绯红山谷: 5",
+    "levelFrom": 51,
+    "levelTo": 51,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "灰熊",
+      "count": "2"
+     },
+     {
+      "name": "山虎",
+      "count": "3"
+     },
+     {
+      "name": "精灵龙",
+      "count": "2"
+     },
+     {
+      "name": "绯红守护者",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "绯红山谷: 6",
+    "levelFrom": 52,
+    "levelTo": 52,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "山虎",
+      "count": "2"
+     },
+     {
+      "name": "灰熊",
+      "count": "1"
+     },
+     {
+      "name": "精灵龙",
+      "count": "3"
+     },
+     {
+      "name": "绯红守护者",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "绯红山谷: 7",
+    "levelFrom": 52,
+    "levelTo": 52,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "精灵龙",
+      "count": "4"
+     },
+     {
+      "name": "绯红守护者",
+      "count": "2"
+     },
+     {
+      "name": "精灵龙",
+      "count": "3"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "SnowHill",
+  "name": "维尔达克高地",
+  "summary": "7 个关卡，敌人等级 52–58。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 52,
+  "levelTo": 58,
+  "levels": [
+   {
+    "index": 1,
+    "name": "维尔达克高地: 1",
+    "levelFrom": 52,
+    "levelTo": 53,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "冰霜史莱姆",
+      "count": "3"
+     },
+     {
+      "name": "冰霜幼龙",
+      "count": "1"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "维尔达克高地: 2",
+    "levelFrom": 54,
+    "levelTo": 54,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "冰霜史莱姆",
+      "count": "4"
+     },
+     {
+      "name": "冰霜幼龙",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "维尔达克高地: 3",
+    "levelFrom": 55,
+    "levelTo": 55,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "冰霜史莱姆",
+      "count": "5"
+     },
+     {
+      "name": "冰霜幼龙",
+      "count": "2"
+     },
+     {
+      "name": "冰封僵尸战士",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "维尔达克高地: 4",
+    "levelFrom": 56,
+    "levelTo": 56,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "冰霜史莱姆",
+      "count": "5"
+     },
+     {
+      "name": "冰霜幼龙",
+      "count": "2"
+     },
+     {
+      "name": "冰封僵尸战士",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "维尔达克高地: 5",
+    "levelFrom": 57,
+    "levelTo": 57,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "冰霜幼龙",
+      "count": "3"
+     },
+     {
+      "name": "冰封僵尸战士",
+      "count": "3"
+     },
+     {
+      "name": "冰封僵尸战士",
+      "count": "2"
+     },
+     {
+      "name": "冰霜幼龙",
+      "count": "1"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "维尔达克高地: 6",
+    "levelFrom": 58,
+    "levelTo": 58,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "冰封僵尸战士",
+      "count": "3"
+     },
+     {
+      "name": "冰封僵尸战士",
+      "count": "3"
+     },
+     {
+      "name": "冰霜幼龙",
+      "count": "1"
+     },
+     {
+      "name": "冰岩元素",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "维尔达克高地: 7",
+    "levelFrom": 58,
+    "levelTo": 58,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "冰封僵尸战士",
+      "count": "5"
+     },
+     {
+      "name": "冰岩元素",
+      "count": "3"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "DefiledKeep",
+  "name": "污秽要塞",
+  "summary": "7 个关卡，敌人等级 58–64。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 58,
+  "levelTo": 64,
+  "levels": [
+   {
+    "index": 1,
+    "name": "污秽要塞: 1",
+    "levelFrom": 58,
+    "levelTo": 59,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "污秽黏怪",
+      "count": "5"
+     },
+     {
+      "name": "污秽黏怪",
+      "count": "3"
+     },
+     {
+      "name": "要塞魅魔",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "污秽要塞: 2",
+    "levelFrom": 60,
+    "levelTo": 60,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "不死斧师",
+      "count": "4"
+     },
+     {
+      "name": "要塞魅魔",
+      "count": "3"
+     },
+     {
+      "name": "腐尸圣甲虫",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "污秽要塞: 3",
+    "levelFrom": 61,
+    "levelTo": 61,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "腐尸圣甲虫",
+      "count": "3"
+     },
+     {
+      "name": "污秽黏怪",
+      "count": "3"
+     },
+     {
+      "name": "要塞魅魔",
+      "count": "3"
+     },
+     {
+      "name": "不死斧师",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "污秽要塞: 4",
+    "levelFrom": 62,
+    "levelTo": 62,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "腐尸圣甲虫",
+      "count": "3"
+     },
+     {
+      "name": "污秽黏怪",
+      "count": "3"
+     },
+     {
+      "name": "要塞魅魔",
+      "count": "3"
+     },
+     {
+      "name": "不死斧师",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "污秽要塞: 5",
+    "levelFrom": 63,
+    "levelTo": 63,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "不死斧师",
+      "count": "2"
+     },
+     {
+      "name": "腐尸圣甲虫",
+      "count": "3"
+     },
+     {
+      "name": "污秽黏怪",
+      "count": "3"
+     },
+     {
+      "name": "要塞魅魔",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "污秽要塞: 6",
+    "levelFrom": 64,
+    "levelTo": 64,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "腐尸圣甲虫",
+      "count": "2"
+     },
+     {
+      "name": "不死斧师",
+      "count": "4"
+     },
+     {
+      "name": "不死斧师",
+      "count": "2"
+     },
+     {
+      "name": "要塞魅魔",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "污秽要塞: 7",
+    "levelFrom": 64,
+    "levelTo": 64,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "腐尸圣甲虫",
+      "count": "6"
+     },
+     {
+      "name": "不死斧师",
+      "count": "2"
+     },
+     {
+      "name": "污秽黏怪",
+      "count": "5"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "Volcano",
+  "name": "灰烬之冠",
+  "summary": "7 个关卡，敌人等级 65–70。噩梦与炼狱：所有地图的敌人都是 70 级。",
+  "levelCount": 7,
+  "levelFrom": 65,
+  "levelTo": 70,
+  "levels": [
+   {
+    "index": 1,
+    "name": "灰烬之冠: 1",
+    "levelFrom": 65,
+    "levelTo": 65,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "焰鞭魔",
+      "count": "4"
+     },
+     {
+      "name": "炼狱卫士",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 2,
+    "name": "灰烬之冠: 2",
+    "levelFrom": 66,
+    "levelTo": 66,
+    "waves": 10,
+    "eliteChance": 5,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "炼狱卫士",
+      "count": "3"
+     },
+     {
+      "name": "焰鞭魔",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 3,
+    "name": "灰烬之冠: 3",
+    "levelFrom": 67,
+    "levelTo": 67,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "炼狱卫士",
+      "count": "3"
+     },
+     {
+      "name": "余烬蝠",
+      "count": "2"
+     },
+     {
+      "name": "焰鞭魔",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 4,
+    "name": "灰烬之冠: 4",
+    "levelFrom": 68,
+    "levelTo": 68,
+    "waves": 11,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "余烬蝠",
+      "count": "3"
+     },
+     {
+      "name": "炼狱卫士",
+      "count": "3"
+     },
+     {
+      "name": "焰鞭魔",
+      "count": "3"
+     },
+     {
+      "name": "熔岩魔像",
+      "count": "1"
+     },
+     {
+      "name": "焰鞭魔",
+      "count": "2"
+     }
+    ]
+   },
+   {
+    "index": 5,
+    "name": "灰烬之冠: 5",
+    "levelFrom": 69,
+    "levelTo": 69,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "熔岩魔像",
+      "count": "2"
+     },
+     {
+      "name": "余烬蝠",
+      "count": "3"
+     },
+     {
+      "name": "焰鞭魔",
+      "count": "3"
+     }
+    ]
+   },
+   {
+    "index": 6,
+    "name": "灰烬之冠: 6",
+    "levelFrom": 70,
+    "levelTo": 70,
+    "waves": 10,
+    "eliteChance": 0,
+    "boss": false,
+    "encounters": [
+     {
+      "name": "熔岩魔像",
+      "count": "2"
+     },
+     {
+      "name": "焰鞭魔",
+      "count": "4"
+     },
+     {
+      "name": "熔岩魔像",
+      "count": "2"
+     },
+     {
+      "name": "余烬蝠",
+      "count": "4"
+     }
+    ]
+   },
+   {
+    "index": 7,
+    "name": "灰烬之冠: 7",
+    "levelFrom": 70,
+    "levelTo": 70,
+    "waves": 9,
+    "eliteChance": 0,
+    "boss": true,
+    "encounters": [
+     {
+      "name": "熔岩魔像",
+      "count": "2"
+     },
+     {
+      "name": "余烬蝠",
+      "count": "4"
+     },
+     {
+      "name": "熔岩魔像",
+      "count": "2"
+     },
+     {
+      "name": "焰鞭魔",
+      "count": "5"
+     }
+    ]
+   }
+  ]
+ }
+]
