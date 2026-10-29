@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import levelsData from '../public/data/levels.json'
+import worldData from '../public/data/world_regions.json'
 
 export async function getStaticProps() { return { props: {} } }
 
@@ -31,6 +32,48 @@ export default function LevelsPage() {
             </div>
           ))}
         </div>
+
+        <h2 style={{margin:'2.5rem 0 1rem', fontSize:'1.35rem'}}>分区域关卡明细</h2>
+        <p style={{color:'var(--muted)', fontSize:'0.85rem', marginBottom:'1rem'}}>
+          11 个区域共 70 张关卡。噩梦与炼狱难度下所有地图敌人均为 70 级。
+        </p>
+
+        {worldData.map((rg, i) => (
+          <div key={i} className="item-card" style={{marginBottom:'0.9rem'}}>
+            <div className="item-header">
+              <div className="item-icon">🗺️</div>
+              <div>
+                <div className="item-name">{rg.name}</div>
+                <div className="item-en">{rg.levelCount} 个关卡 · 敌人等级 {rg.levelFrom}–{rg.levelTo}</div>
+              </div>
+            </div>
+            <div style={{marginTop:'0.5rem'}}>
+              {rg.levels.map(lv => (
+                <div key={lv.index} style={{
+                  display:'grid',
+                  gridTemplateColumns:'1.6fr 1fr 0.8fr 1fr',
+                  gap:'0.5rem',
+                  alignItems:'center',
+                  padding:'0.4rem 0',
+                  borderTop:'1px solid var(--border)',
+                  fontSize:'0.8rem'
+                }}>
+                  <span>{lv.name}{lv.boss ? ' 👑' : ''}</span>
+                  <span style={{color:'var(--muted)'}}>Lv.{lv.levelFrom}–{lv.levelTo}</span>
+                  <span style={{color:'var(--muted)'}}>{lv.waves} 波</span>
+                  <span style={{color: lv.eliteChance ? '#c9a55b' : 'var(--muted)'}}>
+                    {lv.eliteChance ? `精英 ${lv.eliteChance}%` : '—'}
+                  </span>
+                </div>
+              ))}
+            </div>
+            {rg.levels.some(l => l.encounters.length > 0) && (
+              <div style={{color:'var(--muted)', fontSize:'0.72rem', marginTop:'0.5rem'}}>
+                👹 {[...new Set(rg.levels.flatMap(l => l.encounters.map(e => e.name)))].join(' / ')}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </Layout>
   )
