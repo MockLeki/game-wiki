@@ -154,7 +154,7 @@ a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(201, 162, 39, 0.6)
   0%, 100% { box-shadow: 0 0 4px var(--cyan); }
   50% { box-shadow: 0 0 12px var(--cyan-light), 0 0 20px var(--cyan); }
 }
-.nav-links { display: flex; gap: 0.15rem; flex-wrap: wrap; }
+.nav-links { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }
 .nav-links a {
   color: var(--text); font-size: 0.9rem; font-weight: 500;
   padding: 0.45rem 0.7rem; border: 1px solid transparent;
@@ -194,7 +194,7 @@ a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(201, 162, 39, 0.6)
 
 /* === Panel (排行榜 / 通用面板) === */
 .panel {
-  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(20, 17, 13, 0.78) 0%, rgba(14, 12, 9, 0.58) 100%);
   border: 1px solid var(--border-cyan);
   border-radius: 4px;
   margin-bottom: 1.5rem;
@@ -225,7 +225,7 @@ a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(201, 162, 39, 0.6)
 
 /* === Hero (玻璃拟态 + 霓虹边框) === */
 .hero-card {
-  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(20, 17, 13, 0.78) 0%, rgba(14, 12, 9, 0.58) 100%);
   border: 1px solid var(--border-cyan);
   border-radius: 4px;
   padding: 3rem 2rem 2rem;
@@ -364,7 +364,7 @@ a:hover { color: var(--cyan-light); text-shadow: 0 0 4px rgba(201, 162, 39, 0.6)
   display: flex;
   margin-top: 1.5rem;
   padding: 1.8rem 2rem;
-  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(20, 17, 13, 0.78) 0%, rgba(14, 12, 9, 0.58) 100%);
   border: 1px solid var(--border-cyan);
   text-decoration: none;
   overflow: hidden;
@@ -490,7 +490,7 @@ input:focus, textarea:focus, select:focus {
 
 /* === Item / Minion Card === */
 .items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.8rem; }
-.item-card { background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%); border: 1px solid var(--border-cyan); border-radius: 2px; padding: 1rem; position: relative; backdrop-filter: blur(4px); transition: all 0.2s; }
+.item-card { background: linear-gradient(135deg, rgba(20, 17, 13, 0.78) 0%, rgba(14, 12, 9, 0.58) 100%); border: 1px solid var(--border-cyan); border-radius: 2px; padding: 1rem; position: relative; backdrop-filter: blur(4px); transition: all 0.2s; }
 .item-card:hover { border-color: var(--cyan-light); box-shadow: 0 4px 16px rgba(201, 162, 39, 0.2); transform: translateY(-1px); }
 .item-card.q-common { border-left: 3px solid var(--l-common); }
 .item-card.q-uncommon { border-left: 3px solid var(--l-uncommon); }
@@ -527,7 +527,7 @@ input:focus, textarea:focus, select:focus {
 .twocol { display: grid; grid-template-columns: 280px 1fr; gap: 1rem; }
 @media (max-width: 768px) { .twocol { grid-template-columns: 1fr; } }
 .sidebar {
-  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(20, 17, 13, 0.78) 0%, rgba(14, 12, 9, 0.58) 100%);
   border: 1px solid var(--border-cyan);
   padding: 1rem;
   height: fit-content;
@@ -628,7 +628,7 @@ input:focus, textarea:focus, select:focus {
 .talent-max { color: var(--cyan); font-size: 0.7rem; opacity: 0.7; }
 
 .summary-box {
-  background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(20, 17, 13, 0.78) 0%, rgba(14, 12, 9, 0.58) 100%);
   border: 1px solid var(--border-cyan);
   padding: 1rem;
   margin-top: 1rem;
@@ -690,7 +690,7 @@ input:focus, textarea:focus, select:focus {
 .admin-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); z-index: 300; }
 .admin-editor { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #0a0605; border: 1px solid var(--cyan); z-index: 301; padding: 1.2rem; width: 90%; max-width: 900px; max-height: 85vh; overflow-y: auto; box-shadow: 0 0 40px rgba(201, 162, 39, 0.3); }
 .admin-file-grid { display: flex; flex-direction: column; gap: 0.6rem; }
-.admin-file-card { display: flex; align-items: center; gap: 0.8rem; background: linear-gradient(135deg, rgba(15, 20, 50, 0.7) 0%, rgba(25, 30, 65, 0.5) 100%); border: 1px solid var(--border-cyan); padding: 1rem 1.2rem; text-decoration: none; transition: all 0.2s; }
+.admin-file-card { display: flex; align-items: center; gap: 0.8rem; background: linear-gradient(135deg, rgba(20, 17, 13, 0.78) 0%, rgba(14, 12, 9, 0.58) 100%); border: 1px solid var(--border-cyan); padding: 1rem 1.2rem; text-decoration: none; transition: all 0.2s; }
 .admin-file-card:hover { border-color: var(--cyan-light); background: linear-gradient(135deg, rgba(201, 162, 39, 0.15) 0%, rgba(179, 24, 31, 0.08) 100%); transform: translateX(4px); box-shadow: 0 0 12px rgba(201, 162, 39, 0.2); }
 .admin-file-icon { font-size: 1.5rem; }
 
@@ -820,4 +820,45 @@ input:focus, textarea:focus, select:focus {
 @media (max-width: 768px) {
   .map-pin .pin-label { display: none; }
   .map-pin { padding: 0.2rem; }
+}
+
+/* === 统一页头（此前缺失，各页 className="page-header" 无样式） === */
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto 1.4rem;
+  padding: 1.1rem 1rem 0.9rem;
+  border-bottom: 1px solid var(--border-cyan);
+  position: relative;
+}
+.page-header h1 {
+  font-family: Cinzel, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--cyan-light);
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 8px rgba(201, 162, 39, 0.45);
+  margin: 0;
+  line-height: 1.3;
+}
+.page-header p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin: 0.4rem 0 0;
+}
+
+/* 页面次要分区标题 */
+.section-title {
+  font-family: Cinzel, sans-serif;
+  font-size: 1.2rem;
+  color: var(--cyan-light);
+  letter-spacing: 0.05em;
+  margin: 2.2rem 0 0.9rem;
+  padding-left: 0.7rem;
+  border-left: 3px solid var(--gold);
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .page-header { padding: 0.9rem 0.5rem 0.7rem; }
+  .page-header h1 { font-size: 1.35rem; }
 }

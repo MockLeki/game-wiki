@@ -136,6 +136,7 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
     { path: '/minions', label: '仆从' },
     { path: '/levels', label: '关卡' },
     { path: '/codex', label: '图鉴' },
+    { path: '/achievements', label: '成就' },
     // 世界
     { path: '/world', label: '地图', sep: true },
     { path: '/systems', label: '新系统' },
@@ -144,8 +145,9 @@ export default function Layout({ children, title = '桌面破坏神 Wiki' }) {
     { path: '/loot', label: '掉落' },
     { path: '/fishing', label: '钓鱼' },
     { path: '/build', label: '构筑' },
-    // 动态
-    { path: '/news', label: '更新', sep: true },
+    // 指南
+    { path: '/guide', label: '攻略', sep: true },
+    { path: '/news', label: '更新' },
   ]
 
   // 实时在线人数（每 60s 拉一次，给导航角标用）
